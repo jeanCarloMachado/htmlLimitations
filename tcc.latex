@@ -5,60 +5,99 @@
 \renewcommand{\baselinestretch}{1.50}\normalsize
 \begin{document}
 
-\title{Desenvolvimento de um aplicativo para compra em supermercados online}
-
+\title{Desenvolvimento de um e-comerce para mercados online utilizando ZendFramework2}
 \maketitle
 
 \newpage
 
-\section{Glossário}
-\begin{itemize}
-\item Stakeholder: designa-se stakeholder todos aqueles que tem interesse no sistema;
-\item Requisitos: em engenharia de software é comum dividir requisitos em categorias de mode que estes sejam melhor entendidos, (continuear esta descrição)
-\item Orientação à objetos: 
-\end{itemize}
+
+\title{Desenvolvimento de um e-comerce para mercados online utilizando ZendFramework2}
+\maketitle
+Descrição lateral
 
 \newpage
 
+\section{Sumário}
+
+1 CONTEXTUALIZAÇÃO 4 \\
+2 PROBLEMA 6 \\
+3 OBJETIVOS 6 \\
+3.1 GERAL 6 \\
+3.2 ESPECÍFICOS 6 \\
+4 JUSTIFICATIVA 7 \\
+5 REVISÃO BIBLIOGRÁFICA 7 \\
+5.1 AMBIENTES VIRTUAIS DE APRENDIZAGEM 7 \\
+5.2 COMPUTAÇÃO AFETIVA E DEDICAÇÃO 7 \\
+5.3 PESQUISAS SIMILARES 10 \\
+6 METODOLOGIA 10 \\
+7 CRONOGRAMA 12
+
+\newpage
+
+\section{Contextualização}
+Soluções online para problemas do cotiano, a muito já se provaram exemplos de grande sucesso na internet, como o Mercado Livre, Americanas, exemplo3, etc. Este trabalho objetiva a criação de um e-comerce de compra de produtos de mercados online. A o projeto almeja que na disponibilização do produto, seja possível ao cliente encontre os produtos de mercados que melhor o agradem com a agilidade da internet e com a comodidade de entrega em um endereço especificado. Deseja-se também que  a plataforma seja de fácil gestão e migração para as empresas que desejem portar seus negócios para este serviço.
+
+\section{O problema}
+
+
+\section{Objetivos}
+
+Gerais: Desenvolver uma ferramenta web que possiblite que os clientes obtenham os melhores produtos.
+
+Específicos: Demonstrar conhecimentos obtidos no curso de Análise e desenvolvimento de Sistemas, através da utilização de ferramentas emergentes, um utilização de padrões, respeito à segurança, etc.
+
+
 \section{Justificativa} 
-
-Soluções online para problemas cotianos, a muito já se provaram exemplos de grande sucesso na internet, como o mercado livre, exemplo2, exemplo3, etc. Este trabalho objetiva a criação de um sistema de compra de produtos de supermercados online. A o projeto almeja que na disponibilização do produto, seja possível ao cliente encontre os produtos de supermercados que melhor o agradem com a agilidade da internet e com a comodidade de entrega em um endereço especificado.
-
 
 A vaildade do projeto de baseia nas  seguintes premissas que se validadaas justificam a implementação do projeto:
 
 O projeto é algo de utiliadade suficiente para se sobrepor aos seguintes fatores desmotivacionais ao cliente final abaixo listados:
+(Descrever aqui fatores desmotivacionais do sistema)
 \begin{itemize}
 \item  Descoforto de mudar um processo tradicional, que é o de compra de produtos presencial
 \item  O usuário credita o sistema suficientemente para arriscar uma compra em produtos, cuja qualidade só há de ser garantida no momento da entrega.
 \item Os usuários estão habituados a Web suficientemente para não desistirem da compra
 \endbegin{itemize}
 
-O projeto é atraente o suficiente para os supermercados designarem a mão de obra suficiente para portar seus produtos ao sistema.
+Descrever aqui fatores motivacionais do sistema
+O projeto é atraente o suficiente para os mercados designarem a mão de obra suficiente para portar seus produtos ao sistema.
 
+O tralho diferencia-se de sistemas com o mercado livre, por possuir uma sessão para cada cliente que suporta vasta gama de produtos, ofertas, podendo ser considerado como um site da próxima empresa, diferentemente dos serviços prestados pelo mercado livre que almejam focar uma pequena gama de produtos por cliente, e excluir o marketing da empresa.
 
-\newpage
-\section{Estratégia}
+\textbold{Estratégia de negócio}
+??
 
+Ensaio:
 Predente-se oferecer este produto para pequenos e médios mercados, sendo que um trabalho especializado pode ser feito para mercar todo seu negócio para a nuvem. Pretende-se assim objeter lucros através, da venda posterior de funcionalidades.
 
 \newpage
 
 
-\section{Descrição do produto}
+\textbold{Descrição do produto}
 
 Sob a perspectiva técnica o sistema há de ser construido para a plataforma web, utilizando tecnologias orientadas a objetos, para fornecer grande reuso e fácil manuteabilidade ao sistema, seria válida a utilização de outras plataformas em conjunto com a web, por exemplo no fornecimento de aplicativos mobile, mas devido ao condicionante tempo haverá de ser desenvolvida esta funcionalidade posteriormente. 
 O sistema basicamente há de prover meios de se adquirir produtos de acordo com as preferências do usuário, preço, localização, mercado, empacotá-los em um pedido e ir buscá-los no mercado ou recebê-los em um endereço especificável. 
-Para melhor entendimento da aplicação foi dividio o sistema nos seguintes \textit{papéis}, semanticamente separáveis:
 
-\begin{itemize}
-\item SCS1 - Usuário consumidor: o objetivo principal deste usuário será encontrar os produtos que almeja, tendo a possibilidade de comparar preços e marcas;
-\item Colaborador de uma empresa: o objetivo ou tarefa deste usuário será prover ao usuário consumidor, os produtos atualizados de acordo com a realidade do mercado, oferecer também uma interface de comunicação entre os clientes e a empresa, etc;
-\item SCS2 - Administrador de uma empresa: o objetivo deste usuário é fazer a gestão global de sua empresa, podendo alterar permissões e desígnios de outros usuários, etc;
-\item SCS3 (Ack) -   Administrador do sistema geral:  o objetivo deste stakeholder é fazer a gestão global do sistema, como a manutenção de conteúdos, logs de sistema, metatags, etc;
-\end{itemize}
+Para melhor entendimento da aplicação foi dividio o sistema nos seguintes \textit{papéis}, semanticamente distintos:
+
+Usuário consumidor: o objetivo principal deste usuário será encontrar os produtos que almeja, tendo a possibilidade de comparar preços e marcas, localização. Este usuário també terá por responsabilidade julgar os serviços de determinada empresa, através de comentários e graduação de qualiadade. Outrossim o cliente poderá entrar em contato com as empresas para as finalidades que desejar.
+
+
+Colaborador de uma empresa: o objetivo ou tarefa deste usuário será prover ao usuário consumidor, os produtos atualizados de acordo com a realidade do mercado, oferecer também uma interface de comunicação entre os clientes e a empresa, etc;
+ Administrador de uma empresa: o objetivo deste usuário é fazer a gestão global de sua empresa, podendo alterar permissões e desígnios de outros usuários, etc;
+ Administrador do sistema geral:  o objetivo deste stakeholder é fazer a gestão global do sistema, como a manutenção de conteúdos, logs de sistema, metatags, etc;
 
 \newpage
+
+
+\section{Revisão bibliográfica}
+
+\newpage
+
+
+\section{Metodologia}
+
+\section{Cronograma}
 
 \section{Requisitos dos sistema}
 
@@ -71,9 +110,9 @@ SCS1 - Usuário consumidor :
 
 \section{Requisitos não funcionais}
 
-\begin{itemize}
-\item A pesquisa é o ponto chave do sistema, e deve possuir grande perfomance devido a grande gama de clientes esperada, então deve-se criar mecanismos, e utilizar de tecnologias que permitam o rápido acesso a informações.
-\end
+ A pesquisa é o ponto chave do sistema, e deve possuir grande perfomance em contraposição à grande game de clientes esperada, então deve-se criar mecanismos, e utilizar de tecnologias que permitam o rápido acesso a informações.
+
+Sobre a internacionalização, foi julgado não haver a necessidade na primeira versão, deveras será impelementada posteriormente.
 
 \newpage
 \section{Diagramas de caso de uso}
@@ -83,13 +122,25 @@ SCS1 - Usuário consumidor :
 
 \newpage
 
+
+
+\section{Glossário}
+\begin{itemize}
+\item Stakeholder: designa-se stakeholder todos aqueles que tem interesse no sistema;
+\item Requisitos: em engenharia de software é comum dividir requisitos em categorias de mode que estes sejam melhor entendidos, (continuear esta descrição)
+\item Orientação à objetos: 
+\end{itemize}
+
+
+\newpage
+
 \section{Conclusão}
 
 \section{Possíveis concorrentes}
 \begin{list_type}
-\item  Disponível em <http://www.fxplabs.com.br/e-commerce-supermercados>, Acessado em Sun Jun 16 14:57:09 BRT 2013                                                                   
+\item  Disponível em <http://www.fxplabs.com.br/e-commerce-mercados>, Acessado em Sun Jun 16 14:57:09 BRT 2013                                                                   
 \item  Disponível em <http://www.natashopping.com.br/supermercadonata>, Acessado em Sun Jun 16 14:57:09 BRT 2013               
-\item Disponível em <http://www.princesasupermercados.com.br/#display=default>, Acessado em Sun Jun 16 14:57:09                                                     
+\item Disponível em <http://www.princesamercados.com.br/#display=default>, Acessado em Sun Jun 16 14:57:09                                                     
 \end{list_type}
 
 \section{Referências bibliográficas}
