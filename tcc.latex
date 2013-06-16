@@ -24,27 +24,32 @@
 
 Soluções online para problemas cotianos, a muito já se provaram exemplos de grande sucesso na internet, como o mercado livre, exemplo2, exemplo3, etc. Este trabalho objetiva a criação de um sistema de compra de produtos de supermercados online. A o projeto almeja que na disponibilização do produto, seja possível ao cliente encontre os produtos de supermercados que melhor o agradem com a agilidade da internet e com a comodidade de entrega em um endereço especificado.
 
-\newpage
-
-
-\section{Descrição do produto}
-
 
 A vaildade do projeto de baseia nas  seguintes premissas que se validadaas justificam a implementação do projeto:
 
-O projeto é algo de utiliadade suficiente para se sobrepor aos seguintes fatores desmotivacionais abaixo listados:
+O projeto é algo de utiliadade suficiente para se sobrepor aos seguintes fatores desmotivacionais ao cliente final abaixo listados:
 \begin{itemize}
 \item  Descoforto de mudar um processo tradicional, que é o de compra de produtos presencial
 \item  O usuário credita o sistema suficientemente para arriscar uma compra em produtos, cuja qualidade só há de ser garantida no momento da entrega.
 \item Os usuários estão habituados a Web suficientemente para não desistirem da compra
 \endbegin{itemize}
 
+O projeto é atraente o suficiente para os supermercados designarem a mão de obra suficiente para portar seus produtos ao sistema.
 
 
+\newpage
+\section{Estratégia}
 
-Sob a perspectiva técnica o sistema há de ser construido para a plataforma web, utilizando tecnologias orientadas a objetos, para fornecer grande reuso e fácil manuteabilidade ao sistema. Como possível expansão posterior para plataformas mobile emergentes. O sistema deve prover meios de se adquirir produtos de acordo com as preferências do usuário, preço, localização, mercado, empacotá-los em um pedido e ir buscá-los no mercado ou recebê-los em um endereço especificável. Deverá também ser possível 
+Predente-se oferecer este produto para pequenos e médios mercados, sendo que um trabalho especializado pode ser feito para mercar todo seu negócio para a nuvem. Pretende-se assim objeter lucros através, da venda posterior de funcionalidades.
 
-Nota-se distinções na utilização do sistema, identificando tres partes semanticamente separáveis. 
+\newpage
+
+
+\section{Descrição do produto}
+
+Sob a perspectiva técnica o sistema há de ser construido para a plataforma web, utilizando tecnologias orientadas a objetos, para fornecer grande reuso e fácil manuteabilidade ao sistema, seria válida a utilização de outras plataformas em conjunto com a web, por exemplo no fornecimento de aplicativos mobile, mas devido ao condicionante tempo haverá de ser desenvolvida esta funcionalidade posteriormente. 
+O sistema basicamente há de prover meios de se adquirir produtos de acordo com as preferências do usuário, preço, localização, mercado, empacotá-los em um pedido e ir buscá-los no mercado ou recebê-los em um endereço especificável. 
+Para melhor entendimento da aplicação foi dividio o sistema nos seguintes \textit{papéis}, semanticamente separáveis:
 
 \begin{itemize}
 \item SCS1 - Usuário consumidor: o objetivo principal deste usuário será encontrar os produtos que almeja, tendo a possibilidade de comparar preços e marcas;
@@ -64,7 +69,7 @@ SCS1 - Usuário consumidor :
 
 \newpage
 
-\section{Requisitos não funcionaiRs}
+\section{Requisitos não funcionais}
 
 \begin{itemize}
 \item A pesquisa é o ponto chave do sistema, e deve possuir grande perfomance devido a grande gama de clientes esperada, então deve-se criar mecanismos, e utilizar de tecnologias que permitam o rápido acesso a informações.
@@ -82,9 +87,10 @@ SCS1 - Usuário consumidor :
 
 \section{Possíveis concorrentes}
 \begin{list_type}
-\item http://www.fxplabs.com.br/e-commerce-supermercados ACessado em Sun Jun 16 14:57:09 BRT 2013                                                                   
+\item  Disponível em <http://www.fxplabs.com.br/e-commerce-supermercados>, Acessado em Sun Jun 16 14:57:09 BRT 2013                                                                   
+\item  Disponível em <http://www.natashopping.com.br/supermercadonata>, Acessado em Sun Jun 16 14:57:09 BRT 2013               
+\item Disponível em <http://www.princesasupermercados.com.br/#display=default>, Acessado em Sun Jun 16 14:57:09                                                     
 \end{list_type}
-
 
 \section{Referências bibliográficas}
 \begin{list_type}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/TeX Live for SUSE Linux) (format=pdflatex 2013.6.16)  16 JUN 2013 14:58
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/TeX Live for SUSE Linux) (format=pdflatex 2013.6.16)  16 JUN 2013 15:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -393,7 +393,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
  [2] [3]
 ! Undefined control sequence.
-l.40 \endbegin
+l.39 \endbegin
               {itemize}
 ? 
 [4] [5] [6]
@@ -401,16 +401,16 @@ Runaway argument?
 ! Paragraph ended before \end was complete.
 <to be read again> 
                    \par 
-l.72 
+l.73 
      
 ? 
 [7] <usecase.png, id=31, 1654.68187pt x 1436.36626pt>
 File: usecase.png Graphic file (type png)
  <use usecase.png>
-Package pdftex.def Info: usecase.png used on input line 75.
+Package pdftex.def Info: usecase.png used on input line 76.
 (pdftex.def)             Requested size: 496.4084pt x 430.91321pt.
 
-Overfull \hbox (198.40843pt too wide) in paragraph at lines 75--76
+Overfull \hbox (198.40843pt too wide) in paragraph at lines 76--77
 [] 
  []
 
@@ -422,21 +422,21 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.84 \begin{list_type}
+l.85 \begin{list_type}
                       
 ? 
 
-! LaTeX Error: \begin{itemize} on input line 69 ended by \end{list_type}.
+! LaTeX Error: \begin{itemize} on input line 70 ended by \end{list_type}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.86 \end{list_type}
+l.87 \end{list_type}
                     
 ? 
 
-Overfull \hbox (5.16724pt too wide) in paragraph at lines 85--87
+Overfull \hbox (5.16724pt too wide) in paragraph at lines 86--88
 []\OT1/cmr/m/n/10 http://www.fxplabs.com.br/e-commerce-supermercados ACes-sado 
 em
  []
@@ -448,15 +448,9 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.90 \begin{list_type}
+l.91 \begin{list_type}
                       
 ? 
-
-Overfull \hbox (44.91734pt too wide) in paragraph at lines 91--92
-[]\OT1/cmr/m/n/10 Rev^ancia da uti-liza^^Xc~ao do bot~oes - Dis-pon^^S^^Pvel em
-: <http://contentverve.com/10-
- []
-
 
 Overfull \hbox (44.91734pt too wide) in paragraph at lines 92--93
 []\OT1/cmr/m/n/10 Rev^ancia da uti-liza^^Xc~ao do bot~oes - Dis-pon^^S^^Pvel em
@@ -464,30 +458,36 @@ Overfull \hbox (44.91734pt too wide) in paragraph at lines 92--93
  []
 
 
-! LaTeX Error: \begin{itemize} on input line 69 ended by \end{list_type}.
+Overfull \hbox (44.91734pt too wide) in paragraph at lines 93--94
+[]\OT1/cmr/m/n/10 Rev^ancia da uti-liza^^Xc~ao do bot~oes - Dis-pon^^S^^Pvel em
+: <http://contentverve.com/10-
+ []
+
+
+! LaTeX Error: \begin{itemize} on input line 70 ended by \end{list_type}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.94 \end{list_type}
+l.95 \end{list_type}
                     
 ? 
 
-! LaTeX Error: \begin{itemize} on input line 69 ended by \end{document}.
+! LaTeX Error: \begin{itemize} on input line 70 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.95 \end{document}
+l.96 \end{document}
                    
 ? 
 [9] (./tcc.aux) )
 (\end occurred inside a group at level 2)
 
-### semi simple group (level 2) entered at line 69 (\begingroup)
-### semi simple group (level 1) entered at line 36 (\begingroup)
+### semi simple group (level 2) entered at line 70 (\begingroup)
+### semi simple group (level 1) entered at line 35 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
  2046 strings out of 493607
@@ -502,7 +502,7 @@ sr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf/font
 s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/amsfo
 nts/cm/cmr12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
 sr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on tcc.pdf (9 pages, 593209 bytes).
+Output written on tcc.pdf (9 pages, 593323 bytes).
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  41 compressed objects within 1 object stream
