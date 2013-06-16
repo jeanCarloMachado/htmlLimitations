@@ -1,0 +1,80 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage{graphicx}
+\renewcommand{\baselinestretch}{1.50}\normalsize
+\begin{document}
+
+\title{Desenvolvimento de um aplicativo para compra em supermercados online}
+
+\maketitle
+
+\newpage
+
+\section{Glossário}
+\begin{itemize}
+\item Stakeholder: designa-se stakeholder todos aqueles que tem interesse no sistema;
+\item Requisitos: em engenharia de software é comum dividir requisitos em categorias de mode que estes sejam melhor entendidos, (continuear esta descrição)
+\end{itemize}
+
+\newpage
+
+\section{Justificativa} 
+
+Soluções online para problemas cotianos, a muito já se provaram exemplos de grande sucesso na internet, como o mercado livre, exemplo2, exemplo3, etc. Este trabalho objetiva a criação de um sistema de compra de produtos de super-mercados online. A proposta baseia-se na premissa de que a utilização do supermercado é algo manual e repetitivo, incluindo apenas poucas excessões facilmente mapeáveis em um sistema computacional.
+A proposta almeja que na disponibilização do produto, seja possível ao cliente, fazer busca de produtos em sua região, rankeá-los por preço e distância, criar listas customizadas de produtos, e à partir dessas buscas, agendar o separamento e opcionalmente a entrega no endereço especificado pelo cliente.	
+
+\newpage
+
+
+\section{Descrição do produto}
+
+A proposta objetiva a construção de um sistema web, utilizando tecnologias orientadas a objetos, para fornecer grande reuso e fácil manuteabilidade ao sistema. Como possível expansão posterior para plataformas mobile emergentes. O sistema deve prover meios de se adquirir produtos de acordo com as preferências do usuário, preço, localização, mercado, empacotá-los em um pedido e ir buscá-los no mercado ou recebê-los em um endereço especificável. Deverá também ser possível 
+
+Nota-se distinções na utilização do sistema, identificando tres partes semanticamente separáveis. 
+
+\begin{itemize}
+\item SCS1 - Usuário consumidor: o objetivo principal deste usuário será encontrar os produtos que almeja, tendo a possibilidade de comparar preços e marcas;
+\item Colaborador de uma empresa: o objetivo ou tarefa deste usuário será prover ao usuário consumidor, os produtos atualizados de acordo com a realidade do mercado, oferecer também uma interface de comunicação entre os clientes e a empresa, etc;
+\item SCS2 - Administrador de uma empresa: o objetivo deste usuário é fazer a gestão global de sua empresa, podendo alterar permissões e desígnios de outros usuários, etc;
+\item SCS3 (Ack) -   Administrador do sistema geral:  o objetivo deste stakeholder é fazer a gestão global do sistema, como a manutenção de conteúdos, logs de sistema, metatags, etc;
+\end{itemize}
+
+\newpage
+
+\section{Requisitos dos sistema}
+
+\section{Requisitos funcionais}
+Os requisitos aqui dispostos se encontram divididos segundo a semântica anteriormente descrita, e procuram abordar os requisitos em uma abordagem top-down, ou seja, os requisitos requisitos visíveis aos usuários serão demostrados primeiramente, e os requisitos a que estes se baseiam para funcionar posteriormente.
+
+SCS1 - Usuário consumidor :
+
+\newpage
+
+\section{Requisitos não funcionaiRs}
+
+\begin{itemize}
+\item A pesquisa é o ponto chave do sistema, e deve possuir grande perfomance devido a grande gama de clientes esperada, então deve-se criar mecanismos, e utilizar de tecnologias que permitam o rápido acesso a informações.
+\end
+
+\newpage
+\section{Diagramas de caso de uso}
+\includegraphics[scale=0.3]{usecase.png}
+
+\section{Requisitos de domínio}
+
+\newpage
+
+\section{Conclusão}
+
+
+\section{Referências bibliográficas}
+\begin{list_type}
+\item Revância da utilização do botões - Disponível em: <http://contentverve.com/10-call-to-action-case-studies-examples-from-button-tests/> Sun Jun 16 09:02:26 BRT 2013
+\item Revância da utilização do botões - Disponível em: <http://contentverve.com/10-call-to-action-case-studies-examples-from-button-tests/> Sun Jun 16 09:02:26 BRT 2013
+
+\end{list_type}
+\end{document}
+
+
+
