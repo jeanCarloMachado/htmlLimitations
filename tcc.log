@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/TeX Live for SUSE Linux) (format=pdflatex 2013.6.16)  16 JUN 2013 14:33
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/TeX Live for SUSE Linux) (format=pdflatex 2013.6.16)  16 JUN 2013 14:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -381,33 +381,40 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 LaTeX Warning: No \author given.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 14.
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 16.
+
 (/usr/share/texmf/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 14.
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
+ [2] [3]
+! Undefined control sequence.
+l.40 \endbegin
+              {itemize}
+? 
+[4] [5] [6]
 Runaway argument?
 ! Paragraph ended before \end was complete.
 <to be read again> 
                    \par 
-l.57 
+l.72 
      
 ? 
-[5] <usecase.png, id=23, 1654.68187pt x 1436.36626pt>
+[7] <usecase.png, id=31, 1654.68187pt x 1436.36626pt>
 File: usecase.png Graphic file (type png)
  <use usecase.png>
-Package pdftex.def Info: usecase.png used on input line 60.
+Package pdftex.def Info: usecase.png used on input line 75.
 (pdftex.def)             Requested size: 496.4084pt x 430.91321pt.
 
-Overfull \hbox (176.40843pt too wide) in paragraph at lines 60--61
+Overfull \hbox (198.40843pt too wide) in paragraph at lines 75--76
 [] 
  []
 
-[6 <./usecase.png>]
+[8 <./usecase.png>]
 
 ! LaTeX Error: Environment list_type undefined.
 
@@ -415,74 +422,90 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.70 \begin{list_type}
+l.84 \begin{list_type}
                       
 ? 
 
-Overfull \hbox (22.91734pt too wide) in paragraph at lines 71--72
-[]\OT1/cmr/m/n/10 Rev^ancia da uti-liza^^Xc~ao do bot~oes - Dis-pon^^S^^Pvel em
-: <http://contentverve.com/10-
- []
-
-
-Overfull \hbox (11.88954pt too wide) in paragraph at lines 71--72
-\OT1/cmr/m/n/10 call-to-action-case-studies-examples-from-button-tests/> Sun Ju
-n 16 09:02:26
- []
-
-
-Overfull \hbox (22.91734pt too wide) in paragraph at lines 72--73
-[]\OT1/cmr/m/n/10 Rev^ancia da uti-liza^^Xc~ao do bot~oes - Dis-pon^^S^^Pvel em
-: <http://contentverve.com/10-
- []
-
-
-Overfull \hbox (11.88954pt too wide) in paragraph at lines 72--73
-\OT1/cmr/m/n/10 call-to-action-case-studies-examples-from-button-tests/> Sun Ju
-n 16 09:02:26
- []
-
-
-! LaTeX Error: \begin{itemize} on input line 54 ended by \end{list_type}.
+! LaTeX Error: \begin{itemize} on input line 69 ended by \end{list_type}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.74 \end{list_type}
+l.86 \end{list_type}
                     
 ? 
 
-! LaTeX Error: \begin{itemize} on input line 54 ended by \end{document}.
+Overfull \hbox (5.16724pt too wide) in paragraph at lines 85--87
+[]\OT1/cmr/m/n/10 http://www.fxplabs.com.br/e-commerce-supermercados ACes-sado 
+em
+ []
+
+
+! LaTeX Error: Environment list_type undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.75 \end{document}
+l.90 \begin{list_type}
+                      
+? 
+
+Overfull \hbox (44.91734pt too wide) in paragraph at lines 91--92
+[]\OT1/cmr/m/n/10 Rev^ancia da uti-liza^^Xc~ao do bot~oes - Dis-pon^^S^^Pvel em
+: <http://contentverve.com/10-
+ []
+
+
+Overfull \hbox (44.91734pt too wide) in paragraph at lines 92--93
+[]\OT1/cmr/m/n/10 Rev^ancia da uti-liza^^Xc~ao do bot~oes - Dis-pon^^S^^Pvel em
+: <http://contentverve.com/10-
+ []
+
+
+! LaTeX Error: \begin{itemize} on input line 69 ended by \end{list_type}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.94 \end{list_type}
+                    
+? 
+
+! LaTeX Error: \begin{itemize} on input line 69 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.95 \end{document}
                    
 ? 
-[7] (./tcc.aux) )
-(\end occurred inside a group at level 1)
+[9] (./tcc.aux) )
+(\end occurred inside a group at level 2)
 
-### semi simple group (level 1) entered at line 54 (\begingroup)
+### semi simple group (level 2) entered at line 69 (\begingroup)
+### semi simple group (level 1) entered at line 36 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 2043 strings out of 493607
- 26438 string characters out of 3149945
- 85204 words of memory out of 3500000
- 5335 multiletter control sequences out of 15000+200000
- 7280 words of font info for 26 fonts, out of 3000000 for 9000
+ 2046 strings out of 493607
+ 26467 string characters out of 3149945
+ 86204 words of memory out of 3500000
+ 5337 multiletter control sequences out of 15000+200000
+ 7588 words of font info for 27 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 37i,6n,24p,514b,196s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
-sr/share/texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts
-/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf/fonts/type1/public/amsfon
-ts/cm/cmr17.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on tcc.pdf (7 pages, 584604 bytes).
+ 37i,6n,24p,542b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx10.pfb></u
+sr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf/font
+s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
+sr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on tcc.pdf (9 pages, 593209 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 34 compressed objects within 1 object stream
+ 61 PDF objects out of 1000 (max. 8388607)
+ 41 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
