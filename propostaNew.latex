@@ -1,0 +1,178 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage{graphicx}
+\renewcommand{\baselinestretch}{1.50}\normalsize
+\begin{document}
+
+\title{Contrução de um jogo ubíquo com HTML e Javascript e Cordova}
+\maketitle
+CAPA
+
+\newpage
+
+\title{Folha de rosto}
+\maketitle
+
+Este trabalho trata-se de como criar um jogo em HTML 5 e Javascript que se torne transparente à plataforma, tanto em seu desenvolvimento quanto em sua utilização. Fê-se um levantamento das tecnologias existentes e propôs-se uma metodologia para a crição de um jogo de tiro que funcione em todas as plataformas populares, tendo em foco as plataformas \textit{mobile} emergentes.
+
+\newpage
+
+\newpage
+\section{Lista de figuras e tabelas}
+
+\section{Sumário}
+\begin{itemize}
+	\item Tema 
+	\item CONTEXTUALIZAÇÃO 
+	\item PROBLEMA 
+	\item OBJETIVOS 
+	\begin{itemize}
+		\item .1 GERAL 6 
+		\item .2 ESPECÍFICOS 
+	\end{itemize}
+	\item JUSTIFICATIVA 
+	\item REVISÃO BIBLIOGRÁFICA 
+	\item METODOLOGIA 
+	\item CRONOGRAMA 
+	\item Referências 
+\end{itemize}
+\newpage
+
+\section{Tema}
+
+Os seres humanos sempre demonstraram interesse por jogos, há referências arqueológicas que indicam a prática de jogos há mais de 5000 anos. Estes são usados para o entretenimento, todavia, outros fatores colaterais, em grande maioria benéficos são obseráveis na prática de jogar, principalmente relativos aos jogos computacinais, dentre  estes  constam melhorias na capacidade lógica, motora, bem como na resolução de problemas de caráter genérico.
+
+Os jogos na computação surgiram em meados dos anos 60, estes eram extremamente simples e totalmente dependente da plataforma onde estes eram desenvolvidos, sem mencionar o fato de serem protótipos de laboratório os quais nunca sairam destes locais. 
+\\
+\\
+Com a criação da Atari em xxx, os jogos se popularizaram criando um mercado competitivo onde grandes corporações internacionais disputavam entre si para criar as melhores plataforas e jogos.  Essas corporações dentre as maiores  ressalta-se: Nintendo, Sony e Microsoft; devido ao alto teor de competitividade, desenvolveram novas tecnologias, aumentando a iteratividade e imersão do usuário. Grandes exemplos destas tecnologias são: a utilização de renderizadores 3D com polígonos, bibliotecas de física newtoniana, grandes produções musicais de tema para jogos, bem o acréscimo no nível de detalhamento gráfico devido às \textit{GPU's} mais poderosas utilizadas. Porém juntamento com o aumento de variáveis aumentou também a dificulidade de se construir jogos de caráter comercial. Quando à priori era necessário uma equipe de 5 a 6 pessoas durante uma média de 6 meses para construir um jogo diga-se popular, hoje para construir jogos populares leva-se um período de 3 a 4 anos com equipes de 500 a 1000 pessoas, como é o caso do GTA 4 que levou 4 anos para ser desenvolvido com uma equipe de aproximadamente 1000 pessoas.
+\\
+\\
+Com a populariazação da plataforma PC  em XXX, devido ao barateamento do custo de fabricação de circuitos integrados e da criação de grades softwares como sistemas operacionais e aplicativos office, os jogos de console perderam parcela de mercado, todavia não deixaram de existir. Este declínio de mercado ocorreu porque com um PC de aproximadamente 200 U\$ obtinha-se uma plataforma que além de jogar possibilitava a realização de inúmeras outras tarefas como estudar e trabalhar, possiblitando assim, um grande benefício em relação aos 150U\$  em média gastos com consoles que serviam exclusivamente para jogos.
+\\
+\\
+Em XXXX, devido ao ainda maior baratemento e miniaturalização dos componentes bem como a massificação da internet, tendência já prevista por Moore em XXXX, surge um novo mercado, o de aplicativos mobile. Torna-se assim possível construir celulares, palmtops e tables com a arquitetura muito semelhante às dos PC's, inclusive rodando os mesmos sistemas operacionais, que quando não idênticos sofrem poucas customizações, o que permite migrar se não todos, a grande maioria dos aplicativos desenvolvidos para os computadores de mesa para os dispositivos mobile, agregando além de seus benefícios primevos, os trunfos da mobilidade e onipresença que este novo paradigma permite. 
+ \\Contudo, com a grande popularização deste tipo de arquitetura, cada vez mais novos sistemas operacionais para smartphones e aparelhos semelhantes fazem-se disponíveis, são exeplos: Android, FirefoxOS, UbuntuPhone, WindowsPhone e o ainda não lançado Taizen. Sob esta perspectiva os desenvolvedores sentem cada vez mais o desafio que é construir  aplicativos com abrangência suficiente de plataforma, de modo a alcançar todos seus usuários. 
+\\
+\\
+Para tratar deste problema algumas soluções já foram propostas dentre as quais cito: 
+\begin{itemize}
+\item utilização de linguagens de programação rodando máquinas virtuais como o Java;
+\item utilização da linguagem HTML especificamente sua nova especificação o HTML5;
+\end{itemize}
+
+Sobre a utilização de linguagens interpretadas ou parcialmente compiladas rodando em máquinas virtuais, nota-se problemas, pois estas tecnologias nem sempre estão disponíveis em todas as plataforams e os aplicativos são submetidos à temas e outros detalhes de arquitetura espeçíficos de plataforma para plataforma.
+
+\\À alternativa da utilização da linguagem HTML5, é bem mais promissora, pois em sua nova especificação o HTML5 não trata mais somente de hipertextos trafegando pela rede, serve também para desenhar  \textit{on the fly} (ou dinamicamente), utilizando o Canvas permite também a utilização de conteúdos semânticos e acessíves dentre outros, na criação de aplicativos de alta iteratividade e responsividade. 
+\\\\
+Assim como o Java e o Action Script da Adobe o HTML5 também não está totalmente difundido nas plataformas mobile, todavia suas perspectivas são interessantes, estima-se que para o anos de 2016 85\% dos navegadores \textit{handsets} (aplicativos mobile), estarão utilizando esta tecnologia. Mas não é somente um interesse de mercado, outra pesquisa aponta que 2/3 dos desenvolvedores de software manifestam interesse em criar aplicações com o HTML5, o que aponta a linguagem como uma linguagem bastante promissora nos anos vindouros. Contudo, o HTML trata apenas da estruturação e disposição do conteúdo, para a criação de aplicativos completos é necessária a utilização de scripts os quais implementam a lógica da funcionalidade e de alguma tecnologia para a customização da aparência do aplicativo. As soluções mais populares para estas demandas são o Javascript e o CSS \textit{Cascading Style Sheets}, repectivamente. 
+\\
+O Javascript é uma linguagem de script interpretada, criada pela SunMicrosystems em XXXX, e atualmente é a linguagem de propósito genérico mais popular no mundo, implementada em praticamente todos os navegadores. Já o CSS, especificadamene em sua versão 3  permite a estilização de páginas de marcação como o HTML e XML em todos os aspectos de desing e layout, seu principal benefício é permitir a separaçao entre o formato e o conteúdo do documento.
+\\\\
+As tecnologias acima mencionadas são especificadas por uma organização a W3C \textit{World Wide Web Consortium}, a qual consiste em um consórcio internacional de 400 membros dos mais diversos tipos de entidades, que tem por objetivo estabelecer os padrões de desenvolvimento e tecnologias utilizadas para a construção de conteúdo para a Web.
+\\\\
+Os jogos, contudo, não são a exceção em representatividade nas plataformas mobile, e devido à sua intrínsica complexidade de arquitetura tendem a ser um desafio ainda maior no quesito portabilidade, quanto mais se os recursos de hardware específicos como acelerômetro, câmera, etc, cuja implementação de soluções de software é extremamente dependente de arquitetura, forem utilizados na contrução. 
+\\
+\\
+Devido a estas especificidades de plataforma, quando é necessária a criação de aplicativos que utilizem recursos de hardware, demanda-se a utilização de algum polyfill (ou polyfilter), que nada mais é que uma API \textit[Application Programming Interface} (ou Interface de Programação de Aplicativos) para a utilização de recursos que normalmente não estão disponíveis para ferramentas Web. Bibliotecas que implementam estas funcionalidades normalmente são 
+\\
+\\
+O apache cordova é um projeto 
+
+\\
+\\
+Sob este prisma o trabalho a ser desenvolvido propõe a construção de um jogo, desenvolvido em HTM5, Javascript, CSS3  e Apache Cordova, que possibilite a criação bem como a utilização linear em todas as plataformas populares, fazendo uso do acelerômetro como recurso específico de plataforma.
+
+\newpage
+
+
+\section{PROBLEMA}
+A dificulidade de criar jogos, fornecendo uma experiência de alta similaridade de utilização por arquitetura, que suporte as plataformas de maior popularidade, utilizando o mesmo conjunto de tecnologias vulgo HTML e Javascript e CSS em conjunto com alguma API que implementa recursos específicos de plataforma, utilizando somente de tecnologias livres.
+
+\newpage
+\section{OBJETIVOS}
+
+\textbt{Objetivo primário}
+
+Em suma este trabalho em por objetivo principal a criação de um jogo de ação, de presença ubíqua, ou seja, que rode em todas plataformas mobile de maior popularidade, vulgo Android, IOS, WindowsPhone e FirefoxOS, bem como nas plataformas de computadores de mesa convencionais, diga-se Windows, Mac, Linux e que forneça uma experiência de usuário o mais  linear possível.
+
+\textbt{Objetivos secundários}
+
+Como objetivo secundário almeja-se utilizar somente de tecnologias livres para a construção do aplicativo.
+
+\newpage
+
+\section{JUSTIFICATIVA}
+
+O trabalho se justifica, por fornecer um material de \textit{proof-of-concept} (ou prova de conceito) sobre a factibilidade da construção de jogos ublíquos utilizando as tecnologias emergentes. O trabalho também poderá auxiliar desenvolvedores à selecionar um conjunto de tecnologias os quais poderão trabalhar com maior facilidade em meio ao ecossitema de soluções existentes.
+
+
+//falar sobre a quantidade de trabalhos existentes.
+
+
+\newpage
+
+\section{REVISÃO BIBLIOGRÁFICA}
+
+
+Até o final deste ano o número de equipamentos não pc's conectados a internet vão ultrapassar os pcs.
+
+Nome técnico: polyfill
+
+O primeiro jogo para computadores foi criado em 1958 , de lá para cá, muitas mudanças ocorerram no mercado de software, os jogos 
+O contexto seria dentro do entertenimento, a evolução dos games, etc...
+
+A realidade é que os desenvolvedores não sabem onde seus usuários vão rodar seus aplicativos. Devido a isso vê-se a necessidade de construir softwares responsivos.
+
+O desenvolvimento de software está migrando para
+
+O html 5 não tem uma especificação fechada, não em acesso completo ao hardware e ao sistema operacional
+
+Utilizar aplicações híbridas
+
+utilizar phone gap
+
+dificuldade de desenvolver aplicativos para todas as plataformas 
+
+Phone gap
+
+
+
+O HTML 5 é a quinta versão do HTML, esta versão teve o início do seu desenvolvimento em 2007, tomando por base o trabalho que já vinha sido desenvolvido pela WHATWG.
+
+
+O padrão HTTP é conhecido por ser o principal provedor da WEB e a especificação de texto deste padrão é o conhecido HTML, e sua concepção inicial SILVA 2011, "Tim Berners-Lee acreditava que seria possível  interligar hipertextos em computadores diferentes com uso de links globais também chamados de hiperlinks"  todavia a iteratividade necessária para a construção de jogos animados é algo recente e os méritos desta conquista é dentre outros fatores legado ao fato de o HTTP ser um padrão aberto, com órgãos reguladores, e não simplesmente um protocolo fechado monoplizado por alguma entidade privada.
+
+
+\newpage
+
+\section{METODOLOGIA}
+
+Há de se desenvolver um software na plataforma web utilizando as tecnologias emergentes Javascript e HTML5 e PHP para backend.
+
+Intex XDK;
+
+Para demonstrar a prova do conceito utilizar-se-á do XDK da intel, rodando o jogo em todas as plataformas anteriormente propostas.
+
+\newpage
+
+\section{Trabalhos similares}
+\newpage
+
+\section{CRONOGRAMA}
+\newpage
+
+\section{Referências}
+
+\begin{itemize}
+\item Acessível em: http://www.failwars.blog.br/nerd-feelings/incrvel-evoluo-dos-vdeo-games-de-console-de-1967-2012/
+\item Acessível em: http://pt.wikipedia.org/wiki/Hist%C3%B3ria_dos_jogos_eletr%C3%B4nicos
+\end{itemize}
+\newpage
+
+\end{document}
+
+
+
+

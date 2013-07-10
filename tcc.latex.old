@@ -1,0 +1,154 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage{graphicx}
+\renewcommand{\baselinestretch}{1.50}\normalsize
+\begin{document}
+
+\title{Desenvolvimento de uma rede de e-comerce para mercados online}
+\maketitle
+
+\newpage
+
+
+\title{Desenvolvimento de uma rede de e-comerce para mercados online}
+\maketitle
+Descrição lateral
+
+\newpage
+
+\section{Sumário}
+
+1 CONTEXTUALIZAÇÃO 4 \\
+2 PROBLEMA 6 \\
+3 OBJETIVOS 6 \\
+3.1 GERAL 6 \\
+3.2 ESPECÍFICOS 6 \\
+4 JUSTIFICATIVA 7 \\
+5 REVISÃO BIBLIOGRÁFICA 7 \\
+5.1 AMBIENTES VIRTUAIS DE APRENDIZAGEM 7 \\
+5.2 COMPUTAÇÃO AFETIVA E DEDICAÇÃO 7 \\
+5.3 PESQUISAS SIMILARES 10 \\
+6 METODOLOGIA 10 \\
+7 CRONOGRAMA 12
+
+\newpage
+
+\section{Contextualização}
+Soluções online para problemas do cotiano, a muito já se provaram exemplos de grande sucesso na internet, como o Mercado Livre, Americanas, exemplo3, etc. Este trabalho objetiva a criação de uma rede de e-comerce de compra de produtos de mercados online. O projeto almeja que na disponibilização do produto, seja possível ao cliente encontre os produtos de mercados que melhor o agradem com a agilidade da internet e com a comodidade de entrega em um endereço especificado. Deseja-se também que  a plataforma seja de fácil gestão e migração para as empresas que desejem portar seus negócios para este serviço.
+
+\newpage
+\section{O problema}
+
+O método tradicional de compras  é custoso, força-nos a  nos locomover-mos e é pouco efetivo devido à alta dificuldade de se obter dados comparativos à respeito dos preços dos produtos.
+
+
+\newpage
+\textbold{Objetivos}
+
+
+ Em suma o  objetivo é criar uma ferramenta web que possiblite que os clientes obtenham os melhores produtos na relação custo/benefício, bem como facilitar o processo de aquisição e recebimento, bem como fornecer uma interface para um relacionamento sólido entre consumidores e fornecedores.
+
+Objetiva-se que o sistema possibilite adquirir produtos de acordo com as preferências do usuário, preço, localização, mercado, empacotá-los em um pedido e ir buscá-los no mercado ou recebê-los em um endereço especificável. 
+
+Para melhor entendimento da aplicação foi dividio o sistema nos seguintes \textit{papéis}, semanticamente distintos:
+
+Usuário consumidor:  O objetivo principal deste usuário será encontrar os produtos que almeja, tendo a possibilidade de comparar preços, marcas, localização e horários. Este usuário també terá por responsabilidade julgar os serviços de determinada empresa, através de comentários e graduação de qualidade. Outrossim o cliente poderá entrar em contato com as empresas para as finalidades que desejar.
+
+Colaborador de uma empresa: 
+O objetivo ou tarefa deste usuário será prover ao usuário consumidor, os produtos atualizados de acordo com a realidade do mercado, oferecer também uma interface de comunicação entre os clientes e a empresa, etc;
+ 
+ Administrador de uma empresa: O objetivo deste usuário é fazer a gestão global de sua empresa, podendo alterar permissões e desígnios de outros usuários, etc;
+ 
+ Administrador do sistema geral:  o objetivo deste stakeholder é fazer a gestão global do sistema, como a manutenção de conteúdos, logs de sistema, metatags, etc;
+
+ Nota: Todo o colaborador de uma empresa, pode também efetuar compras no sistema como um usuário final, este assim bem como todos seus sucessores herdam estas funcionalidades.
+
+
+\textbd{Objetivos Específicos}
+\\ Demonstrar conhecimentos obtidos no curso de Análise e desenvolvimento de Sistemas, através da utilização de ferramentas emergentes, um utilização de padrões, respeito à segurança, etc.
+
+
+\newpage
+\section{Justificativa} 
+
+A vaildade do projeto de baseia nas  seguintes premissas que se validadas justificam a implementação do projeto:
+
+O projeto é algo de utiliadade suficiente para se sobrepor aos seguintes fatores desmotivacionais ao cliente final abaixo listados:
+(Descrever aqui fatores desmotivacionais do sistema)
+\begin{itemize}
+\item  Descoforto de mudar um processo tradicional, que é o de compra de produtos presencial
+\item  O usuário credita o sistema suficientemente para arriscar uma compra em produtos, cuja qualidade só há de ser garantida no momento da entrega.
+\item Os usuários estão habituados a Web suficientemente para não desistirem da compra
+\endbegin{itemize}
+
+A comodidade gerada através de um sistema que possibilite a aquisição, bem como pesquisa de produtos online, justifica por si só a realização do projeto.
+
+
+
+
+\newpage
+\section{Revisão bibliográfica}
+
+Na soma das características do sistema, o mesmo tem um caráter inovador.
+
+O tralho diferencia-se de sistemas com o mercado livre, por possuir uma sessão para cada cliente que suporta vasta gama de produtos, ofertas, podendo ser considerado como um site da próxima empresa, diferentemente dos serviços prestados pelo mercado livre que almejam focar uma pequena gama de produtos por cliente, e excluir o marketing da empresa.
+
+
+\section{Metodologia}
+
+Sob a perspectiva técnica o sistema há de ser construido para a plataforma web, utilizando tecnologias orientadas a objetos, para fornecer grande reuso e fácil manuteabilidade ao sistema, seria válida a utilização de outras plataformas em conjunto com a web, por exemplo no fornecimento de aplicativos mobile, mas devido ao condicionante tempo haverá de ser desenvolvida esta funcionalidade posteriormente. 
+
+\section{Cronograma}
+
+\section{Requisitos dos sistema}
+
+\section{Requisitos funcionais}
+Os requisitos aqui dispostos se encontram divididos segundo a semântica anteriormente descrita, e procuram abordar os requisitos em uma abordagem top-down, ou seja, os requisitos requisitos visíveis aos usuários serão demostrados primeiramente, e os requisitos a que estes se baseiam para funcionar posteriormente.
+
+SCS1 - Usuário consumidor :
+
+\newpage
+
+\section{Requisitos não funcionais}
+
+ A pesquisa é o ponto chave do sistema, e deve possuir grande perfomance em contraposição à grande game de clientes esperada, então deve-se criar mecanismos, e utilizar de tecnologias que permitam o rápido acesso a informações.
+
+Sobre a internacionalização, foi julgado não haver a necessidade na primeira versão, deveras será impelementada posteriormente.
+
+\newpage
+\section{Diagramas de caso de uso}
+\includegraphics[scale=0.3]{usecase.png}
+
+\section{Requisitos de domínio}
+
+\newpage
+
+\section{Glossário}
+\begin{itemize}
+\item Stakeholder: designa-se stakeholder todos aqueles que tem interesse no sistema;
+\item Requisitos: em engenharia de software é comum dividir requisitos em categorias de mode que estes sejam melhor entendidos, (continuear esta descrição)
+\item Orientação à objetos: 
+\end{itemize}
+
+\newpage
+
+\section{Conclusão}
+
+\section{Possíveis concorrentes}
+\begin{list_type}
+\item  Disponível em <http://www.fxplabs.com.br/e-commerce-mercados>, Acessado em Sun Jun 16 14:57:09 BRT 2013                                                                   
+\item  Disponível em <http://www.natashopping.com.br/supermercadonata>, Acessado em Sun Jun 16 14:57:09 BRT 2013               
+\item Disponível em <http://www.princesamercados.com.br/#display=default>, Acessado em Sun Jun 16 14:57:09                                                     
+\end{list_type}
+
+\section{Referências bibliográficas}
+\begin{list_type}
+\item Revância da utilização do botões - Disponível em: <http://contentverve.com/10-call-to-action-case-studies-examples-from-button-tests/> Sun Jun 16 09:02:26 BRT 2013
+\item Revância da utilização do botões - Disponível em: <http://contentverve.com/10-call-to-action-case-studies-examples-from-button-tests/> Sun Jun 16 09:02:26 BRT 2013
+\item Disponível em: <http://g1.globo.com/tecnologia/noticia/2013/06/amazon-planeja-ingressar-em-vendas-de-supermercado-online-dizem-fontes.html>
+\end{list_type}
+\end{document}
+
+
+
