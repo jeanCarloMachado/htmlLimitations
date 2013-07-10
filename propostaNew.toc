@@ -1,0 +1,17 @@
+\select@language {portuges}
+\contentsline {section}{\numberline {1}CONTEXTUALIZA\IeC {\c C}\IeC {\~A}O}{4}
+\contentsline {section}{\numberline {2}PROBLEMA}{9}
+\contentsline {section}{\numberline {3}OBJETIVOS}{10}
+\contentsline {section}{\numberline {4}JUSTIFICATIVA}{11}
+\contentsline {section}{\numberline {5}REVIS\IeC {\~A}O BIBLIOGR\IeC {\'A}FICA}{12}
+\contentsline {subsection}{\numberline {5.1}HTML5}{12}
+\contentsline {subsection}{\numberline {5.2}Paradigmas de p\IeC {\'a}ginas para dispositivos m\IeC {\'o}veis}{12}
+\contentsline {subsection}{\numberline {5.3}Frameworks polyfill}{13}
+\contentsline {subsection}{\numberline {5.4}Bibliotecas canvas}{13}
+\contentsline {subsection}{\numberline {5.5}Processos de software}{15}
+\contentsline {section}{\numberline {6}METODOLOGIA}{17}
+\contentsline {subsection}{\numberline {6.1}Plataforma de desenvolvimento}{17}
+\contentsline {subsection}{\numberline {6.2}Processo de desenvolvimento}{17}
+\contentsline {subsection}{\numberline {6.3}Trabalhos similares}{18}
+\contentsline {section}{\numberline {7}CRONOGRAMA}{19}
+\contentsline {section}{\numberline {8}REFER\GenericError {(inputenc) }{Package inputenc Error: Unicode char \u 8:Ẽ not set up for use with LaTeX}{See the inputenc package documentation for explanation.}{Your command was ignored.\MessageBreak Type I <command> <return> to replace it with another command,\MessageBreak or <return> to continue without it.}NCIAS}{20}

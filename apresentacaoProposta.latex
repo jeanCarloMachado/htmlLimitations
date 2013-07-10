@@ -1,0 +1,109 @@
+\documentclass{beamer}
+\usetheme{Warsaw}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[portuges]{babel}
+\title{Contrução de um jogo, ubíquo com HTML5}
+\author{Jean Carlo Machado}
+\institute{CUB}
+\date{Julho, 2013}
+\begin{document}
+\maketitle
+
+\begin{frame}
+\frametitle{Introdução}
+
+Este trabalho trata-se de como criar um jogo utilizando das tecnologias emergentes, HTML 5, Javascript e CSS o qual seja transparente à plataforma de utilização, mesmo utilizando recursos específicos de hardware ou software, Fêz-se um levantamento das tecnologias existentes foi proposta uma metodologia para a crição de um jogo de ação que funcione em todas as plataformas populares, tendo em foco principal a utilização dos recursos oferecidos pelas plataformas \textit{mobile} emergentes.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Problema}
+
+A dificulidade de criar jogos, fornecendo uma experiência de alta similaridade de utilização por arquitetura, que suporte as plataformas de maior popularidade, utilizando um único set de tecnologias, fazendo uso de  recursos específicos de plataforma.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Objetivo Primário}
+
+A criação de um jogo, de plataforma, de presença ubíqua, ou seja, que rode em todas plataformas mobile de maior popularidade, vulgo Android, IOS, Windows 8 e FirefoxOS, bem como nas plataformas de computadores de mesa convencionais, diga-se Linux, Windows e Mac; e que forneça uma experiência de usuário o mais  linear possível.  O foco do trabalho reside na prova da factibilidade do conceito e não na construção do jogo em si.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Porque o HTML5?}
+
+Estima-se que para o ano de 2016 85\% dos navegadores estarão utilizando esta tecnologia. HTML5 não é somente um objetivo de mercado, outra pesquisa aponta que 2/3 dos desenvolvedores de software manifestam interesse em criar aplicações com a tecnologia, o que aponta a linguagem como uma ferramenta bastante promissora nos anos vindouros. 
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Objetivos Secundários}
+ Almeja-se utilizar somente de tecnologias livres para a construção do aplicativo.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Objetivos Secundários}
+Deseja-se também identificar os pontos relevantes (fraquezas e acertos) que a implementação atual do HTML5, nos diferentes tipos de plataforma, dessa forma sendo possível obter uma visão panorãmica de o quanto falta para o HTML5 estar plenamente estabelecido.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Objetivos Secundários}
+
+Objetiva-se também demonstrar os conhecimentos adquiridos no curso de Análise e Desenvolvimento de Sistemas, abordando às áreas de programação, desenvolvimento de sistemas, iteração humano computador, engenharia de software entre outros.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Justificativa}
+
+Fornece material de \textit{proof-of-concept} (ou prova de conceito) sobre a factibilidade da construção de jogos onipresentes utilizando as tecnologias emergentes. 
+Servirá também para demonstrar o estado da arte do HTML5 e os contornos necessários, para se desenvolver um jogo completo, multiplataforma fazendo-lhe uso.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Justificativa}
+
+Considerando à popularidade destas tecnologias e suas perspectivas o trabalho também poderá auxiliar desenvolvedores, a selecionar um conjunto de tecnologias os quais poderão trabalhar com maior facilidade em meio ao ecossitema de soluções existentes e não cair nos erros que este tipo de tecnologia pioneira ainda pode pregar.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Justificativa}
+Vários trabalhos tratam da utilização de HTML5 na criação de jogos, todavia, este trabalho se diferencia pela abrodagem da criação de jogos, na perspectiva das diferenças de cada plataforma e na procura de uma solução que permita tanto o desenvolvimento quanto uma utilização horizontalizada.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{O que será o jogo?}
+
+Propõe-se um jogo de plataforma 2D, no estilo de Mario, onde o jogador terá de passar por uma série de desafios para conseguir sair de cada fase. Sendo composto na sua totalidade de 3 fases com dificuldade incremental. 
+
+Caberá ao jogador, conduzir seu personagem através do cenário, de modo que  o mesmo sobreviva aos desafios propostos, caso o personagem venha a morrer o usuário deverá recomeçar o jogo. O acelerômetro será utilizado como acessório para alterar os eixos do jogo, sendo caso o jogador vire o dispositivo, o jogo deve "virar" também, derrubando os personagens e alterando cenário.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Dúvidas?}
+Dúvidas?
+\end{frame}
+
+\begin{frame}
+\frametitle{Obrigado.}
+Obrigado.
+\end{frame}
+
+\end{document}

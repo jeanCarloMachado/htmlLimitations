@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/TeX Live for SUSE Linux) (format=pdflatex 2013.6.16)  9 JUL 2013 23:04
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/TeX Live for SUSE Linux) (format=pdflatex 2013.6.16)  10 JUL 2013 13:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -294,35 +294,71 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 ))
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
-) (./propostaNew.aux)
+)
+(/usr/share/texmf/tex/latex/index/index.sty
+Package: index 2004/01/20 v4.2beta Improved index support (dmj)
+\@indexbox=\insert233
+\indexproofstyle=\toks17
+
+
+LaTeX Warning: Command \markboth  has changed.
+               Check if current package is valid.
+
+
+LaTeX Warning: Command \markright  has changed.
+               Check if current package is valid.
+
+)
+! Undefined control sequence.
+l.15 \newfloat
+              {figure}{thp}{lop}
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \newfloat{f
+                igure}{thp}{lop}
+? 
+! Undefined control sequence.
+l.16 \floatname
+               {figure}{Figure}
+? 
+(./propostaNew.aux
+
+LaTeX Warning: Label `fig:Cordova' multiply defined.
+
+)
 \openout1 = `propostaNew.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-
-(/usr/share/texmf/tex/context/base/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+ (/usr/share/texmf/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count89
 \scratchdimen=\dimen106
 \scratchbox=\box26
 \nofMPsegments=\count90
 \nofMParguments=\count91
-\everyMPshowfont=\toks17
+\everyMPshowfont=\toks18
 \MPscratchCnt=\count92
 \MPscratchDim=\dimen107
 \MPnumerator=\count93
 \makeMPintoPDFobject=\count94
-\everyMPtoPDFconversion=\toks18
+\everyMPtoPDFconversion=\toks19
 ) (/usr/share/texmf/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -370,74 +406,216 @@ G,.JBIG2,.JB2,.eps]
 (/usr/share/texmf/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
-))
+)) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1]
+
+! LaTeX Error: Environment espacosimples undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40             \begin{espacosimples}
+                                      
+? 
+
+! LaTeX Error: \begin{minipage} on input line 39 ended by \end{espacosimples}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43             \end{espacosimples}
+                                    
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--44
+
+ []
+
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 9.
+(Font)              <7> on input line 44.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 9.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 9.
+(Font)              <5> on input line 44.
+[1]
+
+! LaTeX Error: Environment folhadeaprovacao undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 \begin{folhadeaprovacao}
+                             
+? 
+! Undefined control sequence.
+<argument> \ABNTsignthickness 
+                              
+l.57 \assinatura
+                {}
+? 
+! Undefined control sequence.
+<argument> \assinatura 
+                       
+l.57 \assinatura
+                {}
+? 
+! Undefined control sequence.
+l.58 \assinatura
+                {}
+? 
+! Undefined control sequence.
+l.59 \assinatura
+                {}
+? 
+
+! LaTeX Error: \begin{document} ended by \end{folhadeaprovacao}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 \end{folhadeaprovacao}
+                           
+? 
+[1] (./propostaNew.lof)
+\tf@lof=\write3
+\openout3 = `propostaNew.lof'.
+
+ (./propostaNew.lot)
+\tf@lot=\write4
+\openout4 = `propostaNew.lot'.
+
+ [2] (./propostaNew.toc
+
+! Package inputenc Error: Unicode char \u 8:\GenericError {(inputenc)          
+      }{Package inputenc Error: Unicode char \u8:Ẽ not set up for use with La
+TeX}{See the inputenc package documentation for explanation.}{Your command was 
+ignored.
+(inputenc) Type  I <command> <return>  to replace it with another command,
+(inputenc) or  <return>  to continue without it.} not set up for use with LaTeX
+.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 ...return> to continue without it.}NCIAS}{20}
+                                                  
+? 
+)
+\tf@toc=\write5
+\openout5 = `propostaNew.toc'.
+
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 72--88
+
+ []
 
 
-LaTeX Warning: No \author given.
+Underfull \hbox (badness 10000) in paragraph at lines 72--88
 
-[1
+ []
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 26.
 
-(/usr/share/texmf/tex/latex/base/omscmr.fd
+Underfull \hbox (badness 10000) in paragraph at lines 72--88
+
+ []
+
+
+Overfull \hbox (9.63953pt too wide) in paragraph at lines 72--88
+\OT1/cmr/m/n/10 Recentemente, de-vido ba-ra-te-mento e mi-ni-a-tu-ra-liza^^Xc~a
+o dos com-po-nen-tes, tend^encia
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--88
+
+ []
+
+[4]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 89.
+ (/usr/share/texmf/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 26.
- [3]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 89.
+ [5]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.95 \\A
+         alternativa da utilização da linguagem HTML5, é bem mais promiss...
+
+? 
 ! Too many }'s.
-l.69 ...\textit[Application Programming Interface}
+l.102 ...textit[Application Programming Interface}
                                                    (ou Interface de Programa...
 
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--70
+Underfull \hbox (badness 10000) in paragraph at lines 95--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--70
+Underfull \hbox (badness 10000) in paragraph at lines 95--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--70
+Underfull \hbox (badness 10000) in paragraph at lines 95--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--70
-
+Overfull \hbox (5.1673pt too wide) in paragraph at lines 95--106
+\OT1/cmr/m/n/10 Quando tra-tando des-tas es-pe-ci-fi-ci-da-des de pla-ta-forma,
+ mui-tas ve-zes n~ao ^^Se poss^^S^^Pvel
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--70
+Underfull \hbox (badness 10000) in paragraph at lines 95--106
 
  []
 
+[6] [7] [8] [9] [10] [11]
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--70
+! Package inputenc Error: Unicode char \u8:ẽ not set up for use with LaTeX.
 
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.158 ...maneira convencional,  com otimizadaçẽ
+                                                  os para esta categoria de ...
+
+? 
+
+Overfull \hbox (2.91733pt too wide) in paragraph at lines 159--160
+\OT1/cmr/m/n/10 apa-ren-tando se-rem in-ter-fa-ces gr^^Saficas desk-top da pr^^
+Sopria pla-ta-forma m^^Sovel.
  []
 
+[12] [13] <cordovaFeatures.jpg, id=60, 852.18375pt x 347.04657pt>
+File: cordovaFeatures.jpg Graphic file (type jpg)
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--70
+<use cordovaFeatures.jpg>
+Package pdftex.def Info: cordovaFeatures.jpg used on input line 189.
+(pdftex.def)             Requested size: 345.0pt x 140.50012pt.
+ [14 <./cordovaFeatures.jpg>] [15] [16]
+<openupcicle.png, id=71, 747.79375pt x 427.5975pt>
+File: openupcicle.png Graphic file (type png)
+ <use openupcicle.png>
+Package pdftex.def Info: openupcicle.png used on input line 235.
+(pdftex.def)             Requested size: 345.0pt x 197.27792pt.
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--70
-
- []
-
-[4] [5] [6]
+[17]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -445,8 +623,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.72 \\
-       
+l.249 \\\\
+          
 ? 
 
 ! LaTeX Error: There's no line here to end.
@@ -455,44 +633,143 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.73 S
-      ob este prisma o trabalho a ser desenvolvido propõe a construção de...
+l.250 \subsection
+                 {Trabalhos similares} \\
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.251 (
+       SILVA,2010), demostra a utilização de HTML5 para a criação de jog...
 
 ? 
-[7] [8]
-! Undefined control sequence.
-l.84 \textbt
-            {Objetivo primário}
+[18 <./openupcicle.png>] [19]
+
+! Package inputenc Error: Unicode char \u8:Ẽ not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.276 \section{REFERẼNCIAS}
+                             
 ? 
-! Undefined control sequence.
-l.88 \textbt
-            {Objetivos secundários}
-? 
-[9] [10] [11] [12] [13] [14]
-Overfull \hbox (9.55618pt too wide) in paragraph at lines 157--158
+
+Overfull \hbox (2.26pt too wide) in paragraph at lines 301--308
+[]\OT1/cmr/m/n/10 MOODLE. Mo-o-dle. Dis-pon^^S^^Pvel em: <http://www.moodle.org
+.br/>. Acesso
+ []
+
+
+Overfull \hbox (32.72311pt too wide) in paragraph at lines 309--314
+\OT1/cmr/m/n/10 pon^^S^^Pvel em: <http://www.comunidadesvirtuais.pro.br/hiperte
+xto/home/ava.pdf>.
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 325--334
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--334
+
+ []
+
+
+Overfull \hbox (9.55618pt too wide) in paragraph at lines 335--337
 []\OT1/cmr/m/n/10 Acess^^S^^Pvel em: http://www.failwars.blog.br/nerd-feelings/
 incrvel-evoluo-dos-
  []
 
-[15] (./propostaNew.aux) ) 
+
+Overfull \hbox (54.47299pt too wide) in paragraph at lines 335--337
+\OT1/cmr/m/n/10 vdeo-games-de-console-de-1967-2012/ Acess^^S^^Pvel em: http://p
+t.wikipedia.org/wiki/Hist 
+ []
+
+[21]
+
+! LaTeX Error: Index type `not' undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.340 
+      
+? 
+
+! LaTeX Error: Index type `aut' undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.343 first page of the index.]
+                               
+? 
+
+! LaTeX Error: Index type `list' undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.346 
+      
+? 
+
+! LaTeX Error: Index type `default' undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.348 \end
+          {document}
+? 
+
+! LaTeX Error: \begin{itemize} on input line 210 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.348 \end{document}
+                    
+? 
+(./propostaNew.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 210 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 2048 strings out of 493607
- 26554 string characters out of 3149945
- 95204 words of memory out of 3500000
- 5340 multiletter control sequences out of 15000+200000
- 7934 words of font info for 28 fonts, out of 3000000 for 9000
+ 2132 strings out of 493607
+ 27717 string characters out of 3149945
+ 90526 words of memory out of 3500000
+ 5415 multiletter control sequences out of 15000+200000
+ 5803 words of font info for 21 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 37i,6n,24p,1188b,193s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx
-10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/pu
-blic/amsfonts/cm/cmr12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr
-17.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
-texmf/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on propostaNew.pdf (15 pages, 105162 bytes).
+ 37i,9n,24p,1064b,343s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx10.pfb></u
+sr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf/font
+s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
+sr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/font
+s/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on propostaNew.pdf (24 pages, 231778 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 113 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
