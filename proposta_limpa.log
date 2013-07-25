@@ -1,0 +1,848 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/TeX Live for SUSE Linux) (format=pdflatex 2013.6.16)  23 JUL 2013 20:51
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**proposta_limpa.latex
+(./proposta_limpa.latex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2011-07-01, ngerman-x-2011-07-01, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
+ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
+rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
+kurmanji, lao, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nyn
+orsk, polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbia
+nc, slovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorb
+ian, welsh, loaded.
+(/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/share/texmf/tex/latex/base/utf8.def
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/share/texmf/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/share/texmf/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/share/texmf/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/share/texmf/tex/generic/babel/babel.sty
+Package: babel 2008/07/08 v3.8m The Babel package
+
+(/usr/share/texmf/tex/generic/babel/portuges.ldf
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+
+(/usr/share/texmf/tex/generic/babel/babel.def
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count87
+\U@D=\dimen103
+)
+Package babel Info: Making " an active character on input line 145.
+))
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texmf/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texmf/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+(/usr/share/texmf/tex/latex/index/index.sty
+Package: index 2004/01/20 v4.2beta Improved index support (dmj)
+\@indexbox=\insert233
+\indexproofstyle=\toks17
+
+
+LaTeX Warning: Command \markboth  has changed.
+               Check if current package is valid.
+
+
+LaTeX Warning: Command \markright  has changed.
+               Check if current package is valid.
+
+)
+! Undefined control sequence.
+l.15 \newfloat
+              {figure}{thp}{lop}
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \newfloat{f
+                igure}{thp}{lop}
+? 
+! Undefined control sequence.
+l.16 \floatname
+               {figure}{Figure}
+? 
+(./proposta_limpa.aux
+
+LaTeX Warning: Label `fig:Cordova' multiply defined.
+
+
+LaTeX Warning: Label `SILVA2010' multiply defined.
+
+
+LaTeX Warning: Label `SILVA2010' multiply defined.
+
+)
+\openout1 = `proposta_limpa.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+ (/usr/share/texmf/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count89
+\scratchdimen=\dimen106
+\scratchbox=\box26
+\nofMPsegments=\count90
+\nofMParguments=\count91
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count92
+\MPscratchDim=\dimen107
+\MPnumerator=\count93
+\makeMPintoPDFobject=\count94
+\everyMPtoPDFconversion=\toks19
+) (/usr/share/texmf/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texmf/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texmf/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texmf/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texmf/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texmf/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texmf/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texmf/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texmf/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texmf/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1]
+
+! LaTeX Error: Environment espacosimples undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40             \begin{espacosimples}
+                                      
+? 
+
+! LaTeX Error: \begin{minipage} on input line 39 ended by \end{espacosimples}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43             \end{espacosimples}
+                                    
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--44
+
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 44.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 44.
+[1]
+! Undefined control sequence.
+<argument> \ABNTsignthickness 
+                              
+l.52 \assinatura
+                {}
+? 
+! Undefined control sequence.
+<argument> \assinatura 
+                       
+l.52 \assinatura
+                {}
+? 
+! Undefined control sequence.
+l.53 \assinatura
+                {}
+? 
+! Undefined control sequence.
+l.54 \assinatura
+                {}
+? 
+
+! LaTeX Error: \begin{document} ended by \end{folhadeaprovacao}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 \end{folhadeaprovacao}
+                           
+? 
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.55 \end{folhadeaprovacao}
+                           
+? 
+(./proposta_limpa.lof)
+\tf@lof=\write3
+\openout3 = `proposta_limpa.lof'.
+
+ (./proposta_limpa.lot)
+\tf@lot=\write4
+\openout4 = `proposta_limpa.lot'.
+
+ [1] (./proposta_limpa.toc
+[2])
+\tf@toc=\write5
+\openout5 = `proposta_limpa.toc'.
+
+ [3]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 \\m
+        ais beneicios de jogar
+? 
+[4] <bestSelledGames.jpg, id=31, 719.68875pt x 140.77594pt>
+File: bestSelledGames.jpg Graphic file (type jpg)
+
+<use bestSelledGames.jpg>
+Package pdftex.def Info: bestSelledGames.jpg used on input line 83.
+(pdftex.def)             Requested size: 345.0pt x 67.48575pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 89.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 89.
+ [5 <./bestSelledGames.jpg>]
+<smartvscomputer.jpg, id=38, 624.3325pt x 469.755pt>
+File: smartvscomputer.jpg Graphic file (type jpg)
+ <use smartvscomputer.jpg>
+Package pdftex.def Info: smartvscomputer.jpg used on input line 99.
+(pdftex.def)             Requested size: 345.0pt x 259.5846pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--114
+
+ []
+
+[6 <./smartvscomputer.jpg>] [7]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.123 \\m
+         elhorar
+? 
+
+Overfull \hbox (2.88957pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 de pla-ta-forma em dis-po-si-ti-vos de di-fe-ren-tes ti-pos, co
+mo com-pu-ta-do-res, smartpho-
+ []
+
+[8]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 140.
+
+ (/usr/share/texmf/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 140.
+ [9]
+Underfull \hbox (badness 10000) in paragraph at lines 161--164
+
+ []
+
+[10]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.165 \\A
+         tualmente o canvas suporta somente o desenvolvimento 2D, sua implem...
+
+? 
+
+Overfull \hbox (7.33395pt too wide) in paragraph at lines 165--166
+[]\OT1/cmr/m/n/10 Atualmente o can-vas su-porta so-mente o de-sen-vol-vi-mento 
+2D, sua im-ple-menta^^Xc~ao
+ []
+
+[11]
+
+! Package inputenc Error: Unicode char \u8:ẽ not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.173 ...ndo (SHANKAR, 2012), "geralmente incluẽ
+                                                  m os seguintes recursos: e...
+
+? 
+
+Overfull \hbox (2.71797pt too wide) in paragraph at lines 173--174
+\OT1/cmr/m/n/10 Motores de f^^S^^Psica (\OT1/cmr/bx/n/10 Engines de f^^S^^Psica
+\OT1/cmr/m/n/10 ) prov^em a um soft-ware, atrav^^Ses de equa^^Xc~oes
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 203--205
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--205
+
+ []
+
+[13]
+Overfull \hbox (12.11183pt too wide) in paragraph at lines 217--218
+[]\OT1/cmr/m/n/10 Suporte a Geo-localiza^^Xc~ao: Webshims Lib, ge-o-lo-cal-tion
+ poly-fill, GeoLocation-
+ []
+
+<cordovaFeatures.jpg, id=65, 852.18375pt x 347.04657pt>
+File: cordovaFeatures.jpg Graphic file (type jpg)
+
+<use cordovaFeatures.jpg>
+Package pdftex.def Info: cordovaFeatures.jpg used on input line 224.
+(pdftex.def)             Requested size: 345.0pt x 140.50012pt.
+ [14] [15 <./cordovaFeatures.jpg>] [16] [17]
+! Undefined control sequence.
+l.314  \bibliotecam
+                   {SILVA2010}
+? 
+! You can't use `macro parameter character #' in horizontal mode.
+l.317 ...vascript-physics-engines-comparison.html#
+                                                  fbid=AAlTVDXjb40
+? 
+
+Underfull \hbox (badness 4036) in paragraph at lines 314--319
+\OT1/cmr/m/n/10 Dis-pon^^S^^Pvel em: http://www.htmlgoodies.com/html5/client/ja
+vascript-
+ []
+
+
+Underfull \hbox (badness 3657) in paragraph at lines 314--319
+\OT1/cmr/m/n/10 physics-engines-comparison.htmlfbid=AAlTVDXjb40 Acesso em: Jul
+ []
+
+! Undefined control sequence.
+l.320  \bibliotecam
+                   {AK2012}
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--325
+\OT1/cmr/m/n/10 http://www.prnewswire.com/news-releases/global-gaming-market-is
+-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--325
+\OT1/cmr/m/n/10 expected-to-reach-usd-1179-billion-by-2015-transparency-market-
+research-
+ []
+
+! Undefined control sequence.
+l.326  \bibliotecam
+                   {VGChartz2013}
+? 
+! Undefined control sequence.
+l.333  \bibliotecam
+                   {WEINTRAUB2012}
+? 
+
+Underfull \hbox (badness 3281) in paragraph at lines 333--338
+\OT1/cmr/m/n/10 smartphone-shipment-numbers-passed-pc-in-q4-2010/ Acesso em: Ju
+l
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.341 \\
+        
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.342 S
+       ILVA, Maurício Samy. HTML5 A linguagemEM DE MARCAÇÃO QUE REVOLUCIO...
+
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--353
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--353
+
+ []
+
+[18] [19]
+! Misplaced alignment tab character &.
+l.355 ...IN THE "90S: CHILDREN'S TIME COMMITMENT &
+                                                   GAME PREFERENCE. Health a...
+
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--359
+
+ []
+
+
+Overfull \hbox (1.8873pt too wide) in paragraph at lines 355--359
+\OT1/cmr/m/n/10 PLAT-FORM GAME PRO-TOTY-PING. De-par-ta-mento de Sis-te-mas In-
+form^^Saticos
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.361 \\
+        
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.362 P
+       RADO, Ely Fernando Introdução ao Desenvolvimento de Games com GWT e...
+
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--375
+
+ []
+
+
+Overfull \hbox (27.30635pt too wide) in paragraph at lines 362--375
+\OT1/cmr/m/n/10 pon^^S^^Pvel em [http://codingarchitect.wordpress.com/2012/10/2
+2/full-stack-frameworks-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--375
+
+ []
+
+
+Overfull \hbox (98.04613pt too wide) in paragraph at lines 362--375
+\OT1/cmr/m/n/10 ZICO, M^^Sario Lu-cio A Hist^^Soria dos Jogo. Dis-pon^^S^^Pvel 
+em [http://www.jogos.antigos.nom.br/artigos.asp],
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--375
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--375
+
+ []
+
+
+Overfull \hbox (73.15709pt too wide) in paragraph at lines 362--375
+\OT1/cmr/m/n/10 A incr^^S^^Pvel evolu^^Xc~ao de vi-de-o-ga-mes de con-sole. Dis
+-pon^^S^^Pvel em: [http://www.failwars.blog.br/nerd-
+ []
+
+
+Overfull \hbox (9.25061pt too wide) in paragraph at lines 362--375
+\OT1/cmr/m/n/10 feelings/incrvel-evoluo-dos-vdeo-games-de-console-de-1967-2012/
+] Acesso em: jun,
+ []
+
+[20]
+
+! LaTeX Error: Index type `not' undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.379 \printindex
+                 [aut][Here is a prologue for the author index.
+? 
+
+! LaTeX Error: Index type `aut' undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.381 first page of the index.]
+                               
+? 
+
+! LaTeX Error: Index type `list' undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.384 
+      
+? 
+
+! LaTeX Error: Index type `default' undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.386 \end
+          {document}
+? 
+(./proposta_limpa.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2157 strings out of 493607
+ 28168 string characters out of 3149945
+ 89533 words of memory out of 3500000
+ 5434 multiletter control sequences out of 15000+200000
+ 7626 words of font info for 27 fonts, out of 3000000 for 9000
+ 831 hyphenation exceptions out of 8191
+ 37i,9n,24p,1095b,261s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf
+/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr12.p
+fb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf
+/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf/fonts/type1/public/a
+msfonts/cm/cmr7.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+/usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fo
+nts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on proposta_limpa.pdf (23 pages, 305931 bytes).
+PDF statistics:
+ 121 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+

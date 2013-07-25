@@ -4,9 +4,9 @@
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage[portuges]{babel}
-\title{Contrução de um jogo, ubíquo com HTML5}
+\title{Criação de Jogos Digitais com HTML5}
 \author{Jean Carlo Machado}
-\institute{CUB}
+\institute{Oritentador: Rogério Tessari}
 \date{Julho, 2013}
 \begin{document}
 \maketitle
@@ -14,10 +14,16 @@
 \begin{frame}
 \frametitle{Introdução}
 
-Este trabalho trata-se de como criar um jogo utilizando das tecnologias emergentes, HTML 5, Javascript e CSS o qual seja transparente à plataforma de utilização, mesmo utilizando recursos específicos de hardware ou software, Fêz-se um levantamento das tecnologias existentes foi proposta uma metodologia para a crição de um jogo de ação que funcione em todas as plataformas populares, tendo em foco principal a utilização dos recursos oferecidos pelas plataformas \textit{mobile} emergentes.
+Este trabalho trata-se de como criar um jogo de plataforma utilizando das tecnologias mais populares da Web, vulgo HTML 5, Javascript e CSS3, que funcione nas plataformas mobile mais famosas.
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Introdução}
+
+O jogo pretende fornecer uma experiência, transparente à plataforma de utilização, mesmo fazendo uso de recursos específicos de hardware ou software. 
+
+\end{frame}
 
 \begin{frame}
 \frametitle{Problema}
@@ -26,32 +32,23 @@ A dificulidade de criar jogos, fornecendo uma experiência de alta similaridade 
 
 \end{frame}
 
-
 \begin{frame}
 \frametitle{Objetivo Primário}
 
-A criação de um jogo, de plataforma, de presença ubíqua, ou seja, que rode em todas plataformas mobile de maior popularidade, vulgo Android, IOS, Windows 8 e FirefoxOS, bem como nas plataformas de computadores de mesa convencionais, diga-se Linux, Windows e Mac; e que forneça uma experiência de usuário o mais  linear possível.  O foco do trabalho reside na prova da factibilidade do conceito e não na construção do jogo em si.
-
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Porque o HTML5?}
-
-Estima-se que para o ano de 2016 85\% dos navegadores estarão utilizando esta tecnologia. HTML5 não é somente um objetivo de mercado, outra pesquisa aponta que 2/3 dos desenvolvedores de software manifestam interesse em criar aplicações com a tecnologia, o que aponta a linguagem como uma ferramenta bastante promissora nos anos vindouros. 
+Em suma este trabalho tem por objetivo principal a criação de um jogo de plataforma, de presença ubíqua, ou seja, que rode em todas plataformas mobile de maior popularidade, vulgo Android, IOS, Windows Phone e FirefoxOS, suportando também as funcionalidades independentes de hardware para os sistemas operacionais de computadores de mesa diga-se,  Linux, Windows e Mac; e que forneça uma experiência de usuário o mais linear possível.  
 
 \end{frame}
 
 
 \begin{frame}
 \frametitle{Objetivos Secundários}
- Almeja-se utilizar somente de tecnologias livres para a construção do aplicativo.
+ Desenvolver o aplicativo utilizando somente de tecnologias open source.
 \end{frame}
 
 
 \begin{frame}
 \frametitle{Objetivos Secundários}
-Deseja-se também identificar os pontos relevantes (fraquezas e acertos) que a implementação atual do HTML5, nos diferentes tipos de plataforma, dessa forma sendo possível obter uma visão panorãmica de o quanto falta para o HTML5 estar plenamente estabelecido.
+Deseja-se também identificar os pontos relevantes (fraquezas e acertos) que a implementação atual do HTML5, nos diferentes tipos de plataforma, dessa forma sendo possível obter uma visão panorâmica de o quanto falta para o HTML5 estar plenamente estabelecido.
 \end{frame}
 
 
@@ -62,11 +59,18 @@ Objetiva-se também demonstrar os conhecimentos adquiridos no curso de Análise 
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Porque o HTML5?}
+
+Estima-se que para o ano de 2016 85\% dos navegadores estarão utilizando esta tecnologia. HTML5 não é somente um objetivo de mercado, outra pesquisa aponta que 2/3 dos desenvolvedores de software manifestam interesse em criar aplicações com a tecnologia, o que aponta a linguagem como uma ferramenta bastante promissora nos anos vindouros. 
+
+\end{frame}
+
 
 \begin{frame}
 \frametitle{Justificativa}
 
-Fornece material de \textit{proof-of-concept} (ou prova de conceito) sobre a factibilidade da construção de jogos onipresentes utilizando as tecnologias emergentes. 
+Este trabalho serve como material de \textit{proof-of-concept} (ou prova de conceito) sobre a factibilidade da construção de jogos onipresentes utilizando as tecnologias emergentes. 
 Servirá também para demonstrar o estado da arte do HTML5 e os contornos necessários, para se desenvolver um jogo completo, multiplataforma fazendo-lhe uso.
 
 \end{frame}
@@ -85,16 +89,104 @@ Vários trabalhos tratam da utilização de HTML5 na criação de jogos, todavia
 
 \end{frame}
 
-
 \begin{frame}
 \frametitle{O que será o jogo?}
 
 Propõe-se um jogo de plataforma 2D, no estilo de Mario, onde o jogador terá de passar por uma série de desafios para conseguir sair de cada fase. Sendo composto na sua totalidade de 3 fases com dificuldade incremental. 
 
+\end{frame}
+
+\begin{frame}
+\frametitle{O que será o jogo?}
+
 Caberá ao jogador, conduzir seu personagem através do cenário, de modo que  o mesmo sobreviva aos desafios propostos, caso o personagem venha a morrer o usuário deverá recomeçar o jogo. O acelerômetro será utilizado como acessório para alterar os eixos do jogo, sendo caso o jogador vire o dispositivo, o jogo deve "virar" também, derrubando os personagens e alterando cenário.
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Metodologia}
+	Primeiramente há de ser criado uma versão demo utilizando de imagens e audio de características livre na internet, após o demo criado, pretende-se então construir os modelos reais, bem como selecionar as faixas musicais finais.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Metodologia - Plataforma de desenvolvimento}
+
+Como ambiente de desenvovimento escolhido utilizar-se-á o XDK da Intel, que é um, este ambiente proporciona os seguintes benefícios:
+
+\begin{itemize}
+\item  Plataforma de desenvolvimento na nuvem;
+\item Compilação na núvem, gerando binários para todas as plataformas, suportadas pelo Apache Cordova;
+\item Contém otimizações para cada plataforma, possibilitando assim 2x mais desempenho que aplicativos similares;
+\item Free;
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Metodologia - Apache Cordova }
+
+\begin{figure}[!htbp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{cordovaFeatures.jpg}
+               \caption{Funcionalidades implementadas no projeto Apache Cordova.\label{fig:Cordova}}
+    \end{center}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Metodologia - Processo de software }
+
+Para o  processo de desenvolvimento foi escolhido o OpenUp, justamente por este ser incremental e possuir uma alta gama de artefatos, características aprováveis para o desenvolvimento de algo complexo como um jogo.
+\end{frame}
+
+\begin{frame}
+\frametitle{Metodologia  - OpenUP}
+
+\begin{figure}[!htbp]
+    \begin{center}
+        \includegraphics[width=\textwidth]{openupcicle.png}
+               \caption{Ciclo de vida do software no OpenUP.\label{fig:OpenUp}}
+    \end{center}
+\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Metodologia  - Fazes macro do desenvolvimento}
+  \begin{itemize}
+  \item \textbf{Concepção}:  Nesta fase será feita uma análise nos riscos e requisitos do trabalho proposto bem como dar-se-á início ao GDD \textit{Game Document Design} (ou documento de design do jogo);
+  \item \textbf{Elaboração}: Esta fase detalhará o funcionamento arquitetural do aplicativo, e de ser concluída a construção do GDD.
+  \item \textbf{Contrução}: É neste estágio que a criação do aplicativo acontecerá, em um primeiro momento da forma de um demo, e posteriormente como uma aplicação completa.
+  \item \textbf{Transição}: Baterias de testes e a documentação dos resultados será desenvolvido neste estágio.
+  \end{itemize}
+
+  \end{frame}
+
+\begin{frame}
+\frametitle{Cronograma}
+
+O cronograma foi especificado de acordo com o detalhado na metodologia, suas datas estão especificadas de acordo com dias úteis disponíveis no calendário.\\
+\begin{table}[!htbp]
+                           \begin{center}
+                \begin{tabular}{ | l | l | l | l | l |}
+                \hline  
+                \textbf{Identificador}& \textbf{Tarefa} &  \textbf{Duração} & \textbf{Início} & \textbf{Término} \\  \hline
+                1 & Concepção & 5 dias & 1 agosto & 7 agosto \\  \hline
+                2 & Elaboração & 15 dias & 8 agosto & 29 agosto \\  \hline
+                3 & Contrução & 15 dias & 30 agosto & 19 setembro \\  \hline
+                4 & Contrução & 10 dias & 31 agosto & 3 outubro \\ \hline
+                  & Total & 45 dias & 1 agosto & 3 outubro \\
+                \hline
+                \end{tabular}
+            \end{center}
+               \caption{Cronograma do projeto. \label{fig:Cordova}}
+\end{table}
+
+\end{frame}
 
 \begin{frame}
 \frametitle{Dúvidas?}

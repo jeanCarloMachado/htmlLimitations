@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/TeX Live for SUSE Linux) (format=pdflatex 2013.6.16)  10 JUL 2013 13:34
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/TeX Live for SUSE Linux) (format=pdflatex 2013.6.16)  10 JUL 2013 19:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -449,6 +449,13 @@ Type  H <return>  for immediate help.
 l.51 \begin{folhadeaprovacao}
                              
 ? 
+
+Overfull \hbox (28.85072pt too wide) in paragraph at lines 54--55
+[]\OT1/cmr/bx/n/10 Palavras chave: mul-ti-pla-ta-forma\OT1/cmr/m/n/10 , \OT1/cm
+r/bx/n/10 sis-tema ope-ra-ci-o-nal mo-bile\OT1/cmr/m/n/10 , \OT1/cmr/bx/n/10 sm
+artphone\OT1/cmr/m/n/10 ,
+ []
+
 ! Undefined control sequence.
 <argument> \ABNTsignthickness 
                               
@@ -487,61 +494,88 @@ l.60 \end{folhadeaprovacao}
 \tf@lot=\write4
 \openout4 = `propostaNew.lot'.
 
- [2] (./propostaNew.toc
-
-! Package inputenc Error: Unicode char \u 8:\GenericError {(inputenc)          
-      }{Package inputenc Error: Unicode char \u8:Ẽ not set up for use with La
-TeX}{See the inputenc package documentation for explanation.}{Your command was 
-ignored.
-(inputenc) Type  I <command> <return>  to replace it with another command,
-(inputenc) or  <return>  to continue without it.} not set up for use with LaTeX
-.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 ...return> to continue without it.}NCIAS}{20}
-                                                  
-? 
-)
+ [2] (./propostaNew.toc [3])
 \tf@toc=\write5
 \openout5 = `propostaNew.toc'.
 
- [3]
-Underfull \hbox (badness 10000) in paragraph at lines 72--88
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 76--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--88
+Underfull \hbox (badness 10000) in paragraph at lines 76--83
+
+ []
+
+[5]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.87 \\P
+        orém juntamente com a evolução das tecnologias aumentou também a...
+
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--90
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--88
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.92 \\
+       
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.93 �
+      � partir dos anos 80, com a pupularização da plataforma PC, decorren...
+
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--96
 
  []
 
 
-Overfull \hbox (9.63953pt too wide) in paragraph at lines 72--88
+Underfull \hbox (badness 10000) in paragraph at lines 93--96
+
+ []
+
+[6]
+Overfull \hbox (9.63953pt too wide) in paragraph at lines 97--102
 \OT1/cmr/m/n/10 Recentemente, de-vido ba-ra-te-mento e mi-ni-a-tu-ra-liza^^Xc~a
 o dos com-po-nen-tes, tend^encia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--88
+Underfull \hbox (badness 10000) in paragraph at lines 97--102
 
  []
 
-[4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 89.
- (/usr/share/texmf/tex/latex/base/omscmr.fd
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 103.
+
+(/usr/share/texmf/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 89.
- [5]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
+ [7]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -549,73 +583,42 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.95 \\A
-         alternativa da utilização da linguagem HTML5, é bem mais promiss...
-
-? 
-! Too many }'s.
-l.102 ...textit[Application Programming Interface}
-                                                   (ou Interface de Programa...
+l.109 \\A
+          alternativa da utilização da linguagem HTML5, é bem mais promis...
 
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--106
+Underfull \hbox (badness 10000) in paragraph at lines 109--122
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--106
+Underfull \hbox (badness 10000) in paragraph at lines 109--122
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--106
+Underfull \hbox (badness 10000) in paragraph at lines 109--122
 
  []
 
 
-Overfull \hbox (5.1673pt too wide) in paragraph at lines 95--106
+Overfull \hbox (5.1673pt too wide) in paragraph at lines 109--122
 \OT1/cmr/m/n/10 Quando tra-tando des-tas es-pe-ci-fi-ci-da-des de pla-ta-forma,
  mui-tas ve-zes n~ao ^^Se poss^^S^^Pvel
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--106
+Underfull \hbox (badness 10000) in paragraph at lines 109--122
 
  []
 
-[6] [7] [8] [9] [10] [11]
+[8] [9] [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 141--143
 
-! Package inputenc Error: Unicode char \u8:ẽ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.158 ...maneira convencional,  com otimizadaçẽ
-                                                  os para esta categoria de ...
-
-? 
-
-Overfull \hbox (2.91733pt too wide) in paragraph at lines 159--160
-\OT1/cmr/m/n/10 apa-ren-tando se-rem in-ter-fa-ces gr^^Saficas desk-top da pr^^
-Sopria pla-ta-forma m^^Sovel.
  []
 
-[12] [13] <cordovaFeatures.jpg, id=60, 852.18375pt x 347.04657pt>
-File: cordovaFeatures.jpg Graphic file (type jpg)
-
-<use cordovaFeatures.jpg>
-Package pdftex.def Info: cordovaFeatures.jpg used on input line 189.
-(pdftex.def)             Requested size: 345.0pt x 140.50012pt.
- [14 <./cordovaFeatures.jpg>] [15] [16]
-<openupcicle.png, id=71, 747.79375pt x 427.5975pt>
-File: openupcicle.png Graphic file (type png)
- <use openupcicle.png>
-Package pdftex.def Info: openupcicle.png used on input line 235.
-(pdftex.def)             Requested size: 345.0pt x 197.27792pt.
-
-[17]
+[12] [13]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -623,7 +626,52 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.249 \\\\
+l.173 \\A
+         tualmente o canvas suporta somente o desenvolvimento 2D, sua implem...
+
+? 
+
+Overfull \hbox (7.33395pt too wide) in paragraph at lines 173--174
+[]\OT1/cmr/m/n/10 Atualmente o can-vas su-porta so-mente o de-sen-vol-vi-mento 
+2D, sua im-ple-menta^^Xc~ao
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 183--187
+
+ []
+
+[15]
+Overfull \hbox (12.11183pt too wide) in paragraph at lines 200--201
+[]\OT1/cmr/m/n/10 Suporte a Geo-localiza^^Xc~ao: Webshims Lib, ge-o-lo-cal-tion
+ poly-fill, GeoLocation-
+ []
+
+<cordovaFeatures.jpg, id=66, 852.18375pt x 347.04657pt>
+File: cordovaFeatures.jpg Graphic file (type jpg)
+
+<use cordovaFeatures.jpg>
+Package pdftex.def Info: cordovaFeatures.jpg used on input line 207.
+(pdftex.def)             Requested size: 345.0pt x 140.50012pt.
+ [16 <./cordovaFeatures.jpg>] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 232--234
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--234
+
+ []
+
+[18] [19]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.269 \\\\
           
 ? 
 
@@ -633,7 +681,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.250 \subsection
+l.270 \subsection
                  {Trabalhos similares} \\
 ? 
 
@@ -643,56 +691,113 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.251 (
+l.271 (
        SILVA,2010), demostra a utilização de HTML5 para a criação de jog...
 
 ? 
-[18 <./openupcicle.png>] [19]
+[20] [21] <openupcicle.png, id=86, 747.79375pt x 427.5975pt>
+File: openupcicle.png Graphic file (type png)
 
-! Package inputenc Error: Unicode char \u8:Ẽ not set up for use with LaTeX.
+<use openupcicle.png>
+Package pdftex.def Info: openupcicle.png used on input line 294.
+(pdftex.def)             Requested size: 345.0pt x 197.27792pt.
+ [22] [23 <./openupcicle.png>] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 333--351
 
-See the inputenc package documentation for explanation.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--351
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--351
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--351
+
+ []
+
+[25]
+! Misplaced alignment tab character &.
+l.353 ...IN THE "90S: CHILDREN'S TIME COMMITMENT &
+                                                   GAME PREFERENCE. Health a...
+
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--357
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.276 \section{REFERẼNCIAS}
-                             
+l.359 \\
+        
 ? 
 
-Overfull \hbox (2.26pt too wide) in paragraph at lines 301--308
-[]\OT1/cmr/m/n/10 MOODLE. Mo-o-dle. Dis-pon^^S^^Pvel em: <http://www.moodle.org
-.br/>. Acesso
- []
+! LaTeX Error: There's no line here to end.
 
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.360 P
+       RADO, Ely Fernando Introdução ao Desenvolvimento de Games com GWT e...
 
-Overfull \hbox (32.72311pt too wide) in paragraph at lines 309--314
-\OT1/cmr/m/n/10 pon^^S^^Pvel em: <http://www.comunidadesvirtuais.pro.br/hiperte
-xto/home/ava.pdf>.
- []
+? 
 
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 325--334
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 325--334
+Underfull \hbox (badness 10000) in paragraph at lines 360--373
 
  []
 
 
-Overfull \hbox (9.55618pt too wide) in paragraph at lines 335--337
-[]\OT1/cmr/m/n/10 Acess^^S^^Pvel em: http://www.failwars.blog.br/nerd-feelings/
-incrvel-evoluo-dos-
+Overfull \hbox (13.50075pt too wide) in paragraph at lines 360--373
+\OT1/cmr/m/n/10 Dis-pon^^S^^Pvel em [http://codingarchitect.wordpress.com/2012/
+10/22/full-stack-
  []
 
 
-Overfull \hbox (54.47299pt too wide) in paragraph at lines 335--337
-\OT1/cmr/m/n/10 vdeo-games-de-console-de-1967-2012/ Acess^^S^^Pvel em: http://p
-t.wikipedia.org/wiki/Hist 
+Underfull \hbox (badness 10000) in paragraph at lines 360--373
+
  []
 
-[21]
+
+Overfull \hbox (123.04616pt too wide) in paragraph at lines 360--373
+\OT1/cmr/m/n/10 ZICO, M^^Sario Lu-cio A Hist^^Soria dos Jogo. Dis-pon^^S^^Pvel 
+em [http://www.jogos.antigos.nom.br/artigos.asp],
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--373
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--373
+
+ []
+
+
+Overfull \hbox (100.37933pt too wide) in paragraph at lines 360--373
+\OT1/cmr/m/n/10 A incr^^S^^Pvel evolu^^Xc~ao de v^^S^^Pdeo ga-mes de con-sole. 
+Dis-pon^^S^^Pvel em: [http://www.failwars.blog.br/nerd-
+ []
+
+
+Overfull \hbox (13.41725pt too wide) in paragraph at lines 360--373
+\OT1/cmr/m/n/10 feelings/incrvel-evoluo-dos-vdeo-games-de-console-de-1967-2012/
+] Acesso em:
+ []
+
+[26]
 
 ! LaTeX Error: Index type `not' undefined.
 
@@ -700,8 +805,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.340 
-      
+l.377 \printindex
+                 [aut][Here is a prologue for the author index.
 ? 
 
 ! LaTeX Error: Index type `aut' undefined.
@@ -710,7 +815,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.343 first page of the index.]
+l.379 first page of the index.]
                                
 ? 
 
@@ -720,7 +825,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.346 
+l.382 
       
 ? 
 
@@ -730,17 +835,17 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.348 \end
+l.384 \end
           {document}
 ? 
 
-! LaTeX Error: \begin{itemize} on input line 210 ended by \end{document}.
+! LaTeX Error: \begin{itemize} on input line 263 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.348 \end{document}
+l.384 \end{document}
                     
 ? 
 (./propostaNew.aux)
@@ -750,26 +855,26 @@ LaTeX Warning: There were multiply-defined labels.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 210 (\begingroup)
+### semi simple group (level 1) entered at line 263 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 2132 strings out of 493607
- 27717 string characters out of 3149945
- 90526 words of memory out of 3500000
- 5415 multiletter control sequences out of 15000+200000
+ 2136 strings out of 493607
+ 27793 string characters out of 3149945
+ 89526 words of memory out of 3500000
+ 5419 multiletter control sequences out of 15000+200000
  5803 words of font info for 21 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 37i,9n,24p,1064b,343s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,9n,24p,913b,343s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx10.pfb></u
 sr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf/font
 s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/amsfo
 nts/cm/cmr12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
 sr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/font
 s/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on propostaNew.pdf (24 pages, 231778 bytes).
+Output written on propostaNew.pdf (29 pages, 238438 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 129 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
