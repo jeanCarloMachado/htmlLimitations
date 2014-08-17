@@ -4,4 +4,7 @@
 *.toc
 *.lot
 *.lof
+*.out
+*.nav
+*.snm
 
