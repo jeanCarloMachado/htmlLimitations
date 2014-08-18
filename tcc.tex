@@ -2,8 +2,27 @@
 \usepackage[utf8]{inputenc}
 \usepackage[portuges]{babel}
 \usepackage{graphicx}
+
+%font settings
+\usepackage{times}
+\documentclass[12pt]{report}
+
+%margin settings
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ left=30mm,
+ right=20mm,
+ top=30mm,
+ bottom=20mm,
+ }
+
 \usepackage{index}
 \renewcommand{\baselinestretch}{1.50}\normalsize
+% custom variables
+\newcommand{\publicationDate}{Dezembro 2014}
+\newcommand{\tccTitle}{Problemas no desenvolvimento de jogos multiplataforma em HTML5}
+% end - custom variables
 \renewcommand{\paragraph}{%
   \@startsection{paragraph}{4}%
   {\z@}{3.25ex \@plus 1ex \@minus .2ex}{-1em}%
@@ -23,9 +42,9 @@
         {\large INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DO RIO GRANDE DO SUL } \\
         {\large CÂMPUS BENTO GONÇALVES-RS} \\[4.9cm]
         {\large Jean Carlo Machado} \\[4.9cm]
-        {\Huge Criação de Jogos Digitais com HTML5} \\[4.9cm]
+        {\Huge \tccTitle{}} \\[4.9cm]
         \vfill
-        {\large Bento Gonçalves, Julho 2013} 
+        {\large Bento Gonçalves, \publicationDate{}} 
     \end{center}
 \end{titlepage}
 
@@ -33,17 +52,17 @@
 \begin{titlepage}
     \begin{center}
         {\large Jean Carlo Machado} \\[2.3cm]
-         {\Huge Criação de Jogos Digitais com HTML5 } \\[2.3cm]
+         {\Huge \tccTitle} \\[2.3cm]
         {\large Trabalho de conclusão de curso} \\[2.3cm]
         \hspace{.45\textwidth} % posicionando a minipage
         \begin{minipage}{.5\textwidth}
             \begin{espacosimples}
                 Projeto de Pesquisa apresentado junto ao Curso de Tecnologia em Análise e Desenvolvimento de Sistemas do Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul, como requisito parcial ao desenvolvimento do Trabalho de Conclusão de Curso. 
-                \\\\Orientador: Dr. Rogério Tessari
+                \\\\Orientador: Me. Rafael Jaques 
             \end{espacosimples}
         \end{minipage}
         \vfill
-        {\large Bento Gonçalves, Julho 2013} 
+        {\large Bento Gonçalves, \publicationDate{}} 
     \end{center}
 \end{titlepage}
 
@@ -53,6 +72,16 @@
 \assinatura{}
 \assinatura{}
 \end{folhadeaprovacao}
+\newpage
+
+%resumo 250 palavras
+
+\section*{RESUMO}
+
+Com a alta gama de sistemas operacionais e aparelhos smart devices (dispositivos inteligentes) populares a complexidade em criar aplicativos que ofereçam disponíveis em múltiplas plataformas aumenta. Isso acarreta na segmentação da oferta de aplicativos por plataformas ou então na construção de um aplicativo para cada plataforma alvo; aumentando muito o tempo de desenvolvimento e o custo de produção. Esta situação agrava-se ainda mais quando relativo aos jogos, devido à intrínseca dificuldade de desenvolvimento deste tipo de software. Dado este cenário, propõe-se analisar o estado da arte do HTML5 através da criação um jogo e do levantamento de informação derivada deste trabalho.  Fez-se um levantamento das tecnologias existentes e foi proposta uma metodologia para a criação do aplicativo.
+
+\textbf{Palavras-chave}: Multiplataforma. Comparativo de tecnologias. HTML5. Usabilidade.
+
 \newpage
 
 \listoffigures  
@@ -80,7 +109,7 @@ Ainda segundo (AK,2012) \begin{quote} A disponibilide de internet de alta veloci
 
 \begin{figure}[!htbp]
     \begin{center}
-        \includegraphics[width=\textwidth]{bestSelledGames.jpg}
+        \includegraphics[width=\textwidth]{asset/img/bestSelledGames.jpg}
                \caption{Os cinco jogos mais bem vendidos de todos os tempos segundo à VGChartz, 2013) . \label{fig:Jogos mais bem vendidos}}
     \end{center}
 \end{figure}
@@ -96,7 +125,7 @@ Atualmente, principalmente devido ao baratemento e miniaturalização dos compon
 
 \begin{figure}[!htbp]
     \begin{center}
-        \includegraphics[width=\textwidth]{smartvscomputer.jpg}
+        \includegraphics[width=\textwidth]{asset/img/smartvscomputer.jpg}
                \caption{Previsão de vendas de smartphones vs pc's}
     \end{center}
 \end{figure}
@@ -221,7 +250,7 @@ Uma das soluções mais promissoras polyfill é o PhoneGap ou Apache Cordova, es
 
 \begin{figure}[!htbp]
     \begin{center}
-        \includegraphics[width=\textwidth]{cordovaFeatures.jpg}
+        \includegraphics[width=\textwidth]{asset/img/cordovaFeatures.jpg}
                \caption{Funcionalidades implementadas para o projeto Apache Cordova.\label{fig:Cordova}}
     \end{center}
 \end{figure}
