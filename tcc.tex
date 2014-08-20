@@ -23,7 +23,7 @@
 \renewcommand{\baselinestretch}{1.50}\normalsize
 % custom variables
 \newcommand{\publicationDate}{Dezembro 2014}
-\newcommand{\tccTitle}{Problemas no desenvolvimento de jogos multiplataforma em HTML5}
+\newcommand{\tccTitle}{Problemas no desenvolvimento de jogos 2D em HTML5}
 % end - custom variables
 \renewcommand{\paragraph}{%
   \@startsection{paragraph}{4}%
@@ -80,9 +80,13 @@
 
 \section*{RESUMO}
 
-Com a alta gama de sistemas operacionais e aparelhos smart devices (dispositivos inteligentes) populares a complexidade em criar aplicativos que ofereçam disponíveis em múltiplas plataformas aumenta. Isso acarreta na segmentação da oferta de aplicativos por plataformas ou então na construção de um aplicativo para cada plataforma alvo; aumentando muito o tempo de desenvolvimento e o custo de produção. Esta situação agrava-se ainda mais quando relativo aos jogos, devido à intrínseca dificuldade de desenvolvimento deste tipo de software. Dado este cenário, propõe-se analisar o estado da arte do HTML5 através da criação um jogo e do levantamento de informação derivada deste trabalho.  Fez-se um levantamento das tecnologias existentes e foi proposta uma metodologia para a criação do aplicativo.
+ 
+Com a introdução dos novos recursos de multimídia oferecidos pelo HTML5, a viabilidade de construção de jogos iterativos, com as tecnologias da WEB, voltou a ser assunto relevante. Esse trabalho busca avaliar as limitações e possíveis dificuldades à se enfrentar na construção de um jogo 2D utilizando HTML5 e demais tecnologias relacionadas.
 
-\textbf{Palavras-chave}: Multiplataforma. Comparativo de tecnologias. HTML5. Usabilidade.
+Como caráter de avaliação fez-se uma pesquisa de ferramentas e utilitários disponíveis e construiu-se um jogo 2D utilizando as mais adequadas. Com base nesta experiência e na revisão bibliográfica, constatamos que...
+
+
+\textbf{Palavras-chave}: HTML5, JOGOS 2D, PROBLEMAS
 
 \newpage
 
@@ -281,12 +285,12 @@ Uma das soluções mais promissoras polyfill é o PhoneGap ou Apache Cordova, es
                \caption{Funcionalidades implementadas para o projeto Apache Cordova.\label{fig:Cordova}}
     \end{center}
 \end{figure}
-
-Segundo (JÚNIOR) utilizando as linguagens de desenvolvimento Web HTML, CSS e Javascript. Ele fornece um conjunto de APIs para acesso a funções nativas do Sistema Operacional e do hardware do dispositivo, utilizando Javascript. A proposta do PhoneGap é essencial para unir as especificidades de Web com detalhes de sistemas operacionais tanto de hardware como de software.
+%remover essa referência (sem ano e página)
+Segundo JÚNIOR  utilizando as linguagens de desenvolvimento Web HTML, CSS e Javascript. Ele fornece um conjunto de API's para acesso a funções nativas do Sistema Operacional e do hardware do dispositivo, utilizando Javascript. A proposta do PhoneGap é essencial para unir as especificidades de Web com detalhes de sistemas operacionais tanto de hardware como de software.
 
 \subsection{AMBIENTES PARA DESENVOLVIMENTO HTML5}
 
-Após esta revisão das ferramentas  e tecnologias disponíveis, fica claro que a utilização de cada uma delas para a criação de um jogo não é um processo trivial, foi pensando nisso que algumas empresas lançaram frameworks "full stack"  (ou framework de pilha completa) para a utilização destes tipos de recursos em mobile, interoperáveis. (JEFFRIES, 2012) define frameworks full stack relacionados ao desenvolvimento front-end como: frameworks que nos auxiliam no completo desenvolvimento de uma aplicação, desde a interface com o usuário aos dados armazenados.
+Após esta revisão das ferramentas  e tecnologias disponíveis, fica claro que a utilização de cada uma delas para a criação de um jogo não é um processo trivial, foi pensando nisso que algumas empresas lançaram frameworks "full stack"  (ou framework de pilha completa) para a utilização destes tipos de recursos em mobile, interoperáveis. JEFFRIES (2013) define frameworks full stack relacionados ao desenvolvimento front-end como: frameworks que nos auxiliam no completo desenvolvimento de uma aplicação, desde a interface com o usuário aos dados armazenados.
 \\
 Na pesquisa efetuada sobre estes frameworks full stack foram identificadas as seguientes tecnologias:
 
