@@ -23,7 +23,7 @@
 \renewcommand{\baselinestretch}{1.50}\normalsize
 % custom variables
 \newcommand{\publicationDate}{Dezembro 2014}
-\newcommand{\tccTitle}{Problemas no desenvolvimento de jogos 2D em HTML5}
+\newcommand{\tccTitle}{Limitações no desenvolvimento de jogos 2D em HTML5 Multiplataforma}
 % end - custom variables
 \renewcommand{\paragraph}{%
     \@startsection{paragraph}{4}%
@@ -100,11 +100,12 @@ Como caráter de avaliação fez-se uma pesquisa de ferramentas e utilitários d
 \section{CONTEXTUALIZAÇÃO}
 \subsection{HISTÓRIA E BENEFÍCIOS DOS JOGOS}
 
-Há muito os jogos são utilizados como meio de entretenimento, mas além da diversão propiciada estes podem ser benéficos de diversas outras formas como: apuração da capacidade lógica, motora, facilidade em tomada de decisões, redução de stress, entre outros (GALLAGHER, 2013).
+Há muito os jogos são utilizados como meio de entretenimento, mas além da diversão propiciada estes podem ser benéficos de diversas outras formas como: na apuração da capacidade lógica e motora, facilidade em tomada de decisões, redução de stress, entre outros (GALLAGHER, 2013).
 \\
 Na informática, os jogos estão presentes desde meados dos anos 60; no início, apenas protótipos de laboratórios, os jogos eram aplicativos extremamente rudimentares e totalmente dependentes da plataforma onde eram desenvolvidos.
 \\
-Em 1972, com a criação da Atari, os jogos eletrônicos se popularizaram. Criou-se um mercado competitivo onde grandes corporações internacionais disputavam para disponibilizar as melhores plataformas e os melhores jogos.  Essas corporações, dentre as maiores à dizer: Nintendo, Sony e Microsoft, desenvolveram novas tecnologias, criaram novos conceitos, a fim de prover maior entretenimento e imersão ao usuário. Exemplos de tecnologias desenvolvidas ou melhoradas para os games são: renderizadores de elementos de 3 dimensões (3D), bibliotecas de física avançada, produções musicais específicas para os jogos, bem como o acréscimo no nível de detalhamento gráfico devido às GPU's \textit{Graphics Processing Unit's} (ou unidades de processamento gráfico) mais poderosas utilizadas.
+Em 1972, com a criação da Atari, os jogos eletrônicos se popularizaram. Criou-se um mercado competitivo onde grandes corporações internacionais disputavam para criar as melhores plataformas e os melhores jogos.  Essas corporações, dentre as maiores à dizer: Nintendo, Sony e Microsoft, desenvolveram novas tecnologias, criaram novos conceitos, a fim de prover maior entretenimento e imersão ao usuário. Exemplos de tecnologias desenvolvidas ou melhoradas para os games são: renderizadores de elementos de 3 dimensões (3D), bibliotecas de física avançada, produções musicais específicas para os jogos, bem como o acréscimo no nível de detalhamento gráfico devido às GPU's \textit{Graphics Processing Unit's} (ou unidades de processamento gráfico) mais poderosas utilizadas.
+\\
 \\
 A indústria dos vídeo games foi rejuvenescida com a introdução da Nintendo ao final nos anos 80. Com melhoras significativas  nos gráficos, no realismo, e com a introdução de jogos violentos, a Nintendo conseguiu uma dominância de mercado temporária (BUCHMAN,1996).
 Atualmente, devido à disponibilidade de internet de alta velocidade, a sofisticação das técnicas dos jogos, e a grande compatibilidade dos hardwares, aumentou-se o fluxo de entrada de dinheiro, o que está gerando um grande boom na indústria dos jogos (AK, 2012).
@@ -120,14 +121,14 @@ O mercado global de jogos cresceu de 70.5 billões de dólares em 2011 e espera 
 \end{figure}
 
 Além de obter uma estimativa de vendas dos jogos mais populares, através desta lista, é possível ter-se uma concepção de quais gêneros de jogos atraem mais os usuário. O gênero de maior influência na lista é o de esportes, seguido igualmente por plataforma, corrida e RPG.
-\footnote{A VGChartz é uma bem conceituada   empresa na área de pesquisas de mercado especificamente de jogos eletrônicos.}
+\footnote{A VGChartz é uma bem conceituada  empresa na área de pesquisas de mercado especificamente de jogos eletrônicos.}
 
 
 \subsection{JOGOS NATIVOS VS JOGOS WEB}
 
-Há diversas decisões há tomar ao decidir fazer um jogo, uma das críticas é em que plataformas o sistema será disponibilizado, e as tecnologias utilizadas para fazer isso. Caso a gama de sistemas a dar-se suporte seja grande, existem algumas possibilidades: 
+Há diversas decisões há tomar ao decidir fazer um jogo, uma das críticas é: em que plataformas o sistema será disponibilizado? e quais as tecnologias utilizadas para fazê-lo?. Existem as seguintes possibilidades: 
 
-\textbf{Jogos nativos}: uma possibilidade é a criação de jogos nativos, um para cada plataforma alvo. Esta estratégia contém os seguintes benefícios: 
+\textbf{Jogos nativos}: A possibilidade mais comum é a criação de jogos nativos, um para cada plataforma alvo. Esta estratégia contém os seguintes benefícios: 
 
 \begin{itemize}
     \item  Aplicativos nativos propiciam uma sensação de continuidade aos demais aplicativos do sistema operacional;
@@ -146,10 +147,6 @@ Jogos WEB são aqueles que utilizam HTML5, JavaScript e CSS como tecnologias. Jo
 \end{itemize}
 
 \subsection{HTML}
-
-Este protocolo é o fomentador da WEB, ofertado na mais vasta gama de dispositivos, na sua última versão - HTML5 -  não somente dá suporte à hipertextos, outrossim, também serve para: desenhar on the fly (dinamicamente), utilização offline, suporta  áudio e vídeo nativo, implementa semântica e acessibilidade, entre outros recursos. Estas funcionalidades permitem um ato nível de interatividade, suficiente até para a criação de jogos.
-\\
-Assim como as  maiores tecnologias concorrentes na criação de jogos à dizer: Adobe Flash e o Microsoft Silverlight o HTML5 também não está totalmente difundido nas plataformas mobile, todavia suas perspectivas são interessantes, estima-se que para o ano de 2016 85 dos navegadores estarão utilizando esta tecnologia. HTML5 não é somente um objetivo de mercado, outra pesquisa aponta que 2/3 dos desenvolvedores de software manifestam interesse em criar aplicações com a tecnologia, o que aponta a linguagem como uma ferramenta bastante promissora nos anos vindouros.
 
 Tendo em mente estas considerações, este trabalho objetiva auxiliar o desenvolvimento de jogos em HTML5 forncendo um estudo de caso - através de um jogo, outrossim, um resumo dos problemas encontrados, a fim de que estes possam servir como uma espécie de caminho facilitado à todos os interessados no desenvolvimento de jogos para a WEB.
 
@@ -207,23 +204,24 @@ O propósito deste trabalho é investigar o processo desenvolvimento de jogos ut
 \subsection{HTML5}
 O padrão HTTP é conhecido por ser o principal fomentador da WEB e a especificação de texto deste padrão é o conhecido HTML, em sua concepção inicial, Tim Berners-Lee acreditava que seria possível  interligar hipertextos em computadores diferentes com uso de links globais também chamados de hiperlinks (SILVA 2011).
 \\
-Trata-se de uma linguagem de marcação que define a estrutura de elementos que uma página deve ter de modo a fornecer conteúdo iterativo aos usuários. Todavia, a interatividade necessária para a construção de jogos animados em HTML é algo recente, anteriormente só se obtinha com a utilização de ferramentas proprietárias como o Adobe Flash, Microsoft Silverlight e Oracle JavaFX. No HTML5 esta interatividade é alcançada através da utilização do recurso canvas, que é a tag HTML que permite-se "desenhar" dentro da página.
+Trata-se de uma linguagem de marcação que define a estrutura de elementos que uma página deve ter de modo a fornecer conteúdo iterativo aos usuários. Todavia, a interatividade necessária para a construção de jogos animados em HTML é algo recente, anteriormente só se obtinha com a utilização de ferramentas proprietárias como o Adobe Flash, Microsoft Silverlight e Oracle JavaFX. 
+\\
+No HTML5 esta interatividade é alcançada através da utilização do recurso canvas, que é a tag HTML que permite-se "desenhar" dentro da página.
 \\
 Atualmente o canvas suporta somente o desenvolvimento 2D, sua implementação 3D está em desenvolvimento e chama-se WebGL. Por consequência do ainda baixo nível de especificação do WebGL, não optamos por o desenvolvimento de um aplicativo 3D.
 \\
-O HTML5 por fatores como a excelente documentação, grande comunidade de desenvolvedores e usuários, e por último, mas não menos importante, por seu caráter multiplataforma, justifica-se para a construção de jogos "transparentes". Segundo (KURYANOVICH, 2012) a beleza de desenvolver jogos com o padrão aberto WEB é que este nos delega a escrever uma vez e utilizar em qualquer lugar.
+,O HTML5 por fatores como a excelente documentação, grande comunidade de desenvolvedores e usuários, e por último, mas não menos importante, por seu caráter multiplataforma, justifica-se para a construção de jogos. Segundo (KURYANOVICH, 2012) a beleza de desenvolver jogos com o padrão aberto WEB é que este nos delega a escrever uma vez e utilizar em qualquer lugar.
+\\
+Apesar de a tecnologia  ainda não estar completa ela já demonstra grande robustez  e os padrões de desenvolvimento invariavelmente estão migrando para a perspectiva HTML5, segundo TABUSCA (2013) desenvolvedores que atualmente trabalham no ramo da Web, já podem visualizar que o novo ramo do desenvolvimento de aplicativos mobile está se aproximando mais e mais à alusiva proposta do HTML5. 
+
+\subsection{MOTORES DE FÍSICA}
 \\
 
-Apesar de a tecnologia  ainda não estar completa ela já demonstra grande robustez  e os padrões de desenvolvimento invariavelmente estão migrando para a perspectiva HTML5, segundo TABUSCA (2013) desenvolvedores que atualmente trabalham no ramo da Web, já podem visualizar que o novo ramo do desenvolvimento de aplicativos mobile está se aproximando mais e mais à alusiva proposta do HTML5. \subsection{Motores de física}
+Motores de física (\textbf{Engines de física}) provêm ao software, através de equações matemáticas, um modelo similar das leis da física. Estes motores são geralmente utilizados na construção de games, simuladores entre outros. As bibliotecas de física segundo (SHANKAR, 2012), "geralmente incluẽm os seguintes recursos: elasticidade, gravidade fricção e conservação de \textbf{momentum} entre dois ou mais objetos que colidem". As bibliotecas de física, segundo (SHANKAR, 2012), geralmente incluem os seguintes recursos: elasticidade, gravidade, fricção e conservação de momentum entre dois ou mais objetos que colidem.
 \\
-
-Motores de física (\textbf{Engines de física}) provêm a um software, através de equações matemáticas, um modelo similar das leis da física, estes motores podem ser utilizados na construção de games, simuladores entre outros. As bibliotecas de física segundo (SHANKAR, 2012), "geralmente incluẽm os seguintes recursos: elasticidade, gravidade fricção e conservação de \textbf{momentum} entre dois ou mais objetos que colidem".
-
-
-\subsection{ENGINES DE FÍSICA}
-
-Engines de física  provêm a um software, através de equações matemáticas, um modelo similar das leis da física, estes motores podem ser utilizados na construção de games, simuladores entre outros. As bibliotecas de física segundo (SHANKAR, 2012), geralmente incluem os seguintes recursos: elasticidade, gravidade, fricção e conservação de momentum entre dois ou mais objetos que colidem.
 Dentre as bibliotecas mais populares que implementam física, compatíveis com HTML5 constam:
+
+%add more here
 
 \begin{itemize}
     \item box2dweb: é um port de sua versão em C++, desenvolvida exclusivamente para ambientes 2D, rica em opções e razoavelmente fácil de utilizar;
@@ -235,29 +233,18 @@ Dentre as bibliotecas mais populares que implementam física, compatíveis com H
 
 \subsection{SOM E VÍDEO}
 
-Atualmente, a maioria dos arquivos de áudio e vídeo rodam através de plugins (como o Adobe Flash). Todavia, navegadores diferentes podem ter plugins diferentes. O HTML5 define dois novos elementos que especificam o padrão para imbuir áudio e vídeo em páginas Web: <audio> e <vídeo> (W3SCHOOLS).
+Atualmente, a maioria dos arquivos de áudio e vídeo rodam através de plugins (como o Adobe Flash). Não obstante, navegadores diferentes podem ter plugins diferentes. O HTML5 define dois novos elementos que especificam o padrão para imbuir áudio e vídeo em páginas Web: <audio> e <vídeo> (W3SCHOOLS).
 
 
 \subsection{ENTRADA DE COMANDOS}
 
 
-Na construção da grande maioria dos jogos é imprescindível alta flexibilidade na gestão de entrada de dados, seja através de teclado, tela sensível, mouse entre outros. O HTML5 trata todos estes casos abstratamente na forma de eventos. Os eventos básicos são: keydown (tecla baixa), keyup (tecla solta), e keypress (tecla pressionada). Basta ao desenvolvedor testar qual caracter gerou o evento em seu laço principal para identificar o que aconteceu.
-
-
-\subsection{FRAMEWORKS PARA DESENVOLVIMENTO DE JOGOS HTML5}
-
-Motores de física, áudio e vídeo são apenas algumas facetas do desenvolvimento de jogos, outros aspectos importantes são: gestão de cenas, câmeras, entidades, recursos, elementos de interface, entre outros. Visto esta grande gama de recursos que um jogo pode ter, foram criados frameworks específicos para jogos em HTML5.
-Os mais populares são:
-
-\begin{itemize}
-    \item enchant.js – dentre suas funcionalidades constam: orientação à objetos, orientado à eventos, contém um motor de animação, suporta WebGL e Canvas, etc;
-
-    \item three.js  - considerada leve, renderiza WebGL e Canvas, arquitetura procedural;
-\end{itemize}
+Na construção da grande maioria dos jogos é imprescindível alta flexibilidade na gestão de entrada de dados, seja através de teclado, tela sensível, mouse entre outros. O HTML5 trata todos estes casos abstratamente na forma de eventos. Os eventos básicos são: \textit{keydown} (tecla baixa), \textit{keyup} (tecla solta), e \textit{keypress} (tecla pressionada). Basta ao desenvolvedor testar qual caractere gerou o evento em seu laço principal para identificar o que aconteceu.
 
 \subsection{DETECÇÃO DE RECURSOS}
 
 Para detectar suporte aos mais variados recursos do HTML5 no browser do cliente existem duas possibilidades. Pode-se implementar testes para cada funcionaidade utilizada abordando os detalhes de implementação de cada uma ou então fazer uso de alguma biblioteca especializada neste processo, o Modernizr é uma opção open-source deste tipo de biblioteca, este gera uma lista de booleanos sobre grande variedade dos recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e local storage.
+
 
 \subsection{TECNOLOGIAS POLYFILL}
 
@@ -287,6 +274,7 @@ Uma das soluções mais promissoras polyfill é o PhoneGap ou Apache Cordova, es
 %remover essa referência (sem ano e página)
 Segundo JÚNIOR  utilizando as linguagens de desenvolvimento Web HTML, CSS e Javascript. Ele fornece um conjunto de API's para acesso a funções nativas do Sistema Operacional e do hardware do dispositivo, utilizando Javascript. A proposta do PhoneGap é essencial para unir as especificidades de Web com detalhes de sistemas operacionais tanto de hardware como de software.
 
+
 \subsection{AMBIENTES PARA DESENVOLVIMENTO HTML5}
 
 Após esta revisão das ferramentas  e tecnologias disponíveis, fica claro que a utilização de cada uma delas para a criação de um jogo não é um processo trivial, foi pensando nisso que algumas empresas lançaram frameworks "full stack"  (ou framework de pilha completa) para a utilização destes tipos de recursos em mobile, interoperáveis. JEFFRIES (2013) define frameworks full stack relacionados ao desenvolvimento front-end como: frameworks que nos auxiliam no completo desenvolvimento de uma aplicação, desde a interface com o usuário aos dados armazenados.
@@ -301,6 +289,32 @@ Na pesquisa efetuada sobre estes frameworks full stack foram identificadas as se
     \item o ambiente HTML5 Development Environment (ambiente de desenvolvimento HTML5) da Intel, este fornece uma solução na nuvem, completa para o desenvolvimento em plataforma cruzada, com serviços de empacotamento, serviços para a criação e testes de aplicativos com montagem de interfaces drag and drop (Intex XDK) e biliotecas para a construção de jogos utilizando aceleração de hardware, o que garante até duas vezes mais performance que aplicativos mobile baseados em Web tradicionais. Esta solução é free, open source e funciona  através de um plugin para o Google Chrome, ou seja, o desenvolvimento também é multiplataforma e devido ao fato de os binários ficarem hospedados na nuvem, possibilitou a  Intel criar compiladores para cada uma das plataformas disponibilizadas pelo PhoneGap, que é o framework polyfill utilizado na solução.
 \end{itemize}
 
+
+
+\subsection{FRAMEWORKS PARA DESENVOLVIMENTO DE JOGOS HTML5}
+
+Motores de física, áudio e vídeo são apenas algumas facetas do desenvolvimento de jogos, outros aspectos importantes são: gestão de cenas, câmeras, entidades, recursos, elementos de interface, entre outros. Visto esta grande gama de recursos que um jogo pode ter, foram criados frameworks específicos para jogos em HTML5.
+
+\\
+Os mais populares são:
+
+\begin{itemize}
+    \item enchant.js – dentre suas funcionalidades constam: orientação à objetos, orientado à eventos, contém um motor de animação, suporta WebGL e Canvas, etc;
+
+    \item three.js  - considerada leve, renderiza WebGL e Canvas, arquitetura procedural;
+\end{itemize}
+
+\section{QUINTUS}
+
+
+
+\subsection{EMPACOTADORES}
+
+
+\subsection{ESPECIFICIDADES DAS PLATAFORMAS}
+
+
+%rmeover
 \subsection{METODOLOGIA DE DESENVOLVIMENTO DE SOFTWARE PARA A CONSTRUÇÃO DE GAMES}
 
 Como o jogo é um software complexo demanda-se a utilização de metodologias de engenharia de software, dentre os processos de software mais conhecidos academicamente destacamos:
@@ -348,16 +362,20 @@ Angry Birds é um título de bastante renome, este jogo foi originalmente desenv
 \section{METODOLOGIA}
 %como vou  atingir os objetivos
 
-Primeiramente há de ser feita uma pesquisa de caráter explanatório, relativo a técnicas, ferramentas e conceitos importantes, na construção de jogos 2D. Este tipo de pesquisa foi selecionado pois proporciona uma aproximação do pesquisador com o tema, visando melhor familiaridade com o fenômeno ou assunto (LEMÕNS et all., 2012). Neste passo, pretende-se englobar o estudo das tecnologias mencionadas nos objetivos específicos e fazer a seleção das mais adequadas ao desenvolvimento de jogos 2D.  
+Primeiramente há de ser feita uma pesquisa explanatória - e respectiva documentação - relativo à técnicas, ferramentas e conceitos importantes na construção de jogos 2D. Este tipo de pesquisa foi selecionado pois proporciona uma aproximação do pesquisador com o tema, visando melhor familiaridade com o fenômeno ou assunto (LEMÕNS et all., 2012). Neste passo, pretende-se englobar o estudo das tecnologias mencionadas nos objetivos específicos e fazer a seleção das mais adequadas para o desenvolvimento do jogo selecionado.  
 \\
 O segundo passo reside na análise e construção do software em si.
-
 \\
-Através de um processo de software, há de se efetuar a análise e geração de artefatos que melhor mapeiem os requisitos e aspectos do jogo. Depois do período de análise, iniciar-se-á o processo de desenvolvimento, este consistirá em duas etapas subdivididas em iterações. Primeiramente há de se fazer a elaboração de um protótipo utilizando de imagens e audio de características livre na internet; após o protótipo criado, pretende-se então construir os modelos reais, bem como desenvolver a versão final, utilizando como base o protótipo. Com o software desenvolvido, far-se-à a exportação dos binários para as plataformas que suportem aplicativos nativos em HTML5 e disponibilização da aplicação online.
+Através de um processo de software iterativo, há de se efetuar a análise e geração de artefatos que melhor mapeiem os requisitos e aspectos do jogo. Depois do período de análise, iniciar-se-á o processo de desenvolvimento, este consistirá em duas etapas subdivididas em iterações. Primeiramente há de se fazer a elaboração de um protótipo, utilizando de imagens e audio de características livre na internet; após o protótipo criado, pretende-se então construir os modelos reais e integrá-los ao jogo. Com o software desenvolvido, far-se-à a exportação dos binários para as plataformas que suportem aplicativos nativos em HTML5 e disponibilização da aplicação online.
 \\
 Ao final do desenvolvimento será feito um levantamento textual à respeito dos problemas e acertos da implementação do HTML5 encontrados durante as etapas de construção e pesquisa do projeto. Também há de ser desenvolvido um texto descritivo abordando as diferenças de implementação do controle de movimento e da interface de usuário afim de demonstrar como estes requisitos foram atendidos e quais as customizações necessárias para atendê-los nas diferentes plataformas.
 \\
 Por fim, há de ser criada  uma tabela comparativa a qual exponha as funcionalidades com características dependentes de plataforma e informe se o atendimento da funcionalidade obteve êxito e como se chegou a este resultado, bem como quais outras soluções seriam possíveis. Tendo como fundamento este artefato, se fará uma análise qualitativa dos trunfos e limitações deste tipo de arquitetura para o desenvolvimento de jogos transparentes de plataforma, que oferecem experiências contínuas.
+
+\section{RESULTADOS}
+
+
+\section{CONCLUSÃO}
 
 \section{CRONOGRAMA}
 
