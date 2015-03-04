@@ -76,12 +76,15 @@ Busca-se apontar possíveis problemas no processo de desenvolvimento de jogos mu
     - Estudar empacotadores HTML5 para as mais diversas plataformas.
 
 #JUSTIFICATIVA
-    Tendo em vista que este trabalho busca mapear os problemas do desenvolvimento multiplataforma em HTML, ele serve também para apoiar decisões, justificar escolhas, outrossim, funcionar como um direcionador no desenvolvimento de jogos utilizando as já mencionadas tecnologias.
+    Tendo em vista que este trabalho busca mapear agnosticamente os problemas do desenvolvimento multiplataforma em HTML, ele serve também para apoiar decisões, justificar escolhas.
+    Por tratar cientificamente dos aspectos do HTML, este trabalho tem potencial de colaborar para a pesquisa de soluções dos problemas e limitações encontradas, e colaborar para a melhoria do próprio HTML.
+    Trabalhos científicos direcionados ao HTML corroboram para a própria plataforma e todos seus benefícios agregados como os que seguem:
     - O método de construção de aplicativo pela WEB permite uma única base de código o que habilita a disponibilidade de aplicativos com maior velocidade e significativas reduções nos custos.
     - Muitos desenvolvedores estão familiarizados com as tecnologias da WEB ou apontam interesse na tecnologia; <!-- referenciar -->
-    - A opinião comum tende para soluções nativas em detrimento do desenvolvimento de jogos;
-    - O estudo de caso poderá servir como indicador de viabilidade de projetos de jogos para WEB, bem como fonte de experiência para aqueles buscando conhecer às tecnologias.
-    - Este material, servirá para auxiliar interessados no desenvolvimento de jogos em HTML5 fornecendo revisão de tecnologias e estudo de casos - através de um jogo, uma análise sobre problemas encontrados.
+    
+    A opinião comum tende para soluções nativas em detrimento do desenvolvimento de jogos, este trabalho pretende desafiar esta concepção.
+    O estudo de caso poderá servir como indicador de viabilidade de projetos de jogos para WEB, bem como fonte de experiência para aqueles buscando conhecer às tecnologias.
+    Este material, servirá para auxiliar interessados no desenvolvimento de jogos em HTML5 fornecendo revisão de tecnologias e estudo de casos - através de um jogo, uma análise sobre problemas encontrados.
 
 #REVISÃO BIBLIOGRÁFICA
 
