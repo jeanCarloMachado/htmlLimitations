@@ -1,7 +1,7 @@
-#INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DO RIO GRANDE DO SUL 
+#INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DO RIO GRANDE DO SUL
 ##CÂMPUS BENTO GONÇALVES-RS}
 ##Jean Carlo Machado}
-#TITLE
+#Limitações no Desenvolvimento de Jogos Multiplataforma em HTML 5
 ---
 ##Jean Carlo Machado
 #Trabalho de conclusão de curso
@@ -9,7 +9,6 @@
 #Orientador: Me. Rafael Jaques
 #Bento Gonçalves, publicationDATE
 ---
-
 
 #RESUMO
 
