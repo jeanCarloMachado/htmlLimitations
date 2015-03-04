@@ -122,26 +122,19 @@ O HTML5 por não ser um padrão completamente especificado, deixa lacunas de sup
 
 Algumas tecnologias desta classe são:
 
-    - Suporte a SVG - Scalable Vector Graphics (vetor de gráficos escaláveis): svgweb, Raphael, canvg, fabric.js;
-
-    - Suporte a vídeo: video.js, SublimeVideo, html5media, LeanBack Player;
-
-    - Suporte a Geo-localização: Webshims Lib, geolocaltion polyfill, GeoLocation-API-Polifill;
-
-    - Suporte a Web Storage (armazenamento na web): Amplify.js, storage polyfill, session storage;
+- Suporte a SVG - Scalable Vector Graphics (vetor de gráficos escaláveis): svgweb, Raphael, canvg, fabric.js;
+- Suporte a vídeo: video.js, SublimeVideo, html5media, LeanBack Player;
+- Suporte a Geo-localização: Webshims Lib, geolocaltion polyfill, GeoLocation-API-Polifill;
+- Suporte a Web Storage (armazenamento na web): Amplify.js, storage polyfill, session storage;
 
 Uma das soluções mais promissoras polyfill é o PhoneGap ou Apache Cordova, esta ferramenta é open source e possibilita utilizar de inúmeros recursos de hardware da grande maioria das produtoras de dispositivos móveis.
 
 
-\begin{figure}[!htbp]
-    \begin{center}
-        \includegraphics[width=\textwidth]{asset/img/cordovaFeatures.jpg}
-        \caption{Funcionalidades implementadas para o projeto Apache Cordova.\label{fig:Cordova}}
-    \end{center}
-\end{figure}
-%remover essa referência (sem ano e página)
-Segundo JÚNIOR  utilizando as linguagens de desenvolvimento Web HTML, CSS e Javascript. Ele fornece um conjunto de API's para acesso a funções nativas do Sistema Operacional e do hardware do dispositivo, utilizando Javascript. A proposta do PhoneGap é essencial para unir as especificidades de Web com detalhes de sistemas operacionais tanto de hardware como de software.
+\includegraphics[width=\textwidth]{asset/img/cordovaFeatures.jpg}
+\caption{Funcionalidades implementadas para o projeto Apache Cordova.\label{fig:Cordova}}
 
+<!-- remover essa referência (sem ano e página) -->
+Segundo JÚNIOR  utilizando as linguagens de desenvolvimento Web HTML, CSS e Javascript. Ele fornece um conjunto de API's para acesso a funções nativas do Sistema Operacional e do hardware do dispositivo, utilizando Javascript. A proposta do PhoneGap é essencial para unir as especificidades de Web com detalhes de sistemas operacionais tanto de hardware como de software.
 
 ##AMBIENTES PARA DESENVOLVIMENTO HTML5
 
