@@ -1,4 +1,8 @@
 <!--
+To look on
+
+http://link.springer.com/chapter/10.1007/978-3-642-12607-9_20
+
 Estrutura
 
 Revisão bibliográfica
@@ -8,6 +12,13 @@ Revisão bibliográfica
 Ideias:
 remover o 5 do HTML
 colocar na introdução o que são as "demais tecnologias relacionadas ao HTML"
+Talvez comprar o HTML com tecnologias da web também como o flashplayeres
+escopar o que significa o plataforma
+``````
+
+Dúvidas:
+Posso utilizar livros como trabalhos similares?
+Devo procurar e mencionar soluções para os problemas que eu encontrar?
 
 -->
 
@@ -41,6 +52,8 @@ Esse trabalho busca avaliar as limitações e possíveis dificuldades à se enfr
 
 #CONTEXTUALIZAÇÃO
 
+O senso comum sobre o HTML5 para o desenvolvimento de games geralmente segue a seguinte estrutura: "HTML5 é fantástico, mas...", depois do mas as coisas variam de acordo com a experiência empírica ou opinião alheia. O objetivo deste trabalho é constatar o quanto deste mas é verdadeiro através da concepção e posterior análise do processo de desenvolvimento de um jogo multiplataforma em html5.
+
 #PROBLEMA
 
 <!-- referenciar -->
@@ -59,6 +72,7 @@ Busca-se apontar possíveis problemas no processo de desenvolvimento de jogos mu
     - Estudar *engines* de física para HTML5;
     - Estudar técnicas de detecção de recursos de dispositivos;
     - Estudar tecnologias para preenchimento de *gaps* HTML5;
+    - Estudar formas de debugging em html5
     - Estudar empacotadores HTML5 para as mais diversas plataformas.
 
 #JUSTIFICATIVA
@@ -224,6 +238,12 @@ Identificador& Tarefa &  Duração & Início & Término
 -->
 #Bibliografia
 
+HTML5: A blessing or a curse
+http://www.develop-online.net/tools-and-tech/html5-a-blessing-or-a-curse/0117393
+
+5 common mistakes that html5 developers make
+http://www.toptal.com/html5/top-5-mistakes-that-html5-developers-make
+
 AK, Sheela
 **Global Gaming Market Is Expected to Reach USD 117.9 Billion by 2015: Transparency Market Research**
 Disponível em: http://www.prnewswire.com/news-releases/global-gaming-market-is-expected-to-reach-usd-1179-billion-by-2015-transparency-market-research-169284526.html
@@ -259,12 +279,12 @@ American University, School of Computer Science for
 Business Management, Bucharest, 2013
 
 PRALL, Chandler
-\emph{JavaScript Physics Engines Comparison}.
+JavaScript Physics Engines Comparison.
 Disponível em: http://www.htmlgoodies.com/html5/client/javascript-physics-engines-comparison.html#fbid=AAlTVDXjb40
 Acesso em: Jul 2013.
 
 VGChartz
-\emph{Global sales (in millions of units) per game}.
+Global sales (in millions of units) per game.
 Disponível em: http://www.vgchartz.com/gamedb/
 Acesso em: Jul 2012.
 
@@ -289,7 +309,6 @@ Universidade Federal de Uberlândia, Uberlândia, Minas Gerais.
 PRADO, Ely Fernando
 \emph{Introdução ao Desenvolvimento de Games com GWT e HTML5}.
 Departamento de Computação, Universidade Federal de São Carlos (UFSCar) São Carlos, SP, 2012.
-
 
 RENYO Emanuel Montero
 \emph{MODEL-DRIVEN GAME DEVELOPMENT: 2D PLATFORM GAME PROTOTYPING}.
