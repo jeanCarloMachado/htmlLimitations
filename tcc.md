@@ -1,10 +1,9 @@
 <!--
 Estrutura
 
-
 Revisão bibliográfica
-HTTP
-HTML
+-HTTP
+-HTML
 
 Ideias:
 remover o 5 do HTML
@@ -29,9 +28,9 @@ colocar na introdução o que são as "demais tecnologias relacionadas ao HTML"
 
 #RESUMO
 
-Esse trabalho busca avaliar as limitações e possíveis dificuldades à se enfrentar na construção de jogos multiplataforma utilizando HTML5 e demais tecnologias relacionadas. Como caráter de avaliação, fez-se uma pesquisa dos aspectos relacionados a construção de jogos da categoria e construiu-se um jogo. Com base nas informações teóricas e empíricas coletadas elaborou-se uma base de dados especificando o que pode ser alcançado através das ferramentas web para o desenvolvimento de jogos multiplataforma.
+Esse trabalho busca avaliar as limitações e possíveis dificuldades à se enfrentar na construção de jogos multiplataforma utilizando HTML e demais tecnologias relacionadas. Como caráter de avaliação, fez-se uma pesquisa dos aspectos relacionados a construção de jogos da categoria e construiu-se um jogo. Com base nas informações teóricas e empíricas coletadas elaborou-se um comparativo especificando o que pode ser alcançado através das ferramentas web para o desenvolvimento de jogos multiplataforma.
 
-**Palavras-chave**: *HTML5*, JOGOS, PROBLEMAS
+**Palavras-chave**: *HTML*, JOGOS, PROBLEMAS
 
 ---
 
@@ -52,19 +51,19 @@ Os custos adicionais no ciclo vida de um jogo nativo, para diversas plataformas,
 #OBJETIVOS
 ##OBJETIVO GERAL
 
-Este trabalho se fará através da investigação do processo desenvolvimento de jogos em HTML5. Busca-se com isso, apontar possíveis problemas no processo de desenvolvimento oriundos do atual estado de implementação do HTML5 e demais tecnologias.
+Busca-se apontar possíveis problemas no processo de desenvolvimento de jogos multiplataforma oriundos do atual estado de implementação do HTML e tecnologias relacionadas.
 
 ##OBJETIVOS ESPECÍFICOS
-
     - Estudar os aspectos HTML5 relevantes na construção de jogos, especificamente: canvas, àudio, vídeo e controle de entrada de comandos;
-    - Estudar frameworks de desenvolvimento de jogos em HTML5;
-    - Estudar engines (motores) de física para HTML5;
+    - Estudar *frameworks* de desenvolvimento de jogos em HTML5;
+    - Estudar *engines* de física para HTML5;
     - Estudar técnicas de detecção de recursos de dispositivos;
-    - Estudar tecnologias para preenchimento de gaps HTML5;
+    - Estudar tecnologias para preenchimento de *gaps* HTML5;
     - Estudar empacotadores HTML5 para as mais diversas plataformas.
 
 #JUSTIFICATIVA
-    - O método de construção de aplicativo pela WEB permite uma única base de código o que habilita a disponibilidade de aplicativos com maior velocidade e significativas reduções nos custos;
+    Tendo em vista que este trabalho busca mapear os problemas do desenvolvimento multiplataforma em HTML, ele serve também para apoiar decisões, justificar escolhas, outrossim, funcionar como um direcionador no desenvolvimento de jogos utilizando as já mencionadas tecnologias.
+    - O método de construção de aplicativo pela WEB permite uma única base de código o que habilita a disponibilidade de aplicativos com maior velocidade e significativas reduções nos custos.
     - Muitos desenvolvedores estão familiarizados com as tecnologias da WEB ou apontam interesse na tecnologia; <!-- referenciar -->
     - A opinião comum tende para soluções nativas em detrimento do desenvolvimento de jogos;
     - O estudo de caso poderá servir como indicador de viabilidade de projetos de jogos para WEB, bem como fonte de experiência para aqueles buscando conhecer às tecnologias.
@@ -79,11 +78,8 @@ Este trabalho se fará através da investigação do processo desenvolvimento de
 ```
 HTML6 overview. HTML is a simple web development language that keeps on rolling out new versions, and has started working on its sixth revision. HTML5 the current revision of HTML is considered to be one of the most sought-after revisions, compared to all the previous HTML versions. - See more at: http://www.script-tutorials.com/a-look-into-html6-what-is-it-and-what-it-has-to-offer/#sthash.LO7SH39D.dpuf
 
-
 http://www.script-tutorials.com/a-look-into-html6-what-is-it-and-what-it-has-to-offer/
 ```
-
-O padrão HTTP é conhecido por ser o principal fomentador da WEB e a especificação de texto deste padrão é o conhecido HTML, em sua concepção inicial, Tim Berners-Lee acreditava que seria possível  interligar hipertextos em computadores diferentes com uso de links globais também chamados de hiperlinks (SILVA 2011).
 
 Trata-se de uma linguagem de marcação que define a estrutura de elementos que uma página deve ter de modo a fornecer conteúdo iterativo aos usuários. Todavia, a interatividade necessária para a construção de jogos animados em HTML é algo recente, anteriormente só se obtinha com a utilização de ferramentas proprietárias como o Adobe Flash, Microsoft Silverlight e Oracle JavaFX.
 
@@ -204,12 +200,12 @@ Por fim, há de ser criada  uma tabela comparativa a qual exponha as funcionalid
 
 O cronograma foi especificado de acordo com o detalhado na metodologia, suas datas estão especificadas de acordo com dias úteis disponíveis no calendário.
 
-\textbf{Identificador}& \textbf{Tarefa} &  \textbf{Duração} & \textbf{Início} & \textbf{Término} \\  \hline
-1 & Concepção & 5 dias & 1 agosto & 7 agosto \\  \hline
-2 & Elaboração & 15 dias & 8 agosto & 29 agosto \\  \hline
-3 & Contrução & 15 dias & 30 agosto & 19 setembro \\  \hline
-4 & Contrução & 10 dias & 31 agosto & 3 outubro \\ \hline
-  & Total & 45 dias & 1 agosto & 3 outubro \\
+Identificador& Tarefa &  Duração & Início & Término
+1 & Concepção & 5 dias & 1 agosto & 7 agosto
+2 & Elaboração & 15 dias & 8 agosto & 29 agosto
+3 & Construção & 15 dias & 30 agosto & 19 setembro
+4 & Construção & 10 dias & 31 agosto & 3 outubro
+  & Total & 45 dias & 1 agosto & 3 outubro
 
 ---
 
@@ -227,112 +223,89 @@ O cronograma foi especificado de acordo com o detalhado na metodologia, suas dat
 %
 -->
 #Bibliografia
-    \bibitem{AK}
-        AK, Sheela
-        \emph{ Global Gaming Market Is Expected to Reach USD 117.9 Billion by 2015: Transparency Market Research}.
-        Disponível em: http://www.prnewswire.com/news-releases/global-gaming-market-is-expected-to-reach-usd-1179-billion-by-2015-transparency-market-research-169284526.html
-        Acesso em: Jul 2012.
+
+AK, Sheela
+**Global Gaming Market Is Expected to Reach USD 117.9 Billion by 2015: Transparency Market Research**
+Disponível em: http://www.prnewswire.com/news-releases/global-gaming-market-is-expected-to-reach-usd-1179-billion-by-2015-transparency-market-research-169284526.html
+Acesso em: Jul 2012.
 
 
-    \bibitem{BUCHMAN}
-        BUCHMAN, Debra D; FUNK, Jeanne B.
-        \emph{VIDEO AND COMPUTER GAMES IN THE "90S: CHILDREN'S TIME COMMITMENT & GAME PREFERENCE}.
-        Health and Human Services Department (HHS), 2013.
+BUCHMAN, Debra D; FUNK, Jeanne B.
+\emph{VIDEO AND COMPUTER GAMES IN THE "90S: CHILDREN'S TIME COMMITMENT & GAME PREFERENCE}.
+Health and Human Services Department (HHS), 2013.
 
 
-    \bibitem{KURYANOVICH}
-        KURYANOVICH, Egor; SHALOM Shy, et all.
-        \emph{The State of Open Web Games}.
-        Addison Wesley, Massachusetts, pg. 12,
-        ISBN: 978-1-4302-3978-9,
-        2012.
+KURYANOVICH, Egor; SHALOM Shy, et all.
+\emph{The State of Open Web Games}.
+Addison Wesley, Massachusetts, pg. 12,
+ISBN: 978-1-4302-3978-9,
+2012.
 
-    \bibitem{SILVA}
-        SILVA, Jucimar Maria Júnior; FIRMINO, Emiliano Carlos M.
-        \emph{Desenvolvimento de jogos em HTML5}.
-        Coordenação da engenharia da Computação,
-        Univerisdade Federal do Amazonas,
-        Amazonas,
-        2010.
+SILVA, Jucimar Maria Júnior; FIRMINO, Emiliano Carlos M.
+\emph{Desenvolvimento de jogos em HTML5}.
+Coordenação da engenharia da Computação,
+Univerisdade Federal do Amazonas,
+Amazonas,
+2010.
 
-    \bibitem{SHANKAR}
-        SHANKAR, Aditya Ravi .
-        \emph{Pro HTML5 Games}.
-        ISBN: 978-1-4302-4710-4, p. 39-64,
-        2012.
+SHANKAR, Aditya Ravi .
+\emph{Pro HTML5 Games}.
+ISBN: 978-1-4302-4710-4, p. 39-64,
+2012.
 
-    \bibitem{TABUSCA}
-        TABUSCA, Alexandru
-        \emph{THE NEW “UNIVERSAL TRUTH” OF THE WORLD WIDE WEB}.
-        American University, School of Computer Science for
-        Business Management, Bucharest, 2013
+TABUSCA, Alexandru
+\emph{THE NEW “UNIVERSAL TRUTH” OF THE WORLD WIDE WEB}.
+American University, School of Computer Science for
+Business Management, Bucharest, 2013
 
-    \bibitem{PRALL}
-        PRALL, Chandler
-        \emph{JavaScript Physics Engines Comparison}.
-        Disponível em: http://www.htmlgoodies.com/html5/client/javascript-physics-engines-comparison.html#fbid=AAlTVDXjb40
-        Acesso em: Jul 2013.
+PRALL, Chandler
+\emph{JavaScript Physics Engines Comparison}.
+Disponível em: http://www.htmlgoodies.com/html5/client/javascript-physics-engines-comparison.html#fbid=AAlTVDXjb40
+Acesso em: Jul 2013.
 
-    \bibitem{VGChartz}
-        VGChartz
-        \emph{Global sales (in millions of units) per game}.
-        Disponível em: http://www.vgchartz.com/gamedb/
-        Acesso em: Jul 2012.
+VGChartz
+\emph{Global sales (in millions of units) per game}.
+Disponível em: http://www.vgchartz.com/gamedb/
+Acesso em: Jul 2012.
 
-    \bibitem{SILVA2011}
-        SILVA, Maurício Samy
-        \emph{HTML5 A linguagemEM DE MARCAÇÃO QUE REVOLUCIONOU A WEB}.
-        Editora novatec, p. 15, 2011.
+SILVA, Maurício Samy
+\emph{HTML5 A linguagemEM DE MARCAÇÃO QUE REVOLUCIONOU A WEB}.
+Editora novatec, p. 15, 2011.
 
-    \bibitem{FRANZINI}
-        FRANZINI, Fernando
-        \emph{Nova tendência de aplicativos móveis web}.  Disponível em:
-        [http://www.infobase.com.br/nova-tendencia-de-aplicativos-moveis-web/]. Acesso em: jun,
-        2013.
+FRANZINI, Fernando
+\emph{Nova tendência de aplicativos móveis web}.  Disponível em:
+[http://www.infobase.com.br/nova-tendencia-de-aplicativos-moveis-web/]. Acesso em: jun,
+2013.
 
-    \bibitem{JEFFRIES}
-        JEFFRIES, Ron
-        \emph{Full-Stack frameworks vs. Non Full-Stack frameworks}.
-        Disponível em [http://codingarchitect.wordpress.com/2012/10/22/full-stack-frameworks-vs-non-full-stack-frameworks/], Acesso em: jun, 2013.
+JEFFRIES, Ron
+\emph{Full-Stack frameworks vs. Non Full-Stack frameworks}.
+Disponível em [http://codingarchitect.wordpress.com/2012/10/22/full-stack-frameworks-vs-non-full-stack-frameworks/], Acesso em: jun, 2013.
+JÚNIOR, Gesmar de Paula Santos; OLIVEIRA, Luciene Chagas; CARDOSO, Alexandre; LAMOUNIER, Edgard Afonso.
+\emph{Aplicação Multiplataforma da Realidade Aumentada Móvel para Geolocalização utilizando o PhoneGap}.
+Programa de Pós Gradução em Engenharia Elétrica
+Universidade Federal de Uberlândia, rograma de Pós Gradução em Engenharia Elétrica
+Universidade Federal de Uberlândia, Uberlândia, Minas Gerais.
 
-
-    \bibitem{JÚNIOR}
-        JÚNIOR, Gesmar de Paula Santos; OLIVEIRA, Luciene Chagas; CARDOSO, Alexandre; LAMOUNIER, Edgard Afonso.
-        \emph{Aplicação Multiplataforma da Realidade Aumentada Móvel para Geolocalização utilizando o PhoneGap}.
-        Programa de Pós Gradução em Engenharia Elétrica
-        Universidade Federal de Uberlândia, rograma de Pós Gradução em Engenharia Elétrica
-        Universidade Federal de Uberlândia, Uberlândia, Minas Gerais.
+PRADO, Ely Fernando
+\emph{Introdução ao Desenvolvimento de Games com GWT e HTML5}.
+Departamento de Computação, Universidade Federal de São Carlos (UFSCar) São Carlos, SP, 2012.
 
 
+RENYO Emanuel Montero
+\emph{MODEL-DRIVEN GAME DEVELOPMENT: 2D PLATFORM GAME PROTOTYPING}.
+Departamento de Sistemas Informáticos y Computación. Universidad Politécnica de Valencia,Valencia, España, 2006.
 
-    \bibitem{PRADO}
-        PRADO, Ely Fernando
-        \emph{Introdução ao Desenvolvimento de Games com GWT e HTML5}.
-        Departamento de Computação, Universidade Federal de São Carlos (UFSCar) São Carlos, SP, 2012.
+HERMIDA, Alfred
+Japan leads mobile game craze. BBC News, 2003. Acesso em: jun 2013.
 
+\emph{A incrível evolução de videogames de console}.
+Disponível em: [http://www.failwars.blog.br/nerd-feelings/incrvel-evoluo-dos-vdeo-games-de-console-de-1967-2012/] Acesso em: jun, 2013.
 
-    \bibitem{RENYO}
-        RENYO Emanuel Montero
-        \emph{MODEL-DRIVEN GAME DEVELOPMENT: 2D PLATFORM GAME PROTOTYPING}.
-        Departamento de Sistemas Informáticos y Computación. Universidad Politécnica de Valencia,Valencia, España, 2006.
+WEINTRAUB, Seth
+\emph{Industry first: Smartphones pass PCs in sales}.
+Disponível em: http://tech.fortune.cnn.com/2011/02/07/idc-smartphone-shipment-numbers-passed-pc-in-q4-2010/
+Acesso em: Jul 2012.
 
-
-
-    \bibitem{HERMIDA}
-        HERMIDA, Alfred
-        Japan leads mobile game craze. BBC News, 2003. Acesso em: jun 2013.
-
-    \bibitem{EvolutionOnGames}
-        \emph{A incrível evolução de videogames de console}.
-        Disponível em: [http://www.failwars.blog.br/nerd-feelings/incrvel-evoluo-dos-vdeo-games-de-console-de-1967-2012/] Acesso em: jun, 2013.
-
-    \bibitem{WEINTRAUB}
-        WEINTRAUB, Seth
-        \emph{Industry first: Smartphones pass PCs in sales}.
-        Disponível em: http://tech.fortune.cnn.com/2011/02/07/idc-smartphone-shipment-numbers-passed-pc-in-q4-2010/
-        Acesso em: Jul 2012.
-
-    \bibitem{ZICO}
-        ZICO, Mário Lucio
-        \emph{A História dos Jogo}.
-        Disponível em [http://www.jogos.antigos.nom.br/artigos.asp], Acesso em: jun 2013.
+ZICO, Mário Lucio
+\emph{A História dos Jogo}.
+Disponível em [http://www.jogos.antigos.nom.br/artigos.asp], Acesso em: jun 2013.
