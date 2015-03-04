@@ -12,24 +12,37 @@ Revisão bibliográfica
 Ideias:
 remover o 5 do HTML
 colocar na introdução o que são as "demais tecnologias relacionadas ao HTML"
-Talvez comprar o HTML com tecnologias da web também como o flashplayeres
-escopar o que significa o plataforma
-Visto que o propósito é ser multiplataforma devo abordar primeiramente apenas aspectos multiplataforma como: empacotadores
+escopar o que significa o multiplataplataforma
+mapear exatamente quais os recursos que eu pretendo validar: acelerômetro, camera, etc
+adicionar o processo de debug multiplataforma
 
 ``````
 
 Dúvidas:
-Posso utilizar livros como trabalhos similares?
-devo coletar as limitações que podem ser contornadas com workarounds?
-Devo procurar e mencionar soluções para os problemas que eu encontrar?
-O "multiplataforma" deve focar apenas no desenvolvimento mobile ou ser mais genérico?
+Posso utilizar livros como trabalhos similares? - sim
+devo coletar as limitações que podem ser contornadas com workarounds? - colocar demonstra aprofundamento
+#Devo procurar e mencionar soluções para os problemas que eu encontrar?
+O "multiplataforma" deve focar apenas no desenvolvimento mobile ou ser mais genérico? - engloba mais de uma plataforma, especificar no objetivo: tablets, celular, kkkk
+Desenvolver o protópito com html5 puro!
+
+
+
+Comparar o HTML5 com ele mesmo !!!!!
+Considerações
+formatar logo.
+
+
+TODO this week
+esboçar a metodologia
+fazer levantamento de tudo o que o HTML5 provê que tem deficiências de multiplataforma
+
 
 -->
 
 ##INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DO RIO GRANDE DO SUL
 ##CÂMPUS BENTO GONÇALVES-RS}
 ##Jean Carlo Machado}
-#Limitações no Desenvolvimento de Jogos Multiplataforma em HTML 5
+#Limitações no Desenvolvimento de Jogos Multiplataforma em HTML
 
 ---
 
@@ -54,7 +67,7 @@ Esse trabalho busca avaliar as limitações e possíveis dificuldades à se enfr
 
 ---
 
-#CONTEXTUALIZAÇÃO
+#CONTEXTUALIZAÇÃO <!-- ou introdução -->
 
 O senso comum sobre o HTML5 para o desenvolvimento de games geralmente segue a seguinte estrutura: "HTML5 é fantástico, mas...", depois do mas as coisas variam de acordo com a experiência empírica ou opinião alheia. O objetivo deste trabalho é constatar o quanto deste mas é verdadeiro através da concepção e posterior análise do processo de desenvolvimento de um jogo multiplataforma em html5.
 
@@ -90,9 +103,8 @@ Busca-se apontar possíveis problemas no processo de desenvolvimento de jogos mu
 
 #REVISÃO BIBLIOGRÁFICA
 
-##HTTP
 
-##HTML
+##HTML //resumão do que é
 
 ```
 HTML6 overview. HTML is a simple web development language that keeps on rolling out new versions, and has started working on its sixth revision. HTML5 the current revision of HTML is considered to be one of the most sought-after revisions, compared to all the previous HTML versions. - See more at: http://www.script-tutorials.com/a-look-into-html6-what-is-it-and-what-it-has-to-offer/#sthash.LO7SH39D.dpuf
@@ -110,20 +122,12 @@ O HTML5, por fatores como a excelente documentação, grande comunidade de desen
 
 Apesar de a tecnologia  ainda não estar completa ela já demonstra grande robustez  e os padrões de desenvolvimento invariavelmente estão migrando para a perspectiva HTML5, segundo TABUSCA (2013) desenvolvedores que atualmente trabalham no ramo da Web, já podem visualizar que o novo ramo do desenvolvimento de aplicativos mobile está se aproximando mais e mais à alusiva proposta do HTML5.
 
-##MOTORES DE FÍSICA
 
-Motores de física *Engines de física* provêm ao software, através de equações matemáticas, um modelo similar das leis da física. Estes motores são geralmente utilizados na construção de games, simuladores entre outros. As bibliotecas de física segundo (SHANKAR, 2012), "geralmente incluẽm os seguintes recursos: elasticidade, gravidade fricção e conservação de \textbf{momentum} entre dois ou mais objetos que colidem". As bibliotecas de física, segundo (SHANKAR, 2012), geralmente incluem os seguintes recursos: elasticidade, gravidade, fricção e conservação de momentum entre dois ou mais objetos que colidem.
-
-Dentre as bibliotecas mais populares que implementam física, compatíveis com HTML5 constam:
-
-<!-- add more here -->
-
-    - box2dweb: é um port de sua versão em C++, desenvolvida exclusivamente para ambientes 2D, rica em opções e razoavelmente fácil de utilizar;
-    - Ammo.js: baseada na biblioteca bullet para física 3D, tem um grande set de funcionalidades, todavia é razoavelmente mais compicada de utilizar;
-    - JigLibJS: outro port de C++, todavia escrito à mão, com melhorias para o Javascript.  Segundo (PRALL), à customização rendeu à JigLibJS extra performance se comparada ao Ammo.js, todavia esta não é tão rica em opçãoes.
-
+##HTTP resumo mínimo do que é 
 
 ##SOM E VÍDEO
+
+Falar dos problemas da api de áudio.
 
 Atualmente, a maioria dos arquivos de áudio e vídeo rodam através de plugins (como o Adobe Flash). Não obstante, navegadores diferentes podem ter plugins diferentes. O HTML5 define dois novos elementos que especificam o padrão para imbuir áudio e vídeo em páginas Web: <audio> e <vídeo>.
 <!-- referências melhores  -->
@@ -178,7 +182,7 @@ Visto que a gestão de uma grande gama de variáveis faz-se necessária durante 
 
 ##ESPECIFICIDADES DAS PLATAFORMAS
 
-#METODOLOGIA DE DESENVOLVIMENTO DE SOFTWARE PARA A CONSTRUÇÃO DE GAMES
+#METODOLOGIA DE DESENVOLVIMENTO DE SOFTWARE PARA A CONSTRUÇÃO DE GAMES <!-- incrementar e colocar no apêndice -->
 
 Como o jogo é um software complexo demanda-se a utilização de metodologias de engenharia de software, dentre os processos de software mais conhecidos academicamente destacamos:
 
@@ -198,7 +202,7 @@ Angry Birds é um título de bastante renome, este jogo foi originalmente desenv
 
 (SILVA,2010), demostra a utilização de HTML5 para a criação de jogos simples, todavia seu trabalho não se foca nas diferenças entre uma plataforma e outra.
 
-#METODOLOGIA
+#METODOLOGIA <!-- fazer isso agora -->
 <!-- como vou  atingir os objetivos -->
 
 Primeiramente há de ser feita uma pesquisa explanatória - e respectiva documentação - relativo à técnicas, ferramentas e conceitos importantes na construção de jogos. Este tipo de pesquisa foi selecionado pois proporciona uma aproximação do pesquisador com o tema, visando melhor familiaridade com o fenômeno ou assunto (LEMÕNS et all., 2012). Neste passo, pretende-se englobar o estudo das tecnologias mencionadas nos objetivos específicos e fazer a seleção das mais adequadas para o desenvolvimento do jogo selecionado.
