@@ -1,3 +1,17 @@
+<!--
+Estrutura
+
+
+Revisão bibliográfica
+HTTP
+HTML
+
+Ideias:
+remover o 5 do HTML
+colocar na introdução o que são as "demais tecnologias relacionadas ao HTML"
+
+-->
+
 #INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DO RIO GRANDE DO SUL
 ##CÂMPUS BENTO GONÇALVES-RS}
 ##Jean Carlo Machado}
@@ -12,11 +26,9 @@
 
 #RESUMO
 
-Com a introdução dos novos recursos de multimídia oferecidos pelo HTML5 a viabilidade de construção de jogos iterativos com as tecnologias da WEB se tornou assunto relevante. Esse trabalho busca avaliar as limitações e possíveis dificuldades à se enfrentar na construção de um jogo 2D
-utilizando HTML5 e demais tecnologias relacionadas. Como caráter de avaliação fez-se uma pesquisa de ferramentas e utilitários disponíveis e construiu-se um jogo 2D. Com base na pesquisa efetuada e na experiência desenvolvida, constatamos que...
+Esse trabalho busca avaliar as limitações e possíveis dificuldades à se enfrentar na construção de jogos multiplataforma utilizando HTML5 e demais tecnologias relacionadas. Como caráter de avaliação, fez-se uma pesquisa dos aspectos relacionados a construção de jogos da categoria e construiu-se um jogo. Com base nas informações teóricas e empíricas coletadas elaborou-se uma base de dados especificando o que pode ser alcançado através das ferramentas web para o desenvolvimento de jogos multiplataforma.
 
-
-**Palavras-chave**: *HTML5*, JOGOS 2D, PROBLEMAS
+**Palavras-chave**: *HTML5*, JOGOS, PROBLEMAS
 
 ---
 
@@ -26,47 +38,10 @@ utilizando HTML5 e demais tecnologias relacionadas. Como caráter de avaliação
 ---
 
 #CONTEXTUALIZAÇÃO
-##HISTÓRIA E BENEFÍCIOS DOS JOGOS
 
-Há muito os jogos são utilizados como meio de entretenimento, mas além da diversão propiciada jogos podem ser benéficos de diversas outras formas como: na apuração da capacidade lógica e motora, facilidade em tomada de decisões, redução de stress, entre outros (GALLAGHER, 2013).
+#PROBLEMA
 
-Na informática, os jogos estão presentes desde meados dos anos 60; no princípio, protótipos de laboratórios, os jogos eram aplicativos extremamente rudimentares e totalmente dependentes da plataforma onde eram desenvolvidos.
-
-A partir da criação da Atari, em 1972, os jogos eletrônicos se popularizaram. Desenvolveu-se um mercado competitivo disputando para criar as melhores plataformas e os melhores jogos.
-
-A indústria dos vídeo games foi rejuvenescida com a introdução da Nintendo ao final nos anos 80. Com melhoras significativas  nos gráficos, no realismo, e com a introdução de jogos violentos, a Nintendo conseguiu uma dominância de mercado temporária (BUCHMAN,1996)  Atualmente, devido à disponibilidade de internet de alta velocidade, a sofisticação das técnicas dos jogos, e a grande compatibilidade dos hardwares, aumentou-se o fluxo de entrada de dinheiro, o que está gerando um grande boom na indústria dos jogos (AK, 2012)  O mercado global de jogos cresceu de 70.5 bilhões de dólares em 2011 e espera chegar a 117.9 bilhões em 2015, crescendo em média 13.7 de 2011 a 2015 (AK, 2012).
-
-<img alt="Os cinco jogos mais bem vendidos de todos os tempos segundo à VGChartz, 2013)." title="Jogos mais bem vendidos" src="asset/img/bestSelledGames.jpg" />
-
-Além de obter uma estimativa de vendas dos jogos mais populares, através desta lista, é possível ter-se uma concepção de quais gêneros de jogos atraem mais os usuário. O gênero de maior influência na lista é o de esportes, seguido igualmente por plataforma, corrida e RPG.
-
-***A VGChartz é uma bem conceituada  empresa na área de pesquisas de mercado especificamente de jogos eletrônicos.***
-
-##JOGOS NATIVOS *vs* JOGOS WEB
-
-Há diversas decisões há tomar ao decidir fazer um jogo, dentre as críticas constam: em que plataformas o sistema será disponibilizado? e quais as tecnologias utilizadas para fazê-lo?. Existem as seguintes possibilidades:
-
-**Jogos nativos**: A possibilidade mais comum é a criação de jogos nativos, um para cada plataforma alvo. Esta estratégia contém os seguintes benefícios:
-
-    - Aplicativos nativos propiciam uma sensação de continuidade aos demais aplicativos do sistema operacional;
-    - Normalmente tem melhor performance do que aplicativos WEB
-    - Permitem maior controle sobre o dispositivo em que estarão rodando
-
-
-**Jogos WEB**
-Jogos WEB são aqueles que utilizam HTML5, JavaScript e CSS como tecnologias. Jogos WEB trazem nos seguintes benefícios:
-
-    - Única base de código;
-    - Relativa facilidade de se encontrar desenvolvedores capazes ou interessados;
-    - Custo de produção e manutenção reduzido.
-
-##HTML
-
-Tendo em mente estas considerações, este trabalho objetiva auxiliar o desenvolvimento de jogos em HTML5 fornecendo um estudo de caso - através de um jogo, outrossim, um resumo dos problemas encontrados, a fim de que estes possam servir como uma espécie de caminho facilitado à todos os interessados no desenvolvimento de jogos para a WEB.
-
-##PROBLEMA
-
-<!-- Referenciar -->
+<!-- referenciar -->
 A falta de disponibilidade de trabalhos acadêmicos, bem como a carência de definições concretas sobre a viabilidade da atual versão do HTML5 - quando utilizado no desenvolvimento de jogos, acaba por monopolizar à construção de jogos nativos as plataformas alvo. Esta realidade corrobora para uma espécie de consenso à respeito da inviabilidade de construir-se jogos competitivos em HTML5.
 
 Os custos adicionais no ciclo vida de um jogo nativo, para diversas plataformas, é muito alto para ser considerado um problema trivial.
@@ -74,45 +49,50 @@ Os custos adicionais no ciclo vida de um jogo nativo, para diversas plataformas,
 #OBJETIVOS
 ##OBJETIVO GERAL
 
-Este trabalho se fará através da investigação do processo desenvolvimento de jogos utilizando-se das tecnologias da WEB, à dizer: HTML5, CSS3 e JavsScript. Busca-se com isso, apontar possíveis problemas no processo de desenvolvimento oriundos do atual estado de implementação do HTML5 e demais tecnologias. O estudo de caso poderá servir como indicador de viabilidade de projetos de jogos para WEB, bem como fonte de experiência para aqueles buscando conhecer às tecnologias.
+Este trabalho se fará através da investigação do processo desenvolvimento de jogos em HTML5. Busca-se com isso, apontar possíveis problemas no processo de desenvolvimento oriundos do atual estado de implementação do HTML5 e demais tecnologias.
 
 ##OBJETIVOS ESPECÍFICOS
 
-% devo estudar empacotadores visto que há um benefício listado como
-% o benefício da multiplataforma? Obs: Acho que não, visto que o problema não é
-% a dificuldade em empacotar mas sim em criar jogos
-
-    - Estudar o HTML5 especificamente canvas, àudio, vídeo e controle de entrada de comandos;
+    - Estudar os aspectos HTML5 relevantes na construção de jogos, especificamente: canvas, àudio, vídeo e controle de entrada de comandos;
     - Estudar frameworks de desenvolvimento de jogos em HTML5;
     - Estudar engines (motores) de física para HTML5;
-    - Estudar tecnicas de detecção de recursos, de dispositivos;
+    - Estudar técnicas de detecção de recursos de dispositivos;
     - Estudar tecnologias para preenchimento de gaps HTML5;
-    - Desenvolver o jogo utilizando somente tecnologias OpenSource (código aberto);
-    - Identificar os pontos relevantes, fraquezas e acertos, da implementação atual do HTML5, em diferentes tipos de plataformas;
+    - Estudar empacotadores HTML5 para as mais diversas plataformas.
 
 #JUSTIFICATIVA
-
-    - O trabalho justifica-se primeiramente pelo quesito inovação, devido ao HTML5 ser uma tecnologia não totalmente consolidada, sendo de utilidade à comunidade trabalhos que revisem seus recursos, quanto mais em escopos específicas como o HTML5 para a construção de jogos 2D;
     - O método de construção de aplicativo pela WEB permite uma única base de código o que habilita a disponibilidade de aplicativos com maior velocidade e significativas reduções nos custos;
-    - Muitos desenvolvedores estão familiarizados com as tecnologias da WEB ou apontam interesse na tecnologia;
+    - Muitos desenvolvedores estão familiarizados com as tecnologias da WEB ou apontam interesse na tecnologia; <!-- referenciar -->
     - A opinião comum tende para soluções nativas em detrimento do desenvolvimento de jogos;
+    - O estudo de caso poderá servir como indicador de viabilidade de projetos de jogos para WEB, bem como fonte de experiência para aqueles buscando conhecer às tecnologias.
+    - Este material, servirá para auxiliar interessados no desenvolvimento de jogos em HTML5 fornecendo revisão de tecnologias e estudo de casos - através de um jogo, uma análise sobre problemas encontrados.
 
 #REVISÃO BIBLIOGRÁFICA
-##HTML5
+
+##HTTP
+
+##HTML
+
+```
+HTML6 overview. HTML is a simple web development language that keeps on rolling out new versions, and has started working on its sixth revision. HTML5 the current revision of HTML is considered to be one of the most sought-after revisions, compared to all the previous HTML versions. - See more at: http://www.script-tutorials.com/a-look-into-html6-what-is-it-and-what-it-has-to-offer/#sthash.LO7SH39D.dpuf
+
+
+http://www.script-tutorials.com/a-look-into-html6-what-is-it-and-what-it-has-to-offer/
+```
+
 O padrão HTTP é conhecido por ser o principal fomentador da WEB e a especificação de texto deste padrão é o conhecido HTML, em sua concepção inicial, Tim Berners-Lee acreditava que seria possível  interligar hipertextos em computadores diferentes com uso de links globais também chamados de hiperlinks (SILVA 2011).
 
 Trata-se de uma linguagem de marcação que define a estrutura de elementos que uma página deve ter de modo a fornecer conteúdo iterativo aos usuários. Todavia, a interatividade necessária para a construção de jogos animados em HTML é algo recente, anteriormente só se obtinha com a utilização de ferramentas proprietárias como o Adobe Flash, Microsoft Silverlight e Oracle JavaFX.
 
 No HTML5 esta interatividade é alcançada através da utilização do recurso canvas, que é a tag HTML que permite-se "desenhar" dentro da página.
 
-Atualmente o canvas suporta somente o desenvolvimento 2D, sua implementação 3D está em desenvolvimento e chama-se WebGL. Por consequência do ainda baixo nível de especificação do WebGL, não optamos por o desenvolvimento de um aplicativo 3D.
+Atualmente o canvas suporta somente o desenvolvimento, sua implementação 3D está em desenvolvimento e chama-se WebGL. Por consequência do ainda baixo nível de especificação do WebGL, não optamos por o desenvolvimento de um aplicativo 3D.
 
 O HTML5, por fatores como a excelente documentação, grande comunidade de desenvolvedores e usuários, e seu caráter multiplataforma, justifica-se para a construção de jogos. Segundo (KURYANOVICH, 2012) a beleza de desenvolver jogos com o padrão aberto WEB é que este nos delega a escrever uma vez e utilizar em qualquer lugar.
 
 Apesar de a tecnologia  ainda não estar completa ela já demonstra grande robustez  e os padrões de desenvolvimento invariavelmente estão migrando para a perspectiva HTML5, segundo TABUSCA (2013) desenvolvedores que atualmente trabalham no ramo da Web, já podem visualizar que o novo ramo do desenvolvimento de aplicativos mobile está se aproximando mais e mais à alusiva proposta do HTML5.
 
 ##MOTORES DE FÍSICA
-
 
 Motores de física *Engines de física* provêm ao software, através de equações matemáticas, um modelo similar das leis da física. Estes motores são geralmente utilizados na construção de games, simuladores entre outros. As bibliotecas de física segundo (SHANKAR, 2012), "geralmente incluẽm os seguintes recursos: elasticidade, gravidade fricção e conservação de \textbf{momentum} entre dois ou mais objetos que colidem". As bibliotecas de física, segundo (SHANKAR, 2012), geralmente incluem os seguintes recursos: elasticidade, gravidade, fricção e conservação de momentum entre dois ou mais objetos que colidem.
 
@@ -130,13 +110,11 @@ Dentre as bibliotecas mais populares que implementam física, compatíveis com H
 Atualmente, a maioria dos arquivos de áudio e vídeo rodam através de plugins (como o Adobe Flash). Não obstante, navegadores diferentes podem ter plugins diferentes. O HTML5 define dois novos elementos que especificam o padrão para imbuir áudio e vídeo em páginas Web: <audio> e <vídeo>.
 <!-- referências melhores  -->
 
-
 ##ENTRADA DE COMANDOS
 
 Na construção da grande maioria dos jogos é imprescindível alta flexibilidade na gestão de entrada de dados, seja através de teclado, tela sensível, mouse entre outros. O HTML5 trata todos estes casos abstratamente na forma de eventos. Os eventos básicos são: \textit{keydown} (tecla baixa), \textit{keyup} (tecla solta), e \textit{keypress} (tecla pressionada). Basta ao desenvolvedor testar qual caractere gerou o evento em seu laço principal para identificar o que aconteceu.
 
 Para detectar suporte aos mais variados recursos do HTML5 no browser do cliente existem duas possibilidades. Pode-se implementar testes para cada funcionaidade utilizada abordando os detalhes de implementação de cada uma ou então fazer uso de alguma biblioteca especializada neste processo, o Modernizr é uma opção open-source deste tipo de biblioteca, este gera uma lista de booleanos sobre grande variedade dos recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e local storage.
-
 
 ##TECNOLOGIAS POLYFILL
 
@@ -177,13 +155,13 @@ Na pesquisa efetuada sobre estes frameworks full stack foram identificadas as se
     - PlayCanvas - é uma plataformas para a construção de jogos 3D na nuvem, desenvolvida com foco em performance. Permite a hospedagem, controle de versão e publicação dos aplicativos nela criados, possibilita também a importação de modelos 3D de softwares populares como: Maya, 3ds Max e Blender;
     - o ambiente HTML5 Development Environment (ambiente de desenvolvimento HTML5) da Intel, este fornece uma solução na nuvem, completa para o desenvolvimento em plataforma cruzada, com serviços de empacotamento, serviços para a criação e testes de aplicativos com montagem de interfaces drag and drop (Intex XDK) e biliotecas para a construção de jogos utilizando aceleração de hardware, o que garante até duas vezes mais performance que aplicativos mobile baseados em Web tradicionais. Esta solução é free, open source e funciona  através de um plugin para o Google Chrome, ou seja, o desenvolvimento também é multiplataforma e devido ao fato de os binários ficarem hospedados na nuvem, possibilitou a  Intel criar compiladores para cada uma das plataformas disponibilizadas pelo PhoneGap, que é o framework polyfill utilizado na solução.
 
-##*FRAMEWORKS* PARA DESENVOLVIMENTO DE JOGOS HTML5
+##FRAMEWORKS PARA DESENVOLVIMENTO DE JOGOS HTML5
 
 Visto que a gestão de uma grande gama de variáveis faz-se necessária durante o o processo de criação de jogos foram criados frameworks para auxiliar o processo.
 
 -enchant.js: dentre suas funcionalidades constam: orientação à objetos, orientado à eventos, contém um motor de animação, suporta WebGL e Canvas, etc;
 -three.js: considerada leve, renderiza WebGL e Canvas, arquitetura procedural;
--quintus: 
+-quintus:
 
 ##EMPACOTADORES
 
@@ -210,9 +188,9 @@ Angry Birds é um título de bastante renome, este jogo foi originalmente desenv
 (SILVA,2010), demostra a utilização de HTML5 para a criação de jogos simples, todavia seu trabalho não se foca nas diferenças entre uma plataforma e outra.
 
 #METODOLOGIA
-%como vou  atingir os objetivos
+<!-- como vou  atingir os objetivos -->
 
-Primeiramente há de ser feita uma pesquisa explanatória - e respectiva documentação - relativo à técnicas, ferramentas e conceitos importantes na construção de jogos 2D. Este tipo de pesquisa foi selecionado pois proporciona uma aproximação do pesquisador com o tema, visando melhor familiaridade com o fenômeno ou assunto (LEMÕNS et all., 2012). Neste passo, pretende-se englobar o estudo das tecnologias mencionadas nos objetivos específicos e fazer a seleção das mais adequadas para o desenvolvimento do jogo selecionado.  
+Primeiramente há de ser feita uma pesquisa explanatória - e respectiva documentação - relativo à técnicas, ferramentas e conceitos importantes na construção de jogos. Este tipo de pesquisa foi selecionado pois proporciona uma aproximação do pesquisador com o tema, visando melhor familiaridade com o fenômeno ou assunto (LEMÕNS et all., 2012). Neste passo, pretende-se englobar o estudo das tecnologias mencionadas nos objetivos específicos e fazer a seleção das mais adequadas para o desenvolvimento do jogo selecionado.
 
 O segundo passo reside na análise e construção do software em si.
 
@@ -224,32 +202,22 @@ Por fim, há de ser criada  uma tabela comparativa a qual exponha as funcionalid
 
 #RESULTADOS
 
-
 #CONCLUSÃO
 
 #CRONOGRAMA
 
 O cronograma foi especificado de acordo com o detalhado na metodologia, suas datas estão especificadas de acordo com dias úteis disponíveis no calendário.
 
-
-\begin{table}[!htbp]
-    \begin{center}
-        \begin{tabular}{ | l | l | l | l | l |}
-            \hline
-            \textbf{Identificador}& \textbf{Tarefa} &  \textbf{Duração} & \textbf{Início} & \textbf{Término} \\  \hline
-            1 & Concepção & 5 dias & 1 agosto & 7 agosto \\  \hline
-            2 & Elaboração & 15 dias & 8 agosto & 29 agosto \\  \hline
-            3 & Contrução & 15 dias & 30 agosto & 19 setembro \\  \hline
-            4 & Contrução & 10 dias & 31 agosto & 3 outubro \\ \hline
-              & Total & 45 dias & 1 agosto & 3 outubro \\
-            \hline
-        \end{tabular}
-    \end{center}
-    \caption{Cronograma do projeto. \label{fig:Cordova}}
-\end{table}
+\textbf{Identificador}& \textbf{Tarefa} &  \textbf{Duração} & \textbf{Início} & \textbf{Término} \\  \hline
+1 & Concepção & 5 dias & 1 agosto & 7 agosto \\  \hline
+2 & Elaboração & 15 dias & 8 agosto & 29 agosto \\  \hline
+3 & Contrução & 15 dias & 30 agosto & 19 setembro \\  \hline
+4 & Contrução & 10 dias & 31 agosto & 3 outubro \\ \hline
+  & Total & 45 dias & 1 agosto & 3 outubro \\
 
 ---
 
+<!--
 %colocar em ordem alfabética de autores
 %separar autores por ; e sobrenome/nome por virgula
 % mais de 3 autores: SOBRENOME, Nome et al.
@@ -261,8 +229,8 @@ O cronograma foi especificado de acordo com o detalhado na metodologia, suas dat
 %
 % Para Oliveira e Oliveira (2006, p.19), a finalidade de blablabla
 %
-bibliotecam\begin{thebibliography}{99}
-
+-->
+#Bibliografia
     \bibitem{AK}
         AK, Sheela
         \emph{ Global Gaming Market Is Expected to Reach USD 117.9 Billion by 2015: Transparency Market Research}.
@@ -271,8 +239,8 @@ bibliotecam\begin{thebibliography}{99}
 
 
     \bibitem{BUCHMAN}
-        BUCHMAN, Debra D; FUNK, Jeanne B. 
-        \emph{VIDEO AND COMPUTER GAMES IN THE "90S: CHILDREN'S TIME COMMITMENT & GAME PREFERENCE}. 
+        BUCHMAN, Debra D; FUNK, Jeanne B.
+        \emph{VIDEO AND COMPUTER GAMES IN THE "90S: CHILDREN'S TIME COMMITMENT & GAME PREFERENCE}.
         Health and Human Services Department (HHS), 2013.
 
 
@@ -315,26 +283,24 @@ bibliotecam\begin{thebibliography}{99}
         Disponível em: http://www.vgchartz.com/gamedb/
         Acesso em: Jul 2012.
 
-
-
-    \bibitem{SILVA2011} 
+    \bibitem{SILVA2011}
         SILVA, Maurício Samy
-        \emph{HTML5 A linguagemEM DE MARCAÇÃO QUE REVOLUCIONOU A WEB}. 
+        \emph{HTML5 A linguagemEM DE MARCAÇÃO QUE REVOLUCIONOU A WEB}.
         Editora novatec, p. 15, 2011.
 
-    \bibitem{FRANZINI} 
-        FRANZINI, Fernando 
+    \bibitem{FRANZINI}
+        FRANZINI, Fernando
         \emph{Nova tendência de aplicativos móveis web}.  Disponível em:
         [http://www.infobase.com.br/nova-tendencia-de-aplicativos-moveis-web/]. Acesso em: jun,
         2013.
 
     \bibitem{JEFFRIES}
-        JEFFRIES, Ron 
+        JEFFRIES, Ron
         \emph{Full-Stack frameworks vs. Non Full-Stack frameworks}.
         Disponível em [http://codingarchitect.wordpress.com/2012/10/22/full-stack-frameworks-vs-non-full-stack-frameworks/], Acesso em: jun, 2013.
 
 
-    \bibitem{JÚNIOR} 
+    \bibitem{JÚNIOR}
         JÚNIOR, Gesmar de Paula Santos; OLIVEIRA, Luciene Chagas; CARDOSO, Alexandre; LAMOUNIER, Edgard Afonso.
         \emph{Aplicação Multiplataforma da Realidade Aumentada Móvel para Geolocalização utilizando o PhoneGap}.
         Programa de Pós Gradução em Engenharia Elétrica
@@ -345,23 +311,23 @@ bibliotecam\begin{thebibliography}{99}
 
     \bibitem{PRADO}
         PRADO, Ely Fernando
-        \emph{Introdução ao Desenvolvimento de Games com GWT e HTML5}. 
+        \emph{Introdução ao Desenvolvimento de Games com GWT e HTML5}.
         Departamento de Computação, Universidade Federal de São Carlos (UFSCar) São Carlos, SP, 2012.
 
 
     \bibitem{RENYO}
-        RENYO Emanuel Montero 
-        \emph{MODEL-DRIVEN GAME DEVELOPMENT: 2D PLATFORM GAME PROTOTYPING}. 
+        RENYO Emanuel Montero
+        \emph{MODEL-DRIVEN GAME DEVELOPMENT: 2D PLATFORM GAME PROTOTYPING}.
         Departamento de Sistemas Informáticos y Computación. Universidad Politécnica de Valencia,Valencia, España, 2006.
 
 
 
     \bibitem{HERMIDA}
-        HERMIDA, Alfred 
+        HERMIDA, Alfred
         Japan leads mobile game craze. BBC News, 2003. Acesso em: jun 2013.
 
     \bibitem{EvolutionOnGames}
-        \emph{A incrível evolução de videogames de console}. 
+        \emph{A incrível evolução de videogames de console}.
         Disponível em: [http://www.failwars.blog.br/nerd-feelings/incrvel-evoluo-dos-vdeo-games-de-console-de-1967-2012/] Acesso em: jun, 2013.
 
     \bibitem{WEINTRAUB}
@@ -371,13 +337,6 @@ bibliotecam\begin{thebibliography}{99}
         Acesso em: Jul 2012.
 
     \bibitem{ZICO}
-        ZICO, Mário Lucio 
-        \emph{A História dos Jogo}. 
+        ZICO, Mário Lucio
+        \emph{A História dos Jogo}.
         Disponível em [http://www.jogos.antigos.nom.br/artigos.asp], Acesso em: jun 2013.
-
-
----
-index
-
-
-
