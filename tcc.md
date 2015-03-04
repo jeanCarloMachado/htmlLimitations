@@ -12,16 +12,19 @@ colocar na introdução o que são as "demais tecnologias relacionadas ao HTML"
 
 -->
 
-#INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DO RIO GRANDE DO SUL
+##INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DO RIO GRANDE DO SUL
 ##CÂMPUS BENTO GONÇALVES-RS}
 ##Jean Carlo Machado}
 #Limitações no Desenvolvimento de Jogos Multiplataforma em HTML 5
+
 ---
+
 ##Jean Carlo Machado
 #Trabalho de conclusão de curso
 ##Projeto de Pesquisa apresentado junto ao Curso de Tecnologia em Análise e Desenvolvimento de Sistemas do Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul, como requisito parcial ao desenvolvimento do Trabalho de Conclusão de Curso.
 #Orientador: Me. Rafael Jaques
-#Bento Gonçalves, publicationDATE
+#Bento Gonçalves, data de publicação
+
 ---
 
 #RESUMO
@@ -32,8 +35,8 @@ Esse trabalho busca avaliar as limitações e possíveis dificuldades à se enfr
 
 ---
 
-#List of figures
-#List of tables
+<!-- List of figures -->
+<!-- List of tables -->
 
 ---
 
