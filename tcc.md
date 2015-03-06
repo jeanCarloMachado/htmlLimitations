@@ -10,7 +10,6 @@ Revisão bibliográfica
 -HTML
 
 Ideias:
-remover o 5 do HTML
 colocar na introdução o que são as "demais tecnologias relacionadas ao HTML"
 escopar o que significa o multiplataplataforma
 mapear exatamente quais os recursos que eu pretendo validar: acelerômetro, camera, etc
@@ -25,17 +24,14 @@ devo coletar as limitações que podem ser contornadas com workarounds? - coloca
 O "multiplataforma" deve focar apenas no desenvolvimento mobile ou ser mais genérico? - engloba mais de uma plataforma, especificar no objetivo: tablets, celular, kkkk
 Desenvolver o protópito com html5 puro!
 
-
-
 Comparar o HTML5 com ele mesmo !!!!!
 Considerações
 formatar logo.
 
-
 TODO this week
 esboçar a metodologia
 fazer levantamento de tudo o que o HTML5 provê que tem deficiências de multiplataforma
-
+remover o 5 do HTML (opt)
 
 -->
 
@@ -182,15 +178,6 @@ Visto que a gestão de uma grande gama de variáveis faz-se necessária durante 
 
 ##ESPECIFICIDADES DAS PLATAFORMAS
 
-#METODOLOGIA DE DESENVOLVIMENTO DE SOFTWARE PARA A CONSTRUÇÃO DE GAMES <!-- incrementar e colocar no apêndice -->
-
-Como o jogo é um software complexo demanda-se a utilização de metodologias de engenharia de software, dentre os processos de software mais conhecidos academicamente destacamos:
-
-    - OpenUP: este é bem detalhado e de característica iterativa e incremental. Gerando assim, um levantamento mais apurado dos riscos, requisitos e outros detalhes do sistema e a criação incremental do sistema, com requisitos maleáveis;
-    - Cascata: processo antigo, caracteriza-se por ser pouco maleável aos requisitos mapeados posteriormente ao processo de análise;
-    - Processo ágil - SCRUM: sua utilização é flexível e sendo um método àgil especifica pouca documentação, ou como dizem, somente a documentação necessária, este processo é bem conhecido e aceito na comunidade de desenvolvimento de software. Suas principais características são: divisão do processo de desenvolvimento através uma série de iterações chamadas sprints. Cada sprint consiste tipicamente em duas a quatro semanas. É bem aplicado a projetos que mudam constantemente e que demandam rápidas adaptações;
-    - Processo ágil – XP: tem muitas características similares ao SCRUM por este também ser um processo ágil. Dentre suas especifidades destaca-se: versões frequentes, pequenos ciclos de desenvolvimento que buscam aumentar a produtividade, indroduzem checkpoints onde os clientes podem agregar novas funcionalidades;
-
 
 #TRABALHOS SIMILARES
 
@@ -205,15 +192,13 @@ Angry Birds é um título de bastante renome, este jogo foi originalmente desenv
 #METODOLOGIA <!-- fazer isso agora -->
 <!-- como vou  atingir os objetivos -->
 
-Primeiramente há de ser feita uma pesquisa explanatória - e respectiva documentação - relativo à técnicas, ferramentas e conceitos importantes na construção de jogos. Este tipo de pesquisa foi selecionado pois proporciona uma aproximação do pesquisador com o tema, visando melhor familiaridade com o fenômeno ou assunto (LEMÕNS et all., 2012). Neste passo, pretende-se englobar o estudo das tecnologias mencionadas nos objetivos específicos e fazer a seleção das mais adequadas para o desenvolvimento do jogo selecionado.
+definição das plataformas alvo relevantes ao desenvolvimento de jogos que serão analisadas no trabalho
+definição dos recursos/aspectos relevantes aos jogos que sofrem de limitações nas plataformas alvo
+aprofundamento nos aspectos específicos de cada um compontentes
+em paralelo com o aprofundamento, concepção de um protópito de jogo que acentue os problemas de limitação no desenvolvimento de jogos
+fazer menção das possíveis alternativas para contornar as limitações encontradas e detalhadas
 
-O segundo passo reside na análise e construção do software em si.
-
-Através de um processo de software iterativo, há de se efetuar a análise e geração de artefatos que melhor mapeiem os requisitos e aspectos do jogo. Depois do período de análise, iniciar-se-á o processo de desenvolvimento, este consistirá em duas etapas subdivididas em iterações. Primeiramente há de se fazer a elaboração de um protótipo, utilizando de imagens e audio de características livre na internet; após o protótipo criado, pretende-se então construir os modelos reais e integrá-los ao jogo. Com o software desenvolvido, far-se-à a exportação dos binários para as plataformas que suportem aplicativos nativos em HTML5 e disponibilização da aplicação online.
-
-Ao final do desenvolvimento será feito um levantamento textual à respeito dos problemas e acertos da implementação do HTML5 encontrados durante as etapas de construção e pesquisa do projeto. Também há de ser desenvolvido um texto descritivo abordando as diferenças de implementação do controle de movimento e da interface de usuário afim de demonstrar como estes requisitos foram atendidos e quais as customizações necessárias para atendê-los nas diferentes plataformas.
-
-Por fim, há de ser criada  uma tabela comparativa a qual exponha as funcionalidades com características dependentes de plataforma e informe se o atendimento da funcionalidade obteve êxito e como se chegou a este resultado, bem como quais outras soluções seriam possíveis. Tendo como fundamento este artefato, se fará uma análise qualitativa dos trunfos e limitações deste tipo de arquitetura para o desenvolvimento de jogos transparentes de plataforma, que oferecem experiências contínuas.
+<!-- talvez refletir sobre processos de software para incrementar a metologia, pesquisar sobre os tipos de pesquisa também pode ser algo interessante -->
 
 #RESULTADOS
 
@@ -337,3 +322,17 @@ Acesso em: Jul 2012.
 ZICO, Mário Lucio
 \emph{A História dos Jogo}.
 Disponível em [http://www.jogos.antigos.nom.br/artigos.asp], Acesso em: jun 2013.
+
+
+#Apêndices
+
+#METODOLOGIA DE DESENVOLVIMENTO DE SOFTWARE PARA A CONSTRUÇÃO DE GAMES <!-- incrementar e colocar no apêndice -->
+
+Como o jogo é um software complexo demanda-se a utilização de metodologias de engenharia de software, dentre os processos de software mais conhecidos academicamente destacamos:
+
+    - OpenUP: este é bem detalhado e de característica iterativa e incremental. Gerando assim, um levantamento mais apurado dos riscos, requisitos e outros detalhes do sistema e a criação incremental do sistema, com requisitos maleáveis;
+    - Cascata: processo antigo, caracteriza-se por ser pouco maleável aos requisitos mapeados posteriormente ao processo de análise;
+    - Processo ágil - SCRUM: sua utilização é flexível e sendo um método àgil especifica pouca documentação, ou como dizem, somente a documentação necessária, este processo é bem conhecido e aceito na comunidade de desenvolvimento de software. Suas principais características são: divisão do processo de desenvolvimento através uma série de iterações chamadas sprints. Cada sprint consiste tipicamente em duas a quatro semanas. É bem aplicado a projetos que mudam constantemente e que demandam rápidas adaptações;
+    - Processo ágil – XP: tem muitas características similares ao SCRUM por este também ser um processo ágil. Dentre suas especifidades destaca-se: versões frequentes, pequenos ciclos de desenvolvimento que buscam aumentar a produtividade, indroduzem checkpoints onde os clientes podem agregar novas funcionalidades;
+
+
