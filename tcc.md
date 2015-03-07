@@ -4,6 +4,10 @@ Estrutura
 
 Ideias:
 
+Onde falar sobre generics da web e desenvolvimento de games?
+
+Falar sobre media queries do css3
+
 ``````
 
 Dúvidas:
@@ -74,12 +78,14 @@ Busca-se mapear as limitações do HTML contra ele mesmo, o objetivo não é cop
 
 ##OBJETIVOS ESPECÍFICOS
     - Estudar os aspectos relevantes na construção de jogos multiplataforma que tendem a conter limitações especificamente: canvas, àudio, vídeo e controle de entrada de comandos;
-    - Estudar offline e storage
     - Estudar técnicas de detecção de recursos de dispositivos;
     - Estudar tecnologias para preenchimento de *gaps* HTML5;
-    - Estudar formas de debugging em HTML5
     - Estudar empacotadores HTML5 para as mais diversas plataformas.
 
+###Estudar aspectos limitados de plataforma
+    - Estudar offline e storage
+    - audio  (reference 2)
+    - Estudar formas de debugging em HTML5
 
 #JUSTIFICATIVA
     Tendo em vista que este trabalho busca mapear agnosticamente os problemas do desenvolvimento multiplataforma em HTML, ele serve também para apoiar decisões, e justificar escolhas sobre o desenvolvimento de jogos multiplataforma.
@@ -242,6 +248,8 @@ Disponível em: http://tech.fortune.cnn.com/2011/02/07/idc-smartphone-shipment-n
 Acesso em: Jul 2012.
 
 #Apêndices
+
+##Canvas (detalhamento)
 
 ##METODOLOGIA DE DESENVOLVIMENTO DE SOFTWARE PARA A CONSTRUÇÃO DE GAMES <!-- incrementar e colocar no apêndice -->
 
