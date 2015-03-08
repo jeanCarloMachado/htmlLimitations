@@ -11,6 +11,7 @@ Devo escolher as tecnologias depois de escolher as plataformas alvo
 webgl é uma boa... estudar mais! 
 cocoonJs
 
+Detalhar as plataformas alvo (talvez na introdução (como referência 3))
 
 Dúvidas:
 
@@ -106,6 +107,7 @@ Busca-se mapear as limitações do HTML contra ele mesmo, o objetivo não é cop
     - audio  (reference 2)
     - Estudar formas de debugging em HTML5
     - Estudar resizing via canvas vs DOM
+    - Estudar geolocalização
 
 #JUSTIFICATIVA
     Tendo em vista que este trabalho busca mapear agnosticamente os problemas do desenvolvimento multiplataforma em HTML, ele serve também para apoiar decisões, e justificar escolhas sobre o desenvolvimento de jogos multiplataforma.
@@ -229,6 +231,8 @@ Identificador& Tarefa &  Duração & Início & Término
 %
 -->
 #Bibliografia
+
+Reference 3 é uma ótima fonte de explicação de como tecnologias relacionadas as assunto funcionam
 
 Reference 2 é uma ótimo trabalho para pegar ideias sobre como escrever as coisas.
 
