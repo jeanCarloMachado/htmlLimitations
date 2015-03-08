@@ -3,10 +3,23 @@
 Estrutura
 
 Ideias:
-
+Contra argumentos são importantes na introdução
 Onde falar sobre generics da web e desenvolvimento de games?
 
 Falar sobre media queries do css3
+Devo escolher as tecnologias depois de escolher as plataformas alvo
+webgl é uma boa... estudar mais! 
+cocoonJs
+
+
+Dúvidas:
+
+Vale utilizar experiência pessoal como argumento para escolha de tecnolgia?
+
+Estudar sobre a frustração geradas pela vasta game de tecnologias emergentes?  (referência 2 é um caso disso (na conclusão))
+
+Devo ressaltar na conclusão que eu não tinha nenhuma experiência inicial com desenvolvimento de jogos web?
+
 
 ``````
 
@@ -60,7 +73,13 @@ remover o 5 do HTML (opt)
 O senso comum sobre o HTML para o desenvolvimento de games geralmente segue a seguinte estrutura: "HTML é fantástico, mas...", depois do mas as coisas variam de acordo com a experiência empírica ou opinião alheia. O objetivo deste trabalho é constatar o quanto deste mas é verdadeiro através da concepção e posterior análise do processo de desenvolvimento de um jogo multiplataforma em HTML.
 
 
+Contra-argumentar
+As tecnologias da web evoluem muito rapidamente, talvez seja importante falar da aplicabilidade de trabalhos científicos nessa área visto que suas verdades podem se deterirorar muito rapidamente.
+
+
 A palavra HTML5 se tornou um conceito guardachuva para englobar as tecnologias da web (referênce 2)
+
+Um trabalho completo sobre o assunto requeriria um comparativo entre jogos nativos e jogos multiplataforma.
 
 #PROBLEMA
 
@@ -86,6 +105,7 @@ Busca-se mapear as limitações do HTML contra ele mesmo, o objetivo não é cop
     - Estudar offline e storage
     - audio  (reference 2)
     - Estudar formas de debugging em HTML5
+    - Estudar resizing via canvas vs DOM
 
 #JUSTIFICATIVA
     Tendo em vista que este trabalho busca mapear agnosticamente os problemas do desenvolvimento multiplataforma em HTML, ele serve também para apoiar decisões, e justificar escolhas sobre o desenvolvimento de jogos multiplataforma.
@@ -159,13 +179,24 @@ Visto que a gestão de uma grande gama de variáveis faz-se necessária durante 
 #METODOLOGIA <!-- fazer isso agora -->
 <!-- como vou  atingir os objetivos -->
 
-definição das plataformas alvo relevantes ao desenvolvimento de jogos em html que serão analisadas no trabalho
-definição dos recursos/aspectos relevantes aos jogos que sofrem de limitações de plataforma
-aprofundamento nos aspectos específicos de cada um dos aspectos
-definição da categoria de jogo protótipo mais relevante para a salientação de problemas de plataforma
-concepção do protótipo
-detalhamento das diferenças e limitações que cada aspecto denota após a pesquisa e contrução do protótipo
-menção das possíveis alternativas para contornar as limitações encontradas detectadas
+
+(talvez seja mais importante desenvolver o jogo antes definir quais os aspectos com problemas de plataforma)
+
+- definição das plataformas alvo relevantes ao desenvolvimento de jogos em html que serão analisadas no trabalho
+- definição inicial dos recursos/aspectos relevantes aos jogos que sofrem de limitações de plataforma
+- aprofundamento nos aspectos relativos a construção de games
+- definição da categoria de jogo protótipo mais relevante para a salientação de problemas de plataforma
+- definição do estilo de desenvolvimento mais adequado ao trabalho, (totalmente web, estilo cordova (builtin), etc)
+- protótipo
+    seleção de ferramentas adequadas
+        definir como vou debugar nas mais diversas plataformas
+    produzir o jogo
+    pegar feed back dos usuários quando a usabilidade do jogo (em plataformas variáveis)
+
+- detalhamento das diferenças e limitações que cada aspecto denota após a pesquisa e contrução do protótipo
+- inclusão e detalhamento de novos aspectos problemáticos em multiplataforma encontrados durante a concepção do jogo
+- menção dos possíveis problemas que as alternativas multiplataforma podem causar (tipo o offline storage ser inseguro)
+- menção das possíveis alternativas para contornar as limitações encontradas detectadas
 
 <!-- talvez refletir sobre processos de software para incrementar a metologia, pesquisar sobre os tipos de pesquisa também pode ser algo interessante -->
 
@@ -198,6 +229,10 @@ Identificador& Tarefa &  Duração & Início & Término
 %
 -->
 #Bibliografia
+
+Reference 2 é uma ótimo trabalho para pegar ideias sobre como escrever as coisas.
+
+*When designing a game it is important to be conscious of the player's perspective, as well as the flexibility it allows the developer.*
 
 HTML5: A blessing or a curse
 http://www.develop-online.net/tools-and-tech/html5-a-blessing-or-a-curse/0117393
