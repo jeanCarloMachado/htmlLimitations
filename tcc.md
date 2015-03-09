@@ -5,10 +5,12 @@ Estrutura
 Ideias:
 Contra argumentos são importantes na introdução
 Onde falar sobre generics da web e desenvolvimento de games?
+Pesquisar sobre isos (9126) de qualidade para ver parmetros de avaliação (pensar melhor)
+
 
 Falar sobre media queries do css3
 Devo escolher as tecnologias depois de escolher as plataformas alvo
-webgl é uma boa... estudar mais! 
+webgl é uma boa... estudar mais!
 cocoonJs
 
 Detalhar as plataformas alvo (talvez na introdução (como referência 3))
@@ -21,6 +23,10 @@ Estudar sobre a frustração geradas pela vasta game de tecnologias emergentes? 
 
 Devo ressaltar na conclusão que eu não tinha nenhuma experiência inicial com desenvolvimento de jogos web?
 
+Limitações de aplicações não nativas
+
+Não conseguimos trocar o wallpaper em aplicações em html5, adicionar toques
+APIs de serviços icloud e google cloud
 
 ``````
 
@@ -82,6 +88,8 @@ A palavra HTML5 se tornou um conceito guardachuva para englobar as tecnologias d
 
 Um trabalho completo sobre o assunto requeriria um comparativo entre jogos nativos e jogos multiplataforma.
 
+Jogos para plataforma inibem concorrência, você acaba desenvolvendo para umas poucas maiores marcas.
+
 #PROBLEMA
 
 <!-- referenciar -->
@@ -108,6 +116,7 @@ Busca-se mapear as limitações do HTML contra ele mesmo, o objetivo não é cop
     - Estudar formas de debugging em HTML5
     - Estudar resizing via canvas vs DOM
     - Estudar geolocalização
+    - Estudar 
 
 #JUSTIFICATIVA
     Tendo em vista que este trabalho busca mapear agnosticamente os problemas do desenvolvimento multiplataforma em HTML, ele serve também para apoiar decisões, e justificar escolhas sobre o desenvolvimento de jogos multiplataforma.
@@ -186,6 +195,7 @@ Visto que a gestão de uma grande gama de variáveis faz-se necessária durante 
 
 - definição das plataformas alvo relevantes ao desenvolvimento de jogos em html que serão analisadas no trabalho
 - definição inicial dos recursos/aspectos relevantes aos jogos que sofrem de limitações de plataforma
+- catgorização das limitações segundo aspectos de qualidade da  iso 9126
 - aprofundamento nos aspectos relativos a construção de games
 - definição da categoria de jogo protótipo mais relevante para a salientação de problemas de plataforma
 - definição do estilo de desenvolvimento mais adequado ao trabalho, (totalmente web, estilo cordova (builtin), etc)
@@ -232,7 +242,8 @@ Identificador& Tarefa &  Duração & Início & Término
 -->
 #Bibliografia
 
-Reference 3 é uma ótima fonte de explicação de como tecnologias relacionadas as assunto funcionam
+Reference 3 é uma ótima fonte de explicação de como tecnologias relacionadas as assunto funcionaml.
+*The total development time and cost of HTML5 based appliction is 67% lesser than native application development which shows the cost effectiveness of HTML5 based appplication*
 
 Reference 2 é uma ótimo trabalho para pegar ideias sobre como escrever as coisas.
 
