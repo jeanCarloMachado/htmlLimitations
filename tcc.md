@@ -112,13 +112,12 @@ Busca-se mapear as limitações do HTML contra ele mesmo, o objetivo não é cop
     - Estudar tecnologias para preenchimento de *gaps* HTML5;
     - Estudar empacotadores HTML5 para as mais diversas plataformas.
 
-###Estudar aspectos limitados de plataforma
+###Aspectos que podem sofrer limitações de plataforma
     - Estudar offline e storage
     - audio  (reference 2)
     - Estudar formas de debugging em HTML5
     - Estudar resizing via canvas vs DOM
     - Estudar geolocalização
-    - Estudar 
 
 #JUSTIFICATIVA
     Tendo em vista que este trabalho busca mapear agnosticamente os problemas do desenvolvimento multiplataforma em HTML, ele serve também para apoiar decisões, e justificar escolhas sobre o desenvolvimento de jogos multiplataforma.
@@ -191,11 +190,11 @@ Visto que a gestão de uma grande gama de variáveis faz-se necessária durante 
 
 #METODOLOGIA
 
-O primeiro passo consiste em definir as plataformas alvo relevantes ao desenvolvimento de jogos e que possibilitam  a criação em HTML. Segue-se com a construção de uma lista com os aspectos relevantes aos jogos que sofrem ou são comummente ligados à limitações multipltaforma. Tendo em mãos a lista de limitações iniciais, o próximo passao pesquisa para aprofundar teoricamente cada limitação supracitada.
+O primeiro passo consiste em definir as plataformas alvo relevantes ao desenvolvimento de jogos e que possibilitam  a criação em HTML. Segue-se com a construção de uma lista com os aspectos relevantes aos jogos que sofrem ou são comummente ligados à limitações multipltaforma. Tendo em mãos a lista de limitações iniciais, o próximo passo é a realização de uma pesquisa para aprofundar teoricamente cada limitação supracitada.
 
 Com um embaseamento teórico substancial, segue-se a prototipação de um jogo multiplataforma que ponha em teste as limitações encontradas na pequisa teórica. O intuito da prototipação é o de fundamentar experimentalmente as limitações anteriormente pesquisadas, bem como, possivelmente, detectar novas. Depois do protótipo concebido, o passo que segue é a validação e refinamento da lista de limitações através da experiência adquirida.
 
-Para validar a usabilidade e funcionabilidade do protótipo, segue-se uma pesquisa utilizando usuários externos, registrado os problemas e difierenças notadas quando em relação à aplicativos similares nativos. Com todos os dados até então coletados, deve-se elaborar uma tabela comparativa contendo os aspectos de limitação, se são atendidos ou não, e se seus problemas podem ser contornados ou não e em quais plataformas eles correm.
+Para validar a usabilidade e funcionabilidade do protótipo, segue-se uma pesquisa utilizando usuários externos, registrado os problemas e diferenças notadas quando em relação à aplicativos similares nativos. Com todos os dados até então coletados, deve-se elaborar uma tabela comparativa contendo os aspectos de limitação, se são atendidos ou não, e se seus problemas podem ser contornados ou não e em quais plataformas eles correm.
 
 ##Bruto
 
