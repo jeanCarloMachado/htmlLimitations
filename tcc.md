@@ -190,7 +190,7 @@ Visto que a gestão de uma grande gama de variáveis faz-se necessária durante 
 
 #METODOLOGIA
 
-O primeiro passo consiste em definir as plataformas alvo relevantes ao desenvolvimento de jogos e que possibilitam  a criação em HTML. Segue-se com a construção de uma lista com os aspectos relevantes aos jogos que sofrem ou são comummente ligados à limitações multipltaforma. Tendo em mãos a lista de limitações iniciais, o próximo passo é a realização de uma pesquisa para aprofundar teoricamente cada limitação supracitada.
+O primeiro passo consiste em definir as plataformas alvo relevantes ao desenvolvimento de jogos e que possibilitam  a criação em HTML. Segue-se com a construção de uma lista com os aspectos relevantes aos jogos que sofrem ou são comummente ligados à limitações multipltaforma. Tendo em mãos a lista de limitações teóricas iniciais, o próximo passo é a realização de uma pesquisa para aprofundar teoricamente cada limitação supracitada.
 
 Com um embaseamento teórico substancial, segue-se a prototipação de um jogo multiplataforma que ponha em teste as limitações encontradas na pequisa teórica. O intuito da prototipação é o de fundamentar experimentalmente as limitações anteriormente pesquisadas, bem como, possivelmente, detectar novas. Depois do protótipo concebido, o passo que segue é a validação e refinamento da lista de limitações através da experiência adquirida.
 
