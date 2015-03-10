@@ -6,7 +6,7 @@ Ideias:
 Contra argumentos são importantes na introdução
 Onde falar sobre generics da web e desenvolvimento de games?
 Pesquisar sobre isos (9126) de qualidade para ver parmetros de avaliação (pensar melhor)
-
+talvez seja mais importante desenvolver o jogo antes definir quais os aspectos com problemas de plataforma
 
 Falar sobre media queries do css3
 Devo escolher as tecnologias depois de escolher as plataformas alvo
@@ -105,6 +105,8 @@ Busca-se apontar possíveis limitações no processo de desenvolvimento de jogos
 Busca-se mapear as limitações do HTML contra ele mesmo, o objetivo não é coparar contra outras topologias como desktop.
 
 ##OBJETIVOS ESPECÍFICOS
+
+    Estudar as limitações de desenvolvimento de jogos nas plataformas: Tablets e Smarthphones com as últimas versões estáveis dos sistemas Android e IOS, e a última versão estável dos navegadoes Firefox e Google Chrome para a versão desktop.
     - Estudar os aspectos relevantes na construção de jogos multiplataforma que tendem a conter limitações especificamente: canvas, àudio, vídeo e controle de entrada de comandos;
     - Estudar técnicas de detecção de recursos de dispositivos;
     - Estudar tecnologias para preenchimento de *gaps* HTML5;
@@ -187,30 +189,27 @@ Visto que a gestão de uma grande gama de variáveis faz-se necessária durante 
 
 (SILVA,2010), demostra a utilização de HTML5 para a criação de jogos simples, todavia seu trabalho não se foca nas diferenças entre uma plataforma e outra.
 
-#METODOLOGIA <!-- fazer isso agora -->
-<!-- como vou  atingir os objetivos -->
+#METODOLOGIA
 
+O primeiro passo consiste em definir as plataformas alvo relevantes ao desenvolvimento de jogos e que possibilitam  a criação em HTML. Segue-se com a construção de uma lista com os aspectos relevantes aos jogos que sofrem ou são comummente ligados à limitações multipltaforma. Tendo em mãos a lista de limitações iniciais, o próximo passao pesquisa para aprofundar teoricamente cada limitação supracitada.
 
-(talvez seja mais importante desenvolver o jogo antes definir quais os aspectos com problemas de plataforma)
+Com um embaseamento teórico substancial, segue-se a prototipação de um jogo multiplataforma que ponha em teste as limitações encontradas na pequisa teórica. O intuito da prototipação é o de fundamentar experimentalmente as limitações anteriormente pesquisadas, bem como, possivelmente, detectar novas. Depois do protótipo concebido, o passo que segue é a validação e refinamento da lista de limitações através da experiência adquirida.
 
-- definição das plataformas alvo relevantes ao desenvolvimento de jogos em html que serão analisadas no trabalho
-- definição inicial dos recursos/aspectos relevantes aos jogos que sofrem de limitações de plataforma
-- catgorização das limitações segundo aspectos de qualidade da  iso 9126
-- aprofundamento nos aspectos relativos a construção de games
-- definição da categoria de jogo protótipo mais relevante para a salientação de problemas de plataforma
-- definição do estilo de desenvolvimento mais adequado ao trabalho, (totalmente web, estilo cordova (builtin), etc)
-- protótipo
-    seleção de ferramentas adequadas
-        definir como vou debugar nas mais diversas plataformas
-    produzir o jogo
-    pegar feed back dos usuários quando a usabilidade do jogo (em plataformas variáveis)
+Para validar a usabilidade e funcionabilidade do protótipo, segue-se uma pesquisa utilizando usuários externos, registrado os problemas e difierenças notadas quando em relação à aplicativos similares nativos. Com todos os dados até então coletados, deve-se elaborar uma tabela comparativa contendo os aspectos de limitação, se são atendidos ou não, e se seus problemas podem ser contornados ou não e em quais plataformas eles correm.
 
-- detalhamento das diferenças e limitações que cada aspecto denota após a pesquisa e contrução do protótipo
-- inclusão e detalhamento de novos aspectos problemáticos em multiplataforma encontrados durante a concepção do jogo
-- menção dos possíveis problemas que as alternativas multiplataforma podem causar (tipo o offline storage ser inseguro)
-- menção das possíveis alternativas para contornar as limitações encontradas detectadas
+##Bruto
 
-<!-- talvez refletir sobre processos de software para incrementar a metologia, pesquisar sobre os tipos de pesquisa também pode ser algo interessante -->
+- definição das plataformas alvo relevantes ao desenvolvimento de jogos em html que serão analisadas no trabalho;
+- definição inicial dos recursos/aspectos relevantes aos jogos que sofrem de limitações de plataforma;
+- catgorização das limitações segundo aspectos de qualidade da iso 9126;
+- definição da categoria de jogo protótipo mais relevante para a salientação de problemas de plataforma;
+- definição da arquitetura de jogo mais mais adequada ao suported da pesquisa;
+- construção do protótipo;
+- pegar feed back dos usuários quando a usabilidade do jogo;
+- detalhamento das diferenças e limitações que cada aspecto denota após a pesquisa e contrução do protótipo;
+- inclusão e detalhamento e categorização dos aspectos problemáticos em multiplataforma encontrados durante a concepção do jogo;
+- menção dos possíveis problemas que as alternativas multiplataforma podem causar;
+- menção das possíveis alternativas para contornar as limitações encontradas detectadas.
 
 #RESULTADOS
 
