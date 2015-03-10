@@ -194,7 +194,7 @@ O primeiro passo consiste em definir as plataformas alvo, relevantes ao desenvol
 
 Com um embaseamento teórico substancial, segue-se a prototipação de um jogo multiplataforma que ponha em teste as limitações encontradas na pequisa teórica. O intuito da prototipação é o de fundamentar experimentalmente as limitações anteriormente pesquisadas, bem como, possivelmente, detectar novas. Antes de ser considerado pronto, o protótipo deve ser testado e adaptado em cada plataforma alvo definida. Depois do protótipo concebido, o passo que segue é a validação e refinamento da lista de limitações através da experiência adquirida no desenvolvimento.
 
-Para validar a usabilidade e funcionabilidade do protótipo, segue-se uma pesquisa utilizando usuários externos, registrado os problemas e diferenças notadas quando em relação à aplicativos similares nativos. Com todos os dados até então coletados, deve-se elaborar uma tabela comparativa contendo os aspectos de limitação, se são atendidos ou não, e se seus problemas podem ser contornados ou não e em quais plataformas eles correm.
+Para validar a usabilidade e funcionabilidade do protótipo, segue-se uma pesquisa utilizando usuários externos, registrado os problemas e diferenças notadas quando em relação à aplicativos similares nativos. Com todos os dados até então coletados, deve-se elaborar uma tabela comparativa contendo os aspectos de limitação, se são atendidos ou não, e se seus problemas podem ser contornados ou não e em quais plataformas eles ocorrem.
 
 ##Bruto
 - definição inicial dos recursos/aspectos relevantes aos jogos que sofrem de limitações de plataforma;
