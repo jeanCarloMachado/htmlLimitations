@@ -186,7 +186,7 @@ O primeiro passo consiste em definir as plataformas alvo do trabalho; devem ser 
 
 Segue-se com a construção de uma lista com os recursos relevantes aos jogos que, empiricamente, sofrem ou são comummente ligados à limitações multipltaforma. Segue-se uma pesquisa para aprofundar teoricamente cada um dos rescursos, possivelmente elegendo novos.
 
-Com um embaseamento teórico substancial, segue-se a prototipação de um jogo multiplataforma que utilize recursos potencialmente limitados. Para ser considerado pronto, o protótipo deve ser testado, e estar funcional, com adaptações ou não, em cada uma das plataformas alvo definidas.
+Com um embaseamento teórico substancial, o próximo passo é a prototipação de um jogo multiplataforma que utilize recursos potencialmente limitados. Para ser considerado pronto, o protótipo deve ser testado, e estar funcional, com adaptações ou não, em cada uma das plataformas alvo definidas.
 
 Com o protótipo concebido, o passo que segue é a enumeração, e descrição das limitações detectadas no processo de desenvolvimento e testes do jogo. Este detalhamento deve responder as seguintes perguntas:
 
