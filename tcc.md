@@ -3,12 +3,10 @@
 Estrutura
 
 Ideias:
-Contra argumentos são importantes na introdução
-Onde falar sobre generics da web e desenvolvimento de games?
+Contra argumentos são interessantes na introdução
 Pesquisar sobre isos (9126) de qualidade para ver parmetros de avaliação (pensar melhor)
 talvez seja mais importante desenvolver o jogo antes definir quais os aspectos com problemas de plataforma
-
-Falar sobre media queries do css3
+mencionar sobre media queries do css3
 Devo escolher as tecnologias depois de escolher as plataformas alvo
 webgl é uma boa... estudar mais!
 cocoonJs
@@ -18,15 +16,11 @@ Detalhar as plataformas alvo (talvez na introdução (como referência 3))
 Dúvidas:
 
 Vale utilizar experiência pessoal como argumento para escolha de tecnolgia?
-
-Estudar sobre a frustração geradas pela vasta game de tecnologias emergentes?  (referência 2 é um caso disso (na conclusão))
-
+Estudar sobre a frustração geradas pela vasta game de tecnologias emergentes?  (referência 2 é um caso disso (na conclusão)) 
 Devo ressaltar na conclusão que eu não tinha nenhuma experiência inicial com desenvolvimento de jogos web?
 
 Limitações de aplicações não nativas
 
-Não conseguimos trocar o wallpaper em aplicações em html5, adicionar toques
-APIs de serviços icloud e google cloud
 
 ``````
 
@@ -115,6 +109,8 @@ Busca-se apontar possíveis limitações no processo de desenvolvimento de jogos
     - Geolocalização
     - Tecnologias para preenchimento de *gaps* HTML5;
     - Empacotadores HTML5 para as mais diversas plataformas.
+    Não conseguimos trocar o wallpaper em aplicações em html5, adicionar toques
+    APIs de serviços icloud e google cloud
 
 #JUSTIFICATIVA
     Tendo em vista que este trabalho busca mapear agnosticamente os problemas do desenvolvimento multiplataforma em HTML, ele serve também para apoiar decisões, e justificar decisões relativas ao desenvolvimento de jogos multiplataforma.
@@ -187,23 +183,25 @@ Visto que a gestão de uma grande gama de variáveis faz-se necessária durante 
 
 #METODOLOGIA
 
-O primeiro passo consiste em definir as plataformas alvo, relevantes ao desenvolvimento de jogos, que possibilitem a criação de aplicativos em HTML. Segue-se com a construção de uma lista com os aspectos relevantes aos jogos que sofrem ou são comummente ligados à limitações multipltaforma. Tendo em mãos a lista de limitações teóricas iniciais, o próximo passo é a realização de uma pesquisa para aprofundar teoricamente cada limitação supracitada.
+O primeiro passo consiste em definir as plataformas alvo do trabalho; devem ser plataformas mercadologicamente relevantes ao desenvolvimento de jogos, que possibilitem a criação de aplicativos em HTML.
 
-Com um embaseamento teórico substancial, segue-se a prototipação de um jogo multiplataforma que ponha em teste as limitações encontradas na pequisa teórica. O intuito da prototipação é o de fundamentar experimentalmente as limitações anteriormente pesquisadas, bem como, possivelmente, detectar novas. Antes de ser considerado pronto, o protótipo deve ser testado e adaptado em cada plataforma alvo definida. Depois do protótipo concebido, o passo que segue é a validação e refinamento da lista de limitações através da experiência adquirida no desenvolvimento.
+Segue-se com a construção de uma lista com os recursos relevantes aos jogos que, empiricamente, sofrem ou são comummente ligados à limitações multipltaforma. Tendo em mãos a lista de recursos iniciais, o próximo passo é a realização de uma pesquisa para aprofundar teoricamente cada um deles.
 
-Para validar a usabilidade e funcionabilidade do protótipo, segue-se uma pesquisa utilizando usuários externos, registrado os problemas e diferenças notadas quando em relação à aplicativos similares nativos. Com todos os dados até então coletados, deve-se elaborar uma tabela comparativa contendo os aspectos de limitação, se são atendidos ou não, e se seus problemas podem ser contornados ou não e em quais plataformas eles ocorrem.
+Com um embaseamento teórico substancial, segue-se a prototipação de um jogo multiplataforma que utilize recursos potencialmente limitados. Para ser considerado pronto, o protótipo deve ser testado, e estar funcional, com adaptações ou não, em cada uma das plataformas alvo definidas.
 
-##Bruto
-- definição inicial dos recursos/aspectos relevantes aos jogos que sofrem de limitações de plataforma;
-- catgorização das limitações segundo aspectos de qualidade da iso 9126;
-- definição da categoria de jogo protótipo mais relevante para a salientação de problemas de plataforma;
-- definição da arquitetura de jogo mais mais adequada ao suported da pesquisa;
-- construção do protótipo;
-- pegar feed back dos usuários quando a usabilidade do jogo;
-- detalhamento das diferenças e limitações que cada aspecto denota após a pesquisa e contrução do protótipo;
-- inclusão e detalhamento e categorização dos aspectos problemáticos em multiplataforma encontrados durante a concepção do jogo;
-- menção dos possíveis problemas que as alternativas multiplataforma podem causar;
-- menção das possíveis alternativas para contornar as limitações encontradas detectadas.
+Com o protótipo concebido, o passo que segue é a enumeração, e descrição das limitações detectadas no processo de desenvolvimento e testes do jogo. Este detalhamento deve responder as seguintes perguntas:
+quas as limitações foram encontradas no jogo?
+em quais plataformas?
+sob quais circunstâcias?
+as limitações poduderam ser contornadas?
+algum efeito colateral das limitações no jogo?
+o jogo é funcional em todas as plataformas?
+o jogo é usável em todas as plataformas?
+o jogo é fácil de manter em todas as plataformas?
+o jogo é fácil de portar para novas plataformas?
+o jogo tem performance razoável nas plataformas?
+
+ (referência 2)Aspectos importantes para avaliar software multiplataforma: funcionalidade, usabilidade, manutebilidade, portabilidade e eficiência
 
 #RESULTADOS
 
