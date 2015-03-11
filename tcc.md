@@ -101,16 +101,16 @@ Busca-se apontar possíveis limitações no processo de desenvolvimento de jogos
     Estudar as limitações de desenvolvimento de jogos nas plataformas: Smarthphones com as últimas versões estáveis dos sistemas Android e IOS, e a última versão estável dos navegadoes Firefox e Google Chrome para a versão desktop.
 
 ###Aspectos que podem sofrer limitações de plataforma
-    - Offline e storage
+    - Debugging
+    - performance
     - Canvas
         - Resizing via canvas vs DOM
     - Audio (reference 2)
-    - Debugging
+    - Empacotadores HTML5
+    - Offline e storage
+    - vibração
+    - Suporte à acelerômetro
     - Geolocalização
-    - Tecnologias para preenchimento de *gaps* HTML5;
-    - Empacotadores HTML5 para as mais diversas plataformas.
-    Não conseguimos trocar o wallpaper em aplicações em html5, adicionar toques
-    APIs de serviços icloud e google cloud
 
 #JUSTIFICATIVA
     Tendo em vista que este trabalho busca mapear agnosticamente os problemas do desenvolvimento multiplataforma em HTML, ele serve também para apoiar decisões, e justificar decisões relativas ao desenvolvimento de jogos multiplataforma.
@@ -185,23 +185,30 @@ Visto que a gestão de uma grande gama de variáveis faz-se necessária durante 
 
 O primeiro passo consiste em definir as plataformas alvo do trabalho; devem ser plataformas mercadologicamente relevantes ao desenvolvimento de jogos, que possibilitem a criação de aplicativos em HTML.
 
-Segue-se com a construção de uma lista com os recursos relevantes aos jogos que, empiricamente, sofrem ou são comummente ligados à limitações multipltaforma. Tendo em mãos a lista de recursos iniciais, o próximo passo é a realização de uma pesquisa para aprofundar teoricamente cada um deles.
+Segue-se com a construção de uma lista com os recursos relevantes aos jogos que, empiricamente, sofrem ou são comummente ligados à limitações multipltaforma. Segue-se uma pesquisa para aprofundar teoricamente cada um dos rescursos.
 
 Com um embaseamento teórico substancial, segue-se a prototipação de um jogo multiplataforma que utilize recursos potencialmente limitados. Para ser considerado pronto, o protótipo deve ser testado, e estar funcional, com adaptações ou não, em cada uma das plataformas alvo definidas.
 
 Com o protótipo concebido, o passo que segue é a enumeração, e descrição das limitações detectadas no processo de desenvolvimento e testes do jogo. Este detalhamento deve responder as seguintes perguntas:
+
 quas as limitações foram encontradas no jogo?
 em quais plataformas?
 sob quais circunstâcias?
 as limitações poduderam ser contornadas?
 algum efeito colateral das limitações no jogo?
+
+Fatores de qualidade  segundo iso (ref 2)
+
 o jogo é funcional em todas as plataformas?
 o jogo é usável em todas as plataformas?
+    talvez criar uma enquete
+
 o jogo é fácil de manter em todas as plataformas?
 o jogo é fácil de portar para novas plataformas?
 o jogo tem performance razoável nas plataformas?
+    talvez criar bennchmakrs
 
- (referência 2)Aspectos importantes para avaliar software multiplataforma: funcionalidade, usabilidade, manutebilidade, portabilidade e eficiência
+
 
 #RESULTADOS
 
