@@ -100,29 +100,26 @@ Os custos adicionais no ciclo vida de um jogo nativo, para diversas plataformas,
 #OBJETIVOS
 ##OBJETIVO GERAL
 
-Busca-se apontar possíveis limitações no processo de desenvolvimento de jogos multiplataforma oriundos do atual estado de definição e implementação do HTML e tecnologias relacionadas nas plataformas alvo.
-
-Busca-se mapear as limitações do HTML contra ele mesmo, o objetivo não é coparar contra outras topologias como desktop.
+Busca-se apontar possíveis limitações no processo de desenvolvimento de jogos em plataformas variadas oriundas do atual estado de definição e implementação do HTML nas plataformas alvo. O comparativos das limitações serão feitas contra as implementações do HTML nas plataformas alvo, o objetivo deste trabalho não é comparar o HTML com outras tecnologias de desenvolvimento de jogos como FlashPlayer ou alternativas desktop..
 
 ##OBJETIVOS ESPECÍFICOS
 
-    Estudar as limitações de desenvolvimento de jogos nas plataformas: Tablets e Smarthphones com as últimas versões estáveis dos sistemas Android e IOS, e a última versão estável dos navegadoes Firefox e Google Chrome para a versão desktop.
-    - Estudar os aspectos relevantes na construção de jogos multiplataforma que tendem a conter limitações especificamente: canvas, àudio, vídeo e controle de entrada de comandos;
-    - Estudar técnicas de detecção de recursos de dispositivos;
-    - Estudar tecnologias para preenchimento de *gaps* HTML5;
-    - Estudar empacotadores HTML5 para as mais diversas plataformas.
+    Estudar as limitações de desenvolvimento de jogos nas plataformas: Smarthphones com as últimas versões estáveis dos sistemas Android e IOS, e a última versão estável dos navegadoes Firefox e Google Chrome para a versão desktop.
 
 ###Aspectos que podem sofrer limitações de plataforma
-    - Estudar offline e storage
-    - audio  (reference 2)
-    - Estudar formas de debugging em HTML5
-    - Estudar resizing via canvas vs DOM
-    - Estudar geolocalização
+    - Offline e storage
+    - Canvas
+        - Resizing via canvas vs DOM
+    - Audio (reference 2)
+    - Debugging
+    - Geolocalização
+    - Tecnologias para preenchimento de *gaps* HTML5;
+    - Empacotadores HTML5 para as mais diversas plataformas.
 
 #JUSTIFICATIVA
-    Tendo em vista que este trabalho busca mapear agnosticamente os problemas do desenvolvimento multiplataforma em HTML, ele serve também para apoiar decisões, e justificar escolhas sobre o desenvolvimento de jogos multiplataforma.
-    Por tratar cientificamente dos aspectos do HTML, este trabalho tem potencial de colaborar para a pesquisa de soluções dos problemas e limitações encontradas, e colaborar para a melhoria do próprio HTML.
-    Trabalhos científicos direcionados ao HTML corroboram para a própria plataforma e todos seus benefícios agregados como os que seguem:
+    Tendo em vista que este trabalho busca mapear agnosticamente os problemas do desenvolvimento multiplataforma em HTML, ele serve também para apoiar decisões, e justificar decisões relativas ao desenvolvimento de jogos multiplataforma.
+    Por tratar cientificamente de aspectos importantes do HTML, este trabalho tem potencial apontar os pontos chave que necessitam de melhorias nas plataformas alvo, colateralmente colaborando para a melhoria do próprio HTML.
+    Por colaborar com o HTML, este trabalho ganha o peso da justificativas justificativas do próprio html (melhorar):
     - O método de construção de aplicativo pela WEB permite uma única base de código o que habilita a disponibilidade de aplicativos com maior velocidade e significativas reduções nos custos.
     - Muitos desenvolvedores estão familiarizados com as tecnologias da WEB ou apontam interesse na tecnologia; <!-- referenciar -->
     A opinião comum tende para soluções nativas em detrimento do desenvolvimento de jogos, este trabalho pretende desafiar esta concepção.
