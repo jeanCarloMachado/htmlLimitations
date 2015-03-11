@@ -102,15 +102,14 @@ Busca-se apontar possíveis limitações no processo de desenvolvimento de jogos
 
 ###Aspectos que podem sofrer limitações de plataforma
     - Debugging
-    - performance
     - Canvas
         - Resizing via canvas vs DOM
     - Audio (reference 2)
+    - Performance
     - Empacotadores HTML5
-    - Offline e storage
-    - vibração
-    - Suporte à acelerômetro
-    - Geolocalização
+    - Eventos de entrada
+    - Vibração
+    - Acelerômetro
 
 #JUSTIFICATIVA
     Tendo em vista que este trabalho busca mapear agnosticamente os problemas do desenvolvimento multiplataforma em HTML, ele serve também para apoiar decisões, e justificar decisões relativas ao desenvolvimento de jogos multiplataforma.
@@ -183,9 +182,9 @@ Visto que a gestão de uma grande gama de variáveis faz-se necessária durante 
 
 #METODOLOGIA
 
-O primeiro passo consiste em definir as plataformas alvo do trabalho; devem ser plataformas mercadologicamente relevantes ao desenvolvimento de jogos, que possibilitem a criação de aplicativos em HTML.
+O primeiro passo consiste em definir as plataformas alvo do trabalho; devem ser plataformas mercadologicamente relevantes ao desenvolvimento de jogos, que possibilitem a criação de aplicativos em HTML e que acentuem o antagonismo de características.
 
-Segue-se com a construção de uma lista com os recursos relevantes aos jogos que, empiricamente, sofrem ou são comummente ligados à limitações multipltaforma. Segue-se uma pesquisa para aprofundar teoricamente cada um dos rescursos.
+Segue-se com a construção de uma lista com os recursos relevantes aos jogos que, empiricamente, sofrem ou são comummente ligados à limitações multipltaforma. Segue-se uma pesquisa para aprofundar teoricamente cada um dos rescursos, possivelmente elegendo novos.
 
 Com um embaseamento teórico substancial, segue-se a prototipação de um jogo multiplataforma que utilize recursos potencialmente limitados. Para ser considerado pronto, o protótipo deve ser testado, e estar funcional, com adaptações ou não, em cada uma das plataformas alvo definidas.
 
@@ -196,19 +195,10 @@ em quais plataformas?
 sob quais circunstâcias?
 as limitações poduderam ser contornadas?
 algum efeito colateral das limitações no jogo?
+qual a categoria do problema: usabilidade, funcionalidade, manuteabilidade, portabilidade ou performance? (segundo ISO)
 
-Fatores de qualidade  segundo iso (ref 2)
-
-o jogo é funcional em todas as plataformas?
-o jogo é usável em todas as plataformas?
-    talvez criar uma enquete
-
-o jogo é fácil de manter em todas as plataformas?
-o jogo é fácil de portar para novas plataformas?
-o jogo tem performance razoável nas plataformas?
-    talvez criar bennchmakrs
-
-
+*Ideia*
+Posso utilizar a iso para fazer perguntas mais diretas do que simples "limitações".
 
 #RESULTADOS
 
