@@ -10,13 +10,15 @@ mencionar sobre media queries do css3
 Devo escolher as tecnologias depois de escolher as plataformas alvo
 webgl é uma boa... estudar mais!
 cocoonJs
+porque android e não IOS
+Chrome e Firefox
 
 Detalhar as plataformas alvo (talvez na introdução (como referência 3))
 
 Dúvidas:
 
-Vale utilizar experiência pessoal como argumento para escolha de tecnolgia?
-Estudar sobre a frustração geradas pela vasta game de tecnologias emergentes?  (referência 2 é um caso disso (na conclusão)) 
+Vale utilizar experiência pessoal como argumento para escolha de tecnolgia? (pode-se utilizar desde que fique claro: em virtudo da experiencia anterior e ser uma das plataformas abertas)
+Estudar sobre a frustração geradas pela vasta game de tecnologias emergentes?  (referência 2 é um caso disso (na conclusão))
 Devo ressaltar na conclusão que eu não tinha nenhuma experiência inicial com desenvolvimento de jogos web?
 
 Limitações de aplicações não nativas
@@ -102,6 +104,7 @@ Busca-se apontar possíveis limitações no processo de desenvolvimento de jogos
 
 ###Aspectos que podem sofrer limitações de plataforma
     - Debugging
+    - Diferenças em tamanho de tela
     - Canvas
         - Resizing via canvas vs DOM
     - Audio (reference 2)
