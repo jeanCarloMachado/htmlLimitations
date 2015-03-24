@@ -1,46 +1,23 @@
 <!--
 
-Estrutura
-
 Ideias:
-Contra argumentos são interessantes na introdução
+Falar sobre o desenvolvimento e exportação em uma linhaguem para as linguagens nativas
+Contra argumentos são interessantes na introdução, mas primeiramente os argumentos à favor
 Pesquisar sobre isos (9126) de qualidade para ver parmetros de avaliação (pensar melhor)
-talvez seja mais importante desenvolver o jogo antes definir quais os aspectos com problemas de plataforma
 mencionar sobre media queries do css3
-Devo escolher as tecnologias depois de escolher as plataformas alvo
 webgl é uma boa... estudar mais!
-cocoonJs
 porque android e não IOS
 Chrome e Firefox
+utilizar eventos de touch no mobile
 
 Detalhar as plataformas alvo (talvez na introdução (como referência 3))
 
 Dúvidas:
 
-Vale utilizar experiência pessoal como argumento para escolha de tecnolgia? (pode-se utilizar desde que fique claro: em virtudo da experiencia anterior e ser uma das plataformas abertas)
-Estudar sobre a frustração geradas pela vasta game de tecnologias emergentes?  (referência 2 é um caso disso (na conclusão))
 Devo ressaltar na conclusão que eu não tinha nenhuma experiência inicial com desenvolvimento de jogos web?
-
-Limitações de aplicações não nativas
-
-
-``````
-
-Dúvidas:
-Posso utilizar livros como trabalhos similares? - sim
 devo coletar as limitações que podem ser contornadas com workarounds? - colocar demonstra aprofundamento
-#Devo procurar e mencionar soluções para os problemas que eu encontrar?
-O "multiplataforma" deve focar apenas no desenvolvimento mobile ou ser mais genérico? - engloba mais de uma plataforma, especificar no objetivo: tablets, celular, kkkk
-Desenvolver o protópito com html5 puro!
+Falar sobre versões menores das plataformas alvo
 
-Comparar o HTML5 com ele mesmo !!!!!
-Considerações
-formatar logo.
-
-TODO this week
-esboçar a metodologia
-fazer levantamento de tudo o que o HTML5 provê que tem deficiências de multiplataforma
-remover o 5 do HTML (opt)
 
 -->
 
@@ -60,7 +37,6 @@ remover o 5 do HTML (opt)
 ---
 
 #RESUMO
-
 
 **Palavras-chave**: *HTML*, JOGOS, Limitações
 
@@ -99,8 +75,7 @@ Os custos adicionais no ciclo vida de um jogo nativo, para diversas plataformas,
 Busca-se apontar possíveis limitações no processo de desenvolvimento de jogos em plataformas variadas oriundas do atual estado de definição e implementação do HTML nas plataformas alvo. O comparativos das limitações serão feitas contra as implementações do HTML nas plataformas alvo, o objetivo deste trabalho não é comparar o HTML com outras tecnologias de desenvolvimento de jogos como FlashPlayer ou alternativas desktop..
 
 ##OBJETIVOS ESPECÍFICOS
-
-    Estudar as limitações de desenvolvimento de jogos nas plataformas: Smarthphones com as últimas versões estáveis dos sistemas Android e IOS, e a última versão estável dos navegadoes Firefox e Google Chrome para a versão desktop.
+Estudar as limitações de desenvolvimento de jogos nas plataformas: Smarthphones com as últimas versões estáveis dos sistemas Android e IOS, e a última versão estável dos navegadoes Firefox e Google Chrome para a versão desktop.
 
 ###Aspectos que podem sofrer limitações de plataforma
     - Debugging
@@ -113,6 +88,10 @@ Busca-se apontar possíveis limitações no processo de desenvolvimento de jogos
     - Eventos de entrada
     - Vibração
     - Acelerômetro
+    - Aceleração de GPU
+    - storage
+    - disponibilização de assets (cotrole de tamanhos, cache, etc)
+    - offline applications
 
 #JUSTIFICATIVA
     Tendo em vista que este trabalho busca mapear agnosticamente os problemas do desenvolvimento multiplataforma em HTML, ele serve também para apoiar decisões, e justificar decisões relativas ao desenvolvimento de jogos multiplataforma.
@@ -205,16 +184,15 @@ Posso utilizar a iso para fazer perguntas mais diretas do que simples "limitaç�
 
 #RESULTADOS
 
+
+Limitações
+
+Refresh duplo para ver assets cacheados. Ver: http://buildnewgames.com/game-asset-management/
+
+
 #CONCLUSÃO
 
 #CRONOGRAMA
-
-Identificador& Tarefa &  Duração & Início & Término
-1 & Concepção & 5 dias & 1 agosto & 7 agosto
-2 & Elaboração & 15 dias & 8 agosto & 29 agosto
-3 & Construção & 15 dias & 30 agosto & 19 setembro
-4 & Construção & 10 dias & 31 agosto & 3 outubro
-  & Total & 45 dias & 1 agosto & 3 outubro
 
 ---
 
@@ -239,6 +217,10 @@ Reference 3 é uma ótima fonte de explicação de como tecnologias relacionadas
 Reference 2 é uma ótimo trabalho para pegar ideias sobre como escrever as coisas.
 
 *When designing a game it is important to be conscious of the player's perspective, as well as the flexibility it allows the developer.*
+
+
+Reference 7 is  a good font from feature detection systems.
+
 
 HTML5: A blessing or a curse
 http://www.develop-online.net/tools-and-tech/html5-a-blessing-or-a-curse/0117393
