@@ -9,6 +9,7 @@ webgl é uma boa... estudar mais!
 porque android e não IOS
 Chrome e Firefox
 utilizar eventos de touch no mobile
+falar sobre loading times
 
 Detalhar as plataformas alvo (talvez na introdução (como referência 3))
 
