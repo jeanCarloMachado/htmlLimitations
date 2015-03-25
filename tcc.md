@@ -186,9 +186,10 @@ Posso utilizar a iso para fazer perguntas mais diretas do que simples "limitaç�
 #RESULTADOS
 
 
-Limitações
+##Limitações
 
 Refresh duplo para ver assets cacheados. Ver: http://buildnewgames.com/game-asset-management/
+Som quebra quando executado diversas vezes
 
 
 #CONCLUSÃO
