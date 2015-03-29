@@ -48,26 +48,25 @@ Falar sobre versões menores das plataformas alvo
 
 ---
 
-#CONTEXTUALIZAÇÃO <!-- ou introdução -->
+#Introdução<!-- ou Contextualização -->
+
+É difícil se tornar competitivo no mercado de jogos, existem muitos produtos e muitas plataformas. Uma solução para este problema é a utilização de ferramentas comuns entre eles, à dizer o HTML.
 
 O senso comum sobre o HTML para o desenvolvimento de games geralmente segue a seguinte estrutura: "HTML é fantástico, mas...", depois do mas as coisas variam de acordo com a experiência empírica ou opinião alheia. O objetivo deste trabalho é constatar o quanto deste mas é verdadeiro através da concepção e posterior análise do processo de desenvolvimento de um jogo multiplataforma em HTML.
 
 
-Contra-argumentar
 As tecnologias da web evoluem muito rapidamente, talvez seja importante falar da aplicabilidade de trabalhos científicos nessa área visto que suas verdades podem se deterirorar muito rapidamente.
 
 
 A palavra HTML5 se tornou um conceito guardachuva para englobar as tecnologias da web (referênce 2)
 
-Um trabalho completo sobre o assunto requeriria um comparativo entre jogos nativos e jogos multiplataforma.
-
+Um trabalho completo sobre o assunto requeriria um comparativo entre jogos desenvolvidos nativamente e jogos em HTML5.
 Jogos para plataforma inibem concorrência, você acaba desenvolvendo para umas poucas maiores marcas.
 
 #PROBLEMA
 
 <!-- referenciar -->
-A falta de disponibilidade de trabalhos acadêmicos, bem como a carência de definições concretas sobre a viabilidade da atual versão do HTML5 - quando utilizado no desenvolvimento de jogos, acaba por monopolizar à construção de jogos nativos as plataformas alvo. Esta realidade corrobora para uma espécie de consenso à respeito da inviabilidade de construir-se jogos competitivos em HTML5.
-
+A falta de disponibilidade de trabalhos acadêmicos, a carência de definições concretas sobre a viabilidade da atual versão do HTML5 - quando utilizado no desenvolvimento de jogos e o senso comum, acabam por monopolizar à construção de jogos nativos as plataformas alvo.
 Os custos adicionais no ciclo vida de um jogo nativo, para diversas plataformas, é muito alto para ser considerado um problema trivial.
 
 #OBJETIVOS
@@ -154,7 +153,17 @@ Visto que a gestão de uma grande gama de variáveis faz-se necessária durante 
 -three.js: considerada leve, renderiza WebGL e Canvas, arquitetura procedural;
 -quintus:
 
-##EMPACOTADORES
+##Mobile first
+
+
+#Formas de disponibilizar o aplicativo nos dispositivos móveis
+
+
+Links com manifestos
+Crosswalk project
+Phone gap
+
+
 
 ##ESPECIFICIDADES DAS PLATAFORMAS
 
@@ -207,6 +216,9 @@ Possível contornar com loading e cache
 É muito custoso desenvolver uma interface que pareça nativa em cada dispositivo sem a utilização de ferramentas especializadas.
 Em termos gerais, trabalhar com proporções é possitivo. Não obstante há casos, como o dos botões de certo e errado que a propo
 
+#Camera
+
+#Acelerômetro
 
 #CONCLUSÃO
 
