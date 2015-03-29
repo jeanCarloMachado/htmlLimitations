@@ -160,7 +160,6 @@ Visto que a gestão de uma grande gama de variáveis faz-se necessária durante 
 
 #TRABALHOS SIMILARES
 
-
 (SILVA,2010), demostra a utilização de HTML5 para a criação de jogos simples, todavia seu trabalho não se foca nas diferenças entre uma plataforma e outra.
 
 #METODOLOGIA
@@ -188,14 +187,33 @@ Posso utilizar a iso para fazer perguntas mais diretas do que simples "limitaç�
 
 ##Limitações
 
+#Versões
+A grande maioria dos dispositivos atualmente no mercado utilizam obsoletas de seus softwares. Isso dificulta o desenvolvimento
+
+#Offline
 Refresh duplo para ver assets cacheados. Ver: http://buildnewgames.com/game-asset-management/
-Som quebra quando executado diversas vezes
+
+#Som
+Api de som quebra quando executado diversas vezes
+
+#Assets
+
+Trafegar muitos assets deixa o sistema lento.
+Possível contornar com loading e cache
+
+
+#UI
+
+É muito custoso desenvolver uma interface que pareça nativa em cada dispositivo sem a utilização de ferramentas especializadas.
+Em termos gerais, trabalhar com proporções é possitivo. Não obstante há casos, como o dos botões de certo e errado que a propo
 
 
 #CONCLUSÃO
 
-#CRONOGRAMA
+Trabalhar com proporções parece ser uma alterantiva positiva.
 
+
+#CRONOGRAMA
 ---
 
 <!--
@@ -220,9 +238,7 @@ Reference 2 é uma ótimo trabalho para pegar ideias sobre como escrever as cois
 
 *When designing a game it is important to be conscious of the player's perspective, as well as the flexibility it allows the developer.*
 
-
 Reference 7 is  a good font from feature detection systems.
-
 
 HTML5: A blessing or a curse
 http://www.develop-online.net/tools-and-tech/html5-a-blessing-or-a-curse/0117393
@@ -231,7 +247,6 @@ http://www.develop-online.net/tools-and-tech/html5-a-blessing-or-a-curse/0117393
 http://www.toptal.com/html5/top-5-mistakes-that-html5-developers-make
 
 
-KURYANOVICH, Egor; SHALOM Shy, et all.
 **The State of Open Web Games**
 Addison Wesley, Massachusetts, pg. 12,
 ISBN: 978-1-4302-3978-9,
