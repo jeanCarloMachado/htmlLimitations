@@ -19,7 +19,6 @@ Devo ressaltar na conclusão que eu não tinha nenhuma experiência inicial com 
 devo coletar as limitações que podem ser contornadas com workarounds? - colocar demonstra aprofundamento
 Falar sobre versões menores das plataformas alvo
 
-
 -->
 
 ##INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DO RIO GRANDE DO SUL
@@ -55,7 +54,7 @@ Falar sobre versões menores das plataformas alvo
 O senso comum sobre o HTML para o desenvolvimento de games geralmente segue a seguinte estrutura: "HTML é fantástico, mas...", depois do mas as coisas variam de acordo com a experiência empírica ou opinião alheia. O objetivo deste trabalho é constatar o quanto deste mas é verdadeiro através da concepção e posterior análise do processo de desenvolvimento de um jogo multiplataforma em HTML.
 
 
-As tecnologias da web evoluem muito rapidamente, talvez seja importante falar da aplicabilidade de trabalhos científicos nessa área visto que suas verdades podem se deterirorar muito rapidamente.
+As tecnologias da web evoluem muito rapidamente, talvez seja importante falar da aplicabilidade de trabalhos científicos nessa área visto que suas verdades podem se deteriorar muito rapidamente.
 
 
 A palavra HTML5 se tornou um conceito guardachuva para englobar as tecnologias da web (referênce 2)
