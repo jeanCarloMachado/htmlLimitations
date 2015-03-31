@@ -6,6 +6,8 @@ Pesquisar sobre isos (9126) de qualidade para ver parâmetros de avaliação (pe
 Detalhar as plataformas alvo (talvez na introdução (como referência 3))
 
 Dúvidas:
+Metodologia tem que ser no passado?
+Onde eu descrevo como foi o processo de criação? (Olhar o pdf de manual do instituto)
 Falar sobre as versões dos dispositivos e navegadores que serão testados?
 
 -->
@@ -42,7 +44,11 @@ O senso comum sobre o HTML para o desenvolvimento de games geralmente segue a se
 
 A palavra HTML5 se tornou um conceito guarda chuva para englobar as tecnologias da web (referênce 2)
 
+Os desenvolvedores de navegadores podem interpretar/implementar as especificações erroneamente aumentando os problemas de compatibilidade.
+
 Um trabalho completo sobre o assunto requiriria um comparativo entre jogos desenvolvidos nativamente e jogos em HTML5. Jogos para plataforma inibem concorrência, você acaba desenvolvendo para umas poucas maiores marcas.
+
+Decidi construir um jogo para identificar os problemas do HTML.
 
 #PROBLEMA
 
@@ -85,7 +91,26 @@ Por colaborar com o HTML, este trabalho ganha o peso da justificativas justifica
 - O método de construção de aplicativo pela WEB permite uma única base de código o que habilita a disponibilidade de aplicativos com maior velocidade e significativas reduções nos custos.
 - Muitos desenvolvedores estão familiarizados com as tecnologias da WEB ou apontam interesse na tecnologia; <!-- referenciar -->
 
+Escolhi um jogo de matemática pois o design precisava ser simples e elucidar a utilização de recursos potencialmente problemáticos.
+
 #REVISÃO BIBLIOGRÁFICA
+
+##Jogos
+
+Definição de jogos do meu livro.
+
+Para aumentar a interatividade é interessante fazer uso dos recursos disponíveis no hardware sendo utilizado.
+
+##Mobile First
+
+Uma estratégia para criar jogos Web que funcionem adequadamente tanto nas resoluções de *smartphones*, quanto em resoluções de desktops foi a *Mobil First* . Como o nome indica, consiste em desenvolver primeiramente a aplicação para resoluções menores, geralmente *320pixels*.
+
+##Interface e escrolhas de design
+
+##Open Web e W3c
+
+###HTML5
+
 ##HTML
 
 Trata-se de uma linguagem de marcação que define a estrutura de elementos que uma página deve ter de modo a fornecer conteúdo iterativo aos usuários. Todavia, a interatividade necessária para a construção de jogos animados em HTML é algo recente, anteriormente só se obtinha com a utilização de ferramentas proprietárias como o Adobe Flash e Microsoft Silverlight.
@@ -98,13 +123,68 @@ O HTML5, por fatores como a excelente documentação, grande comunidade de desen
 
 Apesar de a tecnologia  ainda não estar completa ela já demonstra grande robustez  e os padrões de desenvolvimento invariavelmente estão migrando para a perspectiva HTML5, segundo TABUSCA (2013) desenvolvedores que atualmente trabalham no ramo da Web, já podem visualizar que o novo ramo do desenvolvimento de aplicativos mobile está se aproximando mais e mais à alusiva proposta do HTML5.
 
-##SOM
+##Audio
 
 Atualmente, a maioria dos arquivos de áudio e vídeo rodam através de plugins (como o Adobe Flash). Não obstante, navegadores diferentes podem ter plugins diferentes. O HTML5 define dois novos elementos que especificam o padrão para imbuir áudio e vídeo em páginas Web: <audio> e <vídeo>.
 
 ##Gráficos
 
+###CSS
+
+Uma linguagem de markup que utiliza seletores e regras para definir a representação de um documento HTML e seus componentes. Sua última versão CCS3 introduziu várias funcionalidades multiplataforma como media-queries. Transformções 3D.
+
+###Canvas
+
+Eliminou a necessidade de plugins de terceiros para desenhar em HTML.
+
+Muitas vezes lentos. Algumas soluções tentam arrumar isso através da utilização de GPU.
+
+Apache Cordovautliza o FastCanvas.
+
+###WebGl
+
+Baseado no OpenGL
+Versão da especificação atual?
+
+##Javascript
+Emacscript criado pela Netscape se tornou tão popular que foi abraçada pela W3C
+Linguagem de programação mais popular do mundo
+Javascript 6 trás conceitos de orientação à objetos.
+Existem vários transpiladores para javacript que permitem a utilização de linguagens que evoluem mais rapidamente.
+
+###Alternativas à Javscript
+
+Typescript
+Dart
+
+###Nodejs como tooling
+Permite rodar Javascript fora do browser;
+
+####Sistemas ds rapidamente.
+
+e builing
+
+* Grunt
+* Gulp
+
+Minify, obfuscation
+
+####Gerenciadores de pacotes
+
+* Bower
+Package manager para a web
+
+* NPM
+Package manager para o Node
+
+
+##Applicativos Hibridos
+
+Rodam dentro de um cotainer
+Permite a utilização de APIS nativas do sistema operacional em questão;
+
 ##ENTRADA DE COMANDOS
+
 Na construção da grande maioria dos jogos é muitas vezes imprescindível alta flexibilidade na gestão de entrada de dados. Este fator muito se amplia na criação de jogos multiplataforma, seja através de teclado, tela sensível ou sensor de movimentos, o importante é oferecer a melhor experiência possível por plataforma. O HTML5 trata todos estes casos abstratamente na forma de eventos, os quais podem ser *escutados* através de *listeners*. Os eventos básicos são: *keydown* (tecla baixa), *keyup* (tecla solta) e *keypress* (tecla pressionada).
 
 Para detectar suporte aos mais variados recursos do HTML5 no *browser* do cliente existem duas possibilidades. Pode-se implementar testes para cada funcionalidade utilizada abordando os detalhes de implementação de cada uma ou então fazer uso de alguma biblioteca especializada neste processo, o Modernizr é uma opção open-source deste tipo de biblioteca, este gera uma lista de booleanos sobre grande variedade dos recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e local storage.
@@ -127,22 +207,29 @@ Com o intuito de simplificar o processo para os desenvolvedores, auxiliando-os a
 
 - enchant.js: dentre suas funcionalidades constam: orientação à objetos, orientado à eventos, contém um motor de animação, suporta WebGL e Canvas, etc;
 - three.js: considerada leve, renderiza WebGL e Canvas, arquitetura procedural;
-- quintus:
+- quintus: bom para plataformas 2D
 
-##Mobile First
-
-Uma estratégia para criar jogos Web que funcionem adequadamente tanto nas resoluções de *smartphones*, quanto em resoluções de desktops foi a *Mobil First* . Como o nome indica, consiste em desenvolver primeiramente a aplicação para resoluções menores, geralmente *320pixels*.
 
 #Formas de disponibilizar o aplicativo nos dispositivos móveis
 
 Links com manifestos
-Crosswalk
-Phonegap
+
+##Instalação
+
+Este método é benéfico pois possibilita ao usuário a mesma experiência ao adquirir uma aplicação normal. Este tipo de aplicação é comummente referido como "híbrido".
+
+* Crosswalk
+
+* Phonegap
+
+###Publicação em lojaos
+
+##O jogo
+
 
 #TRABALHOS SIMILARES
 
-(Reference 2) aborda limitações do HTML5 utilizando a criação de um jogo como parametrização. Contudo, o autor foca seu trabalho em comparar os recursos do HTML com similares no ambiente desktop.
-
+(Referência 2) aborda limitações do HTML5 utilizando a criação de um jogo como parametrização. Contudo, o autor foca seu trabalho em comparar os recursos do HTML com similares no ambiente desktop.
 
 #METODOLOGIA
 
@@ -164,31 +251,38 @@ Qual a categoria do problema: usabilidade, funcionalidade, manutibilidade, porta
 *Ideia*
 Posso utilizar a ISO para fazer perguntas mais diretas do que simples "limitações".
 
+
+
 #RESULTADOS
 
 ##Limitações
 
 1.  Versões
 
-A grande maioria dos dispositivos atualmente no mercado utilizam obsoletas de seus softwares. Isso dificulta o desenvolvimento
+A grande maioria dos dispositivos atualmente no mercado utilizam obsoletas de seus softwares. Isso dificulta o desenvolvimento. Se a tecnologia de tradução para o browser utilizar o a classe Webview do Android - como o Apache cordova faz - as versões mais antigas podem ser penalizadas com problemas de performance ou falta de recursos.
 
 2. Offline
 
 Refresh duplo para ver *assets* cacheados. Ver: http://buildnewgames.com/game-asset-management/
 
-3. Som
+3. Audio
 
-Api de som quebra quando executado diversas vezes
+Api de som quebra quando executado diversas vezes.
+Os navegadores variam na disponibilização de formatos aceitáveis
+Somente um áudio pode ser tocado no Navegador do Android
+
 
 4. Assets
 
 Trafegar muitos *assets* deixa o sistema lento.
-Possível contornar com *loading* e cache
+
+* Contorno
+Utilizando páginas de carregamento e/ou cache;
 
 5. UI
 
-É muito custoso desenvolver uma interface que pareça nativa em cada dispositivo sem a utilização de ferramentas especializadas.
-Em termos gerais, trabalhar com proporções é positivo. Não obstante há casos, como o dos botões de certo e errado que a proporções ficam exageradas, nesses casos a utilizada de max-width é uma solução conveniente.
+É muito custoso desenvolver uma interfaces que pareçam nativas para cada dispositivo sem a utilização de *plugins* e ferramentas especializadas.
+Em termos gerais, trabalhar com proporções é positivo. Não obstante há casos, como o dos botões de certo e errado que a proporções ficam exageradas, nesses casos a utilizada de *max-width* é uma solução conveniente.
 
 6. Câmera
 
@@ -196,6 +290,8 @@ Em termos gerais, trabalhar com proporções é positivo. Não obstante há caso
 
 #CONCLUSÃO
 
+
+##FUTURO
 
 #CRONOGRAMA
 ---
@@ -215,14 +311,14 @@ Em termos gerais, trabalhar com proporções é positivo. Não obstante há caso
 -->
 #Bibliografia
 
-Reference 3 é uma ótima fonte de explicação de como tecnologias relacionadas ao assunto funcionam.
+Referência 3 é uma ótima fonte de explicação de como tecnologias relacionadas ao assunto funcionam.
 *The total development time and cost of HTML5 based appliction is 67% lesser than native application development which shows the cost effectiveness of HTML5 based appplication*
 
-Reference 2 é uma ótimo trabalho para pegar ideias sobre como escrever as coisas.
+Referência 2 é uma ótimo trabalho para pegar ideias sobre como escrever as coisas.
 
 *When designing a game it is important to be conscious of the player's perspective, as well as the flexibility it allows the developer.*
 
-Reference 7 is  a good font from feature detection systems.
+Referência 7 is  a good font from feature detection systems.
 
 HTML5: A blessing or a curse
 http://www.develop-online.net/tools-and-tech/html5-a-blessing-or-a-curse/0117393
