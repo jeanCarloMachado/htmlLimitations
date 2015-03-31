@@ -168,31 +168,31 @@ Posso utilizar a ISO para fazer perguntas mais diretas do que simples "limitaç�
 
 ##Limitações
 
-1-  Versões
+1.  Versões
 
 A grande maioria dos dispositivos atualmente no mercado utilizam obsoletas de seus softwares. Isso dificulta o desenvolvimento
 
-2- Offline
+2. Offline
 
 Refresh duplo para ver *assets* cacheados. Ver: http://buildnewgames.com/game-asset-management/
 
-3- Som
+3. Som
 
 Api de som quebra quando executado diversas vezes
 
-4- Assets
+4. Assets
 
 Trafegar muitos *assets* deixa o sistema lento.
 Possível contornar com *loading* e cache
 
-5- UI
+5. UI
 
 É muito custoso desenvolver uma interface que pareça nativa em cada dispositivo sem a utilização de ferramentas especializadas.
 Em termos gerais, trabalhar com proporções é positivo. Não obstante há casos, como o dos botões de certo e errado que a proporções ficam exageradas, nesses casos a utilizada de max-width é uma solução conveniente.
 
-6- Câmera
+6. Câmera
 
-7-Acelerômetro
+7. Acelerômetro
 
 #CONCLUSÃO
 
