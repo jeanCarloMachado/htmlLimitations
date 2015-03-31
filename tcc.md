@@ -49,59 +49,52 @@ Falar sobre versões menores das plataformas alvo
 
 #Introdução<!-- ou Contextualização -->
 
-É difícil se tornar competitivo no mercado de jogos, existem muitos produtos e muitas plataformas. Uma solução para este problema é a utilização de ferramentas comuns entre eles, à dizer o HTML.
+É difícil se tornar competitivo no mercado de jogos, existem muitos produtos e muitas plataformas. Uma solução para este problema é a utilização de ferramentas comuns entre às plataformas a mais promissora destas ferramentas é o HTML.
 
-O senso comum sobre o HTML para o desenvolvimento de games geralmente segue a seguinte estrutura: "HTML é fantástico, mas...", depois do mas as coisas variam de acordo com a experiência empírica ou opinião alheia. O objetivo deste trabalho é constatar o quanto deste mas é verdadeiro através da concepção e posterior análise do processo de desenvolvimento de um jogo multiplataforma em HTML.
+O senso comum sobre o HTML para o desenvolvimento de games geralmente segue a seguinte estrutura: "HTML é fantástico, mas...", depois do *mas* as respostas variam de acordo com a experiência empírica ou opinião alheia. O objetivo deste trabalho é constatar o quanto deste *mas* é verdadeiro através da concepção e posterior análise do processo de desenvolvimento de um jogo multiplataforma em HTML.
 
+A palavra HTML5 se tornou um conceito guarda chuva para englobar as tecnologias da web (referênce 2)
 
-As tecnologias da web evoluem muito rapidamente, talvez seja importante falar da aplicabilidade de trabalhos científicos nessa área visto que suas verdades podem se deteriorar muito rapidamente.
-
-
-A palavra HTML5 se tornou um conceito guardachuva para englobar as tecnologias da web (referênce 2)
-
-Um trabalho completo sobre o assunto requeriria um comparativo entre jogos desenvolvidos nativamente e jogos em HTML5.
-Jogos para plataforma inibem concorrência, você acaba desenvolvendo para umas poucas maiores marcas.
+Um trabalho completo sobre o assunto requiriria um comparativo entre jogos desenvolvidos nativamente e jogos em HTML5. Jogos para plataforma inibem concorrência, você acaba desenvolvendo para umas poucas maiores marcas.
 
 #PROBLEMA
 
-<!-- referenciar -->
-A falta de disponibilidade de trabalhos acadêmicos, a carência de definições concretas sobre a viabilidade da atual versão do HTML5 - quando utilizado no desenvolvimento de jogos e o senso comum, acabam por monopolizar à construção de jogos nativos as plataformas alvo.
-Os custos adicionais no ciclo vida de um jogo nativo, para diversas plataformas, é muito alto para ser considerado um problema trivial.
+A carência de definições concretas sobre a viabilidade da atual versão do *HTML5* - quando utilizado no desenvolvimento de jogos e o senso comum, acabam por monopolizar à construção de jogos nativos as plataformas alvo. Os custos adicionais no ciclo vida de um jogo nativo, para diversas plataformas, é muito alto para ser considerado um problema trivial.
 
 #OBJETIVOS
 ##OBJETIVO GERAL
 
-Busca-se apontar possíveis limitações no processo de desenvolvimento de jogos em plataformas variadas oriundas do atual estado de definição e implementação do HTML nas plataformas alvo. O comparativos das limitações serão feitas contra as implementações do HTML nas plataformas alvo, o objetivo deste trabalho não é comparar o HTML com outras tecnologias de desenvolvimento de jogos como FlashPlayer ou alternativas desktop..
+Identificar possíveis limitações no processo de desenvolvimento de jogos multiplataforma oriundas do atual estado de definição e implementação do HTML5. O objetivo deste trabalho não é comparar o HTML com outras tecnologias de desenvolvimento de jogos, como FlashPlayer ou alternativas desktop, outrossim, comparar o HTML5 com o que se considera razoável no desenvolvimento de jogos nas plataformas alvo.
 
 ##OBJETIVOS ESPECÍFICOS
-Estudar as limitações de desenvolvimento de jogos nas plataformas: Smarthphones com as últimas versões estáveis dos sistemas Android e IOS, e a última versão estável dos navegadoes Firefox e Google Chrome para a versão desktop.
+Estudar as limitações de desenvolvimento de jogos nas plataformas de smartphones Android e navegadores Desktop Google Chrome e Firefox.
 
-###Aspectos que podem sofrer limitações de plataforma
+Pretende-se também estudar os seguintes tópicos do desenvolvimento de jogos, relativos ao HTML5:
     - Debugging
     - Diferenças em tamanho de tela
     - Canvas
         - Resizing via canvas vs DOM
-    - Audio (reference 2)
+        - Aceleração de GPU
+    - API de Audio (reference 2)
     - Performance
     - Empacotadores HTML5
     - Eventos de entrada
     - Vibração
     - Acelerômetro
-    - Aceleração de GPU
-    - storage
+    - *Storage*
     - disponibilização de assets (cotrole de tamanhos, cache, etc)
     - offline applications
 
 #JUSTIFICATIVA
-    Tendo em vista que este trabalho busca mapear agnosticamente os problemas do desenvolvimento multiplataforma em HTML, ele serve também para apoiar decisões, e justificar decisões relativas ao desenvolvimento de jogos multiplataforma.
+    Tendo em vista que este trabalho busca mapear possíveis problemas do desenvolvimento multiplataforma em HTML, ele serve para apoiar e justificar decisões relativas ao desenvolvimento de jogos multiplataforma;
     Por tratar cientificamente de aspectos importantes do HTML, este trabalho tem potencial apontar os pontos chave que necessitam de melhorias nas plataformas alvo, colateralmente colaborando para a melhoria do próprio HTML.
-    Por colaborar com o HTML, este trabalho ganha o peso da justificativas justificativas do próprio html (melhorar):
-    - O método de construção de aplicativo pela WEB permite uma única base de código o que habilita a disponibilidade de aplicativos com maior velocidade e significativas reduções nos custos.
-    - Muitos desenvolvedores estão familiarizados com as tecnologias da WEB ou apontam interesse na tecnologia; <!-- referenciar -->
     A opinião comum tende para soluções nativas em detrimento do desenvolvimento de jogos, este trabalho pretende desafiar esta concepção.
 
-#REVISÃO BIBLIOGRÁFICA
+    Por colaborar com o HTML, este trabalho ganha o peso da justificativas justificativas do próprio HTML (melhorar):
+    - O método de construção de aplicativo pela WEB permite uma única base de código o que habilita a disponibilidade de aplicativos com maior velocidade e significativas reduções nos custos.
+    - Muitos desenvolvedores estão familiarizados com as tecnologias da WEB ou apontam interesse na tecnologia; <!-- referenciar -->
 
+#REVISÃO BIBLIOGRÁFICA
 ##HTML
 
 Na vasta maioria dos casos utilizada para criar websites.
@@ -116,55 +109,53 @@ O HTML5, por fatores como a excelente documentação, grande comunidade de desen
 
 Apesar de a tecnologia  ainda não estar completa ela já demonstra grande robustez  e os padrões de desenvolvimento invariavelmente estão migrando para a perspectiva HTML5, segundo TABUSCA (2013) desenvolvedores que atualmente trabalham no ramo da Web, já podem visualizar que o novo ramo do desenvolvimento de aplicativos mobile está se aproximando mais e mais à alusiva proposta do HTML5.
 
-##SOM E VÍDEO
+##SOM
 
-Falar dos problemas da api de áudio.
+Falar dos problemas da API de áudio.
 
 Atualmente, a maioria dos arquivos de áudio e vídeo rodam através de plugins (como o Adobe Flash). Não obstante, navegadores diferentes podem ter plugins diferentes. O HTML5 define dois novos elementos que especificam o padrão para imbuir áudio e vídeo em páginas Web: <audio> e <vídeo>.
 
+##Gráficos
+
 ##ENTRADA DE COMANDOS
 
-Na construção da grande maioria dos jogos é imprescindível alta flexibilidade na gestão de entrada de dados, seja através de teclado, tela sensível, mouse entre outros. O HTML5 trata todos estes casos abstratamente na forma de eventos. Os eventos básicos são: \textit{keydown} (tecla baixa), \textit{keyup} (tecla solta), e \textit{keypress} (tecla pressionada). Basta ao desenvolvedor testar qual caractere gerou o evento em seu laço principal para identificar o que aconteceu.
+Na construção da grande maioria dos jogos é muitas vezes imprescindível alta flexibilidade na gestão de entrada de dados. Este fator muito se amplia na criação de jogos multiplataforma, seja através de teclado, tela sensível ou sensor de movimentos, o importante é oferecer a melhor experiência possível por plataforma. O HTML5 trata todos estes casos abstratamente na forma de eventos, os quais podem ser *escutados* através de *listeners*. Os eventos básicos são: *keydown* (tecla baixa), *keyup* (tecla solta) e *keypress* (tecla pressionada).
 
-Para detectar suporte aos mais variados recursos do HTML5 no browser do cliente existem duas possibilidades. Pode-se implementar testes para cada funcionaidade utilizada abordando os detalhes de implementação de cada uma ou então fazer uso de alguma biblioteca especializada neste processo, o Modernizr é uma opção open-source deste tipo de biblioteca, este gera uma lista de booleanos sobre grande variedade dos recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e local storage.
+Para detectar suporte aos mais variados recursos do HTML5 no *browser* do cliente existem duas possibilidades. Pode-se implementar testes para cada funcionalidade utilizada abordando os detalhes de implementação de cada uma ou então fazer uso de alguma biblioteca especializada neste processo, o Modernizr é uma opção open-source deste tipo de biblioteca, este gera uma lista de booleanos sobre grande variedade dos recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e local storage.
 
 ##TECNOLOGIAS POLYFILL
 
-O HTML5 por não ser um padrão completamente especificado, deixa lacunas de suporte em plataformas, tanto para a gestão de hardware quanto de software. Acarretando assim, que muitos browsers não implementam algumas funcionalidades, completa ou parcialmente especificadas, daí surge a necessidade dos polyfills (tecnologias de preenchimento de lacunas) para implementar estas camadas.
+O HTML5 por não ser um padrão completamente especificado, deixa lacunas de suporte em plataformas, tanto para a gestão de hardware quanto de software. Acarretando assim, que muitos *browsers* não implementam algumas funcionalidades, completa ou parcialmente especificadas, daí surge a necessidade dos polyfills (tecnologias de preenchimento de lacunas) para implementar estas camadas.
 
 Algumas tecnologias desta classe são:
 
-- Suporte a SVG - Scalable Vector Graphics (vetor de gráficos escaláveis): svgweb, Raphael, canvg, fabric.js;
-- Suporte a vídeo: video.js, SublimeVideo, html5media, LeanBack Player;
-- Suporte a Geo-localização: Webshims Lib, geolocaltion polyfill, GeoLocation-API-Polifill;
-- Suporte a Web Storage (armazenamento na web): Amplify.js, storage polyfill, session storage;
+- Suporte à câmera;
+- Suporte à calendário;
 
-Uma das soluções mais promissoras polyfill é o PhoneGap ou Apache Cordova, esta ferramenta é open source e possibilita utilizar de inúmeros recursos de hardware da grande maioria das produtoras de dispositivos móveis.
+Uma das soluções mais promissoras *polyfill* é o PhoneGap ou Apache Cordova, esta ferramenta é *open-source* e possibilita utilizar de inúmeros recursos de hardware da grande maioria das produtoras de dispositivos móveis.
 
 <!-- remover essa referência (sem ano e página) -->
-Segundo JÚNIOR  utilizando as linguagens de desenvolvimento Web HTML, CSS e Javascript. Ele fornece um conjunto de API's para acesso a funções nativas do Sistema Operacional e do hardware do dispositivo, utilizando Javascript. A proposta do PhoneGap é essencial para unir as especificidades de Web com detalhes de sistemas operacionais tanto de hardware como de software.
+Segundo JÚNIOR  utilizando as linguagens de desenvolvimento Web HTML, CSS e Javascript. Ele fornece um conjunto de APIs para acesso a funções nativas do Sistema Operacional e do hardware do dispositivo, utilizando Javascript. A proposta do PhoneGap é essencial para unir as especificidades de Web com detalhes de sistemas operacionais tanto de hardware como de software.
 
-##FRAMEWORKS PARA DESENVOLVIMENTO DE JOGOS HTML5 <!-- mencionar mas evitar o aprofundamento pois o escopo é html puro -->
+##FRAMEWORKS PARA DESENVOLVIMENTO DE JOGOS HTML5
 
-Visto que a gestão de uma grande gama de variáveis faz-se necessária durante o o processo de criação de jogos foram criados frameworks para auxiliar o processo.
+Com o intuito de simplificar o processo para os desenvolvedores, auxiliando-os a focarem-se apenas nas *soluções* que estão criando, foram criados os frameworks para desenvolvimento de jogos. Não obstante, o intuito deste trabalho é desenvolver um jogo sem auxilio de frameworks pois estes muitas vezes escondem possiveis limitações, desenvolvendo *workarounds* próprios.
 
--enchant.js: dentre suas funcionalidades constam: orientação à objetos, orientado à eventos, contém um motor de animação, suporta WebGL e Canvas, etc;
--three.js: considerada leve, renderiza WebGL e Canvas, arquitetura procedural;
--quintus:
+
+- enchant.js: dentre suas funcionalidades constam: orientação à objetos, orientado à eventos, contém um motor de animação, suporta WebGL e Canvas, etc;
+- three.js: considerada leve, renderiza WebGL e Canvas, arquitetura procedural;
+- quintus:
 
 ##Mobile first
 
+Uma estratégia para criar jogos Web que funcionem adequadamente tanto nas resoluções de smartphones, quanto em resoluções de desktops foi a Mobile First. Como o nome indica, consiste em desenvolver primeiramente a aplicação para resoluções menores, geralmente 320px.
 
 #Formas de disponibilizar o aplicativo nos dispositivos móveis
-
 
 Links com manifestos
 Crosswalk project
 Phone gap
 
-
-
-##ESPECIFICIDADES DAS PLATAFORMAS
 
 #TRABALHOS SIMILARES
 
@@ -192,37 +183,35 @@ Posso utilizar a iso para fazer perguntas mais diretas do que simples "limitaç�
 
 #RESULTADOS
 
-
 ##Limitações
 
-#Versões
+###Versões
 A grande maioria dos dispositivos atualmente no mercado utilizam obsoletas de seus softwares. Isso dificulta o desenvolvimento
 
-#Offline
+###Offline
 Refresh duplo para ver assets cacheados. Ver: http://buildnewgames.com/game-asset-management/
 
-#Som
+###Som
 Api de som quebra quando executado diversas vezes
 
-#Assets
+###Assets
 
 Trafegar muitos assets deixa o sistema lento.
 Possível contornar com loading e cache
 
 
-#UI
+###UI
 
 É muito custoso desenvolver uma interface que pareça nativa em cada dispositivo sem a utilização de ferramentas especializadas.
 Em termos gerais, trabalhar com proporções é possitivo. Não obstante há casos, como o dos botões de certo e errado que a propo
 
-#Camera
+###Camera
 
-#Acelerômetro
+###Acelerômetro
 
 #CONCLUSÃO
 
 Trabalhar com proporções parece ser uma alterantiva positiva.
-
 
 #CRONOGRAMA
 ---
