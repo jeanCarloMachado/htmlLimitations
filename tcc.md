@@ -36,7 +36,7 @@ Falar sobre as versões dos dispositivos e navegadores que serão testados?
 
 ---
 
-#Introdução<!-- ou Contextualização -->
+#Introdução
 
 É difícil se tornar competitivo no mercado de jogos, existem muitos produtos e muitas plataformas. Uma solução para este problema é a utilização de ferramentas comuns entre às plataformas a mais promissora destas ferramentas é o HTML.
 
