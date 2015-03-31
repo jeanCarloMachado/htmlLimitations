@@ -2,7 +2,7 @@
 
 Ideias:
 Contra argumentos são interessantes na introdução, mas primeiramente os argumentos à favor
-Pesquisar sobre isos (9126) de qualidade para ver parmetros de avaliação (pensar melhor)
+Pesquisar sobre isos (9126) de qualidade para ver parâmetros de avaliação (pensar melhor)
 Detalhar as plataformas alvo (talvez na introdução (como referência 3))
 
 Dúvidas:
@@ -26,6 +26,8 @@ Falar sobre as versões dos dispositivos e navegadores que serão testados?
 ---
 
 #RESUMO
+
+
 
 **Palavras-chave**: *HTML*, JOGOS, Limitações
 
@@ -89,8 +91,6 @@ Por colaborar com o HTML, este trabalho ganha o peso da justificativas justifica
 #REVISÃO BIBLIOGRÁFICA
 ##HTML
 
-Na vasta maioria dos casos utilizada para criar websites.
-
 Trata-se de uma linguagem de marcação que define a estrutura de elementos que uma página deve ter de modo a fornecer conteúdo iterativo aos usuários. Todavia, a interatividade necessária para a construção de jogos animados em HTML é algo recente, anteriormente só se obtinha com a utilização de ferramentas proprietárias como o Adobe Flash e Microsoft Silverlight.
 
 No HTML5 esta interatividade é alcançada através da utilização do recurso canvas, que é a tag HTML que permite-se "desenhar" dentro da página.
@@ -137,69 +137,68 @@ Com o intuito de simplificar o processo para os desenvolvedores, auxiliando-os a
 
 ##Mobile first
 
-Uma estratégia para criar jogos Web que funcionem adequadamente tanto nas resoluções de smartphones, quanto em resoluções de desktops foi a Mobile First. Como o nome indica, consiste em desenvolver primeiramente a aplicação para resoluções menores, geralmente 320px.
+Uma estratégia para criar jogos Web que funcionem adequadamente tanto nas resoluções de smartphones, quanto em resoluções de desktops foi a *Mobil First* . Como o nome indica, consiste em desenvolver primeiramente a aplicação para resoluções menores, geralmente 320px.
 
 #Formas de disponibilizar o aplicativo nos dispositivos móveis
 
 Links com manifestos
-Crosswalk project
-Phone gap
+Crosswalk
+Phonegap
 
 #TRABALHOS SIMILARES
 
-(SILVA,2010), demostra a utilização de HTML5 para a criação de jogos simples, todavia seu trabalho não se foca nas diferenças entre uma plataforma e outra.
+(Reference 2) aborda limitações do HTML5 utilizando a criação de um jogo como parametrização. Contudo, o autor foca seu trabalho em comparar os recursos do HTML com similares no ambiente desktop.
+
 
 #METODOLOGIA
 
 O primeiro passo consiste em definir as plataformas alvo do trabalho; devem ser plataformas mercadologicamente relevantes ao desenvolvimento de jogos, que possibilitem a criação de aplicativos em HTML e que acentuem o antagonismo de características.
 
-Segue-se com a construção de uma lista com os recursos relevantes aos jogos que, empiricamente, sofrem ou são comummente ligados à limitações multipltaforma. Segue-se uma pesquisa para aprofundar teoricamente cada um dos rescursos, possivelmente elegendo novos.
+Segue-se com a construção de uma lista com os recursos relevantes aos jogos que, empiricamente, sofrem ou são comummente ligados à limitações multiplataforma. Segue-se uma pesquisa para aprofundar teoricamente cada um dos recursos, possivelmente elegendo novos.
 
-Com um embaseamento teórico substancial, o próximo passo é a prototipação de um jogo multiplataforma que utilize recursos potencialmente limitados. Para ser considerado pronto, o protótipo deve ser testado, e estar funcional, com adaptações ou não, em cada uma das plataformas alvo definidas.
+Com um baseamento teórico substancial, o próximo passo é a criação do protótipo de um jogo multiplataforma que utilize recursos potencialmente limitados. Para ser considerado pronto, o protótipo deve ser testado, e estar funcional, com adaptações ou não, em cada uma das plataformas alvo definidas.
 
 Com o protótipo concebido, o passo que segue é a enumeração, e descrição das limitações detectadas no processo de desenvolvimento e testes do jogo. Este detalhamento deve responder as seguintes perguntas:
 
-quas as limitações foram encontradas no jogo?
-em quais plataformas?
-sob quais circunstâcias?
-as limitações poduderam ser contornadas?
-algum efeito colateral das limitações no jogo?
-qual a categoria do problema: usabilidade, funcionalidade, manuteabilidade, portabilidade ou performance? (segundo ISO)
+Quais as limitações foram encontradas no jogo?
+Em quais plataformas?
+Sob quais circunstâncias?
+As limitações puderam ser contornadas?
+Algum efeito colateral das limitações no jogo?
+Qual a categoria do problema: usabilidade, funcionalidade, manutibilidade, portabilidade ou performance? (segundo ISO)
 
 *Ideia*
-Posso utilizar a iso para fazer perguntas mais diretas do que simples "limitações".
+Posso utilizar a ISO para fazer perguntas mais diretas do que simples "limitações".
 
 #RESULTADOS
 
 ##Limitações
 
-###Versões
+1-  Versões
 A grande maioria dos dispositivos atualmente no mercado utilizam obsoletas de seus softwares. Isso dificulta o desenvolvimento
 
-###Offline
-Refresh duplo para ver assets cacheados. Ver: http://buildnewgames.com/game-asset-management/
+2- Offline
+Refresh duplo para ver *assets* cacheados. Ver: http://buildnewgames.com/game-asset-management/
 
-###Som
+3- Som
 Api de som quebra quando executado diversas vezes
 
-###Assets
+4- Assets
 
-Trafegar muitos assets deixa o sistema lento.
-Possível contornar com loading e cache
+Trafegar muitos *assets* deixa o sistema lento.
+Possível contornar com *loading* e cache
 
 
-###UI
+5- UI
 
 É muito custoso desenvolver uma interface que pareça nativa em cada dispositivo sem a utilização de ferramentas especializadas.
-Em termos gerais, trabalhar com proporções é possitivo. Não obstante há casos, como o dos botões de certo e errado que a propo
+Em termos gerais, trabalhar com proporções é positivo. Não obstante há casos, como o dos botões de certo e errado que a proporções ficam exageradas, nesses casos a utilizada de max-width é uma solução conveniente.
 
-###Camera
+6- Câmera
 
-###Acelerômetro
+7-Acelerômetro
 
 #CONCLUSÃO
-
-Trabalhar com proporções parece ser uma alterantiva positiva.
 
 
 #CRONOGRAMA
@@ -220,7 +219,7 @@ Trabalhar com proporções parece ser uma alterantiva positiva.
 -->
 #Bibliografia
 
-Reference 3 é uma ótima fonte de explicação de como tecnologias relacionadas as assunto funcionaml.
+Reference 3 é uma ótima fonte de explicação de como tecnologias relacionadas ao assunto funcionam.
 *The total development time and cost of HTML5 based appliction is 67% lesser than native application development which shows the cost effectiveness of HTML5 based appplication*
 
 Reference 2 é uma ótimo trabalho para pegar ideias sobre como escrever as coisas.
@@ -249,18 +248,17 @@ Como o jogo é um software complexo demanda-se a utilização de metodologias de
 
 - OpenUP: este é bem detalhado e de característica iterativa e incremental. Gerando assim, um levantamento mais apurado dos riscos, requisitos e outros detalhes do sistema e a criação incremental do sistema, com requisitos maleáveis;
 - Cascata: processo antigo, caracteriza-se por ser pouco maleável aos requisitos mapeados posteriormente ao processo de análise;
-- Processo ágil - SCRUM: sua utilização é flexível e sendo um método àgil especifica pouca documentação, ou como dizem, somente a documentação necessária, este processo é bem conhecido e aceito na comunidade de desenvolvimento de software. Suas principais características são: divisão do processo de desenvolvimento através uma série de iterações chamadas sprints. Cada sprint consiste tipicamente em duas a quatro semanas. É bem aplicado a projetos que mudam constantemente e que demandam rápidas adaptações;
-- Processo ágil – XP: tem muitas características similares ao SCRUM por este também ser um processo ágil. Dentre suas especifidades destaca-se: versões frequentes, pequenos ciclos de desenvolvimento que buscam aumentar a produtividade, indroduzem checkpoints onde os clientes podem agregar novas funcionalidades;
+- Processo ágil - SCRUM: sua utilização é flexível e sendo um método ágil especifica pouca documentação, ou como dizem, somente a documentação necessária, este processo é bem conhecido e aceito na comunidade de desenvolvimento de software. Suas principais características são: divisão do processo de desenvolvimento através uma série de iterações chamadas sprints. Cada sprint consiste tipicamente em duas a quatro semanas. É bem aplicado a projetos que mudam constantemente e que demandam rápidas adaptações;
+- Processo ágil – XP: tem muitas características similares ao SCRUM por este também ser um processo ágil. Dentre suas especifidades destaca-se: versões frequentes, pequenos ciclos de desenvolvimento que buscam aumentar a produtividade, introduzem checkpoints onde os clientes podem agregar novas funcionalidades;
 
 ##AMBIENTES PARA DESENVOLVIMENTO HTML5
 
 Na pesquisa efetuada sobre estes frameworks full stack foram identificadas as seguintes tecnologias:
-    - segundo (PRADO, 2012) o GWT é um framework essencialmente para o lado do cliente (cliente-side) e dá suporte à comunicação com o servidor através de RPCs Remote Procedure Calls (ou procedimento de chamadas remotas). Ele não é um framework para aplicações clássicas da web, pois deixa a implementação da aplicação web parecida com implementações em desktop. Este é utilizado em muitos produtos de grande porte como o Google Adwords e Google Wallet. Outra característica interessante é que a plataforma opera sobre a licença Apache versão 2;
+    - segundo (PRADO, 2012) o GWT é um framework essencialmente para o lado do cliente (client side) e dá suporte à comunicação com o servidor através de RPCs Remote Procedure Calls (ou procedimento de chamadas remotas). Ele não é um framework para aplicações clássicas da web, pois deixa a implementação da aplicação web parecida com implementações em desktop. Este é utilizado em muitos produtos de grande porte como o Google Adwords e Google Wallet. Outra característica interessante é que a plataforma opera sobre a licença Apache versão 2;
     - construct 2 -  é um editor na nuvem focado para usuários sem conhecimento prévio em programação orientado a comportamento;
     - PlayCanvas - é uma plataformas para a construção de jogos 3D na nuvem, desenvolvida com foco em performance. Permite a hospedagem, controle de versão e publicação dos aplicativos nela criados, possibilita também a importação de modelos 3D de softwares populares como: Maya, 3ds Max e Blender;
-    - o ambiente HTML5 Development Environment (ambiente de desenvolvimento HTML5) da Intel, este fornece uma solução na nuvem, completa para o desenvolvimento em plataforma cruzada, com serviços de empacotamento, serviços para a criação e testes de aplicativos com montagem de interfaces drag and drop (Intex XDK) e biliotecas para a construção de jogos utilizando aceleração de hardware, o que garante até duas vezes mais performance que aplicativos mobile baseados em Web tradicionais. Esta solução é free, open source e funciona  através de um plugin para o Google Chrome, ou seja, o desenvolvimento também é multiplataforma e devido ao fato de os binários ficarem hospedados na nuvem, possibilitou a  Intel criar compiladores para cada uma das plataformas disponibilizadas pelo PhoneGap, que é o framework polyfill utilizado na solução.
+    - o ambiente HTML5 Development Environment (ambiente de desenvolvimento HTML5) da Intel, este fornece uma solução na nuvem, completa para o desenvolvimento em plataforma cruzada, com serviços de empacotamento, serviços para a criação e testes de aplicativos com montagem de interfaces drag and drop (Intex XDK) e bibliotecas para a construção de jogos utilizando aceleração de hardware, o que garante até duas vezes mais performance que aplicativos mobile baseados em Web tradicionais. Esta solução é free, open source e funciona  através de um plugin para o Google Chrome, ou seja, o desenvolvimento também é multiplataforma e devido ao fato de os binários ficarem hospedados na nuvem, possibilitou a  Intel criar compiladores para cada uma das plataformas disponibilizadas pelo PhoneGap, que é o framework polyfill utilizado na solução.
 
 #HTTP
-
 
 ##frameworks de desenvolvimento de jogos em HTML5;
