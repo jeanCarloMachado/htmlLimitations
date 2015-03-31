@@ -169,19 +169,21 @@ Posso utilizar a ISO para fazer perguntas mais diretas do que simples "limitaç�
 ##Limitações
 
 1-  Versões
+
 A grande maioria dos dispositivos atualmente no mercado utilizam obsoletas de seus softwares. Isso dificulta o desenvolvimento
 
 2- Offline
+
 Refresh duplo para ver *assets* cacheados. Ver: http://buildnewgames.com/game-asset-management/
 
 3- Som
+
 Api de som quebra quando executado diversas vezes
 
 4- Assets
 
 Trafegar muitos *assets* deixa o sistema lento.
 Possível contornar com *loading* e cache
-
 
 5- UI
 
