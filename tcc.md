@@ -33,16 +33,12 @@ Falar sobre as versões dos dispositivos e navegadores que serão testados?
 
 ---
 
-<!-- List of figures -->
-<!-- List of tables -->
-
----
 
 #Introdução
 
-É difícil se tornar competitivo no mercado de jogos, existem muitos produtos e muitas plataformas. Uma solução para este problema é a utilização de ferramentas comuns entre às plataformas a mais promissora destas ferramentas é o HTML.
+É difícil se tornar competitivo no mercado de jogos, existem muitos produtos e muitas plataformas. A utilização de tecnologias em comum entre todas as plataforma parece ser a solução, dentre elas está o HTML5.
 
-O senso comum sobre o HTML para o desenvolvimento de games geralmente segue a seguinte estrutura: "HTML é fantástico, mas...", depois do *mas* as respostas variam de acordo com a experiência empírica ou opinião alheia. O objetivo deste trabalho é constatar o quanto deste *mas* é verdadeiro através da concepção e posterior análise do processo de desenvolvimento de um jogo multiplataforma em HTML.
+O senso comum sobre o HTML para o desenvolvimento de games geralmente segue a seguinte estrutura: "HTML é fantástico, mas...", depois do *mas* as respostas variam de acordo com a experiência empírica ou opinião alheia. O objetivo deste trabalho é constatar o quanto deste mas é verdadeiro através da concepção e posterior análise do processo de desenvolvimento de um jogo multiplataforma em HTML.
 
 A palavra HTML5 se tornou um conceito guarda chuva para englobar as tecnologias da web (referênce 2)
 
@@ -50,7 +46,8 @@ Um trabalho completo sobre o assunto requiriria um comparativo entre jogos desen
 
 #PROBLEMA
 
-A carência de definições concretas sobre a viabilidade da atual versão do *HTML5* - quando utilizado no desenvolvimento de jogos e o senso comum, acabam por monopolizar à construção de jogos nativos as plataformas alvo. Os custos adicionais no ciclo vida de um jogo nativo, para diversas plataformas, é muito alto para ser considerado um problema trivial.
+A carência de definições concretas sobre a viabilidade da atual versão do *HTML5* - quando utilizado no desenvolvimento de jogos e o senso comum, acabam por monopolizar à construção de jogos nativos as plataformas alvo.
+Os custos introduzidos no ciclo vida de um jogo nativo, para diversas plataformas, é muito alto para ser considerado uma trivialidade.
 
 #OBJETIVOS
 ##OBJETIVO GERAL
@@ -58,7 +55,7 @@ A carência de definições concretas sobre a viabilidade da atual versão do *H
 Identificar possíveis limitações no processo de desenvolvimento de jogos multiplataforma oriundas do atual estado de definição e implementação do HTML5. O objetivo deste trabalho não é comparar o HTML com outras tecnologias de desenvolvimento de jogos, como FlashPlayer ou alternativas desktop, outrossim, comparar o HTML5 com o que se considera razoável no desenvolvimento de jogos nas plataformas alvo.
 
 ##OBJETIVOS ESPECÍFICOS
-Estudar as limitações de desenvolvimento de jogos nas plataformas de smartphones Android e navegadores Desktop Google Chrome e Firefox. Optamos por Android e não IOS pois o primeiro contém a vasta maioria do mercado de Smartphone, e por termos maior experiência na já mencionada plataforma.
+Estudar as limitações de desenvolvimento de jogos nas plataformas de *smartphones* Android e navegadores Desktop Google Chrome e Firefox. Optamos por Android e não IOS pois o primeiro contém a vasta maioria do mercado de Smartphone, e por termos maior experiência na já mencionada plataforma.
 
 Pretende-se também estudar os seguintes tópicos do desenvolvimento de jogos, relativos ao HTML5:
     - Debugging
@@ -74,7 +71,7 @@ Pretende-se também estudar os seguintes tópicos do desenvolvimento de jogos, r
     - Acelerômetro
     - *Storage*
     - disponibilização de assets (cotrole de tamanhos, cache, etc)
-    - Applicações offline
+    - Aplicações offline
     - Css media queries
 
 #JUSTIFICATIVA
@@ -103,14 +100,11 @@ Apesar de a tecnologia  ainda não estar completa ela já demonstra grande robus
 
 ##SOM
 
-Falar dos problemas da API de áudio.
-
 Atualmente, a maioria dos arquivos de áudio e vídeo rodam através de plugins (como o Adobe Flash). Não obstante, navegadores diferentes podem ter plugins diferentes. O HTML5 define dois novos elementos que especificam o padrão para imbuir áudio e vídeo em páginas Web: <audio> e <vídeo>.
 
 ##Gráficos
 
 ##ENTRADA DE COMANDOS
-
 Na construção da grande maioria dos jogos é muitas vezes imprescindível alta flexibilidade na gestão de entrada de dados. Este fator muito se amplia na criação de jogos multiplataforma, seja através de teclado, tela sensível ou sensor de movimentos, o importante é oferecer a melhor experiência possível por plataforma. O HTML5 trata todos estes casos abstratamente na forma de eventos, os quais podem ser *escutados* através de *listeners*. Os eventos básicos são: *keydown* (tecla baixa), *keyup* (tecla solta) e *keypress* (tecla pressionada).
 
 Para detectar suporte aos mais variados recursos do HTML5 no *browser* do cliente existem duas possibilidades. Pode-se implementar testes para cada funcionalidade utilizada abordando os detalhes de implementação de cada uma ou então fazer uso de alguma biblioteca especializada neste processo, o Modernizr é uma opção open-source deste tipo de biblioteca, este gera uma lista de booleanos sobre grande variedade dos recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e local storage.
@@ -128,16 +122,16 @@ Uma das soluções mais promissoras *polyfill* é o PhoneGap ou Apache Cordova, 
 
 ##FRAMEWORKS PARA DESENVOLVIMENTO DE JOGOS HTML5
 
-Com o intuito de simplificar o processo para os desenvolvedores, auxiliando-os a focarem-se apenas nas *soluções* que estão criando, foram criados os frameworks para desenvolvimento de jogos. Não obstante, o intuito deste trabalho é desenvolver um jogo sem auxilio de frameworks pois estes muitas vezes escondem possiveis limitações, desenvolvendo *workarounds* próprios.
+Com o intuito de simplificar o processo para os desenvolvedores, auxiliando-os a focarem-se apenas nas *soluções* que estão criando, foram criados os frameworks para desenvolvimento de jogos. Não obstante, o intuito deste trabalho é desenvolver um jogo sem auxilio de frameworks pois estes muitas vezes escondem possíveis limitações, desenvolvendo *workarounds* próprios.
 
 
 - enchant.js: dentre suas funcionalidades constam: orientação à objetos, orientado à eventos, contém um motor de animação, suporta WebGL e Canvas, etc;
 - three.js: considerada leve, renderiza WebGL e Canvas, arquitetura procedural;
 - quintus:
 
-##Mobile first
+##Mobile First
 
-Uma estratégia para criar jogos Web que funcionem adequadamente tanto nas resoluções de smartphones, quanto em resoluções de desktops foi a *Mobil First* . Como o nome indica, consiste em desenvolver primeiramente a aplicação para resoluções menores, geralmente 320px.
+Uma estratégia para criar jogos Web que funcionem adequadamente tanto nas resoluções de *smartphones*, quanto em resoluções de desktops foi a *Mobil First* . Como o nome indica, consiste em desenvolver primeiramente a aplicação para resoluções menores, geralmente *320pixels*.
 
 #Formas de disponibilizar o aplicativo nos dispositivos móveis
 
