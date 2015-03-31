@@ -1,23 +1,12 @@
 <!--
 
 Ideias:
-Falar sobre o desenvolvimento e exportação em uma linhaguem para as linguagens nativas
 Contra argumentos são interessantes na introdução, mas primeiramente os argumentos à favor
 Pesquisar sobre isos (9126) de qualidade para ver parmetros de avaliação (pensar melhor)
-mencionar sobre media queries do css3
-webgl é uma boa... estudar mais!
-porque android e não IOS
-Chrome e Firefox
-utilizar eventos de touch no mobile
-falar sobre loading times
-
 Detalhar as plataformas alvo (talvez na introdução (como referência 3))
 
 Dúvidas:
-
-Devo ressaltar na conclusão que eu não tinha nenhuma experiência inicial com desenvolvimento de jogos web?
-devo coletar as limitações que podem ser contornadas com workarounds? - colocar demonstra aprofundamento
-Falar sobre versões menores das plataformas alvo
+Falar sobre as versões dos dispositivos e navegadores que serão testados?
 
 -->
 
@@ -67,7 +56,7 @@ A carência de definições concretas sobre a viabilidade da atual versão do *H
 Identificar possíveis limitações no processo de desenvolvimento de jogos multiplataforma oriundas do atual estado de definição e implementação do HTML5. O objetivo deste trabalho não é comparar o HTML com outras tecnologias de desenvolvimento de jogos, como FlashPlayer ou alternativas desktop, outrossim, comparar o HTML5 com o que se considera razoável no desenvolvimento de jogos nas plataformas alvo.
 
 ##OBJETIVOS ESPECÍFICOS
-Estudar as limitações de desenvolvimento de jogos nas plataformas de smartphones Android e navegadores Desktop Google Chrome e Firefox.
+Estudar as limitações de desenvolvimento de jogos nas plataformas de smartphones Android e navegadores Desktop Google Chrome e Firefox. Optamos por Android e não IOS pois o primeiro contém a vasta maioria do mercado de Smartphone, e por termos maior experiência na já mencionada plataforma.
 
 Pretende-se também estudar os seguintes tópicos do desenvolvimento de jogos, relativos ao HTML5:
     - Debugging
@@ -83,7 +72,8 @@ Pretende-se também estudar os seguintes tópicos do desenvolvimento de jogos, r
     - Acelerômetro
     - *Storage*
     - disponibilização de assets (cotrole de tamanhos, cache, etc)
-    - offline applications
+    - Applicações offline
+    - Css media queries
 
 #JUSTIFICATIVA
     Tendo em vista que este trabalho busca mapear possíveis problemas do desenvolvimento multiplataforma em HTML, ele serve para apoiar e justificar decisões relativas ao desenvolvimento de jogos multiplataforma;
@@ -99,7 +89,7 @@ Pretende-se também estudar os seguintes tópicos do desenvolvimento de jogos, r
 
 Na vasta maioria dos casos utilizada para criar websites.
 
-Trata-se de uma linguagem de marcação que define a estrutura de elementos que uma página deve ter de modo a fornecer conteúdo iterativo aos usuários. Todavia, a interatividade necessária para a construção de jogos animados em HTML é algo recente, anteriormente só se obtinha com a utilização de ferramentas proprietárias como o Adobe Flash, Microsoft Silverlight e Oracle JavaFX.
+Trata-se de uma linguagem de marcação que define a estrutura de elementos que uma página deve ter de modo a fornecer conteúdo iterativo aos usuários. Todavia, a interatividade necessária para a construção de jogos animados em HTML é algo recente, anteriormente só se obtinha com a utilização de ferramentas proprietárias como o Adobe Flash e Microsoft Silverlight.
 
 No HTML5 esta interatividade é alcançada através da utilização do recurso canvas, que é a tag HTML que permite-se "desenhar" dentro da página.
 
@@ -125,7 +115,7 @@ Para detectar suporte aos mais variados recursos do HTML5 no *browser* do client
 
 ##TECNOLOGIAS POLYFILL
 
-O HTML5 por não ser um padrão completamente especificado, deixa lacunas de suporte em plataformas, tanto para a gestão de hardware quanto de software. Acarretando assim, que muitos *browsers* não implementam algumas funcionalidades, completa ou parcialmente especificadas, daí surge a necessidade dos polyfills (tecnologias de preenchimento de lacunas) para implementar estas camadas.
+Acarretando assim, que muitos *browsers* não implementam algumas funcionalidades, completa ou parcialmente especificadas, daí surge a necessidade dos polyfills (tecnologias de preenchimento de lacunas) para implementar estas camadas.
 
 Algumas tecnologias desta classe são:
 
@@ -133,9 +123,6 @@ Algumas tecnologias desta classe são:
 - Suporte à calendário;
 
 Uma das soluções mais promissoras *polyfill* é o PhoneGap ou Apache Cordova, esta ferramenta é *open-source* e possibilita utilizar de inúmeros recursos de hardware da grande maioria das produtoras de dispositivos móveis.
-
-<!-- remover essa referência (sem ano e página) -->
-Segundo JÚNIOR  utilizando as linguagens de desenvolvimento Web HTML, CSS e Javascript. Ele fornece um conjunto de APIs para acesso a funções nativas do Sistema Operacional e do hardware do dispositivo, utilizando Javascript. A proposta do PhoneGap é essencial para unir as especificidades de Web com detalhes de sistemas operacionais tanto de hardware como de software.
 
 ##FRAMEWORKS PARA DESENVOLVIMENTO DE JOGOS HTML5
 
@@ -155,7 +142,6 @@ Uma estratégia para criar jogos Web que funcionem adequadamente tanto nas resol
 Links com manifestos
 Crosswalk project
 Phone gap
-
 
 #TRABALHOS SIMILARES
 
@@ -213,6 +199,7 @@ Em termos gerais, trabalhar com proporções é possitivo. Não obstante há cas
 
 Trabalhar com proporções parece ser uma alterantiva positiva.
 
+
 #CRONOGRAMA
 ---
 
@@ -247,49 +234,12 @@ http://www.develop-online.net/tools-and-tech/html5-a-blessing-or-a-curse/0117393
 http://www.toptal.com/html5/top-5-mistakes-that-html5-developers-make
 
 
-**The State of Open Web Games**
-Addison Wesley, Massachusetts, pg. 12,
-ISBN: 978-1-4302-3978-9,
-2012.
-
-SILVA, Jucimar Maria Júnior; FIRMINO, Emiliano Carlos M.
-Desenvolvimento de jogos em HTML5
-Coordenação da engenharia da Computação,
-Univerisdade Federal do Amazonas,
-Amazonas,
-2010.
-
-SHANKAR, Aditya Ravi .
-**Pro HTML5 Games**
-ISBN: 978-1-4302-4710-4, p. 39-64,
-2012.
-
-TABUSCA, Alexandru
-**THE NEW “UNIVERSAL TRUTH” OF THE WORLD WIDE WEB**.
-American University, School of Computer Science for
-Business Management, Bucharest, 2013
-
-FRANZINI, Fernando
-**Nova tendência de aplicativos móveis web**  Disponível em:
-[http://www.infobase.com.br/nova-tendencia-de-aplicativos-moveis-web/]. Acesso em: jun,
-2013.
-
-PRADO, Ely Fernando
-**Introdução ao Desenvolvimento de Games com GWT e HTML5**
-Departamento de Computação, Universidade Federal de São Carlos (UFSCar) São Carlos, SP, 2012.
-
-RENYO Emanuel Montero
-**MODEL-DRIVEN GAME DEVELOPMENT: 2D PLATFORM GAME PROTOTYPING**
-Departamento de Sistemas Informáticos y Computación. Universidad Politécnica de Valencia,Valencia, España, 2006.
-
-WEINTRAUB, Seth
-**Industry first: Smartphones pass PCs in sales**
-Disponível em: http://tech.fortune.cnn.com/2011/02/07/idc-smartphone-shipment-numbers-passed-pc-in-q4-2010/
-Acesso em: Jul 2012.
-
 #Apêndices
 
-##Canvas (detalhamento)
+##Conversores para HML5
+Além da possibilidade de escrever em HTML, pode-se optar pela alternativa de utilizar-se um conversor de linguagens.
+
+##WebGL
 
 ##METODOLOGIA DE DESENVOLVIMENTO DE SOFTWARE PARA A CONSTRUÇÃO DE GAMES <!-- incrementar e colocar no apêndice -->
 
