@@ -80,6 +80,7 @@ Pretende-se também estudar os seguintes tópicos do desenvolvimento de jogos, r
     - Aplicações offline
     - Css media queries
 
+
 #JUSTIFICATIVA
 
 Tendo em vista que este trabalho busca mapear possíveis problemas do desenvolvimento multiplataforma em HTML, ele serve para apoiar e justificar decisões relativas ao desenvolvimento de jogos multiplataforma;
@@ -100,10 +101,6 @@ Escolhi um jogo de matemática pois o design precisava ser simples e elucidar a 
 Definição de jogos do meu livro.
 
 Para aumentar a interatividade é interessante fazer uso dos recursos disponíveis no hardware sendo utilizado.
-
-##Mobile First
-
-Uma estratégia para criar jogos Web que funcionem adequadamente tanto nas resoluções de *smartphones*, quanto em resoluções de desktops foi a *Mobil First* . Como o nome indica, consiste em desenvolver primeiramente a aplicação para resoluções menores, geralmente *320pixels*.
 
 ##Interface e escrolhas de design
 
@@ -182,6 +179,7 @@ Package manager para o Node
 
 Rodam dentro de um cotainer
 Permite a utilização de APIS nativas do sistema operacional em questão;
+
 
 ##ENTRADA DE COMANDOS
 
