@@ -1,2 +1,4 @@
 # tcc
-My conclusion work on IFRS about Multiplataform Games
+
+My conclusion work on IFRS about HTML5 Multiplataform Games Limitations.
+
