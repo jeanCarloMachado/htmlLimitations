@@ -1,0 +1,178 @@
+INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA
+ E TECNOLOGIA DO RIO GRANDE DO SUL
+ CÂMPUS BENTO GONÇALVES
+
+
+
+
+
+
+
+
+
+
+
+LIMITAÇÕES NO DESENVOLVIMENTO DE JOGOS MULTIPLATAFORMA EM HTML 5
+
+
+
+
+
+
+
+
+
+Jean Carlo Machado
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bento Gonçalves, Julho de 2015.
+JEAN CARLO MACHADO
+
+
+
+
+
+
+
+
+LIMITAÇÕES NO DESENVOLVIMENTO DE JOGOS MULTIPLATAFORMA EM HTML 5
+
+
+
+
+
+
+
+Proposta de projeto de Trabalho de Conclusão de Curso em Análise e Desenvolvimento de Sistemas do Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul – Câmpus Bento Gonçalves.
+
+Orientador: Me. Rafael Jaques
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bento Gonçalves, Julho de 15.
+
+
+RESUMO
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+
+
+
+
+
+
+
+
+
+
+Palavras-chave: Multiplataforma. HTML5.
+
+
+
+Sumário
+ 1 CONTEXTUALIZAÇÃO 6
+ 1.1 JOGOS  6
+ 1.2 JOGOS E MULTIPLATAFORMA    6
+ 1.2.1 DESENVOLVIMENTO DE JOGOS NATIVOS 6
+ 1.2.2 DESENVOLVIMENTO DE JOGOS WEB 7
+ 1.2.3 DESENVOLVIMENTO DE JOGOS HÍBRIDOS    7
+ 1.3 HTML E MULTIPLATAFORMA 7
+ 1.4 LIMITAÇõES DE JOGOS MULTIPLATAFORMA COM HTML5  8
+ 1.5 ESTE TRABALHO  8
+ 1.5.1 O JOGO   9
+ 2 PROBLEMA 10
+ 3 OBJETIVOS    11
+ 3.1 OBJETIVO GERAL 11
+ 3.2 OBJETIVOS ESPECÍFICOS  11
+ 4 JUSTIFICATIVA    13
+ 5 REVISÃO BIBLIOGRÁFICA    14
+ 5.1 JOGOS  14
+ 5.2 GÊNEROS    15
+ 5.3 MECÂNICA DOS JOGOS 15
+ 5.4 NAVEGADORES WEB    15
+ 5.5 ANDROID    16
+ 5.6 HTML   16
+ 5.7 CSS    17
+ 5.8 JAVASCRIPT 17
+ 5.9 ALTERNATIVAS AO JAVASCRIPT 18
+ 5.9.1 TYPESCRIPT   18
+ 5.9.2 DART 18
+ 5.10 DOCUMENT OBJECT MODEL (DOM)   18
+ 5.11 CANVAS    19
+ 5.12 WEBGL 19
+ 5.13 VIDEO 19
+ 5.14 AUDIO 19
+ 5.14.1 TAG AUDIO   19
+ 5.14.2 Api de audio    20
+ 5.15 CAMERA    20
+ 5.16 ENTRADA DE COMANDOS   20
+ 5.17 CACHE 20
+ 5.18 OFFLINE E ARMAZENAMENTO   21
+ 5.18.1 LOCAL STORAGe   21
+ 5.18.2 WEB SQL 21
+ 5.19 RECURSOS NATIVOS ATUALMENTE INDISPONíVEIS PARA O HTML5    21
+ 5.20 DEBUG 21
+ 5.20.1 WEINRE  21
+ 5.21 TECNOLOGIAS POLYFILL  21
+ 5.22 FERRAMENTAS   22
+ 5.22.1 NODEJS  22
+ 5.22.2 SISTEMAS DE BUILDING    22
+ 5.22.3 GRUNT   22
+ 5.22.4 GULP    22
+ 5.22.5 SOURCE MAPS 22
+ 5.22.6 MINIFY  22
+ 5.22.7 GERENCIADORES DE PACOTES    22
+ 5.22.8 BOWER   22
+ 5.22.9 NPM 23
+ 5.23 DISPONIBILIZAÇÂO DA APLICAÇÂO 23
+ 5.23.1 INSTALAÇÃO  23
+ 5.23.1.1 CROSSWALK 23
+ 5.23.1.2 PHONEGAP  23
+ 5.23.2 PHONEGAP CLOUD  23
+ 5.24 O JOGO    23
+ 5.24.1 IMPLEMENTAÇÃO   24
+ 5.25 FEEDBACK  24
+ 6 TRABALHOS SIMILARES  25
+ 7 METODOLOGIA  26
+ 8 RESULTADOS   28
+ 8.1 LIMITAÇÕES 28
+ 9 CONCLUSÕES   31
+ 9.1 TRABALHOS FUTUROS  31
+ 10 CRONOGRAMA  33
+BIBLIOGRAFIA    35
+GLOSSÁRIO   36
+ANEXOS  37
+ 10.1 CONVERSORES PARA HTML5    37
+ 10.2 METODOLOGIA DE DESENVOLVIMENTO DE SOFTWARE PARA A CONSTRUÇÃO DE GAMES 37
+ 10.3 AMBIENTES PARA DESENVOLVIMENTO HTML5  38
+ 10.4 HTTP  39
+ 10.5 FRAMEWORKS PARA DESENVOLVIMENTO DE JOGOS HTML5    39
+ 10.6 INTERFACE E ESCOLHAS DE DESIGN    39
+
+
