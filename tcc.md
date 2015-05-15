@@ -1,16 +1,21 @@
 #1  CONTEXTUALIZAÇÃO
 
 ##1.1  JOGOS
-Jogos é uma tendência que veio para ficar. (colocar estatísticas sobre jogos).
-Segundo o Wikipedia
-Seus compoentes incluem: regras, desafios e interações. Geralmente envolvem simulação física e mental. Muitos jogos ajudam a desenvolver habilidades práticas, servem como uma forma de exercício, ou de alguma forma executam um papel educacional, de simulação ou psicológico. Jogos são uma parte universal do experiência humana, presentes em todas as culturas.
+São variadas as pesquisas que apontam os benefícios dos jogos eletrônicos para as pesssoas, coordenação motora, maior concentração entre outros fatores. A muito a indústria de jogos superoua cinematográfica.
 
+<!-- estatísticas sobre os jogos -->
+
+
+Os compoentes dos jogos incluem: regras, desafios e interações. Geralmente envolvem simulação física e mental. Muitos jogos ajudam a desenvolver habilidades práticas, servem como uma forma de exercício, ou de alguma forma executam um papel educacional, de simulação ou psicológico. Jogos são uma parte universal do experiência humana, presentes em todas as culturas.
+
+Entretanto, a pluralidade de dispositivos se tornou atraente para a indústria e consumidores de jogos. 
 
 ##1.2  JOGOS E MULTIPLATAFORMA
 
-A pluralidade de dispositivos se tornou atraente para a indústria e consumidores de jogos.
-É laboriosa a tarefa dos produtores neste panorama, existem muitas plataformas. Além da fragmaentação de versões, e hardwares diferenciados.
-Existem estratégias de abordagem no desenvolvimento de jogos que vão decidir quais plataformas serão atendidas pelos jogos.
+Existem algumas estratégias na hora de definir como um jogo será construído. Pode-se contruir um jogo nativo, um jogo web ou um híbrido.
+
+No início os jogos nativos dominavam. Entretanto, é laboriosa a tarefa dos produtores de software em um panorama tão diversificado como o atual, existem muitas plataformas, muitas versões e hardwares diferenciados.
+
 
 ###1.2.1  DESENVOLVIMENTO DE JOGOS NATIVOS
 
