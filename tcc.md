@@ -127,14 +127,14 @@ No quesito jogos para dispositivos móveis é preferível disponibilizar os jogo
 ##5.6  HTML
 
 Linguagem de marcação da web. Criada para definir os elementos de uma página da web. Com o crescimento da demanda de interatividade na internet o HTML foi forçado a evoluir. Em sua quinta versão, o HTML5, grandes melhorias foram adicionadas. Antes do HTML5 para alcançar a interatividade desejada, só te podia recorrer a plugins de terceiros como o FlashPlayer e o Silverlight, estes necessitam de instalação de plugin e ficam limitados a um distribuidor des software.
- 5.7  CSS
+##5.7  CSS
 Uma linguagem de marcação, como o HTML,  que utiliza seletores e regras para definir a representação de um documento HTML e seus elementos.
 Os navegadores interpretam CSS através da tag <style>.
 Sua última versão, o CCS3, introduziu várias funcionalidades multiplataforma como media-queries que possibilitam regras para tamanhos de tela e Transformções 3D.ojjkk
 Muitos navegadores também suportam aceleração de GPU (Graphis Process Unit) para elementos que tenham transformações 3d.
 Flow de documento, ordem e posição em que os elementos tem que aparecer na página. Modelo de caixa o que encapsula o conteúdo em um elementos.
 
- 5.8  JAVASCRIPT
+## 5.8  JAVASCRIPT
 Todo o navegador atual contém um interpretador de javascript tornando-o portável.
 Emacscript criado pela Netscape se tornou tão popular que foi abraçada pela W3C
 Atualmente a linguagem de programação mais popular do mundo.
