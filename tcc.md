@@ -5,7 +5,6 @@ São variadas as pesquisas que apontam os benefícios dos jogos eletrônicos par
 
 <!-- estatísticas sobre os jogos -->
 
-
 Os componentes dos jogos incluem: regras, desafios e interações; geralmente envolvem simulação física e mental. Muitos jogos ajudam a desenvolver habilidades práticas, servem como uma forma de exercício, ou de alguma forma executam um papel educacional, de simulação ou psicológico. Jogos são uma parte universal do experiência humana, presentes em todas as culturas.
 
 No início os jogos nativos dominavam.
@@ -147,14 +146,17 @@ Muitos navegadores também suportam aceleração de GPU (Graphis Process Unit) p
 Flow de documento, ordem e posição em que os elementos tem que aparecer na página. Modelo de caixa o que encapsula o conteúdo em um elementos.
 
 ## 5.8  JAVASCRIPT
+
 Todo o navegador atual contém um interpretador de javascript tornando-o portável.
 Emacscript criado pela Netscape se tornou tão popular que foi abraçada pela W3C
 Atualmente a linguagem de programação mais popular do mundo.
 Javascript 6 trás conceitos de orientação à objetos.
 Existem vários transpiladores para javacript que permitem a utilização de linguagens que evoluem mais rapidamente.
 Na versão estável atual 5.1, é  uma linguagem que falha ao impressionar. Especialmente quando comparada com linguagens mais maduras como C++. O objetivo inicial do javascript nunca for para ser utilizada em projetos de grande escala.
-Desenvolvedores superutilizam seus acerrtos.
-Existem músitas ferramentas de desenvolvimento designadas para alivar as falhas do javascirpt como transpiladores.
+Desenvolvedores super utilizam seus acertos.
+
+Existem muitas ferramentas de desenvolvimento designadas para aliviar as falhas do javascirpt como transpiladores.
+
 Seu ciclo de desenvolvimento é demorado pois necessita da aprovação de muitas partes.
 Tipicamente javascript é criado separadamente do html, através da tag <script>. Quando os navegadores encontram essa tag eles fazem a requisição para o servidor para intejetar o código no documento. Isso pode ser problemático para projetos que incluam vários scripts.
 
@@ -163,12 +165,12 @@ Javascript se tornou portável e isso é um componente chave no desenvolvimento 
 ##5.9  ALTERNATIVAS AO JAVASCRIPT
 Abaixo segem algumas tecnologias que servem de alternativa ao Javascript.
 ###5.9.1  TYPESCRIPT
-Conhecido como uma versão extendida do Javascript que compila para javascript normal. Isso significa que os desenvolvedores podem continuar escrevendo Javascript normalmente. Typescript oferece classes, interfaces e módulos. 
+Conhecido como uma versão extendida do Javascript que compila para javascript normal. Isso significa que os desenvolvedores podem continuar escrevendo Javascript normalmente. Typescript oferece classes, interfaces e módulos.
 ###5.9.2  DART
-Goolge. DartVM é uma máquina virtual que está embebido no google-chrome. Significante melhorias em perfomance quando comparado ao Javascript. Existe o dart2js que compila código em dart para javascript.
+Goolge. DartVM é uma máquina virtual que está embebido no google-chrome. Significante melhorias em performance quando comparado ao Javascript. Existe o dart2js que compila código em dart para javascript.
 
 ##5.10  DOCUMENT OBJECT MODEL (DOM)
-É uma plataforma e interface agnóstica a linguagem que permite os programas e scripts dinamicamente acessar e atualizar o conteúdo, estrutura e estilo de docuemntos. Pode ser novamente processado e o resultado aparecer na tela. O navegador cria um DOM quando ele processa os elementos e tags encontrados em um documento HTML.Gmail é uma aplicação de única página (single-page) que se baseia fortemente no DOM para gerar conteúdo dinâmico e interativo oferecido pelo DOM.
+É uma plataforma e interface agnóstica a linguagem que permite os programas e scripts dinamicamente acessar e atualizar o conteúdo, estrutura e estilo de documentos. Pode ser novamente processado e o resultado aparecer na tela. O navegador cria um DOM quando ele processa os elementos e tags encontrados em um documento HTML. Gmail é uma aplicação de única página (single-page) que se baseia fortemente no DOM para gerar conteúdo dinâmico e interativo oferecido pelo DOM.
 
 ##5.11  CANVAS
 
@@ -176,45 +178,63 @@ A nova tag <canvas> define um layer gráfico em documentos HTML que pode ser des
 Permite desenhar diagramas, gráficos e animações [7]. É baseado em bitmap.
 O suporte ainda é escasso.
 Muitas vezes lento. Algumas soluções tentam arrumar isso através da utilização de GPU.
-Apache Cordovautliza o FastCanvas.
+Apache Cordova utliza o FastCanvas.
 
 CocoonJS é uma aplicativo híbrido que preenche a fraca implementação de OPENGL nos dispositivos móveis possibilitando se desenvolver em WEBGL.
+
 ##5.12  WEBGL
+
 Baseado no OpenGL
 Web GL não foi utilizada no trabalho apesar de ser de grande relevância no processo de jogos pois ainda não está completamente especificada e a diciculdade e escopo do projeto aumentariam muito se tivessem de incluir um jogos 3D.
 Versão da especificação atual?
+
 ##5.13  VIDEO
 ##5.14  AUDIO
+
 Audio é um componente vital para oferecer grande satisfação aos usuários de jogos. Provê feedback e imerge o usuário. Efeitos de som e música podem servir como mecanismo. Jogadores tem baixa tolerância a volume, deve ser utilizado com cautela.
+
 ###5.14.1  TAG AUDIO
-A tag <audio> define um som dentro de um docuemento html. Quando o o elemento é renderizado pelos navegadores, ele carrega o conteúdo que pode ser reproduzido pelo player de audio do navegador. Existem múitas discrepâncias entre os formados aceitaveis pelos navegadores. È um tanto limitada quanto comparada ao aúdio de múltiplos canais disponibilizados por SDKs nativas.
+A tag <audio> define um som dentro de um documento html. Quando o o elemento é renderizado pelos navegadores, ele carrega o conteúdo que pode ser reproduzido pelo player de audio do navegador. Existem muitas discrepâncias entre os formados aceitáveis pelos navegadores. È um tanto limitada quanto comparada ao áudio de múltiplos canais disponibilizados por SDKs nativas.
 ###5.14.2  API DE AUDIO
 É uma interface de audio experimental para Javascript. Provê maior flexibilidade na manipulação de audio. Essa tecnologia é muito mais nova do que a tag audio.
 FORMATOS DE ÁUDIO
+
 ##5.15  CAMERA
+
 ##5.16  ENTRADA DE COMANDOS
+
 Na construção da grande maioria dos jogos é muitas vezes imprescindível alta flexibilidade na gestão de entrada de dados. Este fator muito se amplia na criação de jogos multiplataforma, seja através de teclado, tela sensível ou sensor de movimentos, o importante é oferecer a melhor experiência possível por plataforma. O HTML5 trata todos estes casos abstratamente na forma de eventos, os quais podem ser escutados através de listeners. Os eventos básicos são: keydown (tecla baixa), keyup (tecla solta) e keypress (tecla pressionada).
 
 Para detectar suporte aos mais variados recursos do HTML5 no browser do cliente existem duas possibilidades. Pode-se implementar testes para cada funcionalidade utilizada abordando os detalhes de implementação de cada uma ou então fazer uso de alguma biblioteca especializada neste processo, o Modernizr é uma opção open-source deste tipo de biblioteca, este gera uma lista de booleanos sobre grande variedade dos recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e local storage.
+
 ##5.17  CACHE
 Applicações offline.
 Algumas tecnologias desta classe são:
+
 ##5.18  OFFLINE E ARMAZENAMENTO
+
 ###5.18.1  LOCAL STORAGe
 Também conhecido como WebStorage na especificação do HTML5. Provê uma forma de armazenar os dados como chave-valor dentro do navegador. Os dados são persistido mesmo que o navegador seja fechado.
+
 ###5.18.2  WEB SQL
+
 Simplesmente um banco de dados SQLite embebido no navegador. Permite tabelas relacionais. O tamanho padrão do banco de dados é 5Mbytes e pode ser extendido pelo usuário.
 
 ##5.19  RECURSOS NATIVOS ATUALMENTE INDISPONíVEIS PARA O HTML5
+
 - Suporte à câmera;
 - Suporte à calendário;
+
 ##5.20  DEBUG
+
 ###5.20.1  WEINRE
+
 Debugger remoto depreciado.
  5.21  TECNOLOGIAS POLYFILL
 Acarretando assim, que muitos browsers não implementam algumas funcionalidades, completa ou parcialmente especificadas, daí surge a necessidade dos polyfills (tecnologias de preenchimento de lacunas) para implementar estas camadas.
 
 Uma das soluções mais promissoras polyfill é o PhoneGap ou Apache Cordova, esta ferramenta é open-source e possibilita utilizar de inúmeros recursos de hardware da grande maioria das produtoras de dispositivos móveis.
+
 ##5.22  FERRAMENTAS
 ###5.22.1  NODEJS
 Permite rodar Javascript fora do browser. Utiliza um modelo dirigido à eventos sem bloqueio, tornando-o rápido e eficiente.
@@ -310,7 +330,7 @@ Utilizando páginas de carregamento e/ou cache;
 5. UI
 
 É muito custoso desenvolver uma interfaces que pareçam nativas para cada dispositivo sem a utilização de plugins e ferramentas especializadas.
-Em termos gerais, trabalhar com proporções é positivo. Não obstante há casos, como o dos botões de certo e errado que a proporções ficam exageradas, nesses casos a utilizada de max-width é uma solução conveniente.   
+Em termos gerais, trabalhar com proporções é positivo. Não obstante há casos, como o dos botões de certo e errado que a proporções ficam exageradas, nesses casos a utilizada de max-width é uma solução conveniente.
 
 6. PERFORMANCE
 
@@ -331,15 +351,6 @@ Limitação
 Desktop/Firefox
 Desktop/Google Chrome
 Smatphone/Android
-
-
-
-
-
-
-
-
-
 
 
 
