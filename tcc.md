@@ -31,28 +31,33 @@ Não obstante, esta opção – devido a incompletude da especificação de padr
 ###1.2.3  DESENVOLVIMENTO DE JOGOS HÍBRIDOS
 Jogos híbridos são jogos geralmente desenvolvidos com tecnologias da web: beneficiando-se da não necessidade de duplicação. Rodam dentro de um *container* nativo – possibilitando o acesso à chamadas do sistema, recursos de hardware, eliminando muitias das  dificuldades da web.
 Em certo sentido, beneficiam-se do melhor de ambas as metodologias anteriores.
-Phone game é uma ferramente deste tipo. Permite acessar os dispositivos utilizando sua API Javascript. Funnciona encapsulando todo o código HTML5. Este tipo de abordagem permite acessar câmera, acelerômetro, gps, etc.
+Phone game é uma ferramente deste tipo. Permite acessar os dispositivos utilizando sua API javascript. Funciona encapsulando todo o código HTML5. Este tipo de abordagem permite acessar câmera, acelerômetro, GPS, etc.
 
 ##1.3  HTML E MULTIPLATAFORMA
-A OWP (Open Web Platform), uma coleção de tecnologias livres, amplamente utilizadas e padronizadas.  O HTML Hypertext Markup Language é a peça fundamental da OWP, seu objetivo é especificar o conteúdo das páginas web. Trata-se de uma linguagem de marcação que define a estrutura de elementos que uma página deve ter de modo a fornecer conteúdo aos usuários. 
-O HTML5 é um conceito guarda chuva para designar as tecnologias da web Javascript, CSS3 e HTML. Em termos práticos signfica que quando uma tecnologia se torma muito popular através da adoção de algumas grandes empresas e dos desenvolvedores, ela se torna candidata a adoção.
+A OWP (Open Web Platform), uma coleção de tecnologias livres, amplamente utilizadas e padronizadas.  O HTML Hypertext Markup Language é a peça fundamental da OWP, seu objetivo é especificar o conteúdo das páginas web. Trata-se de uma linguagem de marcação que define a estrutura de elementos que uma página deve ter de modo a fornecer conteúdo aos usuários.
+
+O HTML5 é um conceito guarda chuva para designar as tecnologias da web Javascript, CSS3 e HTML. Em termos práticos significa que quando uma tecnologia se torna muito popular através da adoção de algumas grandes empresas e dos desenvolvedores, ela se torna candidata a adoção.
 A interatividade necessária para a construção de jogos animados em HTML é algo recente, obtido através dos esforços direcionados no HTML5, anteriormente só se obtinha iteratividade de tamanho proporção na Web com a utilização de ferramentas proprietárias como o Adobe Flash e Microsoft Silverlight.
 
-##1.4  LIMITAÇõES DE JOGOS MULTIPLATAFORMA COM HTML5
-Enquanto o HTML é desenvolvido muitas das funcionalidades disponibilizadas são testadas em apenas um pequeno conjunto de navegadores para um pequeno conjunto de versões (referência 2). Isso acarreta em suporte inconsistente.  A forma mais segura de garantir suporte é testando emtodas as versões alvo, todavia essa solução é imprática.
+##1.4  LIMITAÇÕES DE JOGOS MULTIPLATAFORMA COM HTML5
+Enquanto o HTML é desenvolvido muitas das funcionalidades disponibilizadas são testadas em apenas um pequeno conjunto de navegadores para um pequeno conjunto de versões (referência 2). Isso acarreta em suporte inconsistente.  A forma mais segura de garantir suporte é testando em todas as versões alvo, todavia essa solução não é prática.
+
 Os desenvolvedores de navegadores podem interpretar/implementar as especificações erroneamente aumentando os problemas de compatibilidade.
+
 Nem todos os recursos disponíveis através das SDK's nativas estão presentes através do HTML5.
 
 ##1.5  ESTE TRABALHO
-Este projeto propõe analisar as limitações do HTML5 quanto relativo á construção de jogos multiplataforma. Através de revisão biliográfica e  da criação de um protótipo de jogo multiplataforma.
+Este projeto propõe analisar as limitações do HTML5 quanto relativo á construção de jogos multiplataforma. Através de revisão bibliográfica e  da criação de um protótipo de jogo multiplataforma.
 
 Um tratado completo sobre o assunto requiriria um comparativo entre jogos desenvolvidos nativamente e jogos em HTML5.
 Não é objetivo deste trabalho demonstrar onde o HTML5 se sobressai, apenas suas limitações.
-Também não é objetivo deste trabalho comparar o HTML com outras tecnologias de desenvolvimento de jogos, como FlashPlayer, Silverlight ou alternativas desktop.
+Também não é objetivo deste trabalho comparar o HTML com outras tecnologias de desenvolvimento de jogos, como FlashPlayer, Silverlight ou alternativas Desktop.
 
 O escopo deste projeto não me permite tanto.
+
 ###1.5.1  O JOGO
-Para a análise das limitações foi escolhido um jogo de matemática simples, consistindo na geração de equações com um candidato de resposta. Cabe ao usuário informar se o resultado apontado pelo jogo está correto ou não. Escolhi um jogo deste tipo pois sua concepção necessitava ser razoavelmente veloz para dar continuidade na pesquisa.
+Para a análise das limitações foi escolhido um jogo de matemática simples, consistindo na geração de equações com um candidato de resposta. Cabe ao usuário informar se o resultado apontado pelo jogo está correto ou não. Escolhi um jogo deste tipo
+
 
 #2  PROBLEMA
 
@@ -91,7 +96,7 @@ Estimular e avançar o estudo da implementação da  Open Web;
  5  REVISÃO BIBLIOGRÁFICA
  5.1  JOGOS
 
-Segundo LEMES (2009, pg 126) 
+Segundo LEMES (2009, pg 126)
 
     … jogo digital se constitui em uma atividade lúdica composta por uma série de ações e decisões, limitada por regras e pelo universo do game, que resultam em uma condição final. O game é uma hipermídia por excelência e tem na interatividade mediada por aparatos tecnológicos, seu papel fundamental. Essa característica interativa é a dependência comandos sobre uma interface digital, que faz com que o projeto digital desta natureza não seja um filme ou uma animação, e sim um game.
 
@@ -99,6 +104,7 @@ Quando desenvolvendo qualquer jogo, o desenvolvedor tem que considerar seu usuá
 A interface tem que ser o mais intuitiva o possível. No caso de dispositivos móveis, quanto menos gestos necessários melhor.
 Tornar previsível causa e efeito é uma boa característica para os jogos.
 Os desenvolvedores tem que evitar fazer o jogo para eles mesmos. E pela falta de crítica os designs tendem a ser ruins. Afinal o que os jogadores querem? LEMES (2009, pg XX) aponta alguns fatores procurados pelos usuários de jogos: Desafio, socializar, experiência solitária, respeito e fantasia.
+
 Mencionar algum jogo (como WOW) e como ele faz para prender a atenção dos usuários.
 Candy crush saga
  5.2  GÊNEROS
@@ -117,14 +123,14 @@ Puzzle
 Online / Massive Multiplayer
 
 ##5.3  MECÂNICA DOS JOGOS
-A mecânica é composta pelas regras do jogo. Quais as ações diponíveis aos usuários, é fortemente influenciada pela categoria do jogo em questão.
+A mecânica é composta pelas regras do jogo. Quais as ações disponíveis aos usuários, é fortemente influenciada pela categoria do jogo em questão.
 
 ##5.4  NAVEGADORES WEB
-Aplicações do lado do cliente. Geralmente se comunicam com um servidor através de documentos em HTTP. Quado o navegador recebe um destes pacotes em HTML ele começa o processo de renderização. A renderização pode chamar outros arquivos a fim de completar a experiência desenvolivda para o endereço em questão.
+Aplicações do lado do cliente. Geralmente se comunicam com um servidor através de documentos em HTTP. Quado o navegador recebe um destes pacotes em HTML ele começa o processo de renderização. A renderização pode chamar outros arquivos a fim de completar a experiência desenvolvida para o endereço em questão.
 Nos navegadores os usuários necessitam localizar a página que desejam, sabendo o endereço, ou pesquisando em buscadores. Isso é um processo árduo para a plataformas móveis pois necessitam maior interação do usuários e não são “naturais” se comparado ao modo normal de consumir aplicativos nestas mesmas plataformas – simplesmente adquirindo o app na loja e abrindo-o no sistema operacional. Alguns contornos para etes problema serão descritos nas tecnologias offline.
 
 ##5.5  ANDROID
-É um sistema operacional open-source, largamente suportado pelo Google. Utiliza o kernel Linux para as tarefas mais básicas como: gerência de memória, processos, etc. Os programas para Android são geralmente escritos em Java e executados através da máquina virtual Dalvik.
+É um sistema operacional *open-source*, largamente suportado pelo Google. Utiliza o kernel Linux para as tarefas mais básicas como: gerência de memória, processos, etc. Os programas para Android são geralmente escritos em Java e executados através da máquina virtual Dalvik.
 Dalvik é similar a máquina virtual Java, mas roda um formato de arquivos diferenciado (dex), otimizados para consumir pouca memória, que são agrupados em um único Android Package (apk).
  Android permite a renderização de documentos HTML através de sua própria API WEBVIEW. Ou através do navegador disponibilizado por padrão, ou outros de terceiros como o Goolge Chorme, Firefox, Opera, etc.
 
