@@ -1,36 +1,37 @@
 #1  CONTEXTUALIZAÇÃO
 
 ##1.1  JOGOS
-São variadas as pesquisas que apontam os benefícios dos jogos eletrônicos para as pesssoas, coordenação motora, maior concentração entre outros fatores. A muito a indústria de jogos superoua cinematográfica.
+São variadas as pesquisas que apontam os benefícios dos jogos eletrônicos para as pessoas, coordenação motora, maior concentração entre outros fatores. A muito a indústria de jogos superou a cinematográfica.
 
 <!-- estatísticas sobre os jogos -->
 
 
-Os compoentes dos jogos incluem: regras, desafios e interações. Geralmente envolvem simulação física e mental. Muitos jogos ajudam a desenvolver habilidades práticas, servem como uma forma de exercício, ou de alguma forma executam um papel educacional, de simulação ou psicológico. Jogos são uma parte universal do experiência humana, presentes em todas as culturas.
+Os componentes dos jogos incluem: regras, desafios e interações; geralmente envolvem simulação física e mental. Muitos jogos ajudam a desenvolver habilidades práticas, servem como uma forma de exercício, ou de alguma forma executam um papel educacional, de simulação ou psicológico. Jogos são uma parte universal do experiência humana, presentes em todas as culturas.
 
-Entretanto, a pluralidade de dispositivos se tornou atraente para a indústria e consumidores de jogos. 
+No início os jogos nativos dominavam.
+
+Com a ascensão dos dispositivos inteligentes a massiva quantidade de dispositivos se tornou atraente para a indústria e consumidores de jogos.
 
 ##1.2  JOGOS E MULTIPLATAFORMA
 
-Existem algumas estratégias na hora de definir como um jogo será construído. Pode-se contruir um jogo nativo, um jogo web ou um híbrido.
+É laboriosa a tarefa dos produtores de software em um panorama tão diversificado como o atual, existem muitas plataformas, muitas versões e hardwares diferenciados.
 
-No início os jogos nativos dominavam. Entretanto, é laboriosa a tarefa dos produtores de software em um panorama tão diversificado como o atual, existem muitas plataformas, muitas versões e hardwares diferenciados.
-
+Existem algumas estratégias na hora de definir como um jogo será construído. Pode-se construir um jogo nativo, um jogo web ou um híbrido.
 
 ###1.2.1  DESENVOLVIMENTO DE JOGOS NATIVOS
 
-Habilita a melhor experiência de usuário pois permite utilizar ao máximo os recursos e funcionalidades dos aparelhos. Porém, devido a cada plataforma coter seu próprio sistema operacional, com seus próprios SDK's, totalmente incompatívies, os desenvolvedores são forçados a desenvolver uma versão do jogo para cada plataforma alvo. Além da replicação dos fontes, esta abordagem requermais pessoas, e maior custo com possivelmente parte do mercado não atendido de qualquer forma.
+Habilita a melhor experiência de usuário pois permite utilizar ao máximo os recursos e funcionalidades dos aparelhos. Porém, devido a cada plataforma conter seu próprio sistema operacional, com seus próprios *SDK's* totalmente incompatíveis, os desenvolvedores são forçados a desenvolver uma versão do jogo para cada plataforma alvo. Além da replicação dos fontes, esta abordagem requer mais pessoas, e maior custo com possivelmente parte do mercado não atendido de qualquer forma.
 
 ###1.2.2  DESENVOLVIMENTO DE JOGOS WEB
 
 Necessitam de apenas uma base de código e pode rodar em todas as plataformas.
-Contém a mais vasta gama de desenolvedores e muitos interessados em aprendê-la. Seus custos também são infeirores, aos do desenvolvimento nativo – pois demandam menos trabalhadores/hora devido a inexistência de duplicação da base.
-Não obstante, esta opção – devido a icompletude da especificação de padrões – carece de alguns recursos e outros não estão completamente implementados. Performance também pode ser um limitador, visto que estas tecnologias são executadas através de um navegador, criando uma camada de abstração superior à das API's nativas que fazem chamadas ao sistema diretamente.
+Contém a mais vasta gama de desenvolvedores e muitos interessados em aprendê-la. Seus custos também são inferiores, aos do desenvolvimento nativo – pois demandam menos trabalhadores/hora devido a inexistência de duplicação da base.
+Não obstante, esta opção – devido a incompletude da especificação de padrões – carece de alguns recursos e outros não estão completamente implementados. Performance também pode ser um limitador, visto que estas tecnologias são executadas através de um navegador, criando uma camada de abstração superior à das API's nativas que fazem chamadas ao sistema diretamente.
 
 ###1.2.3  DESENVOLVIMENTO DE JOGOS HÍBRIDOS
-Jogos híbridos são jogos geralmente desenvolvidos com tecnologias da web: beneficiando-se da não necessidade de duplicação. Rodam dentro de um container nativo – possibilitando o acesso à chamadas do sistema, recursos de hardware, elimitando muitias das  dificuldades da web.
+Jogos híbridos são jogos geralmente desenvolvidos com tecnologias da web: beneficiando-se da não necessidade de duplicação. Rodam dentro de um *container* nativo – possibilitando o acesso à chamadas do sistema, recursos de hardware, eliminando muitias das  dificuldades da web.
 Em certo sentido, beneficiam-se do melhor de ambas as metodologias anteriores.
-Phone game é uma ferramente deste tipo. Permite acessar os dispositivos utilizando sua API javascript. Funnciona encapsulando todo o código HTML5. Este tipo de abordagem permite acessar câmera, acelerômetro, gps, etc.
+Phone game é uma ferramente deste tipo. Permite acessar os dispositivos utilizando sua API Javascript. Funnciona encapsulando todo o código HTML5. Este tipo de abordagem permite acessar câmera, acelerômetro, gps, etc.
 
 ##1.3  HTML E MULTIPLATAFORMA
 A OWP (Open Web Platform), uma coleção de tecnologias livres, amplamente utilizadas e padronizadas.  O HTML Hypertext Markup Language é a peça fundamental da OWP, seu objetivo é especificar o conteúdo das páginas web. Trata-se de uma linguagem de marcação que define a estrutura de elementos que uma página deve ter de modo a fornecer conteúdo aos usuários. 
