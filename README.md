@@ -7,7 +7,9 @@ My conclusion work on IFRS about HTML5 Multiplataform Games Limitations.
 
 ##PDF and Doc version
 
-You can find the latest pdf and doc version on the build folder.
+You can find the latest version [here](https://github.com/jeanCarloMachado/tcc/blob/master/build/tcc.pdf).
+
+For the odt version look at the /build folder.
 
 
 
