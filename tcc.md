@@ -145,6 +145,8 @@ Sua última versão, o CCS3, introduziu várias funcionalidades multiplataforma 
 Muitos navegadores também suportam aceleração de GPU (Graphis Process Unit) para elementos que tenham transformações 3d.
 Flow de documento, ordem e posição em que os elementos tem que aparecer na página. Modelo de caixa o que encapsula o conteúdo em um elementos.
 
+<!--  falar do suporte a variáveis do CSS -->
+
 ## 5.8  JAVASCRIPT
 
 Todo o navegador atual contém um interpretador de javascript tornando-o portável.
@@ -288,7 +290,6 @@ Comecei escrevendo o aplicativo para o Navegador do desktop pois era o que estav
 (Referência 2) Faz uma revisão de aspectos do HTML5 através da construção de um jogo. O autor foca muito nos aspectos de criação de jogos e feedback do desenvolvimento. Troca de tecnologias e não especificamente nas limitações conforme o meu trabalho. Em outras palavras seu escopo é mais genérico e não tão preciso quanto este
 
 #7  METODOLOGIA
-    
 O primeiro passo consiste em definir as plataformas alvo do trabalho; devem ser plataformas mercadologicamente relevantes ao desenvolvimento de jogos, que possibilitem a criação de aplicativos em HTML e que acentuem o antagonismo de características.
 Segue-se com a construção de uma lista com os recursos relevantes aos jogos que, empiricamente, sofrem ou são comummente ligados à limitações multiplataforma. Segue-se uma pesquisa para aprofundar teoricamente cada um dos recursos, possivelmente elegendo novos.
 Com um baseamento teórico substancial, o próximo passo é a criação do protótipo de um jogo multiplataforma que utilize recursos potencialmente limitados. Para ser considerado pronto, o protótipo deve ser testado, e estar funcional, com adaptações ou não, em cada uma das plataformas alvo definidas.
@@ -304,6 +305,9 @@ Qual a categoria do problema: usabilidade, funcionalidade, manutibilidade, porta
 
 #8  RESULTADOS
 Abaixo constam as limitações encontradas durante a pesquisa e concepção do jogo
+
+Durante a construção do jogo utilizei a estratégia de declarar todos os objetos relativos ao window e limitar o escopo. Isso se demonstrou uma boa forma de separar as responsabilidades.
+
 ##8.1  LIMITAÇÕES
 1.  VERSÕES
 A grande maioria dos dispositivos atualmente no mercado utilizam obsoletas de seus softwares. Isso dificulta o desenvolvimento. Se a tecnologia de tradução para o browser utilizar o a classe Webview do Android - como o Apache cordova faz - as versões mais antigas podem ser penalizadas com problemas de performance ou falta de recursos.
@@ -335,6 +339,7 @@ Em termos gerais, trabalhar com proporções é positivo. Não obstante há caso
 6. PERFORMANCE
 
 ACELERAÇÂO DE GPU
+
 7. Acelerômetro
 
 8. IMPLEMENTAÇÃO INCONSISTENTE DE APIs
@@ -351,8 +356,6 @@ Limitação
 Desktop/Firefox
 Desktop/Google Chrome
 Smatphone/Android
-
-
 
 
 #9  CONCLUSÕES
