@@ -65,14 +65,17 @@
 <p>No quesito jogos para dispositivos móveis é preferível disponibilizar os jogos através da interface nativa pois dá a sensação de continuidade e equalidade para com os demais aplicativos instalados no dispositivo.</p>
 <h2 id="html">5.7 HTML</h2>
 <p>Representam um documento de forma agnóstica de plataforma.</p>
+<blockquote>
 <p>HTML documents represent a media-independent description of interactive content. HTML documents might be rendered to a screen, or through a speech synthesizer, or on a braille display. To influence exactly how such rendering takes place, authors can use a styling la</p>
+</blockquote>
 <p>A WHATWG começou a construção do HTML5 e a W3C se interessou e entrou no projeto. Mesmo assim, a WHATWG mantém uma versão com licensa menos restrita que a W3G contendo recursos a mais dos que os especificados no HTML atual.</p>
 <p>Linguagem de marcação da web. Criada para definir os elementos de uma página da web. Com o crescimento da demanda de interatividade na internet o HTML foi forçado a evoluir. Em sua quinta versão, o HTML5, grandes melhorias foram adicionadas. Antes do HTML5 para alcançar a interatividade desejada, só te podia recorrer a plugins de terceiros como o FlashPlayer e o Silverlight, estes necessitam de instalação de plugin e ficam limitados a um distribuidor des software.</p>
 <p>O HTML em si trata cruamente da estrutura, para as páginas ficarem agradáveis e seus usuários faz-se necessário o uso de estilos que é proporcionado através do CSS.</p>
 <h2 id="css">5.7 CSS</h2>
-Uma linguagem de marcação, como o HTML, que utiliza seletores e regras para definir a representação de um documento HTML e seus elementos. Os navegadores interpretam CSS através da tag
-<style>
-<p>. Sua última versão, o CCS3, introduziu várias funcionalidades multiplataforma como media-queries que possibilitam regras para tamanhos de tela e Transformções 3D.ojjkk Muitos navegadores também suportam aceleração de GPU (Graphis Process Unit) para elementos que tenham transformações 3d. Flow de documento, ordem e posição em que os elementos tem que aparecer na página. Modelo de caixa o que encapsula o conteúdo em um elementos.</p>
+<p>Uma linguagem de marcação, como o HTML, que utiliza seletores e regras para definir a representação de um documento HTML e seus elementos.</p>
+<p>Os navegadores interpretam CSS através da tag <code>&lt;style&gt;</code>. O css é dividido em módulo, contendo aproximadamente 50 deles.</p>
+<p>Sua última versão, o CCS3, introduziu várias funcionalidades multiplataforma como media-queries que possibilitam regras para tamanhos de tela e Transformções 3D.</p>
+<p>Muitos navegadores também suportam aceleração de GPU (Graphis Process Unit) para elementos que tenham transformações 3d. Flow de documento, ordem e posição em que os elementos tem que aparecer na página. Modelo de caixa o que encapsula o conteúdo em um elementos.</p>
 <!--  falar do suporte a variáveis do CSS -->
 <h2 id="javascript">5.8 JAVASCRIPT</h2>
 <p>Emacscript criado pela Netscape se tornou tão popular que foi abraçada pela W3C Atualmente a linguagem de programação mais popular do mundo. Todo o navegador atual contém um interpretador de javascript tornando-o portável.</p>
@@ -83,7 +86,7 @@ Uma linguagem de marcação, como o HTML, que utiliza seletores e regras para de
 <p>Quando os navegadores encontram essa tag eles fazem a requisição para o servidor para intejetar o código no documento. Isso pode ser problemático para projetos que incluam vários scripts.</p>
 <p>Javascript se tornou portável e isso é um componente chave no desenvolvimento de jogos.</p>
 <h2 id="alternativas-ao-javascript">5.9 ALTERNATIVAS AO JAVASCRIPT</h2>
-<p>Abaixo segem algumas tecnologias que servem de alternativa ao Javascript.</p>
+<p>Abaixo seguem algumas tecnologias que servem de alternativa ao Javascript.</p>
 <h3 id="typescript">5.9.1 TYPESCRIPT</h3>
 <p>Conhecido como uma versão extendida do Javascript que compila para javascript normal. Isso significa que os desenvolvedores podem continuar escrevendo Javascript normalmente. Typescript oferece classes, interfaces e módulos.</p>
 <h3 id="dart">5.9.2 DART</h3>
@@ -110,8 +113,12 @@ A nova tag
 <p>Na construção da grande maioria dos jogos é muitas vezes imprescindível alta flexibilidade na gestão de entrada de dados. Este fator muito se amplia na criação de jogos multiplataforma, seja através de teclado, tela sensível ou sensor de movimentos, o importante é oferecer a melhor experiência possível por plataforma. O HTML5 trata todos estes casos abstratamente na forma de eventos, os quais podem ser escutados através de listeners. Os eventos básicos são: keydown (tecla baixa), keyup (tecla solta) e keypress (tecla pressionada).</p>
 <p>Para detectar suporte aos mais variados recursos do HTML5 no browser do cliente existem duas possibilidades. Pode-se implementar testes para cada funcionalidade utilizada abordando os detalhes de implementação de cada uma ou então fazer uso de alguma biblioteca especializada neste processo, o Modernizr é uma opção open-source deste tipo de biblioteca, este gera uma lista de booleanos sobre grande variedade dos recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e local storage.</p>
 <h2 id="cache">5.17 CACHE</h2>
-<p>Applicações offline. Algumas tecnologias desta classe são:</p>
+<p>Aplicações offline.</p>
+<p>Algumas tecnologias desta classe são:</p>
 <h2 id="offline-e-armazenamento">5.18 OFFLINE E ARMAZENAMENTO</h2>
+<blockquote>
+<p>Uma das grades limitações do HTML era a ausência de capacidade de armazenamento de dados. Armazenamento no lado do cliente é um requerimento básico para qualquer aplicação moderna. Essa área era ode as aplicações nativas detinham grande vantagem sobre as aplicações web. O HTML5 solucionou este problema introduzindo várias formas de armazenamento de dados. (HASAN et all, 2012)</p>
+</blockquote>
 <h3 id="local-storage">5.18.1 LOCAL STORAGe</h3>
 <p>Também conhecido como WebStorage na especificação do HTML5. Provê uma forma de armazenar os dados como chave-valor dentro do navegador. Os dados são persistido mesmo que o navegador seja fechado.</p>
 <h3 id="web-sql">5.18.2 WEB SQL</h3>
@@ -178,6 +185,9 @@ A nova tag
 <p>Abaixo constam as limitações encontradas durante a pesquisa e concepção do jogo</p>
 <p>Durante a construção do jogo utilizei a estratégia de declarar todos os objetos relativos ao window e limitar o escopo. Isso se demonstrou uma boa forma de separar as responsabilidades.</p>
 <h2 id="limitações">8.1 LIMITAÇÕES</h2>
+<blockquote>
+<p>Apesar da grande maioria dos recursos dos dispositivos estar presente em HTML5 ainda existem muitas funcionalidades faltando para este tipo de aplicação. Por exemplo, não podemos mudar a imagem de fundo do dispositivo, ou adicionar toques etc. Similarmente, existem muitas APIs de nuvem como os serviços de impressão do ICloud ou Google cloud que estão disponíveis para aplicações nativas mas não para HTML5. Outros serviços utilitários como o C2DM do Google que está disponível para desenvolvedores Android para utilizar serviços de push também não estão disponíveis para o HTML5. (HASAN, 2012)</p>
+</blockquote>
 <ol style="list-style-type: decimal">
 <li><p>VERSÕES A grande maioria dos dispositivos atualmente no mercado utilizam obsoletas de seus softwares. Isso dificulta o desenvolvimento. Se a tecnologia de tradução para o browser utilizar o a classe Webview do Android - como o Apache cordova faz - as versões mais antigas podem ser penalizadas com problemas de performance ou falta de recursos.</p></li>
 <li><p>OFFLINE</p></li>
@@ -185,7 +195,15 @@ A nova tag
 <p>Refresh duplo para ver assets cacheados. Ver: http://buildnewgames.com/game-asset-management/</p>
 <ol start="3" style="list-style-type: decimal">
 <li>AUDIO Api de som quebra quando executado diversas vezes. Os navegadores variam na disponibilização de formatos aceitáveis Somente um áudio pode ser tocado no Navegador do Android Não é possível trocar o volume no IOS. Alguns navegadores favorecem formatos ogg (vorbis) e outros, como o Safari, favorecem o MP3.</li>
-<li>VIDEO Codecs</li>
+</ol>
+<blockquote>
+<p>O maior problema com as API's de áudio e de vídeo do HTML5 é a disputa entre os codecs dos navegadores. Por exemplo, Mozilla e Opera suportam Theora, já o Safari suporta H.264 que também é suportado pelo IE9. Ambos, Iphone e Android suportam H.264 em seus navegadores. A W3C recomenda OggVorbis e OggTheora para áudio e vídeo respectivamente. (HASAN et al, 2012)</p>
+</blockquote>
+<ol start="3" style="list-style-type: decimal">
+<li>VIDEO</li>
+</ol>
+<p>Codecs</p>
+<ol start="4" style="list-style-type: decimal">
 <li>ASSETS</li>
 </ol>
 <p>Trafegar muitos assets deixa o sistema lento.</p>
@@ -205,8 +223,7 @@ A nova tag
 <li>TAMANHO DE TELA Em alguns casos o tamanho das telas pode ser um fator limitante – como no caso de jogos de estratégia. Jogadores com telas menores podem sair em desvantagem.</li>
 <li><p>CAMERA</p></li>
 </ol>
-<p>Falar sobre câmera.</p>
-<p>Limitação Desktop/Firefox Desktop/Google Chrome Smatphone/Android</p>
+<p>Desktop/Firefox Desktop/Google Chrome Smatphone/Android</p>
 <h1 id="conclusões">9 CONCLUSÕES</h1>
 <p>Não pude testar todos os métodos e ferramentas e versões à disposição, um trabalho completo demandaria esforços conjuntos de muitos indivíduos ou um período de tempo bem mais extenso. Se uma empresa deseja produzir jogos nativos elas precisarão de vários desenvolvedores. Eu sozinho fui capaz de produzir um jogo em tempo razoável trabalhando apenas com a plataforma web.</p>
 <p>Por não utilizar frameworks e bibliotecas estou me distanciando dos casos da vida real. Só poderemos considerar o HTML como uma jjkkespecificação pronta quando for possível fazer tudo o que se faz nativamente com os dispositivos através de uma API web padronizada.</p>
