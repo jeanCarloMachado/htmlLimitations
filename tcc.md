@@ -5,7 +5,7 @@ São variadas as pesquisas que apontam os benefícios dos jogos eletrônicos par
 
 <!-- estatísticas sobre os jogos -->
 
-Os componentes dos jogos incluem: regras, desafios e interações; geralmente envolvem simulação física e mental. Muitos jogos ajudam a desenvolver habilidades práticas, servem como uma forma de exercício, ou de alguma forma executam um papel educacional, de simulação ou psicológico. Jogos são uma parte universal do experiência humana, presentes em todas as culturas.
+ Muitos jogos ajudam a desenvolver habilidades práticas, servem como uma forma de exercício, ou de alguma forma executam um papel educacional, de simulação ou psicológico. Jogos são uma parte universal do experiência humana, presentes em todas as culturas.
 
 No início os jogos nativos dominavam.
 
@@ -86,40 +86,39 @@ Estudar as limitações de desenvolvimento de jogos nas plataformas de smartphon
     Aplicações offline
     Css media queries
 Elaborar uma lista de limitações e correlacionar os dados de acordo com as plataformas.
- 4  JUSTIFICATIVA
+#4  JUSTIFICATIVA
 Tendo em vista que este trabalho busca mapear possíveis problemas do desenvolvimento multiplataforma em HTML ele serve para apoiar e justificar decisões relativas ao desenvolvimento de jogos multiplataforma;
 Por tratar cientificamente de aspectos importantes do HTML, este trabalho tem potencial apontar os pontos chave que necessitam de melhorias nas plataformas alvo, colateralmente colaborando para a melhoria do próprio HTML.
 A opinião comum tende para soluções nativas em detrimento do desenvolvimento de jogos, este trabalho pretende desafiar esta concepção. (REFERENCIAR)
 Muitos desenvolvedores estão familiarizados com as tecnologias da WEB ou apontam interesse na tecnologia. <!-- referenciar →
 Estimular e avançar o estudo da implementação da  Open Web;
- 5  REVISÃO BIBLIOGRÁFICA
- 5.1  JOGOS
+#5  REVISÃO BIBLIOGRÁFICA
+##5.1  JOGOS
 
 Segundo LEMES (2009, pg 126)
-
-    … jogo digital se constitui em uma atividade lúdica composta por uma série de ações e decisões, limitada por regras e pelo universo do game, que resultam em uma condição final. O game é uma hipermídia por excelência e tem na interatividade mediada por aparatos tecnológicos, seu papel fundamental. Essa característica interativa é a dependência comandos sobre uma interface digital, que faz com que o projeto digital desta natureza não seja um filme ou uma animação, e sim um game.
+    >jogo digital se constitui em uma atividade lúdica composta por uma série de ações e decisões, limitada por regras e pelo universo do game, que resultam em uma condição final. O game é uma hipermídia por excelência e tem na interatividade mediada por aparatos tecnológicos, seu papel fundamental. Essa característica interativa é a dependência comandos sobre uma interface digital, que faz com que o projeto digital desta natureza não seja um filme ou uma animação, e sim um game.
 
 Quando desenvolvendo qualquer jogo, o desenvolvedor tem que considerar seu usuário. O objetivo é maximizar a satisfação de seu usuário.  Jogos em plataformas móveis trazem um novo conjunto de desafios para produtores de jogos. Um destes desafios é fornecer feedback suficiente para o player pois o dispositivo é limitado em proporções, som, tela etc. Já jogos multiplataforma em HTML5 tem a dificuldade adicional de ter que comportar, na mesma base, o feedback adequando para cada plataforma móvel.
+
 A interface tem que ser o mais intuitiva o possível. No caso de dispositivos móveis, quanto menos gestos necessários melhor.
 Tornar previsível causa e efeito é uma boa característica para os jogos.
 Os desenvolvedores tem que evitar fazer o jogo para eles mesmos. E pela falta de crítica os designs tendem a ser ruins. Afinal o que os jogadores querem? LEMES (2009, pg XX) aponta alguns fatores procurados pelos usuários de jogos: Desafio, socializar, experiência solitária, respeito e fantasia.
 
-Mencionar algum jogo (como WOW) e como ele faz para prender a atenção dos usuários.
-Candy crush saga
- 5.2  GÊNEROS
+<!-- Mencionar algum jogo (como WOW) e como ele faz para prender a atenção dos usuários.  Candy crush saga -->
+##5.2  GÊNEROS
 LEMES (2009, p. 43)  aponta os seguintes gêneros de jogos.
-Adventure
-Ação
-RPG
-Estratégia
-Simuladores
-Esportes
-Luta
-Casuais
-'God' Games
-Educacionais
-Puzzle
-Online / Massive Multiplayer
+- Adventure
+- Ação
+- RPG
+- Estratégia
+- Simuladores
+- Esportes
+- Luta
+- Casuais
+- 'God' Games
+- Educacionais
+- Puzzle
+- Online / Massive Multiplayer
 
 ##5.3  MECÂNICA DOS JOGOS
 A mecânica é composta pelas regras do jogo. Quais as ações disponíveis aos usuários, é fortemente influenciada pela categoria do jogo em questão.
@@ -136,6 +135,20 @@ Dalvik é similar a máquina virtual Java, mas roda um formato de arquivos difer
 No quesito jogos para dispositivos móveis é preferível disponibilizar os jogos através da interface nativa pois dá a sensação de continuidade e equalidade para com os demais aplicativos instalados no dispositivo.
 
 ##5.6  HTML
+
+Representam um documento de forma agnóstica de plataforma.
+
+HTML documents represent a media-independent description of interactive content. HTML documents might be rendered to a screen, or through a
+speech synthesizer, or on a braille display. To influence exactly how such rendering takes place, authors can use a styling la
+
+A WHATWG começou a construção do HTML5 e a W3C se interessou e entrou no projeto. Mesmo assim, a WHATWG mantém uma versão com licensa menos restrita que a W3G contendo recursos a mais dos que os especificados no HTML atual.
+
+
+O HTML foi desenvolvido por muitos anos e por pessoas que não conheciam umas as outras, muitas funcionalidades foram construidas de maneiras inconsistenes..
+Features have thus arisen from many sources, and have not always been designed in especially consistent ways. Furthermore, because of the unique
+characteristics of the Web, implementation bugs have often become de-facto, and now de-jure, standards, as content is often unintentionally written in
+ways that rely on them before they can. (W3C manual)
+
 
 Linguagem de marcação da web. Criada para definir os elementos de uma página da web. Com o crescimento da demanda de interatividade na internet o HTML foi forçado a evoluir. Em sua quinta versão, o HTML5, grandes melhorias foram adicionadas. Antes do HTML5 para alcançar a interatividade desejada, só te podia recorrer a plugins de terceiros como o FlashPlayer e o Silverlight, estes necessitam de instalação de plugin e ficam limitados a um distribuidor des software.
 ##5.7  CSS
