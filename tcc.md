@@ -16,13 +16,19 @@ Muitos jogos ajudam a desenvolver habilidades práticas, servem como uma forma d
 
 Com a ascensão dos dispositivos inteligentes a massiva quantidade de dispositivos se tornou atraente para a indústria e consumidores de jogos.
 
+
+A maior dificuldade em capturar uma base de usuários é que o mercado de dispositivos móveis é muito fragmentado e não existe uma única plataforma popular. (HASAN, 2012)
+
 ##1.2  JOGOS E MULTIPLATAFORMA
+
 
 É laboriosa a tarefa dos produtores de software em um panorama tão diversificado como o atual, existem muitas plataformas, muitas versões e hardwares diferenciados.
 
 Uma alterativa para mitigar os problemas oriundos da multiplicidade de plataformas é o HTML.
 
 ##1.3  HTML E MULTIPLATAFORMA
+
+Desenvolvedores de jogos web podem rapidamente satisfazer as necessidades de seus jogadores, mantendo-os leais a tecnologia HTML5 (ZHANG, 2012).
 
 <!!-- A maioria dos desenvolvedores demonstra interesse para o HTML5 -->
 
@@ -180,7 +186,7 @@ No quesito jogos para dispositivos móveis é preferível disponibilizar os jogo
 
 Representam um documento de forma agnóstica de plataforma.
 
-HTML documents represent a media-independent description of interactive content. HTML documents might be rendered to a screen, or through a
+> HTML documents represent a media-independent description of interactive content. HTML documents might be rendered to a screen, or through a
 speech synthesizer, or on a braille display. To influence exactly how such rendering takes place, authors can use a styling la
 
 A WHATWG começou a construção do HTML5 e a W3C se interessou e entrou no projeto. Mesmo assim, a WHATWG mantém uma versão com licensa menos restrita que a W3G contendo recursos a mais dos que os especificados no HTML atual.
@@ -192,9 +198,14 @@ O HTML em si trata cruamente da estrutura, para as páginas ficarem agradáveis 
 
 ##5.7  CSS
 
+
 Uma linguagem de marcação, como o HTML,  que utiliza seletores e regras para definir a representação de um documento HTML e seus elementos.
-Os navegadores interpretam CSS através da tag <style>.
-Sua última versão, o CCS3, introduziu várias funcionalidades multiplataforma como media-queries que possibilitam regras para tamanhos de tela e Transformções 3D.ojjkk
+
+Os navegadores interpretam CSS através da tag ``<style>``.
+O css é dividido em módulo, contendo aproximadamente 50 deles.
+
+Sua última versão, o CCS3, introduziu várias funcionalidades multiplataforma como media-queries que possibilitam regras para tamanhos de tela e Transformções 3D.
+
 Muitos navegadores também suportam aceleração de GPU (Graphis Process Unit) para elementos que tenham transformações 3d.
 Flow de documento, ordem e posição em que os elementos tem que aparecer na página. Modelo de caixa o que encapsula o conteúdo em um elementos.
 
@@ -221,7 +232,7 @@ Javascript se tornou portável e isso é um componente chave no desenvolvimento 
 
 ##5.9  ALTERNATIVAS AO JAVASCRIPT
 
-Abaixo segem algumas tecnologias que servem de alternativa ao Javascript.
+Abaixo seguem algumas tecnologias que servem de alternativa ao Javascript.
 
 ###5.9.1  TYPESCRIPT
 
@@ -277,10 +288,13 @@ Para detectar suporte aos mais variados recursos do HTML5 no browser do cliente 
 
 ##5.17  CACHE
 
-Applicações offline.
+Aplicações offline.
+
 Algumas tecnologias desta classe são:
 
 ##5.18  OFFLINE E ARMAZENAMENTO
+
+> Uma das grades limitações do HTML era a ausência de capacidade de armazenamento de dados. Armazenamento no lado do cliente é um requerimento básico para qualquer aplicação moderna. Essa área era ode as aplicações nativas detinham grande vantagem sobre as aplicações web. O HTML5 solucionou este problema introduzindo várias formas de armazenamento de dados. (HASAN et all, 2012)
 
 ###5.18.1  LOCAL STORAGe
 
@@ -409,6 +423,9 @@ Durante a construção do jogo utilizei a estratégia de declarar todos os objet
 
 ##8.1  LIMITAÇÕES
 
+
+> Apesar da grande maioria dos recursos dos dispositivos estar presente em HTML5 ainda existem muitas funcionalidades faltando para este tipo de aplicação. Por exemplo, não podemos mudar a imagem de fundo do dispositivo, ou adicionar toques etc. Similarmente, existem muitas APIs de nuvem como os serviços de impressão do ICloud ou Google cloud que estão disponíveis para aplicações nativas mas não para HTML5. Outros serviços utilitários como o C2DM do Google que está disponível para desenvolvedores Android para utilizar serviços de push também não estão disponíveis para o HTML5. (HASAN, 2012)
+
 1.  VERSÕES
 A grande maioria dos dispositivos atualmente no mercado utilizam obsoletas de seus softwares. Isso dificulta o desenvolvimento. Se a tecnologia de tradução para o browser utilizar o a classe Webview do Android - como o Apache cordova faz - as versões mais antigas podem ser penalizadas com problemas de performance ou falta de recursos.
 
@@ -422,8 +439,13 @@ Os navegadores variam na disponibilização de formatos aceitáveis
 Somente um áudio pode ser tocado no Navegador do Android
 Não é possível trocar o volume no IOS.
 Alguns navegadores favorecem formatos ogg (vorbis) e outros, como o Safari, favorecem o MP3.
+
+> O maior problema com as API's de áudio e de vídeo do HTML5 é a disputa entre os codecs dos navegadores. Por exemplo, Mozilla e Opera suportam Theora, já o Safari suporta H.264 que também é suportado pelo IE9. Ambos, Iphone e Android suportam H.264 em seus navegadores. A W3C recomenda OggVorbis e OggTheora para áudio e vídeo respectivamente. (HASAN et al, 2012)
+
 3. VIDEO
+
 Codecs
+
 4. ASSETS
 
 Trafegar muitos assets deixa o sistema lento.
@@ -451,10 +473,6 @@ Em alguns casos o tamanho das telas pode ser um fator limitante – como no caso
 9.  CAMERA
 
 
-Falar sobre câmera.
-
-
-Limitação
 Desktop/Firefox
 Desktop/Google Chrome
 Smatphone/Android
