@@ -178,12 +178,16 @@ Phone game é uma ferramente deste tipo. Permite acessar os dispositivos utiliza
 
 ##5.5  NAVEGADORES WEB
 
-Aplicações do lado do cliente. Geralmente se comunicam com um servidor através de documentos em HTTP. Quado o navegador recebe um destes pacotes em HTML ele começa o processo de renderização. A renderização pode chamar outros arquivos a fim de completar a experiência desenvolvida para o endereço em questão.
-Nos navegadores os usuários necessitam localizar a página que desejam, sabendo o endereço, ou pesquisando em buscadores. Isso é um processo árduo para a plataformas móveis pois necessitam maior interação do usuários e não são “naturais” se comparado ao modo normal de consumir aplicativos nestas mesmas plataformas – simplesmente adquirindo o app na loja e abrindo-o no sistema operacional. Alguns contornos para este problema serão descritos nas tecnologias offline.
+Aplicações do lado do cliente geralmente se comunicam com um servidor através de documentos em HTTP. Quado o navegador recebe um destes pacotes em HTML ele começa o processo de renderização. A renderização pode requisitar outros arquivos a fim de completar a experiência desenvolvida para o endereço em questão.
+Nos navegadores os usuários necessitam localizar a página que desejam, sabendo o endereço, ou pesquisando em buscadores. Isso é um processo árduo para a plataformas móveis pois necessitam maior interação do usuários e não são “naturais” se comparado ao modo normal de consumir aplicativos nestas mesmas plataformas – simplesmente adquirindo o aplicativo na loja e abrindo-o no sistema operacional. Alguns contornos para este problema serão descritos nas tecnologias offline.
 
-> Apple had created forks of the open-source KHTML and KJS layout and JavaScript engines from the KDE Konqueror browser in 2002. They explained that those provided a basis for easier development than other technologies by virtue of being small (fewer than 140,000 lines of code), cleanly designed, and standards compliant.[20] The resulting layout engine became known as WebKit and it was incorporated into the Safari browser that first shipped with Mac OS X v10.3. On June 13, 2003, Microsoft said it was discontinuing IE on the Mac platform and on June 6, 2007, Apple released a beta version of Safari for Microsoft Windows.
+Para transformar as instruções retornadas pelo servidor em algo útil para o usuário final os navegadores geralmente fazem uso de bibliotecas externas capazes de interpretar HTML5 e gerar o conteúdo iterativo. 
 
-> Google released the Chrome browser for Microsoft Windows on December 11, 2008, using the same WebKit rendering engine as Safari and a faster JavaScript engine called V8. An open sourced version for the Windows, Mac OS X and Linux platforms was released under the name Chromium. According to Net Applications, Chrome had gained a 3.6% usage share by October 2009. After the release of the beta for Mac OS X and Linux, the market share had increased rapidly.[22]
+##Bibliotecas web
+
+O Google Chrome utiliza o Webkit para renderizar seu conteúdo HTML5. O webkit foi criado pela Apple baseando-se no motor de renderização do Konkeror do projeto KDE. Safari e Opera também fazem uso do Webkit. V8 para JavaScript.
+
+O motor de renderização do  HTML5 do Firefox é o XXX. O motor de JavaScript é o.
 
 ##5.6  ANDROID
 
@@ -195,27 +199,25 @@ No quesito jogos para dispositivos móveis é preferível disponibilizar os jogo
 
 ##5.7  HTML
 
-Representam um documento de forma agnóstica de plataforma.
+Um documento HTML representa conteúdo iterativo de uma forma independente de plataforma. Podem ser enderizados em uma tela, em um sintetizador de voz, etc.
 
-> HTML documents represent a media-independent description of interactive content. HTML documents might be rendered to a screen, or through a
-speech synthesizer, or on a braille display. To influence exactly how such rendering takes place, authors can use a styling la
-
-A WHATWG começou a construção do HTML5 e a W3C se interessou e entrou no projeto. Mesmo assim, a WHATWG mantém uma versão com licença menos restrita que a W3C contendo recursos a mais dos que os especificados no HTML atual.
-
-Linguagem de marcação da web. Criada para definir os elementos de uma página da web. Com o crescimento da demanda de interatividade na internet o HTML foi forçado a evoluir. Em sua quinta versão, o HTML5, grandes melhorias foram adicionadas. Antes do HTML5 para alcançar a interatividade desejada, só te podia recorrer a plugins de terceiros como o Flash Player e o Silverlight, estes necessitam de instalação de plugin e ficam limitados a um distribuidor de software.
+Com o crescimento da demanda de interatividade na internet o HTML foi forçado a evoluir. Em sua quinta versão, o HTML5, grandes melhorias foram adicionadas. Antes do HTML5 para alcançar a interatividade desejada, só te podia recorrer a plugins de terceiros como o Flash Player e o Silverlight, estes necessitam de instalação de plugin e ficam limitados a um distribuidor de software.
 
 O HTML em si trata cruamente da estrutura, para as páginas ficarem agradáveis e seus usuários faz-se necessário o uso de estilos que é proporcionado através do CSS.
+
+A WHATWG começou a construção do HTML5 e a W3C se interessou e entrou no projeto. Mesmo assim, a WHATWG mantém uma versão com licença menos restrita que a W3C contendo recursos a mais dos que os especificados no HTML atual.
 
 ##5.7  CSS
 
 Uma linguagem de marcação, como o HTML,  que utiliza seletores e regras para definir a representação de um documento HTML e seus elementos.
 
 Os navegadores interpretam CSS através da tag ``<style>``.
-O css é dividido em módulo, contendo aproximadamente 50 deles.
+O CSS é dividido em módulo, contendo aproximadamente 50 deles.
 
-Sua última versão, o CSS3, introduziu várias funcionalidades multiplataforma como media-queries que possibilitam regras para tamanhos de tela e Transformções 3D.
+Sua última versão, o CSS3, introduziu várias funcionalidades multiplataforma como media-queries que possibilitam regras para tamanhos de tela e transformações 3D.
 
 Muitos navegadores também suportam aceleração de GPU (Graphis Process Unit) para elementos que tenham transformações 3d.
+
 Flow de documento, ordem e posição em que os elementos tem que aparecer na página. Modelo de caixa o que encapsula o conteúdo em um elementos.
 
 <!--  falar do suporte a variáveis do CSS -->
@@ -224,45 +226,29 @@ Flow de documento, ordem e posição em que os elementos tem que aparecer na pá
 
 O EMACScript criado pela Netscape se tornou tão popular que foi abraçada pela W3C Atualmente a linguagem de programação mais popular do mundo. Todo o navegador atual contém um interpretador de JavaScript tornando-o portável.
 
-JavaScript 6 trás conceitos de orientação à objetos.
-
-Existem vários conversores de código (*transpilers*) para JavaScript que permitem a utilização de linguagens que evoluem mais rapidamente.
-
 Na versão estável atual 5.1, é  uma linguagem que falha ao impressionar. Especialmente quando comparada com linguagens mais maduras como C++. O objetivo inicial do JavaScript nunca for para ser utilizada em projetos de grande escala.
-Desenvolvedores super utilizam seus acertos.
 
-Existem muitas ferramentas de desenvolvimento designadas para aliviar as falhas do JavaScript como transpiladores.
+Existem vários conversores de código (*transpilers*) para JavaScript que permitem a utilização de outras linguagens durante o desenvolvimento e posterior geração de JavaScript.
 
-Seu ciclo de desenvolvimento é demorado pois necessita da aprovação de muitas partes.
+A nova versão do JavaScript, o JavaScript 6, agrega vários conceitos de orientação à objetos.
+
+
 Tipicamente JavaScript é criado separadamente do HTML, através da tag ``<script>``.
-
 Quando os navegadores encontram essa tag eles fazem a requisição para o servidor para injetar o código no documento. Isso pode ser problemático para projetos que incluam vários scripts.
+
 
 JavaScript se tornou portável e isso é um componente chave no desenvolvimento de jogos.
 
-> JavaScript is classified as a prototype-based scripting language with dynamic typing and first-class functions. This mix of features makes it a multi-paradigm language, supporting object-oriented,[7] imperative, and functional[1][8] programming styles.
+> JavaScript is classified as a prototype-based scripting language with dynamic typing and first-class functions. This mix of features makes it a multi-paradigm language, supporting object-oriented, imperative, and functional programming styles.
 
-> Despite some naming, syntactic, and standard library similarities, JavaScript and Java are otherwise unrelated and have very different semantics. The syntax of JavaScript is actually derived from C, while the semantics and design are influenced by the Self and Scheme programming languages.[9]
+> Despite some naming, syntactic, and standard library similarities, JavaScript and Java are otherwise unrelated and have very different semantics. The syntax of JavaScript is actually derived from C, while the semantics and design are influenced by the Self and Scheme programming languages.
 
 > JavaScript has become one of the most popular programming languages on the Web. Initially, however, many professional programmers denigrated the language because its target audience consisted of Web authors and other such "amateurs", among other reasons.[32] The advent of Ajax returned JavaScript to the spotlight and brought more professional programming attention. The result was a proliferation of comprehensive frameworks and libraries, improved JavaScript programming practices, and increased usage of JavaScript outside Web browsers, as seen by the proliferation of server-side JavaScript platforms.
 
-> As in most scripting languages, types are associated with values, not with variables. For example, a variable x could be bound to a number, then later rebound to a string. JavaScript supports various ways to test the type of an object, including duck typing.[37]
-Object-based
+> As in most scripting languages, types are associated with values, not with variables. For example, a variable x could be bound to a number, then later rebound to a string. JavaScript supports various ways to test the type of an object, including duck typing.
+
 > JavaScript is almost entirely object-based. JavaScript objects are associative arrays, augmented with prototypes (see below). Object property names are string keys. They support two equivalent syntaxes: dot notation (obj.x = 10) and bracket notation (obj['x'] = 10). Properties and their values can be added, changed, or deleted at run-time. Most properties of an object (and those on its prototype inheritance chain) can be enumerated using a for...in loop. JavaScript has a small number of built-in objects such as Function and Date.
 > JavaScript includes an eval function that can execute statements provided as strings at run-time.
-
-
-### Ajax Limitations
-> In pre-HTML5 browsers, pages dynamically created using successive Ajax requests did not automatically register themselves with the browser's history engine, so clicking the browser's "back" button may not have returned the browser to an earlier state of the Ajax-enabled page, but may have instead returned to the last full page visited before it. Such behavior — navigating between pages instead of navigating between page states — may be desirable, but if fine-grained tracking of page state is required, then a pre-HTML5 workaround was to use invisible iframes to trigger changes in the browser's history. A workaround implemented by Ajax techniques is to change the URL fragment identifier (the part of a URL after the "#") when an Ajax-enabled page is accessed and monitor it for changes.[12][13] HTML5 provides an extensive API standard for working with the browser's history engine.[14]
-> Dynamic Web page updates also make it difficult to bookmark and return to a particular state of the application. Solutions to this problem exist, many of which again use the URL fragment identifier.[12][13] The solution provided by HTML5 for the above problem also applies for this.[14]
-> Depending on the nature of the Ajax application, dynamic page updates may interfere disruptively with user interactions, especially if working on an unstable Internet connection. For instance, editing a search field may trigger a query to the server for search completions, but the user may not know that a search completion popup is forthcoming, and if the internet connection is slow, the popup list may show up at an inconvenient time, when the user has already proceeded to do something else.
-> Excluding Google,[15] most major Web crawlers do not execute JavaScript code,[16] so in order to be indexed by search engines, a Web application must provide an alternative means of accessing the content that would normally be retrieved with Ajax. It has been suggested that a headless browser may be used to index content provided by Ajax-enabled websites.[17]
-> Any user whose browser does not support JavaScript or XMLHttpRequest, or simply has this functionality disabled, will not be able to properly use pages which depend on Ajax. Devices such as smartphones and PDAs may not have support for the required technologies, though this is becoming less of a problem. The only way to let the user carry out functionality is to fall back to non-JavaScript methods. This can be achieved by making sure links and forms can be resolved properly and not relying solely on Ajax.[18]
-> Similarly, some Web applications that use Ajax are built in a way that cannot be read by screen-reading technologies, such as JAWS. The WAI-ARIA standards provide a way to provide hints in such a case.[19]
-    Screen readers that are able to use Ajax may still not be able to properly read the dynamically generated content.[20]
-        The same origin policy prevents some Ajax techniques from being used across domains,[8] although the W3C has a draft of the XMLHttpRequest object that would enable this functionality.[21] Methods exist to sidestep this security feature by using a special Cross Domain Communications channel embedded as an iframe within a page,[22] or by the use of JSONP.
-> The asynchronous callback-style of programming required can lead to complex code that is hard to maintain, to debug[23] and to test.[24]
-
 
 ### 5.8.1 ASM.js
 A versão estrita do JavaScript o asm.js permite grandes aumentos de performance e foi especialmente delineada para a geração automática de código a partir de outras linguagens.
@@ -287,43 +273,56 @@ Dune II via OpenDune[32]
 BananaBread based on Cube 2[33]
 Every game in the Humble Mozilla Bundle[34] (Super Hexagon, Aaaaa! for the awesome, Osmos, Zen Bound 2, Dustforce DX, Voxatron, FTL: Advanced Edition and Democracy 3)
 
+##5.9 Ajax
 
-##5.9  ALTERNATIVAS AO JavaScript
+### Ajax Limitations
+> In pre-HTML5 browsers, pages dynamically created using successive Ajax requests did not automatically register themselves with the browser's history engine, so clicking the browser's "back" button may not have returned the browser to an earlier state of the Ajax-enabled page, but may have instead returned to the last full page visited before it. Such behavior — navigating between pages instead of navigating between page states — may be desirable, but if fine-grained tracking of page state is required, then a pre-HTML5 workaround was to use invisible iframes to trigger changes in the browser's history. A workaround implemented by Ajax techniques is to change the URL fragment identifier (the part of a URL after the "#") when an Ajax-enabled page is accessed and monitor it for changes.[12][13] HTML5 provides an extensive API standard for working with the browser's history engine.[14]
+> Dynamic Web page updates also make it difficult to bookmark and return to a particular state of the application. Solutions to this problem exist, many of which again use the URL fragment identifier.[12][13] The solution provided by HTML5 for the above problem also applies for this.[14]
+> Depending on the nature of the Ajax application, dynamic page updates may interfere disruptively with user interactions, especially if working on an unstable Internet connection. For instance, editing a search field may trigger a query to the server for search completions, but the user may not know that a search completion popup is forthcoming, and if the internet connection is slow, the popup list may show up at an inconvenient time, when the user has already proceeded to do something else.
+> Excluding Google,[15] most major Web crawlers do not execute JavaScript code,[16] so in order to be indexed by search engines, a Web application must provide an alternative means of accessing the content that would normally be retrieved with Ajax. It has been suggested that a headless browser may be used to index content provided by Ajax-enabled websites.[17]
+> Any user whose browser does not support JavaScript or XMLHttpRequest, or simply has this functionality disabled, will not be able to properly use pages which depend on Ajax. Devices such as smartphones and PDAs may not have support for the required technologies, though this is becoming less of a problem. The only way to let the user carry out functionality is to fall back to non-JavaScript methods. This can be achieved by making sure links and forms can be resolved properly and not relying solely on Ajax.[18]
+> Similarly, some Web applications that use Ajax are built in a way that cannot be read by screen-reading technologies, such as JAWS. The WAI-ARIA standards provide a way to provide hints in such a case.[19]
+    Screen readers that are able to use Ajax may still not be able to properly read the dynamically generated content.[20]
+        The same origin policy prevents some Ajax techniques from being used across domains,[8] although the W3C has a draft of the XMLHttpRequest object that would enable this functionality.[21] Methods exist to sidestep this security feature by using a special Cross Domain Communications channel embedded as an iframe within a page,[22] or by the use of JSONP.
+> The asynchronous callback-style of programming required can lead to complex code that is hard to maintain, to debug[23] and to test.[24]
+
+##5.10  ALTERNATIVAS AO JavaScript
 
 Abaixo seguem algumas tecnologias que servem de alternativa ao JavaScript.
 
-###5.9.1  TYPESCRIPT
+###5.10.1  TYPESCRIPT
 
 Conhecido como uma versão estendida do JavaScript que compila para JavaScript normal. Isso significa que os desenvolvedores podem continuar escrevendo Javascript normalmente. Typescript oferece classes, interfaces e módulos.
 
-###5.9.2  DART
+
+###5.10.2  DART
 
 Google. DartVM é uma máquina virtual que está embebido no Google Chrome. Significante melhorias em performance quando comparado ao JavaScript. Existe o dart2js que compila código em Dart para JavaScript.
 
-##5.10  DOCUMENT OBJECT MODEL (DOM)
+##5.11  DOCUMENT OBJECT MODEL (DOM)
 
 É uma plataforma e interface agnóstica a linguagem que permite os programas e scripts dinamicamente acessar e atualizar o conteúdo, estrutura e estilo de documentos. Pode ser novamente processado e o resultado aparecer na tela. O navegador cria um DOM quando ele processa os elementos e tags encontrados em um documento HTML. Gmail é uma aplicação de única página (single-page) que se baseia fortemente no DOM para gerar conteúdo dinâmico e interativo oferecido pelo DOM.
 
-##5.11  CANVAS
+##5.12  CANVAS
 
 A nova tag <canvas> define um layer gráfico em documentos HTML que pode ser desenhado através de JavaScript.
 Permite desenhar diagramas, gráficos e animações [7]. É baseado em bitmap.
 O suporte ainda é escasso.
 Muitas vezes lento. Algumas soluções tentam arrumar isso através da utilização de GPU.
-Apache Cordova utliza o FastCanvas.
+Apache Cordova utiliza o FastCanvas.
 
 CocoonJS é uma aplicativo híbrido que preenche a fraca implementação de OPENGL nos dispositivos móveis possibilitando se desenvolver em WEBGL.
 
-##5.12  WEBGL
+##5.13  WEBGL
 
 Baseado no OpenGL.
 
 Web GL não foi utilizada no trabalho apesar de ser de grande relevância no processo de jogos pois ainda não está completamente especificada e a dificuldade e escopo do projeto aumentariam muito se tivessem de incluir um jogos 3D.
 Versão da especificação atual?
 
-##5.13  VIDEO
+##5.14  VIDEO
 
-##5.14  AUDIO
+##5.15  AUDIO
 
 Audio é um componente vital para oferecer grande satisfação aos usuários de jogos. Provê feedback e imerge o usuário. Efeitos de som e música podem servir como mecanismo. Jogadores tem baixa tolerância a volume, deve ser utilizado com cautela.
 
@@ -529,6 +528,8 @@ ACELERAÇÂO DE GPU
 Em alguns casos o tamanho das telas pode ser um fator limitante – como no caso de jogos de estratégia. Jogadores com telas menores podem sair em desvantagem.
 9.  CAMERA
 
+10 . Javascript
+Ciclo de vida demorado pois necessita que todos os consumidores da especificação entrem em consenso e implementem-a.
 
 Desktop/Firefox
 Desktop/Google Chrome
