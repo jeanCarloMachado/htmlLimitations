@@ -23,20 +23,17 @@ A maior dificuldade em capturar uma base de usuários é que o mercado de dispos
 
 Uma alterativa para mitigar os problemas oriundos da multiplicidade de plataformas é o HTML.
 
-<!-- Rather than enabling the user to control their own experience, just as the web does, native apps are made to lock users in. They may lock us into a hardware model, meaning we don’t have access to all of the functionality we want.
+> Rather than enabling the user to control their own experience, just as the web does, native apps are made to lock users in. They may lock us into a hardware model, meaning we don’t have access to all of the functionality we want.
 
-They may make us consistently update our software or upgrade to the newest smartphone to get the latest content. Rather than deliver an innovative experience, native apps limit it.
--->
+> They may make us consistently update our software or upgrade to the newest smartphone to get the latest content. Rather than deliver an innovative experience, native apps limit it.
 
-<!--
-Standards-based technologies, including HTML5 and CSS3, make it possible for web apps to run on pretty much any platform via a modern, standards-compliant browser. Web apps are adaptive and responsive, affording  developers with more time to innovate as less time is required to learn new coding skills or 'wrap' an app for delivery in a native environment.
--->
+> Standards-based technologies, including HTML5 and CSS3, make it possible for web apps to run on pretty much any platform via a modern, standards-compliant browser. Web apps are adaptive and responsive, affording  developers with more time to innovate as less time is required to learn new coding skills or 'wrap' an app for delivery in a native environment.
 
 ##1.3  HTML E MULTIPLATAFORMA
 
 Desenvolvedores de jogos web podem rapidamente satisfazer as necessidades de seus jogadores, mantendo-os leais a tecnologia HTML5 (ZHANG, 2012).
 
-<!!-- A maioria dos desenvolvedores demonstra interesse para o HTML5 -->
+>A maioria dos desenvolvedores demonstra interesse para o HTML5 
 
 A OWP (Open Web Platform), uma coleção de tecnologias livres, amplamente utilizadas e padronizadas. O HTML Hypertext Markup Language é a peça fundamental da OWP, seu objetivo é especificar o conteúdo das páginas web. Trata-se de uma linguagem de marcação que define a estrutura de elementos que uma página deve ter de modo a fornecer conteúdo aos usuários.
 
