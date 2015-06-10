@@ -181,6 +181,10 @@ Phone game é uma ferramente deste tipo. Permite acessar os dispositivos utiliza
 Aplicações do lado do cliente. Geralmente se comunicam com um servidor através de documentos em HTTP. Quado o navegador recebe um destes pacotes em HTML ele começa o processo de renderização. A renderização pode chamar outros arquivos a fim de completar a experiência desenvolvida para o endereço em questão.
 Nos navegadores os usuários necessitam localizar a página que desejam, sabendo o endereço, ou pesquisando em buscadores. Isso é um processo árduo para a plataformas móveis pois necessitam maior interação do usuários e não são “naturais” se comparado ao modo normal de consumir aplicativos nestas mesmas plataformas – simplesmente adquirindo o app na loja e abrindo-o no sistema operacional. Alguns contornos para este problema serão descritos nas tecnologias offline.
 
+> Apple had created forks of the open-source KHTML and KJS layout and JavaScript engines from the KDE Konqueror browser in 2002. They explained that those provided a basis for easier development than other technologies by virtue of being small (fewer than 140,000 lines of code), cleanly designed, and standards compliant.[20] The resulting layout engine became known as WebKit and it was incorporated into the Safari browser that first shipped with Mac OS X v10.3. On June 13, 2003, Microsoft said it was discontinuing IE on the Mac platform and on June 6, 2007, Apple released a beta version of Safari for Microsoft Windows.
+
+> Google released the Chrome browser for Microsoft Windows on December 11, 2008, using the same WebKit rendering engine as Safari and a faster JavaScript engine called V8. An open sourced version for the Windows, Mac OS X and Linux platforms was released under the name Chromium. According to Net Applications, Chrome had gained a 3.6% usage share by October 2009. After the release of the beta for Mac OS X and Linux, the market share had increased rapidly.[22]
+
 ##5.6  ANDROID
 
 É um sistema operacional *open-source*, largamente suportado pelo Google. Utiliza o kernel Linux para as tarefas mais básicas como: gerência de memória, processos, etc. Os programas para Android são geralmente escritos em Java e executados através da máquina virtual Dalvik.
@@ -236,6 +240,54 @@ Quando os navegadores encontram essa tag eles fazem a requisição para o servid
 
 JavaScript se tornou portável e isso é um componente chave no desenvolvimento de jogos.
 
+> JavaScript is classified as a prototype-based scripting language with dynamic typing and first-class functions. This mix of features makes it a multi-paradigm language, supporting object-oriented,[7] imperative, and functional[1][8] programming styles.
+
+> Despite some naming, syntactic, and standard library similarities, JavaScript and Java are otherwise unrelated and have very different semantics. The syntax of JavaScript is actually derived from C, while the semantics and design are influenced by the Self and Scheme programming languages.[9]
+
+> JavaScript has become one of the most popular programming languages on the Web. Initially, however, many professional programmers denigrated the language because its target audience consisted of Web authors and other such "amateurs", among other reasons.[32] The advent of Ajax returned JavaScript to the spotlight and brought more professional programming attention. The result was a proliferation of comprehensive frameworks and libraries, improved JavaScript programming practices, and increased usage of JavaScript outside Web browsers, as seen by the proliferation of server-side JavaScript platforms.
+
+> As in most scripting languages, types are associated with values, not with variables. For example, a variable x could be bound to a number, then later rebound to a string. JavaScript supports various ways to test the type of an object, including duck typing.[37]
+Object-based
+> JavaScript is almost entirely object-based. JavaScript objects are associative arrays, augmented with prototypes (see below). Object property names are string keys. They support two equivalent syntaxes: dot notation (obj.x = 10) and bracket notation (obj['x'] = 10). Properties and their values can be added, changed, or deleted at run-time. Most properties of an object (and those on its prototype inheritance chain) can be enumerated using a for...in loop. JavaScript has a small number of built-in objects such as Function and Date.
+> JavaScript includes an eval function that can execute statements provided as strings at run-time.
+
+
+### Ajax Limitations
+> In pre-HTML5 browsers, pages dynamically created using successive Ajax requests did not automatically register themselves with the browser's history engine, so clicking the browser's "back" button may not have returned the browser to an earlier state of the Ajax-enabled page, but may have instead returned to the last full page visited before it. Such behavior — navigating between pages instead of navigating between page states — may be desirable, but if fine-grained tracking of page state is required, then a pre-HTML5 workaround was to use invisible iframes to trigger changes in the browser's history. A workaround implemented by Ajax techniques is to change the URL fragment identifier (the part of a URL after the "#") when an Ajax-enabled page is accessed and monitor it for changes.[12][13] HTML5 provides an extensive API standard for working with the browser's history engine.[14]
+> Dynamic Web page updates also make it difficult to bookmark and return to a particular state of the application. Solutions to this problem exist, many of which again use the URL fragment identifier.[12][13] The solution provided by HTML5 for the above problem also applies for this.[14]
+> Depending on the nature of the Ajax application, dynamic page updates may interfere disruptively with user interactions, especially if working on an unstable Internet connection. For instance, editing a search field may trigger a query to the server for search completions, but the user may not know that a search completion popup is forthcoming, and if the internet connection is slow, the popup list may show up at an inconvenient time, when the user has already proceeded to do something else.
+> Excluding Google,[15] most major Web crawlers do not execute JavaScript code,[16] so in order to be indexed by search engines, a Web application must provide an alternative means of accessing the content that would normally be retrieved with Ajax. It has been suggested that a headless browser may be used to index content provided by Ajax-enabled websites.[17]
+> Any user whose browser does not support JavaScript or XMLHttpRequest, or simply has this functionality disabled, will not be able to properly use pages which depend on Ajax. Devices such as smartphones and PDAs may not have support for the required technologies, though this is becoming less of a problem. The only way to let the user carry out functionality is to fall back to non-JavaScript methods. This can be achieved by making sure links and forms can be resolved properly and not relying solely on Ajax.[18]
+> Similarly, some Web applications that use Ajax are built in a way that cannot be read by screen-reading technologies, such as JAWS. The WAI-ARIA standards provide a way to provide hints in such a case.[19]
+    Screen readers that are able to use Ajax may still not be able to properly read the dynamically generated content.[20]
+        The same origin policy prevents some Ajax techniques from being used across domains,[8] although the W3C has a draft of the XMLHttpRequest object that would enable this functionality.[21] Methods exist to sidestep this security feature by using a special Cross Domain Communications channel embedded as an iframe within a page,[22] or by the use of JSONP.
+> The asynchronous callback-style of programming required can lead to complex code that is hard to maintain, to debug[23] and to test.[24]
+
+
+### 5.8.1 ASM.js
+A versão estrita do JavaScript o asm.js permite grandes aumentos de performance e foi especialmente delineada para a geração automática de código a partir de outras linguagens.
+asm.js é especialmente importante no contexto dos jogos que usualmente consomem muitos recursos.
+
+
+> asm.js is not typically written directly: instead, as an intermediate language, it is generated through the use of a compiler that takes source code in a language such as C++ and outputs asm.js.
+
+> Much of this performance gain over normal JavaScript is due to 100% type consistency and virtually no garbage collection (memory is manually managed in a large typed array). This simpler model with no dynamic behavior, no memory allocation or deallocation, just a narrow set of well-defined integer and floating point operations enables much greater performance and potential for optimization.[citation needed]
+
+>      
+
+> Games and game engines
+
+Unreal Engine 3: a full version[citation needed] which was ported in 4 days[26][27]
+Unreal Engine 4
+The Unity game engine[28]
+Doom: the open source Freedoom game assets running on PrBoom, which is based on the open source Doom code[29]
+SuperTux[30]
+ScummVM, which supports numerous classic adventure games[31]
+Dune II via OpenDune[32]
+BananaBread based on Cube 2[33]
+Every game in the Humble Mozilla Bundle[34] (Super Hexagon, Aaaaa! for the awesome, Osmos, Zen Bound 2, Dustforce DX, Voxatron, FTL: Advanced Edition and Democracy 3)
+
+
 ##5.9  ALTERNATIVAS AO JavaScript
 
 Abaixo seguem algumas tecnologias que servem de alternativa ao JavaScript.
@@ -246,7 +298,7 @@ Conhecido como uma versão estendida do JavaScript que compila para JavaScript n
 
 ###5.9.2  DART
 
-Goolge. DartVM é uma máquina virtual que está embebido no Google Chrome. Significante melhorias em performance quando comparado ao JavaScript. Existe o dart2js que compila código em dart para javascript.
+Google. DartVM é uma máquina virtual que está embebido no Google Chrome. Significante melhorias em performance quando comparado ao JavaScript. Existe o dart2js que compila código em Dart para JavaScript.
 
 ##5.10  DOCUMENT OBJECT MODEL (DOM)
 
@@ -266,7 +318,7 @@ CocoonJS é uma aplicativo híbrido que preenche a fraca implementação de OPEN
 
 Baseado no OpenGL.
 
-Web GL não foi utilizada no trabalho apesar de ser de grande relevância no processo de jogos pois ainda não está completamente especificada e a diciculdade e escopo do projeto aumentariam muito se tivessem de incluir um jogos 3D.
+Web GL não foi utilizada no trabalho apesar de ser de grande relevância no processo de jogos pois ainda não está completamente especificada e a dificuldade e escopo do projeto aumentariam muito se tivessem de incluir um jogos 3D.
 Versão da especificação atual?
 
 ##5.13  VIDEO
@@ -277,7 +329,7 @@ Audio é um componente vital para oferecer grande satisfação aos usuários de 
 
 ###5.14.1  TAG AUDIO
 
-A tag <audio> define um som dentro de um documento html. Quando o o elemento é renderizado pelos navegadores, ele carrega o conteúdo que pode ser reproduzido pelo player de audio do navegador. Existem muitas discrepâncias entre os formados aceitáveis pelos navegadores. È um tanto limitada quanto comparada ao áudio de múltiplos canais disponibilizados por SDKs nativas.
+A tag <audio> define um som dentro de um documento html. Quando o elemento é renderizado pelos navegadores, ele carrega o conteúdo que pode ser reproduzido pelo player de audio do navegador. Existem muitas discrepâncias entre os formados aceitáveis pelos navegadores. È um tanto limitada quanto comparada ao áudio de múltiplos canais disponibilizados por SDKs nativas.
 
 ###5.14.2  API DE AUDIO
 
