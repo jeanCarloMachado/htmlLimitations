@@ -12,17 +12,27 @@
 <h2 id="jogos-e-multiplataforma">1.2 JOGOS E MULTIPLATAFORMA</h2>
 <p>É laboriosa a tarefa dos produtores de software em um panorama tão diversificado como o atual, existem muitas plataformas, muitas versões e hardwares diferenciados.</p>
 <p>Uma alterativa para mitigar os problemas oriundos da multiplicidade de plataformas é o HTML.</p>
-<!-- Rather than enabling the user to control their own experience, just as the web does, native apps are made to lock users in. They may lock us into a hardware model, meaning we don’t have access to all of the functionality we want.
-
-They may make us consistently update our software or upgrade to the newest smartphone to get the latest content. Rather than deliver an innovative experience, native apps limit it.
--->
-<!--
-Standards-based technologies, including HTML5 and CSS3, make it possible for web apps to run on pretty much any platform via a modern, standards-compliant browser. Web apps are adaptive and responsive, affording  developers with more time to innovate as less time is required to learn new coding skills or 'wrap' an app for delivery in a native environment.
--->
+<blockquote>
+<p>Rather than enabling the user to control their own experience, just as the web does, native apps are made to lock users in. They may lock us into a hardware model, meaning we don’t have access to all of the functionality we want.</p>
+</blockquote>
+<blockquote>
+<p>They may make us consistently update our software or upgrade to the newest smartphone to get the latest content. Rather than deliver an innovative experience, native apps limit it.</p>
+</blockquote>
+<blockquote>
+<p>Standards-based technologies, including HTML5 and CSS3, make it possible for web apps to run on pretty much any platform via a modern, standards-compliant browser. Web apps are adaptive and responsive, affording  developers with more time to innovate as less time is required to learn new coding skills or 'wrap' an app for delivery in a native environment.</p>
+</blockquote>
 <h2 id="html-e-multiplataforma">1.3 HTML E MULTIPLATAFORMA</h2>
 <p>Desenvolvedores de jogos web podem rapidamente satisfazer as necessidades de seus jogadores, mantendo-os leais a tecnologia HTML5 (ZHANG, 2012).</p>
-<!--!-- A maioria dos desenvolvedores demonstra interesse para o HTML5 ---->
+<blockquote>
+<p>A maioria dos desenvolvedores demonstra interesse para o HTML5</p>
+</blockquote>
+<p>A OWP (Open Web Platform), uma coleção de tecnologias livres, amplamente utilizadas e padronizadas. O HTML Hypertext Markup Language é a peça fundamental da OWP, seu objetivo é especificar o conteúdo das páginas web. Trata-se de uma linguagem de marcação que define a estrutura de elementos que uma página deve ter de modo a fornecer conteúdo aos usuários.</p>
+<p>O HTML5 é um conceito guarda chuva para designar as tecnologias da web JavaScript, CSS3 e HTML. Em termos práticos significa que quando uma tecnologia se torna muito popular através da adoção de algumas grandes empresas e dos desenvolvedores, ela se torna candidata a adoção.</p>
+<p>A interatividade necessária para a construção de jogos animados em HTML é algo recente, obtido através dos esforços direcionados no HTML5, anteriormente só se obtinha iteratividade de tamanho proporção na Web com a utilização de ferramentas proprietárias como o Adobe Flash e Microsoft Silverlight.</p>
+<p>Entretanto, o HTML em sua especificação e implementações atuais costa com algumas limitações que precisam ser compreendidas por aqueles interessados em criar jogos em HTML5.</p>
+<blockquote>
 <p>O tempo de desenvolvimento de uma aplicação em HTML5 é 67% menor que aplicações nativas. Isso mostra o custo efetivo de aplicações baseadas em HTML5. A real vantagem de aplicações em HTML5 é o suporte horizontal entre as plataformas - que é a maior razão por trás do custo efetivo. (HASAN et al, 2012)</p>
+</blockquote>
 <h2 id="limitações-de-jogos-multiplataforma-com-html5">1.4 LIMITAÇÕES DE JOGOS MULTIPLATAFORMA COM HTML5</h2>
 <p>O HTML vem sendo desenvolvido por muitos anos e por pessoas que não conheciam umas as outras, muitas funcionalidades foram construídas de maneiras inconsistentes.</p>
 <blockquote>

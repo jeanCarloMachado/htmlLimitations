@@ -213,7 +213,7 @@ O CSS é dividido em módulo, contendo aproximadamente 50 deles.
 
 Sua última versão, o CSS3, introduziu várias funcionalidades multiplataforma como media-queries que possibilitam regras para tamanhos de tela e transformações 3D.
 
-Muitos navegadores também suportam aceleração de GPU (Graphis Process Unit) para elementos que tenham transformações 3d.
+Muitos navegadores também suportam aceleração de GPU (Unidade de processamento gráfico) para elementos que tenham transformações 3d.
 
 Flow de documento, ordem e posição em que os elementos tem que aparecer na página. Modelo de caixa o que encapsula o conteúdo em um elementos.
 
@@ -221,33 +221,41 @@ Flow de documento, ordem e posição em que os elementos tem que aparecer na pá
 
 ## 5.8  JavaScript
 
-O EMACScript criado pela Netscape se tornou tão popular que foi abraçada pela W3C Atualmente a linguagem de programação mais popular do mundo. Todo o navegador atual contém um interpretador de JavaScript tornando-o portável.
+EMACScript melhor conhecido como JavaScript foi criado por Brendan Eich na Netscape. O padrão Ecma é a especificação do JavaScript. JScript foi um concorrente do JavaScript também baseado no padrão Ecma. JavaScript tornou tão popular que foi abraçada pela W3C Atualmente a linguagem de programação mais popular do mundo. Todo o navegador atual contém um interpretador de JavaScript tornando-o portável.
 
-Na versão estável atual 5.1, é  uma linguagem que falha ao impressionar. Especialmente quando comparada com linguagens mais maduras como C++. O objetivo inicial do JavaScript nunca for para ser utilizada em projetos de grande escala.
+O objetivo inicial do JavaScript diverge muito da produção de projetos de larga escala como são feitos atualmente. 
 
 Existem vários conversores de código (*transpilers*) para JavaScript que permitem a utilização de outras linguagens durante o desenvolvimento e posterior geração de JavaScript.
-
 A nova versão do JavaScript, o JavaScript 6, agrega vários conceitos de orientação à objetos.
-
 
 Tipicamente JavaScript é criado separadamente do HTML, através da tag ``<script>``.
 Quando os navegadores encontram essa tag eles fazem a requisição para o servidor para injetar o código no documento. Isso pode ser problemático para projetos que incluam vários scripts.
 
+> A scripting  language is a programming language that is used to manipulate, customise, and automate the facilities  of  an  existing  system.  In  such  systems,  useful  functionality  is  already  available  through  a  user interface, and the scripting language is a mechanism for exposing that functionality to program control.  In this way, the existing system is said to provide a host environment of objects and facilities, which completes the capabilities of the scripting language. A scripting language is intended for use by both professional and non - professional programmers.  
 
 JavaScript se tornou portável e isso é um componente chave no desenvolvimento de jogos.
-
-> JavaScript is classified as a prototype-based scripting language with dynamic typing and first-class functions. This mix of features makes it a multi-paradigm language, supporting object-oriented, imperative, and functional programming styles.
-
-> Despite some naming, syntactic, and standard library similarities, JavaScript and Java are otherwise unrelated and have very different semantics. The syntax of JavaScript is actually derived from C, while the semantics and design are influenced by the Self and Scheme programming languages.
 
 > JavaScript has become one of the most popular programming languages on the Web. Initially, however, many professional programmers denigrated the language because its target audience consisted of Web authors and other such "amateurs", among other reasons.[32] The advent of Ajax returned JavaScript to the spotlight and brought more professional programming attention. The result was a proliferation of comprehensive frameworks and libraries, improved JavaScript programming practices, and increased usage of JavaScript outside Web browsers, as seen by the proliferation of server-side JavaScript platforms.
 
 > As in most scripting languages, types are associated with values, not with variables. For example, a variable x could be bound to a number, then later rebound to a string. JavaScript supports various ways to test the type of an object, including duck typing.
 
 > JavaScript is almost entirely object-based. JavaScript objects are associative arrays, augmented with prototypes (see below). Object property names are string keys. They support two equivalent syntaxes: dot notation (obj.x = 10) and bracket notation (obj['x'] = 10). Properties and their values can be added, changed, or deleted at run-time. Most properties of an object (and those on its prototype inheritance chain) can be enumerated using a for...in loop. JavaScript has a small number of built-in objects such as Function and Date.
+
+> A web browser provides an ECMAScript host environment for client side computation including, for instance, objects that re present windows, menus, pop ups, dialog boxes, text areas, anchors, frames, history, cookies, and input/output. Further, the host environment provides a means to attach scripting code to events such as change of focus, page and image loading, unloading, er ror and abort, selection, form submission, and mouse actions.  Scripting  code  appears  within  the  HTML  and  the  displayed  page  is  a  combination  of  user  interface elements and fixed and computed text and images. The scripting code is reactive to user interacti on and there is no need for a main program.  
+
+> A web server provides a different host environment for server side computation including objects representing requests, clients, and files; and mechanisms to lock and share data. By  using  browser - side  and server side scripting  together,  it  is  possible  to  distribute  computation  between  the  client  and  server  while  providing  a customised user interface for a Web based application.
+
+> In  a  class based  object oriented  language,  in  general,  state  is  carried  by  instances, methods  are  carried  by cla sses, and inheritance is only of structure and behaviour. In ECMAScript, the state and methods are carried by objects, and structure, behaviour, and state are all inherited.  
+
 > JavaScript includes an eval function that can execute statements provided as strings at run-time.
 
-### 5.8.1 ASM.js
+> Some of the facilities of ECMAScript are similar to those used in other programming languages; in parti cular Java, Self, and Scheme 
+### Javascript Estrito
+
+> The  ECMAScript  Language recognises  the  possibility  that  some  users  of  the  language  may  wish  to  restrict their usage of some feat ures available in the language. They might do so in the interests of security, to avoid what  they  consider  to  be  error prone  features,  to  get  enhanced  error  checking,  or  for  other  reasons  of  their choosing. In support of this possibility, ECMAScript define s a strict variant of the language. The strict variant of the language excludes some specific syntactic and semantic features of the regular ECMAScript language and  modifies  the  detailed  semantics  of  some  features.  The  strict  variant  also  specifies  additio nal  error conditions that must be reported by throwing error exceptions in situations that are not specified as errors by the non strict form of the language.
+
+### ASM.js
+
 A versão estrita do JavaScript o asm.js permite grandes aumentos de performance e foi especialmente delineada para a geração automática de código a partir de outras linguagens.
 asm.js é especialmente importante no contexto dos jogos que usualmente consomem muitos recursos.
 
