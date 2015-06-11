@@ -47,8 +47,20 @@
 <p>Não é objetivo deste trabalho demonstrar onde o HTML5 se sobressai, apenas suas limitações. Também não é objetivo deste trabalho comparar o HTML com outras tecnologias de desenvolvimento de jogos, como Flash Player, Silverlight ou alternativas Desktop.</p>
 <h3 id="o-jogo">1.5.1 O JOGO</h3>
 <p>Para a análise prática das limitações foi escolhido um jogo de matemática simples. Consistindo na geração de equações com um candidato de resposta. Cabe ao usuário informar se o resultado apontado pelo jogo está correto ou não.</p>
-<!--!-- Porquê escolhi esse tipo de jogo? ---->
-<p>Estimular e avançar o estudo da implementação da Open Web;</p>
+<p>&lt;!!-- Porquê escolhi esse tipo de jogo? --&gt;</p>
+<h1 id="problema">2 PROBLEMA</h1>
+<p>A carência de definições concretas sobre a viabilidade da atual versão do HTML5 - quando utilizado no desenvolvimento de jogos e o senso comum, acabam por monopolizar à construção de jogos nativos as plataformas alvo.</p>
+<p>Os custos introduzidos no ciclo vida de um jogo, para diversas plataformas, é muito alto para ser considerado trivial. Cerca de 65% mais altos (segundo trabalho 2)</p>
+<h1 id="objetivos">3 OBJETIVOS</h1>
+<p>Abaixo seguem os objetivos deste trabalho.</p>
+<h2 id="objetivo-geral">3.1 OBJETIVO GERAL</h2>
+<p>Identificar possíveis limitações no processo de desenvolvimento de jogos multiplataforma oriundas do atual estado de definição e implementação do HTML5.</p>
+<h2 id="objetivos-específicos">3.2 OBJETIVOS ESPECÍFICOS</h2>
+<p>Estudar as limitações de desenvolvimento de jogos nas plataformas de dispositivos inteligentes Android e navegadores Desktop Google Chrome 42 e Firefox 37. Optamos por Android, e não IOS, pois o primeiro contém a vasta maioria do mercado de dispositivos inteligentes, e por termos maior experiência na já mencionada plataforma.</p>
+<p>Pretende-se também estudar os seguintes tópicos do desenvolvimento de jogos, relativos ao HTML5: - Debugging - Diferenças em tamanho de tela - Canvas 1. Resizing via Canvas vs DOM 2. Aceleração de GPU 3. API de Audio (reference 2) - Performance - Empacotadores HTML5 - Eventos de entrada - Vibração - Acelerômetro - Storage - Disponibilização de assets (controle de tamanhos, cache, etc) - Aplicações offline - CSS media queries</p>
+<p>Elaborar uma lista de limitações e correlacionar os dados de acordo com as plataformas.</p>
+<h1 id="justificativa">4 JUSTIFICATIVA</h1>
+<p>Tendo em vista que este trabalho busca mapear possíveis problemas do desenvolvimento multiplataforma em HTML ele serve para apoiar e justificar decisões relativas ao desenvolvimento de jogos multiplataforma; Por tratar cientificamente de aspectos importantes do HTML, este trabalho tem potencial apontar os pontos chave que necessitam de melhorias nas plataformas alvo, colateralmente colaborando para a melhoria do próprio HTML. A opinião comum tende para soluções nativas em detrimento do desenvolvimento de jogos, este trabalho pretende desafiar esta concepção. (REFERENCIAR) Muitos desenvolvedores estão familiarizados com as tecnologias da WEB ou apontam interesse na tecnologia. <!-- referenciar --> Estimular e avançar o estudo da implementação da Open Web;</p>
 <h1 id="revisão-bibliográfica">5 REVISÃO BIBLIOGRÁFICA</h1>
 <h2 id="jogos-1">5.1 JOGOS</h2>
 <p>Segundo LEMES (2009, pg 126) &gt; jogo digital constitui-se em uma atividade lúdica composta por uma série de ações e decisões, limitada por regras e pelo universo do game, que resultam em uma condição final. O game é uma hipermídia por excelência e tem na interatividade mediada por aparatos tecnológicos, seu papel fundamental. Essa característica interativa é a dependência comandos sobre uma interface digital, que faz com que o projeto digital desta natureza não seja um filme ou uma animação, e sim um game.</p>
@@ -99,22 +111,18 @@
 <p>Uma linguagem de marcação, como o HTML, que utiliza seletores e regras para definir a representação de um documento HTML e seus elementos.</p>
 <p>Os navegadores interpretam CSS através da tag <code>&lt;style&gt;</code>. O CSS é dividido em módulo, contendo aproximadamente 50 deles.</p>
 <p>Sua última versão, o CSS3, introduziu várias funcionalidades multiplataforma como media-queries que possibilitam regras para tamanhos de tela e transformações 3D.</p>
-<p>Muitos navegadores também suportam aceleração de GPU (Graphis Process Unit) para elementos que tenham transformações 3d.</p>
+<p>Muitos navegadores também suportam aceleração de GPU (Unidade de processamento gráfico) para elementos que tenham transformações 3d.</p>
 <p>Flow de documento, ordem e posição em que os elementos tem que aparecer na página. Modelo de caixa o que encapsula o conteúdo em um elementos.</p>
 <!--  falar do suporte a variáveis do CSS -->
 <h2 id="javascript">5.8 JavaScript</h2>
-<p>O EMACScript criado pela Netscape se tornou tão popular que foi abraçada pela W3C Atualmente a linguagem de programação mais popular do mundo. Todo o navegador atual contém um interpretador de JavaScript tornando-o portável.</p>
-<p>Na versão estável atual 5.1, é uma linguagem que falha ao impressionar. Especialmente quando comparada com linguagens mais maduras como C++. O objetivo inicial do JavaScript nunca for para ser utilizada em projetos de grande escala.</p>
-<p>Existem vários conversores de código (<em>transpilers</em>) para JavaScript que permitem a utilização de outras linguagens durante o desenvolvimento e posterior geração de JavaScript.</p>
-<p>A nova versão do JavaScript, o JavaScript 6, agrega vários conceitos de orientação à objetos.</p>
+<p>EMACScript melhor conhecido como JavaScript foi criado por Brendan Eich na Netscape. O padrão Ecma é a especificação do JavaScript. JScript foi um concorrente do JavaScript também baseado no padrão Ecma. JavaScript tornou tão popular que foi abraçada pela W3C Atualmente a linguagem de programação mais popular do mundo. Todo o navegador atual contém um interpretador de JavaScript tornando-o portável.</p>
+<p>O objetivo inicial do JavaScript diverge muito da produção de projetos de larga escala como são feitos atualmente.</p>
+<p>Existem vários conversores de código (<em>transpilers</em>) para JavaScript que permitem a utilização de outras linguagens durante o desenvolvimento e posterior geração de JavaScript. A nova versão do JavaScript, o JavaScript 6, agrega vários conceitos de orientação à objetos.</p>
 <p>Tipicamente JavaScript é criado separadamente do HTML, através da tag <code>&lt;script&gt;</code>. Quando os navegadores encontram essa tag eles fazem a requisição para o servidor para injetar o código no documento. Isso pode ser problemático para projetos que incluam vários scripts.</p>
+<blockquote>
+<p>A scripting language is a programming language that is used to manipulate, customise, and automate the facilities of an existing system. In such systems, useful functionality is already available through a user interface, and the scripting language is a mechanism for exposing that functionality to program control. In this way, the existing system is said to provide a host environment of objects and facilities, which completes the capabilities of the scripting language. A scripting language is intended for use by both professional and non - professional programmers.</p>
+</blockquote>
 <p>JavaScript se tornou portável e isso é um componente chave no desenvolvimento de jogos.</p>
-<blockquote>
-<p>JavaScript is classified as a prototype-based scripting language with dynamic typing and first-class functions. This mix of features makes it a multi-paradigm language, supporting object-oriented, imperative, and functional programming styles.</p>
-</blockquote>
-<blockquote>
-<p>Despite some naming, syntactic, and standard library similarities, JavaScript and Java are otherwise unrelated and have very different semantics. The syntax of JavaScript is actually derived from C, while the semantics and design are influenced by the Self and Scheme programming languages.</p>
-</blockquote>
 <blockquote>
 <p>JavaScript has become one of the most popular programming languages on the Web. Initially, however, many professional programmers denigrated the language because its target audience consisted of Web authors and other such &quot;amateurs&quot;, among other reasons.[32] The advent of Ajax returned JavaScript to the spotlight and brought more professional programming attention. The result was a proliferation of comprehensive frameworks and libraries, improved JavaScript programming practices, and increased usage of JavaScript outside Web browsers, as seen by the proliferation of server-side JavaScript platforms.</p>
 </blockquote>
@@ -122,9 +130,27 @@
 <p>As in most scripting languages, types are associated with values, not with variables. For example, a variable x could be bound to a number, then later rebound to a string. JavaScript supports various ways to test the type of an object, including duck typing.</p>
 </blockquote>
 <blockquote>
-<p>JavaScript is almost entirely object-based. JavaScript objects are associative arrays, augmented with prototypes (see below). Object property names are string keys. They support two equivalent syntaxes: dot notation (obj.x = 10) and bracket notation (obj['x'] = 10). Properties and their values can be added, changed, or deleted at run-time. Most properties of an object (and those on its prototype inheritance chain) can be enumerated using a for...in loop. JavaScript has a small number of built-in objects such as Function and Date. JavaScript includes an eval function that can execute statements provided as strings at run-time.</p>
+<p>JavaScript is almost entirely object-based. JavaScript objects are associative arrays, augmented with prototypes (see below). Object property names are string keys. They support two equivalent syntaxes: dot notation (obj.x = 10) and bracket notation (obj['x'] = 10). Properties and their values can be added, changed, or deleted at run-time. Most properties of an object (and those on its prototype inheritance chain) can be enumerated using a for...in loop. JavaScript has a small number of built-in objects such as Function and Date.</p>
 </blockquote>
-<h3 id="asm.js">5.8.1 ASM.js</h3>
+<blockquote>
+<p>A web browser provides an ECMAScript host environment for client side computation including, for instance, objects that re present windows, menus, pop ups, dialog boxes, text areas, anchors, frames, history, cookies, and input/output. Further, the host environment provides a means to attach scripting code to events such as change of focus, page and image loading, unloading, er ror and abort, selection, form submission, and mouse actions. Scripting code appears within the HTML and the displayed page is a combination of user interface elements and fixed and computed text and images. The scripting code is reactive to user interacti on and there is no need for a main program.</p>
+</blockquote>
+<blockquote>
+<p>A web server provides a different host environment for server side computation including objects representing requests, clients, and files; and mechanisms to lock and share data. By using browser - side and server side scripting together, it is possible to distribute computation between the client and server while providing a customised user interface for a Web based application.</p>
+</blockquote>
+<blockquote>
+<p>In a class based object oriented language, in general, state is carried by instances, methods are carried by cla sses, and inheritance is only of structure and behaviour. In ECMAScript, the state and methods are carried by objects, and structure, behaviour, and state are all inherited.</p>
+</blockquote>
+<blockquote>
+<p>JavaScript includes an eval function that can execute statements provided as strings at run-time.</p>
+</blockquote>
+<blockquote>
+<p>Some of the facilities of ECMAScript are similar to those used in other programming languages; in parti cular Java, Self, and Scheme ### Javascript Estrito</p>
+</blockquote>
+<blockquote>
+<p>The ECMAScript Language recognises the possibility that some users of the language may wish to restrict their usage of some feat ures available in the language. They might do so in the interests of security, to avoid what they consider to be error prone features, to get enhanced error checking, or for other reasons of their choosing. In support of this possibility, ECMAScript define s a strict variant of the language. The strict variant of the language excludes some specific syntactic and semantic features of the regular ECMAScript language and modifies the detailed semantics of some features. The strict variant also specifies additio nal error conditions that must be reported by throwing error exceptions in situations that are not specified as errors by the non strict form of the language.</p>
+</blockquote>
+<h3 id="asm.js">ASM.js</h3>
 <p>A versão estrita do JavaScript o asm.js permite grandes aumentos de performance e foi especialmente delineada para a geração automática de código a partir de outras linguagens. asm.js é especialmente importante no contexto dos jogos que usualmente consomem muitos recursos.</p>
 <blockquote>
 <p>asm.js is not typically written directly: instead, as an intermediate language, it is generated through the use of a compiler that takes source code in a language such as C++ and outputs asm.js.</p>
