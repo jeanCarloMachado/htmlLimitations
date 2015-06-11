@@ -194,7 +194,7 @@ Dalvik é similar a máquina virtual Java, mas roda um formato de arquivos difer
 
 No quesito jogos para dispositivos móveis é preferível disponibilizar os jogos através da interface nativa pois dá a sensação de continuidade para com os demais aplicativos instalados no dispositivo.
 
-##5.7  HTML
+##HTML
 
 Um documento HTML representa conteúdo iterativo de uma forma independente de plataforma. Podem ser enderizados em uma tela, em um sintetizador de voz, etc.
 
@@ -204,7 +204,9 @@ O HTML em si trata cruamente da estrutura, para as páginas ficarem agradáveis 
 
 A WHATWG começou a construção do HTML5 e a W3C se interessou e entrou no projeto. Mesmo assim, a WHATWG mantém uma versão com licença menos restrita que a W3C contendo recursos a mais dos que os especificados no HTML atual.
 
-##5.7  CSS
+##Elemento HTMl
+
+##CSS
 
 Uma linguagem de marcação, como o HTML,  que utiliza seletores e regras para definir a representação de um documento HTML e seus elementos.
 
@@ -219,27 +221,28 @@ Flow de documento, ordem e posição em que os elementos tem que aparecer na pá
 
 <!--  falar do suporte a variáveis do CSS -->
 
-## 5.8  JavaScript
+##JavaScript
 
-EMACScript melhor conhecido como JavaScript foi criado por Brendan Eich na Netscape. O padrão Ecma é a especificação do JavaScript. JScript foi um concorrente do JavaScript também baseado no padrão Ecma. JavaScript tornou tão popular que foi abraçada pela W3C Atualmente a linguagem de programação mais popular do mundo. Todo o navegador atual contém um interpretador de JavaScript tornando-o portável.
+EMACScript, melhor conhecido como JavaScript, é uma linguagem de ``scripting`` criada por Brendan Eich na Netscape. 
 
-O objetivo inicial do JavaScript diverge muito da produção de projetos de larga escala como são feitos atualmente. 
+<!-- Sua sintaxe é bastante similar a de Java, Self e Scheme (ECMA, 2012)mbito  de desenvolvimento de software ). Apesar de ser largamente conhecida em no -->
 
-Existem vários conversores de código (*transpilers*) para JavaScript que permitem a utilização de outras linguagens durante o desenvolvimento e posterior geração de JavaScript.
-A nova versão do JavaScript, o JavaScript 6, agrega vários conceitos de orientação à objetos.
+Segundo a Ecma Internacional 2012 "Uma linguagem de script é uma linguagem de programação que é usada para manipular e automatizar os recursos presentes em um dado sistema. Nesses sistemas funcionalidades já estão disponíveis através de uma interface de usuário, uma linguagem de script é um mecanismo para expor essas funcionalidades para um programa protocolado."
 
-Tipicamente JavaScript é criado separadamente do HTML, através da tag ``<script>``.
-Quando os navegadores encontram essa tag eles fazem a requisição para o servidor para injetar o código no documento. Isso pode ser problemático para projetos que incluam vários scripts.
+A linguagem foi posteriormente padronizada através da especificação Ecma, atualmente na versão 5.1; a especificação permitiu outras implementações do JavaScript, como o JScript da Microsoft. Devido a grande adoção por parte da comunidade de desenvolvedores o JavaScript foi abraçado pela W3C e hoje é um dos componentes da Open Web Platform. 
 
-> A scripting  language is a programming language that is used to manipulate, customise, and automate the facilities  of  an  existing  system.  In  such  systems,  useful  functionality  is  already  available  through  a  user interface, and the scripting language is a mechanism for exposing that functionality to program control.  In this way, the existing system is said to provide a host environment of objects and facilities, which completes the capabilities of the scripting language. A scripting language is intended for use by both professional and non - professional programmers.  
+Praticamente todo o navegador atual contém um interpretador de JavaScript, tornando-o denominador comum entre as diversas plataformas. Devido a essa onipresença vários conversores *transpilers* foram criados, permitindo a criação de código em outras linguagens de programação  para posterior conversão em JavaScript. Com mais conversores uma espécie de ciclo se fecha tornando o JavaScript ainda mais relevante. Devido a essa sinergia o JavaScript é comumente chamado de o assembly da Web. <!-- colocar um footnote sobre assemby -->
 
-JavaScript se tornou portável e isso é um componente chave no desenvolvimento de jogos.
+<!-- colocar alguns exemplos aqui -->
 
-> JavaScript has become one of the most popular programming languages on the Web. Initially, however, many professional programmers denigrated the language because its target audience consisted of Web authors and other such "amateurs", among other reasons.[32] The advent of Ajax returned JavaScript to the spotlight and brought more professional programming attention. The result was a proliferation of comprehensive frameworks and libraries, improved JavaScript programming practices, and increased usage of JavaScript outside Web browsers, as seen by the proliferation of server-side JavaScript platforms.
+Essa onipresença ou portabilidade do JavaScript o tornam integrante vital do processo de desenvolvimento de jogos com o HTML5. Hoje vários títulos de renome são produzidos que fazem extensivo uso de Javascript: Candy Crush Saga, Angry Birds, etc.
 
-> As in most scripting languages, types are associated with values, not with variables. For example, a variable x could be bound to a number, then later rebound to a string. JavaScript supports various ways to test the type of an object, including duck typing.
+Apesar de hoje ser utilizado em projetos de larga escala, o JavaScript foi desenvolvido com o intuito de automatizar alguns detalhes de Web sites. Com o crescimento dos projetos web, cresce as responsabilidades do JavaScript, por consequência há um aumento na demanda por e definições mais expressivas, maior completude teórica, e outras características de linguagens de programação mais bem estabelecidas, como o C++ ou Java.  A nova versão do JavaScript, o JavaScript 6, é um esforço nessa direção; agrega vários conceitos de orientação a objetos como classes, interfaces herança de classe além da já existente herança de protótipo.
 
-> JavaScript is almost entirely object-based. JavaScript objects are associative arrays, augmented with prototypes (see below). Object property names are string keys. They support two equivalent syntaxes: dot notation (obj.x = 10) and bracket notation (obj['x'] = 10). Properties and their values can be added, changed, or deleted at run-time. Most properties of an object (and those on its prototype inheritance chain) can be enumerated using a for...in loop. JavaScript has a small number of built-in objects such as Function and Date.
+Não obstante, a adoção destes novos padrões é lenta e precisa ser feita de maneira contínua. Existem algumas alternativas para a utlização das novas versões do JavaScript como conversores como será visto na sessão Conversores JavaScript.
+
+Para o navegador, o código JavaScript geralmente é disposto no elemento ``script`` dentro de arquivos HTML. Quando os navegadores encontram esse elemento eles fazem a requisição para o servidor para injetar o código no documento. Esse fluxo pode ser problemático para projetos que incluam vários arquivos JavaScript que na grande maioria das vezes precisam ser injetados em determinada ordem. Para mitigar esse tipo de problema existem estratégias como o minify que será visto na sessão Ferramentas de build.
+
 
 > A web browser provides an ECMAScript host environment for client side computation including, for instance, objects that re present windows, menus, pop ups, dialog boxes, text areas, anchors, frames, history, cookies, and input/output. Further, the host environment provides a means to attach scripting code to events such as change of focus, page and image loading, unloading, er ror and abort, selection, form submission, and mouse actions.  Scripting  code  appears  within  the  HTML  and  the  displayed  page  is  a  combination  of  user  interface elements and fixed and computed text and images. The scripting code is reactive to user interacti on and there is no need for a main program.  
 
@@ -247,9 +250,8 @@ JavaScript se tornou portável e isso é um componente chave no desenvolvimento 
 
 > In  a  class based  object oriented  language,  in  general,  state  is  carried  by  instances, methods  are  carried  by cla sses, and inheritance is only of structure and behaviour. In ECMAScript, the state and methods are carried by objects, and structure, behaviour, and state are all inherited.  
 
-> JavaScript includes an eval function that can execute statements provided as strings at run-time.
-
 > Some of the facilities of ECMAScript are similar to those used in other programming languages; in parti cular Java, Self, and Scheme 
+
 ### Javascript Estrito
 
 > The  ECMAScript  Language recognises  the  possibility  that  some  users  of  the  language  may  wish  to  restrict their usage of some feat ures available in the language. They might do so in the interests of security, to avoid what  they  consider  to  be  error prone  features,  to  get  enhanced  error  checking,  or  for  other  reasons  of  their choosing. In support of this possibility, ECMAScript define s a strict variant of the language. The strict variant of the language excludes some specific syntactic and semantic features of the regular ECMAScript language and  modifies  the  detailed  semantics  of  some  features.  The  strict  variant  also  specifies  additio nal  error conditions that must be reported by throwing error exceptions in situations that are not specified as errors by the non strict form of the language.
