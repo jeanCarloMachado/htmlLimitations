@@ -3,7 +3,7 @@
 ##JOGOS
 
 ###BENEFÍCIOS
-
+jean jean
 São variadas as pesquisas que apontam os benefícios dos jogos eletrônicos para as pessoas, coordenação motora, maior concentração.
 
 Muitos jogos ajudam a desenvolver habilidades práticas, servem como uma forma de exercício, ou de alguma forma executam um papel educacional, de simulação ou psicológico. Jogos são uma parte universal do experiência humana, presentes em todas as culturas.
@@ -223,19 +223,17 @@ Flow de documento, ordem e posição em que os elementos tem que aparecer na pá
 
 ##JAVASCRIPT
 
-EMACScript, melhor conhecido como JavaScript, é uma linguagem de ``scripting`` criada por Brendan Eich na Netscape. 
-
-<!-- Sua sintaxe é bastante similar a de Java, Self e Scheme (ECMA, 2012)mbito  de desenvolvimento de software ). Apesar de ser largamente conhecida em no -->
+EMACScript, melhor conhecido como JavaScript, é uma linguagem de ``scripting`` criada por Brendan Eich na Netscape. Sua sintaxe é bastante similar a de Java, Self e Scheme (ECMA, 2012). 
 
 Segundo a Ecma Internacional 2012 "Uma linguagem de script é uma linguagem de programação que é usada para manipular e automatizar os recursos presentes em um dado sistema. Nesses sistemas funcionalidades já estão disponíveis através de uma interface de usuário, uma linguagem de script é um mecanismo para expor essas funcionalidades para um programa protocolado."
 
-A linguagem foi posteriormente padronizada através da especificação Ecma, atualmente na versão 5.1; a especificação permitiu outras implementações do JavaScript, como o JScript da Microsoft. Devido a grande adoção por parte da comunidade de desenvolvedores o JavaScript foi abraçado pela W3C e hoje é um dos componentes da Open Web Platform. 
+A linguagem foi posteriormente padronizada através da especificação: Ecma, atualmente na versão 5.1; a especificação permitiu outras implementações do JavaScript, como o JScript da Microsoft. Devido a grande adoção por parte da comunidade de desenvolvedores o JavaScript foi abraçado pela W3C e hoje é um dos componentes da Open Web Platform. 
 
-Praticamente todo o navegador atual contém um interpretador de JavaScript, tornando-o denominador comum entre as diversas plataformas. Devido a essa onipresença vários conversores *transpilers* foram criados, permitindo a criação de código em outras linguagens de programação  para posterior conversão em JavaScript. Com mais conversores uma espécie de ciclo se fecha tornando o JavaScript ainda mais relevante. Devido a essa sinergia o JavaScript é comumente chamado de o assembly da Web. <!-- colocar um footnote sobre assemby -->
+Praticamente todo o navegador atual contém um interpretador de JavaScript, tornando-o denominador comum entre as diversas plataformas. Devido a essa onipresença vários conversores *transpilers* foram criados, permitindo a criação de código em outras linguagens de programação para posterior conversão em JavaScript. Com mais conversores uma espécie de ciclo se fecha tornando o JavaScript ainda mais relevante. Devido a essa sinergia o JavaScript é comumente chamado de o assembly da Web. <!-- colocar um footnote sobre assemby -->
 
-<!-- colocar alguns exemplos aqui -->
+<!-- colocar alguns exemplos aqui -->  
 
-Essa onipresença ou portabilidade do JavaScript o tornam integrante vital do processo de desenvolvimento de jogos com o HTML5. Hoje vários títulos de renome são produzidos que fazem extensivo uso de Javascript: Candy Crush Saga, Angry Birds, etc.
+Essa  onipresença ou portabilidade do JavaScript o tornam integrante vital do processo de desenvolvimento de jogos com o HTML5. Hoje vários títulos de renome são produzidos que fazem extensivo uso de Javascript: Candy Crush Saga, Angry Birds, etc.  
 
 Apesar de hoje ser utilizado em projetos de larga escala, o JavaScript foi desenvolvido com o intuito de automatizar alguns detalhes de Web sites. Com o crescimento dos projetos web, cresce as responsabilidades do JavaScript, por consequência há um aumento na demanda por e definições mais expressivas, maior completude teórica, e outras características de linguagens de programação mais bem estabelecidas, como o C++ ou Java.  A nova versão do JavaScript, o JavaScript 6, é um esforço nessa direção; agrega vários conceitos de orientação a objetos como classes, interfaces herança de classe além da já existente herança de protótipo.
 

@@ -1,7 +1,7 @@
 <h1 id="contextualização">CONTEXTUALIZAÇÃO</h1>
 <h2 id="jogos">JOGOS</h2>
 <h3 id="benefícios">BENEFÍCIOS</h3>
-<p>São variadas as pesquisas que apontam os benefícios dos jogos eletrônicos para as pessoas, coordenação motora, maior concentração.</p>
+<p>jean jean São variadas as pesquisas que apontam os benefícios dos jogos eletrônicos para as pessoas, coordenação motora, maior concentração.</p>
 <p>Muitos jogos ajudam a desenvolver habilidades práticas, servem como uma forma de exercício, ou de alguma forma executam um papel educacional, de simulação ou psicológico. Jogos são uma parte universal do experiência humana, presentes em todas as culturas.</p>
 <h3 id="o-mercado">O MERCADO</h3>
 <!-- No início os jogos nativos dominavam. -->
@@ -116,10 +116,9 @@
 <p>Flow de documento, ordem e posição em que os elementos tem que aparecer na página. Modelo de caixa o que encapsula o conteúdo em um elementos.</p>
 <!--  falar do suporte a variáveis do CSS -->
 <h2 id="javascript">JAVASCRIPT</h2>
-<p>EMACScript, melhor conhecido como JavaScript, é uma linguagem de <code>scripting</code> criada por Brendan Eich na Netscape.</p>
-<!-- Sua sintaxe é bastante similar a de Java, Self e Scheme (ECMA, 2012)mbito  de desenvolvimento de software ). Apesar de ser largamente conhecida em no -->
+<p>EMACScript, melhor conhecido como JavaScript, é uma linguagem de <code>scripting</code> criada por Brendan Eich na Netscape. Sua sintaxe é bastante similar a de Java, Self e Scheme (ECMA, 2012).</p>
 <p>Segundo a Ecma Internacional 2012 &quot;Uma linguagem de script é uma linguagem de programação que é usada para manipular e automatizar os recursos presentes em um dado sistema. Nesses sistemas funcionalidades já estão disponíveis através de uma interface de usuário, uma linguagem de script é um mecanismo para expor essas funcionalidades para um programa protocolado.&quot;</p>
-<p>A linguagem foi posteriormente padronizada através da especificação Ecma, atualmente na versão 5.1; a especificação permitiu outras implementações do JavaScript, como o JScript da Microsoft. Devido a grande adoção por parte da comunidade de desenvolvedores o JavaScript foi abraçado pela W3C e hoje é um dos componentes da Open Web Platform.</p>
+<p>A linguagem foi posteriormente padronizada através da especificação: Ecma, atualmente na versão 5.1; a especificação permitiu outras implementações do JavaScript, como o JScript da Microsoft. Devido a grande adoção por parte da comunidade de desenvolvedores o JavaScript foi abraçado pela W3C e hoje é um dos componentes da Open Web Platform.</p>
 <p>Praticamente todo o navegador atual contém um interpretador de JavaScript, tornando-o denominador comum entre as diversas plataformas. Devido a essa onipresença vários conversores <em>transpilers</em> foram criados, permitindo a criação de código em outras linguagens de programação para posterior conversão em JavaScript. Com mais conversores uma espécie de ciclo se fecha tornando o JavaScript ainda mais relevante. Devido a essa sinergia o JavaScript é comumente chamado de o assembly da Web. <!-- colocar um footnote sobre assemby --></p>
 <!-- colocar alguns exemplos aqui -->
 <p>Essa onipresença ou portabilidade do JavaScript o tornam integrante vital do processo de desenvolvimento de jogos com o HTML5. Hoje vários títulos de renome são produzidos que fazem extensivo uso de Javascript: Candy Crush Saga, Angry Birds, etc.</p>
