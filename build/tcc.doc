@@ -346,3 +346,6 @@ A nova tag
 </ul>
 <h2 id="interface-e-escolhas-de-design">INTERFACE E ESCOLHAS DE DESIGN</h2>
 <p>Mobile first</p>
+<h2 id="web-components">WEB COMPONENTS</h2>
+<p>Web Components are a prime example of how difficult it is to get large features into the browser today. Every API added lives indefinitely and remains as an obstacle to the next.</p>
+<p>Comparable to picking apart a huge knotted ball of string, adding a bit more, then tangling it back up again. This knot, our platform, grows ever larger and more complex.</p>

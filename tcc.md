@@ -618,3 +618,10 @@ Com o intuito de simplificar o processo para os desenvolvedores, auxiliando-os a
 
 ## INTERFACE E ESCOLHAS DE DESIGN
 Mobile first
+
+
+##WEB COMPONENTS
+
+Web Components are a prime example of how difficult it is to get large features into the browser today. Every API added lives indefinitely and remains as an obstacle to the next.
+
+Comparable to picking apart a huge knotted ball of string, adding a bit more, then tangling it back up again. This knot, our platform, grows ever larger and more complex.
