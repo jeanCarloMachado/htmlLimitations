@@ -1,7 +1,7 @@
 <h1 id="contextualização">CONTEXTUALIZAÇÃO</h1>
 <h2 id="jogos">JOGOS</h2>
 <h3 id="benefícios">BENEFÍCIOS</h3>
-<p>jean jean São variadas as pesquisas que apontam os benefícios dos jogos eletrônicos para as pessoas, coordenação motora, maior concentração.</p>
+<p>São variadas as pesquisas que apontam os benefícios dos jogos eletrônicos para as pessoas, coordenação motora, maior concentração.</p>
 <p>Muitos jogos ajudam a desenvolver habilidades práticas, servem como uma forma de exercício, ou de alguma forma executam um papel educacional, de simulação ou psicológico. Jogos são uma parte universal do experiência humana, presentes em todas as culturas.</p>
 <h3 id="o-mercado">O MERCADO</h3>
 <!-- No início os jogos nativos dominavam. -->
@@ -116,10 +116,10 @@
 <p>Flow de documento, ordem e posição em que os elementos tem que aparecer na página. Modelo de caixa o que encapsula o conteúdo em um elementos.</p>
 <!--  falar do suporte a variáveis do CSS -->
 <h2 id="javascript">JAVASCRIPT</h2>
-<p>EMACScript, melhor conhecido como JavaScript, é uma linguagem de <code>scripting</code> criada por Brendan Eich na Netscape. Sua sintaxe é bastante similar a de Java, Self e Scheme (ECMA, 2012).</p>
+<p>EMACScript, melhor conhecido como JavaScript, é uma linguagem de script criada por Brendan Eich em 1992 na Netscape.</p>
 <p>Segundo a Ecma Internacional 2012 &quot;Uma linguagem de script é uma linguagem de programação que é usada para manipular e automatizar os recursos presentes em um dado sistema. Nesses sistemas funcionalidades já estão disponíveis através de uma interface de usuário, uma linguagem de script é um mecanismo para expor essas funcionalidades para um programa protocolado.&quot;</p>
-<p>A linguagem foi posteriormente padronizada através da especificação: Ecma, atualmente na versão 5.1; a especificação permitiu outras implementações do JavaScript, como o JScript da Microsoft. Devido a grande adoção por parte da comunidade de desenvolvedores o JavaScript foi abraçado pela W3C e hoje é um dos componentes da Open Web Platform.</p>
-<p>Praticamente todo o navegador atual contém um interpretador de JavaScript, tornando-o denominador comum entre as diversas plataformas. Devido a essa onipresença vários conversores <em>transpilers</em> foram criados, permitindo a criação de código em outras linguagens de programação para posterior conversão em JavaScript. Com mais conversores uma espécie de ciclo se fecha tornando o JavaScript ainda mais relevante. Devido a essa sinergia o JavaScript é comumente chamado de o assembly da Web. <!-- colocar um footnote sobre assemby --></p>
+<p>JavaScript foi posteriormente padronizado através da especificação: Ecma, atualmente na versão 5.1. Com a padronização vieram outras implementações como o JScript da Microsoft e o ActionScript da Adobe. Devido a grande adoção por parte da comunidade de desenvolvedores o JavaScript foi abraçado pela W3C e hoje é um dos componentes da Open Web Platform.</p>
+<p>JavaScript roda tanto no cliente como no servidor. Praticamente todo o navegador atual contém um interpretador de JavaScript, tornando-o denominador comum entre as diversas plataformas. Devido a essa onipresença vários conversores <em>transpilers</em> foram criados, permitindo a criação de código em outras linguagens de programação para posterior conversão em JavaScript. Com mais conversores uma espécie de ciclo se fecha tornando o JavaScript ainda mais relevante. Devido a essa sinergia o JavaScript é comumente chamado de o assembly da Web. <!-- colocar um footnote sobre assemby --></p>
 <!-- colocar alguns exemplos aqui -->
 <p>Essa onipresença ou portabilidade do JavaScript o tornam integrante vital do processo de desenvolvimento de jogos com o HTML5. Hoje vários títulos de renome são produzidos que fazem extensivo uso de Javascript: Candy Crush Saga, Angry Birds, etc.</p>
 <p>Apesar de hoje ser utilizado em projetos de larga escala, o JavaScript foi desenvolvido com o intuito de automatizar alguns detalhes de Web sites. Com o crescimento dos projetos web, cresce as responsabilidades do JavaScript, por consequência há um aumento na demanda por e definições mais expressivas, maior completude teórica, e outras características de linguagens de programação mais bem estabelecidas, como o C++ ou Java. A nova versão do JavaScript, o JavaScript 6, é um esforço nessa direção; agrega vários conceitos de orientação a objetos como classes, interfaces herança de classe além da já existente herança de protótipo.</p>
@@ -137,6 +137,16 @@
 <blockquote>
 <p>Some of the facilities of ECMAScript are similar to those used in other programming languages; in parti cular Java, Self, and Scheme</p>
 </blockquote>
+<blockquote>
+<p>JavaScript uses prototypes where many other object-oriented languages use classes for inheritance.[40] It is possible to simulate many class-based features with prototypes in JavaScript.[4]</p>
+</blockquote>
+<h3 id="javascript-6">JAVASCRIPT 6</h3>
+<pre><code>Classes
+    A module system
+        Optional type annotations and static typing, probably using a structural type system
+            Generators and iterators
+                Destructuring assignment
+                    Algebraic data types</code></pre>
 <h3 id="javascript-estrito">JAVASCRIPT ESTRITO</h3>
 <blockquote>
 <p>The ECMAScript Language recognises the possibility that some users of the language may wish to restrict their usage of some feat ures available in the language. They might do so in the interests of security, to avoid what they consider to be error prone features, to get enhanced error checking, or for other reasons of their choosing. In support of this possibility, ECMAScript define s a strict variant of the language. The strict variant of the language excludes some specific syntactic and semantic features of the regular ECMAScript language and modifies the detailed semantics of some features. The strict variant also specifies additio nal error conditions that must be reported by throwing error exceptions in situations that are not specified as errors by the non strict form of the language.</p>
@@ -349,3 +359,5 @@ A nova tag
 <h2 id="web-components">WEB COMPONENTS</h2>
 <p>Web Components are a prime example of how difficult it is to get large features into the browser today. Every API added lives indefinitely and remains as an obstacle to the next.</p>
 <p>Comparable to picking apart a huge knotted ball of string, adding a bit more, then tangling it back up again. This knot, our platform, grows ever larger and more complex.</p>
+<h2 id="progressão-contínua">PROGRESSÃO CONTÍNUA</h2>
+<h2 id="javascript-não-obstrutivo">JAVASCRIPT NÃO OBSTRUTIVO</h2>
