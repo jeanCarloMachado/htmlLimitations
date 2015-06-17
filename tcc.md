@@ -222,45 +222,29 @@ Flow de documento, ordem e posição em que os elementos tem que aparecer na pá
 
 ##JAVASCRIPT
 
-EMACScript, melhor conhecido como JavaScript, é uma linguagem de script criada por Brendan Eich em 1992 na Netscape. 
+EMACScript, melhor conhecido como JavaScript, criada por Brendan Eich em 1992, é a linguagem da Web. Devido a tremenda popularidade entre comunidade de desenvolvedores a linguagem foi abraçada pela W3C e atualmente é um dos componentes da *Open Web Platform*.
 
-Segundo a Ecma Internacional 2012 "Uma linguagem de script é uma linguagem de programação que é usada para manipular e automatizar os recursos presentes em um dado sistema. Nesses sistemas funcionalidades já estão disponíveis através de uma interface de usuário, uma linguagem de script é um mecanismo para expor essas funcionalidades para um programa protocolado."
+As definições da linguagem são descritas na especificação: ECMA-262. O ECMA-262 possibilitou o desenvolvimento de outras implementações além da original - *SpiderMonkey* -  como o Rhino, V8 e TraceMonkey; bem como outras linguagens similares como JScript da Microsoft e o ActionScript da Adobe.
 
-JavaScript foi posteriormente padronizado através da especificação: Ecma, atualmente na versão 5.1. Com a padronização vieram outras implementações como o JScript da Microsoft e o ActionScript da Adobe. Devido a grande adoção por parte da comunidade de desenvolvedores o JavaScript foi abraçado pela W3C e hoje é um dos componentes da Open Web Platform.
+JavaScript é uma linguagem de script. Segundo a Ecma Internacional 2012:
 
-JavaScript roda tanto no cliente como no servidor.
-Praticamente todo o navegador atual contém um interpretador de JavaScript, tornando-o denominador comum entre as diversas plataformas. Devido a essa onipresença vários conversores *transpilers* foram criados, permitindo a criação de código em outras linguagens de programação para posterior conversão em JavaScript. Com mais conversores uma espécie de ciclo se fecha tornando o JavaScript ainda mais relevante. Devido a essa sinergia o JavaScript é comumente chamado de o assembly da Web. <!-- colocar um footnote sobre assemby -->
+> "Uma linguagem de script é uma linguagem de programação que é usada para manipular e automatizar os recursos presentes em um dado sistema. Nesses sistemas funcionalidades já estão disponíveis através de uma interface de usuário, uma linguagem de script é um mecanismo para expor essas funcionalidades para um programa protocolado."
 
-<!-- colocar alguns exemplos aqui -->
+A intenção original era utilizar o JavaScript para dar suporte aos já bem estabelecidos recursos do HTML, como para validação, alteração de estado de elementos, etc. Em outras palavras, a utilização do JavaScript era para ser opcional.
 
-Essa onipresença ou portabilidade do JavaScript o tornam integrante vital do processo de desenvolvimento de jogos com o HTML5. Hoje vários títulos de renome são produzidos que fazem extensivo uso de Javascript: Candy Crush Saga, Angry Birds, etc.
+Entretanto, com a construção de projetos web cada vez mais complexos, as responsabilidades do JavaScript aumentaram a ponto que a grande maioria dos sistemas web não funcionam sem ele. Não obstante, JavaScript não evoluiu ao passo da demanda e muitas vezes carece de definições expressivas, completude teórica, e outras características de linguagens de programação mais bem estabelecidas, como o C++ ou Java. A nova versão do JavaScript, o JavaScript 6, é um esforço nessa direção. JavaScript 6 ou *EMACScript Harmonia* contempla vários conceitos de orientação a objetos como classes, interfaces, herança, tipos, etc.
 
-Apesar de hoje ser utilizado em projetos de larga escala, o JavaScript foi desenvolvido com o intuito de automatizar alguns detalhes de Web sites. Com o crescimento dos projetos web, cresce as responsabilidades do JavaScript, por consequência há um aumento na demanda por e definições mais expressivas, maior completude teórica, e outras características de linguagens de programação mais bem estabelecidas, como o C++ ou Java.  A nova versão do JavaScript, o JavaScript 6, é um esforço nessa direção; agrega vários conceitos de orientação a objetos como classes, interfaces herança de classe além da já existente herança de protótipo.
+Estes esforços de padronização muitas vezes não são rápidos o suficiente para produtores de software web, demora-se muito até obter-se um consenso sobre quais as funcionalidades desejadas em determinada versão, seus detalhes de implementação. Outrossim, uma vez definidas as especificações, é necessário que os distribuidores do JavaScript implementem o especificado.
 
-Não obstante, a adoção destes novos padrões é lenta e precisa ser feita de maneira contínua. Existem algumas alternativas para a utlização das novas versões do JavaScript como conversores como será visto na sessão Conversores JavaScript.
+Alternativamente, existe uma vasta gama de conversores de código -  *transpilers* -  para JavaScript; possibilitando programar em linguagens formais e posteriormente gerar código JavaScript. Não obstante, essa alternativa tem seus pontos fracos, necessita-se de mais tempo de depuração , visto que o JavaScript gerado não é conhecido pelo desenvolvedor, e provavelmente o código gerado não será tão otimizado quanto o criado baseando-se em contexto por um programador profissional.
 
-Para o navegador, o código JavaScript geralmente é disposto no elemento ``script`` dentro de arquivos HTML. Quando os navegadores encontram esse elemento eles fazem a requisição para o servidor para injetar o código no documento. Esse fluxo pode ser problemático para projetos que incluam vários arquivos JavaScript que na grande maioria das vezes precisam ser injetados em determinada ordem. Para mitigar esse tipo de problema existem estratégias como o minify que será visto na sessão Ferramentas de build.
+Mesmo com suas fraquezas amplamente conhecidas, JavaScript está presente em praticamente todo navegador atual. Sendo uma espécie de denominador comum entre as plataformas.
 
+A onipresença do JavaScript torna-o integrante vital no processo de desenvolvimento de jogos multiplataforma em HTML5. Vários títulos renomeados já foram produzidos que fazem extensivo uso de JavaScript, são exemplos: Candy Crush Saga, Angry Birds, Dune II, etc.
 
-> A web browser provides an ECMAScript host environment for client side computation including, for instance, objects that re present windows, menus, pop ups, dialog boxes, text areas, anchors, frames, history, cookies, and input/output. Further, the host environment provides a means to attach scripting code to events such as change of focus, page and image loading, unloading, er ror and abort, selection, form submission, and mouse actions.  Scripting  code  appears  within  the  HTML  and  the  displayed  page  is  a  combination  of  user  interface elements and fixed and computed text and images. The scripting code is reactive to user interacti on and there is no need for a main program.  
+Jogos Web são escritos na arquitetura cliente servidor, JavaScript pode rodar em ambos os contextos, para tanto, sua especificação não define recursos de plataforma. Distribuidores do JavaScript complementam a o JavaScript com recursos específicos para suas plataformas alvo. Por exemplo, para servidores, define-se objetos como o Console, manipuladores de arquivos, etc. No contexto de cliente, são definidos objetos como janelas, frames, DOM, etc.
 
-> A web server provides a different host environment for server side computation including objects representing requests, clients, and files; and mechanisms to lock and share data. By  using  browser - side  and server side scripting  together,  it  is  possible  to  distribute  computation  between  the  client  and  server  while  providing  a customised user interface for a Web based application.
-
-> In  a  class based  object oriented  language,  in  general,  state  is  carried  by  instances, methods  are  carried  by cla sses, and inheritance is only of structure and behaviour. In ECMAScript, the state and methods are carried by objects, and structure, behaviour, and state are all inherited.  
-
-> Some of the facilities of ECMAScript are similar to those used in other programming languages; in parti cular Java, Self, and Scheme 
-
-> JavaScript uses prototypes where many other object-oriented languages use classes for inheritance.[40] It is possible to simulate many class-based features with prototypes in JavaScript.[4]
-
-
-### JAVASCRIPT 6
-    Classes
-        A module system
-            Optional type annotations and static typing, probably using a structural type system
-                Generators and iterators
-                    Destructuring assignment
-                        Algebraic data types
-
+Para o navegador, o código JavaScript geralmente é disposto no elemento ``script`` dentro de arquivos HTML. Quando os navegadores encontram esse elemento eles fazem a requisição para o servidor e injetam o código retornado no documento. Esse fluxo pode ser problemático para projetos que incluam vários arquivos JavaScript pois estes precisam ser injetados em ordem determinada. Para mitigar esse tipo de problema existem estratégias como o minify que será visto na sessão Ferramentas de build.
 
 ### JAVASCRIPT ESTRITO
 
@@ -276,19 +260,19 @@ asm.js é especialmente importante no contexto dos jogos que usualmente consomem
 
 > Much of this performance gain over normal JavaScript is due to 100% type consistency and virtually no garbage collection (memory is manually managed in a large typed array). This simpler model with no dynamic behavior, no memory allocation or deallocation, just a narrow set of well-defined integer and floating point operations enables much greater performance and potential for optimization.[citation needed]
 
->      
+## ALTERNATIVAS AO JAVASCRIPT
 
-> Games and game engines
+Abaixo seguem algumas tecnologias que servem de alternativa ao JavaScript.
 
-Unreal Engine 3: a full version[citation needed] which was ported in 4 days[26][27]
-Unreal Engine 4
-The Unity game engine[28]
-Doom: the open source Freedoom game assets running on PrBoom, which is based on the open source Doom code[29]
-SuperTux[30]
-ScummVM, which supports numerous classic adventure games[31]
-Dune II via OpenDune[32]
-BananaBread based on Cube 2[33]
-Every game in the Humble Mozilla Bundle[34] (Super Hexagon, Aaaaa! for the awesome, Osmos, Zen Bound 2, Dustforce DX, Voxatron, FTL: Advanced Edition and Democracy 3)
+### TYPESCRIPT
+
+Conhecido como uma versão estendida do JavaScript que compila para JavaScript normal. Isso significa que os desenvolvedores podem continuar escrevendo Javascript normalmente. Typescript oferece classes, interfaces e módulos.
+
+
+### DART
+
+Google. DartVM é uma máquina virtual que está embebido no Google Chrome. Significante melhorias em performance quando comparado ao JavaScript. Existe o dart2js que compila código em Dart para JavaScript.
+
 
 ##AJAX
 
@@ -302,19 +286,6 @@ Every game in the Humble Mozilla Bundle[34] (Super Hexagon, Aaaaa! for the aweso
     Screen readers that are able to use Ajax may still not be able to properly read the dynamically generated content.[20]
         The same origin policy prevents some Ajax techniques from being used across domains,[8] although the W3C has a draft of the XMLHttpRequest object that would enable this functionality.[21] Methods exist to sidestep this security feature by using a special Cross Domain Communications channel embedded as an iframe within a page,[22] or by the use of JSONP.
 > The asynchronous callback-style of programming required can lead to complex code that is hard to maintain, to debug[23] and to test.[24]
-
-## ALTERNATIVAS AO JAVASCRIPT
-
-Abaixo seguem algumas tecnologias que servem de alternativa ao JavaScript.
-
-### TYPESCRIPT
-
-Conhecido como uma versão estendida do JavaScript que compila para JavaScript normal. Isso significa que os desenvolvedores podem continuar escrevendo Javascript normalmente. Typescript oferece classes, interfaces e módulos.
-
-
-### DART
-
-Google. DartVM é uma máquina virtual que está embebido no Google Chrome. Significante melhorias em performance quando comparado ao JavaScript. Existe o dart2js que compila código em Dart para JavaScript.
 
 ## DOCUMENT OBJECT MODEL (DOM)
 
@@ -613,7 +584,7 @@ Na pesquisa efetuada sobre estes frameworks full stack foram identificadas as se
     - segundo (PRADO, 2012) o GWT é um framework essencialmente para o lado do cliente (client side) e dá suporte à comunicação com o servidor através de RPCs Remote Procedure Calls (ou procedimento de chamadas remotas). Ele não é um framework para aplicações clássicas da web, pois deixa a implementação da aplicação web parecida com implementações em desktop. Este é utilizado em muitos produtos de grande porte como o Google Adwords e Google Wallet. Outra característica interessante é que a plataforma opera sobre a licença Apache versão 2;
     - construct 2 -  é um editor na nuvem focado para usuários sem conhecimento prévio em programação orientado a comportamento;
     - PlayCanvas - é uma plataformas para a construção de jogos 3D na nuvem, desenvolvida com foco em performance. Permite a hospedagem, controle de versão e publicação dos aplicativos nela criados, possibilita também a importação de modelos 3D de softwares populares como: Maya, 3ds Max e Blender;
-    - o ambiente HTML5 Development Environment (ambiente de desenvolvimento HTML5) da Intel, este fornece uma solução na nuvem, completa para o desenvolvimento em plataforma cruzada, com serviços de empacotamento, serviços para a criação e testes de aplicativos com montagem de interfaces drag and drop (Intex XDK) e bibliotecas para a construção de jogos utilizando aceleração de hardware, o que garante até duas vezes mais performance que aplicativos mobile baseados em Web tradicionais. Esta solução é free, open source e funciona  através de um plugin para o Google Chrome, ou seja, o desenvolvimento também é multiplataforma e devido ao fato de os binários ficarem hospedados na nuvem, possibilitou a  Intel criar compiladores para cada uma das plataformas disponibilizadas pelo PhoneGap, que é o framework polyfill utilizado na solução.
+    - o ambiente HTML5 Development Environment (ambiente de desenvolvimento HTML5) da Intel, este fornece uma solução na nuvem, completa para o desenvolvimento em plataforma cruzada, com serviços de empacotamento, serviços para a criação e testes de aplicativos com montagem de interfaces drag and drop (Intex XDK) e bibliotecas para a construção de jogos utilizando aceleração de hardware, o que garante até duas vezes mais performance que aplicativos mobile baseados em Web tradicionais. Esta solução é free, open source e funciona através de um plugin para o Google Chrome, ou seja, o desenvolvimento também é multiplataforma e devido ao fato de os binários ficarem hospedados na nuvem, possibilitou a Intel criar compiladores para cada uma das plataformas disponibilizadas pelo PhoneGap, que é o framework polyfill utilizado na solução.
 
 ## HTTP
 
@@ -641,3 +612,5 @@ Comparable to picking apart a huge knotted ball of string, adding a bit more, th
 ##PROGRESSÃO CONTÍNUA
 
 ##JAVASCRIPT NÃO OBSTRUTIVO
+
+##Arquitetura Cliente Servidor
