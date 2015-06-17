@@ -48,7 +48,7 @@ Entretanto, o HTML em sua especificação e implementações atuais costa com al
 
 O HTML vem sendo desenvolvido por muitos anos e por pessoas que não conheciam umas as outras, muitas funcionalidades foram construídas de maneiras inconsistentes.
 
-> Funcionalidades foram disponibilizadas de diversas fontes e não foram construídas de forma especialmente consistente com as demais. Além disso, devida a única característica da Web, BUGs de implementação se tornam frequentes, e muitas vezes se tornam o padrão, pois outras funcionalidades dependem destas primeiras antes que elas estejam estáveis.  (W3C manual)
+> Funcionalidades foram disponibilizadas de diversas fontes e não foram construídas de forma especialmente consistente com as demais. Além disso, devida a única característica da Web, bug's de implementação se tornam frequentes, e muitas vezes se tornam o padrão, pois outras funcionalidades dependem destas primeiras antes que elas estejam estáveis.  (W3C manual)
 
 Enquanto o HTML é desenvolvido muitas das funcionalidades disponibilizadas são testadas em apenas um pequeno conjunto de navegadores para um pequeno conjunto de versões (referência 2). Isso acarreta em suporte inconsistente.  A forma mais segura de garantir suporte é testando em todas as versões alvo, todavia essa solução não é prática. (REF 2)
 
@@ -58,7 +58,7 @@ Nem todos os recursos disponíveis através das SDK's nativas estão presentes a
 
 ##  ESTE TRABALHO
 
-Este projeto propõe analisar as limitações do HTML5 quanto relativo a construção de jogos multiplataforma. Através de revisão bibliográfica e  da criação de um protótipo de jogo multiplataforma.
+Este projeto propõe analisar as limitações do HTML5 quanto relativo a construção de jogos multiplataforma. Através de revisão bibliográfica e da criação de um protótipo de jogo multiplataforma.
 
 Um tratado completo sobre o assunto requiriria um comparativo entre jogos desenvolvidos nativamente e jogos em HTML5.
 
@@ -114,7 +114,7 @@ Tendo em vista que este trabalho busca mapear possíveis problemas do desenvolvi
 Por tratar cientificamente de aspectos importantes do HTML, este trabalho tem potencial apontar os pontos chave que necessitam de melhorias nas plataformas alvo, colateralmente colaborando para a melhoria do próprio HTML.
 A opinião comum tende para soluções nativas em detrimento do desenvolvimento de jogos, este trabalho pretende desafiar esta concepção. (REFERENCIAR)
 Muitos desenvolvedores estão familiarizados com as tecnologias da WEB ou apontam interesse na tecnologia. <!-- referenciar -->
-Estimular e avançar o estudo da implementação da  Open Web;
+Estimular e avançar o estudo da implementação da Open Web;
 
 #  REVISÃO BIBLIOGRÁFICA
 
@@ -168,7 +168,7 @@ Não obstante, esta opção – devido a incompletude da especificação de padr
 
 ####DESENVOLVIMENTO DE JOGOS HÍBRIDOS
 
-Jogos híbridos são jogos geralmente desenvolvidos com tecnologias da web: beneficiando-se da não necessidade de duplicação. Rodam dentro de um *container* nativo – possibilitando o acesso à chamadas do sistema, recursos de hardware, eliminando muitias das  dificuldades da web.
+Jogos híbridos são jogos geralmente desenvolvidos com tecnologias da web: beneficiando-se da não necessidade de duplicação. Rodam dentro de um *container* nativo – possibilitando o acesso à chamadas do sistema, recursos de hardware, eliminando muitias das dificuldades da web.
 Em certo sentido, beneficiam-se do melhor de ambas as metodologias anteriores.
 Phone game é uma ferramente deste tipo. Permite acessar os dispositivos utilizando sua API JavaScript. Funciona encapsulando todo o código HTML5. Este tipo de abordagem permite acessar câmera, acelerômetro, GPS, etc.
 
@@ -177,13 +177,13 @@ Phone game é uma ferramente deste tipo. Permite acessar os dispositivos utiliza
 Aplicações do lado do cliente geralmente se comunicam com um servidor através de documentos em HTTP. Quado o navegador recebe um destes pacotes em HTML ele começa o processo de renderização. A renderização pode requisitar outros arquivos a fim de completar a experiência desenvolvida para o endereço em questão.
 Nos navegadores os usuários necessitam localizar a página que desejam, sabendo o endereço, ou pesquisando em buscadores. Isso é um processo árduo para a plataformas móveis pois necessitam maior interação do usuários e não são “naturais” se comparado ao modo normal de consumir aplicativos nestas mesmas plataformas – simplesmente adquirindo o aplicativo na loja e abrindo-o no sistema operacional. Alguns contornos para este problema serão descritos nas tecnologias offline.
 
-Para transformar as instruções retornadas pelo servidor em algo útil para o usuário final os navegadores geralmente fazem uso de bibliotecas externas capazes de interpretar HTML5 e gerar o conteúdo iterativo. 
+Para transformar as instruções retornadas pelo servidor em algo útil para o usuário final os navegadores geralmente fazem uso de bibliotecas externas capazes de interpretar HTML5 e gerar o conteúdo iterativo.
 
 ##BIBLIOTECAS WEB
 
 O Google Chrome utiliza o Webkit para renderizar seu conteúdo HTML5. O webkit foi criado pela Apple baseando-se no motor de renderização do Konkeror do projeto KDE. Safari e Opera também fazem uso do Webkit. V8 para JavaScript.
 
-O motor de renderização do  HTML5 do Firefox é o XXX. O motor de JavaScript é o.
+O motor de renderização do HTML5 do Firefox é o XXX. O motor de JavaScript é o.
 
 ## ANDROID
 
@@ -195,7 +195,7 @@ No quesito jogos para dispositivos móveis é preferível disponibilizar os jogo
 
 ##HTML
 
-Um documento HTML representa conteúdo iterativo de uma forma independente de plataforma. Podem ser enderizados em uma tela, em um sintetizador de voz, etc.
+Um documento HTML representa conteúdo iterativo de uma forma independente de plataforma. Podem ser renderizados em uma tela, em um sintetizador de voz, etc.
 
 Com o crescimento da demanda de interatividade na internet o HTML foi forçado a evoluir. Em sua quinta versão, o HTML5, grandes melhorias foram adicionadas. Antes do HTML5 para alcançar a interatividade desejada, só te podia recorrer a plugins de terceiros como o Flash Player e o Silverlight, estes necessitam de instalação de plugin e ficam limitados a um distribuidor de software.
 
@@ -224,41 +224,31 @@ Flow de documento, ordem e posição em que os elementos tem que aparecer na pá
 
 EMACScript, melhor conhecido como JavaScript, criada por Brendan Eich em 1992, é a linguagem da Web. Devido a tremenda popularidade entre comunidade de desenvolvedores a linguagem foi abraçada pela W3C e atualmente é um dos componentes da *Open Web Platform*.
 
-As definições da linguagem são descritas na especificação: ECMA-262. O ECMA-262 possibilitou o desenvolvimento de outras implementações além da original - *SpiderMonkey* -  como o Rhino, V8 e TraceMonkey; bem como outras linguagens similares como JScript da Microsoft e o ActionScript da Adobe.
+As definições da linguagem são descritas na especificação ECMA-262. O ECMA-262 possibilitou o desenvolvimento de outras implementações além da original - *SpiderMonkey* -  como o Rhino, V8 e TraceMonkey; bem como outras linguagens similares como JScript da Microsoft e o ActionScript da Adobe.
 
 JavaScript é uma linguagem de script. Segundo a Ecma Internacional 2012:
 
 > "Uma linguagem de script é uma linguagem de programação que é usada para manipular e automatizar os recursos presentes em um dado sistema. Nesses sistemas funcionalidades já estão disponíveis através de uma interface de usuário, uma linguagem de script é um mecanismo para expor essas funcionalidades para um programa protocolado."
 
-A intenção original era utilizar o JavaScript para dar suporte aos já bem estabelecidos recursos do HTML, como para validação, alteração de estado de elementos, etc. Em outras palavras, a utilização do JavaScript era para ser opcional.
+A intenção original era utilizar o JavaScript para dar suporte aos já bem estabelecidos recursos do HTML, como para validação, alteração de estado de elementos, etc. Em outras palavras, a utilização do JavaScript era opcional e as páginas da web deveriam continuar operantes sem a presença da linguagem.
 
-Entretanto, com a construção de projetos web cada vez mais complexos, as responsabilidades do JavaScript aumentaram a ponto que a grande maioria dos sistemas web não funcionam sem ele. Não obstante, JavaScript não evoluiu ao passo da demanda e muitas vezes carece de definições expressivas, completude teórica, e outras características de linguagens de programação mais bem estabelecidas, como o C++ ou Java. A nova versão do JavaScript, o JavaScript 6, é um esforço nessa direção. JavaScript 6 ou *EMACScript Harmonia* contempla vários conceitos de orientação a objetos como classes, interfaces, herança, tipos, etc.
+Entretanto, com a construção de projetos Web cada vez mais complexos, as responsabilidades delegadas ao JavaScript aumentaram a ponto que a grande maioria dos sistemas web não funcionarem sem ele. Não obstante, JavaScript não evoluiu ao passo da demanda e muitas vezes carece de definições expressivas, completude teórica, e outras características de linguagens de programação mais bem estabelecidas, como o C++ ou Java. A nova versão do JavaScript, o JavaScript 6, é um esforço nessa direção. JavaScript 6 ou *EMACScript Harmonia*, contempla vários conceitos de orientação a objetos como classes, interfaces, herança, tipos, etc.
 
-Estes esforços de padronização muitas vezes não são rápidos o suficiente para produtores de software web, demora-se muito até obter-se um consenso sobre quais as funcionalidades desejadas em determinada versão, seus detalhes de implementação. Outrossim, uma vez definidas as especificações, é necessário que os distribuidores do JavaScript implementem o especificado.
+Estes esforços de padronização muitas vezes não são rápidos o suficiente para produtores de software web, demora-se muito até obter-se um consenso sobre quais as funcionalidades desejadas em determinada versão e seus detalhes de implementação. Outrossim, uma vez definidas as especificações, é necessário que os distribuidores do JavaScript implementem o especificado.
 
-Alternativamente, existe uma vasta gama de conversores de código -  *transpilers* -  para JavaScript; possibilitando programar em linguagens formais e posteriormente gerar código JavaScript. Não obstante, essa alternativa tem seus pontos fracos, necessita-se de mais tempo de depuração , visto que o JavaScript gerado não é conhecido pelo desenvolvedor, e provavelmente o código gerado não será tão otimizado quanto o criado baseando-se em contexto por um programador profissional.
+Alternativamente, existe uma vasta gama de conversores de código -  *transpilers* -  para JavaScript; possibilitando programar em linguagens formais e posteriormente gerar código JavaScript. Não obstante, essa alternativa tem seus pontos fracos, necessita-se de mais tempo de depuração , visto que o JavaScript gerado não é conhecido pelo desenvolvedor, e provavelmente o código gerado não será tão otimizado, nem utilizará os recursos mais recentes do JavaScript.
 
-Mesmo com suas fraquezas amplamente conhecidas, JavaScript está presente em praticamente todo navegador atual. Sendo uma espécie de denominador comum entre as plataformas.
+Mesmo com suas fraquezas amplamente conhecidas, JavaScript está presente em praticamente todo navegador atual. Sendo uma espécie de denominador comum entre as plataformas.  Essa onipresença torna-o integrante vital no processo de desenvolvimento de jogos multiplataforma em HTML5. Vários títulos renomeados já foram produzidos que fazem extensivo uso de JavaScript, são exemplos: Candy Crush Saga, Angry Birds, Dune II, etc.
 
-A onipresença do JavaScript torna-o integrante vital no processo de desenvolvimento de jogos multiplataforma em HTML5. Vários títulos renomeados já foram produzidos que fazem extensivo uso de JavaScript, são exemplos: Candy Crush Saga, Angry Birds, Dune II, etc.
+Jogos Web são escritos na arquitetura cliente servidor, JavaScript pode rodar em ambos estes contextos, para tanto, sua especificação não define recursos de plataforma. Distribuidores do JavaScript complementam a o JavaScript com recursos específicos para suas plataformas alvo. Por exemplo, para servidores, define-se objetos de terminal, acesso a arquivos e dispositivos, etc. No contexto de cliente, são definidos objetos como janelas, frames, DOM, etc.
 
-Jogos Web são escritos na arquitetura cliente servidor, JavaScript pode rodar em ambos os contextos, para tanto, sua especificação não define recursos de plataforma. Distribuidores do JavaScript complementam a o JavaScript com recursos específicos para suas plataformas alvo. Por exemplo, para servidores, define-se objetos como o Console, manipuladores de arquivos, etc. No contexto de cliente, são definidos objetos como janelas, frames, DOM, etc.
-
-Para o navegador, o código JavaScript geralmente é disposto no elemento ``script`` dentro de arquivos HTML. Quando os navegadores encontram esse elemento eles fazem a requisição para o servidor e injetam o código retornado no documento. Esse fluxo pode ser problemático para projetos que incluam vários arquivos JavaScript pois estes precisam ser injetados em ordem determinada. Para mitigar esse tipo de problema existem estratégias como o minify que será visto na sessão Ferramentas de build.
-
-### JAVASCRIPT ESTRITO
-
-> The  ECMAScript Language recognises  the  possibility  that  some  users  of  the  language  may  wish  to  restrict their usage of some feat ures available in the language. They might do so in the interests of security, to avoid what  they  consider  to  be  error prone  features,  to  get  enhanced  error  checking,  or  for  other  reasons  of  their choosing. In support of this possibility, ECMAScript define s a strict variant of the language. The strict variant of the language excludes some specific syntactic and semantic features of the regular ECMAScript language and  modifies  the  detailed  semantics  of  some  features.  The  strict  variant  also  specifies  additio nal  error conditions that must be reported by throwing error exceptions in situations that are not specified as errors by the non strict form of the language.
+Para o navegador o código JavaScript geralmente é disposto no elemento ``script`` dentro de arquivos HTML. Quando os navegadores encontram esse elemento eles fazem a requisição para o servidor e injetam o código retornado no documento, e a não ser que especificado de outra forma, iniciam sua execução.
 
 ### ASM.JS
 
-A versão estrita do JavaScript o asm.js permite grandes aumentos de performance e foi especialmente delineada para a geração automática de código a partir de outras linguagens.
-asm.js é especialmente importante no contexto dos jogos que usualmente consomem muitos recursos.
+Asm.js é um subconjunto da sintaxe do JavaScript a qual permite grandes aumentos de performance quando em comparação com JavaScript normal. No contexto dos jogos performance é usualmente um recurso estimável, asm.js consegue-o supra utilizando recursos que permitam otimizações antes do tempo *ahead of time optimizations*. Entretanto, não é trivial escrever código em asm.js e geralmente a geração de código asm.js é feita através da transpilação de outras linhagens como C.
 
-
-> asm.js is not typically written directly: instead, as an intermediate language, it is generated through the use of a compiler that takes source code in a language such as C++ and outputs asm.js.
-
-> Much of this performance gain over normal JavaScript is due to 100% type consistency and virtually no garbage collection (memory is manually managed in a large typed array). This simpler model with no dynamic behavior, no memory allocation or deallocation, just a narrow set of well-defined integer and floating point operations enables much greater performance and potential for optimization.[citation needed]
+> Muita da performance adicional em relação ao JavaScript é devido a consistência de tipo e a não existência de um coletor de lixo (memória é gerenciada manualmente através de um grande vetor). Esse modelo simples desprovido de comportamento dinâmico, sem alocação e desalocação de memória, apenas um bem definido conjunto de operações de inteiros e flutuantes possibilita grade performance e abre espaço para otimizações.
 
 ## ALTERNATIVAS AO JAVASCRIPT
 
