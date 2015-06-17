@@ -172,6 +172,21 @@ Jogos híbridos são jogos geralmente desenvolvidos com tecnologias da web: bene
 Em certo sentido, beneficiam-se do melhor de ambas as metodologias anteriores.
 Phone game é uma ferramente deste tipo. Permite acessar os dispositivos utilizando sua API JavaScript. Funciona encapsulando todo o código HTML5. Este tipo de abordagem permite acessar câmera, acelerômetro, GPS, etc.
 
+##OPEN WEB
+
+As an important provider of Web technology ICT Standards, notably XML, http, HTML, CSS and WAI, the World Wide Web Consortium (W3C) follows a process that promotes the development of high-quality standards.[31]
+
+Looking at the end result, the spec alone, up for adoption, is not enough. The participative/inclusive process leading to a particular design, and the supporting resources available with it should be accounted when we talk about Open Standards:
+
+transparency (due process is public, and all technical discussions, meeting minutes, are archived and referencable in decision making)
+relevance (new standardization is started upon due analysis of the market needs, including requirements phase, e.g. accessibility, multi-linguism)
+openness (anybody can participate, and everybody does: industry, individual, public, government bodies, academia, on a worldwide scale)
+impartiality and consensus (guaranteed fairness by the process and the neutral hosting of the W3C organization, with equal weight for each participant)
+availability (free access to the standard text, both during development, at final stage, and for translations, and assurance that core Web and Internet technologies can be implemented Royalty-Free)
+maintenance (ongoing process for testing, errata, revision, permanent access, validation, etc.)
+
+In August 2012, the W3C combined with the IETF and IEEE to launch OpenStand [13] and to publish The Modern Paradigm for Standards. This captures "the effective and efficient standardization processes that have made the Internet and Web the premiere platforms for innovation and borderless commerce"
+
 ## NAVEGADORES WEB
 
 Aplicações do lado do cliente geralmente se comunicam com um servidor através de documentos em HTTP. Quado o navegador recebe um destes pacotes em HTML ele começa o processo de renderização. A renderização pode requisitar outros arquivos a fim de completar a experiência desenvolvida para o endereço em questão.
@@ -205,6 +220,10 @@ A WHATWG começou a construção do HTML5 e a W3C se interessou e entrou no proj
 
 ##ELEMENTO HTML
 
+## DOCUMENT OBJECT MODEL (DOM)
+
+É uma plataforma e interface agnóstica a linguagem que permite os programas e scripts dinamicamente acessar e atualizar o conteúdo, estrutura e estilo de documentos. Pode ser novamente processado e o resultado aparecer na tela. O navegador cria um DOM quando ele processa os elementos e tags encontrados em um documento HTML. Gmail é uma aplicação de única página (single-page) que se baseia fortemente no DOM para gerar conteúdo dinâmico e interativo oferecido pelo DOM.
+
 ##CSS
 
 Uma linguagem de marcação, como o HTML,  que utiliza seletores e regras para definir a representação de um documento HTML e seus elementos.
@@ -220,11 +239,12 @@ Flow de documento, ordem e posição em que os elementos tem que aparecer na pá
 
 <!--  falar do suporte a variáveis do CSS -->
 
+
 ##JAVASCRIPT
 
 EMACScript, melhor conhecido como JavaScript, criada por Brendan Eich em 1992, é a linguagem da Web. Devido a tremenda popularidade entre comunidade de desenvolvedores a linguagem foi abraçada pela W3C e atualmente é um dos componentes da *Open Web Platform*.
 
-As definições da linguagem são descritas na especificação ECMA-262. O ECMA-262 possibilitou o desenvolvimento de outras implementações além da original - *SpiderMonkey* -  como o Rhino, V8 e TraceMonkey; bem como outras linguagens similares como JScript da Microsoft e o ActionScript da Adobe.
+As definições da linguagem são descritas na especificação ECMA-262. Esta possibilitou o desenvolvimento de outras implementações além da original - *SpiderMonkey* -  como o Rhino, V8 e TraceMonkey; bem como outras linguagens similares como JScript da Microsoft e o ActionScript da Adobe.
 
 JavaScript é uma linguagem de script. Segundo a Ecma Internacional 2012:
 
@@ -232,7 +252,7 @@ JavaScript é uma linguagem de script. Segundo a Ecma Internacional 2012:
 
 A intenção original era utilizar o JavaScript para dar suporte aos já bem estabelecidos recursos do HTML, como para validação, alteração de estado de elementos, etc. Em outras palavras, a utilização do JavaScript era opcional e as páginas da web deveriam continuar operantes sem a presença da linguagem.
 
-Entretanto, com a construção de projetos Web cada vez mais complexos, as responsabilidades delegadas ao JavaScript aumentaram a ponto que a grande maioria dos sistemas web não funcionarem sem ele. Não obstante, JavaScript não evoluiu ao passo da demanda e muitas vezes carece de definições expressivas, completude teórica, e outras características de linguagens de programação mais bem estabelecidas, como o C++ ou Java. A nova versão do JavaScript, o JavaScript 6, é um esforço nessa direção. JavaScript 6 ou *EMACScript Harmonia*, contempla vários conceitos de orientação a objetos como classes, interfaces, herança, tipos, etc.
+Entretanto, com a construção de projetos Web cada vez mais complexos, as responsabilidades delegadas ao JavaScript aumentaram a ponto que a grande maioria dos sistemas web não funcionarem sem ele. Não obstante, JavaScript não evoluiu ao passo da demanda e muitas vezes carece de definições expressivas, completude teórica, e outras características de linguagens de programação mais bem estabelecidas, como o C++ ou Java (Barnett, 2013). A nova versão do JavaScript, o JavaScript 6, é um esforço nessa direção. JavaScript 6 ou *EMACScript Harmonia*, contempla vários conceitos de orientação a objetos como classes, interfaces, herança, tipos, etc.
 
 Estes esforços de padronização muitas vezes não são rápidos o suficiente para produtores de software web, demora-se muito até obter-se um consenso sobre quais as funcionalidades desejadas em determinada versão e seus detalhes de implementação. Outrossim, uma vez definidas as especificações, é necessário que os distribuidores do JavaScript implementem o especificado.
 
@@ -250,20 +270,6 @@ Asm.js é um subconjunto da sintaxe do JavaScript a qual permite grandes aumento
 
 > Muita da performance adicional em relação ao JavaScript é devido a consistência de tipo e a não existência de um coletor de lixo (memória é gerenciada manualmente através de um grande vetor). Esse modelo simples desprovido de comportamento dinâmico, sem alocação e desalocação de memória, apenas um bem definido conjunto de operações de inteiros e flutuantes possibilita grade performance e abre espaço para otimizações.
 
-## ALTERNATIVAS AO JAVASCRIPT
-
-Abaixo seguem algumas tecnologias que servem de alternativa ao JavaScript.
-
-### TYPESCRIPT
-
-Conhecido como uma versão estendida do JavaScript que compila para JavaScript normal. Isso significa que os desenvolvedores podem continuar escrevendo Javascript normalmente. Typescript oferece classes, interfaces e módulos.
-
-
-### DART
-
-Google. DartVM é uma máquina virtual que está embebido no Google Chrome. Significante melhorias em performance quando comparado ao JavaScript. Existe o dart2js que compila código em Dart para JavaScript.
-
-
 ##AJAX
 
 ### AJAX LIMITATIONS
@@ -277,9 +283,17 @@ Google. DartVM é uma máquina virtual que está embebido no Google Chrome. Sign
         The same origin policy prevents some Ajax techniques from being used across domains,[8] although the W3C has a draft of the XMLHttpRequest object that would enable this functionality.[21] Methods exist to sidestep this security feature by using a special Cross Domain Communications channel embedded as an iframe within a page,[22] or by the use of JSONP.
 > The asynchronous callback-style of programming required can lead to complex code that is hard to maintain, to debug[23] and to test.[24]
 
-## DOCUMENT OBJECT MODEL (DOM)
+## ALTERNATIVAS AO JAVASCRIPT
 
-É uma plataforma e interface agnóstica a linguagem que permite os programas e scripts dinamicamente acessar e atualizar o conteúdo, estrutura e estilo de documentos. Pode ser novamente processado e o resultado aparecer na tela. O navegador cria um DOM quando ele processa os elementos e tags encontrados em um documento HTML. Gmail é uma aplicação de única página (single-page) que se baseia fortemente no DOM para gerar conteúdo dinâmico e interativo oferecido pelo DOM.
+Abaixo seguem algumas tecnologias que servem de alternativa ao JavaScript.
+
+### TYPESCRIPT
+
+Conhecido como uma versão estendida do JavaScript que compila para JavaScript normal.
+
+### DART
+
+Google. DartVM é uma máquina virtual que está embebido no Google Chrome. Significante melhorias em performance quando comparado ao JavaScript. Existe o dart2js que compila código em Dart para JavaScript.
 
 ## CANVAS
 
