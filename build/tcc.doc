@@ -1,3 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  % Table of contents formatting
+  \renewcommand{\contentsname}{Table of Contents}
+  \setcounter{tocdepth}{1}
+   
+  % Headers and page numbering 
+  \usepackage{fancyhdr}
+  \pagestyle{plain}
+   
+  % Fonts and typesetting
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+  
+  % Set figure legends and captions to be smaller sized sans serif font
+  \usepackage[font={footnotesize,sf}]{caption}
+  
+  \usepackage{siunitx}
+  
+  % Adjust spacing between lines to 1.5
+  \usepackage{setspace}
+  \onehalfspacing
+  \raggedbottom
+  
+  % Set margins
+  \usepackage[top=1.25in,bottom=1.25in]{geometry}
+  
+  % Chapter styling
+  \usepackage[grey]{quotchap}
+  \makeatletter 
+  \renewcommand*{\chapnumfont}{%
+    \usefont{T1}{\@defaultcnfont}{b}{n}\fontsize{80}{100}\selectfont% Default: 100/130
+    \color{chaptergrey}%
+  }
+  \makeatother
+  
+  % Set colour of links to black so that they don't show up when printed
+  \usepackage{hyperref}
+  \hypersetup{colorlinks=true, linkcolor=black}
+  
+  % Tables
+  \usepackage{booktabs}
+  \usepackage{threeparttable}
+  \usepackage{array}
+  \newcolumntype{x}[1]{%
+  >{\centering\arraybackslash}m{#1}}%
+  
+  % Allow for long captions and float captions on opposite page of figures
+</head>
+<body>
 <h1 id="contextualização">CONTEXTUALIZAÇÃO</h1>
 <h2 id="jogos">JOGOS</h2>
 <h3 id="benefícios">BENEFÍCIOS</h3>
@@ -293,17 +349,6 @@ A nova tag
 </blockquote>
 <h2 id="trabalhos-futuros">TRABALHOS FUTUROS</h2>
 <p>EMACSCRIPT 7</p>
-<h1 id="cronograma">CRONOGRAMA</h1>
-<p>O cronograma foi especificado de acordo com o detalhado na metodologia, suas datas estão especificadas de acordo com dias úteis disponíveis no calendário. Etapa Indicador físico Previsão</p>
-<h1 id="bibliografia">BIBLIOGRAFIA</h1>
-<p>LEMES, David Oliveira. Games independentes. Pontifícia Universidade Católica de São Paulo 2009.</p>
-<p>Referência 3 é uma ótima fonte de explicação de como tecnologias relacionadas ao assunto funcionam.</p>
-<p>Referência 2 é uma ótimo trabalho para pegar ideias sobre como escrever as coisas.</p>
-<p>Referência 7 is a good font from feature detection systems.</p>
-<p>HTML5: A blessing or a curse http://www.develop-online.net/tools-and-tech/html5-a-blessing-or-a-curse/0117393</p>
-<p>5 common mistakes that html5 developers make http://www.toptal.com/html5/top-5-mistakes-that-html5-developers-make</p>
-<h1 id="glossário">GLOSSÁRIO</h1>
-<p>API BUG</p>
 <h1 id="anexos">ANEXOS</h1>
 <h2 id="conversores-para-html5">CONVERSORES PARA HTML5</h2>
 <p>Além da possibilidade de escrever em HTML, pode-se optar pela alternativa de utilizar-se um conversor de linguagens.</p>
@@ -335,3 +380,5 @@ A nova tag
 <h2 id="progressão-contínua">PROGRESSÃO CONTÍNUA</h2>
 <h2 id="javascript-não-obstrutivo">JAVASCRIPT NÃO OBSTRUTIVO</h2>
 <h2 id="arquitetura-cliente-servidor">Arquitetura Cliente Servidor</h2>
+</body>
+</html>
