@@ -150,10 +150,25 @@
 <h4 id="desenvolvimento-de-jogos-híbridos">DESENVOLVIMENTO DE JOGOS HÍBRIDOS</h4>
 <p>Jogos híbridos são jogos geralmente desenvolvidos com tecnologias da web: beneficiando-se da não necessidade de duplicação. Rodam dentro de um <em>container</em> nativo – possibilitando o acesso à chamadas do sistema, recursos de hardware, eliminando muitias das dificuldades da web. Em certo sentido, beneficiam-se do melhor de ambas as metodologias anteriores. Phone game é uma ferramente deste tipo. Permite acessar os dispositivos utilizando sua API JavaScript. Funciona encapsulando todo o código HTML5. Este tipo de abordagem permite acessar câmera, acelerômetro, GPS, etc.</p>
 <h2 id="open-web">OPEN WEB</h2>
-<p>As an important provider of Web technology ICT Standards, notably XML, http, HTML, CSS and WAI, the World Wide Web Consortium (W3C) follows a process that promotes the development of high-quality standards.[31]</p>
-<p>Looking at the end result, the spec alone, up for adoption, is not enough. The participative/inclusive process leading to a particular design, and the supporting resources available with it should be accounted when we talk about Open Standards:</p>
-<p>transparency (due process is public, and all technical discussions, meeting minutes, are archived and referencable in decision making) relevance (new standardization is started upon due analysis of the market needs, including requirements phase, e.g. accessibility, multi-linguism) openness (anybody can participate, and everybody does: industry, individual, public, government bodies, academia, on a worldwide scale) impartiality and consensus (guaranteed fairness by the process and the neutral hosting of the W3C organization, with equal weight for each participant) availability (free access to the standard text, both during development, at final stage, and for translations, and assurance that core Web and Internet technologies can be implemented Royalty-Free) maintenance (ongoing process for testing, errata, revision, permanent access, validation, etc.)</p>
-<p>In August 2012, the W3C combined with the IETF and IEEE to launch OpenStand [13] and to publish The Modern Paradigm for Standards. This captures &quot;the effective and efficient standardization processes that have made the Internet and Web the premiere platforms for innovation and borderless commerce&quot;</p>
+<p>Em agosto de 2012 a W3C e o IETF e IEEE juntaram-se para lançar o OpenStand - para publicar o paradigma moderno de padrões. Mais do que um conjunto de tecnologias Open Web, é um conjunto de filosofias as quais a web se baseia.</p>
+<p>Neste conjunto inclui-se:</p>
+<ul>
+<li>Descentralização;</li>
+<li>Transparência;</li>
+<li>Relevância;</li>
+<li>Imparcialidade;</li>
+<li>Consenso;</li>
+<li>Disponibilidade;</li>
+<li>Manutibilidade;</li>
+</ul>
+<!-- Ref
+http://codinginparadise.org/weblog/2008/04/what's-open-web-and-why-is-it-important.html
+http://tantek.com/2010/281/b1/what-is-the-open-web
+-->
+<p>O padrão Open Web origiou a Plataforma Open Web.</p>
+<h2 id="open-web-platform">OPEN WEB PLATFORM</h2>
+<p>É uma coleção de tecnologias, desenvolvida por diversas entidades de padronização, criadas com o intuito de avançar os padrões da Open Web.</p>
+<h2 id="open-standard">OPEN STANDARD</h2>
 <h2 id="navegadores-web">NAVEGADORES WEB</h2>
 <p>Aplicações do lado do cliente geralmente se comunicam com um servidor através de documentos em HTTP. Quado o navegador recebe um destes pacotes em HTML ele começa o processo de renderização. A renderização pode requisitar outros arquivos a fim de completar a experiência desenvolvida para o endereço em questão. Nos navegadores os usuários necessitam localizar a página que desejam, sabendo o endereço, ou pesquisando em buscadores. Isso é um processo árduo para a plataformas móveis pois necessitam maior interação do usuários e não são “naturais” se comparado ao modo normal de consumir aplicativos nestas mesmas plataformas – simplesmente adquirindo o aplicativo na loja e abrindo-o no sistema operacional. Alguns contornos para este problema serão descritos nas tecnologias offline.</p>
 <p>Para transformar as instruções retornadas pelo servidor em algo útil para o usuário final os navegadores geralmente fazem uso de bibliotecas externas capazes de interpretar HTML5 e gerar o conteúdo iterativo.</p>
@@ -347,6 +362,18 @@ A nova tag
 <blockquote>
 <p>Conforme JavaScript vai ganhando importância rápido progresso é feito por diferentes empresas a fim de prover boas ferramentas de debug e inspecionamento para JavaScript.</p>
 </blockquote>
+<blockquote>
+<p>The web has it's own set of strengths – it's ephemeral nature and lack of friction, for example, and it's incremental security model. Baixa fricção quer dizer que você pode ir de um site para outro sem ter que instalar, o serviço está em demanda, você não é obrigado a tê-lo em sua home screen.</p>
+</blockquote>
+<!-- Ref
+http://cwilso.com/
+-->
+<blockquote>
+<p>The first problem, web development being thought of as having to emulate native apps, is the crux. Web does not have to emulate native, web has to capitalise on it's own strengths, primarily it's reach, which still outstrips native and will continue to do so as long as we have more than one native platform.</p>
+</blockquote>
+<!-- Ref
+http://www.quirksmode.org/blog/archives/2015/05/tools_dont_solv.html
+-->
 <h2 id="trabalhos-futuros">TRABALHOS FUTUROS</h2>
 <p>EMACSCRIPT 7</p>
 <h1 id="anexos">ANEXOS</h1>
