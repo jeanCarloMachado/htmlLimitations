@@ -35,6 +35,8 @@ Pretende-se também estudar os seguintes tópicos do desenvolvimento de jogos, r
 
 Elaborar uma lista de limitações e correlacionar os dados de acordo com as plataformas.
 
+<!-- Pensamento: talvez seja interessante concluir se é viável produzir jogos com html5 do ponto de vista mercadológico -->
+
 #  JUSTIFICATIVA
 
 Tendo em vista que este trabalho busca mapear possíveis problemas do desenvolvimento multiplataforma em HTML ele serve para apoiar e justificar decisões relativas ao desenvolvimento de jogos multiplataforma;
