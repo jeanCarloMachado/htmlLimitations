@@ -151,7 +151,7 @@
 <h4 id="desenvolvimento-de-jogos-híbridos">DESENVOLVIMENTO DE JOGOS HÍBRIDOS</h4>
 <p>Jogos híbridos são jogos geralmente desenvolvidos com tecnologias da web: beneficiando-se da não necessidade de duplicação. Rodam dentro de um <em>container</em> nativo – possibilitando o acesso à chamadas do sistema, recursos de hardware, eliminando muitias das dificuldades da web. Em certo sentido, beneficiam-se do melhor de ambas as metodologias anteriores. Phone game é uma ferramente deste tipo. Permite acessar os dispositivos utilizando sua API JavaScript. Funciona encapsulando todo o código HTML5. Este tipo de abordagem permite acessar câmera, acelerômetro, GPS, etc.</p>
 <h2 id="open-web">OPEN WEB</h2>
-<p>Em agosto de 2012 a W3C e o IETF e IEEE juntaram-se para lançar o OpenStand - para publicar o paradigma moderno de padrões. Mais do que um conjunto de tecnologias Open Web, é um conjunto de filosofias as quais a web se baseia.</p>
+<p>Mais do que um conjunto de tecnologias Open Web, é um conjunto de filosofias as quais a web se baseia.</p>
 <p>Neste conjunto inclui-se:</p>
 <ul>
 <li>Descentralização;</li>
@@ -169,7 +169,6 @@ http://tantek.com/2010/281/b1/what-is-the-open-web
 <p>O padrão Open Web origiou a Plataforma Open Web.</p>
 <h2 id="open-web-platform">OPEN WEB PLATFORM</h2>
 <p>É uma coleção de tecnologias, desenvolvida por diversas entidades de padronização, criadas com o intuito de avançar os padrões da Open Web.</p>
-<h2 id="open-standard">OPEN STANDARD</h2>
 <h2 id="navegadores-web">NAVEGADORES WEB</h2>
 <p>Aplicações do lado do cliente geralmente se comunicam com um servidor através de documentos em HTTP. Quado o navegador recebe um destes pacotes em HTML ele começa o processo de renderização. A renderização pode requisitar outros arquivos a fim de completar a experiência desenvolvida para o endereço em questão. Nos navegadores os usuários necessitam localizar a página que desejam, sabendo o endereço, ou pesquisando em buscadores. Isso é um processo árduo para a plataformas móveis pois necessitam maior interação do usuários e não são “naturais” se comparado ao modo normal de consumir aplicativos nestas mesmas plataformas – simplesmente adquirindo o aplicativo na loja e abrindo-o no sistema operacional. Alguns contornos para este problema serão descritos nas tecnologias offline.</p>
 <p>Para transformar as instruções retornadas pelo servidor em algo útil para o usuário final os navegadores geralmente fazem uso de bibliotecas externas capazes de interpretar HTML5 e gerar o conteúdo iterativo.</p>
@@ -302,6 +301,8 @@ A nova tag
 <h1 id="trabalhos-similares">TRABALHOS SIMILARES</h1>
 <p>(Referência 2) Faz uma revisão de aspectos do HTML5 através da construção de um jogo. O autor foca muito nos aspectos de criação de jogos e feedback do desenvolvimento. Troca de tecnologias e não especificamente nas limitações conforme o meu trabalho. Em outras palavras seu escopo é mais genérico e não tão preciso quanto este</p>
 <h1 id="metodologia">METODOLOGIA</h1>
+<p>Este trabalho procura investigar a estratégia web, sendo assim não será explorado em detalhes as alternativas nativas.</p>
+<p>Também foi dada primazia ao HTML puro, pois ao utilizar frameworks muitos dos problemas da web podem já serem resolvidos por essas ferramentas e as limitações ficarem escondidas.</p>
 <p>O primeiro passo consiste em definir as plataformas alvo do trabalho; devem ser plataformas mercadologicamente relevantes ao desenvolvimento de jogos, que possibilitem a criação de aplicativos em HTML e que acentuem o antagonismo de características. Segue-se com a construção de uma lista com os recursos relevantes aos jogos que, empiricamente, sofrem ou são comummente ligados à limitações multiplataforma. Segue-se uma pesquisa para aprofundar teoricamente cada um dos recursos, possivelmente elegendo novos.</p>
 <p>Com um baseamento teórico substancial, o próximo passo é a criação do protótipo de um jogo multiplataforma que utilize recursos potencialmente limitados. Para ser considerado pronto, o protótipo deve ser testado, e estar funcional, com adaptações ou não, em cada uma das plataformas alvo definidas.</p>
 <p>Com o protótipo concebido, o passo que segue é a enumeração, e descrição das limitações detectadas no processo de desenvolvimento e testes do jogo. Este detalhamento deve responder as seguintes perguntas:</p>

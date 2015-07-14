@@ -1,6 +1,5 @@
 ##OPEN WEB
 
-Em agosto de 2012 a W3C e o IETF e IEEE juntaram-se para lançar o OpenStand - para publicar o paradigma moderno de padrões.
 Mais do que um conjunto de tecnologias Open Web, é um conjunto de filosofias as quais a web se baseia.
 
 Neste conjunto inclui-se:
@@ -26,8 +25,6 @@ O padrão Open Web origiou a Plataforma Open Web.
 
 É uma coleção de tecnologias, desenvolvida por diversas entidades de padronização, criadas com o intuito de avançar os padrões da Open Web.
 
-
-##OPEN STANDARD
 
 ## NAVEGADORES WEB
 
