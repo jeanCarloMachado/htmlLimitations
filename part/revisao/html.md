@@ -1,27 +1,12 @@
 ##HTML
 
-HTML é uma linguagem de marcação que define a estrutura semântica do conteúdo de uma páginas da web, criada por Tim Berners Lee e atualmente mantida pela W3C.
+HTML *Hyper Text Markup Language*  é uma linguagem de marcação que define a estrutura semântica do conteúdo das páginas da web, criada por Tim Berners Lee e oficialmente mantida pela W3C. HTML foi especificado baseado-se em SGML *Standard Generalized Markup Language*, abraçando assim suas premissas:
 
-A atual versão do HTML é o HTML5, seu rascunho foi publicado em 2088 e apenas ratificado em 2014, introduziu elementos interativos como: Canvas, áudio, vídeo; os quais tornam media viável para a criação de jogos digitais. 
+- Deve ser declarativo, descrevendo estrutura e outros atributos, ao invés de definir o processamento a ser efetuado no documento:
+- Deve ser rigoroso de modo que as mesmas técnicas de mineração de dados em objetos e bancos de dados possa ser efetuada;
 
-A WHATWG começou a construção do HTML5 e a W3C se interessou e entrou no projeto. Mesmo assim, a WHATWG mantém uma versão com licença menos restrita que a W3C contendo recursos a mais dos que os especificados no HTML atual.
+Não obstante, os criadores de navegadores constantemente introduziam elementos de apresentação com o o itálico, bold, que eventualmente acabavam por serem inclusos na especificação. Foi somente nas últimas versões que elementos de apresentação voltaram a ser proibidos reforçando as propostas chave HTML como uma linguagem de conteúdo semântico, abrindo espaço para para a expansão de outras tecnologias como o CSS para responder as demandas de apresentação.
 
-Apesar e em sua concepção o HTML não especificar elementos de apresentação, os criadores de navegadores constantemente introduziam os e o HTML5 aderiu a muitas dessas decisões. Somente na versão 5 elementos  de apresentação voltaram a ser proibidos e o HTML retomou suas raízes de ser uma linguagem de conteúdo semântico.
+A atual versão do HTML é o HTML5, desenvolvido como um trabalho em conjunto entre a WHATWG e a W3C, seu rascunho foi proposto em 2008 e apenas ratificado em 2014. O HTML5 introduziu elementos interativos que viabilizaram a construção de jogos para a plataforma como: Canvas, áudio, vídeo.
 
-Cada versão do HTML acompanha três categorias de documentos: estrito, transicional e frameset. A primeira é direcionada a novos documentos as demais a documentos antigos em transição para o novo padrão.
-
-##ELEMENTO HTML
-
-###Tipos de elementos
-
--Estruturais: indicam o propósito do conteúdo
-
-- De apresentação: indicam a aparência do texto
-
-###XHTML
-
-> Aside from the different opening declarations for a document, the differences between an HTML 4.01 and XHTML 1.0 document—in each of the corresponding DTDs—are largely syntactic. The underlying syntax of HTML allows many shortcuts that XHTML does not, such as elements with optional opening or closing tags, and even empty elements which must not have an end tag. By contrast, XHTML requires all elements to have an opening tag and a closing tag. XHTML, however, also introduces a new shortcut: an XHTML tag may be opened and closed within the same tag, by including a slash before the end of the tag like this: <br/>. 
-
-## DOCUMENT OBJECT MODEL (DOM)
-
-É uma plataforma e interface agnóstica a linguagem que permite os programas e scripts dinamicamente acessar e atualizar o conteúdo, estrutura e estilo de documentos. Pode ser novamente processado e o resultado aparecer na tela. O navegador cria um DOM quando ele processa os elementos e tags encontrados em um documento HTML. Gmail é uma aplicação de única página (single-page) que se baseia fortemente no DOM para gerar conteúdo dinâmico e interativo oferecido pelo DOM.
+O HTML5 é muitas vezes interpretado como um conceito guarda chuva para designar as tecnologias da web HTML, JavaScript e CSS3.
