@@ -82,9 +82,6 @@
 <blockquote>
 <p>A maioria dos desenvolvedores demonstra interesse para o HTML5</p>
 </blockquote>
-<p>A OWP (Open Web Platform), uma coleção de tecnologias livres, amplamente utilizadas e padronizadas. O HTML Hypertext Markup Language é a peça fundamental da OWP, seu objetivo é especificar o conteúdo das páginas web. Trata-se de uma linguagem de marcação que define a estrutura de elementos que uma página deve ter de modo a fornecer conteúdo aos usuários.</p>
-<p>O HTML5 é um conceito guarda chuva para designar as tecnologias da web JavaScript, CSS3 e HTML. Em termos práticos significa que quando uma tecnologia se torna muito popular através da adoção de algumas grandes empresas e dos desenvolvedores, ela se torna candidata a adoção.</p>
-<p>A interatividade necessária para a construção de jogos animados em HTML é algo recente, obtido através dos esforços direcionados no HTML5, anteriormente só se obtinha iteratividade de tamanho proporção na Web com a utilização de ferramentas proprietárias como o Adobe Flash e Microsoft Silverlight.</p>
 <p>Entretanto, o HTML em sua especificação e implementações atuais costa com algumas limitações que precisam ser compreendidas por aqueles interessados em criar jogos em HTML5.</p>
 <blockquote>
 <p>O tempo de desenvolvimento de uma aplicação em HTML5 é 67% menor que aplicações nativas. Isso mostra o custo efetivo de aplicações baseadas em HTML5. A real vantagem de aplicações em HTML5 é o suporte horizontal entre as plataformas - que é a maior razão por trás do custo efetivo. (HASAN et al, 2012)</p>
@@ -166,37 +163,17 @@
 http://codinginparadise.org/weblog/2008/04/what's-open-web-and-why-is-it-important.html
 http://tantek.com/2010/281/b1/what-is-the-open-web
 -->
-<p>O padrão Open Web originou a Plataforma Open Web.</p>
-<p>Busca basear-se em implementações de sucesso.</p>
-<h2 id="open-web-platform">OPEN WEB PLATFORM</h2>
-<p>É uma coleção de tecnologias, desenvolvida por diversas entidades de padronização, criadas com o intuito de avançar os padrões da Open Web.</p>
-<h2 id="navegadores-web">NAVEGADORES WEB</h2>
-<p>Aplicações do lado do cliente geralmente se comunicam com um servidor através de documentos em HTTP. Quado o navegador recebe um destes pacotes em HTML ele começa o processo de renderização. A renderização pode requisitar outros arquivos a fim de completar a experiência desenvolvida para o endereço em questão. Nos navegadores os usuários necessitam localizar a página que desejam, sabendo o endereço, ou pesquisando em buscadores. Isso é um processo árduo para a plataformas móveis pois necessitam maior interação do usuários e não são “naturais” se comparado ao modo normal de consumir aplicativos nestas mesmas plataformas – simplesmente adquirindo o aplicativo na loja e abrindo-o no sistema operacional. Alguns contornos para este problema serão descritos nas tecnologias offline.</p>
-<p>Para transformar as instruções retornadas pelo servidor em algo útil para o usuário final os navegadores geralmente fazem uso de bibliotecas externas capazes de interpretar HTML5 e gerar o conteúdo iterativo.</p>
-<h2 id="bibliotecas-web">BIBLIOTECAS WEB</h2>
-<p>O Google Chrome utiliza o Webkit para renderizar seu conteúdo HTML5. O webkit foi criado pela Apple baseando-se no motor de renderização do Konkeror do projeto KDE. Safari e Opera também fazem uso do Webkit. V8 para JavaScript.</p>
-<p>O motor de renderização do HTML5 do Firefox é o XXX. O motor de JavaScript é o.</p>
-<h2 id="android">ANDROID</h2>
-<p>É um sistema operacional <em>open-source</em>, largamente suportado pelo Google. Utiliza o kernel Linux para as tarefas mais básicas como: gerência de memória, processos, etc. Os programas para Android são geralmente escritos em Java e executados através da máquina virtual Dalvik. Dalvik é similar a máquina virtual Java, mas roda um formato de arquivos diferenciado (dex), otimizados para consumir pouca memória, que são agrupados em um único Android Package (apk). Android permite a renderização de documentos HTML através de sua própria API WEBVIEW. Ou através do navegador disponibilizado por padrão, ou outros de terceiros como o Google Chrome, Firefox, Opera, etc.</p>
-<p>No quesito jogos para dispositivos móveis é preferível disponibilizar os jogos através da interface nativa pois dá a sensação de continuidade para com os demais aplicativos instalados no dispositivo.</p>
+<p>A OWP (Open Web Platform), uma coleção de tecnologias livres, amplamente utilizadas e padronizadas as quais adotam a postura da Open Web. Quando uma tecnologia se torna amplamente popular, através da adoção de grandes empresas e desenvolvedores ela se torna candidata a adoção pela OWP.</p>
+<p>A tecnologia chave que inaugurou e alavancou este processo é o HTML.</p>
 <h2 id="html">HTML</h2>
-<p>HTML é uma linguagem de marcação que define a estrutura semântica do conteúdo de uma páginas da web, criada por Tim Berners Lee e atualmente mantida pela W3C.</p>
-<p>A atual versão do HTML é o HTML5, seu rascunho foi publicado em 2088 e apenas ratificado em 2014, introduziu elementos interativos como: Canvas, áudio, vídeo; os quais tornam media viável para a criação de jogos digitais.</p>
-<p>A WHATWG começou a construção do HTML5 e a W3C se interessou e entrou no projeto. Mesmo assim, a WHATWG mantém uma versão com licença menos restrita que a W3C contendo recursos a mais dos que os especificados no HTML atual.</p>
-<p>Apesar e em sua concepção o HTML não especificar elementos de apresentação, os criadores de navegadores constantemente introduziam os e o HTML5 aderiu a muitas dessas decisões. Somente na versão 5 elementos de apresentação voltaram a ser proibidos e o HTML retomou suas raízes de ser uma linguagem de conteúdo semântico.</p>
-<p>Cada versão do HTML acompanha três categorias de documentos: estrito, transicional e frameset. A primeira é direcionada a novos documentos as demais a documentos antigos em transição para o novo padrão.</p>
-<h2 id="elemento-html">ELEMENTO HTML</h2>
-<h3 id="tipos-de-elementos">Tipos de elementos</h3>
-<p>-Estruturais: indicam o propósito do conteúdo</p>
+<p>HTML <em>Hyper Text Markup Language</em> é uma linguagem de marcação que define a estrutura semântica do conteúdo das páginas da web, criada por Tim Berners Lee e oficialmente mantida pela W3C. O &quot;Hyper Text&quot; refere-se a links que conectam páginas umas as outras, fazendo a Web como conhecemos hoje (MDN, 2015). <!-- https://developer.mozilla.org/en-US/docs/Web/HTML --> HTML foi especificado baseado-se em SGML <em>Standard Generalized Markup Language</em>, abraçando assim suas premissas:</p>
 <ul>
-<li>De apresentação: indicam a aparência do texto</li>
+<li>Deve ser declarativo, descrevendo estrutura e outros atributos, ao invés de definir o processamento a ser efetuado no documento:</li>
+<li>Deve ser rigoroso de modo que as mesmas técnicas de mineração de dados em objetos e bancos de dados possa ser efetuada;</li>
 </ul>
-<h3 id="xhtml">XHTML</h3>
-<blockquote>
-<p>Aside from the different opening declarations for a document, the differences between an HTML 4.01 and XHTML 1.0 document—in each of the corresponding DTDs—are largely syntactic. The underlying syntax of HTML allows many shortcuts that XHTML does not, such as elements with optional opening or closing tags, and even empty elements which must not have an end tag. By contrast, XHTML requires all elements to have an opening tag and a closing tag. XHTML, however, also introduces a new shortcut: an XHTML tag may be opened and closed within the same tag, by including a slash before the end of the tag like this: <br/>.</p>
-</blockquote>
-<h2 id="document-object-model-dom">DOCUMENT OBJECT MODEL (DOM)</h2>
-<p>É uma plataforma e interface agnóstica a linguagem que permite os programas e scripts dinamicamente acessar e atualizar o conteúdo, estrutura e estilo de documentos. Pode ser novamente processado e o resultado aparecer na tela. O navegador cria um DOM quando ele processa os elementos e tags encontrados em um documento HTML. Gmail é uma aplicação de única página (single-page) que se baseia fortemente no DOM para gerar conteúdo dinâmico e interativo oferecido pelo DOM.</p>
+<p>Não obstante, os criadores de navegadores constantemente introduziam elementos de apresentação com o o itálico, bold, que eventualmente acabavam por serem inclusos na especificação. Foi somente nas últimas versões que elementos de apresentação voltaram a ser proibidos reforçando as propostas chave HTML como uma linguagem de conteúdo semântico, abrindo espaço para para a expansão de outras tecnologias como o CSS para responder as demandas de apresentação.</p>
+<p>A atual versão do HTML é o HTML5, desenvolvido como um trabalho em conjunto entre a WHATWG e a W3C, seu rascunho foi proposto em 2008 e apenas ratificado em 2014. O HTML5 introduziu elementos interativos que viabilizaram a construção de jogos para a plataforma como: Canvas, áudio, vídeo.</p>
+<p>O HTML5 é muitas vezes interpretado como um conceito guarda chuva para designar as tecnologias da web HTML, JavaScript e CSS3.</p>
 <h2 id="css">CSS</h2>
 <p>Uma linguagem de marcação, como o HTML, que utiliza seletores e regras para definir a representação de um documento HTML e seus elementos.</p>
 <p>Os navegadores interpretam CSS através da tag <code>&lt;style&gt;</code>. O CSS é dividido em módulo, contendo aproximadamente 50 deles.</p>
@@ -234,6 +211,8 @@ http://tantek.com/2010/281/b1/what-is-the-open-web
 <p>Conhecido como uma versão estendida do JavaScript que compila para JavaScript normal.</p>
 <h3 id="dart">DART</h3>
 <p>Google. DartVM é uma máquina virtual que está embebido no Google Chrome. Significante melhorias em performance quando comparado ao JavaScript. Existe o dart2js que compila código em Dart para JavaScript.</p>
+<h2 id="document-object-model-dom">DOCUMENT OBJECT MODEL (DOM)</h2>
+<p>É uma plataforma e interface agnóstica a linguagem que permite os programas e scripts dinamicamente acessar e atualizar o conteúdo, estrutura e estilo de documentos. Pode ser novamente processado e o resultado aparecer na tela. O navegador cria um DOM quando ele processa os elementos e tags encontrados em um documento HTML. Gmail é uma aplicação de única página (single-page) que se baseia fortemente no DOM para gerar conteúdo dinâmico e interativo oferecido pelo DOM.</p>
 <h2 id="canvas">CANVAS</h2>
 A nova tag
 <canvas>
@@ -311,6 +290,15 @@ A nova tag
 <h2 id="feedback">FEEDBACK</h2>
 <h1 id="trabalhos-similares">TRABALHOS SIMILARES</h1>
 <p>(Referência 2) Faz uma revisão de aspectos do HTML5 através da construção de um jogo. O autor foca muito nos aspectos de criação de jogos e feedback do desenvolvimento. Troca de tecnologias e não especificamente nas limitações conforme o meu trabalho. Em outras palavras seu escopo é mais genérico e não tão preciso quanto este</p>
+<h2 id="android">ANDROID</h2>
+<p>É um sistema operacional <em>open-source</em>, largamente suportado pelo Google. Utiliza o kernel Linux para as tarefas mais básicas como: gerência de memória, processos, etc. Os programas para Android são geralmente escritos em Java e executados através da máquina virtual Dalvik. Dalvik é similar a máquina virtual Java, mas roda um formato de arquivos diferenciado (dex), otimizados para consumir pouca memória, que são agrupados em um único Android Package (apk). Android permite a renderização de documentos HTML através de sua própria API WEBVIEW. Ou através do navegador disponibilizado por padrão, ou outros de terceiros como o Google Chrome, Firefox, Opera, etc.</p>
+<p>No quesito jogos para dispositivos móveis é preferível disponibilizar os jogos através da interface nativa pois dá a sensação de continuidade para com os demais aplicativos instalados no dispositivo.</p>
+<h2 id="navegadores-web">NAVEGADORES WEB</h2>
+<p>Aplicações do lado do cliente geralmente se comunicam com um servidor através de documentos em HTTP. Quado o navegador recebe um destes pacotes em HTML ele começa o processo de renderização. A renderização pode requisitar outros arquivos a fim de completar a experiência desenvolvida para o endereço em questão. Nos navegadores os usuários necessitam localizar a página que desejam, sabendo o endereço, ou pesquisando em buscadores. Isso é um processo árduo para a plataformas móveis pois necessitam maior interação do usuários e não são “naturais” se comparado ao modo normal de consumir aplicativos nestas mesmas plataformas – simplesmente adquirindo o aplicativo na loja e abrindo-o no sistema operacional. Alguns contornos para este problema serão descritos nas tecnologias offline.</p>
+<p>Para transformar as instruções retornadas pelo servidor em algo útil para o usuário final os navegadores geralmente fazem uso de bibliotecas externas capazes de interpretar HTML5 e gerar o conteúdo iterativo.</p>
+<h2 id="bibliotecas-web">BIBLIOTECAS WEB</h2>
+<p>O Google Chrome utiliza o Webkit para renderizar seu conteúdo HTML5. O webkit foi criado pela Apple baseando-se no motor de renderização do Konkeror do projeto KDE. Safari e Opera também fazem uso do Webkit. V8 para JavaScript.</p>
+<p>O motor de renderização do HTML5 do Firefox é o XXX. O motor de JavaScript é o.</p>
 <h1 id="metodologia">METODOLOGIA</h1>
 <p>Este trabalho procura investigar a estratégia web, sendo assim não será explorado em detalhes as alternativas nativas.</p>
 <p>Também foi dada primazia ao HTML puro, pois ao utilizar frameworks muitos dos problemas da web podem já serem resolvidos por essas ferramentas e as limitações ficarem escondidas.</p>

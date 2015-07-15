@@ -1,6 +1,8 @@
 ##HTML
 
-HTML *Hyper Text Markup Language*  é uma linguagem de marcação que define a estrutura semântica do conteúdo das páginas da web, criada por Tim Berners Lee e oficialmente mantida pela W3C. HTML foi especificado baseado-se em SGML *Standard Generalized Markup Language*, abraçando assim suas premissas:
+HTML *Hyper Text Markup Language*  é uma linguagem de marcação que define a estrutura semântica do conteúdo das páginas da web, criada por Tim Berners Lee e oficialmente mantida pela W3C. O "Hyper Text" refere-se a links que conectam páginas umas as outras, fazendo a Web como conhecemos hoje (MDN, 2015).
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML -->
+HTML foi especificado baseado-se em SGML *Standard Generalized Markup Language*, abraçando assim suas premissas:
 
 - Deve ser declarativo, descrevendo estrutura e outros atributos, ao invés de definir o processamento a ser efetuado no documento:
 - Deve ser rigoroso de modo que as mesmas técnicas de mineração de dados em objetos e bancos de dados possa ser efetuada;
