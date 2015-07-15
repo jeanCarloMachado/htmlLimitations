@@ -19,7 +19,9 @@ http://tantek.com/2010/281/b1/what-is-the-open-web
 -->
 
 
-O padrão Open Web origiou a Plataforma Open Web.
+O padrão Open Web originou a Plataforma Open Web.
+
+Busca basear-se em implementações de sucesso.
 
 ##OPEN WEB PLATFORM
 

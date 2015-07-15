@@ -1,14 +1,26 @@
 ##HTML
 
-Um documento HTML representa conteúdo iterativo de uma forma independente de plataforma. Podem ser renderizados em uma tela, em um sintetizador de voz, etc.
+HTML é uma linguagem de marcação que define a estrutura semântica do conteúdo de uma páginas da web, criada por Tim Berners Lee e atualmente mantida pela W3C.
 
-Com o crescimento da demanda de interatividade na internet o HTML foi forçado a evoluir. Em sua quinta versão, o HTML5, grandes melhorias foram adicionadas. Antes do HTML5 para alcançar a interatividade desejada, só te podia recorrer a plugins de terceiros como o Flash Player e o Silverlight, estes necessitam de instalação de plugin e ficam limitados a um distribuidor de software.
-
-O HTML em si trata cruamente da estrutura, para as páginas ficarem agradáveis e seus usuários faz-se necessário o uso de estilos que é proporcionado através do CSS.
+A atual versão do HTML é o HTML5, seu rascunho foi publicado em 2088 e apenas ratificado em 2014, introduziu elementos interativos como: Canvas, áudio, vídeo; os quais tornam media viável para a criação de jogos digitais. 
 
 A WHATWG começou a construção do HTML5 e a W3C se interessou e entrou no projeto. Mesmo assim, a WHATWG mantém uma versão com licença menos restrita que a W3C contendo recursos a mais dos que os especificados no HTML atual.
 
+Apesar e em sua concepção o HTML não especificar elementos de apresentação, os criadores de navegadores constantemente introduziam os e o HTML5 aderiu a muitas dessas decisões. Somente na versão 5 elementos  de apresentação voltaram a ser proibidos e o HTML retomou suas raízes de ser uma linguagem de conteúdo semântico.
+
+Cada versão do HTML acompanha três categorias de documentos: estrito, transicional e frameset. A primeira é direcionada a novos documentos as demais a documentos antigos em transição para o novo padrão.
+
 ##ELEMENTO HTML
+
+###Tipos de elementos
+
+-Estruturais: indicam o propósito do conteúdo
+
+- De apresentação: indicam a aparência do texto
+
+###XHTML
+
+> Aside from the different opening declarations for a document, the differences between an HTML 4.01 and XHTML 1.0 document—in each of the corresponding DTDs—are largely syntactic. The underlying syntax of HTML allows many shortcuts that XHTML does not, such as elements with optional opening or closing tags, and even empty elements which must not have an end tag. By contrast, XHTML requires all elements to have an opening tag and a closing tag. XHTML, however, also introduces a new shortcut: an XHTML tag may be opened and closed within the same tag, by including a slash before the end of the tag like this: <br/>. 
 
 ## DOCUMENT OBJECT MODEL (DOM)
 

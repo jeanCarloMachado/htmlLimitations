@@ -166,7 +166,8 @@
 http://codinginparadise.org/weblog/2008/04/what's-open-web-and-why-is-it-important.html
 http://tantek.com/2010/281/b1/what-is-the-open-web
 -->
-<p>O padrão Open Web origiou a Plataforma Open Web.</p>
+<p>O padrão Open Web originou a Plataforma Open Web.</p>
+<p>Busca basear-se em implementações de sucesso.</p>
 <h2 id="open-web-platform">OPEN WEB PLATFORM</h2>
 <p>É uma coleção de tecnologias, desenvolvida por diversas entidades de padronização, criadas com o intuito de avançar os padrões da Open Web.</p>
 <h2 id="navegadores-web">NAVEGADORES WEB</h2>
@@ -179,11 +180,21 @@ http://tantek.com/2010/281/b1/what-is-the-open-web
 <p>É um sistema operacional <em>open-source</em>, largamente suportado pelo Google. Utiliza o kernel Linux para as tarefas mais básicas como: gerência de memória, processos, etc. Os programas para Android são geralmente escritos em Java e executados através da máquina virtual Dalvik. Dalvik é similar a máquina virtual Java, mas roda um formato de arquivos diferenciado (dex), otimizados para consumir pouca memória, que são agrupados em um único Android Package (apk). Android permite a renderização de documentos HTML através de sua própria API WEBVIEW. Ou através do navegador disponibilizado por padrão, ou outros de terceiros como o Google Chrome, Firefox, Opera, etc.</p>
 <p>No quesito jogos para dispositivos móveis é preferível disponibilizar os jogos através da interface nativa pois dá a sensação de continuidade para com os demais aplicativos instalados no dispositivo.</p>
 <h2 id="html">HTML</h2>
-<p>Um documento HTML representa conteúdo iterativo de uma forma independente de plataforma. Podem ser renderizados em uma tela, em um sintetizador de voz, etc.</p>
-<p>Com o crescimento da demanda de interatividade na internet o HTML foi forçado a evoluir. Em sua quinta versão, o HTML5, grandes melhorias foram adicionadas. Antes do HTML5 para alcançar a interatividade desejada, só te podia recorrer a plugins de terceiros como o Flash Player e o Silverlight, estes necessitam de instalação de plugin e ficam limitados a um distribuidor de software.</p>
-<p>O HTML em si trata cruamente da estrutura, para as páginas ficarem agradáveis e seus usuários faz-se necessário o uso de estilos que é proporcionado através do CSS.</p>
+<p>HTML é uma linguagem de marcação que define a estrutura semântica do conteúdo de uma páginas da web, criada por Tim Berners Lee e atualmente mantida pela W3C.</p>
+<p>A atual versão do HTML é o HTML5, seu rascunho foi publicado em 2088 e apenas ratificado em 2014, introduziu elementos interativos como: Canvas, áudio, vídeo; os quais tornam media viável para a criação de jogos digitais.</p>
 <p>A WHATWG começou a construção do HTML5 e a W3C se interessou e entrou no projeto. Mesmo assim, a WHATWG mantém uma versão com licença menos restrita que a W3C contendo recursos a mais dos que os especificados no HTML atual.</p>
+<p>Apesar e em sua concepção o HTML não especificar elementos de apresentação, os criadores de navegadores constantemente introduziam os e o HTML5 aderiu a muitas dessas decisões. Somente na versão 5 elementos de apresentação voltaram a ser proibidos e o HTML retomou suas raízes de ser uma linguagem de conteúdo semântico.</p>
+<p>Cada versão do HTML acompanha três categorias de documentos: estrito, transicional e frameset. A primeira é direcionada a novos documentos as demais a documentos antigos em transição para o novo padrão.</p>
 <h2 id="elemento-html">ELEMENTO HTML</h2>
+<h3 id="tipos-de-elementos">Tipos de elementos</h3>
+<p>-Estruturais: indicam o propósito do conteúdo</p>
+<ul>
+<li>De apresentação: indicam a aparência do texto</li>
+</ul>
+<h3 id="xhtml">XHTML</h3>
+<blockquote>
+<p>Aside from the different opening declarations for a document, the differences between an HTML 4.01 and XHTML 1.0 document—in each of the corresponding DTDs—are largely syntactic. The underlying syntax of HTML allows many shortcuts that XHTML does not, such as elements with optional opening or closing tags, and even empty elements which must not have an end tag. By contrast, XHTML requires all elements to have an opening tag and a closing tag. XHTML, however, also introduces a new shortcut: an XHTML tag may be opened and closed within the same tag, by including a slash before the end of the tag like this: <br/>.</p>
+</blockquote>
 <h2 id="document-object-model-dom">DOCUMENT OBJECT MODEL (DOM)</h2>
 <p>É uma plataforma e interface agnóstica a linguagem que permite os programas e scripts dinamicamente acessar e atualizar o conteúdo, estrutura e estilo de documentos. Pode ser novamente processado e o resultado aparecer na tela. O navegador cria um DOM quando ele processa os elementos e tags encontrados em um documento HTML. Gmail é uma aplicação de única página (single-page) que se baseia fortemente no DOM para gerar conteúdo dinâmico e interativo oferecido pelo DOM.</p>
 <h2 id="css">CSS</h2>
