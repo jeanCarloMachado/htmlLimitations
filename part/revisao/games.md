@@ -2,10 +2,23 @@
 
 ##  JOGOS
 
-Segundo LEMES (2009, pg 126)
-> jogo digital constitui-se em uma atividade lúdica composta por uma série de ações e decisões, limitada por regras e pelo universo do game, que resultam em uma condição final. O game é uma hipermídia por excelência e tem na interatividade mediada por aparatos tecnológicos, seu papel fundamental. Essa característica interativa é a dependência comandos sobre uma interface digital, que faz com que o projeto digital desta natureza não seja um filme ou uma animação, e sim um game.
+Segundo LEMES (2009, pg 126) > jogo digital constitui-se em uma
+atividade lúdica composta por uma série de ações e decisões,
+limitada por regras e pelo universo do game, que resultam em uma
+condição final. O game é uma hipermídia por excelência e tem
+na interatividade mediada por aparatos tecnológicos, seu papel
+fundamental. Essa característica interativa é a dependência comandos
+sobre uma interface digital, que faz com que o projeto digital desta
+natureza não seja um filme ou uma animação, e sim um game.
 
-Quando desenvolvendo qualquer jogo, o desenvolvedor tem que considerar seu usuário. O objetivo é maximizar a satisfação de seu usuário.  Jogos em plataformas móveis trazem um novo conjunto de desafios para produtores de jogos. Um destes desafios é fornecer feedback suficiente para o player pois o dispositivo é limitado em proporções, som, tela etc. Já jogos multiplataforma em HTML5 tem a dificuldade adicional de ter que comportar, na mesma base, o feedback adequando para cada plataforma móvel.
+Quando desenvolvendo qualquer jogo, o desenvolvedor tem que considerar
+seu usuário. O objetivo é maximizar a satisfação de seu usuário.
+Jogos em plataformas móveis trazem um novo conjunto de desafios para
+produtores de jogos. Um destes desafios é fornecer feedback suficiente
+para o player pois o dispositivo é limitado em proporções, som, tela
+etc. Já jogos multiplataforma em HTML5 tem a dificuldade adicional
+de ter que comportar, na mesma base, o feedback adequando para cada
+plataforma móvel.
 
 A interface tem que ser o mais intuitiva o possível. No caso de dispositivos móveis, quanto menos gestos necessários melhor.
 Tornar previsível causa e efeito é uma boa característica para os jogos.
