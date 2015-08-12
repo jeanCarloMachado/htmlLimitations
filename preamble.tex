@@ -1,14 +1,13 @@
 % Table of contents formatting
 \renewcommand{\contentsname}{Table of Contents}
 \setcounter{tocdepth}{1}
- 
-% Headers and page numbering 
+
+% Headers and page numbering
 \usepackage{fancyhdr}
 \pagestyle{plain}
- 
+
 % Fonts and typesetting
 \setmainfont{Arial}
-\setsansfont{Arial}
 
 % Set figure legends and captions to be smaller sized sans serif font
 \usepackage[font={footnotesize,sf}]{caption}
@@ -21,7 +20,7 @@
 \raggedbottom
 
 % Set margins
-\usepackage[top=1.25in,bottom=1.25in]{geometry}
+\usepackage[top=3cm,left=3cm,bottom=2cm,right=2cm]{geometry}
 
 % Chapter styling
 \usepackage[grey]{quotchap}
@@ -43,4 +42,3 @@
 \newcolumntype{x}[1]{%
 >{\centering\arraybackslash}m{#1}}%
 
-% Allow for long captions and float captions on opposite page of figures 

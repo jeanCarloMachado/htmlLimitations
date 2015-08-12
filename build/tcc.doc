@@ -9,14 +9,13 @@
   % Table of contents formatting
   \renewcommand{\contentsname}{Table of Contents}
   \setcounter{tocdepth}{1}
-   
-  % Headers and page numbering 
+  
+  % Headers and page numbering
   \usepackage{fancyhdr}
   \pagestyle{plain}
-   
+  
   % Fonts and typesetting
   \setmainfont{Arial}
-  \setsansfont{Arial}
   
   % Set figure legends and captions to be smaller sized sans serif font
   \usepackage[font={footnotesize,sf}]{caption}
@@ -29,7 +28,7 @@
   \raggedbottom
   
   % Set margins
-  \usepackage[top=1.25in,bottom=1.25in]{geometry}
+  \usepackage[top=3cm,left=3cm,bottom=2cm,right=2cm]{geometry}
   
   % Chapter styling
   \usepackage[grey]{quotchap}
@@ -50,8 +49,6 @@
   \usepackage{array}
   \newcolumntype{x}[1]{%
   >{\centering\arraybackslash}m{#1}}%
-  
-  % Allow for long captions and float captions on opposite page of figures
 </head>
 <body>
 <h1 id="contextualização">CONTEXTUALIZAÇÃO</h1>
@@ -177,13 +174,18 @@ http://tantek.com/2010/281/b1/what-is-the-open-web
 <p>Um elemento é o abrir fechar de uma tag e todo o conteúdo que dentro dele reside.<!--  ducket pág 24 --></p>
 <p>O HTML5 é muitas vezes interpretado como um conceito guarda chuva para designar as tecnologias da web HTML, JavaScript e CSS3.</p>
 <h2 id="css">CSS</h2>
-<p>Uma linguagem de marcação, como o HTML, que utiliza seletores e regras para definir a representação de um documento HTML e seus elementos.</p>
+<p>É uma linguagem de marcação - assim como o HTML - com intuito de definir a apresentação de páginas HTML. Segundo Lie, 2005:</p>
+<blockquote>
+<p>Para qualificar uma linguagem de marcação seis componentes devem estar presentes: seletores, propriedades, valores, unidades e propagação de valores.</p>
+</blockquote>
+<!-- Cascading Style Sheets, PhD thesis, by
+Håkon Wium Lie – provides an authoritative historical reference of
+CSS pág 23 -->
 <p>Os navegadores interpretam CSS através da tag <code>&lt;style&gt;</code>. O CSS é dividido em módulo, contendo aproximadamente 50 deles.</p>
-<p>Sua última versão, o CSS3, introduziu várias funcionalidades multiplataforma como media-queries que possibilitam regras para tamanhos de tela e transformações 3D.</p>
+<p>Sua última versão, o CSS3, introduziu várias funcionalidades multiplataforma como <em>media-queries</em> que possibilitam regras para tamanhos de tela e transformações 3D.</p>
 <p>Muitos navegadores também suportam aceleração de GPU (Unidade de processamento gráfico) para elementos que tenham transformações 3d.</p>
 <p>Flow de documento, ordem e posição em que os elementos tem que aparecer na página. Modelo de caixa o que encapsula o conteúdo em um elementos.</p>
 <!-- falar do suporte a variáveis do CSS -->
-<p>Before CSS, document authors who wanted to assign such typographic characteristics to, say, all h2 headings had to repeat HTML presentational markup for each occurrence of that heading type. This made documents more complex, larger, and more error-prone and difficult to maintain. CSS allows the separation of presentation from structure.</p>
 <h2 id="javascript">JAVASCRIPT</h2>
 <p>EMACScript, melhor conhecido como JavaScript, criada por Brendan Eich em 1992, é a linguagem da Web. Devido a tremenda popularidade entre comunidade de desenvolvedores a linguagem foi abraçada pela W3C e atualmente é um dos componentes da <em>Open Web Platform</em>.</p>
 <p>As definições da linguagem são descritas na especificação ECMA-262. Esta possibilitou o desenvolvimento de outras implementações além da original - <em>SpiderMonkey</em> - como o Rhino, V8 e TraceMonkey; bem como outras linguagens similares como JScript da Microsoft e o ActionScript da Adobe.</p>
