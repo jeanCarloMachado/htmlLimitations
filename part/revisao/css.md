@@ -1,10 +1,12 @@
 
 ##CSS
 
-É uma linguagem de marcação - assim como o HTML - com intuito de
-definir a apresentação de páginas HTML. Segundo Lie, 2005:
 
->Para qualificar uma linguagem de marcação seis componentes devem
+É uma linguagem de folhas de estilo com intuito de
+definir a apresentação de páginas HTML.
+
+Segundo Lie, 2005:
+>Para qualificar uma linguagem de estilo seis componentes devem
 estar presentes: seletores, propriedades, valores, unidades e
 propagação de valores.
 
@@ -28,3 +30,8 @@ elementos.
 
 <!-- falar do suporte a variáveis do CSS -->
 
+Combinando com documentos estruturados, como o HTML, páginas de estilo
+possibilitam ligação tardia *late biding*. Essa possibilidade é
+atrativa para os publicadores por dois motivos. Primeiramente pois
+permite o mesmo estilo em várias publicações e os publicadores podem
+focar-se no conteúdo.
