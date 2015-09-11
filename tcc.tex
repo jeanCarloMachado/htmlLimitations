@@ -495,11 +495,11 @@ JavaScript.
 \section{TOSORT}
 %{{{
 
-## DOCUMENT OBJECT MODEL (DOM)
+\subsection{ DOCUMENT OBJECT MODEL (DOM)}
 
 É uma plataforma e interface agnóstica a linguagem que permite os programas e scripts dinamicamente acessar e atualizar o conteúdo, estrutura e estilo de documentos. Pode ser novamente processado e o resultado aparecer na tela. O navegador cria um DOM quando ele processa os elementos e tags encontrados em um documento HTML. Gmail é uma aplicação de única página (single-page) que se baseia fortemente no DOM para gerar conteúdo dinâmico e interativo oferecido pelo DOM.
 
-## CANVAS
+\subsection{ CANVAS}
 
 A nova tag <canvas> define um layer gráfico em documentos HTML que pode ser desenhado através de JavaScript.
 Permite desenhar diagramas, gráficos e animações [7]. É baseado em bitmap.
@@ -509,62 +509,62 @@ Apache Cordova utiliza o FastCanvas.
 
 CocoonJS é uma aplicativo híbrido que preenche a fraca implementação de OPENGL nos dispositivos móveis possibilitando se desenvolver em WEBGL.
 
-## WEBGL
+\subsection{ WEBGL}
 
 Baseado no OpenGL.
 
 Web GL não foi utilizada no trabalho apesar de ser de grande relevância no processo de jogos pois ainda não está completamente especificada e a dificuldade e escopo do projeto aumentariam muito se tivessem de incluir um jogos 3D.
 Versão da especificação atual?
 
-## VIDEO
+\subsection{ VIDEO}
 
-## AUDIO
+\subsection{ AUDIO}
 
 Audio é um componente vital para oferecer grande satisfação aos usuários de jogos. Provê feedback e imerge o usuário. Efeitos de som e música podem servir como mecanismo. Jogadores tem baixa tolerância a volume, deve ser utilizado com cautela.
 
-### TAG AUDIO
+\subsection{ TAG AUDIO}
 
 A tag <audio> define um som dentro de um documento html. Quando o elemento é renderizado pelos navegadores, ele carrega o conteúdo que pode ser reproduzido pelo player de audio do navegador. Existem muitas discrepâncias entre os formados aceitáveis pelos navegadores. È um tanto limitada quanto comparada ao áudio de múltiplos canais disponibilizados por SDKs nativas.
 
-### API DE AUDIO
+\subsection{ API DE AUDIO}
 
 É uma interface de audio experimental para JavaScript. Provê maior flexibilidade na manipulação de audio. Essa tecnologia é muito mais nova do que a tag audio.
 FORMATOS DE ÁUDIO
 
-## CAMERA
+\subsection{ CAMERA}
 
-## ENTRADA DE COMANDOS
+\subsection{ ENTRADA DE COMANDOS}
 
 Na construção da grande maioria dos jogos é muitas vezes imprescindível alta flexibilidade na gestão de entrada de dados. Este fator muito se amplia na criação de jogos multiplataforma, seja através de teclado, tela sensível ou sensor de movimentos, o importante é oferecer a melhor experiência possível por plataforma. O HTML5 trata todos estes casos abstratamente na forma de eventos, os quais podem ser escutados através de listeners. Os eventos básicos são: keydown (tecla baixa), keyup (tecla solta) e keypress (tecla pressionada).
 
 Para detectar suporte aos mais variados recursos do HTML5 no navegador do cliente existem duas possibilidades. Pode-se implementar testes para cada funcionalidade utilizada abordando os detalhes de implementação de cada uma ou então fazer uso de alguma biblioteca especializada neste processo, o Modernizr é uma opção open-source deste tipo de biblioteca, este gera uma lista de booleanos sobre grande variedade dos recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e local storage.
 
-## CACHE
+\subsection{ CACHE}
 
 Aplicações offline.
 
 Algumas tecnologias desta classe são:
 
-## OFFLINE E ARMAZENAMENTO
+\subsection{ OFFLINE E ARMAZENAMENTO}
 
 > Uma das grades limitações do HTML era a ausência de capacidade de armazenamento de dados. Armazenamento no lado do cliente é um requerimento básico para qualquer aplicação moderna. Essa área era ode as aplicações nativas detinham grande vantagem sobre as aplicações web. O HTML5 solucionou este problema introduzindo várias formas de armazenamento de dados. (HASAN et all, 2012)
 
-### LOCAL STORAGE
+\subsection{ LOCAL STORAGE}
 
 Também conhecido como WebStorage na especificação do HTML5. Provê uma forma de armazenar os dados como chave valor dentro do navegador. Os dados são persistido mesmo que o navegador seja fechado.
 
-###WEB SQL
+\subsection{WEB SQL}
 
 Simplesmente um banco de dados SQLite embebido no navegador. Permite tabelas relacionais. O tamanho padrão do banco de dados é 5 megabytes e pode ser estendido pelo usuário.
 
-## RECURSOS NATIVOS ATUALMENTE INDISPONÍVEIS PARA O HTML5
+\subsection{ RECURSOS NATIVOS ATUALMENTE INDISPONÍVEIS PARA O HTML5}
 
 - Suporte à câmera;
 - Suporte à calendário;
 
-## DEBUG
+\subsection{ DEBUG}
 
-### WEINRE
+\subsection{ WEINRE}
 
 Debugger remoto depreciado.
 
@@ -573,67 +573,67 @@ Acarretando assim, que muitos navegadores não implementam algumas funcionalidad
 
 Uma das soluções mais promissoras polyfill é o PhoneGap ou Apache Cordova, esta ferramenta é Open-source e possibilita utilizar de inúmeros recursos de hardware da grande maioria das produtoras de dispositivos móveis.
 
-## FERRAMENTAS
+\subsection{ FERRAMENTAS}
 
-### NODEJS
+\subsection{ NODEJS}
 
 Permite rodar JavaScript fora do navegador. Utiliza um modelo dirigido à eventos sem bloqueio, tornando-o rápido e eficiente.
 
-### SISTEMAS DE BUILDING
+\subsection{ SISTEMAS DE BUILDING}
 
 Aquivos JavaScript são requisitados do servidor assincronamente. Isso pode levar a tempos de requisição pouco desejáveis. Uma saída seria escrever o código em apenas um arquivo mais isso leva a gerência de código bagunçada. A saída mais comum entre desenvolvedores é utiliza ruma ferramenta que junta todos os arquivos e disponibiliza apenas um para o usuário.
 
-### GRUNT
+\subsection{ GRUNT}
 
 Aplica as modificações separadamente em cada arquivo.
 
-### GULP
+\subsection{ GULP}
 
 Utiliza o conceito de streams para aplicar todas as modificações sobre um arquivo de uma vez só.
 Minify, obfuscation
 
-### SOURCE MAPS
+\subsection{ SOURCE MAPS}
 
 Para encontrar os arquivos minificados a fim de ajudar o desenvolvedor a debugar a aplicação.
 
-### MINIFY
+\subsection{ MINIFY}
 
 Remover caracteres desnecessários do JavaScript como espaços vazios, diminuindo o tamanho dos nomes, fazendo o tempo de loading diminuir.
 
-### GERENCIADORES DE PACOTES
+\subsection{ GERENCIADORES DE PACOTES}
 
-### BOWER
+\subsection{ BOWER}
 
 Package manager para a web
 
-### NPM
+\subsection{ NPM}
 
 Package manager para o NODE
 
-## DISPONIBILIZAÇÂO DA APLICAÇÂO
+\subsection{ DISPONIBILIZAÇÂO DA APLICAÇÂO}
 
 Links com manifestos
 
-### INSTALAÇÃO
+\subsection{ INSTALAÇÃO}
 
 Este método é benéfico pois possibilita ao usuário a mesma experiência ao adquirir uma aplicação normal. Este tipo de aplicação é comummente referido como "híbrido".
 
-#### CROSSWALK
+\subsection{ CROSSWALK}
 
 Crosswalk empacota os fontes juntamente com uma versão do Chromium, a versão Open-source do Google Chrome. Isso faz com que o software se comporte da mesma forma para todas as versões de dispositivos Android.
 
-#### PHONEGAP
+\subsection{ PHONEGAP}
 
-### PHONEGAP CLOUD
+\subsection{ PHONEGAP CLOUD}
 
 Este serviço possibilita que se faça upload de um arquivo compactado contendo os fontes – ou apontando para um repositório no GitHub – que no tempo desta pesquisa não estava funcionando; e se gere o APK para o Android nativamente.
 
-### O JOGO
+\subsection{ O JOGO}
 
 Devido ao fato deste trabalho explorar as limitações dos jogos em HTML5, optei por evitar a utilização de plugins e ferramentas de terceiros que pudessem ocultar alguma limitação.
 Escolhi a simplicidade para não precisar ficar muito tempo aprendendo as coisas em detrimento do refinamento da pesquisa.
 
-###MECÂNICA
+\subsection{MECÂNICA}
 
 O jogo consiste em simplesmente em uma tela que apresenta equações e um possível resultado. Cabe ao jogador decidir se o resultado está certo ou errado. O tempo é um fator levado em consideração, quão mais rápido o jogador acertar se a afirmação está correta ou não, mais pontos ele receberá.
 
@@ -641,14 +641,14 @@ Argumentos à favor da escolha do game:
 Tem profundidade, permite a adição de novos recursos no futuro;
 É facilmente traduzível em tamanhos de telas diferentes e tipos de entrada de dados diferentes;
 
-###IMPLEMENTAÇÃO
+\subsection{IMPLEMENTAÇÃO}
 
 Não tenho grande experiência com o desenvolvimento de jogos nem com o desenvolvimento em HTML5. Também para não interferir na pesquisa busquei não me distanciar do que é considerado padrão em ferramentas e métodos.
 Comecei escrevendo o aplicativo para o Navegador do desktop pois era o que estava mais acessível no momento. Mais tarde descobri que de fato é assim que de desenvolve.
 
-## FEEDBACK
+\subsection{ FEEDBACK}
 
-# TRABALHOS SIMILARES
+\section{ TRABALHOS SIMILARES}
 
 (Referência 2) Faz uma revisão de aspectos do HTML5 através da construção de um jogo. O autor foca muito nos aspectos de criação de jogos e feedback do desenvolvimento. Troca de tecnologias e não especificamente nas limitações conforme o meu trabalho. Em outras palavras seu escopo é mais genérico e não tão preciso quanto este
 %}}}
@@ -721,7 +721,7 @@ Abaixo constam as limitações encontradas durante a pesquisa e concepção do j
 
 Durante a construção do jogo utilizei a estratégia de declarar todos os objetos relativos ao window e limitar o escopo. Isso se demonstrou uma boa forma de separar as responsabilidades.
 
-##8.1  LIMITAÇÕES
+\subsection{8.1  LIMITAÇÕES}
 
 > Apesar da grande maioria dos recursos dos dispositivos estar presente em HTML5 ainda existem muitas funcionalidades faltando para este tipo de aplicação. Por exemplo, não podemos mudar a imagem de fundo do dispositivo, ou adicionar toques etc. Similarmente, existem muitas APIs de nuvem como os serviços de impressão do ICloud ou Google cloud que estão disponíveis para aplicações nativas mas não para HTML5. Outros serviços utilitários como o C2DM do Google que está disponível para desenvolvedores Android para utilizar serviços de push também não estão disponíveis para o HTML5. (HASAN, 2012)
 
@@ -804,7 +804,7 @@ http://www.quirksmode.org/blog/archives/2015/05/tools_dont_solv.html
 -->
 
 
-## TRABALHOS FUTUROS
+\subsection{ TRABALHOS FUTUROS}
 
 EMACSCRIPT 7
 
@@ -812,12 +812,11 @@ EMACSCRIPT 7
 
 \chapter{ANEXOS}
 %{{{
-#ANEXOS
 
-## CONVERSORES PARA HTML5
+\subsection{ CONVERSORES PARA HTML5}
 Além da possibilidade de escrever em HTML, pode-se optar pela alternativa de utilizar-se um conversor de linguagens.
 
-## METODOLOGIA DE DESENVOLVIMENTO DE SOFTWARE PARA A CONSTRUÇÃO DE GAMES
+\subsection{ METODOLOGIA DE DESENVOLVIMENTO DE SOFTWARE PARA A CONSTRUÇÃO DE GAMES}
 
 Como o jogo é um software complexo demanda-se a utilização de metodologias de engenharia de software, dentre os processos de software mais conhecidos academicamente destacamos:
 
@@ -826,7 +825,7 @@ Como o jogo é um software complexo demanda-se a utilização de metodologias de
 - Processo ágil - SCRUM: sua utilização é flexível e sendo um método ágil especifica pouca documentação, ou como dizem, somente a documentação necessária, este processo é bem conhecido e aceito na comunidade de desenvolvimento de software. Suas principais características são: divisão do processo de desenvolvimento através uma série de iterações chamadas sprints. Cada sprint consiste tipicamente em duas a quatro semanas. É bem aplicado a projetos que mudam constantemente e que demandam rápidas adaptações;
 - Processo ágil – XP: tem muitas características similares ao SCRUM por este também ser um processo ágil. Dentre suas especifidades destaca-se: versões frequentes, pequenos ciclos de desenvolvimento que buscam aumentar a produtividade, introduzem checkpoints onde os clientes podem agregar novas funcionalidades;
 
-## AMBIENTES PARA DESENVOLVIMENTO HTML5
+\subsection{ AMBIENTES PARA DESENVOLVIMENTO HTML5}
 
 Na pesquisa efetuada sobre estes frameworks full stack foram identificadas as seguintes tecnologias:
     - segundo (PRADO, 2012) o GWT é um framework essencialmente para o lado do cliente (client side) e dá suporte à comunicação com o servidor através de RPCs Remote Procedure Calls (ou procedimento de chamadas remotas). Ele não é um framework para aplicações clássicas da web, pois deixa a implementação da aplicação web parecida com implementações em desktop. Este é utilizado em muitos produtos de grande porte como o Google Adwords e Google Wallet. Outra característica interessante é que a plataforma opera sobre a licença Apache versão 2;
@@ -834,12 +833,12 @@ Na pesquisa efetuada sobre estes frameworks full stack foram identificadas as se
     - PlayCanvas - é uma plataformas para a construção de jogos 3D na nuvem, desenvolvida com foco em performance. Permite a hospedagem, controle de versão e publicação dos aplicativos nela criados, possibilita também a importação de modelos 3D de softwares populares como: Maya, 3ds Max e Blender;
     - o ambiente HTML5 Development Environment (ambiente de desenvolvimento HTML5) da Intel, este fornece uma solução na nuvem, completa para o desenvolvimento em plataforma cruzada, com serviços de empacotamento, serviços para a criação e testes de aplicativos com montagem de interfaces drag and drop (Intex XDK) e bibliotecas para a construção de jogos utilizando aceleração de hardware, o que garante até duas vezes mais performance que aplicativos mobile baseados em Web tradicionais. Esta solução é free, open source e funciona através de um plugin para o Google Chrome, ou seja, o desenvolvimento também é multiplataforma e devido ao fato de os binários ficarem hospedados na nuvem, possibilitou a Intel criar compiladores para cada uma das plataformas disponibilizadas pelo PhoneGap, que é o framework polyfill utilizado na solução.
 
-## HTTP
+\subsection{ HTTP}
 
-##FRAMEWORKS DE DESENVOLVIMENTO DE JOGOS EM HTML5;
+\subsection{FRAMEWORKS DE DESENVOLVIMENTO DE JOGOS EM HTML5;}
 
 
-## FRAMEWORKS PARA DESENVOLVIMENTO DE JOGOS HTML5
+\subsection{ FRAMEWORKS PARA DESENVOLVIMENTO DE JOGOS HTML5}
 Com o intuito de simplificar o processo para os desenvolvedores, auxiliando-os a focarem-se apenas nas soluções que estão desenvolvendo, foram criados os frameworks para desenvolvimento de jogos. Não obstante, o intuito deste trabalho é desenvolver um jogo sem auxilio de frameworks pois estes muitas vezes escondem possíveis limitações, desenvolvendo *workaroundslog* próprios.
 
 - enchant.js: dentre suas funcionalidades constam: orientação à objetos, orientado à eventos, contém um motor de animação, suporta WebGL e Canvas, etc;
@@ -847,21 +846,21 @@ Com o intuito de simplificar o processo para os desenvolvedores, auxiliando-os a
 - quintus: bom para plataformas 2D
 - limeJs: bom para 2d
 
-## INTERFACE E ESCOLHAS DE DESIGN
+\subsection{ INTERFACE E ESCOLHAS DE DESIGN}
 Mobile first
 
 
-##WEB COMPONENTS
+\subsection{WEB COMPONENTS}
 
 Web Components are a prime example of how difficult it is to get large features into the browser today. Every API added lives indefinitely and remains as an obstacle to the next.
 
 Comparable to picking apart a huge knotted ball of string, adding a bit more, then tangling it back up again. This knot, our platform, grows ever larger and more complex.
 
-##PROGRESSÃO CONTÍNUA
+\subsection{PROGRESSÃO CONTÍNUA}
 
-##JAVASCRIPT NÃO OBSTRUTIVO
+\subsection{JAVASCRIPT NÃO OBSTRUTIVO}
 
-##Arquitetura Cliente Servidor
+\subsection{Arquitetura Cliente Servidor}
 %}}}
 
 \end{document}
