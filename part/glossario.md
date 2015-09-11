@@ -1,6 +1,0 @@
-
-#GLOSSÁRIO
-
-API
-BUG
-
