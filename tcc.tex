@@ -4,15 +4,16 @@
 \title{}
 \usepackage[top=3cm,left=3cm,bottom=2cm,right=2cm]{geometry}
 \pagestyle{plain}
+%\usepackage{natbib}
 \begin{document}
 %}}}
 
-\chapter{CONTEXTUALIZAÇÃO}
+\section{CONTEXTUALIZAÇÃO}
 %{{{
-\section{JOGOS}
+\subsection{JOGOS}
 
-\subsection{BENEFÍCIOS}
-
+\subsubsection{BENEFÍCIOS}
+Random citation \cite{ahu61} 
 São variadas as pesquisas que apontam os benefícios dos jogos
 eletrônicos para as pessoas, coordenação motora, maior
 concentração.
@@ -22,7 +23,7 @@ forma de exercício, ou de alguma forma executam um papel educacional,
 de simulação ou psicológico. Jogos são uma parte universal do
 experiência humana, presentes em todas as culturas.
 
-\subsection{O MERCADO}
+\subsubsection{O MERCADO}
 No início os jogos nativos dominavam...
 Estatísticas sobre os jogos...
 A muito a indústria de jogos superou a cinematográfica...
@@ -35,7 +36,7 @@ A maior dificuldade em capturar uma base de usuários é que o mercado
 de dispositivos móveis é muito fragmentado e não existe uma única
 plataforma popular. (HASAN, 2012)
 
-\subsection{JOGOS E MULTIPLATAFORMA}
+\subsubsection{JOGOS E MULTIPLATAFORMA}
 
 É laboriosa a tarefa dos produtores de software em um panorama tão
 diversificado como o atual, existem muitas plataformas, muitas versões
@@ -44,7 +45,7 @@ e hardwares diferenciados.
 Uma alterativa para mitigar os problemas oriundos da multiplicidade de
 plataformas é o HTML.
 
-\subsection{HTML E MULTIPLATAFORMA}
+\subsubsection{HTML E MULTIPLATAFORMA}
 
 Desenvolvedores de jogos web podem rapidamente satisfazer as
 necessidades de seus jogadores, mantendo-os leais a tecnologia HTML5
@@ -62,7 +63,7 @@ baseadas em HTML5. A real vantagem de aplicações em HTML5 é o suporte
 horizontal entre as plataformas - que é a maior razão por trás do
 custo efetivo. (HASAN et al, 2012)
 
-\subsection{LIMITAÇÕES DE JOGOS MULTIPLATAFORMA COM HTML5}
+\subsubsection{LIMITAÇÕES DE JOGOS MULTIPLATAFORMA COM HTML5}
 
 O HTML vem sendo desenvolvido por muitos anos e por pessoas que não
 conheciam umas as outras, muitas funcionalidades foram construídas de
@@ -89,7 +90,7 @@ compatibilidade.
 Nem todos os recursos disponíveis através das SDK's nativas estão
 presentes através do HTML5.
 
-\section{ ESTE TRABALHO}
+\subsection{ ESTE TRABALHO}
 
 Este projeto propõe analisar as limitações do HTML5 quanto relativo
 a construção de jogos multiplataforma. Através de revisão
@@ -104,7 +105,7 @@ comparar o HTML com outras
 tecnologias de desenvolvimento de jogos, como Flash Player, Silverlight
 ou alternativas Desktop.
 
-\subsection{O JOGO}
+\subsubsection{O JOGO}
 
 Para a análise prática das limitações foi escolhido um jogo de
 matemática simples. Consistindo na geração de equações com um
@@ -114,7 +115,7 @@ pelo jogo está correto ou não.
 Porquê escolhi esse tipo de jogo?
 %}}}
 
-\chapter{PROBLEMA}
+\section{PROBLEMA}
 %{{{
 A carência de definições concretas sobre a viabilidade da atual
 versão do HTML5 - quando utilizado no desenvolvimento de jogos e o
@@ -126,18 +127,18 @@ plataformas, é muito alto para ser considerado trivial. Cerca de 65%
 mais altos (segundo trabalho 2)
 %}}}
 
-\section{ OBJETIVOS}
+\subsection{ OBJETIVOS}
 %{{{
 
 Abaixo seguem os objetivos deste trabalho.
 
-\subsection{  OBJETIVO GERAL}
+\subsubsection{  OBJETIVO GERAL}
 
 Identificar possíveis limitações no processo de desenvolvimento
 de jogos multiplataforma oriundas do atual estado de definição e
 implementação do HTML5.
 
-\subsection{  OBJETIVOS ESPECÍFICOS}
+\subsubsection{  OBJETIVOS ESPECÍFICOS}
 
 Estudar as limitações de desenvolvimento de jogos nas plataformas de
 dispositivos inteligentes Android e navegadores Desktop Google Chrome 42
@@ -170,7 +171,7 @@ com as plataformas.
 <!-- Pensamento: talvez seja interessante concluir se é viável
 produzir jogos com HTML5 do ponto de vista mercadológico --> %}}}
 
-\chapter{JUSTIFICATIVA}
+\section{JUSTIFICATIVA}
 %{{{
 
 Tendo em vista que este trabalho busca mapear possíveis problemas
@@ -188,10 +189,10 @@ referenciar -->
 Estimular e avançar o estudo da implementação da Open Web;
 %}}}
 
-\chapter{REVISÃO BIBLIOGRÁFICA}
+\section{REVISÃO BIBLIOGRÁFICA}
 %{{{
 
-\section{JOGOS}
+\subsection{JOGOS}
 %{{{
 Segundo LEMES (2009, pág. 126) > jogo digital constitui-se em uma
 atividade lúdica composta por uma série de ações e decisões,
@@ -223,25 +224,25 @@ respeito e fantasia                                                    .
 Mencionar algum jogo (como WOW) e como ele faz para prender a
 atenção dos usuários. Candy Crush saga 
 
-\subsection{GÊNEROS}
+\subsubsection{GÊNEROS}
 
 LEMES (2009, p. 43) aponta os seguintes gêneros de jogos.
 
 - Adventure Ação RPG Estratégia Simuladores Esportes Luta Casuais
 - 'God' Games Educacionais Puzzle Online / Massive Multiplayer
 
-\subsection{MECÂNICA}
+\subsubsection{MECÂNICA}
 
 A mecânica é composta pelas regras do jogo. Quais as ações
 disponíveis aos usuários, é fortemente influenciada pela categoria do
 jogo em questão.
 
-\subsection{ARQUITETURA}
+\subsubsection{ARQUITETURA}
 
 Existem algumas estratégias relativas às plataformas alvo de como
 efetuar construção de jogos.
 
-\subsection{DESENVOLVIMENTO DE JOGOS NATIVOS}
+\subsubsection{DESENVOLVIMENTO DE JOGOS NATIVOS}
 
 Habilita a melhor experiência de usuário pois permite utilizar ao
 máximo os recursos e funcionalidades dos aparelhos. Porém, devido
@@ -252,7 +253,7 @@ Além da replicação dos fontes, esta abordagem requer mais pessoas, e
 maior custo com possivelmente parte do mercado não atendido de qualquer
 forma.
 
-\subsection{DESENVOLVIMENTO DE JOGOS WEB}
+\subsubsection{DESENVOLVIMENTO DE JOGOS WEB}
 
 Necessitam de apenas uma base de código e pode rodar em todas as      
 plataformas. Contém a mais vasta gama de desenvolvedores e muitos      
@@ -266,7 +267,7 @@ estas tecnologias são executadas através de um navegador, criando uma
 camada de abstração superior à das API's nativas que fazem chamadas 
 ao sistema diretamente.                                                 
 
-\subsection{DESENVOLVIMENTO DE JOGOS HÍBRIDOS}
+\subsubsection{DESENVOLVIMENTO DE JOGOS HÍBRIDOS}
 
 Jogos híbridos são jogos geralmente desenvolvidos com tecnologias da .
 web: beneficiando-se da não necessidade de duplicação. Rodam dentro .
@@ -279,10 +280,10 @@ todo o código HTML5. Este tipo de abordagem permite acessar câmera,  .
 acelerômetro, GPS, etc                                                .
 %}}}
 
-\section{WEB}
+\subsection{WEB}
 %{{{
 
-\subsection{OPEN WEB}
+\subsubsection{OPEN WEB}
 
 Mais do que um conjunto de tecnologias Open Web, é um conjunto de
 filosofias as quais a web se baseia.
@@ -309,7 +310,7 @@ adoção pela OWP.
 A tecnologia chave que inaugurou e alavancou este processo é o HTML. 
 %}}}
 
-\section{HTML}
+\subsection{HTML}
 %{{{
 
 *Hyper Text Markup Language* (HTML) é uma linguagem de marcação
@@ -353,7 +354,7 @@ designar as tecnologias da web HTML, JavaScript e CSS3.
 
 %}}}
 
-\section{CSS}
+\subsection{CSS}
 %{{{
 
 É uma linguagem de folhas de estilo, criada por Håkon Wium Lie em
@@ -388,7 +389,7 @@ elementos. -->
 
 %}}}
 
-\section{JAVASCRIPT}
+\subsection{JAVASCRIPT}
 %{{{
 
 EMACScript, melhor conhecido como JavaScript, criada por Brendan Eich
@@ -466,7 +467,7 @@ elemento eles fazem a requisição para o servidor e injetam o código
 retornado no documento, e a não ser que especificado de outra forma,
 iniciam sua execução.
 
-\subsection{ ASM.JS}
+\subsubsection{ ASM.JS}
 
 Asm.js é um subconjunto da sintaxe do JavaScript a qual permite grandes
 aumentos de performance quando em comparação com JavaScript normal.
@@ -484,19 +485,19 @@ e desalocação de memória, apenas um bem definido conjunto de
 operações de inteiros e flutuantes possibilita grade performance e
 abre espaço para otimizações.
 
-\subsection{AJAX}
+\subsubsection{AJAX}
 
-\subsection{ ALTERNATIVAS AO JAVASCRIPT}
+\subsubsection{ ALTERNATIVAS AO JAVASCRIPT}
 
 Abaixo seguem algumas tecnologias que servem de alternativa ao
 JavaScript.
 
-\subsection{TYPESCRIPT}
+\subsubsection{TYPESCRIPT}
 
 Conhecido como uma versão estendida do JavaScript que compila para
 JavaScript normal.
 
-\subsection{DART}
+\subsubsection{DART}
 
 Google. DartVM é uma máquina virtual que está embebido no Google
 Chrome. Significante melhorias em performance quando comparado
@@ -505,7 +506,7 @@ JavaScript.
 %}}}
 
 
-\section{ DOCUMENT OBJECT MODEL (DOM)}
+\subsection{ DOCUMENT OBJECT MODEL (DOM)}
 
 É uma plataforma e interface agnóstica a linguagem que permite os
 programas e scripts dinamicamente acessar e atualizar o conteúdo,
@@ -515,7 +516,7 @@ os elementos e tags encontrados em um documento HTML. Gmail é uma
 aplicação de única página (single-page) que se baseia fortemente no
 DOM para gerar conteúdo dinâmico e interativo oferecido pelo DOM.
 
-\subsection{CANVAS}
+\subsubsection{CANVAS}
 
 A nova tag <canvas> define um layer gráfico em documentos HTML que pode
 ser desenhado através de JavaScript.
@@ -532,7 +533,7 @@ CocoonJS é uma aplicativo híbrido que preenche a fraca implementação
 de OPENGL nos dispositivos móveis possibilitando se desenvolver em
 WEBGL.
 
-\section{WEBGL}
+\subsection{WEBGL}
 
 Baseado no OpenGL.
 
@@ -541,16 +542,16 @@ relevância no processo de jogos pois ainda não está completamente
 especificada e a dificuldade e escopo do projeto aumentariam muito se
 tivessem de incluir um jogos 3D. Versão da especificação atual?
 
-\section{VIDEO}
+\subsection{VIDEO}
 
-\section{AUDIO}
+\subsection{AUDIO}
 
 Áudio é um componente vital para oferecer grande satisfação aos
 usuários de jogos. Provê feedback e imerge o usuário. Efeitos de som
 e música podem servir como mecanismo. Jogadores tem baixa tolerância a
 volume, deve ser utilizado com cautela.
 
-\subsection{TAG AUDIO}
+\subsubsection{TAG AUDIO}
 
 A tag <audio> define um som dentro de um documento HTML. Quando o
 elemento é renderizado pelos navegadores, ele carrega o conteúdo
@@ -559,7 +560,7 @@ muitas discrepâncias entre os formados aceitáveis pelos navegadores.
 É um tanto limitada quanto comparada ao áudio de múltiplos canais
 disponibilizados por SDKs nativas.
 
-\subsection{API DE AUDIO}
+\subsubsection{API DE AUDIO}
 
 É uma interface de audio experimental para JavaScript. Provê maior
 flexibilidade na manipulação de audio. Essa tecnologia é muito mais
@@ -567,9 +568,9 @@ nova do que a tag áudio.
 
 FORMATOS DE ÁUDIO
 
-\section{CÂMERA}
+\subsection{CÂMERA}
 
-\section{ ENTRADA DE COMANDOS}
+\subsection{ ENTRADA DE COMANDOS}
 
 Na construção da grande maioria dos jogos é muitas vezes
 imprescindível alta flexibilidade na gestão de entrada de dados.
@@ -590,13 +591,13 @@ biblioteca, este gera uma lista de booleanos sobre grande variedade dos
 recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e
 local storage.
 
-\section{CACHE}
+\subsection{CACHE}
 
 Aplicações offline.
 
 Algumas tecnologias desta classe são:
 
-\subsection{ OFFLINE E ARMAZENAMENTO}
+\subsubsection{ OFFLINE E ARMAZENAMENTO}
 
 > Uma das grades limitações do HTML era a ausência de capacidade
 de armazenamento de dados. Armazenamento no lado do cliente é um
@@ -605,26 +606,26 @@ era ode as aplicações nativas detinham grande vantagem sobre as
 aplicações web. O HTML5 solucionou este problema introduzindo várias
 formas de armazenamento de dados. (HASAN et all, 2012)
 
-\subsection{ LOCAL STORAGE}
+\subsubsection{ LOCAL STORAGE}
 
 Também conhecido como WebStorage na especificação do HTML5. Provê
 uma forma de armazenar os dados como chave valor dentro do navegador. Os
 dados são persistido mesmo que o navegador seja fechado.
 
-\subsection{WEB SQL}
+\subsubsection{WEB SQL}
 
 Simplesmente um banco de dados SQLite embebido no navegador. Permite
 tabelas relacionais. O tamanho padrão do banco de dados é 5 megabytes
 e pode ser estendido pelo usuário.
 
-\subsection{ RECURSOS NATIVOS ATUALMENTE INDISPONÍVEIS PARA O HTML5}
+\subsubsection{ RECURSOS NATIVOS ATUALMENTE INDISPONÍVEIS PARA O HTML5}
 
 - Suporte à câmera;
 - Suporte à calendário;
 
-\subsection{DEBUG}
+\subsubsection{DEBUG}
 
-\subsection{ WEINRE}
+\subsubsection{ WEINRE}
 
  5.21  TECNOLOGIAS POLYFILL
 Acarretando assim, que muitos navegadores não implementam algumas
@@ -637,14 +638,14 @@ Cordova, esta ferramenta é Open-source e possibilita utilizar de
 inúmeros recursos de hardware da grande maioria das produtoras de
 dispositivos móveis.
 
-\subsection{FERRAMENTAS}
+\subsubsection{FERRAMENTAS}
 
-\subsection{NODEJS}
+\subsubsection{NODEJS}
 
 Permite rodar JavaScript fora do navegador. Utiliza um modelo dirigido
 à eventos sem bloqueio, tornando-o rápido e eficiente.
 
-\subsection{SISTEMAS DE BUILDING}
+\subsubsection{SISTEMAS DE BUILDING}
 
 Aquivos JavaScript são requisitados do servidor assincronamente. Isso
 pode levar a tempos de requisição pouco desejáveis. Uma saída seria
@@ -653,59 +654,59 @@ código bagunçada. A saída mais comum entre desenvolvedores é utilizá
 ruma ferramenta que junta todos os arquivos e disponibiliza apenas um
 para o usuário.
 
-\subsection{GRUNT}
+\subsubsection{GRUNT}
 
 Aplica as modificações separadamente em cada arquivo.
 
-\subsection{GULP}
+\subsubsection{GULP}
 
 Utiliza o conceito de streams para aplicar todas as modificações sobre
 um arquivo de uma vez só.
 
-\subsection{SOURCE MAPS}
+\subsubsection{SOURCE MAPS}
 
 Para encontrar os arquivos minificados a fim de ajudar o desenvolvedor a
 debugar a aplicação.
 
-\subsection{Minificar}
+\subsubsection{Minificar}
 
 Remover caracteres desnecessários do JavaScript como espaços vazios,
 diminuindo o tamanho dos nomes, fazendo o tempo de loading diminuir.
 
-\subsection{GERENCIADORES DE PACOTES}
+\subsubsection{GERENCIADORES DE PACOTES}
 
-\subsection{BOWER}
-
-
-\subsection{NPM}
+\subsubsection{BOWER}
 
 
-\subsection{DISPONIBILIZAÇÃO DA APLICAÇÃO}
+\subsubsection{NPM}
+
+
+\subsubsection{DISPONIBILIZAÇÃO DA APLICAÇÃO}
 
 Links com manifestos
 
-\section{ INSTALAÇÃO}
+\subsection{ INSTALAÇÃO}
 
 Este método é benéfico pois possibilita ao usuário a mesma
 experiência ao adquirir uma aplicação normal. Este tipo de
 aplicação é comummente referido como "híbrido".
 
-\section{ CROSSWALK}
+\subsection{ CROSSWALK}
 
 Crosswalk empacota os fontes juntamente com uma versão do Chromium, a
 versão Open-source do Google Chrome. Isso faz com que o software se
 comporte da mesma forma para todas as versões de dispositivos Android.
 
-\section{ PHONEGAP}
+\subsection{ PHONEGAP}
 
-\section{ PHONEGAP CLOUD}
+\subsection{ PHONEGAP CLOUD}
 
 Este serviço possibilita que se faça upload de um arquivo compactado
 contendo os fontes – ou apontando para um repositório no GitHub –
 que no tempo desta pesquisa não estava funcionando; e se gere o APK
 para o Android nativamente.
 
-\subsection{O JOGO}
+\subsubsection{O JOGO}
 
 Devido ao fato deste trabalho explorar as limitações dos jogos em
 HTML5, optei por evitar a utilização de plugins e ferramentas de
@@ -714,7 +715,7 @@ terceiros que pudessem ocultar alguma limitação.
 Escolhi a simplicidade para não precisar ficar muito tempo aprendendo
 as coisas em detrimento do refinamento da pesquisa.
 
-\section{MECÂNICA}
+\subsection{MECÂNICA}
 
 O jogo consiste em simplesmente em uma tela que apresenta equações e
 um possível resultado. Cabe ao jogador decidir se o resultado está
@@ -727,7 +728,7 @@ adição de novos recursos no futuro;
 É facilmente traduzível em tamanhos de telas diferentes e tipos de
 entrada de dados diferentes;
 
-\section{IMPLEMENTAÇÃO}
+\subsection{IMPLEMENTAÇÃO}
 
 Não tenho grande experiência com o desenvolvimento de jogos nem com
 o desenvolvimento em HTML5. Também para não interferir na pesquisa
@@ -737,7 +738,7 @@ Comecei escrevendo o aplicativo para o Navegador do desktop pois era o
 que estava mais acessível no momento. Mais tarde descobri que de fato
 é assim que de desenvolve.
 
-\section{ TRABALHOS SIMILARES}
+\subsection{ TRABALHOS SIMILARES}
 
 (Referência 2) Faz uma revisão de aspectos do HTML5 através da
 construção de um jogo. O autor foca muito nos aspectos de criação
@@ -745,7 +746,7 @@ de jogos e feedback do desenvolvimento. Troca de tecnologias e não
 especificamente nas limitações conforme o meu trabalho. Em outras
 palavras seu escopo é mais genérico e não tão preciso quanto este
 
-\section{ANDROID}
+\subsection{ANDROID}
 %{{{
 
 É um sistema operacional *open-source* desenvolvido pela Google.
@@ -767,7 +768,7 @@ continuidade para com os demais aplicativos instalados no dispositivo.
 %}}}
 
 
-\section{NAVEGADORES}
+\subsection{NAVEGADORES}
 %{{{
 
 Aplicações do lado do cliente geralmente se comunicam com um
@@ -789,7 +790,7 @@ Para transformar as instruções retornadas pelo servidor em algo útil
 para o usuário final os navegadores geralmente fazem uso de bibliotecas
 externas capazes de interpretar HTML5 e gerar o conteúdo iterativo.
 
-\subsection{BIBLIOTECAS WEB}
+\subsubsection{BIBLIOTECAS WEB}
 
 O Google Chrome utilizá o Webkit para renderizar seu conteúdo HTML5. O
 webkit foi criado pela Apple baseando-se no motor de renderização do
@@ -801,7 +802,7 @@ JavaScript é o.
 
 %}}}
 
-\chapter{METODOLOGIA}
+\section{METODOLOGIA}
 %{{{
 
 Este trabalho procura investigar a estratégia web, sendo assim não
@@ -842,7 +843,7 @@ manutibilidade, portabilidade ou performance? (segundo ISO) %}}}
 
 %}}}
 
-\chapter{RESULTADOS}
+\section{RESULTADOS}
 %{{{
 
 Abaixo constam as limitações encontradas durante a pesquisa e concepção do jogo
@@ -851,7 +852,7 @@ Durante a construção do jogo utilizei a estratégia de declarar todos
 os objetos relativos ao window e limitar o escopo. Isso se demonstrou
 uma boa forma de separar as responsabilidades.
 
-\subsection{8.1  LIMITAÇÕES}
+\subsubsection{8.1  LIMITAÇÕES}
 
 > Apesar da grande maioria dos recursos dos dispositivos estar presente
 em HTML5 ainda existem muitas funcionalidades faltando para este tipo
@@ -941,7 +942,7 @@ Desktop/Google Chrome
 Smatphone/Android
 %}}}
 
-\chapter{CONCLUSÕES}
+\section{CONCLUSÕES}
 %{{{
 
 Não pude testar todos os métodos e ferramentas e versões à
@@ -966,20 +967,20 @@ ter que instalar, o serviço está em demanda, você não é obrigado a
 tê-lo em sua tela inicial.
 
 
-\subsection{ TRABALHOS FUTUROS}
+\subsubsection{ TRABALHOS FUTUROS}
 
 EMACSCRIPT 7
 
 %}}}
 
-\chapter{ANEXOS}
+\section{ANEXOS}
 %{{{
 
-\subsection{ CONVERSORES PARA HTML5}
+\subsubsection{ CONVERSORES PARA HTML5}
 Além da possibilidade de escrever em HTML, pode-se optar pela
 alternativa de utilizar-se um conversor de linguagens.
 
-\subsection{ METODOLOGIA DE DESENVOLVIMENTO DE SOFTWARE PARA A CONSTRUÇÃO DE GAMES}
+\subsubsection{ METODOLOGIA DE DESENVOLVIMENTO DE SOFTWARE PARA A CONSTRUÇÃO DE GAMES}
 
 Como o jogo é um software complexo demanda-se a utilização de
 metodologias de engenharia de software, dentre os processos de software
@@ -1008,7 +1009,7 @@ destaca-se: versões frequentes, pequenos ciclos de desenvolvimento que
 buscam aumentar a produtividade, introduzem checkpoints onde os clientes
 podem agregar novas funcionalidades;
 
-\subsection{ AMBIENTES PARA DESENVOLVIMENTO HTML5}
+\subsubsection{ AMBIENTES PARA DESENVOLVIMENTO HTML5}
 
 Na pesquisa efetuada sobre estes frameworks full-stack foram
 identificadas as seguintes tecnologias:
@@ -1044,12 +1045,12 @@ hospedados na nuvem, possibilitou a Intel criar compiladores para cada
 uma das plataformas disponibilizadas pelo PhoneGap, que é o framework
 polyfill utilizado na solução.
 
-\subsection{ HTTP}
+\subsubsection{ HTTP}
 
-\subsection{FRAMEWORKS DE DESENVOLVIMENTO DE JOGOS EM HTML5;}
+\subsubsection{FRAMEWORKS DE DESENVOLVIMENTO DE JOGOS EM HTML5;}
 
 
-\subsection{ FRAMEWORKS PARA DESENVOLVIMENTO DE JOGOS HTML5}
+\subsubsection{ FRAMEWORKS PARA DESENVOLVIMENTO DE JOGOS HTML5}
 Com o intuito de simplificar o processo para os desenvolvedores,
 auxiliando-os a focarem-se apenas nas soluções que estão
 desenvolvendo, foram criados os frameworks para desenvolvimento de
@@ -1064,13 +1065,17 @@ limitações, desenvolvendo soluções próprios.
 - quintus: bom para plataformas 2D
 - limeJs: bom para 2d
 
-\subsection{ INTERFACE E ESCOLHAS DE DESIGN}
+\subsubsection{ INTERFACE E ESCOLHAS DE DESIGN}
 
-\subsection{PROGRESSÃO CONTÍNUA}
+\subsubsection{PROGRESSÃO CONTÍNUA}
 
-\subsection{JAVASCRIPT NÃO OBSTRUTIVO}
+\subsubsection{JAVASCRIPT NÃO OBSTRUTIVO}
 
-\subsection{Arquitetura Cliente Servidor}
+\subsubsection{Arquitetura Cliente Servidor}
 %}}}
+
+\bibliography{tcc} 
+\bibliographystyle{ieeetr}
+%\bibliographystyle{te}
 
 \end{document}
