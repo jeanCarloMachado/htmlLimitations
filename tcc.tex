@@ -49,11 +49,9 @@ right=2cm
 %}}}
 
 \maketitle
-\tableofcontents % Prints the main table of contents
-
-\listoffigures % Prints the list of figures
-
-\listoftables % Prints the list of tables
+\tableofcontents
+\listoffigures
+\listoftables
 
 \chapter{CONTEXTUALIZAÇÃO}
 %{{{
@@ -74,7 +72,7 @@ Desenvolvedores de jogos web podem rapidamente satisfazer as
 necessidades de seus jogadores, mantendo-os leais a tecnologia HTML5
 (ZHANG, 2012).
 
->A maioria dos desenvolvedores demonstra interesse para o HTML5 
+> A maioria dos desenvolvedores demonstra interesse para o HTML5.
 
 > O tempo de desenvolvimento de uma aplicação em HTML5 é 67% menor
 que aplicações nativas. Isso mostra o custo efetivo de aplicações
@@ -142,7 +140,7 @@ mais altos (segundo trabalho 2)
 Abaixo seguem os objetivos deste trabalho.
 
 \subsection{OBJETIVO GERAL}
-
+%{{{
 Identificar possíveis limitações no processo de desenvolvimento
 de jogos multiplataforma oriundas do atual estado de definição e
 implementação do HTML5.
@@ -152,7 +150,7 @@ apenas suas limitações. Também não é objetivo deste trabalho
 comparar o HTML com outras
 tecnologias de desenvolvimento de jogos, como Flash Player, Silverlight
 ou alternativas Desktop.
-
+%}}}
 \subsection{OBJETIVOS ESPECÍFICOS}
 
 Estudar as limitações de desenvolvimento de jogos nas plataformas de
@@ -165,6 +163,10 @@ maior experiência na já mencionada plataforma.
 
 Pretende-se também estudar os seguintes tópicos do desenvolvimento de
 jogos, relativos ao HTML5:
+
+\cite{browserGamesTechnologyAndFuture} cita que video, audio, drag and drop, funcionalidades de gráficos e armazenamento off-line são aspectos importantes do HTML5 para o desenvolvimento de jogos.
+
+Com base nos estudos efetuados e na experiência adquirida elencamos os seguintes itens que serão abordados neste estudo.
 
 \begin{itemize}
 \item Performance
@@ -358,11 +360,10 @@ HTML foi especificado baseado-se em SGML (Standard Generalized Markup Language),
 abraçando assim suas premissas:
 
 \begin{itemize}
-\item Deve ser declarativo, descrevendo estrutura e outros atributos,
+\item Deve ser declarativo, descrevendo estrutura e outros atributos;
 \item Deve ser ao invés de definir o processamento a ser efetuado no
 \item Deve ser documento: rigoroso de modo que as mesmas técnicas de
 \item Deve ser mineração de dados em objetos e bancos de dados possam ser
-\item Deve ser utilizadas;
 \end{itemize}
 
 Os criadores de navegadores constantemente introduziam
@@ -508,7 +509,7 @@ iniciam sua execução.
 %}}}
 
 
-\section{ DOCUMENT OBJECT MODEL (DOM)}
+\section{DOCUMENT OBJECT MODEL (DOM)}
 
 É uma plataforma e interface agnóstica a linguagem que permite os
 programas e scripts dinamicamente acessar e atualizar o conteúdo,
@@ -547,6 +548,15 @@ especificada e a dificuldade e escopo do projeto aumentariam muito se
 tivessem de incluir um jogos 3D. Versão da especificação atual?
 
 \section{VIDEO}
+
+Antes do HTML5 era impossível adicionar vídeos nas páginas sem a utilização de algum plugin.
+
+Os navegadores não concordam em qual formato de vídeo suportar.
+Uma tag vídeo pode apontar para vários arquivos em diversos formatos, e os navegadores que suportarem determinado irão escolhê-lo.
+
+Codec - é o algorítmo usado para encodificar o video em um conjunto de bits \cite{diveIntohtml}.
+
+Um formato de vídeo é a combinação de várias tecnologias.
 
 \section{AUDIO}
 
@@ -757,10 +767,8 @@ palavras seu escopo é mais genérico e não tão preciso quanto este
 \chapter{METODOLOGIA}
 %{{{
 
-O primeiro passo consiste em definir as plataformas alvo do trabalho;
-devem ser plataformas mercadologicamente relevantes ao desenvolvimento
-de jogos, que possibilitem a criação de aplicativos em HTML e que
-acentuem o antagonismo de características.
+O primeiro passo consiste em definir as plataformas alvo do trabalho.
+Estas devem ser relevantes mercadologicamente ao desenvolvimento de jogos em HTML5.
 
 Segue-se com a construção de uma lista com os recursos relevantes
 aos jogos que, empiricamente, sofrem ou são comummente ligados à
@@ -787,7 +795,7 @@ testes do jogo. Este detalhamento deve responder as seguintes perguntas:
 manutibilidade, portabilidade ou performance? (segundo ISO) %}}}
 \end{itemize}
 
-Como recromendação geral, busca-se abster-se da utilização de plugins pois estes muitas
+Como recomendação geral, busca-se abster-se da utilização de plugins pois estes muitas
 vezes escondem limitações do HTML em si.
 
 \chapter{RESULTADOS}
@@ -900,28 +908,30 @@ Smatphone/Android
 
 Não pude testar todos os métodos e ferramentas e versões à
 disposição, um trabalho completo demandaria esforços conjuntos de
-muitos indivíduos ou um período de tempo bem mais extenso. Se uma
-empresa deseja produzir jogos nativos elas precisarão de vários
+muitos indivíduos ou um período de tempo bem mais extenso. 
+
+Se uma empresa deseja produzir jogos nativos elas precisarão de vários
 desenvolvedores. Eu sozinho fui capaz de produzir um jogo em tempo
-razoável trabalhando apenas com a plataforma web.
+razoável trabalhando com a plataforma web.
 
 Por não utilizar frameworks e bibliotecas estou me distanciando
-dos casos da vida real. Só poderemos considerar o HTML como uma
-especificação pronta quando
-for possível fazer tudo o que se faz nativamente com os dispositivos
-através de uma API web padronizada.
+dos casos da vida real. 
 
-> Conforme JavaScript vai ganhando importância rápido progresso é
-feito por diferentes empresas a fim de prover boas ferramentas de debug
-e inspecionamento para JavaScript.
+Só poderemos considerar o HTML como uma especificação pronta quando for possível fazer tudo o que se faz nativamente com os dispositivos através de uma API web padronizada.
 
 Baixa fricção quer dizer que você pode ir de um site para outro sem
 ter que instalar, o serviço está em demanda, você não é obrigado a
 tê-lo em sua tela inicial.
 
 
-\subsection{ TRABALHOS FUTUROS}
+O futuro dos jogos em HTML5 parece brilhante.
 
+
+Neste trabalho revisamos tecnologias relevantes no desenvolvimento de jogos.
+
+\subsection{TRABALHOS FUTUROS}
+
+Trabalhos que explorem os benefícios mercadológicos do HTML5 em comparação com alternativas nativas.
 EMACSCRIPT 7
 
 %}}}
@@ -929,6 +939,7 @@ EMACSCRIPT 7
 \printbibliography
 
 \appendix
+
 \chapter{ANEXOS}
 %{{{
 
@@ -1069,7 +1080,7 @@ debugar a aplicação.
 %}}}
 
 \subsection{ASM.JS}
-
+%{{{
 Asm.js é um subconjunto da sintaxe do JavaScript a qual permite grandes
 aumentos de performance quando em comparação com JavaScript normal.
 No contexto dos jogos performance é usualmente um recurso estimável,
@@ -1084,6 +1095,6 @@ a consistência de tipo e a não existência de um coletor de lixo
 modelo simples desprovido de comportamento dinâmico, sem alocação
 e desalocação de memória, apenas um bem definido conjunto de
 operações de inteiros e flutuantes possibilita grade performance e
-abre espaço para otimizações.
+abre espaço para otimizações.%}}}
 
 \end{document}

@@ -16,6 +16,9 @@
   {}
 \endgroup
 
+\entry{diveIntohtml}{book}{}
+\endentry
+
 \entry{currentStateCrossPlatform}{article}{}
   \name{author}{1}{}{%
     {{}%
@@ -72,6 +75,23 @@
   \verb https://developer.mozilla.org/en-US/docs/Web/HTML
   \endverb
   \field{year}{2015}
+\endentry
+
+\entry{browserGamesTechnologyAndFuture}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Vahatupa}{V.}%
+     {Juha-Matti}{J.-M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{VJM1}
+  \strng{fullhash}{VJM1}
+  \field{labelyear}{2014}
+  \field{sortinit}{V}
+  \field{title}{On the development of Browser Games - Current Technologies and
+  the Future}
+  \field{year}{2014}
 \endentry
 
 \lossort
