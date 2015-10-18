@@ -53,8 +53,8 @@ right=2cm
 \listoffigures
 \listoftables
 
-\chapter{CONTEXTUALIZAÇÃO}
-%{{{
+\chapter{CONTEXTUALIZAÇÃO}%{{{
+
 \section{JOGOS}
 
 \subsection{BENEFÍCIOS}
@@ -137,20 +137,19 @@ mais altos (segundo trabalho 2)
 \section{OBJETIVOS}
 %{{{
 
-Abaixo seguem os objetivos deste trabalho.
-
 \subsection{OBJETIVO GERAL}
 %{{{
+
 Identificar possíveis limitações no processo de desenvolvimento
 de jogos multiplataforma oriundas do atual estado de definição e
 implementação do HTML5.
 
-Não é objetivo deste trabalho demonstrar onde o HTML5 se sobressai,
+Não é objetivo deste trabalho demonstrar os pontos fortes do HTML5,
 apenas suas limitações. Também não é objetivo deste trabalho
-comparar o HTML com outras
-tecnologias de desenvolvimento de jogos, como Flash Player, Silverlight
-ou alternativas Desktop.
+comparar o HTML com outras tecnologias de desenvolvimento de jogos, c
+omo Flash Player, Silverlight ou alternativas Desktop.
 %}}}
+
 \subsection{OBJETIVOS ESPECÍFICOS}
 
 Estudar as limitações de desenvolvimento de jogos nas plataformas de
@@ -202,11 +201,10 @@ melhoria da própria especificação.
 
 A opinião comum tende para soluções nativas em detrimento do
 desenvolvimento de jogos, este trabalho pretende desafiar esta
-concepção. (REFERENCIAR)
+concepção. %REFERENCIAR
 
 Muitos desenvolvedores estão familiarizados
-com as tecnologias da WEB ou apontam interesse na tecnologia. <!--
-referenciar -->
+com as tecnologias da WEB ou apontam interesse na tecnologia.
 
 Estimular e avançar o estudo da implementação da Open Web;
 
@@ -424,6 +422,10 @@ elementos. -->
 
 <!-- falar do suporte a variáveis do CSS -->
 
+\subsection{Transições}
+
+É uma forma de adicionar animações de um estado para outro, em uma página web.
+
 %}}}
 
 \section{JAVASCRIPT}
@@ -508,19 +510,23 @@ iniciam sua execução.
 
 %}}}
 
-
 \section{DOCUMENT OBJECT MODEL (DOM)}
+%{{{
+É uma convenção que especifica como elementos HTML interegem.
 
-É uma plataforma e interface agnóstica a linguagem que permite os
-programas e scripts dinamicamente acessar e atualizar o conteúdo,
-estrutura e estilo de documentos. Pode ser novamente processado e o
-resultado aparecer na tela. O navegador cria um DOM quando ele processa
-os elementos e tags encontrados em um documento HTML. Gmail é uma
-aplicação de única página (single-page) que se baseia fortemente no
-DOM para gerar conteúdo dinâmico e interativo oferecido pelo DOM.
+A primeira versão do DOM, (DOM Legacy) foi parcialmente especificada no HTML4.
+
+O DOM é também uma forma de manter estado em páginas HTML.
+
+Os navegadores contam com as engines de layout para parsear HTML em DOM.
+
+A atual versão do DOM é a versão 3    
+
+
+%}}}
 
 \subsection{CANVAS}
-
+%{{{
 1. Troca de tamanhos via Canvas vs DOM
 2. Aceleração de GPU
 3. API de Áudio (referência 2)
@@ -537,18 +543,18 @@ utilização de GPU Apache Cordova utiliza o FastCanvas.
 CocoonJS é uma aplicativo híbrido que preenche a fraca implementação
 de OPENGL nos dispositivos móveis possibilitando se desenvolver em
 WEBGL.
-
+%}}}
 \section{WEBGL}
-
+%{{{
 Baseado no OpenGL.
 
 WebGL não foi utilizada no trabalho apesar de ser de grande
 relevância no processo de jogos pois ainda não está completamente
 especificada e a dificuldade e escopo do projeto aumentariam muito se
 tivessem de incluir um jogos 3D. Versão da especificação atual?
-
+%}}}
 \section{VIDEO}
-
+%{{{
 Antes do HTML5 era impossível adicionar vídeos nas páginas sem a utilização de algum plugin.
 
 Os navegadores não concordam em qual formato de vídeo suportar.
@@ -557,14 +563,13 @@ Uma tag vídeo pode apontar para vários arquivos em diversos formatos, e os nav
 Codec - é o algorítmo usado para encodificar o video em um conjunto de bits \cite{diveIntohtml}.
 
 Um formato de vídeo é a combinação de várias tecnologias.
-
+%}}}
 \section{AUDIO}
-
+%{{{
 Áudio é um componente vital para oferecer grande satisfação aos
 usuários de jogos. Provê feedback e imerge o usuário. Efeitos de som
 e música podem servir como mecanismo. Jogadores tem baixa tolerância a
 volume, deve ser utilizado com cautela.
-
 \subsection{TAG AUDIO}
 
 A tag <audio> define um som dentro de um documento HTML. Quando o
@@ -582,28 +587,7 @@ nova do que a tag áudio.
 
 FORMATOS DE ÁUDIO
 
-\section{CÂMERA}
-
-\section{ENTRADA DE COMANDOS}
-
-Na construção da grande maioria dos jogos é muitas vezes
-imprescindível alta flexibilidade na gestão de entrada de dados.
-Este fator muito se amplia na criação de jogos multiplataforma,
-seja através de teclado, tela sensível ou sensor de movimentos, o
-importante é oferecer a melhor experiência possível por plataforma.
-O HTML5 trata todos estes casos abstratamente na forma de eventos, os
-quais podem ser escutados através de listeners. Os eventos básicos
-são: keydown (tecla baixa), keyup (tecla solta) e keypress (tecla
-pressionada).
-
-Para detectar suporte aos mais variados recursos do HTML5 no navegador
-do cliente existem duas possibilidades. Pode-se implementar testes para
-cada funcionalidade utilizada abordando os detalhes de implementação
-de cada uma ou então fazer uso de alguma biblioteca especializada
-neste processo, o Modernizr é uma opção open-source deste tipo de
-biblioteca, este gera uma lista de booleanos sobre grande variedade dos
-recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e
-local storage.
+%}}}
 
 \section{CACHE}
 
@@ -626,46 +610,45 @@ Também conhecido como WebStorage na especificação do HTML5. Provê
 uma forma de armazenar os dados como chave valor dentro do navegador. Os
 dados são persistido mesmo que o navegador seja fechado.
 
+\section{ENTRADA DE COMANDOS}
+
+Na construção da grande maioria dos jogos é muitas vezes
+imprescindível alta flexibilidade na gestão de entrada de dados.
+Este fator muito se amplia na criação de jogos multiplataforma,
+seja através de teclado, tela sensível ou sensor de movimentos, o
+importante é oferecer a melhor experiência possível por plataforma.
+O HTML5 trata todos estes casos abstratamente na forma de eventos, os
+quais podem ser escutados através de listeners. Os eventos básicos
+são: keydown (tecla baixa), keyup (tecla solta) e keypress (tecla
+pressionada).
+
+Para detectar suporte aos mais variados recursos do HTML5 no navegador
+do cliente existem duas possibilidades. Pode-se implementar testes para
+cada funcionalidade utilizada abordando os detalhes de implementação
+de cada uma ou então fazer uso de alguma biblioteca especializada
+neste processo, o Modernizr é uma opção open-source deste tipo de
+biblioteca, este gera uma lista de booleanos sobre grande variedade dos
+recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e
+local storage.
+
 \subsection{WEB SQL}
 
-Simplesmente um banco de dados SQLite embebido no navegador. Permite
+Um banco de dados SQLite embebido no navegador. Permite
 tabelas relacionais. O tamanho padrão do banco de dados é 5 megabytes
 e pode ser estendido pelo usuário.
 
-\subsection{Recursos nativos atualmente indisponíveis}
-
-- Suporte à câmera;
-- Suporte à calendário;
-
-\subsection{DEBUG}
-
-\subsection{WEINRE}
-
 \subsection{DISPONIBILIZAÇÃO DA APLICAÇÃO}
 
-Links com manifestos 
-\section{ INSTALAÇÃO}
+Links com manifestos
+\section{INSTALAÇÃO}
 
 Este método é benéfico pois possibilita ao usuário a mesma
 experiência ao adquirir uma aplicação normal. Este tipo de
 aplicação é comummente referido como "híbrido".
 
-\section{ CROSSWALK}
+\section{O JOGO}
 
-Crosswalk empacota os fontes juntamente com uma versão do Chromium, a
-versão Open-source do Google Chrome. Isso faz com que o software se
-comporte da mesma forma para todas as versões de dispositivos Android.
-
-\section{ PHONEGAP}
-
-\section{ PHONEGAP CLOUD}
-
-Este serviço possibilita que se faça upload de um arquivo compactado
-contendo os fontes – ou apontando para um repositório no GitHub –
-que no tempo desta pesquisa não estava funcionando; e se gere o APK
-para o Android nativamente.
-
-\subsection{O JOGO}
+Finalizada a revisão bibliográfica será descrito os detalhes da implementação do jogo.
 
 Devido ao fato deste trabalho explorar as limitações dos jogos em
 HTML5, optei por evitar a utilização de plugins e ferramentas de
@@ -771,7 +754,7 @@ O primeiro passo consiste em definir as plataformas alvo do trabalho.
 Estas devem ser relevantes mercadologicamente ao desenvolvimento de jogos em HTML5.
 
 Segue-se com a construção de uma lista com os recursos relevantes
-aos jogos que, empiricamente, sofrem ou são comummente ligados à
+aos jogos que, sofrem ou são comummente ligados à
 limitações multiplataforma. Segue-se uma pesquisa para aprofundar
 teoricamente cada um dos recursos, possivelmente elegendo novos.
 
@@ -792,11 +775,12 @@ testes do jogo. Este detalhamento deve responder as seguintes perguntas:
 \item As limitações puderam ser contornadas?
 \item Algum efeito colateral das limitações no jogo?
 \item Qual a categoria do problema: usabilidade, funcionalidade,
-manutibilidade, portabilidade ou performance? (segundo ISO) %}}}
+manutibilidade, portabilidade ou performance? (segundo ISO)
 \end{itemize}
 
 Como recomendação geral, busca-se abster-se da utilização de plugins pois estes muitas
 vezes escondem limitações do HTML em si.
+%}}}
 
 \chapter{RESULTADOS}
 %{{{
@@ -1095,6 +1079,21 @@ a consistência de tipo e a não existência de um coletor de lixo
 modelo simples desprovido de comportamento dinâmico, sem alocação
 e desalocação de memória, apenas um bem definido conjunto de
 operações de inteiros e flutuantes possibilita grade performance e
-abre espaço para otimizações.%}}}
+abre espaço para otimizações.
+%}}}
 
+\section{CROSSWALK}
+%{{{
+Crosswalk empacota os fontes juntamente com uma versão do Chromium, a
+versão Open-source do Google Chrome. Isso faz com que o software se
+comporte da mesma forma para todas as versões de dispositivos Android.
+
+\section{PHONEGAP}
+\subsection{PHONEGAP CLOUD}
+
+Este serviço possibilita que se faça upload de um arquivo compactado
+contendo os fontes – ou apontando para um repositório no GitHub –
+que no tempo desta pesquisa não estava funcionando; e se gere o APK
+para o Android nativamente.
+%}}}
 \end{document}
