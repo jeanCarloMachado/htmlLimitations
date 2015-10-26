@@ -1,3 +1,9 @@
+author={Janiszewswi, Marek},
+year = 2014,
+type = {phdthesis},
+institution={Vrije Universiteit Amsterdam},
+annotation={This seems a nice work to further reading}
+
 80% of the total time spent using mobile phones is for using apps,
 and 32% for playing games.
 
