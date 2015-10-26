@@ -72,6 +72,60 @@ Avoiding text selection in games is important.
 Both solutions are viable, but do not cover the same needs. The
 solution depends on the game type.
 
+Choosing this solution [canvas] means reducing the usage of CSS
+and HTML, so everything these technologies gives us now has to be
+implemented in JavaScript.
+
+Although JavaScript performance has been remarkably improved, it
+is generally less efficient to make JavaScript animations than to
+use CSS transitions and animations, which can be more optimized
+and hardware accelerated.
+
+For now, pure DOM approach is usually better because it takes more
+advantage of web technologies.
+
+Web developers are open-minded and have developed open-source
+libraries and frameworks all around the web.
+
+Allowing the user to be creative and to bring his own style into
+the game is the most valuable feature you can offer. Now, if you
+also let him or her to share her score - you scored.
+
+The good thing with HTML- and JavaScript-based applications is
+that the technology itself forces you into some kind of structure.
+
+[sound api] it's fine if you want to play some music, but if
+you're triggering sounds as you play a game, it's patchy.
+
+Everything seems very easy at first, but it's for sure that it
+will turn into more code  than you originally expected.
+
+
+A particle is represented by a point in space, a dot. In practise
+particles are often useful for simulating effects that consist of
+many small objects.
+
+Numeric errors lead to a special NaN value. All operations with a
+NaN as operand will result in another NaN. This can make it very
+difficult to track down the source of errors.
+
+Performance optimizations depend on the runtime environment.
+Optimizations that have a positive impact today can become
+useless, or even harmful, tomorrow. Pag 131
+
+A good tool to perform this [micro optimizations] is found at jsfiddle.net.
+The more advanced engines become, the less important these micro
+optimizations will become.
+
+Version 1.0 of the WebGL specification was completed in March 2011
+by Khronos Group.
+
+WebGL is a very new emerging technology. As such, unfortunately,
+not every computer supports it. In order to view a WebGl progam,
+you need a new browser, a newer graphics card, an Operating
+System.
+
+
 ##Notes
 
 Firefox and Chrome came up with distinct API's for audio

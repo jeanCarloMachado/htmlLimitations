@@ -1,11 +1,10 @@
-all: pdf doc
+all: pdf
 
 pdf:
-	latex tcc.tex
+	pdflatex tcc.tex
 	bibtex tcc
 	latex tcc.tex
 	latex tcc.tex
-	dvipdfm tcc.dvi
 	zathura tcc.pdf
 
 clean:

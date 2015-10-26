@@ -1,28 +1,10 @@
 %{{{
 \documentclass[
-11pt,
+12pt,
 a4paper,
 portuges,
 draft
 ]{report}
-
-\usepackage[portuges]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
-\fancyhead[R]{\thepage}
-\usepackage{graphicx}
-\graphicspath{ {asset/} } 
-\usepackage[style=authoryear,backend=bibtex,sorting=nty]{biblatex}
-\addbibresource{tcc.bib}
-
-\addto\captionsportuges{
-\renewcommand{\contentsname}{Sumário}
-\renewcommand{\chaptername}{}
-}
 
 \usepackage[
 top=3cm,
@@ -37,27 +19,153 @@ right=2cm
 % includefoot
 ]{geometry}
 
-\newcommand{\supervisor}{Mr. Rafael Jaques}
-\title{Limitações do HTML5 \\ no desenvolvimento de jogos multiplataforma}
-\author{Jean Carlo Machado}
-\newcommand{\university}{\uppercase{Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul}}
-\newcommand{\campus}{Campus Bento Gonçalves}
-\newcommand{\website}{http://jeancarlomachado.com.br}
-\date{Bento Gonçalves, Dezembro 2015}
+\usepackage[portuges]{babel}
+\usepackage{times}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{titling}
+\usepackage{fancyhdr}
+\usepackage{anyfontsize}
+\pagestyle{myheadings}
+\usepackage{titlesec}
+\usepackage[final]{graphicx}
+\graphicspath{ {asset/} }
+\usepackage[style=authoryear,backend=bibtex,sorting=nty]{biblatex}
+\addbibresource{tcc.bib}
+\addto\captionsportuges{
+	\renewcommand{\contentsname}{\hspace*{\fill}\Large SUMÁRIO\hspace*{\fill}}
+    \renewcommand{\listfigurename}{\hspace*{\fill}\Large LISTA DE FIGURAS\large\hspace*{\fill}}
+    \renewcommand{\chaptername}{}
+    \renewcommand{\figurename}{Fig.}
+}
 
-\begin{document}
+\DefineBibliographyStrings{portuguese}{%
+  bibliography = {\hspace*{\fill}\Large REFERÊNCIAS BIBLIOGRÁFICAS\hspace*{\fill}},
+}
+
+\usepackage{setspace}
+
+\titleformat{\chapter}{\large\bfseries}{\thechapter}{20pt}{\large}
+\titleformat{\section}{\large\uppercase}{\thesection}{20pt}{\large}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{20pt}{\large}
+\titleformat{\subsubsection}{\large}{\thesubsubsection}{20pt}{\large}
+
+\renewenvironment{quote}
+               {\list{}{\rightmargin\leftmargin}%
+                \item\relax\fontsize{10}{12}}
+               {\endlist}
+
+
+\usepackage{titletoc}
+\usepackage[titletoc]{appendix}
+\usepackage{tocloft}
+\setlength{\cftchapindent}{0cm}
+\setlength{\cftsecindent}{0cm}
+\setlength{\cftsubsecindent}{0cm}
+\setlength{\cftsubsubsecindent}{0cm}
+\dottedcontents{chapter}[1.5em]{}{1.3em}{.6em}
+%{{{ VARIABLES
+\title{\uppercase{Limitações do HTML5 \\ no desenvolvimento de jogos multiplataforma}}
+\author{\uppercase{Jean Carlo Machado}}
+\newcommand{\supervisor}{Mr. Rafael Jaques}
+\newcommand{\university}{\uppercase{Instituto Federal de Educação, Ciência \\ e Tecnologia do Rio Grande do Sul \\ Campus Bento Gonçalves}}
+\newcommand{\locale}{Bento Gonçalves, Dezembro 2015}
+\newcommand{\website}{http://jeancarlomachado.com.br}
 %}}}
 
-\maketitle
-\tableofcontents
-\listoffigures
-\listoftables
+\begin{document}
+\pagenumbering{gobble}
+%}}}
 
+%{{{Title Page
+
+\begin{titlepage}
+    \begin{center}
+        {\fontsize{14}{18}\selectfont \university}
+        \vfill
+        {\fontsize{16}{19}\selectfont \thetitle }
+        \vfill
+        {\fontsize{12}{15}\selectfont \theauthor}
+        \vfill
+        {\locale}
+    \end{center}
+\end{titlepage}
+
+%}}}
+
+%{{{Folha de rosto
+
+\begin{titlepage}
+    \begin{center}
+        {\fontsize{14}{18}\selectfont \theauthor}
+        \vfill
+        {\fontsize{16}{19}\selectfont \thetitle }
+        \vfill
+        \hfill
+        \parbox[s]{8cm}{
+        \singlespacing
+            Monografia apresentada junto ao Curso
+        de Tecnologia em Análise e Desenvolvimento de Sistemas no
+    Instituto Federal de Educação, Ciência e Tecnologia do Rio
+Grande do Sul - Campus Bento Gonçalves, como requisito parcial à
+obtenção do título de Tecnólogo em Análise e Desenvolvimento de Sistemas.
+        \\
+        Orientador: Mr. Rafael Jaques
+        }
+        \vfill
+        {\bfseries \locale}
+    \end{center}
+\end{titlepage}
+
+%}}}
+\onehalfspacing
+%{{{ Resumo
+\renewcommand{\abstractname}{\Large\bfseries RESUMO}
+\begin{abstract}
+{ LLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+}
+
+{\bfseries Palavras-chave:} HTML5, Limitações, Jogos,
+Multiplataforma
+\end{abstract}
+
+
+\renewcommand{\abstractname}{\Large\bfseries ABSTRACT}
+\begin{abstract}
+{ LLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+}
+
+{\bfseries Palavras-chave:} HTML5, Limitações, Jogos,
+Multiplataforma
+\end{abstract}
+
+%}}}
+
+{\listoffigures}
+{\tableofcontents}
+%\listoftables
 \chapter{CONTEXTUALIZAÇÃO}%{{{
+\pagenumbering{arabic}
+%\setcounter{page}{1} 
 
 \section{JOGOS}
 
 \subsection{BENEFÍCIOS}
+Desenvolvedores de jogos web podem rapidamente satisfazer as
+necessidades de seus jogadores, mantendo-os leais a tecnologia HTML5
+\autocite{developingEffect}.
+
+> A maioria dos desenvolvedores demonstra interesse para o HTML5.
+
+> O tempo de desenvolvimento de uma aplicação em HTML5 é 67% menor
+que aplicações nativas. Isso mostra o custo efetivo de aplicações
+baseadas em HTML5. A real vantagem de aplicações em HTML5 é o suporte
+horizontal entre as plataformas - que é a maior razão por trás do
+custo efetivo. (HASAN et al, 2012)
 
 \subsection{O MERCADO}
 A maior dificuldade em capturar uma base de usuários é que o mercado
@@ -68,21 +176,9 @@ plataforma popular. (HASAN, 2012)
 
 \subsection{HTML E MULTIPLATAFORMA}
 
-Desenvolvedores de jogos web podem rapidamente satisfazer as
-necessidades de seus jogadores, mantendo-os leais a tecnologia HTML5
-(ZHANG, 2012).
-
-> A maioria dos desenvolvedores demonstra interesse para o HTML5.
-
-> O tempo de desenvolvimento de uma aplicação em HTML5 é 67% menor
-que aplicações nativas. Isso mostra o custo efetivo de aplicações
-baseadas em HTML5. A real vantagem de aplicações em HTML5 é o suporte
-horizontal entre as plataformas - que é a maior razão por trás do
-custo efetivo. (HASAN et al, 2012)
-
 \subsection{LIMITAÇÕES DE JOGOS MULTIPLATAFORMA COM HTML5}
 
-> Funcionalidades foram disponibilizadas de diversas fontes e não foram
+Funcionalidades foram disponibilizadas de diversas fontes e não foram
 construídas de forma especialmente consistente com as demais. Além
 disso, devida a única característica da Web, erros de implementação
 se tornam frequentes, e muitas vezes se tornam o padrão, pois outras
@@ -152,13 +248,15 @@ omo Flash Player, Silverlight ou alternativas Desktop.
 
 \subsection{OBJETIVOS ESPECÍFICOS}
 
-Estudar as limitações de desenvolvimento de jogos nas plataformas de
-dispositivos inteligentes Android e navegadores Desktop Google Chrome
+Estudar as limitações de desenvolvimento de jogos nas plataformas 
+Android e navegadores Desktop Google Chrome
 e Firefox. Os navegadores foram testados em suas últimas versões.
 
 Optamos por Android, e não IOS, pois o primeiro contém
 a vasta maioria do mercado de dispositivos inteligentes, e por termos
 maior experiência na já mencionada plataforma.
+
+Construir um protótipo que colabore para a fundamentação prática do assunto.
 
 Pretende-se também estudar os seguintes tópicos do desenvolvimento de
 jogos, relativos ao HTML5:
@@ -185,6 +283,7 @@ Com base nos estudos efetuados e na experiência adquirida elencamos os seguinte
 Elaborar uma lista de limitações e correlacionar os dados de acordo
 com as plataformas.
 
+
 %}}}
 
 \chapter{JUSTIFICATIVA}
@@ -196,8 +295,9 @@ e justificar decisões relativas ao desenvolvimento de jogos
 multiplataforma.
 
 Tem potencial apontar os pontos chave que necessitam
-de melhorias no HTML, colateralmente colaborando para a
+de melhorias no HTML, consequentemente colaborando para a
 melhoria da própria especificação.
+Estimular e avançar o estudo da implementação da Open Web;
 
 A opinião comum tende para soluções nativas em detrimento do
 desenvolvimento de jogos, este trabalho pretende desafiar esta
@@ -206,7 +306,6 @@ concepção. %REFERENCIAR
 Muitos desenvolvedores estão familiarizados
 com as tecnologias da WEB ou apontam interesse na tecnologia.
 
-Estimular e avançar o estudo da implementação da Open Web;
 
 %}}}
 
@@ -215,35 +314,18 @@ Estimular e avançar o estudo da implementação da Open Web;
 
 \section{JOGOS}
 %{{{
-Segundo LEMES (2009, pág. 126) jogo digital constitui-se em uma
+Segundo jogo digital constitui-se em uma
 atividade lúdica composta por uma série de ações e decisões,
 limitada por regras e pelo universo do game, que resultam em uma
-condição final.
+condição final. %LEMES (2009, pág. 126) 
 
-Essa característica interativa e a dependência comandos
+A característica interativa e a dependência comandos
 sobre uma interface digital, que faz com que o projeto digital desta
-natureza não seja um filme ou uma animação, e sim um game.
+natureza não seja um filme ou uma animação, e sim um jogo.
 
-Video games melhoram as funções cognitivas, melhoram as capacidades criativas, e 
-motivam uma visão positiva diante a falha. \cite{gamebenefits}
+Video games melhoram as funções cognitivas, melhoram as capacidades criativas, e
+motivam uma visão positiva diante a falha \autocite{gamebenefits}.
 
-Jogos em plataformas móveis trazem um novo conjunto de desafios para
-produtores de jogos. Um destes desafios é fornecer feedback suficiente
-para o jogador pois o dispositivo é limitado em proporções, som, tela
-etc.
-
-Já jogos multiplataforma em HTML5 tem a dificuldade adicional
-de ter que comportar, na mesma base de código, o feedback adequando para cada
-plataforma móvel.
-
-A interface tem que ser o mais intuitiva o possível. No caso de
-dispositivos móveis, quanto menos gestos necessários melhor. Tornar
-previsível causa e efeito é uma boa característica para os jogos.
-Os desenvolvedores tem que evitar fazer o jogo para eles mesmos.
-E pela falta de crítica os designs tendem a ser ruins. Afinal o
-que os jogadores querem? LEMES (2009, pg XX) aponta alguns fatores procurados
-pelos usuários de jogos: Desafio, socializar, experiência solitária,
-respeito e fantasia.
 
 Mencionar algum jogo (como WOW) e como ele faz para prender a
 atenção dos usuários. Candy Crush saga 
@@ -265,7 +347,21 @@ A mecânica é composta pelas regras do jogo. Quais as ações
 disponíveis aos usuários, é fortemente influenciada pela categoria do
 jogo em questão.
 
-\section{ARQUITETURA MULTIPLATAFORMA}
+\section{JOGOS MULTIPLATAFORMA}
+
+Jogos em plataformas móveis trazem um novo conjunto de desafios para
+produtores de jogos. Um destes desafios é fornecer feedback suficiente
+para o jogador pois o dispositivo é limitado em proporções, som, tela
+etc.
+
+A interface tem que ser o mais intuitiva o possível. No caso de
+dispositivos móveis, quanto menos gestos necessários melhor. Tornar
+previsível causa e efeito é uma boa característica para os jogos.
+Os desenvolvedores tem que evitar fazer o jogo para eles mesmos.
+E pela falta de crítica os designs tendem a ser ruins. Afinal o
+que os jogadores querem? LEMES (2009, pg XX) aponta alguns fatores procurados
+pelos usuários de jogos: Desafio, socializar, experiência solitária,
+respeito e fantasia.
 
 Designers de jogos tem as seguintes possibilidades arquiteturais
 quando em face de desenvolver um novo jogo: Criar um jogo web,
@@ -280,32 +376,39 @@ ferramentas correlacionadas para sua construção. Este tipo de jogo
 Entre seus pontos positivos pode-se listar:
 
 \begin{itemize}
-\item Necessitam de apenas uma base de código e pode rodar em todas as
+\item Necessitam de uma única base de código e pode rodar em todas as
 plataformas;
 \item Contém a mais vasta gama de desenvolvedores e muitos
 interessados em aprendê-la;
 \item Seus custos são inferiores, aos do desenvolvimento nativo devido a 
 inexistência de duplicação da base de código;
+\item  Não requerem instalação ou atualizações manuais
+\item  Sua distribuição é superior ao estilo convencional de aplicações desktop\autocite{browserGamesTechnologyAndFuture}
+\end{itemize}
+
 Os pontos negativos dessa abordagem são o principal foco deste trabalho.
-Mas a um nível macroscópico podemos listar:
+
+Mas a um nível macroscópico podemos citar:
+\begin{itemize}
 \item Programas que rodam na web são geralmente mais lentos que os
 nativos;
 \item Por falta de especificação ou incompletude de implementação.
 \end{itemize}
 
+Além dos jogos web, há a possibilidade de criar jogos híbridos e nativos.
+
 \subsection{JOGOS HÍBRIDOS}
 
 Jogos híbridos são jogos geralmente desenvolvidos com tecnologias da
-web. Mas rodam dentro de um contêiner nativo – possibilitando o
-acesso à chamadas do sistema, recursos de hardware, eliminando muitias
-das dificuldades da web.
+web. Entretanto, rodam dentro de um contêiner nativo – possibilitando o
+acesso à chamadas do sistema, recursos de hardware, eliminando muitas das dificuldades da web.
 
 \subsection{DESENVOLVIMENTO DE JOGOS NATIVOS}
 
 Habilita a melhor experiência de usuário pois permite utilizar ao
-máximo os recursos e funcionalidades dos aparelhos. 
+máximo os recursos e funcionalidades dos dispositivos.
 
-Porém, devido a cada plataforma conter seu próprio sistema operacional, 
+Porém, devido a cada plataforma conter seu próprio sistema operacional,
 com seus próprios *SDK's* totalmente incompatíveis, os desenvolvedores são
 forçados a desenvolver uma versão do jogo para cada plataforma alvo.
 
@@ -388,6 +491,12 @@ O HTML5 é muitas vezes interpretado como um conceito guarda chuva para
 designar as tecnologias da web HTML, CSS3 e JavaScript.
 
 %}}}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{html5.jpg}
+	\caption{Suite HTML5}
+\end{figure}
 
 \section{CSS}
 %{{{
@@ -566,10 +675,14 @@ Um formato de vídeo é a combinação de várias tecnologias.
 %}}}
 \section{AUDIO}
 %{{{
-Áudio é um componente vital para oferecer grande satisfação aos
-usuários de jogos. Provê feedback e imerge o usuário. Efeitos de som
-e música podem servir como mecanismo. Jogadores tem baixa tolerância a
-volume, deve ser utilizado com cautela.
+Áudio é um componente vital para oferecer imersão e feddback aos
+usuários de jogos. Efeitos de som e música podem servir como mecanismo. 
+Por outro lado, jogadores tem baixa tolerância a volume, deve ser utilizado com cautela.
+
+Segundo \cite{browserGamesTechnologyAndFuture} em sido difícil construir aplicações sofisticadas e interativas sem a utilização de plugins para áudio.
+
+O componente de áudio é especialmente útil para jogos de ação \autocite{browserGamesTechnologyAndFuture}.
+
 \subsection{TAG AUDIO}
 
 A tag <audio> define um som dentro de um documento HTML. Quando o
@@ -760,9 +873,13 @@ teoricamente cada um dos recursos, possivelmente elegendo novos.
 
 Com um baseamento teórico substancial, o próximo passo é a criação
 do protótipo de um jogo multiplataforma que utilize recursos
-potencialmente limitados. Para ser considerado pronto, o protótipo deve
-ser testado, e estar funcional, com adaptações ou não, em cada uma
-das plataformas alvo definidas.
+analisados.
+
+Para capturar todas as limitações presentes, o protótipo deve ser construído sem a ajuda de frameworks ou bibliotecas de terceiros. Eliminando a possibilidade de a limitação ter sido tratada  por terceiros.
+
+Motores de jogos também foram descartados, visto que na maioria dos casos dependem de bibliotecas de terceiros. Outrossim, motores de jogos não são amplamente difundidos no mercado de jogos de navegadores \autocite{browserGamesTechnologyAndFuture}
+
+%Para ser considerado pronto, o protótipo deve ser testado, e estar funcional, com adaptações ou não, em cada uma das plataformas alvo definidas.
 
 Com o protótipo concebido, o passo que segue é a enumeração, e
 descrição das limitações detectadas no processo de desenvolvimento e
@@ -786,18 +903,14 @@ vezes escondem limitações do HTML em si.
 %{{{
 
 Durante a construção do jogo utilizei a estratégia de declarar todos
-os objetos relativos ao window e limitar o escopo. Isso se demonstrou
-uma boa forma de separar as responsabilidades.
+os objetos relativos ao window e limitar o escopo. Isso se demonstrou uma boa forma de separar as responsabilidades.
 
 Abaixo constam as limitações encontradas durante a pesquisa e concepção do jogo
 
 Muitos dos problemas dos jogos multiplataforma não são específicos
 dos jogos, mas aplicam-se a todos tipos de software.  \parencite{currentStateCrossPlatform}
 
-
 \section{LIMITAÇÕES}
-
-\subsection{}
 
 Apesar da grande maioria dos recursos dos dispositivos estar presente
 em HTML5 ainda existem muitas funcionalidades faltando para este tipo
@@ -923,15 +1036,14 @@ EMACSCRIPT 7
 \printbibliography
 
 \appendix
-
-\chapter{ANEXOS}
 %{{{
+%\pagenumbering{gobble}
 
-\subsection{ CONVERSORES PARA HTML5}
+\chapter{ CONVERSORES PARA HTML5}
 Além da possibilidade de escrever em HTML, pode-se optar pela
 alternativa de utilizar-se um conversor de linguagens.
 
-\subsection{ METODOLOGIA DE DESENVOLVIMENTO DE SOFTWARE PARA A CONSTRUÇÃO DE GAMES}
+\section{ METODOLOGIA DE DESENVOLVIMENTO DE SOFTWARE PARA A CONSTRUÇÃO DE GAMES}
 
 Como o jogo é um software complexo demanda-se a utilização de
 metodologias de engenharia de software, dentre os processos de software
@@ -960,7 +1072,7 @@ destaca-se: versões frequentes, pequenos ciclos de desenvolvimento que
 buscam aumentar a produtividade, introduzem checkpoints onde os clientes
 podem agregar novas funcionalidades;
 
-\subsection{ AMBIENTES PARA DESENVOLVIMENTO HTML5}
+\chapter{ AMBIENTES PARA DESENVOLVIMENTO HTML5}
 
 Na pesquisa efetuada sobre estes frameworks full-stack foram
 identificadas as seguintes tecnologias:
@@ -996,9 +1108,9 @@ hospedados na nuvem, possibilitou a Intel criar compiladores para cada
 uma das plataformas disponibilizadas pelo PhoneGap, que é o framework
 polyfill utilizado na solução.
 
-\subsection{ HTTP}
+\section{ HTTP}
 
-\subsection{Frameworks de jogos}
+\section{Frameworks de jogos}
 
 Com o intuito de simplificar o processo para os desenvolvedores,
 auxiliando-os a focarem-se apenas nas soluções que estão
@@ -1014,30 +1126,30 @@ limitações, desenvolvendo soluções próprios.
 - quintus: bom para plataformas 2D
 - limeJs: bom para 2d
 
-\subsection{ INTERFACE E ESCOLHAS DE DESIGN}
+\section{ INTERFACE E ESCOLHAS DE DESIGN}
 
-\subsection{PROGRESSÃO CONTÍNUA}
+\section{PROGRESSÃO CONTÍNUA}
 
-\subsection{JAVASCRIPT NÃO OBSTRUTIVO}
+\section{JAVASCRIPT NÃO OBSTRUTIVO}
 
-\subsection{Arquitetura Cliente Servidor}
+\section{Arquitetura Cliente Servidor}
 
-\subsection{NODEJS}
+\section{NODEJS}
 
 Permite rodar JavaScript fora do navegador. Utiliza um modelo dirigido
 à eventos sem bloqueio, tornando-o rápido e eficiente.
 
-\subsection{ALTERNATIVAS AO JAVASCRIPT}
+\section{ALTERNATIVAS AO JAVASCRIPT}
 
 Abaixo seguem algumas tecnologias que servem de alternativa ao
 JavaScript.
 
-\subsection{TYPESCRIPT}
+\section{TYPESCRIPT}
 
 Conhecido como uma versão estendida do JavaScript que compila para
 JavaScript normal.
 
-\subsection{DART}
+\section{DART}
 
 Google. DartVM é uma máquina virtual que está embebido no Google
 Chrome. Significante melhorias em performance quando comparado
@@ -1056,15 +1168,13 @@ para o usuário.
 Utiliza o conceito de streams para aplicar todas as modificações sobre
 um arquivo de uma vez só.
 
-\subsection{SOURCE MAPS}
+\section{SOURCE MAPS}
 
 Para encontrar os arquivos minificados a fim de ajudar o desenvolvedor a
 debugar a aplicação.
 
-%}}}
 
-\subsection{ASM.JS}
-%{{{
+\section{ASM.JS}
 Asm.js é um subconjunto da sintaxe do JavaScript a qual permite grandes
 aumentos de performance quando em comparação com JavaScript normal.
 No contexto dos jogos performance é usualmente um recurso estimável,
@@ -1080,20 +1190,19 @@ modelo simples desprovido de comportamento dinâmico, sem alocação
 e desalocação de memória, apenas um bem definido conjunto de
 operações de inteiros e flutuantes possibilita grade performance e
 abre espaço para otimizações.
-%}}}
 
 \section{CROSSWALK}
-%{{{
 Crosswalk empacota os fontes juntamente com uma versão do Chromium, a
 versão Open-source do Google Chrome. Isso faz com que o software se
 comporte da mesma forma para todas as versões de dispositivos Android.
 
 \section{PHONEGAP}
-\subsection{PHONEGAP CLOUD}
+\section{PHONEGAP CLOUD}
 
 Este serviço possibilita que se faça upload de um arquivo compactado
 contendo os fontes – ou apontando para um repositório no GitHub –
 que no tempo desta pesquisa não estava funcionando; e se gere o APK
 para o Android nativamente.
+
 %}}}
 \end{document}
