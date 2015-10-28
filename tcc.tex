@@ -30,8 +30,7 @@ right=2cm
 
 
 \pagestyle{myheadings}
-
-
+%ovewrite plain to my headings style
 \makeatletter
   \let\ps@plain\ps@myheadings
 \makeatother
@@ -42,14 +41,10 @@ right=2cm
 \usepackage[style=authoryear,backend=bibtex,sorting=nty]{biblatex}
 \addbibresource{tcc.bib}
 \addto\captionsportuges{
-	\renewcommand{\contentsname}{\hspace*{\fill}\Large SUMÁRIO\hspace*{\fill}}
-    \renewcommand{\listfigurename}{\hspace*{\fill}\Large LISTA DE FIGURAS\large\hspace*{\fill}}
+	\renewcommand{\contentsname}{\hspace*{\fill} SUMÁRIO\hspace*{\fill}}
+    \renewcommand{\listfigurename}{\hspace*{\fill} LISTA DE FIGURAS\hspace*{\fill}}
     \renewcommand{\chaptername}{}
     \renewcommand{\figurename}{Fig.}
-}
-
-\DefineBibliographyStrings{portuguese}{%
-  bibliography = {\hspace*{\fill}\Large REFERÊNCIAS BIBLIOGRÁFICAS\hspace*{\fill}},
 }
 
 \usepackage{setspace}
@@ -64,9 +59,7 @@ right=2cm
                 \item\relax\fontsize{10}{12}}
                {\endlist}
 
-
 \usepackage{titletoc}
-\usepackage[titletoc]{appendix}
 \usepackage{tocloft}
 \setlength{\cftchapindent}{0cm}
 \setlength{\cftsecindent}{0cm}
@@ -74,6 +67,11 @@ right=2cm
 \setlength{\cftsubsubsecindent}{0cm}
 \dottedcontents{chapter}[1.5em]{}{1.3em}{.6em}
 
+
+\renewcommand\cfttoctitlefont{\normalfont\fontsize{14}{17}}
+\renewcommand\cftloftitlefont{\normalfont\fontsize{14}{17}}
+%\renewcommand\cftfigfont{\normalfont\fontsize{10}{12}}
+%\renewcommand\cftfigpagefont{\normalfont\fontsize{10}{12}}
 
 %{{{ VARIABLES
 \title{\uppercase{Limitações do HTML5 \\ no desenvolvimento de jogos multiplataforma}}
@@ -171,15 +169,17 @@ Desenvolvedores de jogos web podem rapidamente satisfazer as
 necessidades de seus jogadores, mantendo-os leais a tecnologia HTML5
 \autocite{developingEffect}.
 
-> A maioria dos desenvolvedores demonstra interesse para o HTML5.
+A maioria dos desenvolvedores demonstra interesse para o HTML5. (referenciar)
 
-> O tempo de desenvolvimento de uma aplicação em HTML5 é 67% menor
-que aplicações nativas. Isso mostra o custo efetivo de aplicações
-baseadas em HTML5. A real vantagem de aplicações em HTML5 é o suporte
+O tempo de desenvolvimento de uma aplicação em HTML5 é 67\% menor (referenciar)
+que aplicações nativas. Isso mostra o custo efetivo de aplicações baseadas em HTML5. 
+
+A real vantagem de aplicações em HTML5 é o suporte
 horizontal entre as plataformas - que é a maior razão por trás do
 custo efetivo. (HASAN et al, 2012)
 
 \subsection{O MERCADO}
+
 A maior dificuldade em capturar uma base de usuários é que o mercado
 de dispositivos móveis é muito fragmentado e não existe uma única
 plataforma popular. (HASAN, 2012)
@@ -261,7 +261,7 @@ omo Flash Player, Silverlight ou alternativas Desktop.
 
 \subsection{OBJETIVOS ESPECÍFICOS}
 
-Estudar as limitações de desenvolvimento de jogos nas plataformas 
+Estudar as limitações de desenvolvimento de jogos nas plataformas
 Android e navegadores Desktop Google Chrome
 e Firefox. Os navegadores foram testados em suas últimas versões.
 
@@ -274,9 +274,12 @@ Construir um protótipo que colabore para a fundamentação prática do assunto.
 Pretende-se também estudar os seguintes tópicos do desenvolvimento de
 jogos, relativos ao HTML5:
 
-\cite{browserGamesTechnologyAndFuture} cita que video, audio, drag and drop, funcionalidades de gráficos e armazenamento off-line são aspectos importantes do HTML5 para o desenvolvimento de jogos.
+\cite{browserGamesTechnologyAndFuture} cita que video, audio, drag
+and drop, funcionalidades de gráficos e armazenamento off-line são
+aspectos importantes do HTML5 para o desenvolvimento de jogos.
 
-Com base nos estudos efetuados e na experiência adquirida elencamos os seguintes itens que serão abordados neste estudo.
+Com base nos estudos efetuados e na experiência adquirida elencamos os
+seguintes itens que serão abordados neste estudo.
 
 \begin{itemize}
 \item Performance
@@ -295,7 +298,6 @@ Com base nos estudos efetuados e na experiência adquirida elencamos os seguinte
 
 Elaborar uma lista de limitações e correlacionar os dados de acordo
 com as plataformas.
-
 
 %}}}
 
@@ -522,7 +524,7 @@ Existem mais de cem elementos no HTML5 \autocite{diveIntohtml}.
 É uma linguagem de folhas de estilo, criada por Håkon Wium Lie em
 1994, com intuito de definir a apresentação de páginas HTML.
 
->  Possibilitam ligação tardia *late biding*. Essa característica
+Possibilitam ligação tardia *late biding*. Essa característica
 é atrativa para os publicadores por dois motivos. Primeiramente pois
 permite o mesmo estilo em várias publicações, segundo pois os
 publicadores podem focar-se no conteúdo. Lie
@@ -536,18 +538,16 @@ tamanhos de tela, transformações 3D e animações.
 
 Os navegadores interpretam CSS através da tag ``<style>``.
 
-<!-- Cascading Style Sheets, PhD thesis, by Håkon Wium Lie – provides
-an authoritative historical reference of CSS pág. 23 -->
+%Cascading Style Sheets, PhD thesis, by Håkon Wium Lie – provides an authoritative historical reference of CSS pág. 23
 
-<!-- Muitos navegadores também suportam aceleração de GPU (Unidade de
+Muitos navegadores também suportam aceleração de GPU (Unidade de
 processamento gráfico) para elementos que tenham transformações 3D.
--->
 
 Flow de documento, ordem e posição em que os elementos tem que
 aparecer na página. Modelo de caixa o que encapsula o conteúdo em um
-elementos. -->
+elementos.
 
-<!-- falar do suporte a variáveis do CSS -->
+%falar do suporte a variáveis do CSS
 
 \subsection{Transições}
 
@@ -645,7 +645,7 @@ antes do tempo *ahead of time optimizations*. Entretanto, não é
 trivial escrever código em asm.js e geralmente a geração de código
 asm.js é feita através da transpilação de outras linhagens como C.
 
-> Muita da performance adicional em relação ao JavaScript é devido
+Muita da performance adicional em relação ao JavaScript é devido
 a consistência de tipo e a não existência de um coletor de lixo
 (memória é gerenciada manualmente através de um grande vetor). Esse
 modelo simples desprovido de comportamento dinâmico, sem alocação
@@ -656,7 +656,7 @@ abre espaço para otimizações.
 
 %}}}
 
-\section{DOCUMENT OBJECT MODEL (DOM)}
+\section{DOCUMENT OBJECT MODEL}
 %{{{
 É uma convenção que especifica como elementos HTML interegem.
 
@@ -1009,7 +1009,7 @@ Não é possível trocar o volume no IOS.
 Alguns navegadores favorecem formatos ogg (vorbis) e outros, como o
 Safari, favorecem o MP3.
 
-> O maior problema com as API's de áudio e de vídeo do HTML5 é
+O maior problema com as API's de áudio e de vídeo do HTML5 é
 a disputa entre os codecs dos navegadores. Por exemplo, Mozilla e
 Opera suportam Theora, já o Safari suporta H.264 que também é
 suportado pelo IE9. Ambos, Iphone e Android suportam H.264 em seus
@@ -1101,8 +1101,7 @@ Trabalhos que explorem os benefícios mercadológicos do HTML5 em comparação c
 EMACSCRIPT 7
 
 %}}}
-
-{\thispagestyle{myheadings}\printbibliography}
+\printbibliography[title=REFERÊNCIAS BIBLIOGRÁFICAS]
 
 \appendix
 
