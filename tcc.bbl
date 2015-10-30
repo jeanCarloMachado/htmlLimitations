@@ -30,7 +30,6 @@
   \strng{namehash}{BS1}
   \strng{fullhash}{BS1}
   \field{labelyear}{2014}
-  \field{sortinit}{B}
   \field{title}{The current state of cross-platform game development for
   different device types}
   \field{year}{2014}
@@ -57,7 +56,6 @@
   \strng{namehash}{GILAERCME1}
   \strng{fullhash}{GILAERCME1}
   \field{labelyear}{2014}
-  \field{sortinit}{G}
   \field{title}{The Benefits of Playing Video Games}
   \field{journaltitle}{Radbound University Nijmegen}
   \field{year}{2014}
@@ -74,7 +72,6 @@
   \strng{namehash}{JM1}
   \strng{fullhash}{JM1}
   \field{labelyear}{2014}
-  \field{sortinit}{J}
   \list{institution}{1}{%
     {Vrije Universiteit Amsterdam}%
   }
@@ -96,7 +93,6 @@
   \strng{namehash}{M1}
   \strng{fullhash}{M1}
   \field{labelyear}{2015}
-  \field{sortinit}{M}
   \field{title}{HTML}
   \verb{url}
   \verb https://developer.mozilla.org/en-US/docs/Web/HTML
@@ -115,7 +111,6 @@
   \strng{namehash}{VJM1}
   \strng{fullhash}{VJM1}
   \field{labelyear}{2014}
-  \field{sortinit}{V}
   \field{title}{On the development of Browser Games - Current Technologies and
   the Future}
   \field{year}{2014}
@@ -132,7 +127,6 @@
   \strng{namehash}{ZY1}
   \strng{fullhash}{ZY1}
   \field{labelyear}{2012}
-  \field{sortinit}{Z}
   \field{title}{Developing Effect of HTML5 Technology in Web Game}
   \field{journaltitle}{International Journal on Computational Sciences and
   Applications (IJCSA)}

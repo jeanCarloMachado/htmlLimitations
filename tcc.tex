@@ -38,7 +38,8 @@ right=2cm
 \usepackage{titlesec}
 \usepackage[final]{graphicx}
 \graphicspath{ {asset/} }
-\usepackage[style=authoryear,backend=bibtex,sorting=nty]{biblatex}
+%sort by alphabetic label, name, year, volume, title 
+\usepackage[style=authoryear,backend=bibtex,sorting=anyvt]{biblatex}
 \addbibresource{tcc.bib}
 \addto\captionsportuges{
 	\renewcommand{\contentsname}{\hspace*{\fill} SUMÁRIO\hspace*{\fill}}
@@ -72,6 +73,7 @@ right=2cm
 \renewcommand\cftloftitlefont{\normalfont\fontsize{14}{17}}
 %\renewcommand\cftfigfont{\normalfont\fontsize{10}{12}}
 %\renewcommand\cftfigpagefont{\normalfont\fontsize{10}{12}}
+
 
 %{{{ VARIABLES
 \title{\uppercase{Limitações do HTML5 \\ no desenvolvimento de jogos multiplataforma}}
@@ -1101,8 +1103,11 @@ Trabalhos que explorem os benefícios mercadológicos do HTML5 em comparação c
 EMACSCRIPT 7
 
 %}}}
-\printbibliography[title=REFERÊNCIAS BIBLIOGRÁFICAS]
 
+\clearpage
+\markboth{}{}
+\printbibliography[heading=bibintoc,title={REFERÊNCIAS BIBLIOGRÁFICAS}]
+\markboth{}{}
 \appendix
 
 %{{{

@@ -121,7 +121,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortscheme</bcf:key>
-      <bcf:value>nyt</bcf:value>
+      <bcf:value>anyvt</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
@@ -873,10 +873,13 @@
     <bcf:sort order="1">
       <bcf:sortitem order="1">presort</bcf:sortitem>
     </bcf:sort>
-    <bcf:sort order="2" final="1">
+    <bcf:sort order="2">
+      <bcf:sortitem order="1">labelalpha</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="3" final="1">
       <bcf:sortitem order="1">sortkey</bcf:sortitem>
     </bcf:sort>
-    <bcf:sort order="3">
+    <bcf:sort order="4">
       <bcf:sortitem order="1">sortname</bcf:sortitem>
       <bcf:sortitem order="2">author</bcf:sortitem>
       <bcf:sortitem order="3">editor</bcf:sortitem>
@@ -884,17 +887,17 @@
       <bcf:sortitem order="5">sorttitle</bcf:sortitem>
       <bcf:sortitem order="6">title</bcf:sortitem>
     </bcf:sort>
-    <bcf:sort order="4">
+    <bcf:sort order="5">
       <bcf:sortitem order="1">sortyear</bcf:sortitem>
       <bcf:sortitem order="2">year</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="5">
-      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="2">title</bcf:sortitem>
     </bcf:sort>
     <bcf:sort order="6">
       <bcf:sortitem order="1" pad_side="left" pad_width="4" pad_char="0">volume</bcf:sortitem>
       <bcf:sortitem order="2">0000</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="7">
+      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="2">title</bcf:sortitem>
     </bcf:sort>
   </bcf:sorting>
   <!-- DATA MODEL -->
@@ -2236,18 +2239,42 @@
     <bcf:datasource type="file" datatype="bibtex">tcc.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">gamebenefits</bcf:citekey>
-    <bcf:citekey order="2">mdn2015</bcf:citekey>
+    <bcf:citekey order="1">developingEffect</bcf:citekey>
+    <bcf:citekey order="2">HTML5CrossPlatformGameDevelopment</bcf:citekey>
+    <bcf:citekey order="3">browserGamesTechnologyAndFuture</bcf:citekey>
+    <bcf:citekey order="4">gamebenefits</bcf:citekey>
+    <bcf:citekey order="5">gamebenefits</bcf:citekey>
+    <bcf:citekey order="6">browserGamesTechnologyAndFuture</bcf:citekey>
+    <bcf:citekey order="7">mdn2015</bcf:citekey>
+    <bcf:citekey order="8">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="9">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="10">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="11">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="12">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="13">browserGamesTechnologyAndFuture</bcf:citekey>
+    <bcf:citekey order="14">browserGamesTechnologyAndFuture</bcf:citekey>
+    <bcf:citekey order="15">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="16">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="17">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="18">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="19">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="20">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="21">browserGamesTechnologyAndFuture</bcf:citekey>
+    <bcf:citekey order="22">currentStateCrossPlatform</bcf:citekey>
+    <bcf:citekey order="23">diveIntohtml</bcf:citekey>
   </bcf:section>
-  <bcf:sortlist section="0" name="nyt" type="entry" sortscheme="nyt">
+  <bcf:sortlist section="0" name="anyvt" type="entry" sortscheme="anyvt">
   <bcf:sorting>
     <bcf:sort order="1">
       <bcf:sortitem order="1">presort</bcf:sortitem>
     </bcf:sort>
-    <bcf:sort order="2" final="1">
+    <bcf:sort order="2">
+      <bcf:sortitem order="1">labelalpha</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="3" final="1">
       <bcf:sortitem order="1">sortkey</bcf:sortitem>
     </bcf:sort>
-    <bcf:sort order="3">
+    <bcf:sort order="4">
       <bcf:sortitem order="1">sortname</bcf:sortitem>
       <bcf:sortitem order="2">author</bcf:sortitem>
       <bcf:sortitem order="3">editor</bcf:sortitem>
@@ -2255,17 +2282,17 @@
       <bcf:sortitem order="5">sorttitle</bcf:sortitem>
       <bcf:sortitem order="6">title</bcf:sortitem>
     </bcf:sort>
-    <bcf:sort order="4">
+    <bcf:sort order="5">
       <bcf:sortitem order="1">sortyear</bcf:sortitem>
       <bcf:sortitem order="2">year</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="5">
-      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="2">title</bcf:sortitem>
     </bcf:sort>
     <bcf:sort order="6">
       <bcf:sortitem order="1" pad_side="left" pad_width="4" pad_char="0">volume</bcf:sortitem>
       <bcf:sortitem order="2">0000</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="7">
+      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="2">title</bcf:sortitem>
     </bcf:sort>
   </bcf:sorting>
   </bcf:sortlist>
