@@ -16,9 +16,6 @@
   {}
 \endgroup
 
-\entry{diveIntohtml}{book}{}
-\endentry
-
 \entry{currentStateCrossPlatform}{article}{}
   \name{author}{1}{}{%
     {{}%
@@ -33,6 +30,19 @@
   \field{title}{The current state of cross-platform game development for
   different device types}
   \field{year}{2014}
+\endentry
+
+\entry{htmlAndCssDucket}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Duckett}{D.}%
+     {Jon}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{DJ1}
+  \strng{fullhash}{DJ1}
+  \field{title}{HTML and CSS - Design and Build Websites}
 \endentry
 
 \entry{gamebenefits}{article}{}
@@ -82,6 +92,24 @@
   \field{year}{2014}
 \endentry
 
+\entry{indieGamesLemes}{thesis}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Lemes}{L.}%
+     {David de~Oliveira}{D.~d.~O.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{LDdO1}
+  \strng{fullhash}{LDdO1}
+  \field{labelyear}{2009}
+  \list{institution}{1}{%
+    {Pontifícia Universidade Católica de São Paulo}%
+  }
+  \field{type}{phdthesis}
+  \field{year}{2009}
+\endentry
+
 \entry{mdn2015}{online}{}
   \name{author}{1}{}{%
     {{}%
@@ -98,6 +126,19 @@
   \verb https://developer.mozilla.org/en-US/docs/Web/HTML
   \endverb
   \field{year}{2015}
+\endentry
+
+\entry{diveIntohtml}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Pilgrim}{P.}%
+     {Mark}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{PM1}
+  \strng{fullhash}{PM1}
+  \field{title}{Dive into HTML5}
 \endentry
 
 \entry{browserGamesTechnologyAndFuture}{article}{}
