@@ -74,6 +74,7 @@ right=2cm
 %\renewcommand\cftfigpagefont{\normalfont\fontsize{10}{12}}
 
 
+
 %{{{ VARIABLES
 \title{\uppercase{Limitações do HTML5 \\ no desenvolvimento de jogos multiplataforma}}
 \author{\uppercase{Jean Carlo Machado}}
@@ -679,11 +680,42 @@ A atual versão do DOM é a versão 3
 
 %}}}
 
+\section{RENDERIZAÇÃO}
+
+Renderização é parte fundamental de muitos jogos. As tecnologias atualmente existes são o SVG e Canvas.
+
+\subsection{SVG}
+%{{{
+SVG (\textit{Gráficos de vetores escaláveis}), é uma linguagem baseada em XML para marcar vetores bidimensionais e mapa de bits \autocite{html5mostwanted}.
+
+
+Entre os benefícos do SVG encontram-se:
+
+\begin{itemize}
+\item Não há diferença de qualidade em resoluções pois os vetores são escaláveis;
+\item Suporta animações nativamente;
+\item Conta com integração através da api do DOM. Tornando simples a integração com as outras tecnologias da web.
+\end{itemize}
+
+
+Abaixo segue um exemplo de um círculo em SVG.
+
+\begin{verbatim}
+
+<svg height="100" width="100">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3"/>
+  Sorry, your browser does not support inline SVG.
+</svg>
+
+\end{verbatim}
+
+%}}}
+
 \subsection{CANVAS}
 %{{{
 
-A tag \textit{canvas} define um layer gráfico em documentos HTML que pode
-ser desenhado através de JavaScript.
+A tag \textit{canvas} define uma camada de mapa de bits em documentos HTML que pode
+ser desenhada através de JavaScript.
 
 O canvas é um retângulo em uma página web onde pode-se usar JavaScript para desenhar qualquer coisa \autocite{diveIntohtml}.
 
@@ -700,6 +732,9 @@ CocoonJS é uma aplicativo híbrido que preenche a fraca implementação
 de OPENGL nos dispositivos móveis possibilitando se desenvolver em
 WEBGL.
 %}}}
+
+
+
 \section{WEBGL}
 %{{{
 Baseado no OpenGL.
@@ -997,19 +1032,19 @@ HTML5. Outros serviços utilitários como o C2DM do Google que está
 disponível para desenvolvedores Android para utilizar serviços de push
 também não estão disponíveis para o HTML5. (HASAN, 2012)
 
-1.  VERSÕES
+\subsection{VERSÕES}
 A grande maioria dos dispositivos atualmente no mercado utilizam
 obsoletas de seus softwares. Isso dificulta o desenvolvimento. Se a
 tecnologia de tradução para o navegador utilizar o a classe Webview do
 Android - como o Apache Cordova faz - as versões mais antigas podem ser
 penalizadas com problemas de performance ou falta de recursos.
 
-2. OFFLINE
+\subsection{OFFLINE}
 
 Refresh duplo para ver assets cacheados. Ver:
 http://buildnewgames.com/game-asset-management/
 
-3. AUDIO
+\subsection{AUDIO}
 Api de som quebra quando executado diversas vezes.
 Os navegadores variam na disponibilização de formatos aceitáveis
 Somente um áudio pode ser tocado no Navegador do Android
@@ -1024,7 +1059,12 @@ suportado pelo IE9. Ambos, Iphone e Android suportam H.264 em seus
 navegadores. A W3C recomenda OggVorbis e OggTheora para áudio e vídeo
 respectivamente. (HASAN et al, 2012)
 
-3. VIDEO
+\subsection{SVG}
+
+Segundo \cite{html5mostwanted} a grande desvantagem do SVG é que quão maior o documento mais lenta a renderização.
+
+\subsection{VIDEO}
+
 
 Codecs
 
