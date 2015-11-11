@@ -472,60 +472,80 @@ A tecnologia chave que inaugurou e alavancou este processo é o HTML.
 
 HTML (\textit{Hyper Text Markup Language}) é uma linguagem de marcação
 que define a estrutura semântica do conteúdo das páginas da
-web, criada por Tim Berners Lee e oficialmente mantida pela W3C.
+web. Criada por Tim Berners Lee em 1989 e oficialmente mantida pela W3C.
 
-A parte denominada: "Hyper Text", refere-se a links que conectam páginas umas as
-outras, fazendo a Web como conhecemos hoje \cite{mdn2015}.
+A parte denominada: "Hipertexto", refere-se a links que conectam páginas umas as
+outras, fazendo a Web como conhecemos hoje \autocite{mdn2015}.
 
-HTML foi especificado baseado-se em SGML (Standard Generalized Markup Language). Diferentemente de XML, HTML não pode ser decodificado através de geradores de tokens (\textit{tokenizers}) convencionais. 
+HTML foi especificado baseando-se no padrão SGML (Standard Generalized
+Markup Language).
 
-A impossibilidade de tradução via métodos convencionais, deve-se
-ao fato do HTML ser amigável com o programador, aceitando erros
-de sintaxe, dependente de contexto, buscando entregar a melhor
-aproximação possível. Essa limitação deu origem uma especificação
-própria de como renderizar HTML.
+Alguns benefícios do SGML são:
+\begin{itemize}
+    \item Documentos declaram estrutura, diferentemente de aparência - possibilitando otimizações nos ambientes de uso (tamanho de tela, etc);
+    \item  São portáveis devido a definição de tipo de documento (DTD);
+\end{itemize}
 
 A atual versão do HTML é o HTML5, desenvolvido como um trabalho em
 conjunto entre a WHATWG e a W3C. Seu rascunho foi proposto em 2008 e
-ratificado em 2014. O HTML5 introduziu elementos interativos que
+ratificado em 2014. Após 2011, a última chamada de revisão do HTML5,
+a WHATWG decidiu renomear o HTML5 para HTML \autocite{htmlIsTheNewHtml5}. Não obstante, o termo HTML5
+permanece em grande utilização.
+
+Antes de HTML5 várias versões foram propostas, algumas radicais em
+seus conceitos, como o XHTML4; o qual quebrava praticamente toda a compatibilidade
+com as versões anteriores do HTML.
+
+A maioria das versões HTML de grande sucesso foram versões de
+retrospectiva (\textit{"retro-specs"}). Versões que não tentavam idealizar a linguagem
+entrando em sincronia com os requerimentos do mercado enquanto em busca da direção correta \autocite{diveIntohtml}.
+
+Diferentemente de XML, HTML não pode ser decodificado
+através de \textit{tokenizers} convencionais.  Isso deve-se
+ao fato do HTML ser amigável com o programador, aceitando erros
+de sintaxe, dependente de contexto, buscando entregar a melhor
+aproximação possível. Esse "recurso" deu origem a uma especificação
+para renderizar HTML.
+
+
+Uma página HTML consiste de elementos que podem ter seu comportamento
+alterado através de atributos.
+
+Um elemento é o abrir fechar de uma tag e todo o conteúdo que dentro
+dele reside \autocite{htmlAndCssDucket}.%pg 20
+
+O HTML5 introduziu elementos interativos que
 viabilizaram a construção de jogos para a plataforma como: Canvas,
 áudio, vídeo.
 
-Antes de HTML5 várias versões foram propostas, algumas radicais em
-seus conceitos, como o XHTML4.
-
-A maioria das versões HTML de grande sucesso foram versões de
-retrospectiva (\textit{"retro-specs"}), entrando em sincronia com o
-mundo enquanto busca a direção correta \autocite{diveIntohtml}.
+Na versão inicial o HTML contava com 18 elementos.
+Atualmente existem mais de cem elementos no HTML5 \autocite{diveIntohtml}.
 
 Os criadores de navegadores constantemente introduziam
-elementos de apresentação com o *blink*, *<i>* itálico, *<b>* bold,
+elementos de apresentação com o blink, itálico, e bold,
 que eventualmente acabavam por serem inclusos na especificação. Foi
 somente nas últimas versões que elementos de apresentação voltaram
 a ser proibidos reforçando as propostas chave HTML como uma linguagem
 de conteúdo semântico, abrindo espaço para a expansão de outras
 tecnologias como o CSS para responder as demandas de apresentação.
 
+Visto que o HTML5 é uma especificação viva, nenhum navegador o
+suporta completamente. Cabe ao desenvolvedor detectar navegadores que
+não comportam as necessidades tecnológicas e prover uma alternativa
+ou ao menos notificar o usuário. Uma boa referência de recursos
+suportados pelos navegadores é o site http://caniuse.com/.
 
-Cada elemento HTML informa algo ao navegador sobre a informação que
-reside entre o abrir e fechar da tag \autocite{htmlAndCssDucket}.%pg24
-
-Um elemento é o abrir fechar de uma tag e todo o conteúdo que dentro
-dele reside \autocite{htmlAndCssDucket}.%pg 20
-
-O HTML5 é muitas vezes interpretado como um conceito guarda chuva para
-designar as tecnologias da web HTML, CSS3 e JavaScript.
-
-Existem mais de cem elementos no HTML5 \autocite{diveIntohtml}.
-
-%}}}
-
+Além da convencional linguagem de marcação; HTML5 ou "HTML5 e amigos"
+é muitas vezes interpretado como um conceito guarda chuva para designar
+as tecnologias da web HTML, CSS3 e JavaScript.
 
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{html5.jpg}
 	\caption{Suite HTML5}
 \end{figure}
+
+%}}}
 
 \section{CSS}
 %{{{
