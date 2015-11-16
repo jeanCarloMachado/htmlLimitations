@@ -27,6 +27,7 @@ right=2cm
 \usepackage{titling}
 \usepackage{fancyhdr}
 \usepackage{anyfontsize}
+\usepackage{indentfirst}
 
 \pagestyle{myheadings}
 %ovewrite plain to my headings style
@@ -472,10 +473,7 @@ A tecnologia chave que inaugurou e alavancou este processo é o HTML.
 
 HTML (\textit{Hyper Text Markup Language}) é uma linguagem de marcação
 que define a estrutura semântica do conteúdo das páginas da
-web. Criada por Tim Berners Lee em 1989 e oficialmente mantida pela W3C.
-
-A parte denominada: "Hipertexto", refere-se a links que conectam páginas umas as
-outras, fazendo a Web como conhecemos hoje \autocite{mdn2015}.
+web. Criada por Tim Berners Lee em 1989 e é oficialmente mantida pela W3C.
 
 HTML foi especificado baseando-se no padrão SGML (Standard Generalized
 Markup Language).
@@ -486,40 +484,43 @@ Alguns benefícios do SGML são:
     \item  São portáveis devido a definição de tipo de documento (DTD);
 \end{itemize}
 
+A parte denominada: "Hipertexto", refere-se a links que conectam páginas umas as
+outras, fazendo a Web como conhecemos hoje \autocite{mdn2015}.
+
 A atual versão do HTML é o HTML5, desenvolvido como um trabalho em
 conjunto entre a WHATWG e a W3C. Seu rascunho foi proposto em 2008 e
 ratificado em 2014. Após 2011, a última chamada de revisão do HTML5,
-a WHATWG decidiu renomear o HTML5 para HTML \autocite{htmlIsTheNewHtml5}. Não obstante, o termo HTML5
+a WHATWG decidiu renomear o HTML5 para HTML
+\autocite{htmlIsTheNewHtml5}. Não obstante, o termo HTML5
 permanece em grande utilização.
 
-Antes de HTML5 várias versões foram propostas, algumas radicais em
-seus conceitos, como o XHTML4; o qual quebrava praticamente toda a compatibilidade
-com as versões anteriores do HTML.
-
-A maioria das versões HTML de grande sucesso foram versões de
-retrospectiva (\textit{"retro-specs"}). Versões que não tentavam idealizar a linguagem
-entrando em sincronia com os requerimentos do mercado enquanto em busca da direção correta \autocite{diveIntohtml}.
+Antes de HTML5 várias versões foram propostas, algumas radicais
+em seus conceitos, como o XHTML4; o qual quebrava praticamente toda
+a compatibilidade com as versões anteriores do HTML. Entretanto,
+a maioria das versões HTML de grande sucesso foram versões de
+retrospectiva (\textit{"retro-specs"}). Versões que não tentavam
+idealizar a linguagem, entrando em sincronia com os requerimentos do
+mercado, enquanto em busca da direção correta \autocite{diveIntohtml}.
 
 Diferentemente de XML, HTML não pode ser decodificado
-através de \textit{tokenizers} convencionais.  Isso deve-se
+através meios convencionais, através de (tokenizers). Isso deve-se
 ao fato do HTML ser amigável com o programador, aceitando erros
 de sintaxe, dependente de contexto, buscando entregar a melhor
 aproximação possível. Esse "recurso" deu origem a uma especificação
 para renderizar HTML.
 
-
 Uma página HTML consiste de elementos que podem ter seu comportamento
 alterado através de atributos.
 
 Um elemento é o abrir fechar de uma tag e todo o conteúdo que dentro
-dele reside \autocite{htmlAndCssDucket}.%pg 20
+dele reside \autocite[pp. 10--11]{htmlAndCssDucket}.
 
-O HTML5 introduziu elementos interativos que
-viabilizaram a construção de jogos para a plataforma como: Canvas,
-áudio, vídeo.
 
 Na versão inicial o HTML contava com 18 elementos.
-Atualmente existem mais de cem elementos no HTML5 \autocite{diveIntohtml}.
+Atualmente existem mais de cem elementos no HTML5
+\autocite{diveIntohtml}. O HTML5 introduziu elementos interativos que
+viabilizaram a construção de jogos para a plataforma como: Canvas,
+áudio, vídeo.
 
 Os criadores de navegadores constantemente introduziam
 elementos de apresentação com o blink, itálico, e bold,
@@ -533,7 +534,8 @@ Visto que o HTML5 é uma especificação viva, nenhum navegador o
 suporta completamente. Cabe ao desenvolvedor detectar navegadores que
 não comportam as necessidades tecnológicas e prover uma alternativa
 ou ao menos notificar o usuário. Uma boa referência de recursos
-suportados pelos navegadores é o site http://caniuse.com/.
+suportados pelos navegadores é o site http://caniuse.com/. A biblioteca Modernizr
+é uma boa ferramenta para detectar suporte a recursos HTML nos navegadores.
 
 Além da convencional linguagem de marcação; HTML5 ou "HTML5 e amigos"
 é muitas vezes interpretado como um conceito guarda chuva para designar
@@ -735,22 +737,16 @@ Abaixo segue um exemplo de um círculo em SVG.
 %{{{
 
 A tag \textit{canvas} define uma camada de mapa de bits em documentos HTML que pode
-ser desenhada através de JavaScript.
+ser usada para criar diagramas, gráficos e animações 2D. Em um documento HTML, canvas é um retângulo onde pode-se usar JavaScript para desenhar \autocite{diveIntohtml}.
 
-O canvas é um retângulo em uma página web onde pode-se usar JavaScript para desenhar qualquer coisa \autocite{diveIntohtml}.
+Foi criada pela Apple em 2004 para renderizar elementos de interface no Webkit, logo foi adotado por outros navegadores e se tornou um padrão. A API canvas cresceu com o tempo, e algumas funcionalidades (como suporte a texto), foram adicionadas tardiamente. E alguns navegadores lançaram antes da especificação estar completa e hoje tem problema de suporte para essas áreas \autocite{diveIntohtml}. Apesar de muitas vezes incompetlo, o canvas é suportado em todos os maiores navegadores à partir do Internet Explorer 9.
 
-A API canvas cresceu com o tempo, e algumas funciondades (como texto), foram adicionadas tardiamente. E alguns navegadores lançaram antes da especificação estar completa \autocite{diveIntohtml}.
+O canvas tem dois tamanhos, o tamanho do elemento e da superfície de desenho. Quando o tamanho do elemento é maior do que o da superfície de desenho do documento escala a superfície de desenho para preencher o elemento, o que pode gerar resultados inesperados.
+
+Canvas ainda sofre de problemas de performance.
+O FastCanvas é uma iniciativa híbrida para Android que busca mitigar os problemas de performance  do Canvas com uma API nativa. Não obstante, o FastCanvas não suporta a especificação do canvas completamente, não permite ser integrado com outros elementos do DOM.
 
 
-Permite desenhar diagramas, gráficos e animações [7]. É baseado em
-bitmap.
-
-Muitas vezes lento. Algumas soluções híbridas buscam arrumar isso através da
-utilização de GPU Apache Cordova utiliza o FastCanvas.
-
-CocoonJS é uma aplicativo híbrido que preenche a fraca implementação
-de OPENGL nos dispositivos móveis possibilitando se desenvolver em
-WEBGL.
 %}}}
 
 
@@ -765,6 +761,9 @@ especificada e a dificuldade e escopo do projeto aumentariam muito se
 tivessem de incluir um jogos 3D. Versão da especificação atual?
 %}}}
 
+CocoonJS é uma aplicativo híbrido que preenche a fraca implementação
+de OPENGL nos dispositivos móveis possibilitando se desenvolver em
+WEBGL.
 \section{Codecs}
 
 Para falar sobre audio e vídeo precisamos primeiramente introduzir o conceito de codecs.
