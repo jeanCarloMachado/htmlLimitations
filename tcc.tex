@@ -757,11 +757,18 @@ elemento, o que pode gerar resultados inesperados.
 Apesar de ser largamente suportado nos navegadores atuais, canvas ainda
 sofre de problemas de performance. Para navegadores antigos - abaixo do
 Internet Explorer 9 - existe a biblioteca Explorer Canvas do Google, que
-emula em Javascript as funcionalidades do canvas. O FastCanvas é uma
+emula em JavaScript as funcionalidades do canvas. O FastCanvas é uma
 iniciativa híbrida para Android que busca mitigar os problemas de
 performance do Canvas com uma API nativa. Não obstante, o FastCanvas
 não suporta a especificação do canvas completamente, não permite ser
 integrado com outros elementos do DOM.
+
+Algumas outras fraquezas do canvas são:
+\begin{itemize}
+\itemize{Não há suporte a animações}
+\itemize{Não é possível alterar uma parte já desenhada a não ser sobrescrevendo ou pintando o canvas novamente}
+\itemize{Por ser um vetor de pixeis não existe possibilidade de utilização do DOM nem seus eventos, limitado muito a iteratividade}
+\end{itemize}
 
 O canvas até aqui descrito trata-se de sua forma, ou contexto 2D. A
 especificação 3D do canvas é o WebGl.
