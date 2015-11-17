@@ -552,19 +552,33 @@ as tecnologias da web HTML, CSS3 e JavaScript.
 \section{CSS}
 %{{{
 
-CSS é uma linguagem de folhas de estilo, criada por Håkon Wium Lie em
+CSS (\textit{Cascading Style Sheets}) é uma linguagem de folhas de estilo, criada por Håkon Wium Lie em
 1994, com intuito de definir a apresentação de páginas HTML.
 
 Segundo \cite[pp. 23--24]{CascadingStyleSheets}:
 \begin{quote}
-Possibilita a ligação tardia *late biding* com páginas HTML. Essa característica
+Possibilita a ligação tardia (\textit{late biding}) com páginas HTML. Essa característica
 é atrativa para os publicadores por dois motivos. Primeiramente pois
 permite o mesmo estilo em várias publicações, segundo pois os
 publicadores podem focar-se no conteúdo.
 \end{quote}
 
+Antes do CSS o estilo das páginas era incluso dentro do HTML. Isso era
+negativo pois forçava que mudanças tivessem que ser replicadas em
+todas suas ocorrências, e não permitia apresentações diferenciadas
+para diferentes tipos de dispositivos. Com CSS também é possível o 
+usuário declarar suas folhas de estilo e alterar a visualização das páginas
+que está vendo, um recurso importante para acessibilidade.
+
 O CSS é dividido em módulos, contendo aproximadamente 50 deles, cada
 qual evoluindo separadamente.
+
+CSS é formado por um conjunto de regras, que por sua vez são compostas por seletores e
+blocos de declaração. Os elementos selecionados são denominados o assunto do seletor \autocite{cssSelectors}.
+
+Seletores tem o intuito de definir quais partes do documento HTML serão afetadas por
+determinado bloco de declaração.
+
 
 Sua última versão, o CSS3, introduziu várias funcionalidades
 relevantes para jogos, como \textit{media-queries}: possibilitam regras para

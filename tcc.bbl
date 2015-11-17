@@ -239,6 +239,12 @@
   \field{title}{Dive into HTML5}
 \endentry
 
+\entry{cssSelectors}{misc}{}
+  \field{howpublished}{Available at
+  \url{http://www.w3.org/TR/CSS21/selector.html} (2015/11/17)}
+  \field{title}{Selectors}
+\endentry
+
 \entry{browserGamesTechnologyAndFuture}{article}{}
   \name{author}{1}{}{%
     {{}%
