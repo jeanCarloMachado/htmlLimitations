@@ -75,6 +75,14 @@ right=2cm
 %\renewcommand\cftfigpagefont{\normalfont\fontsize{10}{12}}
 
 
+\DefineBibliographyStrings{portuguese}{%
+%  backrefpage = {<newtext>},
+%  backrefpages= {<newtext>},
+  urlseen = {Disponível em},
+  url = {Disponível em}
+}
+\DeclareFieldFormat{url}{\bibstring{url}\space\url{#1}}
+\DeclareFieldFormat{urlseen}{\bibstring{urlseen}\space\url{#1}}
 
 %{{{ VARIABLES
 \title{\uppercase{Limitações do HTML5 \\ no desenvolvimento de jogos multiplataforma}}
@@ -549,19 +557,27 @@ as tecnologias da web HTML, CSS3 e JavaScript.
 
 %}}}
 
+\section{DOCUMENT OBJECT MODEL}
+%{{{
+É uma convenção que especifica como elementos HTML interegem.
+
+A primeira versão do DOM, (DOM Legacy) foi parcialmente especificada no HTML4.
+
+O DOM é também uma forma de manter estado em páginas HTML.
+
+Os navegadores contam com as engines de layout para parsear HTML em DOM.
+
+A atual versão do DOM é a versão 3
+%}}}
+
 \section{CSS}
 %{{{
 
 CSS (\textit{Cascading Style Sheets}) é uma linguagem de folhas de estilo, criada por Håkon Wium Lie em
 1994, com intuito de definir a apresentação de páginas HTML.
 
-Segundo \cite[pp. 23--24]{CascadingStyleSheets}:
-\begin{quote}
-Possibilita a ligação tardia (\textit{late biding}) com páginas HTML. Essa característica
-é atrativa para os publicadores por dois motivos. Primeiramente pois
-permite o mesmo estilo em várias publicações, segundo pois os
-publicadores podem focar-se no conteúdo.
-\end{quote}
+
+O termo Cascading refere-se ao fato de regras serem herdadas pelos filhos de um elemento.
 
 Antes do CSS o estilo das páginas era incluso dentro do HTML. Isso era
 negativo pois forçava que mudanças tivessem que ser replicadas em
@@ -569,6 +585,15 @@ todas suas ocorrências, e não permitia apresentações diferenciadas
 para diferentes tipos de dispositivos. Com CSS também é possível o 
 usuário declarar suas folhas de estilo e alterar a visualização das páginas
 que está vendo, um recurso importante para acessibilidade.
+
+Segundo \cite[pp. 23--24]{CascadingStyleSheets}:
+\begin{quote}
+CSS possibilita a ligação tardia (\textit{late biding}) com páginas HTML. Essa característica
+é atrativa para os publicadores por dois motivos. Primeiramente pois
+permite o mesmo estilo em várias publicações, segundo pois os
+publicadores podem focar-se no conteúdo.
+\end{quote}
+
 
 O CSS é dividido em módulos, contendo aproximadamente 50 deles, cada
 qual evoluindo separadamente.
@@ -702,20 +727,6 @@ abre espaço para otimizações.
 
 %}}}
 
-\section{DOCUMENT OBJECT MODEL}
-%{{{
-É uma convenção que especifica como elementos HTML interegem.
-
-A primeira versão do DOM, (DOM Legacy) foi parcialmente especificada no HTML4.
-
-O DOM é também uma forma de manter estado em páginas HTML.
-
-Os navegadores contam com as engines de layout para parsear HTML em DOM.
-
-A atual versão do DOM é a versão 3    
-
-
-%}}}
 
 \section{RENDERIZAÇÃO}
 
