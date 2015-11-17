@@ -191,6 +191,23 @@
   \field{year}{2009}
 \endentry
 
+\entry{CascadingStyleSheets}{thesis}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Lie}{L.}%
+     {Håkon~Wium}{H.~W.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{LHW1}
+  \strng{fullhash}{LHW1}
+  \field{title}{Cascading Style Sheets}
+  \field{type}{phdthesis}
+  \field{annotation}{%
+  provides an authoritative historical reference of CSS pág. 23%
+  }
+\endentry
+
 \entry{mdn2015}{online}{}
   \name{author}{1}{}{%
     {{}%
