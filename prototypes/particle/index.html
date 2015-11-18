@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Foo</title>
+	<style>
+	body {
+		background-color: black;
+	}
+	canvas {
+		background-color: gray;
+		width:800px;
+		height:600px;
+	}
+	</style>
+</head>
+<body>
+<canvas id="screen"></canvas>
+<script>
+var DEBUG = true;
+var PARTICLE_SIZE =  3;
+var canvas;
+var canvasWidth = 200;
+var canvasHeight = 100;
+var context;
+canvas = document.getElementById('screen');
+context = canvas.getContext('2d');
+
+function notNaN(obj, name) {
+	var key = '__' + name;
+	obj.__defineGetter__(name, function() {
+		return this[key];
+	});
+	obj.__defineSetter__(name, function(v) {
+		if(typeof v !== 'number' || isNAN(v)) {
+			throw new TypeError(name + ' isNAN');
+		}
+		this[key] = v;
+	});
+}
+
+function Vec2(x, y) {
+	this.x = x;
+	this.y = y;
+}
+
+if (DEBUG) {
+	notNaN(Vec2.prototype, 'x');
+	notNaN(Vec2.prototype, 'y');
+}
+
+Vec2.prototype = {
+	muls: function(n) { return new Vec2(this.x*n, this.y*n); },
+	imuls: function(n) { this.x*=n, this.y*=n; return this; },
+
+	mul: function(v) { return new Vec2(this.x*v.x, this.y*v.y); },
+	imul: function(v) { this.x*=v.x, this.y*=v.y; return this; },
+
+	divs: function(n) { return new Vec2(this.x/n, this.y/n); },
+	div: function(v) { return new Vec2(this.x/v.x, this.y/v.y); },
+
+	adds: function(n) { return new Vec2(this.x+n, this.y+n); },
+	iadds: function(s) { this.x+=s, this.y+s; return this; },
+
+	add: function(v) { return new Vec2(this.x+v.x, this.y+v.y); },
+	iadd: function(v) { this.x+=v.x, this.y+=v.y; return this; },
+
+	subs: function(n) { return new Vec2(this.x-n, this.y-n); },
+	isubs: function(s) { this.x-=s, this.y-=s; return this; },
+
+	sub: function(v) { return new Vec2(this.x-v.x, this.y-v.y); },
+	isub: function(v) { this.x-=v.x, this.y-=v.y; return this; },
+
+	set: function(x, y) {this.x = x; this.y = y;}
+}
+
+function Particle(position, velocity) {
+	this.position = position;
+	this.velocity = velocity;
+}
+
+Particle.prototype = {
+	update: function(td) {
+		this.position.iadd(this.velocity.muls(td));
+	}
+}
+
+function fuzzy(range, base){
+	return (base||0) + (Math.random()-0.5)*range*2;
+}
+
+function choice(array) {
+	return array[Math.floor(Math.random()*array.length)];
+}
+
+function gravity(particle, td) {
+	particle.velocity.y += 10*td;
+}
+
+function samecharge(particle, td) {
+	 if (particle.position.y > 1.5) {
+	 	 particle.velocity.y-=particle.velocity.y*1.1;
+	 	 particle.position.y-=particle.position.y*1.1;
+	 	 flag=1;
+	 	 return;
+	 }
+
+	 <!-- if (particle.position.y < 0.2) { -->
+	 <!-- 	 particle.velocity.y+=particle.velocity.y*1.1; -->
+	 <!-- 	 particle.position.y+=particle.position.y*1.1; -->
+	 <!-- 	 return; -->
+	<!-- } -->
+}
+
+function renderCanvasImage(ctx, particles) {
+	var radius = PARTICLE_SIZE / 2;
+	for (var i=0; i < particles.length; i ++) {
+		var particle = particles[i];
+		ctx.save();
+		ctx.translate(particle.position.x, particle.position.y);
+		context.beginPath();
+		context.arc(radius, radius, radius, 0, Math.PI * 2);
+		context.closePath();
+		context.fill();
+	}
+}
+
+var position = new Vec2(0, 0),
+velocity = new Vec2(1, 1),
+particle = new Particle(position, velocity);
+var start = null;
+function step(timestamp){
+	if (!start) start = timestamp;
+	var td = 1.0/60;
+    //canvas.width = canvasWidth;
+    //canvas.height = canvasHeight;
+	samecharge(particle, td);
+	console.log(particle);
+	particle.update(td);
+	renderCanvasImage(context, [particle])
+	window.requestAnimationFrame(step);
+}
+
+window.requestAnimationFrame(step);
+
+</script>
+</body>
+</html>
+
