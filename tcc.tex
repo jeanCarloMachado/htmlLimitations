@@ -483,13 +483,13 @@ HTML (\textit{Hyper Text Markup Language}) é uma linguagem de marcação
 que define a estrutura semântica do conteúdo das páginas da
 web. Criada por Tim Berners Lee em 1989 e é oficialmente mantida pela W3C.
 
-HTML foi especificado baseando-se no padrão SGML (Standard Generalized
-Markup Language).
+HTML foi especificado baseando-se no padrão SGML (\textit{Standard Generalized
+Markup Language}).
 
 Alguns benefícios do SGML são:
 \begin{itemize}
     \item Documentos declaram estrutura, diferentemente de aparência - possibilitando otimizações nos ambientes de uso (tamanho de tela, etc);
-    \item  São portáveis devido a definição de tipo de documento (DTD);
+    \item  São portáveis devido a definição de tipo de documento (\textit{document type declaration});
 \end{itemize}
 
 A parte denominada: "Hipertexto", refere-se a links que conectam páginas umas as
@@ -504,18 +504,18 @@ permanece em grande utilização.
 
 Antes de HTML5 várias versões foram propostas, algumas radicais
 em seus conceitos, como o XHTML4; o qual quebrava praticamente toda
-a compatibilidade com as versões anteriores do HTML. Entretanto,
+a compatibilidade com as versões anteriores do HTML. Não obstante,
 a maioria das versões HTML de grande sucesso foram versões de
 retrospectiva (\textit{"retro-specs"}). Versões que não tentavam
-idealizar a linguagem, entrando em sincronia com os requerimentos do
-mercado, enquanto em busca da direção correta \autocite{diveIntohtml}.
+idealizar a linguagem, buscando sincronizar-se com os requerimentos do
+mercado \autocite{diveIntohtml}.
 
 Diferentemente de XML, HTML não pode ser decodificado
-através meios convencionais, através de (tokenizers). Isso deve-se
-ao fato do HTML ser amigável com o programador, aceitando erros
+através de tokenização tradicional. Deve-se
+ao HTML ser amigável ao programador, aceitando erros
 de sintaxe, dependente de contexto, buscando entregar a melhor
-aproximação possível. Esse "recurso" deu origem a uma especificação
-para renderizar HTML.
+aproximação possível. Esta característica deu origem a uma especificação
+para renderizar HTML (\textit{HTML parser}).
 
 Uma página HTML consiste de elementos que podem ter seu comportamento
 alterado através de atributos.
@@ -523,12 +523,26 @@ alterado através de atributos.
 Um elemento é o abrir fechar de uma tag e todo o conteúdo que dentro
 dele reside \autocite[pp. 10--11]{htmlAndCssDucket}.
 
+\begin{figure}
+\centering
+\begin{verbatim}
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+</body>
+</html>
+\end{verbatim}
+\caption{Exemplo de documento HTML5}
+\end{figure}
 
-Na versão inicial o HTML contava com 18 elementos.
-Atualmente existem mais de cem elementos no HTML5
-\autocite{diveIntohtml}. O HTML5 introduziu elementos interativos que
-viabilizaram a construção de jogos para a plataforma como: Canvas,
-áudio, vídeo.
+Na sua versão inicial, o HTML contava com 18 elementos;
+atualmente existem mais de cem \autocite{diveIntohtml}.
+Não obstante, foi no HTML5 que a maior parte dos elementos
+que viabilizam a construção de jogos foram adicionados.
 
 Os criadores de navegadores constantemente introduziam
 elementos de apresentação com o blink, itálico, e bold,
@@ -554,7 +568,6 @@ as tecnologias da web HTML, CSS3 e JavaScript.
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{html5.jpg}
 	\caption{Suite HTML5}
 \end{figure}
-
 %}}}
 
 \section{DOCUMENT OBJECT MODEL}
@@ -623,7 +636,7 @@ elementos.
 %colocar uma imagem dos níveis do CSS
 
 %falar do suporte a variáveis do CSS
-
+jkk
 \subsection{Transições}
 
 É uma forma de adicionar animações de um estado para outro, em uma página web.
@@ -750,8 +763,8 @@ Entre os benefícos do SVG encontram-se:
 \end{itemize}
 
 
-Abaixo segue um exemplo de um círculo em SVG.
-
+\begin{figure}
+\centering
 \begin{verbatim}
 
 <svg height="100" width="100">
@@ -760,7 +773,8 @@ Abaixo segue um exemplo de um círculo em SVG.
 </svg>
 
 \end{verbatim}
-
+\caption{Círculo em SVG.}
+\end{figure}
 %}}}
 
 \subsection{CANVAS}
