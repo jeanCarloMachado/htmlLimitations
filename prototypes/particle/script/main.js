@@ -1,5 +1,5 @@
 var DEBUG = true;
-var PARTICLE_SIZE =  10;
+var PARTICLE_SIZE =  5;
 var canvas;
 var context;
 canvas = document.getElementById('screen');
@@ -64,7 +64,7 @@ Particle.prototype = {
         if (this.position.x > canvasWidth
             || this.position.y > canvasHeight 
            ) {
-               this.position.set(200, 00);
+               this.position.set(Math.random()*canvasWidth, Math.random()*canvasHeight);
                return;
            }
 
@@ -82,11 +82,10 @@ function choice(array) {
 	return array[Math.floor(Math.random()*array.length)];
 }
 
-function gravity(particle, td) {
-	particle.velocity.y += 10*td;
+function gravity(particle, td) { particle.velocity.y += 10*td;
 }
 
-function renderCanvasImage(ctx, particles) {
+function renderCanvasImage(context, particles) {
 	var radius = PARTICLE_SIZE / 2;
 	//console.log("Particles to render: "+particles.length);
 	for (var i=0; i < particles.length; i ++) {
@@ -97,7 +96,7 @@ function renderCanvasImage(ctx, particles) {
 		context.arc(particle.position.x, particle.position.y, radius, 0, Math.PI * 2, false);
 		context.closePath();
 		context.fill();
-		context.stroke();
+        context.fillStyle="#FF0000";
 	}
 }
 
@@ -108,9 +107,11 @@ function ParticleSystem(){
 
 ParticleSystem.prototype = {
     update: function(td) {
-        for (var i =0; i < this.particles.length; i++) {
+        var particlesLen = this.particles.length;
+        for (var i =0; i < particlesLen; i++) {
             var particle = this.particles[i];
-            for (var j = 0; j < this.forces.length; j++) {
+            var forcesLen = this.forces.length;
+            for (var j = 0; j < forcesLen; j++) {
                 var force = this.forces[j];
                 force(particle, td);
             }
@@ -126,7 +127,7 @@ function emit(system) {
 	    canvasWidth*Math.random()
 	);
 	for (var i = 0; i < 1; i++) {
-		var particle =  new Particle(position, new Vec2(fuzzy(5), fuzzy(5)));
+		var particle =  new Particle(position, new Vec2(fuzzy(50), fuzzy(50)));
 		system.particles.push(particle);
 		//console.log(particle);
 	}
@@ -134,7 +135,7 @@ function emit(system) {
 
 var counter = 0;
 function step(timestamp){
-	if (Math.random() < 0.30 && counter < 5000) {
+	if (Math.random() < 1.00 && counter < 50000) {
 	    //console.log('emitting');
 		emit(system);
 		counter++;

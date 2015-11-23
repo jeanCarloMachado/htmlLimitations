@@ -479,9 +479,13 @@ A tecnologia chave que inaugurou e alavancou este processo é o HTML.
 \section{HTML}
 %{{{
 
-HTML (\textit{Hyper Text Markup Language}) é uma linguagem de marcação
-que define a estrutura semântica do conteúdo das páginas da
-web. Criada por Tim Berners Lee em 1989 e é oficialmente mantida pela W3C.
+HTML (\textit{Hyper Text Markup Language}) é uma linguagem de
+marcação que define a estrutura semântica do conteúdo das páginas
+da web. Criada por Tim Berners Lee em 1989 e é oficialmente mantida
+pela W3C. A parte denominada: "Hipertexto", refere-se a links que
+conectam páginas umas as outras, fazendo a Web como conhecemos hoje
+\autocite{mdn2015}.
+
 
 HTML foi especificado baseando-se no padrão SGML (\textit{Standard Generalized
 Markup Language}).
@@ -492,8 +496,14 @@ Alguns benefícios do SGML são:
     \item  São portáveis devido a definição de tipo de documento (\textit{document type declaration});
 \end{itemize}
 
-A parte denominada: "Hipertexto", refere-se a links que conectam páginas umas as
-outras, fazendo a Web como conhecemos hoje \autocite{mdn2015}.
+Apesar de o SGML negar a definição de aparência, os criadores de
+navegadores constantemente introduziam elementos de apresentação com o
+blink, itálico, e bold, que eventualmente acabavam por serem inclusos
+na especificação. Foi somente nas últimas versões que elementos de
+apresentação voltaram a ser proibidos reforçando as propostas chave
+HTML como uma linguagem de conteúdo semântico, abrindo espaço para a
+expansão de outras tecnologias como o CSS para responder as demandas de
+apresentação.
 
 A atual versão do HTML é o HTML5, desenvolvido como um trabalho em
 conjunto entre a WHATWG e a W3C. Seu rascunho foi proposto em 2008 e
@@ -501,6 +511,7 @@ ratificado em 2014. Após 2011, a última chamada de revisão do HTML5,
 a WHATWG decidiu renomear o HTML5 para HTML
 \autocite{htmlIsTheNewHtml5}. Não obstante, o termo HTML5
 permanece em grande utilização.
+
 
 Antes de HTML5 várias versões foram propostas, algumas radicais
 em seus conceitos, como o XHTML4; o qual quebrava praticamente toda
@@ -510,17 +521,8 @@ retrospectiva (\textit{"retro-specs"}). Versões que não tentavam
 idealizar a linguagem, buscando sincronizar-se com os requerimentos do
 mercado \autocite{diveIntohtml}.
 
-Diferentemente de XML, HTML não pode ser decodificado
-através de tokenização tradicional. Deve-se
-ao HTML ser amigável ao programador, aceitando erros
-de sintaxe, dependente de contexto, buscando entregar a melhor
-aproximação possível. Esta característica deu origem a uma especificação
-para renderizar HTML (\textit{HTML parser}).
-
 Uma página HTML consiste de elementos que podem ter seu comportamento
-alterado através de atributos.
-
-Um elemento é o abrir fechar de uma tag e todo o conteúdo que dentro
+alterado através de atributos. Um elemento é o abrir fechar de uma tag e todo o conteúdo que dentro
 dele reside \autocite[pp. 10--11]{htmlAndCssDucket}. Na figura \ref{fig:htmlSample}
 é demonstrado vários exemplos de tags, como a tag \textit{body}.
 
@@ -546,13 +548,11 @@ atualmente existem mais de cem \autocite{diveIntohtml}.
 Não obstante, foi no HTML5 que a maior parte dos elementos
 que viabilizam a construção de jogos foram adicionados.
 
-Os criadores de navegadores constantemente introduziam
-elementos de apresentação com o blink, itálico, e bold,
-que eventualmente acabavam por serem inclusos na especificação. Foi
-somente nas últimas versões que elementos de apresentação voltaram
-a ser proibidos reforçando as propostas chave HTML como uma linguagem
-de conteúdo semântico, abrindo espaço para a expansão de outras
-tecnologias como o CSS para responder as demandas de apresentação.
+Diferentemente de XML, HTML não pode ser decodificado através de
+tokenização tradicional. Deve-se ao HTML ser amigável ao programador,
+aceitando erros de sintaxe, dependente de contexto, buscando entregar a
+melhor aproximação possível. Esta característica deu origem a uma
+especificação para renderizar HTML (\textit{HTML parser}).
 
 Visto que o HTML5 é uma especificação viva, nenhum navegador o
 suporta completamente. Cabe ao desenvolvedor detectar navegadores que
@@ -588,16 +588,16 @@ A atual versão do DOM é a versão 3
 \section{CSS}
 %{{{
 
-CSS (\textit{Cascading Style Sheets}) é uma linguagem de folhas de estilo, criada por Håkon Wium Lie em
-1994, com intuito de definir a apresentação de páginas HTML.
+CSS (\textit{Cascading Style Sheets}) é uma linguagem de folhas de
+estilo, criada por Håkon Wium Lie em 1994, com intuito de definir a
+apresentação de páginas HTML. O termo Cascading refere-se ao fato de
+regras serem herdadas pelos filhos de um elemento, eliminando
+grande parcela de duplicação de regras.
 
-
-O termo Cascading refere-se ao fato de regras serem herdadas pelos filhos de um elemento.
-
-Antes do CSS o estilo das páginas era incluso dentro do HTML. Isso era
+Antes do CSS a estilização das páginas era inclusa dentro do HTML. Isso era
 negativo pois forçava que mudanças tivessem que ser replicadas em
 todas suas ocorrências, e não permitia apresentações diferenciadas
-para diferentes tipos de dispositivos. Com CSS também é possível o 
+para diferentes tipos de dispositivos. Com CSS também é possível o
 usuário declarar suas folhas de estilo e alterar a visualização das páginas
 que está vendo, um recurso importante para acessibilidade.
 
@@ -610,19 +610,18 @@ publicadores podem focar-se no conteúdo.
 \end{quote}
 
 
-O CSS é dividido em módulos, contendo aproximadamente 50 deles, cada
-qual evoluindo separadamente.
-
-CSS é formado por um conjunto de regras, que por sua vez são compostas por seletores e
-blocos de declaração. Os elementos selecionados são denominados o assunto do seletor \autocite{cssSelectors}.
-
-Seletores tem o intuito de definir quais partes do documento HTML serão afetadas por
+CSS é formado por um conjunto de regras, que são agrupadas
+por seletores em blocos de declaração. Os elementos selecionados são
+denominados o assunto do seletor \autocite{cssSelectors}. Seletores tem
+o intuito de definir quais partes do documento HTML serão afetadas por
 determinado bloco de declaração.
-
 
 Sua última versão, o CSS3, introduziu várias funcionalidades
 relevantes para jogos, como \textit{media-queries}: possibilitam regras para
 tamanhos de tela, transformações 3D e animações.
+
+O CSS é dividido em módulos, contendo aproximadamente 50 deles, cada
+qual evoluindo separadamente.
 
 Os navegadores interpretam CSS através da tag \textit{style}.
 
@@ -638,7 +637,6 @@ elementos.
 %colocar uma imagem dos níveis do CSS
 
 %falar do suporte a variáveis do CSS
-jkk
 \subsection{Transições}
 
 É uma forma de adicionar animações de um estado para outro, em uma página web.
@@ -746,7 +744,6 @@ abre espaço para otimizações.
 
 %}}}
 
-
 \section{RENDERIZAÇÃO}
 
 Renderização é parte fundamental de muitos jogos. As tecnologias atualmente existes são o SVG e Canvas.
@@ -779,7 +776,7 @@ Entre os benefícios do SVG encontram-se:
 %}}}
 
 \subsection{CANVAS}
-%{{
+%%{{{
 
 A tag \textit{canvas} define uma camada de mapa de bits em documentos
 HTML que pode ser usada para criar diagramas, gráficos e animações
@@ -819,7 +816,6 @@ O canvas até aqui descrito trata-se de sua forma, ou contexto 2D. A
 especificação 3D do canvas é o WebGl.
 
 %}}}
-
 
 \section{WEBGL}
 %{{{
@@ -946,7 +942,6 @@ biblioteca, este gera uma lista de booleanos sobre grande variedade dos
 recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e
 local storage.
 
-
 \subsection{DISPONIBILIZAÇÃO DA APLICAÇÃO}
 
 Links com manifestos
@@ -956,7 +951,6 @@ Links com manifestos
 Este método é benéfico pois possibilita ao usuário a mesma
 experiência ao adquirir uma aplicação normal. Este tipo de
 aplicação é comummente referido como "híbrido".
-
 
 \section{ANDROID}
 %{{{
@@ -1001,17 +995,8 @@ Para transformar as instruções retornadas pelo servidor em algo útil
 para o usuário final os navegadores geralmente fazem uso de bibliotecas
 externas capazes de interpretar HTML5 e gerar o conteúdo iterativo.
 
-\subsection{BIBLIOTECAS WEB}
 
-O Google Chrome utilizá o Webkit para renderizar seu conteúdo HTML5. O
-webkit foi criado pela Apple baseando-se no motor de renderização do
-Konkeror do projeto KDE. Safari e Opera também fazem uso do Webkit. V8
-para JavaScript.
-
-O motor de renderização do HTML5 do Firefox é o XXX. O motor de
-JavaScript é o.
-
-\section{ TRABALHOS SIMILARES}
+\section{TRABALHOS SIMILARES}
 
 (Referência 2) Faz uma revisão de aspectos do HTML5 através da
 construção de um jogo. O autor foca muito nos aspectos de criação
@@ -1019,11 +1004,9 @@ de jogos e feedback do desenvolvimento. Troca de tecnologias e não
 especificamente nas limitações conforme o meu trabalho. Em outras
 palavras seu escopo é mais genérico e não tão preciso quanto este
 
-
 %}}}
 
 \section{O JOGO}
-
 Finalizada a revisão bibliográfica será descrito os detalhes da implementação do jogo.
 
 Devido ao fato deste trabalho explorar as limitações dos jogos em
@@ -1387,4 +1370,15 @@ que no tempo desta pesquisa não estava funcionando; e se gere o APK
 para o Android nativamente.
 
 %}}}
+
+\subsection{BIBLIOTECAS WEB}
+
+O Google Chrome utilizá o Webkit para renderizar seu conteúdo HTML5. O
+webkit foi criado pela Apple baseando-se no motor de renderização do
+Konkeror do projeto KDE. Safari e Opera também fazem uso do Webkit. V8
+para JavaScript.
+
+O motor de renderização do HTML5 do Firefox é o XXX. O motor de
+JavaScript é o.
+
 \end{document}
