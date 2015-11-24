@@ -72,6 +72,40 @@
   \field{year}{2014}
 \endentry
 
+\entry{html5Tradeoffs}{article}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Hasan}{H.}%
+     {Yousuf}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zaidi}{Z.}%
+     {Mustafa}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {3~Haider}{.~H.}%
+     {Najmi}{N.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {W.U.Hasan}{W.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {I.Amin}{I.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HY+1}
+  \strng{fullhash}{HYZMHNWI1}
+  \field{title}{Smart Phones Application development using HTML5 and related
+  technologies: A tradeoff between cost and quality}
+\endentry
+
 \entry{htmlIsTheNewHtml5}{misc}{}
   \name{author}{1}{}{%
     {{}%
@@ -236,7 +270,9 @@
   }
   \strng{namehash}{PM1}
   \strng{fullhash}{PM1}
+  \field{labelyear}{2010}
   \field{title}{Dive into HTML5}
+  \field{year}{2010}
 \endentry
 
 \entry{cssSelectors}{misc}{}

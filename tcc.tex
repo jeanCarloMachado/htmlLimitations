@@ -28,6 +28,7 @@ right=2cm
 \usepackage{fancyhdr}
 \usepackage{anyfontsize}
 \usepackage{indentfirst}
+\usepackage{csquotes}
 
 \pagestyle{myheadings}
 %ovewrite plain to my headings style
@@ -39,7 +40,7 @@ right=2cm
 \usepackage[final]{graphicx}
 \graphicspath{ {asset/} }
 %sort by alphabetic label, name, year, volume, title 
-\usepackage[style=authoryear,backend=bibtex,sorting=anyvt]{biblatex}
+\usepackage[citestyle=authoryear,backend=bibtex,sorting=anyvt]{biblatex}
 \addbibresource{tcc.bib}
 \addto\captionsportuges{
 	\renewcommand{\contentsname}{\hspace*{\fill} SUMÁRIO\hspace*{\fill}}
@@ -636,6 +637,15 @@ elementos.
 
 %colocar uma imagem dos níveis do CSS
 
+\subsection{Media Queries}
+
+-falar de tamanhos absolutos vs relativos
+sobre unidades em pixel, relativas e un.
+
+Unidades vw e vh para tamanho do viewport
+
+
+
 %falar do suporte a variáveis do CSS
 \subsection{Transições}
 
@@ -893,7 +903,7 @@ de armazenamento de dados. Armazenamento no lado do cliente é um
 requerimento básico para qualquer aplicação moderna. Essa área
 era ode as aplicações nativas detinham grande vantagem sobre as
 aplicações web. O HTML5 solucionou este problema introduzindo várias
-formas de armazenamento de dados. (HASAN et all, 2012)
+formas de armazenamento de dados \autocite{html5Tradeoffs}.
 
 \subsection{Aplicações offline}
 
