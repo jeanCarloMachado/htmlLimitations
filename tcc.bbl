@@ -121,6 +121,12 @@
   \field{title}{HTML is the new HTML5}
 \endentry
 
+\entry{mdn2015}{online}{}
+  \field{howpublished}{Available at
+  \url{https://developer.mozilla.org/en-US/docs/Web/HTML} (2015/11/12)}
+  \field{title}{HTML (HyperText Markup Language)}
+\endentry
+
 \entry{HTML5CrossPlatformGameDevelopment}{thesis}{}
   \name{author}{1}{}{%
     {{}%
@@ -240,24 +246,6 @@
   \field{annotation}{%
   provides an authoritative historical reference of CSS pág. 23%
   }
-\endentry
-
-\entry{mdn2015}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Mozilla}{M.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{M1}
-  \strng{fullhash}{M1}
-  \field{labelyear}{2015}
-  \field{title}{HTML}
-  \verb{url}
-  \verb https://developer.mozilla.org/en-US/docs/Web/HTML
-  \endverb
-  \field{year}{2015}
 \endentry
 
 \entry{diveIntohtml}{book}{}
