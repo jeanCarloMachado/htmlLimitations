@@ -551,11 +551,29 @@ retrospectiva (\textit{"retro-specs"}). Versões que não tentavam
 idealizar a linguagem, buscando alinhar-se com os requerimentos do
 mercado \autocite{diveIntohtml}.
 
-Uma página HTML consiste de elementos que podem ter seu comportamento
+Uma página HTML consiste em elementos que podem ter seu comportamento
 alterado através de atributos. Um elemento é o abrir fechar de
 uma tag e todo o conteúdo que dentro dele reside \autocite[pp.
 10--11]{htmlAndCssDucket}. Na figura \ref{fig:htmlSample} o elemento
-meta tem um atributo \textit{charset}.
+meta tem um atributo \textit{charset}. Note também que os elementos
+estão aninhados em forma de grafo, esta estrutura também é conhecida como DOM.
+
+
+\subsection{DOM}
+%{{{
+
+O modelo de documento de objetos (\textit{Document Object Model}) é a representação
+em memória de uma árvore de elementos HTML. Esta representação é definida por
+um conjunto de padrões que torna interoperável a manipulação de elementos através de
+JavaScript.
+
+A primeira versão do DOM, (DOM Legacy) foi parcialmente especificada no HTML4.
+O DOM é também uma forma de manter estado em páginas HTML.
+Os navegadores contam com as engines de layout para parsear HTML em DOM.
+A atual versão do DOM é a versão 3
+
+%}}}
+
 
 \begin{figure}
 \centering
@@ -584,7 +602,7 @@ que viabilizam a construção de jogos foram adicionados.
 
 Visto que nenhum navegador implementa a especificação completamente,
 cabe ao desenvolvedor detectar os navegadores que não comportam as
-necessidades tecnológicas. Ao deparar-se com uma funcionalidade 
+necessidades tecnológicas. Ao deparar-se com uma funcionalidade
 faltante o desenvovedor tem duas possiblidades polyfills ou notificar o usuário.
 
 Polyfills são recursos que simulam uma funcionalidade não disponível para
@@ -612,18 +630,6 @@ as tecnologias da web HTML, CSS3 e JavaScript.
 \end{figure}
 %}}}
 
-\section{DOCUMENT OBJECT MODEL}
-%{{{
-É uma convenção que especifica como elementos HTML interegem.
-
-A primeira versão do DOM, (DOM Legacy) foi parcialmente especificada no HTML4.
-
-O DOM é também uma forma de manter estado em páginas HTML.
-
-Os navegadores contam com as engines de layout para parsear HTML em DOM.
-
-A atual versão do DOM é a versão 3
-%}}}
 
 \section{CSS}
 %{{{
