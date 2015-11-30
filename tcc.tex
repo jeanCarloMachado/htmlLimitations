@@ -565,12 +565,12 @@ aceitando erros de sintaxe, dependente de contexto, buscando entregar a
 melhor aproximação possível. Esta característica deu origem a uma
 especificação para renderizar HTML (\textit{HTML parser}).
 
-Visto que o HTML5 é uma especificação viva, nenhum navegador o
-suporta completamente. Cabe ao desenvolvedor detectar navegadores que
-não comportam as necessidades tecnológicas e prover uma alternativa
-ou ao menos notificar o usuário. Uma boa referência de recursos
-suportados pelos navegadores é o site http://caniuse.com/. A biblioteca Modernizr
-é uma boa ferramenta para detectar suporte a recursos HTML nos navegadores.
+Visto que nenhum navegador implementa a especificação completamente,
+cabe ao desenvolvedor detectar navegadores que não comportam as
+necessidades tecnológicas e prover uma alternativa ou ao menos
+notificar o usuário. Uma boa referência de recursos suportados pelos
+navegadores é o site http://caniuse.com/. A biblioteca Modernizr é uma
+boa ferramenta para detectar suporte a recursos HTML nos navegadores.
 
 Além da convencional linguagem de marcação; HTML5 ou "HTML5 e amigos"
 é muitas vezes interpretado como um conceito guarda chuva para designar
@@ -1020,6 +1020,28 @@ offline.
 Para transformar as instruções retornadas pelo servidor em algo útil
 para o usuário final os navegadores geralmente fazem uso de bibliotecas
 externas capazes de interpretar HTML5 e gerar o conteúdo iterativo.
+
+Os navegadores são geralmente compostos por um motor de renderização (engine)
+e por um motor de JavaScript.
+
+Alguns motores de renderização incluem:
+
+\begin{itemize}
+    \item Blink: Utilizada no Chromium e projetos relacionados, Opera
+    \item Gecko: Utilizada nos produtos da Mozilla
+    \item KHTML: Utilizada no navegador Konkeror, esta serviu de base para o Blink
+    \item WebKit: Utilizada no Safari e versões antigas do Google Chrome.
+\end{itemize}
+
+Alguns motores de javascript incluem:
+
+\begin{itemize}
+    \item SpiderMonkey: Primeiro motor, desenvolvido por Brendan Eich, escrito em C++
+    \item Rhino: Criada pela Netscape, escrito em Java
+    \item Nitro: Criada pela Apple
+    \item V8: Criada pelo Google
+    \item TraceMonkey: Criada pela Mozilla
+\end{itemize}
 
 
 \section{TRABALHOS SIMILARES}
