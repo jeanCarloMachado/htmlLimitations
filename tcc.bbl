@@ -124,7 +124,7 @@
 \entry{mdn2015}{online}{}
   \field{howpublished}{Available at
   \url{https://developer.mozilla.org/en-US/docs/Web/HTML} (2015/11/12)}
-  \field{title}{HTML (HyperText Markup Language)}
+  \field{title}{HTML HyperText Markup Language}
 \endentry
 
 \entry{HTML5CrossPlatformGameDevelopment}{thesis}{}
