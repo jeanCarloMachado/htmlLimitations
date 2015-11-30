@@ -482,21 +482,22 @@ A tecnologia chave que inaugurou e alavancou este processo é o HTML.
 
 HTML (\textit{Hyper Text Markup Language}) é uma linguagem de
 marcação que define a estrutura semântica do conteúdo das páginas
-da web. Criada por Tim Berners Lee em 1989 e é oficialmente mantida
-pela W3C. A parte denominada: "Hipertexto", refere-se a links que
-conectam páginas umas as outras, fazendo a Web como conhecemos hoje
+da web. Criada por Tim Berners Lee em 1989 no CERN. HTML é a tecnologia
+base para a criação de páginas web e aplicativos online. A parte
+denominada: "Hipertexto", refere-se a links que conectam páginas umas
+as outras, fazendo a Web como conhecemos hoje
 \autocite{mdn2015}.
 
-%falar onde o html pode ser usado
-
-%falar sobre a especificação do html
 HTML foi especificado baseando-se no padrão SGML (\textit{Standard Generalized
 Markup Language}).
 
 Alguns benefícios do SGML são:
 \begin{itemize}
-    \item Documentos declaram estrutura, diferentemente de aparência - possibilitando otimizações nos ambientes de uso (tamanho de tela, etc);
-    \item  São portáveis devido a definição de tipo de documento (\textit{document type declaration});
+    \item Documentos declaram estrutura, diferentemente de aparência
+- possibilitando otimizações nos ambientes de uso (tamanho de tela,
+etc);
+    \item São portáveis devido a definição de tipo de documento
+(\textit{document type declaration});
 \end{itemize}
 
 Apesar de o SGML negar a definição de aparência, os criadores de
@@ -508,34 +509,53 @@ HTML como uma linguagem de conteúdo semântico, incentivando a
 utilização de outras tecnologias, como o CSS, para responder as demandas de
 apresentação.
 
+Além do HTML, existe o XHTML, que é uma iniciativa de utilização
+de XML nas páginas da web. O XML é um padrão mais rigoroso que SGML
+e resulta em páginas válidas, que podem ser mais facilmente interpretadas por
+outras tecnologias, como sistemas de terceiros, etc.
+
+Para transformar o HTML em algo visível os navegadores, através
+de motores de renderização, decodificam um documento HTML
+em objetos em memória. Este processo é denominado tokenização.
+
+Diferentemente do XHTML, HTML não pode ser decodificado através de
+tokenização tradicional. Deve-se ao HTML ser amigável ao programador,
+aceitando erros de sintaxe, dependente de contexto, buscando entregar a
+melhor aproximação possível. Esta característica deu origem a uma
+especificação para renderizar HTML (\textit{HTML parser}).
+
 A última versão do HTML é o HTML5, iniciado pela WHATWG
-e posteriormente desenvolvido como  conjunto entre com a W3C.
-Seu rascunho foi proposto em 2008 e ratificado em 2014. 
+e posteriormente desenvolvido em conjunto com a W3C.
+Seu rascunho foi proposto em 2008 e ratificado em 2014.
 Após 2011, a última chamada de revisão do HTML5,
 a WHATWG decidiu renomear o HTML5 para HTML
 \autocite{htmlIsTheNewHtml5}. Não obstante, o termo HTML5
-permanece em utilização pela W3C. Esta divergência de nomenclatura
-é mais uma divergência entre os dois orgãos. A W3C vê a especificação
-do HTML5 como algo fechado, inclusive já iniciou o desenvolvimento do 
-HTML 5.1. Já a WHATWG vê o HTML5 como uma especificação viva.
-A postura da W3C tende a criar uma especificação mais estável, já a
-da W3C reflete mais a realidade dos navegadores, que nunca implementam
-uma versão completamente. A Mozilla utiliza a especificação da WHATWG no
-desenvolvimento do Firefox e recomenda a da W3C  para coisas que requeiram
-maior estabilidade.
+permanece em utilização pela W3C.
 
-Antes de HTML5 várias versões foram propostas, algumas radicais
-em seus conceitos, como o XHTML4; o qual quebrava praticamente toda
-a compatibilidade com as versões anteriores do HTML. Não obstante,
-a maioria das versões HTML de grande sucesso foram versões de
+Além da nomenclatura, exitem pequenas diferenças especificações da W3C e WHATWG. A
+W3C vê a especificação do HTML5 como algo fechado, inclusive já
+iniciou o desenvolvimento do HTML 5.1. Já a WHATWG vê o HTML5 como uma
+especificação viva. A postura da W3C tende a criar uma especificação
+mais estável, já a da W3C reflete mais a realidade dos navegadores,
+que nunca implementam uma versão completamente. A Mozilla utiliza a
+especificação da WHATWG no desenvolvimento do Firefox e recomenda a
+da W3C para coisas que requeiram maior estabilidade. Neste trabalho
+optamos pela nomenclatura da WHATWG, utilizamos o termo HTML em
+detrimento a HTML5, sempre que semanticamente viável.
+
+Antes do HTML5 várias versões foram propostas, algumas radicais
+em seus preceitos. O XHTML 2.0, por exemplo, quebrava com toda
+a compatibilidade das versões anteriores e acabou por sendo descontinuado.
+Outrossim, a maioria das versões HTML de grande sucesso foram versões de
 retrospectiva (\textit{"retro-specs"}). Versões que não tentavam
 idealizar a linguagem, buscando alinhar-se com os requerimentos do
 mercado \autocite{diveIntohtml}.
 
 Uma página HTML consiste de elementos que podem ter seu comportamento
-alterado através de atributos. Um elemento é o abrir fechar de uma tag e todo o conteúdo que dentro
-dele reside \autocite[pp. 10--11]{htmlAndCssDucket}. Na figura \ref{fig:htmlSample}
-o elemento meta tem um atributo \textit{charset}.
+alterado através de atributos. Um elemento é o abrir fechar de
+uma tag e todo o conteúdo que dentro dele reside \autocite[pp.
+10--11]{htmlAndCssDucket}. Na figura \ref{fig:htmlSample} o elemento
+meta tem um atributo \textit{charset}.
 
 \begin{figure}
 \centering
@@ -547,6 +567,9 @@ o elemento meta tem um atributo \textit{charset}.
 	<title></title>
 </head>
 <body>
+    <video>
+        <span>Seu navegador não suporta vídeo</span>
+    </video>
 </body>
 </html>
 \end{verbatim}
@@ -559,18 +582,24 @@ atualmente existem mais de cem \autocite{diveIntohtml}.
 Não obstante, foi no HTML5 que a maior parte dos elementos
 que viabilizam a construção de jogos foram adicionados.
 
-Diferentemente de XML, HTML não pode ser decodificado através de
-tokenização tradicional. Deve-se ao HTML ser amigável ao programador,
-aceitando erros de sintaxe, dependente de contexto, buscando entregar a
-melhor aproximação possível. Esta característica deu origem a uma
-especificação para renderizar HTML (\textit{HTML parser}).
-
 Visto que nenhum navegador implementa a especificação completamente,
-cabe ao desenvolvedor detectar navegadores que não comportam as
-necessidades tecnológicas e prover uma alternativa ou ao menos
-notificar o usuário. Uma boa referência de recursos suportados pelos
-navegadores é o site http://caniuse.com/. A biblioteca Modernizr é uma
-boa ferramenta para detectar suporte a recursos HTML nos navegadores.
+cabe ao desenvolvedor detectar os navegadores que não comportam as
+necessidades tecnológicas. Ao deparar-se com uma funcionalidade 
+faltante o desenvovedor tem duas possiblidades polyfills ou notificar o usuário.
+
+Polyfills são recursos que simulam uma funcionalidade não disponível para
+os navegadores que não suportam determinada especificação. %exemplificar
+
+Um dos objetivos do HTML é manter a retrocompatiblidade,
+o HTML atinge isso ignorando os elementos que não conhece, tratando apenas
+seu vocabuliário. Esse mecanismo permite que os desenvedores incluam
+marcação de reserva dentro dos elementos que podem ser não suportados.
+O elemento span na \ref{fig:htmlSample} só aparecerá para o usuário caso seu
+navegador não suporte a tag vídeo.
+
+Uma boa referência de recursos suportados pelos navegadores é o site
+http://caniuse.com/. A biblioteca Modernizr é uma boa ferramenta para
+detectar suporte a recursos HTML nos navegadores.
 
 Além da convencional linguagem de marcação; HTML5 ou "HTML5 e amigos"
 é muitas vezes interpretado como um conceito guarda chuva para designar
