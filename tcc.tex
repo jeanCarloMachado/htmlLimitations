@@ -555,24 +555,13 @@ Uma página HTML consiste em elementos que podem ter seu comportamento
 alterado através de atributos. Um elemento é o abrir fechar de
 uma tag e todo o conteúdo que dentro dele reside \autocite[pp.
 10--11]{htmlAndCssDucket}. Na figura \ref{fig:htmlSample} o elemento
-meta tem um atributo \textit{charset}. Note também que os elementos
-estão aninhados em forma de grafo, esta estrutura também é conhecida como DOM.
+meta tem um atributo \textit{charset}.
 
+Na sua versão inicial, o HTML contava com 18 elementos;
+atualmente existem mais de cem \autocite{diveIntohtml}.
+Não obstante, foi no HTML5 que a maior parte dos elementos
+que viabilizam a construção de jogos foram adicionados.
 
-\subsection{DOM}
-%{{{
-
-O modelo de documento de objetos (\textit{Document Object Model}) é a representação
-em memória de uma árvore de elementos HTML. Esta representação é definida por
-um conjunto de padrões que torna interoperável a manipulação de elementos através de
-JavaScript.
-
-A primeira versão do DOM, (DOM Legacy) foi parcialmente especificada no HTML4.
-O DOM é também uma forma de manter estado em páginas HTML.
-Os navegadores contam com as engines de layout para parsear HTML em DOM.
-A atual versão do DOM é a versão 3
-
-%}}}
 
 
 \begin{figure}
@@ -595,10 +584,6 @@ A atual versão do DOM é a versão 3
 \label{fig:htmlSample}
 \end{figure}
 
-Na sua versão inicial, o HTML contava com 18 elementos;
-atualmente existem mais de cem \autocite{diveIntohtml}.
-Não obstante, foi no HTML5 que a maior parte dos elementos
-que viabilizam a construção de jogos foram adicionados.
 
 Visto que nenhum navegador implementa a especificação completamente,
 cabe ao desenvolvedor detectar os navegadores que não comportam as
@@ -629,8 +614,21 @@ as tecnologias da web HTML, CSS3 e JavaScript.
 	\caption{Suite HTML5}
 \end{figure}
 %}}}
+\subsection{DOM}
+%{{{
 
+O modelo de documento de objetos (\textit{Document Object Model}) é a representação
+em memória de uma árvore de elementos HTML. Esta representação é definida por
+um conjunto de padrões que torna interoperável a manipulação de elementos através de
+JavaScript.
 
+A primeira versão do DOM, DOM nível zero, foi parcialmente
+especificada no HTML 4 e permitia manipulação parcial dos elementos.
+Foi somente com a especificação do JavaScript em 1998 que o DOM nível 1 foi especificado, 
+permitindo a manipulação de qualquer elemento. DOM nível 2 e 3 seguiram com melhorias nas
+consultas aos elementos e CSS.
+
+%}}}
 \section{CSS}
 %{{{
 
