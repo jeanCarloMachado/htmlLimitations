@@ -503,7 +503,7 @@ especificação viva. A postura da W3C tende a criar uma especificação
 mais estável, já a da W3C reflete mais a realidade dos navegadores,
 que nunca implementam uma versão completamente. A Mozilla utiliza a
 especificação da WHATWG no desenvolvimento do Firefox e recomenda a
-da W3C para problemas que requeiram maior estabilidade. Neste trabalho
+da W3C para sistemas que requeiram maior estabilidade. Neste trabalho
 optamos pela nomenclatura da WHATWG, utilizamos o termo HTML em
 detrimento a HTML5, sempre que semanticamente viável.
 
@@ -525,7 +525,7 @@ piscar, itálico, e negrito, que eventualmente acabavam por serem inclusos
 na especificação. Foi somente nas últimas versões que elementos de
 apresentação voltaram a ser proibidos reforçando as propostas chave
 do HTML como uma linguagem de conteúdo semântico, incentivando a
-utilização de outras tecnologias, como o CSS, para responder as demandas de
+utilização de outras tecnologias como o CSS para responder as demandas de
 apresentação.
 
 Além do HTML, existe o XHTML, que é uma iniciativa de utilização
@@ -534,8 +534,8 @@ e resulta em páginas sem problemas de sintaxe e tipografia,
 que podem ser mais facilmente interpretadas por
 outras tecnologias, como sistemas de terceiros, etc.
 
-Para transformar o HTML em algo visível os navegadores, utiliza-se
-de motores de renderização. Estes decodificam um documento HTML
+Para transformar o HTML em algo visível os navegadores utiliza-se
+de motores de renderização. O primeiro passo é decodificar o documento HTML
 para sua representação em memória. Este processo dá-se através
 da análise (\textit{parsing}) e posterior tokenização, que é a separação
 do HTML em palavras chave que o interpretador pode utilizar.
@@ -587,14 +587,24 @@ que viabilizam a construção de jogos foram adicionados.
 
 Visto que nenhum navegador implementa a especificação completamente,
 cabe ao desenvolvedor detectar os navegadores que não comportam as
-necessidades tecnológicas. Ao deparar-se com uma funcionalidade
-faltante o desenvolvedor tem duas possibilidades polyfills ou notificar o usuário.
+necessidades tecnológicas dos aplicativos que cria. Ao deparar-se com uma funcionalidade
+faltante o desenvolvedor tem duas possibilidades: notificar o usuário sobre o 
+problema ou utilizar polyfills.
 
 Polyfills são recursos que simulam uma funcionalidade não disponível para
 os navegadores que não suportam determinada especificação. A biblioteca
 https://github.com/google/canvas-5-polyfill é um exmplo. Esta serve para
 suprir aos navegadores que ainda não implementaram, os últimos recursos
 da especificação CANVAS, como o recurso de desenhar elipses e o caminho 2D.
+
+Detectar suporte aos mais variados recursos do HTML5 no navegador
+é uma tarefa indediante. Pode-se implementar testes para
+cada funcionalidade utilizada abordando os detalhes de implementação
+de cada uma ou então fazer uso de alguma biblioteca especializada
+neste processo. O Modernizr é uma opção open-source deste tipo de
+biblioteca, este gera uma lista de booleanos sobre grande variedade dos
+recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e
+local storage.
 
 Um dos objetivos chave do HTML é manter a retrocompatiblidade,
 interpretadores HTML atingem isso ignorando os elementos que não conhecem, tratando apenas
@@ -604,8 +614,7 @@ O elemento span na \ref{fig:htmlSample} só aparecerá para o usuário caso seu
 navegador não suporte a tag vídeo.
 
 Uma boa referência de recursos suportados pelos navegadores é o site
-http://caniuse.com/. A biblioteca Modernizr é uma boa ferramenta para
-detectar suporte a recursos HTML nos navegadores.
+http://caniuse.com/.
 
 Além da convencional linguagem de marcação; HTML5 ou "HTML5 e amigos"
 é muitas vezes interpretado como um conceito guarda chuva para designar
@@ -641,9 +650,8 @@ apresentação de páginas HTML. CSS juntamente com JavaScript e HTML
 é peça central no desenvolvimento WEB tornando-se parte da OpenWeb,
 sua especificação é atualmente mantida pela W3C.
 
-O termo \textit{Cascading} refere-se ao fato de
-regras serem herdadas pelos filhos de um elemento, eliminando
-grande parcela de duplicação de regras.
+O termo \textit{Cascading} refere-se ao fato de regras serem herdadas
+pelos filhos de um elemento, eliminando grande parcela de duplicação.
 Antes do CSS, a estilização das páginas era inclusa dentro do HTML.
 Isso forçava que mudanças tivessem que ser replicadas em todas suas
 ocorrências, e não permitia apresentações diferenciadas para
@@ -691,12 +699,18 @@ p {
 \end{figure}
 
 O CSS é dividido em módulos, contendo aproximadamente 50 deles, cada
-qual evoluindo separadamente.
-
-A primeira especificação do CSS, CSS1 foi lançada em 1996. Em 1997 foi lançado o
+qual evoluindo separadamente. Além do módulos, CSS é organizado por perfis e níveis.
+Os níveis mais baixos representam as funcionalidades vitais do CSS, conforme os níveis
+vão subindo utiliza-se os níveis predecessores para construir as funcionalidades.
+A primeira especificação do CSS, CSS1 (ou nível 1) foi lançada em 1996. Em 1997 foi lançado o
  CSS2 com o intuito de ampliar a completude do CSS1. Em 1998 iniciou-se o desenvolvimento
- do CSS3 que ainda continua em 2015.
+ do CSS3 que ainda continua em 2015. Além do nível 3 existem módulos de nível 4 no CSS, apesar de a
+versão do CSS não ter se alterado.
 
+Os perfis do CSS dividem a especificação por dispositivo de utilização. Existem perfis
+para dispositivos móveis, televisores, impressoras, etc.
+
+Apesar da clara evolução das versões do CSS, esse processo nem sempre é linear.
 Em 2005 o grupo de trabalho do CSS decidiu aumentar a restrição de suas especificações
 rebaixando o CSS2.1, Seletores do CSS3 e Texto do CSS3 de recomendações para rascunhos.
 
@@ -706,17 +720,9 @@ rebaixando o CSS2.1, Seletores do CSS3 e Texto do CSS3 de recomendações para r
 	\caption{The modules of CSS, 2014}
 \end{figure}
 
-Sua última versão, o CSS3, introduziu várias funcionalidades
+O CSS3, introduziu várias funcionalidades
 relevantes para jogos, como \textit{media-queries}: possibilitam regras para
 tamanhos de tela, transformações 3D e animações.
-
-Flow de documento, ordem e posição em que os elementos tem que
-aparecer na página. Modelo de caixa o que encapsula o conteúdo em um
-elementos.
-
-%CSS has various levels and profiles. Each level of CSS builds upon the last, typically adding new features and typically denoted as CSS 1, CSS 2, CSS 3, and CSS 4. Profiles are typically a subset of one or more levels of CSS built for a particular device or user interface. Currently there are profiles for mobile devices, printers, and television sets. Profiles should not be confused with media types, which were added in CSS 2.%
-
-%colocar uma imagem dos níveis do CSS
 
 \subsection{Media Queries}
 
@@ -724,8 +730,6 @@ elementos.
 sobre unidades em pixel, relativas e un.
 
 Unidades vw e vh para tamanho do viewport
-
-
 
 %falar do suporte a variáveis do CSS
 \subsection{Transições}
@@ -1032,14 +1036,6 @@ quais podem ser escutados através de listeners. Os eventos básicos
 são: keydown (tecla baixa), keyup (tecla solta) e keypress (tecla
 pressionada).
 
-Para detectar suporte aos mais variados recursos do HTML5 no navegador
-do cliente existem duas possibilidades. Pode-se implementar testes para
-cada funcionalidade utilizada abordando os detalhes de implementação
-de cada uma ou então fazer uso de alguma biblioteca especializada
-neste processo, o Modernizr é uma opção open-source deste tipo de
-biblioteca, este gera uma lista de booleanos sobre grande variedade dos
-recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e
-local storage.
 
 \subsection{DISPONIBILIZAÇÃO DA APLICAÇÃO}
 
