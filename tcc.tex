@@ -637,31 +637,52 @@ consultas aos elementos e CSS.
 
 CSS (\textit{Cascading Style Sheets}) é uma linguagem de folhas de
 estilo, criada por Håkon Wium Lie em 1994, com intuito de definir a
-apresentação de páginas HTML. O termo Cascading refere-se ao fato de
+apresentação de páginas HTML. O termo \textit{Cascading} refere-se ao fato de
 regras serem herdadas pelos filhos de um elemento, eliminando
 grande parcela de duplicação de regras.
 
-Antes do CSS a estilização das páginas era inclusa dentro do HTML. Isso era
-negativo pois forçava que mudanças tivessem que ser replicadas em
-todas suas ocorrências, e não permitia apresentações diferenciadas
-para diferentes tipos de dispositivos. Com CSS também é possível o
-usuário declarar suas folhas de estilo e alterar a visualização das páginas
-que está vendo, um recurso importante para acessibilidade.
+Antes do CSS, a estilização das páginas era inclusa dentro do HTML.
+Isso forçava que mudanças tivessem que ser replicadas em todas suas
+ocorrências, e não permitia apresentações diferenciadas para
+diferentes tipos de dispositivos. A diferenciação entre apresentação
+e estrutura, sendo o CSS responsável pela apresentação, é um dos
+pontos chave do SGML, motivo que tornou a utilização do CSS tão
+difundida.
 
-Segundo \cite[pp. 23--24]{CascadingStyleSheets}:
-\begin{quote}
-CSS possibilita a ligação tardia (\textit{late biding}) com páginas HTML. Essa característica
-é atrativa para os publicadores por dois motivos. Primeiramente pois
-permite o mesmo estilo em várias publicações, segundo pois os
-publicadores podem focar-se no conteúdo.
+Com CSS também é possível que o usuário declare suas próprias
+folhas de estilo, um recurso importante para acessibilidade.
+
+Segundo \cite[pp. 23--24]{CascadingStyleSheets}: \begin{quote} CSS
+possibilita a ligação tardia (\textit{late biding}) com páginas HTML.
+Essa característica é atrativa para os publicadores por dois motivos.
+Primeiramente pois permite o mesmo estilo em várias publicações,
+segundo pois os publicadores podem focar-se no conteúdo.
 \end{quote}
 
-
-CSS é formado por um conjunto de regras, que são agrupadas
+CSS é formado por um conjunto de regras,
+dentro de uma tag HTML denominada \textit{style}, que são agrupadas
 por seletores em blocos de declaração. Os elementos selecionados são
 denominados o assunto do seletor \autocite{cssSelectors}. Seletores tem
 o intuito de definir quais partes do documento HTML serão afetadas por
 determinado bloco de declaração.
+
+A figura \ref{fig:CSSSample} exemplifica bem este processo. O seletor em
+questão é o elemento p, simbolizando todos os parágrafos. O bloco de declaração 
+é o que está dentro das chaves, aplicando alinhamento e cores aos parágrafos.
+
+\begin{figure}
+\centering
+\begin{verbatim}
+<style>
+p {
+    text-align: center;
+    color: red;
+}
+</style>
+\end{verbatim}
+\caption{Exemplo de Folha de Estilo}
+\label{fig:cssSample}
+\end{figure}
 
 Sua última versão, o CSS3, introduziu várias funcionalidades
 relevantes para jogos, como \textit{media-queries}: possibilitam regras para
@@ -670,7 +691,6 @@ tamanhos de tela, transformações 3D e animações.
 O CSS é dividido em módulos, contendo aproximadamente 50 deles, cada
 qual evoluindo separadamente.
 
-Os navegadores interpretam CSS através da tag \textit{style}.
 
 Muitos navegadores também suportam aceleração de GPU (Unidade de
 processamento gráfico) para elementos que tenham transformações 3D.
