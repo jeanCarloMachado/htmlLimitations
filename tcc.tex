@@ -488,6 +488,25 @@ denominada: "Hipertexto", refere-se a links que conectam páginas umas
 as outras, fazendo a Web como conhecemos hoje
 \autocite{mdn2015}.
 
+A última versão do HTML é o HTML5, iniciado pela WHATWG
+e posteriormente desenvolvido em conjunto com a W3C.
+Seu rascunho foi proposto em 2008 e ratificado em 2014.
+Após 2011, a última chamada de revisão do HTML5,
+a WHATWG decidiu renomear o HTML5 para HTML
+\autocite{htmlIsTheNewHtml5}. Não obstante, o termo HTML5
+permanece em utilização pela W3C.
+
+Além da nomenclatura, exitem pequenas diferenças especificações da W3C e WHATWG. A
+W3C vê a especificação do HTML5 como algo fechado, inclusive já
+iniciou o desenvolvimento do HTML 5.1. Já a WHATWG vê o HTML5 como uma
+especificação viva. A postura da W3C tende a criar uma especificação
+mais estável, já a da W3C reflete mais a realidade dos navegadores,
+que nunca implementam uma versão completamente. A Mozilla utiliza a
+especificação da WHATWG no desenvolvimento do Firefox e recomenda a
+da W3C para problemas que requeiram maior estabilidade. Neste trabalho
+optamos pela nomenclatura da WHATWG, utilizamos o termo HTML em
+detrimento a HTML5, sempre que semanticamente viável.
+
 HTML foi especificado baseando-se no padrão SGML (\textit{Standard Generalized
 Markup Language}).
 
@@ -505,43 +524,27 @@ navegadores constantemente introduziam elementos de apresentação como o
 piscar, itálico, e negrito, que eventualmente acabavam por serem inclusos
 na especificação. Foi somente nas últimas versões que elementos de
 apresentação voltaram a ser proibidos reforçando as propostas chave
-HTML como uma linguagem de conteúdo semântico, incentivando a
+do HTML como uma linguagem de conteúdo semântico, incentivando a
 utilização de outras tecnologias, como o CSS, para responder as demandas de
 apresentação.
 
 Além do HTML, existe o XHTML, que é uma iniciativa de utilização
 de XML nas páginas da web. O XML é um padrão mais rigoroso que SGML
-e resulta em páginas válidas, que podem ser mais facilmente interpretadas por
+e resulta em páginas sem problemas de sintaxe e tipografia, 
+que podem ser mais facilmente interpretadas por
 outras tecnologias, como sistemas de terceiros, etc.
 
-Para transformar o HTML em algo visível os navegadores, através
-de motores de renderização, decodificam um documento HTML
-em objetos em memória. Este processo é denominado tokenização.
+Para transformar o HTML em algo visível os navegadores, utiliza-se
+de motores de renderização. Estes decodificam um documento HTML
+para sua representação em memória. Este processo dá-se através
+da análise (\textit{parsing}) e posterior tokenização, que é a separação
+do HTML em palavras chave que o interpretador pode utilizar.
 
 Diferentemente do XHTML, HTML não pode ser decodificado através de
 tokenização tradicional. Deve-se ao HTML ser amigável ao programador,
 aceitando erros de sintaxe, dependente de contexto, buscando entregar a
 melhor aproximação possível. Esta característica deu origem a uma
 especificação para renderizar HTML (\textit{HTML parser}).
-
-A última versão do HTML é o HTML5, iniciado pela WHATWG
-e posteriormente desenvolvido em conjunto com a W3C.
-Seu rascunho foi proposto em 2008 e ratificado em 2014.
-Após 2011, a última chamada de revisão do HTML5,
-a WHATWG decidiu renomear o HTML5 para HTML
-\autocite{htmlIsTheNewHtml5}. Não obstante, o termo HTML5
-permanece em utilização pela W3C.
-
-Além da nomenclatura, exitem pequenas diferenças especificações da W3C e WHATWG. A
-W3C vê a especificação do HTML5 como algo fechado, inclusive já
-iniciou o desenvolvimento do HTML 5.1. Já a WHATWG vê o HTML5 como uma
-especificação viva. A postura da W3C tende a criar uma especificação
-mais estável, já a da W3C reflete mais a realidade dos navegadores,
-que nunca implementam uma versão completamente. A Mozilla utiliza a
-especificação da WHATWG no desenvolvimento do Firefox e recomenda a
-da W3C para coisas que requeiram maior estabilidade. Neste trabalho
-optamos pela nomenclatura da WHATWG, utilizamos o termo HTML em
-detrimento a HTML5, sempre que semanticamente viável.
 
 Antes do HTML5 várias versões foram propostas, algumas radicais
 em seus preceitos. O XHTML 2.0, por exemplo, quebrava com toda
@@ -561,8 +564,6 @@ Na sua versão inicial, o HTML contava com 18 elementos;
 atualmente existem mais de cem \autocite{diveIntohtml}.
 Não obstante, foi no HTML5 que a maior parte dos elementos
 que viabilizam a construção de jogos foram adicionados.
-
-
 
 \begin{figure}
 \centering
@@ -584,17 +585,19 @@ que viabilizam a construção de jogos foram adicionados.
 \label{fig:htmlSample}
 \end{figure}
 
-
 Visto que nenhum navegador implementa a especificação completamente,
 cabe ao desenvolvedor detectar os navegadores que não comportam as
 necessidades tecnológicas. Ao deparar-se com uma funcionalidade
-faltante o desenvovedor tem duas possiblidades polyfills ou notificar o usuário.
+faltante o desenvolvedor tem duas possibilidades polyfills ou notificar o usuário.
 
 Polyfills são recursos que simulam uma funcionalidade não disponível para
-os navegadores que não suportam determinada especificação. %exemplificar
+os navegadores que não suportam determinada especificação. A biblioteca
+https://github.com/google/canvas-5-polyfill é um exmplo. Esta serve para
+suprir aos navegadores que ainda não implementaram, os últimos recursos
+da especificação CANVAS, como o recurso de desenhar elipses e o caminho 2D.
 
-Um dos objetivos do HTML é manter a retrocompatiblidade,
-o HTML atinge isso ignorando os elementos que não conhece, tratando apenas
+Um dos objetivos chave do HTML é manter a retrocompatiblidade,
+interpretadores HTML atingem isso ignorando os elementos que não conhecem, tratando apenas
 seu vocabuliário. Esse mecanismo permite que os desenvedores incluam
 marcação de reserva dentro dos elementos que podem ser não suportados.
 O elemento span na \ref{fig:htmlSample} só aparecerá para o usuário caso seu
@@ -624,7 +627,7 @@ JavaScript.
 
 A primeira versão do DOM, DOM nível zero, foi parcialmente
 especificada no HTML 4 e permitia manipulação parcial dos elementos.
-Foi somente com a especificação do JavaScript em 1998 que o DOM nível 1 foi especificado, 
+Foi somente com a especificação do JavaScript em 1998 que o DOM nível 1 foi especificado,
 permitindo a manipulação de qualquer elemento. DOM nível 2 e 3 seguiram com melhorias nas
 consultas aos elementos e CSS.
 
