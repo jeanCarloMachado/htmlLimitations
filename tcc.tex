@@ -637,26 +637,32 @@ consultas aos elementos e CSS.
 
 CSS (\textit{Cascading Style Sheets}) é uma linguagem de folhas de
 estilo, criada por Håkon Wium Lie em 1994, com intuito de definir a
-apresentação de páginas HTML. O termo \textit{Cascading} refere-se ao fato de
+apresentação de páginas HTML. CSS juntamente com JavaScript e HTML
+é peça central no desenvolvimento WEB tornando-se parte da OpenWeb,
+sua especificação é atualmente mantida pela W3C.
+
+O termo \textit{Cascading} refere-se ao fato de
 regras serem herdadas pelos filhos de um elemento, eliminando
 grande parcela de duplicação de regras.
-
 Antes do CSS, a estilização das páginas era inclusa dentro do HTML.
 Isso forçava que mudanças tivessem que ser replicadas em todas suas
 ocorrências, e não permitia apresentações diferenciadas para
-diferentes tipos de dispositivos. A diferenciação entre apresentação
-e estrutura, sendo o CSS responsável pela apresentação, é um dos
-pontos chave do SGML, motivo que tornou a utilização do CSS tão
-difundida.
+diferentes tipos de dispositivos.
+
+A diferenciação entre apresentação e estrutura, sendo neste caso o
+CSS responsável pela apresentação, é um dos pontos chave do SGML,
+motivo que tornou a utilização do CSS tão difundida.
 
 Com CSS também é possível que o usuário declare suas próprias
 folhas de estilo, um recurso importante para acessibilidade.
 
-Segundo \cite[pp. 23--24]{CascadingStyleSheets}: \begin{quote} CSS
-possibilita a ligação tardia (\textit{late biding}) com páginas HTML.
-Essa característica é atrativa para os publicadores por dois motivos.
-Primeiramente pois permite o mesmo estilo em várias publicações,
-segundo pois os publicadores podem focar-se no conteúdo.
+Segundo \cite[pp. 23--24]{CascadingStyleSheets}: 
+
+\begin{quote} 
+CSS possibilita a ligação tardia (\textit{late biding}) com
+páginas HTML. Essa característica é atrativa para os publicadores
+por dois motivos. Primeiramente pois permite o mesmo estilo em várias
+publicações, segundo pois os publicadores podem focar-se no conteúdo.
 \end{quote}
 
 CSS é formado por um conjunto de regras,
@@ -684,13 +690,6 @@ p {
 \label{fig:CSSSample}
 \end{figure}
 
-
-
-
-Sua última versão, o CSS3, introduziu várias funcionalidades
-relevantes para jogos, como \textit{media-queries}: possibilitam regras para
-tamanhos de tela, transformações 3D e animações.
-
 O CSS é dividido em módulos, contendo aproximadamente 50 deles, cada
 qual evoluindo separadamente.
 
@@ -700,8 +699,9 @@ qual evoluindo separadamente.
 	\caption{The modules of CSS, 2014}
 \end{figure}
 
-Muitos navegadores também suportam aceleração de GPU (Unidade de
-processamento gráfico) para elementos que tenham transformações 3D.
+Sua última versão, o CSS3, introduziu várias funcionalidades
+relevantes para jogos, como \textit{media-queries}: possibilitam regras para
+tamanhos de tela, transformações 3D e animações.
 
 Flow de documento, ordem e posição em que os elementos tem que
 aparecer na página. Modelo de caixa o que encapsula o conteúdo em um
@@ -724,6 +724,8 @@ Unidades vw e vh para tamanho do viewport
 \subsection{Transições}
 
 É uma forma de adicionar animações de um estado para outro, em uma página web.
+Muitos navegadores também suportam aceleração de GPU (Unidade de
+processamento gráfico) para elementos que tenham transformações 3D.
 
 \subsection{Desabilitando elementos do navegador}
 -overscroll
