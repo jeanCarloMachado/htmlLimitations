@@ -588,7 +588,7 @@ que viabilizam a construção de jogos foram adicionados.
 Visto que nenhum navegador implementa a especificação completamente,
 cabe ao desenvolvedor detectar os navegadores que não comportam as
 necessidades tecnológicas dos aplicativos que cria. Ao deparar-se com uma funcionalidade
-faltante o desenvolvedor tem duas possibilidades: notificar o usuário sobre o 
+faltante o desenvolvedor tem duas possibilidades: notificar o usuário sobre o
 problema ou utilizar polyfills.
 
 Polyfills são recursos que simulam uma funcionalidade não disponível para
@@ -608,7 +608,7 @@ local storage.
 
 Um dos objetivos chave do HTML é manter a retrocompatiblidade,
 interpretadores HTML atingem isso ignorando os elementos que não conhecem, tratando apenas
-seu vocabuliário. Esse mecanismo permite que os desenvedores incluam
+seu vocabuliário. Esse mecanismo permite que os desenvolvedores incluam
 marcação de reserva dentro dos elementos que podem ser não suportados.
 O elemento span na \ref{fig:htmlSample} só aparecerá para o usuário caso seu
 navegador não suporte a tag vídeo.
@@ -664,9 +664,9 @@ motivo que tornou a utilização do CSS tão difundida.
 Com CSS também é possível que o usuário declare suas próprias
 folhas de estilo, um recurso importante para acessibilidade.
 
-Segundo \cite[pp. 23--24]{CascadingStyleSheets}: 
+Segundo \cite[pp. 23--24]{CascadingStyleSheets}:
 
-\begin{quote} 
+\begin{quote}
 CSS possibilita a ligação tardia (\textit{late biding}) com
 páginas HTML. Essa característica é atrativa para os publicadores
 por dois motivos. Primeiramente pois permite o mesmo estilo em várias
@@ -746,23 +746,24 @@ processamento gráfico) para elementos que tenham transformações 3D.
 
 %}}}
 
+Além da apresentação, recurso vital para jogos, e aplicativos web em geral, é a iteratividade. Com
+as tecnologias da WEB esta iteratividade é atingida através do JavaScript.
+
 \section{JAVASCRIPT}
 %{{{
 
 EMACScript, melhor conhecido como JavaScript, criada por Brendan Eich
-em 1992, é a linguagem da Web. Devido a tremenda popularidade entre
+em 1992, é a linguagem de script da Web. Devido a tremenda popularidade entre
 comunidade de desenvolvedores a linguagem foi abraçada pela W3C e
-atualmente é um dos componentes da *Open Web Platform*.
+atualmente é um dos componentes da Open Web.
 
 As definições da linguagem são descritas na especificação ECMA-262.
 Esta possibilitou o desenvolvimento de outras implementações além da
-original - *SpiderMonkey* - como o Rhino, V8 e TraceMonkey; bem como
+original - SpiderMonkey - como o Rhino, V8 e TraceMonkey; bem como
 outras linguagens similares como JScript da Microsoft e o ActionScript
 da Adobe.
 
-JavaScript é uma linguagem de script. Segundo a Ecma Internacional
-2012:
-
+Segundo a \cite{ecmaSpecificaton}:
 \begin{quote}
 Uma linguagem de script é uma linguagem de programação que é
 usada para manipular e automatizar os recursos presentes em um dado
@@ -1155,7 +1156,6 @@ e métodos.
 Comecei escrevendo o aplicativo para o Navegador do desktop pois era o
 que estava mais acessível no momento. Mais tarde descobri que de fato
 é assim que de desenvolve.
-
 
 %}}}
 
