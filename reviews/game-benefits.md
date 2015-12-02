@@ -65,7 +65,6 @@ suggest(Ferguson, 2013)
 
 More than 70% of the individual who play games are adults.
 
-
 #Notes
 Good font of references of the benefit of gaming
 The factors of play also applies to video-games. (paraphrasing)
