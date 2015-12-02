@@ -8,18 +8,8 @@ technologies rise and fall beside them.
 ..very little investment needs to be made to begin developing
 games using open web technologies.
 
-
-HTML5 canvas is a JavaScript API and corresponding HTML element
-that allows for bitmap graphics to be created and edited within
-the browser.
-
 The negative aspects of canvas are that performance varies across
 platforms and animation functionality isn't built in.
-
-SVG is a 2D solution that used the document object model (DOM) to
-produce and manager vector graphics. The negative aspects of SVG
-are that it isn't as popular as canvas and that it doesn't cope as
-well with pixel-perfect precision.
 
 WebGl is based on OpenGl ES 2.0. It's hardware accelerated (fast)
 and allows for some pretty complex visual effects. The negative
@@ -29,7 +19,6 @@ Internet Exploer yet.
 The limitation of the HTML5 audio element is that it's purpose is
 really to play single audio files, like background music within a
 game.
-
 
 If the visuals and audio are amazing but the game play is boring,
 a player will stop playing. The substance of the game is the

@@ -1,6 +1,0 @@
-#GenericTitle
-#SpecificTitle
-
-#Quotes
-
-#References
