@@ -275,6 +275,13 @@
   \field{title}{Selectors}
 \endentry
 
+\entry{mdnTransitions}{online}{}
+  \field{howpublished}{Available at
+  \url{https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions}
+  (2015/12/01)}
+  \field{title}{Using CSS transitions}
+\endentry
+
 \entry{browserGamesTechnologyAndFuture}{article}{}
   \name{author}{1}{}{%
     {{}%

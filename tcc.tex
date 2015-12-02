@@ -726,6 +726,7 @@ tamanhos de tela, transformações 3D e animações.
 
 \subsection{Media Queries}
 
+Permitem aplicar regras de CSS específicas por tamanho de dispositivo e outras regras.
 -falar de tamanhos absolutos vs relativos
 sobre unidades em pixel, relativas e un.
 
@@ -734,9 +735,16 @@ Unidades vw e vh para tamanho do viewport
 %falar do suporte a variáveis do CSS
 \subsection{Transições}
 
-É uma forma de adicionar animações de um estado para outro, em uma página web.
+É uma forma de adicionar animações de mudança de estado, em uma página web.
+Com o recurso de transições é possível controlar o tempo da
+troca de estado de um determinado atributo em CSS para outro valor.
+
 Muitos navegadores também suportam aceleração de GPU (Unidade de
 processamento gráfico) para elementos que tenham transformações 3D.
+
+Atualmente um conjunto finito de  propriedades podem ser animados, e essas
+lista tende a mudar com o tempo, cabe ao desenvolvedor assegurar-se que 
+determinada propriedade está disponível \autocite{mdnTransitions}.
 
 \subsection{Desabilitando elementos do navegador}
 -overscroll
@@ -786,7 +794,7 @@ JavaScript não evoluiu ao passo da demanda e muitas vezes carece de
 definições expressivas, completude teórica, e outras características
 de linguagens de programação mais bem estabelecidas, como o C++ ou
 Java (Barnett, 2013). A nova versão do JavaScript, o JavaScript 6, é
-um esforço nessa direção. JavaScript 6 ou *EMACScript Harmonia*,
+um esforço nessa direção. JavaScript 6 ou EMACScript Harmonia,
 contempla vários conceitos de orientação a objetos como classes,
 interfaces, herança, tipos, etc.
 
@@ -798,10 +806,10 @@ vez definidas as especificações, é necessário que os distribuidores
 do JavaScript implementem o especificado.
 
 Alternativamente, existe uma vasta gama de conversores de código -
-*transpilers* - para JavaScript; possibilitando programar em linguagens
-formais e posteriormente gerar código JavaScript. Não obstante,
-essa alternativa tem seus pontos fracos, necessita-se de mais tempo
-de depuração , visto que o JavaScript gerado não é conhecido
+(\textit{transpilers}) - para JavaScript; possibilitando programar em
+linguagens formais e posteriormente gerar código JavaScript. Não
+obstante, essa alternativa tem seus pontos fracos, necessita-se de mais
+tempo de depuração , visto que o JavaScript gerado não é conhecido
 pelo desenvolvedor, e provavelmente o código gerado não será tão
 otimizado, nem utilizará os recursos mais recentes do JavaScript.
 
@@ -819,7 +827,7 @@ define recursos de plataforma. Distribuidores do JavaScript complementam
 a o JavaScript com recursos específicos para suas plataformas alvo.
 Por exemplo, para servidores, define-se objetos de terminal, acesso a
 arquivos e dispositivos, etc. No contexto de cliente, são definidos
-objetos como janelas, frames, DOM, etc.
+objetos como janelas, quadros, DOM, etc.
 
 Para o navegador o código JavaScript geralmente é disposto no elemento
 ``script`` dentro de arquivos HTML. Quando os navegadores encontram esse
@@ -833,9 +841,9 @@ Asm.js é um subconjunto da sintaxe do JavaScript a qual permite grandes
 aumentos de performance quando em comparação com JavaScript normal.
 No contexto dos jogos performance é usualmente um recurso estimável,
 asm.js consegue-o supra utilizando recursos que permitam otimizações
-antes do tempo *ahead of time optimizations*. Entretanto, não é
+antes do tempo (\textit{ahead of time optimizations}). Entretanto, não é
 trivial escrever código em asm.js e geralmente a geração de código
-asm.js é feita através da transpilação de outras linhagens como C.
+asm.js é feita através da conversão de outras linhagens como C.
 
 Muita da performance adicional em relação ao JavaScript é devido
 a consistência de tipo e a não existência de um coletor de lixo
@@ -844,7 +852,6 @@ modelo simples desprovido de comportamento dinâmico, sem alocação
 e desalocação de memória, apenas um bem definido conjunto de
 operações de inteiros e flutuantes possibilita grade performance e
 abre espaço para otimizações.
-
 
 %}}}
 
