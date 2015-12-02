@@ -112,7 +112,6 @@ right=2cm
 \end{titlepage}
 
 %}}}
-
 %{{{Folha de rosto
 
 \begin{titlepage}
@@ -138,8 +137,8 @@ obtenção do título de Tecnólogo em Análise e Desenvolvimento de Sistemas.
 \end{titlepage}
 
 %}}}
-\onehalfspacing
 %{{{ Resumo
+\onehalfspacing
 \renewcommand{\abstractname}{\Large\bfseries RESUMO}
 \begin{abstract}
 { LLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -164,12 +163,14 @@ Multiplataforma
 \end{abstract}
 
 %}}}
-
+%LISTS
+%{{{
 %30 is ok
 {\listoffigures}
 \clearpage
 {\tableofcontents}
 %\listoftables
+%}}}k
 \chapter{CONTEXTUALIZAÇÃO}%{{{
 \pagenumbering{arabic}
 %\setcounter{page}{1} 
@@ -242,7 +243,6 @@ pelo jogo está correto ou não.
 
 Porquê escolhi esse tipo de jogo?
 %}}}
-
 \chapter{PROBLEMA}
 %{{{
 
@@ -254,7 +254,6 @@ Os custos introduzidos no ciclo vida de um jogo, para diversas
 plataformas, é muito alto para ser considerado trivial. Cerca de 65%
 mais altos (segundo trabalho 2)
 %}}}
-
 \section{OBJETIVOS}
 %{{{
 
@@ -312,7 +311,6 @@ Elaborar uma lista de limitações e correlacionar os dados de acordo
 com as plataformas.
 
 %}}}
-
 \chapter{JUSTIFICATIVA}
 %{{{
 
@@ -335,7 +333,6 @@ com as tecnologias da WEB ou apontam interesse na tecnologia.
 
 
 %}}}
-
 \chapter{REVISÃO BIBLIOGRÁFICA}
 %{{{
 
@@ -1198,7 +1195,6 @@ que estava mais acessível no momento. Mais tarde descobri que de fato
 é assim que de desenvolve.
 
 %}}}
-
 \chapter{METODOLOGIA}
 %{{{
 \thispagestyle{myheadings}
@@ -1247,7 +1243,6 @@ testes do jogo. Este detalhamento deve responder as seguintes perguntas:
 Como recomendação geral, busca-se abster-se da utilização de plugins
 pois estes muitas vezes escondem limitações do HTML em si.
 %}}}
-
 \chapter{PROJETO}
 %{{{
 \thispagestyle{myheadings}
@@ -1285,7 +1280,6 @@ as coisas em detrimento do refinamento da pesquisa.
 \end{figure}
 
 %}}}
-
 \chapter{RESULTADOS}
 %{{{
 \thispagestyle{myheadings}
@@ -1395,7 +1389,6 @@ Desktop/Firefox
 Desktop/Google Chrome
 Smatphone/Android
 %}}}
-
 \chapter{CONCLUSÕES}
 %{{{
 \thispagestyle{myheadings}
@@ -1427,15 +1420,16 @@ Trabalhos que explorem os benefícios mercadológicos do HTML5 em comparação c
 EMACSCRIPT 7
 
 %}}}
+%Bibliograpy
+%{{{ 
 
 \clearpage
 \markboth{}{}
 \printbibliography[heading=bibintoc,title={REFERÊNCIAS BIBLIOGRÁFICAS}]
 \markboth{}{}
+%}}}
 \appendix
-
 %{{{
-%\pagenumbering{gobble}
 
 \chapter{CONVERSORES PARA HTML5}
 Além da possibilidade de escrever em HTML, pode-se optar pela
@@ -1575,7 +1569,6 @@ contendo os fontes – ou apontando para um repositório no GitHub –
 que no tempo desta pesquisa não estava funcionando; e se gere o APK
 para o Android nativamente.
 
-%}}}
 
 \subsection{BIBLIOTECAS WEB}
 
@@ -1586,5 +1579,6 @@ para JavaScript.
 
 O motor de renderização do HTML5 do Firefox é o XXX. O motor de
 JavaScript é o.
+%}}}
 
 \end{document}
