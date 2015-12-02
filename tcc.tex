@@ -1061,17 +1061,11 @@ WEBGL.
 
 %}}}
 \section{Codecs}
-
+%{{{
 Para falar sobre audio e vídeo precisamos primeiramente introduzir o conceito de codecs. Codec - é o algorítmo usado para encodificar o video em um conjunto de bits \cite{diveIntohtml}.
 
 Codecs é uma área problemática do HTML5. Segundo \cite{diveIntohtml} não existe uma única combinação de containers e codecs que funcionem em todos os navegadores.
 
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{codec.png}
-	\caption{Comparação de codecs de áudio}
-\end{figure}
 
 \section{AUDIO}
 %{{{
@@ -1098,7 +1092,25 @@ disponibilizados por SDKs nativas.
 flexibilidade na manipulação de audio. Essa tecnologia é muito mais
 nova do que a tag áudio.
 
-FORMATOS DE ÁUDIO
+Segue uma lista de alguns dos codecs de audio:
+\begin{itemize}
+    \item{MPEG4}
+    \item{Flash Video}
+    \item{Ogg} (for video Theora), (audio Vorbis)
+    \item{WebM}
+    \item{Matroska}
+    \item{Audio Video Interleave}
+\end{itemize}
+
+A figura \ref{fig:audioCodecs} é um comparativo interessante sobre os formatos existentes, considerando o fator taxa de bits versus qualidade.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{codec.png}
+	\caption{Comparação de codecs de áudio}
+    \label{fig:audioCodecs}
+\end{figure}
+
 
 %}}}
 
@@ -1118,6 +1130,8 @@ AVI e MP4 são apenas containers de formatos. Como um arquivo zip, podendo conte
 Existem formatos desenvolvidos especificamente para a Web. Buscam uma razão de tamanho e qualidade aceitável, mas prezando por tamanho. A maioria dos codecs de vídeo não mudam todo o conteúdo de um quadro para o próximo, possibilitando maiores taxas de compressão, que resulta em arquivos menores \autocite{diveIntohtml}.
 
 O projeto \textit{Vídeo for Everybody} \begin{verbatim} http://camendesign.com/code/video_for_everybody \end{verbatim} é um polyfill que recorre à flash quando o vídeo não é suportado pelo navegador.
+%}}}
+
 %}}}
 
 \section{OFFLINE E ARMAZENAMENTO}
