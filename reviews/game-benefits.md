@@ -4,9 +4,6 @@
 ##Year 2014
 
 #Quotes
-The nature of these games has changed dramatically in the last decade,
-becoming increasingly complex, diverse, realistic, and social in nature
-(Ferguson & Olson, 2013).
 
 Children use play to work them out through pretend-based narratives
 enacted either alone or with friends
@@ -17,10 +14,6 @@ say what the effects of food are (Baliver et al. 2011, p. 763).
 Those in shooter video game condition show faster and more accurate
 attention allocation, higher spatial resolution in visual processing and
 enhanced mental rotation abilities.
-
-Spatial skills improvements derived from playing commercially available
-shooter video games are comparable to the effects of formal (high school
-and university-level) courses aimed at enhancing this same skills.
 
 Established the power of spatial skills in predicting achievement in
 science, technology, engineering, and mathematics.

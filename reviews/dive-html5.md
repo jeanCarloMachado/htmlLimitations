@@ -7,13 +7,6 @@ forces developers to do at least some set of the markup on
 javascript, it may be a limitation factor for the generalized use
 of HTML5.
 
-Placeholders is an HTML5 feature.
-
-The http meta encoding header overwrites the html meta one.
-
-There is no canvas 3D, but many vendors tried to specify their
-API's pg. 111.
-
 When you "watch a video", your video player is doing at least
 three things at once:
 
@@ -76,22 +69,6 @@ device-specific geolocation API's.
 
 Persistent local storage is one fo the areas where native client
 applications have held an advantage over web applications.
-
-In 2007, Google launched Gears, an open source browser plugin
-aimed at providing additional capabilities in browsers.
-
-(about web sql) ...all interested implementors have used the same
-SQL backend (Sqlite), but we need multiple independent
-implementations to proceed along a standardisation path. Until
-another implementor is interested in implementing this spec, the
-description of the SQL dialect has been left as simply a reference
-to Sqlite, which isn't acceptable for a standard.
-
-At it's simplest, an off-line web application is a list of URLs -
-HTML, CSS, JavaScript, images or any other kind of resource
-
-...this is web development we're talking about. Nothing ever just
-works.
 
 (wen off-line downloading fails) Your browser will fire the error
 event, but there is no indication of what the actual problem was.
