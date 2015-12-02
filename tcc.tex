@@ -457,7 +457,6 @@ forçados a desenvolver uma versão do jogo para cada plataforma alvo.
 \end{itemize}
 
 %}}}
-
 \section{WEB}
 %{{{
 
@@ -486,7 +485,6 @@ Neste conjunto inclui-se:
 
 A tecnologia chave que inaugurou e alavancou este processo é o HTML.
 %}}}
-
 \section{HTML}
 %{{{
 
@@ -594,41 +592,6 @@ que viabilizam a construção de jogos foram adicionados.
 \caption{Exemplo de documento HTML5}
 \label{fig:htmlSample}
 \end{figure}
-
-Visto que nenhum navegador implementa a especificação completamente,
-cabe ao desenvolvedor detectar os navegadores que não comportam as
-necessidades tecnológicas dos aplicativos que cria. Ao deparar-se com uma funcionalidade
-faltante o desenvolvedor tem duas possibilidades: notificar o usuário sobre o
-problema ou utilizar polyfills.
-
-Polyfills são recursos que simulam uma funcionalidade não disponível para
-os navegadores que não suportam determinada especificação. A biblioteca
-https://github.com/google/canvas-5-polyfill é um exmplo. Esta serve para
-suprir aos navegadores que ainda não implementaram, os últimos recursos
-da especificação CANVAS, como o recurso de desenhar elipses e o caminho 2D.
-
-Detectar suporte aos mais variados recursos do HTML5 no navegador
-é uma tarefa indediante. Pode-se implementar testes para
-cada funcionalidade utilizada abordando os detalhes de implementação
-de cada uma ou então fazer uso de alguma biblioteca especializada
-neste processo. O Modernizr é uma opção open-source deste tipo de
-biblioteca, este gera uma lista de booleanos sobre grande variedade dos
-recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e
-local storage.
-
-Um dos objetivos chave do HTML é manter a retrocompatiblidade,
-interpretadores HTML atingem isso ignorando os elementos que não conhecem, tratando apenas
-seu vocabuliário. Esse mecanismo permite que os desenvolvedores incluam
-marcação de reserva dentro dos elementos que podem ser não suportados.
-O elemento span na \ref{fig:htmlSample} só aparecerá para o usuário caso seu
-navegador não suporte a tag vídeo.
-
-Uma boa referência de recursos suportados pelos navegadores é o site
-http://caniuse.com/.
-
-Além da convencional linguagem de marcação; HTML5 ou "HTML5 e amigos"
-é muitas vezes interpretado como um conceito guarda chuva para designar
-as tecnologias da web HTML, CSS3 e JavaScript.
 
 \begin{figure}
     \centering
@@ -890,6 +853,108 @@ abre espaço para otimizações.
 
 %}}}
 
+\section{DETECÇÃO DE RECURSOS}
+
+Visto que nenhum navegador implementa a especificação completamente,
+cabe ao desenvolvedor detectar os navegadores que não comportam as
+necessidades tecnológicas dos aplicativos que cria. Ao deparar-se com uma funcionalidade
+faltante o desenvolvedor tem duas possibilidades: notificar o usuário sobre o
+problema ou utilizar polyfills.
+
+Polyfills são recursos que simulam uma funcionalidade não disponível para
+os navegadores que não suportam determinada especificação. A biblioteca
+https://github.com/google/canvas-5-polyfill é um exmplo. Esta serve para
+suprir aos navegadores que ainda não implementaram, os últimos recursos
+da especificação CANVAS, como o recurso de desenhar elipses e o caminho 2D.
+
+Detectar suporte aos mais variados recursos do HTML5 no navegador
+é uma tarefa entediante. Pode-se implementar testes para
+cada funcionalidade utilizada abordando os detalhes de implementação
+de cada uma ou então fazer uso de alguma biblioteca especializada
+neste processo. O Modernizr é uma opção open-source deste tipo de
+biblioteca, este gera uma lista de booleanos sobre grande variedade dos
+recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e
+local storage.
+
+Um dos objetivos chave do HTML é manter a retrocompatibilidade,
+interpretadores HTML atingem isso ignorando os elementos que não
+conhecem, tratando apenas seu vocabulário. Esse mecanismo permite que
+os desenvolvedores incluam marcação de reserva dentro dos elementos
+que podem ser não suportados. O elemento span na \ref{fig:htmlSample}
+só aparecerá para o usuário caso seu navegador não suporte a tag
+vídeo.
+
+Uma boa referência de recursos suportados pelos navegadores é o site
+http://caniuse.com/.
+
+Além da convencional linguagem de marcação; HTML5 ou "HTML5 e amigos"
+é muitas vezes interpretado como um conceito guarda chuva para designar
+as tecnologias da web HTML, CSS3 e JavaScript.
+
+\section{NAVEGADORES}
+%{{{
+Aplicações do lado do cliente geralmente se comunicam com um
+servidor através de documentos em HTTP. Quado o navegador recebe um
+destes pacotes em HTML ele começa o processo de renderização. A
+renderização pode requisitar outros arquivos a fim de completar a
+experiência desenvolvida para o endereço em questão.
+
+Nos navegadores os usuários necessitam localizar a página que desejam,
+sabendo o endereço, ou pesquisando em buscadores. Isso é um processo
+árduo para a plataformas móveis pois necessitam maior interação
+do usuários e não são “naturais” se comparado ao modo normal
+de consumir aplicativos nestas mesmas plataformas – simplesmente
+adquirindo o aplicativo na loja e abrindo-o no sistema operacional.
+Alguns contornos para este problema serão descritos nas tecnologias
+offline.
+
+Para transformar as instruções retornadas pelo servidor em algo útil
+para o usuário final os navegadores geralmente fazem uso de bibliotecas
+externas capazes de interpretar HTML5 e gerar o conteúdo iterativo.
+
+Os navegadores são geralmente compostos por um motor de renderização (engine)
+e por um motor de JavaScript.
+
+Alguns motores de renderização incluem:
+
+\begin{itemize}
+    \item Blink: Utilizada no Chromium e projetos relacionados, Opera
+    \item Gecko: Utilizada nos produtos da Mozilla
+    \item KHTML: Utilizada no navegador Konkeror, esta serviu de base para o Blink
+    \item WebKit: Utilizada no Safari e versões antigas do Google Chrome.
+\end{itemize}
+
+Alguns motores de javascript incluem:
+
+\begin{itemize}
+    \item SpiderMonkey: Primeiro motor, desenvolvido por Brendan Eich, escrito em C++
+    \item Rhino: Criada pela Netscape, escrito em Java
+    \item Nitro: Criada pela Apple
+    \item V8: Criada pelo Google
+    \item TraceMonkey: Criada pela Mozilla
+\end{itemize}
+
+\section{ANDROID}
+%{{{
+
+É um sistema operacional *open-source* desenvolvido pela Google.
+Utiliza o kernel Linux .
+Softwares para Android são geralmente escritos em Java e executados
+através da máquina virtual Dalvik.
+
+É similar a máquina virtual Java, mas roda um  .
+formato de arquivos diferenciado (dex), otimizados para consumir pouca .
+memória, que são agrupados em um único Android Package (apk) Android.
+permite a renderização de documentos HTML através de sua própria   .
+API WEBVIEW. Ou através do navegador disponibilizado por padrão, ou  .
+outros de terceiros como o Google Chrome, Firefox, Opera, etc          .
+
+No quesito jogos para dispositivos móveis é preferível disponibilizar
+os jogos através da interface nativa pois dá a sensação de
+continuidade para com os demais aplicativos instalados no dispositivo.
+
+%}}}
+
 \section{RENDERIZAÇÃO}
 
 Renderização é parte fundamental de muitos jogos. As tecnologias atualmente existes são o SVG e Canvas.
@@ -897,7 +962,6 @@ Renderização é parte fundamental de muitos jogos. As tecnologias atualmente e
 \subsection{SVG}
 %{{{
 SVG (\textit{Gráficos de vetores escaláveis}), é uma linguagem baseada em XML para marcar vetores bidimensionais e mapa de bits \autocite{html5mostwanted}.
-
 
 Entre os benefícios do SVG encontram-se:
 
@@ -1089,76 +1153,11 @@ Links com manifestos
 Aplicativos baseados na web não requerem instalação ou atualizações manuais e sua distribuição é superior ao estilo convencional de aplicações desktop \autocite{browserGamesTechnologyAndFuture}.
 
 \section{INSTALAÇÃO}
-
+%{{{
 Este método é benéfico pois possibilita ao usuário a mesma
 experiência ao adquirir uma aplicação normal. Este tipo de
 aplicação é comummente referido como "híbrido".
-
-\section{ANDROID}
-%{{{
-
-É um sistema operacional *open-source* desenvolvido pela Google.
-Utiliza o kernel Linux .
-Softwares para Android são geralmente escritos em Java e executados
-através da máquina virtual Dalvik.
-
-É similar a máquina virtual Java, mas roda um  .
-formato de arquivos diferenciado (dex), otimizados para consumir pouca .
-memória, que são agrupados em um único Android Package (apk) Android.
-permite a renderização de documentos HTML através de sua própria   .
-API WEBVIEW. Ou através do navegador disponibilizado por padrão, ou  .
-outros de terceiros como o Google Chrome, Firefox, Opera, etc          .
-
-No quesito jogos para dispositivos móveis é preferível disponibilizar
-os jogos através da interface nativa pois dá a sensação de
-continuidade para com os demais aplicativos instalados no dispositivo.
-
 %}}}
-
-\section{NAVEGADORES}
-%{{{
-
-Aplicações do lado do cliente geralmente se comunicam com um
-servidor através de documentos em HTTP. Quado o navegador recebe um
-destes pacotes em HTML ele começa o processo de renderização. A
-renderização pode requisitar outros arquivos a fim de completar a
-experiência desenvolvida para o endereço em questão.
-
-Nos navegadores os usuários necessitam localizar a página que desejam,
-sabendo o endereço, ou pesquisando em buscadores. Isso é um processo
-árduo para a plataformas móveis pois necessitam maior interação
-do usuários e não são “naturais” se comparado ao modo normal
-de consumir aplicativos nestas mesmas plataformas – simplesmente
-adquirindo o aplicativo na loja e abrindo-o no sistema operacional.
-Alguns contornos para este problema serão descritos nas tecnologias
-offline.
-
-Para transformar as instruções retornadas pelo servidor em algo útil
-para o usuário final os navegadores geralmente fazem uso de bibliotecas
-externas capazes de interpretar HTML5 e gerar o conteúdo iterativo.
-
-Os navegadores são geralmente compostos por um motor de renderização (engine)
-e por um motor de JavaScript.
-
-Alguns motores de renderização incluem:
-
-\begin{itemize}
-    \item Blink: Utilizada no Chromium e projetos relacionados, Opera
-    \item Gecko: Utilizada nos produtos da Mozilla
-    \item KHTML: Utilizada no navegador Konkeror, esta serviu de base para o Blink
-    \item WebKit: Utilizada no Safari e versões antigas do Google Chrome.
-\end{itemize}
-
-Alguns motores de javascript incluem:
-
-\begin{itemize}
-    \item SpiderMonkey: Primeiro motor, desenvolvido por Brendan Eich, escrito em C++
-    \item Rhino: Criada pela Netscape, escrito em Java
-    \item Nitro: Criada pela Apple
-    \item V8: Criada pelo Google
-    \item TraceMonkey: Criada pela Mozilla
-\end{itemize}
-
 
 \section{TRABALHOS SIMILARES}
 
@@ -1171,15 +1170,6 @@ preciso quanto este
 
 %}}}
 
-\section{O JOGO}
-Finalizada a revisão bibliográfica será descrito os detalhes da implementação do jogo.
-
-Devido ao fato deste trabalho explorar as limitações dos jogos em
-HTML5, optei por evitar a utilização de plugins e ferramentas de
-terceiros que pudessem ocultar alguma limitação.
-
-Escolhi a simplicidade para não precisar ficar muito tempo aprendendo
-as coisas em detrimento do refinamento da pesquisa.
 
 \section{MECÂNICA}
 
@@ -1264,6 +1254,14 @@ pois estes muitas vezes escondem limitações do HTML em si.
 
 O loop do jogo deve executar as seguintes ações...
 
+Finalizada a revisão bibliográfica será descrito os detalhes da implementação do jogo.
+
+Devido ao fato deste trabalho explorar as limitações dos jogos em
+HTML5, optei por evitar a utilização de plugins e ferramentas de
+terceiros que pudessem ocultar alguma limitação.
+
+Escolhi a simplicidade para não precisar ficar muito tempo aprendendo
+as coisas em detrimento do refinamento da pesquisa.
 
 \begin{figure}
     \centering
