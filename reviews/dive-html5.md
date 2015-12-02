@@ -1,24 +1,3 @@
-#Dive into HTML5
-#Mark Pilgrim
-
-##Quotes
-
-HTML has never been pure, and all attempt to purify it have been
-spectacular failures, matched only by the attempts to replace it.
-
-Because it's just a markup instead of a script, the behaviour will
-be consistent across all websites.
-
-The HTML 4 errata document lists four outright errors in HTML 4
-specification.
-
-###History api
-
-Title can be any string. This parameter is currently unused by
-major browsers. If you want to set the page title, you should
-store it in the state argument and set it manually in your
-popstate callback.
-
 ##Notes
 
 This work lists features of HTML5 with nice and detailed methods of
