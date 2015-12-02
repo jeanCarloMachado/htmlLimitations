@@ -573,6 +573,18 @@ atualmente existem mais de cem \autocite{diveIntohtml}.
 Não obstante, foi no HTML5 que a maior parte dos elementos
 que viabilizam a construção de jogos foram adicionados.
 
+Um dos objetivos chave do HTML é manter a retrocompatibilidade,
+interpretadores HTML atingem isso ignorando os elementos que não
+conhecem, tratando apenas seu vocabulário. Esse mecanismo permite que
+os desenvolvedores incluam marcação de reserva dentro dos elementos
+que podem ser não suportados. O elemento span na \ref{fig:htmlSample}
+só aparecerá para o usuário caso seu navegador não suporte a tag
+vídeo.
+
+Além da convencional linguagem de marcação; HTML5 ou "HTML5 e amigos"
+é muitas vezes interpretado como um conceito guarda chuva para designar
+as tecnologias da web HTML, CSS3 e JavaScript.
+
 \begin{figure}
 \centering
 \begin{verbatim}
@@ -867,6 +879,9 @@ https://github.com/google/canvas-5-polyfill é um exmplo. Esta serve para
 suprir aos navegadores que ainda não implementaram, os últimos recursos
 da especificação CANVAS, como o recurso de desenhar elipses e o caminho 2D.
 
+Algumas funcionalidades do HTML, como geolocalização e vídeo foram primeiramente
+disponibilizadas através de plugins como o Gears ou Flash. Outras funcionalidades, como o Canvas, podem ser totalmente emuladas via JavaScript \autocite{diveIntohtml}.
+
 Detectar suporte aos mais variados recursos do HTML5 no navegador
 é uma tarefa entediante. Pode-se implementar testes para
 cada funcionalidade utilizada abordando os detalhes de implementação
@@ -876,20 +891,9 @@ biblioteca, este gera uma lista de booleanos sobre grande variedade dos
 recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e
 local storage.
 
-Um dos objetivos chave do HTML é manter a retrocompatibilidade,
-interpretadores HTML atingem isso ignorando os elementos que não
-conhecem, tratando apenas seu vocabulário. Esse mecanismo permite que
-os desenvolvedores incluam marcação de reserva dentro dos elementos
-que podem ser não suportados. O elemento span na \ref{fig:htmlSample}
-só aparecerá para o usuário caso seu navegador não suporte a tag
-vídeo.
-
 Uma boa referência de recursos suportados pelos navegadores é o site
 http://caniuse.com/.
 
-Além da convencional linguagem de marcação; HTML5 ou "HTML5 e amigos"
-é muitas vezes interpretado como um conceito guarda chuva para designar
-as tecnologias da web HTML, CSS3 e JavaScript.
 
 \section{NAVEGADORES}
 %{{{
@@ -1089,7 +1093,6 @@ Codec - é o algorítmo usado para encodificar o video em um conjunto de bits \c
 
 Um formato de vídeo é a combinação de várias tecnologias.
 
-
 AVI e MP4 são apenas containers de formatos. Como um arquivo zip, podendo conter qualquer coisa dentro de si \autocite{diveIntohtml}.
 
 Existem formatos desenvolvidos especificamente para a Web. Buscam uma razão de tamanho e qualidade aceitável, mas prizando por tamanho. A maioria dos codecs de vídeo não mudam todo o conteúdo de um frame para o próximo, possibilitando maiores taxas de compressão, que resulta em arquivos menores \autocite{diveIntohtml}.
@@ -1244,6 +1247,7 @@ testes do jogo. Este detalhamento deve responder as seguintes perguntas:
 
 Como recomendação geral, busca-se abster-se da utilização de plugins
 pois estes muitas vezes escondem limitações do HTML em si.
+%}}}
 
 \chapter{PROJETO}
 \thispagestyle{myheadings}
@@ -1280,9 +1284,6 @@ as coisas em detrimento do refinamento da pesquisa.
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{settings.png}
 	\caption{Configurações do jogo}
 \end{figure}
-
-
-
 
 %}}}
 

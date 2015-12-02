@@ -3,10 +3,6 @@
 
 ##Quotes
 
-HTML5 features like geolocation and Video we're first provided by
-browser plugins like Gears or Flash. Other features, like canvas, can be
-emulated entirely by JavaScript.
-
 The idea that the best way to fix HTML is to replace it with something
 else still pops up from time to time.
 
