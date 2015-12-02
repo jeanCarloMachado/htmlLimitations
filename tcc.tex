@@ -457,7 +457,6 @@ forçados a desenvolver uma versão do jogo para cada plataforma alvo.
 %{{{
 
 \subsection{OPEN WEB}
-
 A OWP (\textit{Open Web Platform}), uma coleção de tecnologias livres,
 amplamente utilizadas e padronizadas.
 Quando uma tecnologia se torna amplamente popular, através da
@@ -942,8 +941,16 @@ Alguns motores de JavaScript incluem:
     \item TraceMonkey: Criada pela Mozilla
 \end{itemize}
 
-O suporte à HTML vem crescendo com o tempo, 
+O suporte à HTML vem crescendo com o tempo, o site HTML5Test http://html5test.com/about.html, oferece um placar atualizado dinamicamente, conforme utilização dos navegaores, sobre os recursos do HTML.
 
+A figura \ref{fig:audioCodecs} apresenta o gráfico de suporte por versões de navegadores em dezembro de 2015.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{htmlSupport.png}
+	\caption{Suporte das especificações do HTML nos navegadores}
+    \label{fig:htmlSupport}
+\end{figure}
 
 \section{ANDROID}
 %{{{
@@ -1147,7 +1154,6 @@ Alguns codecs de vídeo
 
 %}}}
 %}}}
-
 \section{OFFLINE E ARMAZENAMENTO}
 Não é extraordinário que um jogo tenha que ser reverso para um estado
 válido anterior por motivo de um erro na base de dados \autocite[pp. 5]{browserGamesTechnologyAndFuture}.
@@ -1180,6 +1186,10 @@ Todos os implementadores interessados utilizaram a mesma tecnologia (Sqlite), ma
 para a padronização ficar completa é necessário múltiplas implementações. Até outro implementador se interessar em desenvolver a especificação a descriação do dialeto SQL apenas referencia o SQLITE, o que não é aceitável para um padrão.
 \end{quote}
 
+Web Sql foi depreciado em favor da especificação do IndexedDb.
+Não obstante, IndexedDb ainda é comummente utilizado em sistemas móveis \autocite{html5Test}.
+
+\subsection{IndexedDb}
 \section{ENTRADA DE COMANDOS}
 
 Na construção da grande maioria dos jogos é muitas vezes
@@ -1215,7 +1225,6 @@ trabalho. Em outras palavras seu escopo é mais genérico e não tão
 preciso quanto este
 
 %}}}
-
 \chapter{METODOLOGIA}
 %{{{
 \thispagestyle{myheadings}
@@ -1287,7 +1296,6 @@ Argumentos à favor da escolha do game: Tem profundidade, permite a
 adição de novos recursos no futuro;
 É facilmente traduzível em tamanhos de telas diferentes e tipos de
 entrada de dados diferentes;
-%}}}
 
 \section{Requisitos}
 \section{Modelagem}
@@ -1622,5 +1630,4 @@ para JavaScript.
 O motor de renderização do HTML5 do Firefox é o XXX. O motor de
 JavaScript é o.
 %}}}
-
 \end{document}
