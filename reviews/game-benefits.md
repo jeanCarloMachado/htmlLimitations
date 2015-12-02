@@ -65,10 +65,6 @@ suggest(Ferguson, 2013)
 
 More than 70% of the individual who play games are adults.
 
-Because of their diversity in items of genres and the vast array
-of dimensions on which video games can vary, a comprehensive
-taxonomy of contemporary games is exceedingly difficult to develop
-(many have tried). pg 60
 
 #Notes
 Good font of references of the benefit of gaming
