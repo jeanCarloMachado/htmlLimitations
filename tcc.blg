@@ -2,6 +2,10 @@ This is BibTeX, Version 0.99d (TeX Live 2015/Arch Linux)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: tcc.aux
 The style file: biblatex.bst
+White space in argument---line 114 of file tcc.aux
+ : \citation{[pp.
+ :                5]browserGamesTechnologyAndFuture}
+I'm skipping whatever remains of this command
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
@@ -59,3 +63,4 @@ warning$ -- 0
 while$ -- 255
 width$ -- 0
 write$ -- 293
+(There was 1 error message)

@@ -19,7 +19,6 @@ Game engines ... Have not established in browser game development.
 A modern game engine is a massive collection of software
 components. (pg5)
 
-
 Building security for browser-based game starts from design of the
 game application logic.
 
