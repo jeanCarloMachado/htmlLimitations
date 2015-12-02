@@ -535,9 +535,10 @@ apresentação.
 
 Além do HTML, existe o XHTML, que é uma iniciativa de utilização
 de XML nas páginas da web. O XML é um padrão mais rigoroso que SGML
-e resulta em páginas sem problemas de sintaxe e tipografia, 
+e resulta em páginas sem problemas de sintaxe e tipografia,
 que podem ser mais facilmente interpretadas por
-outras tecnologias, como sistemas de terceiros, etc.
+outras tecnologias, como sistemas de terceiros, etc. Alguns estimam
+que 99 por cento das paginas HTML de hoje contenham ao menos um erro de estrutura \autocite{diveIntohtml}.
 
 Para transformar o HTML em algo visível os navegadores utiliza-se
 de motores de renderização. O primeiro passo é decodificar o documento HTML
@@ -557,7 +558,9 @@ a compatibilidade das versões anteriores e acabou por sendo descontinuado.
 Outrossim, a maioria das versões HTML de grande sucesso foram versões de
 retrospectiva (\textit{"retro-specs"}). Versões que não tentavam
 idealizar a linguagem, buscando alinhar-se com os requerimentos do
-mercado \autocite{diveIntohtml}.
+mercado \autocite{diveIntohtml}. Não obstante, a ideia que a melhor forma
+de ajustar o HTML é substituindo ele por outra coisa ainda aparece de tempos
+em tempos \autocite{diveIntohtml}.
 
 Uma página HTML consiste em elementos que podem ter seu comportamento
 alterado através de atributos. Um elemento é o abrir fechar de
@@ -991,30 +994,34 @@ Entre os benefícios do SVG encontram-se:
 
 A tag \textit{canvas} define uma camada de mapa de bits em documentos
 HTML que pode ser usada para criar diagramas, gráficos e animações
-2D. Em um documento HTML, Canvas é um retângulo onde pode-se usar
-JavaScript para desenhar \autocite{diveIntohtml}. Foi criada pela Apple
+2D. Foi criada pela Apple
 em 2004 para renderizar elementos de interface no Webkit, logo foi
-adotado por outros navegadores e se tornou um padrão. A API canvas
-cresceu com o tempo, e algumas funcionalidades - como suporte a texto,
-foram adicionadas tardiamente. E alguns navegadores lançaram antes
-da especificação estar completa e hoje tem problema de suporte para
-essas áreas \autocite{diveIntohtml}. Apesar de muitas vezes incompleto,
-o canvas é suportado em todos os maiores navegadores à partir do
-Internet Explorer 9.
+adotado por outros navegadores e se tornou um padrão.
 
-Tem dois tamanhos, o tamanho do elemento e da superfície de
-desenho. Quando o tamanho do elemento é maior do que o da superfície
-de desenho do documento escala a superfície de desenho para preencher o
-elemento, o que pode gerar resultados inesperados.
+A API canvas cresceu com o tempo, e algumas funcionalidades - como
+suporte a texto, foram adicionadas tardiamente. E alguns navegadores
+lançaram antes da especificação estar completa e hoje tem problema
+de suporte para essas áreas \autocite{diveIntohtml}. Apesar de muitas
+vezes incompleto, o canvas é suportado em todos os maiores navegadores
+à partir do Internet Explorer 9.
 
 Apesar de ser largamente suportado nos navegadores atuais, canvas ainda
 sofre de problemas de performance. Para navegadores antigos - abaixo do
-Internet Explorer 9 - existe a biblioteca Explorer Canvas do Google, que
+Internet Explorer 9 - existe o polyfill Explorer Canvas do Google, que
 emula em JavaScript as funcionalidades do canvas. O FastCanvas é uma
 iniciativa híbrida para Android que busca mitigar os problemas de
 performance do Canvas com uma API nativa. Não obstante, o FastCanvas
 não suporta a especificação do canvas completamente, não permite ser
 integrado com outros elementos do DOM.
+
+Em um documento HTML, Canvas é um retângulo onde pode-se usar
+JavaScript para desenhar \autocite{diveIntohtml}.
+
+Canvas tem uma característica peculiar quanto ao seu tamanho.
+Em suma existem dois tamanhos, o tamanho do elemento e da superfície de
+desenho. Quando o tamanho do elemento é maior do que o da superfície
+de desenho do documento escala a superfície de desenho para preencher o
+elemento, o que pode gerar resultados inesperados.
 
 Algumas outras fraquezas do canvas são:
 \begin{itemize}

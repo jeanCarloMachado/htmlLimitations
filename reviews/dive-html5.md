@@ -3,20 +3,8 @@
 
 ##Quotes
 
-The idea that the best way to fix HTML is to replace it with something
-else still pops up from time to time.
-
-Most of the successful versions of HTML have been "retro-specs",
-catching up to the world while simultaneously trying to nudge it in th
-right direction.
-
 HTML has never been pure, and all attempt to purify it have been
 spectacular failures, matched only by the attempts to replace it.
-
-The one's that win are the one's that ship.
-
-By some estimates, over 99% of HTML pages on the web today have at least
-one error in them.
 
 The canvas API grew over time, and the text functions we're added late in
 the game. Some browsers shipped with canvas support before the text API
