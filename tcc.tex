@@ -1092,14 +1092,12 @@ disponibilizados por SDKs nativas.
 flexibilidade na manipulação de audio. Essa tecnologia é muito mais
 nova do que a tag áudio.
 
-Segue uma lista de alguns dos codecs de audio:
+
+Abaixo segue alguns dos codecs de audio tradicionais:
 \begin{itemize}
-    \item{MPEG4}
-    \item{Flash Video}
-    \item{Ogg} (for video Theora), (audio Vorbis)
-    \item{WebM}
-    \item{Matroska}
-    \item{Audio Video Interleave}
+    \item{MP3 - not patent free}
+    \item{ACC: advanced audio coding, is patent encumbered}
+    \item{Vorbis - patent free}
 \end{itemize}
 
 A figura \ref{fig:audioCodecs} é um comparativo interessante sobre os formatos existentes, considerando o fator taxa de bits versus qualidade.
@@ -1110,6 +1108,8 @@ A figura \ref{fig:audioCodecs} é um comparativo interessante sobre os formatos 
 	\caption{Comparação de codecs de áudio}
     \label{fig:audioCodecs}
 \end{figure}
+
+
 %}}}
 
 \section{VIDEO}
@@ -1128,8 +1128,26 @@ AVI e MP4 são apenas containers de formatos. Como um arquivo zip, podendo conte
 Existem formatos desenvolvidos especificamente para a Web. Buscam uma razão de tamanho e qualidade aceitável, mas prezando por tamanho. A maioria dos codecs de vídeo não mudam todo o conteúdo de um quadro para o próximo, possibilitando maiores taxas de compressão, que resulta em arquivos menores \autocite{diveIntohtml}.
 
 O projeto \textit{Vídeo for Everybody} \begin{verbatim} http://camendesign.com/code/video_for_everybody \end{verbatim} é um polyfill que recorre à flash quando o vídeo não é suportado pelo navegador.
-%}}}
 
+
+Segue uma lista de alguns dos containers de video:
+\begin{itemize}
+    \item{MPEG4}
+    \item{Flash Video}
+    \item{Ogg} (for video Theora), (audio Vorbis)
+    \item{WebM}
+    \item{Matroska}
+    \item{Audio Video Interleave}
+\end{itemize}
+
+Alguns codecs de vídeo
+\begin{itemize}
+    \item{H.264, is one of the video codecs mandated by the Blue-Ray specification}
+    \item{Theora, native in Linux}
+    \item{VP8 royality free from Google}
+\end{itemize}
+
+%}}}
 %}}}
 
 \section{OFFLINE E ARMAZENAMENTO}

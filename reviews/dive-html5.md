@@ -1,10 +1,3 @@
-##Notes
-
-This work lists features of HTML5 with nice and detailed methods of
-checking HTML5 features support pg 35.
-
-Mention a solution for Video: Video for Everybody!
-
 Some things (as geolocation) are different specifications but are
 treated as the HTML5 as well. Others we're splited from the HTML5
 strictly speaking, but are treated once again as HTML5 (as the
@@ -109,26 +102,3 @@ event, but there is no indication of what the actual problem was.
 This cam make debugging off-line web applications even more
 frustrating than usual.
 
-There are over 100 elements in HTML5.
-
-###Video
-Container formats
-
-- MPEG4
-- Flash Video
-- Ogg (for video Theora), (audio Vorbis)
-- WebM
-- Matroska
-- Audio Video Interleave
-
-####Video Codecs
-
-- H.264, is one of the video codecs mandated by the Blue-Ray specification.
-- Theora, native in Linux, 
-- VP8 royality free from Google
-
-####Audio Codecs
-
-- MP3 - not patent free
-- ACC: advanced audio coding, is patent encumbered
-- Vorbis - patent free
