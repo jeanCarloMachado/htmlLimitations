@@ -1026,8 +1026,7 @@ Existem formatos desenvolvidos especificamente para a Web. Buscam uma razão de 
 \section{OFFLINE E ARMAZENAMENTO}
 
 Não é extraordinário que um jogo tenha que ser reverso para um estado
-válido anterior por motivo de um erro na base de dados \autocite[pp.
-5]{browserGamesTechnologyAndFuture}.
+válido anterior por motivo de um erro na base de dados \autocite[pp. 5]{browserGamesTechnologyAndFuture}.
 
 Uma das grades limitações do HTML era a ausência de capacidade
 de armazenamento de dados. Armazenamento no lado do cliente é um
@@ -1213,11 +1212,22 @@ Com um baseamento teórico substancial, o próximo passo é a criação
 do protótipo de um jogo multiplataforma que utilize recursos
 analisados.
 
-Para capturar todas as limitações presentes, o protótipo deve ser construído sem a ajuda de frameworks ou bibliotecas de terceiros. Eliminando a possibilidade de a limitação ter sido tratada  por terceiros.
+Para capturar todas as limitações presentes, o protótipo deve ser
+construído sem a ajuda de frameworks ou bibliotecas de terceiros.
+Eliminando a possibilidade de a limitação ter sido tratada por
+terceiros.
 
-Motores de jogos são bibliotecas que agregam várias funcionalidades usualmente úteis para o desenvolvimento de jogos \autocite{[pp.
-5]browserGamesTechnologyAndFuture}. Elas podem incluir controle de usuário, cena, áudio, física, etc.
-Neste trabalho, motores de jogos também foram descartados, visto que na maioria dos casos dependem de bibliotecas de terceiros. Outrossim, motores de jogos não são amplamente difundidos no mercado de jogos de navegadores \autocite{browserGamesTechnologyAndFuture}.
+Motores de jogos são bibliotecas que agregam várias funcionalidades
+usualmente úteis para o desenvolvimento de jogos \autocite[pp.
+5]{browserGamesTechnologyAndFuture}. Elas podem incluir controle
+de usuário, cena, áudio, física, etc. Também servem como uma camada de 
+segurança adicional \autocite{browserGamesTechnologyAndFuture}.
+
+Neste trabalho, motores
+de jogos também foram descartados, visto que na maioria dos casos
+dependem de bibliotecas de terceiros. Outrossim, motores de jogos
+não são amplamente difundidos no mercado de jogos de navegadores
+\autocite{browserGamesTechnologyAndFuture}.
 
 Com o protótipo concebido, o passo que segue é a enumeração, e
 descrição das limitações detectadas no processo de desenvolvimento e
@@ -1233,8 +1243,19 @@ testes do jogo. Este detalhamento deve responder as seguintes perguntas:
 \end{itemize}
 
 Como recomendação geral, busca-se abster-se da utilização de plugins pois estes muitas
+%{{{
 vezes escondem limitações do HTML em si.
 
+%}}}
+
+\chapter{PROJETO}
+\thispagestyle{myheadings}
+%{{{
+\section{Requisitos}
+\section{Modelagem}
+\section{Desenvolvimento}
+
+O loop do jogo deve executar as seguintes ações...
 %}}}
 
 \chapter{RESULTADOS}
