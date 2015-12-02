@@ -737,14 +737,41 @@ Unidades vw e vh para tamanho do viewport
 
 É uma forma de adicionar animações de mudança de estado, em uma página web.
 Com o recurso de transições é possível controlar o tempo da
-troca de estado de um determinado atributo em CSS para outro valor.
+troca de estado de uma determinada propriedade em CSS para outro valor.
 
-Muitos navegadores também suportam aceleração de GPU (Unidade de
-processamento gráfico) para elementos que tenham transformações 3D.
-
-Atualmente um conjunto finito de  propriedades podem ser animados, e essas
+Atualmente um conjunto finito de propriedades podem ser animados, e essas
 lista tende a mudar com o tempo, cabe ao desenvolvedor assegurar-se que 
 determinada propriedade está disponível \autocite{mdnTransitions}.
+
+Transições são interessantes em juntos, principalmente pois
+muitos navegadores suportam aceleração de GPU (Unidade de
+processamento gráfico) para elementos que tenham transformações 3D. Isso
+garante grandes benefícios de performance sobre implementações diretamente
+em JavaScript.
+
+
+
+\begin{figure}
+\centering
+\begin{verbatim}
+<style>
+.test:hover
+{
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+}
+</style>
+\end{verbatim}
+\caption{Exemplo de transição}
+\label{fig:CSSTransition}
+\end{figure}
+
+
+A transição demonstrada na figura \ref{fig:CSSTransition} escala o tamanho do elemento com 
+a classe (test) para vinte porcento a mais do seu tamanho original. Perceba também os comandos repetidos
+com o prefixo ms e webkit. Esse tipo de  abordagem é comum para tecnologias que não passam de rascunhos
+na especificação.
 
 \subsection{Desabilitando elementos do navegador}
 -overscroll
