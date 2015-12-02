@@ -10,11 +10,12 @@ Porting references
 Porting reviews
 Reading book about researches
 Moved from pandoc to latex
+Review HTML section
+Add review section of the prototype
 
 #TODO
 
-Review HTML section
-Add review section of the prototype
+Remove numbering from the bibliography
 Add canvas to the prototype
 Add more content about Audio
 Add more content about Video
@@ -23,3 +24,4 @@ Add more content about Canvas
 Mount a table of limitation
 Write abut web assembly
 Write about phonegap on appendices
+
