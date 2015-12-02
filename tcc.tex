@@ -1087,10 +1087,9 @@ FORMATOS DE ÁUDIO
 
 \section{VIDEO}
 %{{{
-
 Antes do HTML5 era impossível adicionar vídeos nas páginas sem a utilização de algum plugin.
 
-A specificação definie uma tag \textit{video} que pode ser embida em uma página HTML. Segundo \cite{diveIntohtml} não existem restrições quando ao codec de vídeo ou áudio, um elemento vídeo pode fazer referência a múltiplos arquivos de vídeos, cabe ao navegador decidir qual arquivo de fato será executado.
+A especificação define uma tag \textit{video} que pode ser embida em uma página HTML. Segundo \cite{diveIntohtml} não existem restrições quando ao codec de vídeo ou áudio, um elemento vídeo pode fazer referência a múltiplos arquivos de vídeos, cabe ao navegador decidir qual arquivo de fato será executado.
 
 Os navegadores não concordam em qual formato de vídeo suportar.
 Uma tag vídeo pode apontar para vários arquivos em diversos formatos, e os navegadores que suportarem determinado irão escolhê-lo.
@@ -1099,11 +1098,12 @@ Um formato de vídeo é a combinação de várias tecnologias.
 
 AVI e MP4 são apenas containers de formatos. Como um arquivo zip, podendo conter qualquer coisa dentro de si \autocite{diveIntohtml}.
 
-Existem formatos desenvolvidos especificamente para a Web. Buscam uma razão de tamanho e qualidade aceitável, mas prizando por tamanho. A maioria dos codecs de vídeo não mudam todo o conteúdo de um frame para o próximo, possibilitando maiores taxas de compressão, que resulta em arquivos menores \autocite{diveIntohtml}.
+Existem formatos desenvolvidos especificamente para a Web. Buscam uma razão de tamanho e qualidade aceitável, mas prezando por tamanho. A maioria dos codecs de vídeo não mudam todo o conteúdo de um quadro para o próximo, possibilitando maiores taxas de compressão, que resulta em arquivos menores \autocite{diveIntohtml}.
+
+O projeto Vídeo for Everybody  http://camendesign.com/code/video_for_everybody é um polyfill que recorre à flash quando o vídeo não é suportado pelo navegador.
 %}}}
 
 \section{OFFLINE E ARMAZENAMENTO}
-
 Não é extraordinário que um jogo tenha que ser reverso para um estado
 válido anterior por motivo de um erro na base de dados \autocite[pp. 5]{browserGamesTechnologyAndFuture}.
 
@@ -1115,13 +1115,11 @@ aplicações web. O HTML5 solucionou este problema introduzindo várias
 formas de armazenamento de dados \autocite{html5Tradeoffs}.
 
 \subsection{Aplicações offline}
-
 Na sua versão mais simples, um aplicativo offline é um conjunto de
 URLs para arquivos HTML, CSS, JavaScript, imagens ou qualquer outro tipo
 de recurso \autocite{diveIntohtml}.
 
 \subsection{LOCAL STORAGE}
-
 Também conhecido como WebStorage na especificação do HTML5. Provê
 uma forma de armazenar os dados como chave valor dentro do navegador. Os
 dados são persistido mesmo que o navegador seja fechado.
