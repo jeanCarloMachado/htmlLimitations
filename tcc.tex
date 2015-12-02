@@ -335,7 +335,6 @@ com as tecnologias da WEB ou apontam interesse na tecnologia.
 %}}}
 \chapter{REVISÃO BIBLIOGRÁFICA}
 %{{{
-
 \section{JOGOS}
 %{{{
 Segundo \autocite{indieGamesLemes} jogo digital constitui-se em uma
@@ -480,11 +479,9 @@ Neste conjunto inclui-se:
 \item Manutibilidade;
 \end{itemize}
 
+A W3C é a emprese responsável por grande parte das especificações da web como: HTML (pelos menos parcialmente), CSS, entre outros. Não obstante outras partes da especificação como o WEBGL são geridos por outros órgãos.
 
-A W3C é a emprese responsável por grande parte das especificações da web como: HTML (pelos menos parcialmente), CSS, entre outros.
-
-Seu processo consiste na  construção de rascunhos. Esses rascunhos são 
-analisados e refinados. Depois de considerados estáveis os rascunhos viram recomendações.
+O processo da W3C consiste na construção de rascunhos de especificação \textit{working drafts}. Depois de considerados estáveis os rascunhos viram recomendações.
 
 Apesar do processo ser rigoroso, está longe de perfeito.
 
@@ -611,14 +608,14 @@ as tecnologias da web HTML, CSS3 e JavaScript.
 </body>
 </html>
 \end{verbatim}
-\caption{Exemplo de documento HTML5}
+\caption{Exemplo de documento HTML}
 \label{fig:htmlSample}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{html5.jpg}
-	\caption{suite html5}
+    \caption{Suíte HTML}
 \end{figure}
 %}}}
 \subsection{DOM}
@@ -885,9 +882,8 @@ problema ou utilizar polyfills.
 
 Polyfills são recursos que simulam uma funcionalidade não disponível para
 os navegadores que não suportam determinada especificação. A biblioteca
-https://github.com/google/canvas-5-polyfill é um exmplo. Esta serve para
-suprir aos navegadores que ainda não implementaram, os últimos recursos
-da especificação CANVAS, como o recurso de desenhar elipses e o caminho 2D.
+Gears é um exemplo. Esta serve para prover recursos de Geolocalização para
+navegadores que não implementam a especificação do HTML5.
 
 Algumas funcionalidades do HTML, como geolocalização e vídeo foram primeiramente
 disponibilizadas através de plugins como o Gears ou Flash. Outras funcionalidades, como o Canvas, podem ser totalmente emuladas via JavaScript \autocite{diveIntohtml}.
@@ -899,7 +895,7 @@ de cada uma ou então fazer uso de alguma biblioteca especializada
 neste processo. O Modernizr é uma opção open-source deste tipo de
 biblioteca, este gera uma lista de booleanos sobre grande variedade dos
 recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e
-local storage.
+armazenamento local.
 
 Uma boa referência de recursos suportados pelos navegadores é o site
 http://caniuse.com/.
@@ -937,7 +933,7 @@ Alguns motores de renderização incluem:
     \item WebKit: Utilizada no Safari e versões antigas do Google Chrome.
 \end{itemize}
 
-Alguns motores de javascript incluem:
+Alguns motores de JavaScript incluem:
 
 \begin{itemize}
     \item SpiderMonkey: Primeiro motor, desenvolvido por Brendan Eich, escrito em C++
@@ -946,6 +942,9 @@ Alguns motores de javascript incluem:
     \item V8: Criada pelo Google
     \item TraceMonkey: Criada pela Mozilla
 \end{itemize}
+
+O suporte à HTML vem crescendo com o tempo, 
+
 
 \section{ANDROID}
 %{{{
@@ -969,7 +968,7 @@ continuidade para com os demais aplicativos instalados no dispositivo.
 %}}}
 
 \section{RENDERIZAÇÃO}
-%{{{
+%{{
 
 Renderização é parte fundamental de muitos jogos. As tecnologias atualmente existes são o SVG e Canvas.
 
@@ -1042,11 +1041,13 @@ Algumas outras fraquezas do canvas são:
 O canvas até aqui descrito trata-se de sua forma, ou contexto 2D. A
 especificação 3D do canvas é o WebGl.
 
+https://github.com/google/canvas-5-polyfill Esta serve para
+suprir aos navegadores que ainda não implementaram, os últimos recursos
+da especificação CANVAS, como o recurso de desenhar elipses e o caminho 2D.
 %}}}
-
 \section{WEBGL}
 %{{{
-Baseado no OpenGL.
+É Baseado em OpenGL, o órgão que especifica o WEGGL é o mesmoq que especifica o OpenGL: Kronos.
 
 WebGL não foi utilizada no trabalho apesar de ser de grande
 relevância no processo de jogos pois ainda não está completamente
@@ -1058,7 +1059,6 @@ de OPENGL nos dispositivos móveis possibilitando se desenvolver em
 WEBGL.
 
 %}}}
-
 %}}}
 \section{Codecs}
 %{{{
@@ -1095,9 +1095,8 @@ nova do que a tag áudio.
 
 Abaixo segue alguns dos codecs de audio tradicionais:
 \begin{itemize}
-    \item{MP3 - not patent free}
-    \item{ACC: advanced audio coding, is patent encumbered}
-    \item{Vorbis - patent free}
+    \item{MP3: comum, mas não é livre de patentes}
+    \item{ACC: advanced audio coding, is patent encumbered} \item{Vorbis - patent free}
 \end{itemize}
 
 A figura \ref{fig:audioCodecs} é um comparativo interessante sobre os formatos existentes, considerando o fator taxa de bits versus qualidade.
@@ -1167,7 +1166,7 @@ URLs para arquivos HTML, CSS, JavaScript, imagens ou qualquer outro tipo
 de recurso \autocite{diveIntohtml}.
 
 \subsection{LOCAL STORAGE}
-Também conhecido como WebStorage na especificação do HTML5. Provê
+Também conhecido como Web Storage na especificação do HTML5. Provê
 uma forma de armazenar os dados como chave valor dentro do navegador. Os
 dados são persistido mesmo que o navegador seja fechado.
 
@@ -1178,12 +1177,8 @@ e pode ser estendido pelo usuário.
 
 Segundo \cite{diveIntohtml}
 \begin{quote}
-(about web sql) ...all interested implementors have used the same
-SQL backend (Sqlite), but we need multiple independent
-implementations to proceed along a standardisation path. Until
-another implementor is interested in implementing this spec, the
-description of the SQL dialect has been left as simply a reference
-to Sqlite, which isn't acceptable for a standard.
+Todos os implementadores interessados utilizaram a mesma tecnologia (Sqlite), mas
+para a padronização ficar completa é necessário múltiplas implementações. Até outro implementador se interessar em desenvolver a especificação a descriação do dialeto SQL apenas referencia o SQLITE, o que não é aceitável para um padrão.
 \end{quote}
 
 \section{ENTRADA DE COMANDOS}
@@ -1194,7 +1189,7 @@ Este fator muito se amplia na criação de jogos multiplataforma,
 seja através de teclado, tela sensível ou sensor de movimentos, o
 importante é oferecer a melhor experiência possível por plataforma.
 O HTML5 trata todos estes casos abstratamente na forma de eventos, os
-quais podem ser escutados através de listeners. Os eventos básicos
+quais podem ser escutados através de \textit{listeners}. Os eventos básicos
 são: keydown (tecla baixa), keyup (tecla solta) e keypress (tecla
 pressionada).
 
