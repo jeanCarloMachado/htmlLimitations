@@ -3,13 +3,6 @@
 
 ##Quotes
 
-You can't detect "HTML% support", because that doesn't make any sense.
-But you can detect support for individual features like canvas, video,
-or geolocation.
-
-The HTML5 specification also defines how angle brackets interact with
-JavaScript.
-
 HTML5 features like geolocation and Video we're first provided by
 browser plugins like Gears or Flash. Other features, like canvas, can be
 emulated entirely by JavaScript.
