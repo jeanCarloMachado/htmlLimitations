@@ -6,24 +6,11 @@
 HTML has never been pure, and all attempt to purify it have been
 spectacular failures, matched only by the attempts to replace it.
 
-The canvas API grew over time, and the text functions we're added late in
-the game. Some browsers shipped with canvas support before the text API
-was complete. Page 39
-
 Because it's just a markup instead of a script, the behaviour will
 be consistent across all websites.
 
 The HTML 4 errata document lists four outright errors in HTML 4
 specification.
-
-Canvas is a rectangle in your page where you can use JavaScript to
-draw anything you want. The canvas is a two dimensional grid. Pag
-113.
-
-###Video
-
-... "AVI" and "MP4" are just container formats. Just  like a  ZIP
-file can contain any sort of file within it... pg 142
 
 ###History api
 
@@ -33,8 +20,6 @@ store it in the state argument and set it manually in your
 popstate callback.
 
 ##Notes
-
-Content sniffing (ignoring of mime types by browser on circumstances)
 
 This work lists features of HTML5 with nice and detailed methods of
 checking HTML5 features support pg 35.
