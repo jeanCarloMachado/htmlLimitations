@@ -142,7 +142,7 @@ mercado não atendido de qualquer forma.
 A OWP (\textit{Open Web Platform}), uma coleção de tecnologias livres,
 amplamente utilizadas e padronizadas.
 Quando uma tecnologia se torna amplamente popular, através da
-adoção de grandes empresas e desenvolvedores ela se torna candidata a
+adoção de grandes empresas e desenvolvedores, ela se torna candidata a
 adoção pela OWP.
 
 Mais do que um conjunto de tecnologias Open Web, é um conjunto de
@@ -160,7 +160,7 @@ Neste conjunto inclui-se:
 \item Manutibilidade;
 \end{itemize}
 
-A W3C é a emprese responsável por grande parte das especificações
+A W3C é a empresa responsável por grande parte das especificações
 da web como: HTML (em conjunto com a WHATWG), CSS, entre outros. 
 
 O processo da W3C consiste na elaboração de rascunhos de
@@ -173,7 +173,7 @@ errata \autocite{HTML5}.
 
 Outras empresas estão envolvidas nas especificações da web, como a
 ECMA, responsável pelo JavaScript; Kronos, responsável pelo WEBGL,
-entre outros.
+etc.
 
 A tecnologia chave que inaugurou e alavancou este processo é o HTML.
 %}}}
@@ -254,7 +254,7 @@ Antes do HTML5 várias versões foram propostas, algumas radicais
 em seus preceitos. O XHTML 2.0, por exemplo, quebrava com toda
 a compatibilidade das versões anteriores e acabou por sendo descontinuado.
 Outrossim, a maioria das versões HTML de grande sucesso foram versões de
-retrospectiva (\textit{"retro-specs"}). Versões que não tentavam
+retrospectiva (\textit{retro-specs}). Versões que não tentavam
 idealizar a linguagem, buscando alinhar-se com os requerimentos do
 mercado \autocite{diveIntohtml}. Não obstante, a ideia que a melhor forma
 de ajustar o HTML é substituindo ele por outra coisa ainda aparece de tempos
@@ -277,7 +277,7 @@ Uma das características do HTML que o torna tão popular
 Interpretadores HTML atingem isso ignorando os elementos que não
 conhecem, tratando seu vocabulário exclusivamente. Esse mecanismo
 permite que os desenvolvedores incluam marcação de reserva dentro
-dos elementos que podem ser não suportados. O elemento \textit{span}
+dos elementos que podem não ser suportados. O elemento \textit{span}
 na figura \ref{fig:htmlSample} só aparecerá para o usuário caso seu
 navegador não suporta a tag vídeo.
 
@@ -403,18 +403,23 @@ p {
 \label{fig:CSSSample}
 \end{figure}
 
-O CSS é dividido em módulos, contendo aproximadamente 50 deles, cada
-qual evoluindo separadamente. Além do módulos, CSS é organizado por perfis e níveis.
-Os níveis inferiores representam as funcionalidades vitais do CSS, os níveis
-superiores dependem dos inferiores para construir as funcionalidades mais elaboradas.
+CSS é dividido em módulos, que representam conjuntos de
+funcionalidaes, contendo aproximadamente 50 deles, cada qual evoluindo
+separadamente. Além do módulos, CSS também é organizado por perfis e
+níveis.
 
-A primeira especificação do CSS, CSS1 (ou nível 1) foi lançada em 1996. Em 1997 foi lançado o
- CSS2 com o intuito de ampliar a completude do CSS1. Em 1998 iniciou-se o desenvolvimento
- do CSS3 que ainda continua em 2015. Além do nível 3 existem módulos de nível 4 no CSS,
- não obstante o termo CSS3 ainda é o mais utilizado.
+Os perfis do CSS dividem a especificação por dispositivo de
+utilização. Existem perfis para dispositivos móveis, televisores,
+impressoras, etc. Já os níveis dividem o CSS por camadas de
+abstração. Os níveis inferiores representam as funcionalidades vitais
+do CSS, os níveis superiores dependem dos inferiores para construir as
+funcionalidades mais elaboradas.
 
-Os perfis do CSS dividem a especificação por dispositivo de utilização. Existem perfis
-para dispositivos móveis, televisores, impressoras, etc.
+A primeira especificação do CSS, CSS1 (ou nível 1) foi lançada em
+1996. Em 1997 foi lançado o CSS2 com o intuito de ampliar a completude
+do CSS1. Em 1998 iniciou-se o desenvolvimento do CSS3 que ainda continua
+em 2015. Além do nível 3 existem módulos de nível 4 no CSS, não
+obstante o termo CSS3 ainda é o mais utilizado.
 
 Apesar da clara evolução das versões do CSS, esse processo nem sempre é linear.
 Em 2005 o grupo de trabalho do CSS decidiu aumentar a restrição de suas especificações
@@ -497,22 +502,26 @@ mais do seu tamanho original. Perceba também os comandos repetidos com
 o prefixo ms e webkit. Esse tipo de abordagem é comum para tecnologias
 que não passam de rascunhos na especificação.
 
-Navegadores por padrão tentam melhorar a experiência de navegação
-de páginas de conteúdo HTML. Não obstante, jogos nem sempre
-se beneficiam destes valores padrões, abaixo segue uma lista de
-configurações interessantes para se fazer com CSS no contexto de
-desenvolvimento de jogos.
-]n]%\subsection{Transformações 3D}
+Navegadores tentam otimizar a experiência de navegação definindo
+um conjunto de regras e configurações razoáveis para a maioria dos
+casos. Não obstante, nem sempre estes valores padrões são as melhores
+opções no contexto de jogos. Abaixo segue uma lista de configurações
+interessantes para se fazer com CSS no contexto de desenvolvimento de
+jogos.
+%\subsection{Transformações 3D}
 
 \subsection{Otimizando o CSS para jogos}
 
-Scroll é um recurso que a grande maioria das vezes não é útil em
-jogos. Principalmente aqueles dependente de contato com a tela. Para
+Scroll é um recurso interessante para longas páginas de texto,
+o mesmo não se pode dizer à respeito de jogos.
+Principalmente aqueles dependente de contato com a tela, pois
+no contato a tela pode se mover e desconcentrar o usuário. Para
 remover este comportamento deve-se utilizar o \textit{overflow:
 hidden;} do seletor do corpo do documento (\textit{body}).
 
 A barra de endereço é outro recurso de pouca utilidade no contexto de
-jogos, e muitas vezes um empecilho para jogos em dispositivos móveis.
+jogos, e muitas vezes um empecilho para jogos em dispositivos móveis,
+devido ao limitado tamanho da tela.
 
 Para desabilitar a barra em dispositivos da Apple pode-se utilizar a
 seguinte configuração:
@@ -522,19 +531,18 @@ seguinte configuração:
 \end{verbatim}
 
 Para os demais dispositivos não existe meio oficial de esconder a barra
-de endereço. Não obstante, alguns recomendam soluções como a abaixo:
+de endereço. Não obstante, alguns websites recomendam a solução descrita abaixo:
 
 \begin{verbatim}
 <body onload="setTimeout(function() {window.scrollTo(0, 1)}, 100)">
 </body>
 \end{verbatim}
 
-
 Apesar de não fazer parte da especificação, a maioria dos navegadores
 implementa a possibilidade de desativar a seleção de elementos na tela.
 Em jogos essa possibilidade é útil, pois não é natural a seleção de texto
-neste tipo de software. Para desabilitar a seleção pode-se utilizar o 
-conteúdo abaixo.
+neste tipo de software. Para desabilitar a seleção pode-se utilizar as 
+regras CSS demonstradas abaixo.
 
 \begin{verbatim}
 -moz-user-select: none;
@@ -542,6 +550,9 @@ conteúdo abaixo.
 -ms-user-select: none;
 \end{verbatim}
 
+Recursos muito recentes do CSS muitas vezes não estão presentes nos
+navegadores, não obstante muitos deles são interessantes no contexto
+de desenvolvimento de jogos, como o suporte a variáveis .
 O projeto cssnext http://cssnext.io/ é uma iniciativa para permitir
 a utilização dos mais recentes recursos do CSS mesmo sem os mesmos
 estarem implementados nos navegadores. O projeto funciona compilando o
