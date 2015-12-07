@@ -276,6 +276,22 @@
   }
 \endentry
 
+\entry{ecmaSupport}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Moises}{M.}%
+     {Belchin}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MB1}
+  \strng{fullhash}{MB1}
+  \field{howpublished}{Available at
+  \url{https://moisesbm.wordpress.com/2015/02/22/ecmascript-6-today/}
+  (2015/12/07)}
+  \field{title}{ECMAScript 6 Today}
+\endentry
+
 \entry{diveIntohtml}{book}{}
   \name{author}{1}{}{%
     {{}%
