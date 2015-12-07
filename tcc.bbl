@@ -16,6 +16,12 @@
   {}
 \endgroup
 
+\entry{ecma7}{online}{}
+  \field{howpublished}{Available at
+  \url{http://www.2ality.com/2011/09/es6-8.html} (2015/12/07)}
+  \field{title}{A first look at what might be in ECMAScript 7 and 8}
+\endentry
+
 \entry{crossPlatformMobileGame}{article}{}
   \name{author}{1}{}{%
     {{}%

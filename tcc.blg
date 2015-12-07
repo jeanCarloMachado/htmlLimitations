@@ -19,45 +19,45 @@ Warning--I didn't find a database entry for "HTML5"
 Biblatex version: 3.0
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
-You've used 20 entries,
+You've used 21 entries,
             6047 wiz_defined-function locations,
-            1215 strings with 10813 characters,
-and the built_in function-call counts, 50281 in all, are:
-= -- 1881
+            1218 strings with 10941 characters,
+and the built_in function-call counts, 51805 in all, are:
+= -- 1924
 > -- 1405
-< -- 521
-+ -- 433
-- -- 489
-* -- 3128
-:= -- 2809
+< -- 536
++ -- 434
+- -- 490
+* -- 3179
+:= -- 2840
 add.period$ -- 0
-call.type$ -- 20
-change.case$ -- 236
+call.type$ -- 21
+change.case$ -- 241
 chr.to.int$ -- 36
-cite$ -- 38
-duplicate$ -- 5941
-empty$ -- 5863
+cite$ -- 40
+duplicate$ -- 6152
+empty$ -- 6114
 format.name$ -- 884
-if$ -- 11751
+if$ -- 12133
 int.to.chr$ -- 0
-int.to.str$ -- 35
+int.to.str$ -- 36
 missing$ -- 0
-newline$ -- 346
+newline$ -- 351
 num.names$ -- 656
-pop$ -- 6280
+pop$ -- 6604
 preamble$ -- 1
-purify$ -- 263
+purify$ -- 267
 quote$ -- 0
-skip$ -- 3007
+skip$ -- 3084
 stack$ -- 0
-substring$ -- 791
-swap$ -- 1645
-text.length$ -- 452
-text.prefix$ -- 19
+substring$ -- 801
+swap$ -- 1696
+text.length$ -- 465
+text.prefix$ -- 20
 top$ -- 1
-type$ -- 736
+type$ -- 774
 warning$ -- 0
-while$ -- 289
+while$ -- 291
 width$ -- 0
-write$ -- 325
+write$ -- 329
 (There was 1 warning)
