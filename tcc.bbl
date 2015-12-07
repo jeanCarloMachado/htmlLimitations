@@ -16,12 +16,6 @@
   {}
 \endgroup
 
-\entry{ecma7}{online}{}
-  \field{howpublished}{Available at
-  \url{http://www.2ality.com/2011/09/es6-8.html} (2015/12/07)}
-  \field{title}{A first look at what might be in ECMAScript 7 and 8}
-\endentry
-
 \entry{crossPlatformMobileGame}{article}{}
   \name{author}{1}{}{%
     {{}%
@@ -311,6 +305,21 @@
   \field{labelyear}{2010}
   \field{title}{Dive into HTML5}
   \field{year}{2010}
+\endentry
+
+\entry{ecma7}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Rauschmayer}{R.}%
+     {Axel}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RA1}
+  \strng{fullhash}{RA1}
+  \field{howpublished}{Available at
+  \url{http://www.2ality.com/2011/09/es6-8.html} (2015/12/07)}
+  \field{title}{A first look at what might be in ECMAScript 7 and 8}
 \endentry
 
 \entry{cssSelectors}{misc}{}
