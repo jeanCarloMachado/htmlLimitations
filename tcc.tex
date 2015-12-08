@@ -320,40 +320,77 @@ pois estes muitas vezes escondem limitações do HTML em si.
 %{{{
 \thispagestyle{myheadings}
 
-Para a análise prática das limitações foi escolhido um jogo de
-matemática simples. Consistindo na geração de equações com um
-candidato de resposta. Cabe ao usuário informar se o resultado apontado
-pelo jogo está correto ou não.
-
-Porquê escolhi esse tipo de jogo?
-
-Não tenho grande experiência com o desenvolvimento de jogos nem com
-o desenvolvimento em HTML5. Também para não interferir na pesquisa
-busquei não me distanciar do que é considerado padrão em ferramentas
-e métodos.
-Comecei escrevendo o aplicativo para o Navegador do desktop pois era o
-que estava mais acessível no momento. Mais tarde descobri que de fato
-é assim que de desenvolve.
+Este capítulo tem por objetivo detalhar os aspectos do desenvolvimento do
+protótipo.  Mecânica, o loop de eventos, diagramas entre outras facetas do jogo serão abordados aqui.
 
 \section{MECÂNICA}
-O jogo consiste em simplesmente em uma tela que apresenta equações e
-um possível resultado. Cabe ao jogador decidir se o resultado está
-certo ou errado. O tempo é um fator levado em consideração, quão
-mais rápido o jogador acertar se a afirmação está correta ou não,
-mais pontos ele receberá.
 
-Argumentos à favor da escolha do game: Tem profundidade, permite a
-adição de novos recursos no futuro;
-É facilmente traduzível em tamanhos de telas diferentes e tipos de
-entrada de dados diferentes;
+Para a análise prática das limitações foi escolhido um jogo de
+matemática simples. O qual consiste na geração de equações com uma
+resposta candidata. Cabe ao usuário informar se o resultado apontado
+pelo jogo está correto ou não. O tempo é um fator determinante no
+resultado do jogo pois quão mais rápido o jogador acertar se a afirmação
+está correta ou não mais pontos ele receberá.
+
+Esta categoria de jogo foi selecionada pois oferece uma experiência
+interessante, por ter profundidade - oferencendo a possibilidade
+de explorar diversos recursos do HTML5. Por ser de razoável
+tradutibilidade em tamanhos de telas diferentes e tipos de entrada de
+dados diferentes. E por fim, por oferecer uma dificuldade técnica não
+tão desafiadora. Visto que não disponho de experiência profunda no
+desenvolvimento de jogos para HTML5.
+
+Jogos como o Math Workout para Android tem uma temática similar.
+Não obstante, Math Workout não sugere respostas para o usuário
+e o questiona sobre a veracidade delas, este apresenta apenas a equação
+e requer uma respota. O jogo aqui desenvolvido parece ter uma melhor
+jogabilidade para dispositivos móveis, pois não requer a presença
+de um teclado. Os botões de verdadeiro ou falso contém todas as
+possibilidades.
+
+%Também para não interferir na pesquisa busquei não me distanciar do
+%que é considerado padrão em ferramentas e métodos.
+
+%Comecei escrevendo o aplicativo para o Navegador do desktop pois era o
+%que estava mais acessível no momento.
 
 \section{Requisitos}
+
+Abaixo estão dispostos os requisitos do sistema.
+
+\subsection{Requisitos funcionais}
+
+As funcionalidades que o sistema deve apresentar estão descritas abaixo.
+
+\begin{itemize}
+    \item O sistema deve prover equações matemáticas de dificuldade crescente para o usuário informar se estão corretas ou não.
+    \item O sistema deve pontuar as respostas dadas com maior agilidade com uma pontuação maior, que as respondidas com menor agilidade.
+    \item O sistema deve apresentar um ranking com os resultados dos  jogos anteriores.
+\end{itemize}
+
+\subsection{Requisitos não funcionais}
+
+\begin{itemize}
+    \item O sistema deve ser desenvolvido utilizando as ferramentas da web.
+    \item O sistema deve funcionar para a plataforma desktop e Android.
+    \item O sistema deve ser desenvolvido sem a utilização de nenhuma biblioteca ou framework.
+\end{itemize}
+
 \section{Modelagem}
+
+Abaixo segue o diagrama de classes simplificado.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{ClassesSimpleView.png}
+	\caption{Diagrama de classes simplificado}
+\end{figure}
+
+Nos anexos pode-se encontrar a versão completa.
+
 \section{Desenvolvimento}
 
 O loop do jogo deve executar as seguintes ações...
-
-Finalizada a revisão bibliográfica será descrito os detalhes da implementação do jogo.
 
 Devido ao fato deste trabalho explorar as limitações dos jogos em
 HTML5, optei por evitar a utilização de plugins e ferramentas de
@@ -680,4 +717,13 @@ para JavaScript.
 O motor de renderização do HTML5 do Firefox é o XXX. O motor de
 JavaScript é o.
 %}}}
+
+\chapter{Diagrama de classes}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{ClassesFullView.png}
+	\caption{Diagrama de classes completo}
+\end{figure}
+
 \end{document}
