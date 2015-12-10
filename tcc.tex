@@ -320,29 +320,31 @@ pois estes muitas vezes escondem limitações do HTML em si.
 %{{{
 \thispagestyle{myheadings}
 
-Este capítulo tem por objetivo detalhar os aspectos do desenvolvimento do
-protótipo.  Mecânica, o loop de eventos, diagramas entre outras facetas do jogo serão abordados aqui.
+Este capítulo tem por objetivo detalhar os aspectos do desenvolvimento
+do protótipo. Mecânica, o loop de eventos, diagramas entre outros
+aspectos do jogo serão abordados aqui.
 
 \section{MECÂNICA}
 
 Para a análise prática das limitações foi escolhido um jogo de
 matemática simples. O qual consiste na geração de equações com uma
 resposta candidata. Cabe ao usuário informar se o resultado apontado
-pelo jogo está correto ou não. O tempo é um fator determinante no
-resultado do jogo pois quão mais rápido o jogador acertar se a afirmação
-está correta ou não mais pontos ele receberá.
+pelo jogo está correto ou não. A cada resposta dada o nível de
+complexidade da equação cresce. O tempo é um fator determinante
+no resultado do jogo pois quão mais rápido o jogador acertar se a
+afirmação está correta ou não mais pontos ele receberá.
 
 Esta categoria de jogo foi selecionada pois oferece uma experiência
-interessante, por ter profundidade - oferencendo a possibilidade
+interessante, tem profundidade - oferencendo a possibilidade
 de explorar diversos recursos do HTML5. Por ser de razoável
 tradutibilidade em tamanhos de telas diferentes e tipos de entrada de
-dados diferentes. E por fim, por oferecer uma dificuldade técnica não
+dados diferentes. E, por fim, por oferecer uma dificuldade técnica não
 tão desafiadora. Visto que não disponho de experiência profunda no
 desenvolvimento de jogos para HTML5.
 
 Jogos como o Math Workout para Android tem uma temática similar.
-Não obstante, Math Workout não sugere respostas para o usuário
-e o questiona sobre a veracidade delas, este apresenta apenas a equação
+Não obstante, este jogo não sugere respostas para o usuário
+e o questiona sobre a veracidade delas, apresenta apenas a equação
 e requer uma respota. O jogo aqui desenvolvido parece ter uma melhor
 jogabilidade para dispositivos móveis, pois não requer a presença
 de um teclado. Os botões de verdadeiro ou falso contém todas as
@@ -390,7 +392,42 @@ Nos anexos pode-se encontrar a versão completa.
 
 \section{Desenvolvimento}
 
-O loop do jogo deve executar as seguintes ações...
+O desenvolvimento se deu com a estratégia de melhoria progressiva.
+Desenvolvendo a versão mais simples possível para atingir as
+requisitos funcionais. Essa versão mais simples, apesar de não ter
+sido testado, deve funcionar na grade maioria dos navegadores.
+
+O primeiro passo foi a criação do documento HTML. Utilizei divs
+para simbolizar telas do jogo. Caracterizando o jogo como uma
+aplicação SPA (\textit{Single page application}).  A alternativa
+seria depender de um servidor para mandar as páginas prontas,
+mas isso acarreta na necessidade de acesso à internet constante,
+coisa nem sempre viável em dispositivos móveis.
+
+Seguindo a construção do markup, veio o desenvolvimento da 
+classe Match, a qual simboliza uma partida dentro do jogo.
+
+No início da construção não  havia um gerador de equações, o jogo
+contava apenas com um array de equações pre-estabelecidas que
+eram selecionadas aleatoriamente a cada turno.
+
+Isso se provou uma boa escolha pois possibilitou que o desenvolvimento
+se focasse em outros aspectos importantes como a elaboração do laço do jogo.
+
+O aspecto central do laço do jogo consiste em apresentar uma equação
+ao usuário com a possibilidade de ele responder se ela está correta ou
+errada.
+
+Uma estratégia interessante que foi adotada na construção foi
+declarar todos os objetos relativos ao objeto window. Isso se demonstrou
+uma boa forma de separar os objetos, tornando o conflito de variáveis
+globais um problema irrelevante.
+
+Outro aspecto positivo foi a utilização de um meta objeto para encapsualar
+os demais, neste caso utilizei o nome MyMath, funcionando como um namespace,
+garantindo que problemas de conflitos de nomes não aconteçam.
+
+
 
 Devido ao fato deste trabalho explorar as limitações dos jogos em
 HTML5, optei por evitar a utilização de plugins e ferramentas de
@@ -422,8 +459,6 @@ as coisas em detrimento do refinamento da pesquisa.
 %{{{
 \thispagestyle{myheadings}
 
-Durante a construção do jogo utilizei a estratégia de declarar todos
-os objetos relativos ao window e limitar o escopo. Isso se demonstrou uma boa forma de separar as responsabilidades.
 
 Abaixo constam as limitações encontradas durante a pesquisa e concepção do jogo.
 
@@ -471,7 +506,8 @@ respectivamente. (HASAN et al, 2012)
 
 \subsection{SVG}
 
-Segundo \cite{html5mostwanted} a grande desvantagem do SVG é que quão maior o documento mais lenta a renderização.
+Segundo \cite{html5mostwanted} a grande desvantagem do SVG é que quão
+maior o documento mais lenta a renderização.
 
 \subsection{VIDEO}
 
@@ -520,7 +556,9 @@ Ciclo de vida demorado pois necessita que todos os consumidores da
 especificação entrem em consenso e implementem a.
 
 11  Detecção de recursos
-Muitas das detecções de recursos é feita via JavaScript, isso força os desenvolvedores a fazer ao menos parte da marcação em JavaScript\autocite{diveIntohtml}.
+Muitas das detecções de recursos é feita via JavaScript, isso
+força os desenvolvedores a fazer ao menos parte da marcação em
+JavaScript\autocite{diveIntohtml}.
 
 Desktop/Firefox
 Desktop/Google Chrome
@@ -578,15 +616,16 @@ Como o jogo é um software complexo demanda-se a utilização de
 metodologias de engenharia de software, dentre os processos de software
 mais conhecidos academicamente destacamos:
 
-- OpenUP: este é bem detalhado e de característica iterativa e
+\begin{itemize}
+\item OpenUP: este é bem detalhado e de característica iterativa e
 incremental. Gerando assim, um levantamento mais apurado dos riscos,
 requisitos e outros detalhes do sistema e a criação incremental do
 sistema, com requisitos maleáveis;
 
-- Cascata: processo antigo, caracteriza-se por ser pouco maleável aos
+\item Cascata: processo antigo, caracteriza-se por ser pouco maleável aos
 requisitos mapeados posteriormente ao processo de análise;
 
-- Processo ágil - SCRUM: sua utilização é flexível e sendo
+\item  Processo ágil - SCRUM: sua utilização é flexível e sendo
 um método ágil especifica pouca documentação, ou como dizem,
 somente a documentação necessária, este processo é bem conhecido e
 aceito na comunidade de desenvolvimento de software. Suas principais
@@ -595,11 +634,12 @@ uma série de iterações chamadas sprints. Cada sprint consiste
 tipicamente em duas a quatro semanas. É bem aplicado a projetos que
 mudam constantemente e que demandam rápidas adaptações;
 
-- Processo ágil – XP: tem muitas características similares ao SCRUM
+\item Processo ágil – XP: tem muitas características similares ao SCRUM
 por este também ser um processo ágil. Dentre suas especifidades
 destaca-se: versões frequentes, pequenos ciclos de desenvolvimento que
 buscam aumentar a produtividade, introduzem checkpoints onde os clientes
 podem agregar novas funcionalidades;
+\end{itemize}
 
 \chapter{AMBIENTES PARA DESENVOLVIMENTO HTML5}
 
