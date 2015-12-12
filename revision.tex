@@ -909,42 +909,68 @@ da especificação CANVAS, como o recurso de desenhar elipses e o caminho 2D.
 %}}}
 \section{WEBGL}
 %{{{
-WebGL é uma API JavaScript para desenhar elementos 3D. É Baseado
-em OpenGL, mas especificamente em OpenGL ES 2.0, uma versão do OpenGL
-otimizada para dispositivos móveis. O órgão que especifica o WebGL é
-o mesmo que especifica o OpenGL: Kronos.
+WebGL é uma API JavaScript para desenhar elementos 3D.
+Apesar de ter sido desenvolvido para gráficos 3D, WebGL pode ser utilizados
+para 2D também \autocite[pp. 6]{3daps}.
+Foi desenvolvido baseando-se em OpenGL, especificamente OpenGL ES 2.0,
+uma versão do OpenGL otimizada para dispositivos móveis. O órgão que
+especifica o WebGL é o mesmo que especifica o OpenGL, o Kronos.
 
 Os primeiros rascunhos do WebGL iniciaram em 2006, não obstante o grupo
-de trabalho não foi formado até 2009.
-A primeira versão do WebGL foi lançada em 2011.
+de trabalho não foi formado até 2009. E a primeira versão do foi
+lançada em 2011.
 
 A especificação é composta por uma API de controle em JavaScript e o
-shaders que são executados na GPU. O elemento que provê a interface 
-do WebGL é o canvas, no contexto 3D.
-
-Apesar de ter sido desenvolvido para gráficos 3D, WebGL pode ser utilizados
-para 2D também \autocite{}.
-
-
+processamento shaders.
 
 \subsection{Shaders}
 
 Shaders definem níveis de cor ou efeitos especiais sobre um modelo 2d ou 3D.
-São utilizados no cinema, em imagens geradas por computadores e video games.
+Contam com grande performance, possibilitando conteúdo em tempo real - como 
+no caso dos jogos - por executarem dentro da GPU.
+São utilizados no cinema, em imagens geradas por computadores e vídeo games.
+
+Existem dois shaders principais shaders de vértices e de fragmentos.
+Shaders de vértices são chamados para cada vértice sendo desenhado
+definindo suas posições e shaders de fragmentos a cor para cada pixel
+a ser desenhado \autocite[pp.15]{3daps}.
+
+\subsection{Bibliotecas OpenGL}
 
 CocoonJS é uma aplicativo híbrido que preenche a fraca implementação
 de WebGL nos dispositivos móveis possibilitando se desenvolver em
 WEBGL, CSS. Conta com suporte a dispositivos legados à partir do
 Android 2.3 e Iphone 50.
 
+Treejs é uma abstração sobre WebGL que permite os autores se focarem
+na criação de conteúdo para web, ao invés de dispenderem tempo manipulando
+os detalhes da WebGL. Possibilita trabalhar com efeitos, luzes, cenas
+e outras abstrações em detrimento de shaders, vertices, e conceitos mais
+primitivos.
+
+\subsection{Debug}
+
+Debugar aplicativos 3D pode ser complexo, o debugger do chrome é uma boa opção.
+
+
+Um site interessante para explorar exemplos WebGL mais avançados é o
+http://learningwebgl.com \autocite[pp.42]{3daps}.
+
 WebGL não foi utilizada no trabalho apesar de ser de grande relevância
 no processo de jogos pois ainda não está completamente especificada
 e a dificuldade e escopo do projeto aumentariam muito se tivessem de
 incluir um jogos 3D. Versão da especificação atual?
 
+O elemento que provê a interface do WebGL é o canvas, no contexto 3D.
 
 %}}}
 \section{WEBVR}
+
+http://webvr.info/
+WebVR is an experimental Javascript API that provides access to Virtual Reality devices, such as the Oculus Rift or Google Cardboard, in your browser.
+
+enabling developers to translate position and movement information from the display into movement around a 3D scene
+
 %}}}
 %{{{
 
