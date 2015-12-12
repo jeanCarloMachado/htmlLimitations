@@ -43,7 +43,9 @@ Uma classificação de jogos em gêneros é uma tarefa complexa. Segundo \autoci
 
 Segundo \cite[pp. 60]{gamebenefits}:
 \begin{quote}
-Pela diversidade  em itens e gêneros e a vasta quantidade de dimensões que os video games se encontram, uma taxonomia dos jogos contemporâneos é extremamente difícil de desenvolver (muitos já tentaram) .
+Pela diversidade em itens e gêneros e a vasta quantidade de dimensões
+que os video games se encontram, uma taxonomia dos jogos contemporâneos
+é extremamente difícil de desenvolver (muitos já tentaram) .
 \end{quote}
 
 Não obstante alguns padrões são discerníveis quanto aos jogos da
@@ -104,7 +106,7 @@ Os pontos negativos dessa abordagem são o principal foco deste trabalho.
 
 Mas a um nível macroscópico podemos citar:
 \begin{itemize}
-\item Programas que rodam na web são geralmente mais lentos que os
+\item Programas que rodam na web são geralmente lentos se comparados aos
 nativos;
 \item Por falta de especificação ou incompletude de implementação.
 \item Nem todos os recursos disponíveis através das SDK's nativas estão presentes através do HTML5.
@@ -820,7 +822,6 @@ os jogos através da interface nativa pois dá a sensação de
 continuidade para com os demais aplicativos instalados no dispositivo.
 
 %}}}
-
 \section{RENDERIZAÇÃO}
 %{{{
 
@@ -828,7 +829,10 @@ Renderização é parte fundamental de muitos jogos. As tecnologias atualmente e
 
 \subsection{SVG}
 %{{{
-SVG (\textit{Gráficos de vetores escaláveis}), é uma linguagem baseada em XML especializada na criação de vetores bidimensionais \autocite{html5mostwanted}. Por usar XML SVG permite a utilização da API do DOM para manipular os elementos.
+SVG (\textit{Gráficos de vetores escaláveis}), é uma linguagem
+baseada em XML especializada na criação de vetores bidimensionais
+\autocite{html5mostwanted}. Por usar XML SVG permite a utilização da
+API do DOM para manipular os elementos.
 
 Entre os benefícios do SVG encontram-se:
 
@@ -838,7 +842,9 @@ Entre os benefícios do SVG encontram-se:
 \item Conta com integração através da api do DOM. Tornando simples a integração com as outras tecnologias da web.
 \end{itemize}
 
-Um aspecto negativo do SVG é que é muito difícil atingir a perfeição na posição dos pixels, por ser uma linguagem vetorizada \autocite{html5mostwanted}.
+Um aspecto negativo do SVG é que é muito difícil atingir a
+perfeição na posição dos pixels, por ser uma linguagem vetorizada
+\autocite{html5mostwanted}.
 
 \begin{figure}
 \centering
@@ -903,28 +909,43 @@ da especificação CANVAS, como o recurso de desenhar elipses e o caminho 2D.
 %}}}
 \section{WEBGL}
 %{{{
-É Baseado em OpenGL, o órgão que especifica o WEGGL é o mesmoq que
-especifica o OpenGL: Kronos.
+WebGL é uma API JavaScript para desenhar elementos 3D. É Baseado
+em OpenGL, mas especificamente em OpenGL ES 2.0, uma versão do OpenGL
+otimizada para dispositivos móveis. O órgão que especifica o WebGL é
+o mesmo que especifica o OpenGL: Kronos.
+
+Os primeiros rascunhos do WebGL iniciaram em 2006, não obstante o grupo
+de trabalho não foi formado até 2009.
+A primeira versão do WebGL foi lançada em 2011.
+
+A especificação é composta por uma API de controle em JavaScript e o
+shaders que são executados na GPU. O elemento que provê a interface 
+do WebGL é o canvas, no contexto 3D.
+
+Apesar de ter sido desenvolvido para gráficos 3D, WebGL pode ser utilizados
+para 2D também \autocite{}.
+
+
+
+\subsection{Shaders}
+
+Shaders definem níveis de cor ou efeitos especiais sobre um modelo 2d ou 3D.
+São utilizados no cinema, em imagens geradas por computadores e video games.
+
+CocoonJS é uma aplicativo híbrido que preenche a fraca implementação
+de WebGL nos dispositivos móveis possibilitando se desenvolver em
+WEBGL, CSS. Conta com suporte a dispositivos legados à partir do
+Android 2.3 e Iphone 50.
 
 WebGL não foi utilizada no trabalho apesar de ser de grande relevância
 no processo de jogos pois ainda não está completamente especificada
 e a dificuldade e escopo do projeto aumentariam muito se tivessem de
 incluir um jogos 3D. Versão da especificação atual?
 
-CocoonJS é uma aplicativo híbrido que preenche a fraca implementação
-de OPENGL nos dispositivos móveis possibilitando se desenvolver em
-WEBGL.
 
-\subsection{Shaders}
-
-Shaders definem níveis de cor ou efeitos especiais sobre uma imagem.
-Server para informar o computador como desenhar coisas.
-
-São utilizados no cinema, em imagens geradas por computadores e video games.
-
-%}}}
 %}}}
 \section{WEBVR}
+%}}}
 %{{{
 
 %}}}
@@ -1018,7 +1039,8 @@ Alguns codecs de vídeo
 %}}}
 \section{OFFLINE E ARMAZENAMENTO}
 Não é extraordinário que um jogo tenha que ser reverso para um estado
-válido anterior por motivo de um erro na base de dados \autocite[pp. 5]{browserGamesTechnologyAndFuture}.
+válido anterior por motivo de um erro na base de dados \autocite[pp.
+5]{browserGamesTechnologyAndFuture}.
 
 Uma das grades limitações do HTML era a ausência de capacidade
 de armazenamento de dados. Armazenamento no lado do cliente é um
@@ -1055,6 +1077,9 @@ Web Sql foi depreciado em favor da especificação do IndexedDb.
 Não obstante, IndexedDb ainda é comummente utilizado em sistemas móveis \autocite{html5Test}.
 
 \subsection{IndexedDb}
+
+Banco de dados indexado hierárquico de chave-valor.
+
 \section{ENTRADA DE COMANDOS}
 
 Na construção da grande maioria dos jogos é muitas vezes
@@ -1066,6 +1091,10 @@ O HTML5 trata todos estes casos abstratamente na forma de eventos, os
 quais podem ser escutados através de \textit{listeners}. Os eventos
 básicos são: keydown (tecla baixa), keyup (tecla solta) e keypress
 (tecla pressionada).
+
+\section{Web Workers}
+
+É uma API que possibilita executar programas em paralelo com a página principal.
 
 \subsection{DISPONIBILIZAÇÃO DA APLICAÇÃO}
 
