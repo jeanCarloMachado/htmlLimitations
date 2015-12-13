@@ -1184,10 +1184,18 @@ tecnologia da web que utiliza os mesmos princípios é o Web Workers.
 
 A thread fila pode comunicar-se com seu pai.
 
-O contexto global (objeto window) não existe em um worker, ao invés disso
-o objeto \texitit{DedicatedWorkerGlobalScope} pode ser utilizado.
+Existem workers dedicados, que podem ser acessados por seus criadores, e Workers
+copartilhados.
 
-Workers compartilhados podem utilizar o \texitit{SharedWorkerGlobalScope}.
+O contexto global (objeto window) não existe em um worker, ao invés disso
+o objeto \textit{DedicatedWorkerGlobalScope} pode ser utilizado.
+Workers compartilhados podem utilizar o \textit{SharedWorkerGlobalScope}.
+Estes objetos contém grande parte das funcionalidades proporcionadas pelo window
+com algumas execções.
+
+Dentro de um worker não é possível manipular o DOM.
+
+O worker se comunica com outros scripts atraves de mansagens.
 
 
 \section{OFFLINE}
