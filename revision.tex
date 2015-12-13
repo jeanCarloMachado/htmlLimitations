@@ -933,7 +933,6 @@ plataformas diferentes e em navegadores diferentes. Existe também uma lista
 de placas gráficas com drivers bloqueados por não funcionarem corretamente no
 Firefox \autocite[pp.42]{3daps}.
 
-
 \subsection{Shaders}
 
 Shaders definem níveis de cor ou efeitos especiais sobre um modelo 2d ou 3D.
@@ -1078,22 +1077,14 @@ Alguns codecs de vídeo
 
 %}}}
 %}}}
-\section{OFFLINE E ARMAZENAMENTO}
-Não é extraordinário que um jogo tenha que ser reverso para um estado
-válido anterior por motivo de um erro na base de dados \autocite[pp.
-5]{browserGamesTechnologyAndFuture}.
+\section{ARMAZENAMENTO}
 
-Uma das grades limitações do HTML era a ausência de capacidade
-de armazenamento de dados. Armazenamento no lado do cliente é um
-requerimento básico para qualquer aplicação moderna. Essa área
-era ode as aplicações nativas detinham grande vantagem sobre as
-aplicações web. O HTML5 solucionou este problema introduzindo várias
-formas de armazenamento de dados \autocite{html5Tradeoffs}.
+Armazenamento local é um recurso importante para jogos,tanto por diminuir a latência
+da persistência que na rede pode ser grande, ou para possibilitar um experiência off-line.
 
-\subsection{Aplicações offline}
-Na sua versão mais simples, um aplicativo offline é um conjunto de
-URLs para arquivos HTML, CSS, JavaScript, imagens ou qualquer outro tipo
-de recurso \autocite{diveIntohtml}.
+Existem várias especificações sobre armazenamento, mas a grande maioria delas não conta como
+suporte completo em todos os navegadores comuns, um polyfill interessante para localstorage
+IndexedDB e WebSQL é o projeto localForge https://github.com/mozilla/localForage da mozilla.
 
 \subsection{LOCAL STORAGE}
 Também conhecido como Web Storage na especificação do HTML5. Provê
@@ -1114,28 +1105,99 @@ em desenvolver a especificação a descriação do dialeto SQL apenas
 referencia o SQLITE, o que não é aceitável para um padrão.
 \end{quote}
 
-Web Sql foi depreciado em favor da especificação do IndexedDb.
-Não obstante, IndexedDb ainda é comummente utilizado em sistemas móveis \autocite{html5Test}.
+Web Sql foi depreciado em favor da especificação do IndexedDB.
+Não obstante, IndexedDB ainda é comummente utilizado em sistemas móveis \autocite{html5Test}.
 
-\subsection{IndexedDb}
+\subsection{IndexedDB}
 
-Banco de dados indexado hierárquico de chave-valor.
+IndexedDB é um banco de dados que suporta o armazenamento de grandes
+quantidades de dados no formato de chave/valor.
+Assim como SQL, todas as mudanças no IndexedDB ocorrem através de
+transações.
+
+Inicialmente IndexedDB permitia operações síncronas e assíncronas.
+Não obstante, a versão síncrona foi removida devido a falta de
+interesse da comunidade. Por assíncrona significa que aplicativos
+JavaScript nunca esperam pelo final das transações para continuar funcionando,
+outrossim, cada interação com o banco de dados é uma requisição que pode retornar um
+resultado ou um erro. Um evento de sucesso internamente é um evento DOM cuja propriedade
+\textit{type} do elemento foi setada para \textit{success}.
+
+Ao invés de tabelas, IndexedDB trabalha com repositórios de objetos. Cada objeto armazenado
+conta com ao menos uma chave para referenciá-lo.
+
+\begin{figure}
+\centering
+\begin{verbatim}
+	var db;
+	var request = window.indexedDB.open("Mydb", 9);
+	request.onsuccess = function(event) {
+		db = event.target.result;
+		var transaction = db.transaction(["customers"], "readwrite");
+		var objectStore = transaction.objectStore("customers");
+		var request = objectStore.add({email: "mymail@domain.com", name: "foo"});
+		request.onsuccess = function(event) {
+			console.log('customer added')
+		};
+	}
+\end{verbatim}
+\caption{Adicionando um cliente em IndexedDB.}
+\end{figure}
+
+
+Apesar de ser desenvolvido em o objeto de ser uma solução para todas
+as necessidades de armazenamento no frontend IndexedDB ainda sofre
+alguns problemas.
+Os limites de armazenamento e estratégias de limpeza variam de
+navegador para navegador.
+
+\begin{itemize}
+\item Indexeddb tem limites de armazenamento e as regras variam de navegador para navegador.
+\item O comportamento em abas anônimas não está especificado e os resultados também variam
+\item Existe uma pequena probabilidade de os dados corromperem, essa foi uma escolha em detrimento de performance.
+\item Não existe a possibilidade de fazer buscas em textos como o like do sql
+\item o usuário pode configurar o navegador para não aceitar armazenamnto local para determinado domínio
+\end{itemize}
+
+Essa característica assíncrona do IndexedDB é interessante especialmente no contexto de Web Workers.
+
+\section{Web Workers}
+
+É uma API que possibilita executar programas em paralelo com a página principal.
+
+\section{OFFLINE}
+Não é extraordinário que um jogo tenha que ser reverso para um estado
+válido anterior por motivo de um erro na base de dados \autocite[pp.
+5]{browserGamesTechnologyAndFuture}.
+
+Uma das grades limitações do HTML era a ausência de capacidade
+de armazenamento de dados. Armazenamento no lado do cliente é um
+requerimento básico para qualquer aplicação moderna. Essa área
+era ode as aplicações nativas detinham grande vantagem sobre as
+aplicações web. O HTML5 solucionou este problema introduzindo várias
+formas de armazenamento de dados \autocite{html5Tradeoffs}.
+
+\subsection{Aplicações offline}
+Na sua versão mais simples, um aplicativo offline é um conjunto de
+URLs para arquivos HTML, CSS, JavaScript, imagens ou qualquer outro tipo
+de recurso \autocite{diveIntohtml}.
+
+
 
 \section{ENTRADA DE COMANDOS}
 
 Na construção da grande maioria dos jogos é muitas vezes
-imprescindível alta flexibilidade na gestão de entrada de dados.
-Este fator muito se amplia na criação de jogos multiplataforma,
+imprescindível grande flexibilidade na gestão de entrada comandos.
+
+Este fator se amplia na criação de jogos multiplataforma,
 seja através de teclado, tela sensível ou sensor de movimentos, o
 importante é oferecer a melhor experiência possível por plataforma.
+
 O HTML5 trata todos estes casos abstratamente na forma de eventos, os
 quais podem ser escutados através de \textit{listeners}. Os eventos
 básicos são: keydown (tecla baixa), keyup (tecla solta) e keypress
 (tecla pressionada).
 
-\section{Web Workers}
-
-É uma API que possibilita executar programas em paralelo com a página principal.
 
 \subsection{DISPONIBILIZAÇÃO DA APLICAÇÃO}
 
