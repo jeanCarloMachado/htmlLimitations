@@ -215,33 +215,27 @@ maior experiência na já mencionada plataforma.
 
 Construir um protótipo que colabore para a fundamentação prática do assunto.
 
-Pretende-se também estudar os seguintes tópicos do desenvolvimento de
-jogos, relativos ao HTML5:
-
-Não se pode detectar suporte ao HTML5, isso não faz sentido. Pode-se detectar suporte as funcionalidades individuais como canvas, vídeo e geolocalização \autocite{diveIntohtml}.
+Não se pode detectar suporte ao HTML5. Pode-se detectar suporte as
+funcionalidades individuais como canvas, vídeo e geolocalização
+\autocite{diveIntohtml}. O mesmo vale para HTML5 no contexto de jogos.
 
 \cite{browserGamesTechnologyAndFuture} cita que video, audio, drag
-and drop, funcionalidades de gráficos e armazenamento off-line são
+and drop, funcionalidades de gráficos e armazenamento offline são
 aspectos importantes do HTML5 para o desenvolvimento de jogos.
 
-Com base nos estudos efetuados e na experiência adquirida elencamos os
-seguintes itens que serão abordados neste estudo.
+Com base nos estudos efetuados, e na experiência adquirida elencamos os
+seguintes itens que serão abordados neste trabalho:
 
 \begin{itemize}
 \item Performance
-\item Diferenças em tamanho de tela
 \item Canvas
+\item CSS media queries
 \item Empacotadores HTML5
 \item Eventos de entrada
-\item Vibração
 \item Armazenamento
 \item Disponibilização de assets (controle de tamanhos, cache, etc)
 \item Aplicações offline
-\item CSS media queries
 \end{itemize}
-
-Elaborar uma lista de limitações e correlacionar os dados de acordo
-com as plataformas.
 
 %}}}
 \chapter{JUSTIFICATIVA}
@@ -257,13 +251,10 @@ de melhorias no HTML, consequentemente colaborando para a
 melhoria da própria especificação.
 Estimular e avançar o estudo da implementação da Open Web;
 
-A opinião comum tende para soluções nativas em detrimento do
-desenvolvimento de jogos, este trabalho pretende desafiar esta
-concepção.
-
-Muitos desenvolvedores estão familiarizados
-com as tecnologias da WEB ou apontam interesse na tecnologia.
-
+Muitos desenvolvedores estão familiarizados com as tecnologias da WEB
+ou apontam interesse na tecnologia. Não obstante, a opinião comum
+tende para soluções nativas em detrimento do desenvolvimento de jogos,
+este trabalho serve para verificar essa constatação.
 
 %}}}
 \chapter{REVISÃO BIBLIOGRÁFICA}
@@ -295,7 +286,7 @@ usualmente úteis para o desenvolvimento de jogos \autocite[pp.
 de usuário, cena, áudio, física, etc. Também servem como uma camada de 
 segurança adicional \autocite{browserGamesTechnologyAndFuture}.
 
-Neste trabalho, motores de jogos também foram descartados, visto que
+Motores de jogos também foram descartados, visto que
 na maioria dos casos dependem de bibliotecas de terceiros. Outrossim,
 motores de jogos não são amplamente difundidos no mercado de jogos de
 navegadores \autocite{browserGamesTechnologyAndFuture}.
@@ -315,6 +306,7 @@ testes do jogo. Este detalhamento deve responder as seguintes perguntas:
 
 Como recomendação geral, busca-se abster-se da utilização de plugins
 pois estes muitas vezes escondem limitações do HTML em si.
+
 %}}}
 \chapter{PROJETO}
 %{{{
@@ -426,8 +418,6 @@ globais um problema irrelevante.
 Outro aspecto positivo foi a utilização de um meta objeto para encapsualar
 os demais, neste caso utilizei o nome MyMath, funcionando como um namespace,
 garantindo que problemas de conflitos de nomes não aconteçam.
-
-
 
 Devido ao fato deste trabalho explorar as limitações dos jogos em
 HTML5, optei por evitar a utilização de plugins e ferramentas de
