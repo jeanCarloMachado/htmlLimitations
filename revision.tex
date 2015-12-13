@@ -753,10 +753,9 @@ possibilita grade performance e abre espaço para otimizações.
 Web Animations defines a model for supporting animation and synchronization on the Web platform. It is intended that other specifications will build on this model and expose it's features through declarative means. In addition, this specification also defines a programming interface to the model that may be implemented by user agents that provide support for scripting.
 
 A especificação ainda está em estado de rascunho.
-
----
-
-```
+\begin{figure}
+    \centering
+    \begin{verbatim}
 elem.getAnimations().filter(
   animation =>
     animation.effect instanceof 
@@ -768,9 +767,11 @@ elem.getAnimations().filter(
   animation.currentTime = 0;
   animation.playbackRate = 0.5;
 });
-
-```
-
+    \end{verbatim}
+	\caption{Exemplo de utilização de WEB Animatios}
+	\source{http://www.w3.org/TR/WEB-animations/}
+    \label{fig:webAnimations}
+\end{figure}
 
 \section{DETECÇÃO DE RECURSOS}
 
@@ -871,7 +872,7 @@ A figura \ref{fig:audioCodecs} apresenta o gráfico de suporte por versões de n
 \section{ANDROID}
 %{{{
 
-É um sistema operacional *open-source* desenvolvido pela Google.
+É um sistema operacional open-source desenvolvido pela Google.
 Utiliza o kernel Linux .
 Softwares para Android são geralmente escritos em Java e executados
 através da máquina virtual Dalvik.
