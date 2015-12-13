@@ -728,23 +728,31 @@ estágio no caminho da especificação.
     \label{fig:ecma7}
 \end{figure}
 
-\subsection{ASM.JS}
-Asm.js é um subconjunto da sintaxe do JavaScript a qual permite grandes
-benefícios de performance quando em comparação com JavaScript normal.
-No contexto dos jogos performance é um fator de extrema importancia.
-ASM.JS se destaca por utilizar recursos que permitam otimizações
-antes do tempo (\textit{ahead of time optimizations}). Entretanto, não é
-trivial escrever código em asm.js e geralmente a geração de código
-asm.js é feita através da conversão de outras linhagens como C.
+\subsection{ASM.JS}% o correto é asm.js
 
-Grade parcela da performance adicional, em relação ao JavaScript,
-é devido a consistência de tipo e a não existência de um coletor
-de lixo (\textit{garbage collector}) - a memória é gerenciada
-manualmente através de um grande vetor. Esse modelo simples desprovido
-de comportamento dinâmico, sem alocação e desalocação de memória,
+Asm.js é um subconjunto da sintaxe do JavaScript a qual permite
+grandes benefícios de performance quando em comparação com
+JavaScript normal. Entretanto, não é trivial escrever código em
+asm.js e geralmente a criação de código asm.js é feita através
+da conversão de outras linhagens como C. O projeto Emscripten
+https://github.com/kripken/emscripten pode ser utilizado para gerar
+código em asm.js é utilizado pelo motor de jogos Unity 3D e Unreal.
+
+No contexto dos jogos performance é um fator de extrema importância
+asm.js se destaca por utilizar recursos que permitam otimizações
+antes do tempo (\textit{ahead of time optimizations}). Grade parcela
+da performance adicional, em relação ao JavaScript, é devido a
+consistência de tipo e a não existência de um coletor de lixo
+(\textit{garbage collector}) - a memória é gerenciada manualmente
+através de um grande vetor. Esse modelo simples desprovido de
+comportamento dinâmico, sem alocação e desalocação de memória,
 apenas um bem definido conjunto de operações de inteiros e flutuantes
 possibilita grade performance e abre espaço para otimizações.
-%}}}
+
+O desenvolvimento do asm.js iniciou-se no final de 2013 não obstante a
+maioria dos navegadores não implementam ou implementam parcialmente o
+rascunho. O motor JavaScript da Mozilla, SpiderMonkey, é a exceção,
+implementando a grande maioria dos recursos do asm.js.
 
 \subsection{WEB Assembly}
 
@@ -772,6 +780,8 @@ elem.getAnimations().filter(
 	\source{http://www.w3.org/TR/WEB-animations/}
     \label{fig:webAnimations}
 \end{figure}
+
+%}}}
 
 \section{DETECÇÃO DE RECURSOS}
 
