@@ -1182,6 +1182,14 @@ tecnologia da web que utiliza os mesmos princípios é o Web Workers.
 
 É uma API que possibilita executar programas em paralelo com a página principal.
 
+A thread fila pode comunicar-se com seu pai.
+
+O contexto global (objeto window) não existe em um worker, ao invés disso
+o objeto \texitit{DedicatedWorkerGlobalScope} pode ser utilizado.
+
+Workers compartilhados podem utilizar o \texitit{SharedWorkerGlobalScope}.
+
+
 \section{OFFLINE}
 Não é extraordinário que um jogo tenha que ser reverso para um estado
 válido anterior por motivo de um erro na base de dados \autocite[pp.
