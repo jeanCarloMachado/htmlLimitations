@@ -756,6 +756,29 @@ implementando a grande maioria dos recursos do asm.js.
 
 \subsection{WEB Assembly}
 
+WebAssembly (short: wasm) is a new binary format for the WEB, created by Google, Microsoft, Mozilla and others. It will be used for performance critical code and to compile languages other than JavaScript (especially C/C++) to the WEB platform. It can be seen as a next step for asm.JavaScript 
+
+In general, by keeping the non-Web path such that it doesn't require Web APIs, WebAssembly could be used as a portable binary format on many platforms, bringing great benefits in portability, tooling and language-agnosticity (since it supports C/C++ level semantics).
+
+
+External code bases, especially those in C/C++, will be easy to port to the WEB platform, via WebAssembly.
+%https://github.com/WebAssembly/design/blob/master/Rationale.md#why-ast
+%http://www.2ality.com/2015/06/WEB-assembly.html
+
+First, this is a collaborative effort, no single company goes it alone. At the moment, the following projects are involved: Firefox, Chromium, Edge and WebKit.
+Third, this is not about replacing JavaScript engines, it is more about adding a new feature to them. That greatly reduces the amount of work to implement WebAssembly and should help with getting the support of the WEB development community.
+j
+
+WebAssembly is not bytecode: Bytecode is linear and (usually) stack-, register- or SSA-based, WebAssembly is a binary format for an abstract syntax tree (AST). Compared to bytecode, this has the following advantages:
+
+WebAssembly is relatively easy to add to all current JavaScript engines, because it is high-level and similar to parts of JavaScript. That is, it builds on the infrastructures of engines, instead of replacing them. Engines will continue to have different compilation strategies and/or bytecode, which is good for the WEB ecosystem, because the differences have fostered experimentation and innovation.
+
+WebAssembly is not versioned. It uses the same evolution strategy as JavaScript (feature detection and polyfills).
+
+For the Unity Game Engine, first tests we're made with WebAssembly.
+
+WebAssembly will include both a binary notation, that compilers will produce, and a corresponding text notation, suitable for display in debuggers or development environments. Early prototypes are already showing some of the expected advantages; the binary representation is 20 times faster to parse than the equivalent asm.JavaScript.
+
 \subsection{Web Animations}
 
 Web Animations defines a model for supporting animation and synchronization on the Web platform. It is intended that other specifications will build on this model and expose it's features through declarative means. In addition, this specification also defines a programming interface to the model that may be implemented by user agents that provide support for scripting.
@@ -1034,8 +1057,6 @@ os detalhes da WebGL. Possibilita trabalhar com efeitos, luzes, cenas
 e outras abstrações em detrimento de shaders, vertices, e conceitos mais
 primitivos.
 
-%\subsection{Debug}
-%Debugar aplicativos 3D pode ser complexo, o debugger do chrome é uma boa opção.
 
 Um site interessante para explorar exemplos WebGL mais avançados é o
 blog http://learningwebgl.com  que  conta com tutoriais
@@ -1303,6 +1324,17 @@ O HTML5 trata todos estes casos abstratamente na forma de eventos, os
 quais podem ser escutados através de \textit{listeners}. Os eventos
 básicos são: keydown (tecla baixa), keyup (tecla solta) e keypress
 (tecla pressionada).
+
+
+\section{Debug}
+
+\subsection{Source Maps}
+
+The source map file will only be downloaded if you have source maps enabled and your dev tools open. You'll also need to upload your original files so the dev tools can reference and display them when necessary.
+
+
+
+Debugar aplicativos 3D pode ser complexo, o debugger do chrome é uma boa opção.
 
 
 \subsection{DISPONIBILIZAÇÃO DA APLICAÇÃO}
