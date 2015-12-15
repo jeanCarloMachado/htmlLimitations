@@ -976,16 +976,19 @@ suporte a texto, foram adicionadas tardiamente. E alguns navegadores
 lançaram antes da especificação estar completa e hoje tem problema
 de suporte para essas áreas \autocite{diveIntohtml}. Apesar de muitas
 vezes incompleto, o canvas é suportado em todos os maiores navegadores
-à partir do Internet Explorer 9.
+à partir do Internet Explorer 9. Não obstante existe a possibilidade de utilizar
+a biblioteca https://github.com/google/canvas-5-polyfill para
+suprir aos navegadores que ainda não implementaram, os últimos recursos
+da especificação CANVAS, como o recurso de desenhar elipses e o caminho 2D.
 
-Apesar de ser largamente suportado nos navegadores atuais, canvas ainda
-sofre de problemas de performance. Para navegadores antigos - abaixo do
-Internet Explorer 9 - existe o polyfill Explorer Canvas do Google, que
-emula em JavaScript as funcionalidades do canvas. O FastCanvas é uma
-iniciativa híbrida para Android que busca mitigar os problemas de
-performance do Canvas com uma API nativa. Não obstante, o FastCanvas
-não suporta a especificação do canvas completamente, não permite ser
-integrado com outros elementos do DOM.
+Apesar de ser geralmente bem suportado nos navegadores atuais, canvas
+ainda sofre de problemas de performance. Para navegadores antigos -
+abaixo do Internet Explorer 9 - existe o polyfill Explorer Canvas
+do Google, que emula em JavaScript as funcionalidades do canvas. O
+FastCanvas é uma iniciativa híbrida para Android que busca mitigar os
+problemas de performance do Canvas com uma API nativa. Não obstante, o
+FastCanvas não suporta a especificação do canvas completamente, não
+permite ser integrado com outros elementos do DOM.
 
 Em um documento HTML, Canvas é um retângulo onde pode-se usar
 JavaScript para desenhar \autocite[pp. 113]{diveIntohtml}.
@@ -1006,9 +1009,6 @@ Algumas outras fraquezas do canvas são:
 O canvas até aqui descrito trata-se de sua forma, ou contexto 2D. A
 especificação 3D do canvas é o WebGl.
 
-https://github.com/google/canvas-5-polyfill Esta serve para
-suprir aos navegadores que ainda não implementaram, os últimos recursos
-da especificação CANVAS, como o recurso de desenhar elipses e o caminho 2D.
 %}}}
 \subsection{WEBGL}
 %{{{
@@ -1060,12 +1060,12 @@ Android 2.3 e IPhone 5.
 Treejs é uma abstração sobre WebGL que permite os autores se focarem
 na criação de conteúdo para web, ao invés de dispenderem tempo manipulando
 os detalhes da WebGL. Possibilita trabalhar com efeitos, luzes, cenas
-e outras abstrações em detrimento de shaders, vertices, e conceitos mais
+e outras abstrações em detrimento de shaders, vértices, e conceitos mais
 primitivos.
 
-Um site interessante para explorar exemplos WebGL mais avançados é o
-blog http://learningwebgl.com que conta com tutoriais cobrindo áreas
-como diferentes tipos de iluminação, carrecamento de modelos em json,
+Um site interessante para explorar exemplos WebGL avançados é o blog
+http://learningwebgl.com que conta com tutoriais cobrindo áreas como
+diferentes tipos de iluminação, carrecamento de modelos em json,
 gerenciando eventos do mouse e teclado; e como renderizar uma cena WebGL
 em uma textura \autocite[pp.42]{3daps}.
 
