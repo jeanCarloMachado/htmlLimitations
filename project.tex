@@ -13,7 +13,7 @@ no resultado do jogo pois quão mais rápido o jogador acertar se a
 afirmação está correta ou não mais pontos ele receberá.
 
 Esta categoria de jogo foi selecionada pois oferece uma experiência
-interessante, tem profundidade - oferencendo a possibilidade
+interessante, tem profundidade - oferecendo a possibilidade
 de explorar diversos recursos do HTML5. Por ser de razoável
 tradutibilidade em tamanhos de telas diferentes e tipos de entrada de
 dados diferentes. E, por fim, por oferecer uma dificuldade técnica não
@@ -23,7 +23,7 @@ desenvolvimento de jogos para HTML5.
 Jogos como o Math Workout para Android tem uma temática similar.
 Não obstante, este jogo não sugere respostas para o usuário
 e o questiona sobre a veracidade delas, apresenta apenas a equação
-e requer uma respota. O jogo aqui desenvolvido parece ter uma melhor
+e requer uma resposta. O jogo aqui desenvolvido parece ter uma melhor
 jogabilidade para dispositivos móveis, pois não requer a presença
 de um teclado. Os botões de verdadeiro ou falso contém todas as
 possibilidades.
@@ -178,17 +178,34 @@ regras CSS demonstradas abaixo.
 \subsection{Otimizando JavaScript para jogos}
 
 \subsubsection{Modo estrito}
-Algumas das recomendações nesta seção podem não se aplicam exclusivamente ao desenvolvimento de jogos. Outrossim são de grande relevância para a criação de sistemas de grande complexidade, característica comum da grande maioria dos jogos.
+Algumas das recomendações nesta seção podem não se aplicar
+exclusivamente ao desenvolvimento de jogos. Outrossim são de grande
+relevância para a criação de sistemas de grande complexidade em geral,
+característica comum da grande maioria dos jogos.
 
-Um recurso interessante do JavaScript é seu modo estrito, este faz um conjunto de modificação na semântica do interpretador de modo que alguns recursos suportados, mas propensos a problemas, sejam desabilitados. Pode ser entendido como uma variante mais estrita do JavaScript. O modo restrito pode ser habilitado por arquivos ou funções permitindo que código não estrito trabalhe em conjunto com código estrito, característica conveniente para a utilização em sistemas legados.
+Um recurso interessante do JavaScript é seu modo estrito, este faz
+um conjunto de modificação na semântica do interpretador de modo
+que alguns recursos suportados, mas propensos a problemas, sejam
+desabilitados. Um exemplo é variáveis sem o prefixo var.
+
+O modo estrito pode ser entendido como uma variante mais rígida
+do JavaScript. O modo restrito pode ser habilitado utilizando o
+termo \textit{"use strict";} nos cabeçahos de arquivos ou funções
+permitindo que código não estrito trabalhe em conjunto com código
+estrito, característica conveniente para a utilização em sistemas
+legados.
 
 \subsubsection{Funções imediatamente invocadas}
 
-Um problema comum de sistemas complexos em JavaScript é que muitos objetos vivem em ambiente global. Isso pode causar uma coleção de problemas, desde conflitos de nomes à sobrescrita de variáveis. Para contornar esse problema pode-se utilizar as funções imediatamente invocadas IIFE (\texit{Immediatly invoked function expression}).
+Um problema comum de sistemas complexos em JavaScript é que muitos
+objetos vivem em ambiente global. Isso pode causar uma coleção de
+problemas, desde conflitos de nomes à sobrescrita de variáveis. Para
+contornar esse problema pode-se utilizar as funções imediatamente
+invocadas IFE (\textit{Immediatly invoked function expression}).
 
 \begin{figure}
-    \centering
-    \begin{verbatim}
+\centering
+\begin{verbatim}
     (function() {
         'use strict';
 
@@ -198,14 +215,13 @@ Um problema comum de sistemas complexos em JavaScript é que muitos objetos vive
 
         window.bar = bar;
     })();
-
     window.bar();
-
-    \end{verbatim}
-	\caption{Exemplo de utilização de funções imediatamente invocadas}
-    \label{fig:iife}
+\end{verbatim}
+\caption{Exemplo de utilização de funções imediatamente invocadas}
+\label{fig:iife}
 \end{figure}
 
-A figura \ref{fig:iife} demonstra a utilização deste padrão. As funções definidas no mesmo nível que bar não estarão no contexto global - a não ser que seja especificado diretamente - e não sofrerão conflitos de nomes.
-
-
+A figura \ref{fig:iife} demonstra a utilização deste padrão. As
+funções definidas no mesmo nível que bar não estarão no contexto
+global - a não ser que seja especificado diretamente - e não sofrerão
+conflitos de nomes e outros problemas relativos ao contexto global.
