@@ -1062,7 +1062,7 @@ A WebVR é uma especificação que pretende trazer os benefícios
 da realidade virtual para dentro do mundo da WEB. Em termos simples
 a especificação define uma forma de traduzir movimentos de
 acelerômetros e outros sensores de posição e movimentos para dentro
-do contexto de uma um contexto 3D através de JavaScript. 
+do contexto de uma um contexto 3D através de JavaScript.
 
 Atualmente a especificação do WebVR se encontra em fase de rascunho e
 as últimas versões do Firefox, e versões compiladas manualmente do
@@ -1070,14 +1070,19 @@ Google Chrome já permitem a utilização.
 
 
 %}}}
-\section{WEBCL}
-This specification defines WebCL (Web Computing Language). WebCL is a JavaScript binding to the Khronos OpenCL standard for heterogeneous parallel computing. It enables web applications to harness GPU and multi-core CPU parallel processing from within a Web browser, enabling significant acceleration of computationally intensive applications, such as image and video processing, data visualization, and 3D games.
+\section{WebCL}
 
-Open Computing Language (OpenCL) is a framework for writing programs that execute across heterogeneous platforms consisting of central processing units (CPUs), graphics processing units (GPUs), digital signal processors (DSPs), field-programmable gate arrays (FPGAs) and other processors or hardware accelerators. OpenCL specifies a language (based on C99) for programming these devices and application programming interfaces (APIs) to control the platform and execute programs on the compute devices. OpenCL provides a standard interface for parallel computing using task-based and data-based parallelism. OpenCL is an open standard maintained by the non-profit technology consortium Khronos Group. Conformant implementations are available from Altera, AMD, Apple, ARM Holdings, Creative Technology, IBM, Imagination Technologies, Intel, Nvidia, Qualcomm, Samsung, Vivante, Xilinx, and ZiiLABS.[6][7]
+É uma API em JavaScript para o recursos de OpenCL que permitem
+computação paralela com grandes ganhos de performance. Aplicativos
+como moteres de física e renderizadores de imagens, ambos relevantes
+para os jogos, podem se beneficiar grandemente de processamento feito em
+paralelo, possivelmente na GPU. OpenCL é um framework para escrever
+programas que funcionem em plataformas com diversas unidades de
+processamento, assim como WebGL e WebCL é especificada e desenvolvida
+pelo grupo Kronos.
 
-%}}}
-%{{{
-
+A primeira versão da especificação foi no início de 2014 mas até
+então nenhum navegador implementa o definido.
 %}}}
 \section{CODECS}
 %{{{
