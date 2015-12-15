@@ -1234,6 +1234,9 @@ O armazenamento de sessão é para informações que podem variar de aba para
 aba e que não é interessante que sejam persistidos para demais acessos
 além do atual.
 
+A API do Web Storage é simples, consistindo em uma interface para
+buscar dados e outra para armazenar, no formato chave/valor.
+
 \subsection{IndexedDB}
 %{{{
 IndexedDB é um banco de dados que suporta o armazenamento de grandes
@@ -1314,14 +1317,14 @@ O contexto global (objeto janela) não existe em um worker, ao invés disso
 o objeto \textit{DedicatedWorkerGlobalScope} pode ser utilizado.
 Workers compartilhados podem utilizar o \textit{SharedWorkerGlobalScope}.
 Estes objetos contém grande parte das funcionalidades proporcionadas pelo window
-com algumas execções.
+com algumas exceções.
 
 Dentro de um worker não é possível manipular o DOM.
 
-O worker se comunica com outros scripts atraves de mansagens.
-
+O worker se comunica com outros scripts através de mensagens.
 
 \section{OFFLINE}
+
 Não é extraordinário que um jogo tenha que ser reverso para um estado
 válido anterior por motivo de um erro na base de dados \autocite[pp.
 5]{browserGamesTechnologyAndFuture}.
