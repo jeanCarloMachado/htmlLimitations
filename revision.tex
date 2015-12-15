@@ -94,7 +94,7 @@ Entre seus pontos positivos pode-se listar:
 plataformas;
 \item Contém a mais vasta gama de desenvolvedores e muitos
 interessados em aprendê-la;
-\item Seus custos são inferiores, aos do desenvolvimento nativo devido a 
+\item Seus custos são inferiores, aos do desenvolvimento nativo devido a
 inexistência de duplicação da base de código;
 \item  Não requerem instalação ou atualizações manuais
 \item  Sua distribuição é superior ao estilo convencional de aplicações desktop \autocite{browserGamesTechnologyAndFuture}
@@ -804,6 +804,9 @@ nos navegadores é o site http://caniuse.com/.
 %}}}
 \section{NAVEGADORES}
 %{{{
+Navegadores são as plataformas de WEB, onde as tecnologias até então
+descritas são interpretadas e geram um conteúdo útil para os usuários.
+
 Aplicações do lado do cliente geralmente se comunicam com um
 servidor através de documentos em HTTP. Quado o navegador recebe um
 destes pacotes em HTML ele começa o processo de renderização. A
@@ -823,8 +826,8 @@ Para transformar as instruções retornadas pelo servidor em algo útil
 para o usuário final os navegadores geralmente fazem uso de bibliotecas
 externas capazes de interpretar HTML5 e gerar o conteúdo iterativo.
 
-Os navegadores são geralmente compostos por um motor de renderização (engine)
-e por um motor de JavaScript.
+Os navegadores são geralmente compostos por um motor de renderização
+(\textit{engine}) e por um motor de JavaScript.
 
 Alguns motores de renderização incluem:
 
@@ -863,17 +866,16 @@ A figura \ref{fig:audioCodecs} apresenta o gráfico de suporte por versões de n
 \section{ANDROID}
 %{{{
 
-É um sistema operacional open-source desenvolvido pela Google.
-Utiliza o kernel Linux .
-Softwares para Android são geralmente escritos em Java e executados
-através da máquina virtual Dalvik.
+É um sistema operacional open-source desenvolvido pela Google. Utiliza
+o kernel Linux . Softwares para Android são geralmente escritos em Java
+e executados através da máquina virtual Dalvik.
 
-É similar a máquina virtual Java, mas roda um
-formato de arquivos diferenciado (dex), otimizados para consumir pouca
-memória, que são agrupados em um único Android Package (apk) Android
-permite a renderização de documentos HTML através de sua própria
-API WEBVIEW. Ou através do navegador disponibilizado por padrão, ou
-outros de terceiros como o Google Chrome, Firefox, Opera, etc.
+É similar a máquina virtual Java, mas roda um formato de arquivos
+diferenciado (dex), otimizados para consumir pouca memória, que
+são agrupados em um único Android Package (apk) Android permite a
+renderização de documentos HTML através de sua própria API WEBVIEW.
+Ou através do navegador disponibilizado por padrão, ou outros de
+terceiros como o Google Chrome, Firefox, Opera, etc.
 
 No quesito jogos para dispositivos móveis é preferível disponibilizar
 os jogos através da interface nativa pois dá a sensação de
@@ -893,7 +895,6 @@ baseada em XML especializada na criação de vetores bidimensionais
 API do DOM para manipular os elementos.
 
 Entre os benefícios do SVG encontram-se:
-
 \begin{itemize}
 \item Não há diferença de qualidade em resoluções pois os vetores são escaláveis;
 \item Suporta animações nativamente;
@@ -974,6 +975,7 @@ utilizados para 2D também \autocite[pp. 6]{3daps}. Os primeiros
 rascunhos do WebGL iniciaram em 2006, não obstante o grupo de trabalho
 não foi formado até 2009. E a primeira versão do foi lançada em
 2011.
+
 A especificação do WebGL foi desenvolvida baseando-se em OpenGL,
 especificamente OpenGL ES 2.0, uma versão do OpenGL otimizada para
 dispositivos móveis. O órgão que especifica o WebGL é o mesmo que
@@ -1040,6 +1042,19 @@ projeto aumentariam muito se tivessem de incluir um jogos 3D.
 
 \subsection{WEBVR}
 %{{{
+Segundo \cite{virtualReality} realidade virtual é uma experiência em que o
+usuário é efetivamente imerso em um mundo virtual responsivo.
+Realidade virtual é uma área nem tão nova mas que recebeu um novo interesse
+recentemente. Fator que, pelo menos me parte, catalizou essa mudança é o advento
+dos dispositivos móveis inteligentes. O hardware necessário para fornecer uma
+experiência minimamente viável como acelerômetros, câmeras e telas de alta resolução está 
+disponível em praticamente todos os dispositivos comercializados.
+
+Realidade virtual é uma área de grande interessa para jogos, oferecer
+uma experiência interativa com desafios e diversão aliados a um mundo
+virtual que possibilita imersão quase total é de interessa de grande
+parcela dos produtores de jogos.
+
 http://webvr.info/
 WebVR is an experimental Javascript API that provides access to Virtual Reality devices, such as the Oculus Rift or Google Cardboard, in your browser.
 

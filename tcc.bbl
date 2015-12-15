@@ -32,6 +32,21 @@
   \field{year}{2014}
 \endentry
 
+\entry{virtualReality}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Books}{B.}%
+     {Frederick P.~Jr.}{F.~P.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BFPJ1}
+  \strng{fullhash}{BFPJ1}
+  \field{labelyear}{1999}
+  \field{title}{What's real about virtual reality}
+  \field{year}{1999}
+\endentry
+
 \entry{htmlAndCssDucket}{book}{}
   \name{author}{1}{}{%
     {{}%
