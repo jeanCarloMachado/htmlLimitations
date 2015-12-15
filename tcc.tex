@@ -402,7 +402,7 @@ Seguindo a construção do markup, veio o desenvolvimento da
 classe Match, a qual simboliza uma partida dentro do jogo.
 
 No início da construção não  havia um gerador de equações, o jogo
-contava apenas com um array de equações pre-estabelecidas que
+contava apenas com um vetor de equações pré-estabelecidas que
 eram selecionadas aleatoriamente a cada turno.
 
 Isso se provou uma boa escolha pois possibilitou que o desenvolvimento
@@ -417,7 +417,7 @@ declarar todos os objetos relativos ao objeto window. Isso se demonstrou
 uma boa forma de separar os objetos, tornando o conflito de variáveis
 globais um problema irrelevante.
 
-Outro aspecto positivo foi a utilização de um meta objeto para encapsualar
+Outro aspecto positivo foi a utilização de um meta objeto para encapsular
 os demais, neste caso utilizei o nome MyMath, funcionando como um namespace,
 garantindo que problemas de conflitos de nomes não aconteçam.
 
@@ -427,6 +427,10 @@ terceiros que pudessem ocultar alguma limitação.
 
 Escolhi a simplicidade para não precisar ficar muito tempo aprendendo
 as coisas em detrimento do refinamento da pesquisa.
+
+Como armazenamento local foi optado por Web Storage por ser uma API simples,
+visto que os requerimentos do protótipo não demandam grande performance ou
+armazenamento massivo de dados a opção mais modesta foi preferida.
 
 \begin{figure}
     \centering

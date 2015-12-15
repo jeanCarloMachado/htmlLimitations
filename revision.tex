@@ -806,28 +806,32 @@ elem.getAnimations().filter(
 %}}}
 
 \section{DETECÇÃO DE RECURSOS}
-
 %{{{
 
 Visto que nenhum navegador implementa as especificações HTML
-completamente, cabe ao desenvolvedor detectar os navegadores que não
+completamente cabe ao desenvolvedor detectar os navegadores que não
 comportam as necessidades tecnológicas dos aplicativos que cria. Ao
 deparar-se com uma funcionalidade faltante o desenvolvedor tem duas
 possibilidades: notificar o usuário sobre o problema ou utilizar
 polyfills.
 
-Polyfills são recursos que simulam uma funcionalidade não disponível para
-os navegadores que não suportam determinada especificação. A biblioteca
-Gears https://developers.google.com/gears é um exemplo. Esta serve
-para prover recursos de Geolocalização para navegadores que não
-implementam a especificação do HTML5.
+Polyfills são recursos que simulam uma funcionalidade não disponível
+nativamente nos navegadores. A
+biblioteca Gears https://developers.google.com/gears é um exemplo.Gears
+serve para prover recursos de Geolocalização para navegadores que não
+implementam a especificação do HTML5. Essa capacidade de suportar
+tecnologias que não estão ainda disponíveis ou nunca estarão, no caso de dispositivos legados, através de polyfills é
+uma das características que faz a WEB uma plataforma de tão grande
+abrangência. Novas tecnologias são criadas a todo o momento, entretanto o
+suporte a essas funcionalidades geralmente não acompanham o passo das
+inovações. E ainda assim os usuários podem se bonificar em uma taxa substancial.
 
-Algumas funcionalidades do HTML, como geolocalização e vídeo foram
-primeiramente disponibilizadas através de plugins. 
-Outras funcionalidades, como o Canvas, podem ser totalmente
-emuladas via JavaScript \autocite{diveIntohtml}.
+Algumas funcionalidades do HTML, como geolocalização e vídeo
+foram primeiramente disponibilizadas através de plugins. Outras
+funcionalidades, como o Canvas, podem ser totalmente emuladas via
+JavaScript \autocite{diveIntohtml}.
 
-Detectar suporte aos mais variados recursos do HTML5 no navegador
+Detectar suporte aos variados recursos do HTML5 no navegador
 pode ser uma tarefa entediante. É possível implementar testes para
 cada funcionalidade utilizada abordando os detalhes de implementação
 de cada uma ou então fazer uso de alguma biblioteca especializada
@@ -1091,7 +1095,6 @@ Para falar sobre audio e vídeo precisamos primeiramente introduzir o conceito d
 
 Codecs é uma área problemática do HTML5. Segundo \cite{diveIntohtml} não existe uma única combinação de containers e codecs que funcionem em todos os navegadores.
 
-
 \section{AUDIO}
 %{{{
 Áudio é um componente vital para oferecer imersão e feddback aos
@@ -1175,12 +1178,19 @@ Alguns codecs de vídeo
 %}}}
 \section{ARMAZENAMENTO}
 
+Uma das grades limitações do HTML era a ausência de capacidade
+de armazenamento de dados. Armazenamento no lado do cliente é um
+requerimento básico para qualquer aplicação moderna. Essa área
+era ode as aplicações nativas detinham grande vantagem sobre as
+aplicações web. O HTML5 solucionou este problema introduzindo várias
+formas de armazenamento de dados \autocite{html5Tradeoffs}.
+
 Armazenamento local é um recurso importante para jogos, tanto por
 diminuir a latência da persistência na rede, quanto para possibilitar
 um experiência offline.
 
 Existem algumas especificações sobre armazenamento, mas a grande
-maioria delas não conta como suporte completo em todos os navegadores
+parte delas não conta como suporte completo em todos os navegadores
 comuns, um polyfill interessante para Web Storage  e IndexedDB é o
 projeto localForge \textit{https://github.com/mozilla/localForage} da
 Mozilla.
@@ -1271,17 +1281,17 @@ responder a estes desafios existe a especificação do IndexedDB.
 IndexedDB é um banco de dados que suporta o armazenamento de grandes
 quantidades de dados no formato de chave/valor o qual  permite alta
 performance em buscas baseadas em índices. A tecnologia é uma recomendação
-da W3C desde janeiro de 2015 e suportada, pelo menos parcialmente, por 
+da W3C desde janeiro de 2015 e suportada, pelo menos parcialmente, por
 praticamente todos os navegadores populares.
 
 Inicialmente IndexedDB permitia operações síncronas e assíncronas.
 Não obstante, a versão síncrona foi removida devido a falta de
-interesse da comunidade. Operações assíncronas permitem que aplicativos
-JavaScript nunca esperam pelo resultado para continuar a
+interesse da comunidade. Operações assíncronas permitem que
+aplicativos JavaScript nunca esperam pelo resultado para continuar a
 execução. Outrossim, cada interação com o banco de dados é uma
-transação que pode retornar um resultado ou um erro. Os eventos da transação
-são internamente eventos DOM cuja propriedade \textit{type} do
-elemento foi setada para \textit{success} ou \textit{error}.
+transação que pode retornar um resultado ou um erro. Os eventos da
+transação são internamente eventos DOM cuja propriedade \textit{type}
+do elemento foi setada para \textit{success} ou \textit{error}.
 
 Ao invés de tabelas, IndexedDB trabalha com repositórios de objetos.
 Cada entrada, tupla em SQL, de um determinado repositório pode ser de
@@ -1316,7 +1326,7 @@ Apesar de ser desenvolvido com objetivo de ser uma solução para todas
 as necessidades de armazenamento no Frontend IndexedDB ainda sofre
 algumas limitações.
 
-Abaixo segue uma lista com algumas limitações do IndexedDB.
+Abaixo segue uma lista com algumas das limitações do IndexedDB.
 
 \begin{itemize}
 \item Tem limites de armazenamento e as regras variam de navegador para navegador.
@@ -1358,12 +1368,6 @@ Não é extraordinário que um jogo tenha que ser reverso para um estado
 válido anterior por motivo de um erro na base de dados \autocite[pp.
 5]{browserGamesTechnologyAndFuture}.
 
-Uma das grades limitações do HTML era a ausência de capacidade
-de armazenamento de dados. Armazenamento no lado do cliente é um
-requerimento básico para qualquer aplicação moderna. Essa área
-era ode as aplicações nativas detinham grande vantagem sobre as
-aplicações web. O HTML5 solucionou este problema introduzindo várias
-formas de armazenamento de dados \autocite{html5Tradeoffs}.
 
 \subsection{Aplicações offline}
 Na sua versão mais simples, um aplicativo offline é um conjunto de
@@ -1384,7 +1388,6 @@ quais podem ser escutados através de \textit{listeners}. Os eventos
 básicos são: keydown (tecla baixa), keyup (tecla solta) e keypress
 (tecla pressionada).
 
-
 \section{Debug}
 
 \subsection{Source Maps}
@@ -1394,15 +1397,18 @@ The source map file will only be downloaded if you have source maps enabled and 
 Debugar aplicativos 3D pode ser complexo, o debugger do chrome é uma boa opção.
 
 
-\subsection{DISPONIBILIZAÇÃO DA APLICAÇÃO}
+\section{DISPONIBILIZAÇÃO DA APLICAÇÃO}
 
-Links com manifestos
 
 Aplicativos baseados na web não requerem instalação ou atualizações
 manuais e sua distribuição é superior ao estilo convencional de
 aplicações desktop \autocite{browserGamesTechnologyAndFuture}.
 
-\section{INSTALAÇÃO}
+
+Links com manifestos
+
+
+\subsection{INSTALAÇÃO}
 %{{{
 Este método é benéfico pois possibilita ao usuário a mesma
 experiência ao adquirir uma aplicação normal. Este tipo de
