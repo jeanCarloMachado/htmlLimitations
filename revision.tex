@@ -1406,8 +1406,36 @@ básicos são: keydown (tecla baixa), keyup (tecla solta) e keypress
 
 \subsection{Source Maps}
 
-The source map file will only be downloaded if you have source maps enabled and your dev tools open. You'll also need to upload your original files so the dev tools can reference and display them when necessary.
+Source Maps é uma tecnologia que permite mapear códigos fontes
+minificados para seus respectivos originais. Este recurso é
+interessante pois permite que os desenvolvedores visualizem o código
+fonte em sua versão original, legível, enquanto entregam ao usuário
+final a versão minificada, optimizada para performance.
+Para o usuário final não há diferença pois Source Maps são
+carregados apenas se as ferramentas de desenvolvimento estão abertas e
+com a funcionalize de Source Maps habilitadas.
 
+Source Maps foi desenvolvido como um trabalho em conjunto entre a
+Mozilla e Google em 2010, atualmente na terceira revisão o projeto é
+considerável estával e não recebe modificações na especificação
+desde 2013.
+
+As ferramentas de desenvolvimento do Google Chrome e Firefox permitem a utilização de Source Maps.
+
+É possível informar o navegador a localização do arquivo original seguindo a seguinte sintaxe.
+
+\begin{verbatim}
+//# sourceMappingURL=/path/to/script.JavaScript.map
+\end{verbatim}
+
+Ou através de cabelhalos HTTP como demostrado abaixo.
+
+\begin{verbatim}
+X-SourceMap: /path/to/script.JavaScript.map
+\end{verbatim}
+
+Arquivos de Source Map contém metadados sobre os arquivos fonte e algumas outras configurações.
+Para gerar os arquivos é possível utilizar ferramentas como o https://github.com/mishoo/UglifyJS2.
 
 \subsection{Debug 3D}
 Debugar aplicativos 3D pode ser complexo, o debugger do chrome é uma boa opção.
