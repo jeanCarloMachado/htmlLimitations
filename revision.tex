@@ -1027,22 +1027,23 @@ especifica o OpenGL: Kronos Working Group.
 O elemento do DOM que provê a interface do WebGL é o canvas, no contexto 3D.
 Essa integração com o DOM permite que o WebGL seja manipulado assim como os demais elementos HTML.
 
-A especificação é composta por uma API de controle em JavaScript e o
-processamento shaders.
-
 É digno de nota que é recomendável se testar WebGL em todos os navegadores
 e plataformas alvo. Pode haver diferenças substanciais de performance em
 plataformas diferentes e em navegadores diferentes. Existe também uma lista
 de placas gráficas com drivers bloqueados por não funcionarem corretamente no
 Firefox \autocite[pp.42]{3daps}.
 
-WebGL só se tornou uma possibilidade performática para jogos pois parte do seu processamento pode ser delegado para a GPU. Shaders são os elementos que são executados do lado da GPU.
+WebGL só se tornou uma possibilidade performática para jogos
+pois parte do seu processamento pode ser delegado para a GPU. A
+especificação é composta por uma API de controle em JavaScript e o
+processamento shaders. Shaders são responsáveis por grande parcela dos
+efeitos 3D e são executados do lado da GPU.
 
 \subsection{Shaders}
 
-Shaders definem níveis de cor ou efeitos especiais sobre um modelo 2d ou 3D.
-Contam com grande performance, possibilitando conteúdo em tempo real - como 
-no caso dos jogos - por executarem dentro da GPU.
+Shaders definem níveis de cor ou efeitos especiais sobre um modelo 2d
+ou 3D. Contam com grande performance, possibilitando conteúdo em tempo
+real - como no caso dos jogos - por executarem dentro da GPU.
 São utilizados no cinema, em imagens geradas por computadores e vídeo games.
 
 Existem dois shaders principais, de vértices e fragmentos.
@@ -1063,6 +1064,14 @@ os detalhes da WebGL. Possibilita trabalhar com efeitos, luzes, cenas
 e outras abstrações em detrimento de shaders, vértices, e conceitos mais
 primitivos.
 
+\subsection{Otimizações}
+CPU? JavaScript, DOM, etc.
+GPU?
+
+- Texture compression
+- Mipmaps (LOD)
+- Draw calls
+
 Um site interessante para explorar exemplos WebGL avançados é o blog
 http://learningwebgl.com que conta com tutoriais cobrindo áreas como
 diferentes tipos de iluminação, carrecamento de modelos em json,
@@ -1073,13 +1082,14 @@ Apesar da relevância, WebGL não foi utilizada no trabalho pois ainda
 não está completamente especificada e a dificuldade e escopo do
 projeto aumentariam muito se tivessem de incluir um jogos 3D.
 %}}}
-\subsection{WEBVR}
 
+\subsection{WEBVR}
+%{{{
 http://webvr.info/
 WebVR is an experimental Javascript API that provides access to Virtual Reality devices, such as the Oculus Rift or Google Cardboard, in your browser.
 
 enabling developers to translate position and movement information from the display into movement around a 3D scene
-
+%}}}
 \section{WEBCL}
 This specification defines WebCL (Web Computing Language). WebCL is a JavaScript binding to the Khronos OpenCL standard for heterogeneous parallel computing. It enables web applications to harness GPU and multi-core CPU parallel processing from within a Web browser, enabling significant acceleration of computationally intensive applications, such as image and video processing, data visualization, and 3D games.
 
