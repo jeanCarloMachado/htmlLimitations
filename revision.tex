@@ -1350,22 +1350,19 @@ tecnologia da web que utiliza os mesmos princípios é o Web Workers.
 \section{WEB WORKERS}
 %{{{
 
-É uma API que possibilita executar programas em paralelo com a página principal.
+É uma API que possibilita executar vários scripts
+(\textit{threads})JavaScript ao mesmo tempo. O script que cria uma
+thread é chamado de pai da thread, e a comunicação entre pai e filhos
+pode acontecer de ambos os lados através de mensagem encapsuladas
+em eventos. Um script que não seja pai de uma thread não pode se
+comunicar com ela, a não ser que a thread seja em modo compartilhado.
 
-A \textit{thread} fila pode comunicar-se com seu pai.
-
-Existem workers dedicados, que podem ser acessados por seus criadores, e Workers
-compartilhados.
-
-O contexto global (objeto janela) não existe em um worker, ao invés disso
-o objeto \textit{DedicatedWorkerGlobalScope} pode ser utilizado.
-Workers compartilhados podem utilizar o \textit{SharedWorkerGlobalScope}.
-Estes objetos contém grande parte das funcionalidades proporcionadas pelo window
-com algumas exceções.
-
-Dentro de um worker não é possível manipular o DOM.
-
-O worker se comunica com outros scripts através de mensagens.
+O contexto global (objeto janela) não existe em uma thread,
+ao invés disso o objeto \textit{DedicatedWorkerGlobalScope}
+pode ser utilizado. Workers compartilhados podem utilizar o
+\textit{SharedWorkerGlobalScope}. Estes objetos contém grande parte das
+funcionalidades proporcionadas pelo window com algumas exceções, por
+exemplo threads não podem fazer alterações no DOM.
 
 %}}}
 \section{OFFLINE}
