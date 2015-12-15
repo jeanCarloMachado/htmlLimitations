@@ -1219,6 +1219,21 @@ Também conhecido como Local Storage, provê uma forma de armazenar os
 dados como chave valor dentro do navegador. Os dados são persistidos
 mesmo que o navegador seja fechado.
 
+É um recurso similar a cookies mas não requer que os dados sejam
+trafegados como cabeçalhos nas requisições. Web Storage provê
+maiores espaços de armazenamento quando comparado a cookies.
+
+Web Storage começou como parte da especificação do HTML5 mas agora
+conta com um documento próprio mantido pela W3C. A especificação é
+suportada pela grande maioria dos navegadores populares.
+
+A especificação oferece duas áreas de armazenamento, o armazenamento
+local e de sessão. O armazenamento local é persistido por domínio
+e outros scripts provindos deste mesmo domínio poderão fazer uso da informação.
+O armazenamento de sessão é para informações que podem variar de aba para
+aba e que não é interessante que sejam persistidos para demais acessos
+além do atual.
+
 \subsection{IndexedDB}
 %{{{
 IndexedDB é um banco de dados que suporta o armazenamento de grandes
