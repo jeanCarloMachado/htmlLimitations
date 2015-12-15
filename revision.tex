@@ -536,45 +536,6 @@ interessantes para se fazer com CSS no contexto de desenvolvimento de
 jogos.
 %\subsection{Transformações 3D}
 
-\subsection{Otimizando o CSS para jogos}
-
-Scroll é um recurso interessante para longas páginas de texto,
-o mesmo não se pode dizer à respeito de jogos.
-Principalmente aqueles dependente de contato com a tela, pois
-no contato a tela pode se mover e desconcentrar o usuário. Para
-remover este comportamento deve-se utilizar o \textit{overflow:
-hidden;} do seletor do corpo do documento (\textit{body}).
-
-A barra de endereço é outro recurso de pouca utilidade no contexto de
-jogos, e muitas vezes um empecilho para jogos em dispositivos móveis,
-devido ao limitado tamanho da tela.
-
-Para desabilitar a barra em dispositivos da Apple pode-se utilizar a
-seguinte configuração:
-
-\begin{verbatim}
-<meta name="apple-mobile-web-app-capable" content="yes" />
-\end{verbatim}
-
-Para os demais dispositivos não existe meio oficial de esconder a barra
-de endereço. Não obstante, alguns sites recomendam a solução descrita abaixo:
-
-\begin{verbatim}
-<body onload="setTimeout(function() {window.scrollTo(0, 1)}, 100)">
-</body>
-\end{verbatim}
-
-Apesar de não fazer parte da especificação, a maioria dos navegadores
-implementa a possibilidade de desativar a seleção de elementos na tela.
-Em jogos essa possibilidade é útil, pois não é natural a seleção de texto
-neste tipo de software. Para desabilitar a seleção pode-se utilizar as 
-regras CSS demonstradas abaixo.
-
-\begin{verbatim}
--moz-user-select: none;
--webkit-user-select: none;
--ms-user-select: none;
-\end{verbatim}
 
 \subsection{CSS4}
 
