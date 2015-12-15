@@ -306,18 +306,19 @@ as tecnologias da web: HTML, CSS3 e JavaScript.
 \subsection{DOM}
 %{{{
 
-O modelo de documento de objetos (\textit{Document Object Model}) é a representação
-em memória de uma árvore de elementos HTML. Esta representação é definida por
-um conjunto de padrões que torna interoperável a manipulação de elementos através de
-JavaScript.
+O modelo de documento de objetos (\textit{Document Object Model}) é
+a representação em memória de uma árvore de elementos HTML. Esta
+representação é definida por um conjunto de padrões que torna
+interoperável a manipulação de elementos através de JavaScript.
 
 A primeira versão do DOM, DOM nível zero, foi parcialmente
 especificada no HTML 4 e permitia manipulação parcial dos elementos.
-Foi somente com a especificação do JavaScript em 1998 que o DOM nível 1 foi especificado,
-permitindo a manipulação de qualquer elemento. DOM nível 2 e 3 seguiram com melhorias nas
-consultas aos elementos e CSS.
+Foi somente com a especificação do JavaScript em 1998 que o DOM nível
+1 foi especificado, permitindo a manipulação de qualquer elemento. DOM
+nível 2 e 3 seguiram com melhorias nas consultas aos elementos e CSS.
 
-A API de seletores do DOM permite alto nível de precisão e performance para buscar elementos.
+A API de seletores do DOM permite alto nível de precisão e performance
+para buscar elementos.
 
 \begin{figure}
 \centering
@@ -398,7 +399,7 @@ separadamente, esta abordagem é preferida pois permite uma maior
 entrega de novas funcionalidades, pois novos recursos não dependem da
 aceitação de outros para serem disponibilizados.
 
-Além do módulos, CSS também é organizado por perfis e níveis. 
+Além do módulos, CSS também é organizado por perfis e níveis.
 
 Os perfis do CSS organizam a especificação por dispositivo de utilização.
 Existem perfis para dispositivos móveis, televisores, impressoras, etc.
@@ -433,12 +434,13 @@ O CSS3, introduziu várias funcionalidades relevantes para jogos, como
 
 \subsection{Media Queries}
 
-Media Queries permitem aplicar regras a dispositivos específicos, dependendo de suas
-capacidades, como resolução, orientação, tamanho de tela, entre outros.
+Media Queries permitem aplicar regras a dispositivos específicos,
+dependendo de suas capacidades, como resolução, orientação, tamanho
+de tela, entre outros.
 
-A especificação prevê a possibilidade de aplicar seletores  entro de arquivos
-CSS, ou aplicar arquivos inteiros dependentemente das configuração do aparelho
-em questão.
+A especificação prevê a possibilidade de aplicar seletores entro
+de arquivos CSS, ou aplicar arquivos inteiros dependentemente das
+configuração do aparelho em questão.
 
 \begin{figure}
 \centering
@@ -1042,7 +1044,6 @@ projeto aumentariam muito se tivessem de incluir um jogos 3D.
 Uma tecnologia que se integra profundamente como ambientes virtuais
 em três dimensões criados via OpenGL é o WebVR.
 %}}}
-
 \subsection{WEBVR}
 %{{{
 Segundo \cite{virtualReality} realidade virtual é uma experiência em
@@ -1086,27 +1087,35 @@ então nenhum navegador implementa o definido.
 %}}}
 \section{CODECS}
 %{{{
-Para falar sobre audio e vídeo precisamos primeiramente introduzir o conceito de codecs. Codec - é o algorítmo usado para encodificar o video em um conjunto de bits \cite{diveIntohtml}.
+Para falar sobre audio e vídeo precisamos primeiramente introduzir o
+conceito de codecs. Codec - é o algorítmo usado para encodificar o
+video em um conjunto de bits \cite{diveIntohtml}.
 
-Codecs é uma área problemática do HTML5. Segundo \cite{diveIntohtml} não existe uma única combinação de containers e codecs que funcionem em todos os navegadores.
+Codecs é uma área problemática do HTML5. Segundo \cite{diveIntohtml}
+não existe uma única combinação de containers e codecs que funcionem
+em todos os navegadores.
 
 \section{AUDIO}
 %{{{
-Áudio é um componente vital para oferecer imersão e feddback aos
-usuários de jogos. Efeitos de som e música podem servir como mecanismo. 
-Por outro lado, jogadores tem baixa tolerância a volume, deve ser utilizado com cautela.
+Áudio é um componente vital para oferecer imersão e feddback
+aos usuários de jogos. Efeitos de som e música podem servir como
+mecanismo. Por outro lado, jogadores tem baixa tolerância a volume,
+deve ser utilizado com cautela.
 
-Segundo \cite{browserGamesTechnologyAndFuture} em sido difícil construir aplicações sofisticadas e interativas sem a utilização de plugins para áudio.
+Segundo \cite{browserGamesTechnologyAndFuture} em sido difícil
+construir aplicações sofisticadas e interativas sem a utilização de
+plugins para áudio.
 
-O componente de áudio é especialmente útil para jogos de ação \autocite{browserGamesTechnologyAndFuture}.
+O componente de áudio é especialmente útil para jogos de ação
+\autocite{browserGamesTechnologyAndFuture}.
 
 \subsection{TAG AUDIO}
 
 A tag <audio> define um som dentro de um documento HTML. Quando o
-elemento é renderizado pelos navegadores, ele carrega o conteúdo
-que pode ser reproduzido pelo player de audio do navegador. Existem
-muitas discrepâncias entre os formados aceitáveis pelos navegadores.
-É um tanto limitada quanto comparada ao áudio de múltiplos canais
+elemento é renderizado pelos navegadores, ele carrega o conteúdo que
+pode ser reproduzido pelo player de audio do navegador. Existem muitas
+discrepâncias entre os formados aceitáveis pelos navegadores. É um
+tanto limitada quanto comparada ao áudio de múltiplos canais
 disponibilizados por SDKs nativas.
 
 \subsection{API DE AUDIO}
@@ -1114,15 +1123,15 @@ disponibilizados por SDKs nativas.
 É uma interface de audio experimental para JavaScript. Provê maior
 flexibilidade na manipulação de audio. Essa tecnologia é muito mais
 nova do que a tag áudio.
-
-
 Abaixo segue alguns dos codecs de audio tradicionais:
+
 \begin{itemize}
     \item{MP3: comum, mas não é livre de patentes}
     \item{ACC: advanced audio coding, is patent encumbered} \item{Vorbis - patent free}
 \end{itemize}
 
-A figura \ref{fig:audioCodecs} é um comparativo interessante sobre os formatos existentes, considerando o fator taxa de bits versus qualidade.
+A figura \ref{fig:audioCodecs} é um comparativo interessante sobre os
+formatos existentes, considerando o fator taxa de bits versus qualidade.
 
 \begin{figure}
     \centering
@@ -1130,7 +1139,6 @@ A figura \ref{fig:audioCodecs} é um comparativo interessante sobre os formatos 
 	\caption{Comparação de codecs de áudio}
     \label{fig:audioCodecs}
 \end{figure}
-
 
 %}}}
 
@@ -1341,6 +1349,7 @@ tecnologia da web que utiliza os mesmos princípios é o Web Workers.
 %}}}
 \section{WEB WORKERS}
 %{{{
+
 É uma API que possibilita executar programas em paralelo com a página principal.
 
 A \textit{thread} fila pode comunicar-se com seu pai.
@@ -1405,9 +1414,11 @@ Mozilla e Google em 2010, atualmente na terceira revisão o projeto é
 considerável estával e não recebe modificações na especificação
 desde 2013.
 
-As ferramentas de desenvolvimento do Google Chrome e Firefox permitem a utilização de Source Maps.
+As ferramentas de desenvolvimento do Google Chrome e Firefox permitem a
+utilização de Source Maps.
 
-É possível informar o navegador a localização do arquivo original seguindo a seguinte sintaxe.
+É possível informar o navegador a localização do arquivo original
+seguindo a seguinte sintaxe.
 
 \begin{verbatim}
 //# sourceMappingURL=/path/to/script.JavaScript.map
@@ -1419,8 +1430,10 @@ Ou através de cabeçalhos HTTP como demostrado abaixo.
 X-SourceMap: /path/to/script.JavaScript.map
 \end{verbatim}
 
-Arquivos de Source Map contém metadados sobre os arquivos fonte e algumas outras configurações.
-Para gerar os arquivos é possível utilizar ferramentas como o https://github.com/mishoo/UglifyJS2.
+Arquivos de Source Map contém metadados sobre os arquivos fonte e
+algumas outras configurações.
+Para gerar os arquivos é possível utilizar ferramentas como o
+https://github.com/mishoo/UglifyJS2.
 
 \subsection{Debug 3D}
 Debugar aplicativos 3D pode ser complexo, o debugger do chrome é uma boa opção.
