@@ -1,4 +1,3 @@
-%{{{
 \section{JOGOS}
 %{{{
 Segundo \autocite{indieGamesLemes} jogo digital constitui-se em uma
@@ -1177,10 +1176,10 @@ Alguns codecs de vídeo
 \section{ARMAZENAMENTO}
 
 Armazenamento local é um recurso importante para jogos, tanto por
-diminuir a latência da persistência na rede, ou para possibilitar um
-experiência offline.
+diminuir a latência da persistência na rede, quanto para possibilitar
+um experiência offline.
 
-Existem várias especificações sobre armazenamento, mas a grande
+Existem algumas especificações sobre armazenamento, mas a grande
 maioria delas não conta como suporte completo em todos os navegadores
 comuns, um polyfill interessante para Web Storage  e IndexedDB é o
 projeto localForge \textit{https://github.com/mozilla/localForage} da
@@ -1190,13 +1189,12 @@ Mozilla.
 
 A especificação Web SQL introduz uma API para manipular banco de dados
 relacionais em SQL. A especificação suporta transações, operações
-assíncronas e tamanho de banco de dados é de 5 megabytes o qual pode
-ser estendido pelo usuário.
+assíncronas e um tamanho de armazenamento substancial: 5 megabytes, o
+qual pode ser estendido pelo usuário.
 
-O grupo de trabalho iniciou-se em 2010 e foi suspendido como um
-rascunho. A implementação do Web SQL, apesar de ser um recurso
-desejável para muitos desenvolvedores, foi descontinuada pelos motivos
-descritos abaixo.
+O grupo de trabalho do Web SQL iniciou-se em 2010 e foi suspendido ainda
+como rascunho. Apesar de ser um recurso desejável para muitos
+desenvolvedores, foi descontinuada pelos motivos descritos abaixo.
 
 Segundo \cite{diveIntohtml}
 \begin{quote}
@@ -1215,28 +1213,28 @@ IndexedDB.
 
 \subsection{WEB STORAGE}
 
-Também conhecido como Local Storage, provê uma forma de armazenar os
-dados como chave valor dentro do navegador. Os dados são persistidos
-mesmo que o navegador seja fechado.
+Web Storage, também conhecido como Local Storage, provê uma forma de
+armazenar os dados como chave valor dentro do navegador. Os dados são
+persistidos mesmo que o navegador seja fechado.
 
-É um recurso similar a cookies mas não requer que os dados sejam
-trafegados como cabeçalhos nas requisições. Web Storage provê
+É um recurso similar a cookies, contudo algumas diferenças
+substanciais são perceptíveis. Web Storage não requer que os dados
+sejam trafegados como cabeçalhos nas requisições. Também provê
 maiores espaços de armazenamento quando comparado a cookies.
 
-Web Storage começou como parte da especificação do HTML5 mas agora
+A tecnologia começou como parte da especificação do HTML5 mas agora
 conta com um documento próprio mantido pela W3C. A especificação é
 suportada pela grande maioria dos navegadores populares.
 
 A especificação oferece duas áreas de armazenamento, o armazenamento
 local e de sessão. O armazenamento local é persistido por domínio
-e outros scripts provindos deste mesmo domínio poderão fazer uso da informação.
-O armazenamento de sessão é para informações que podem variar de aba para
-aba e que não é interessante que sejam persistidos para demais acessos
-além do atual.
+e outros scripts provindos deste mesmo domínio poderão fazer uso da
+informação. O armazenamento de sessão é para informações que podem
+variar de aba para aba e que não é interessante que sejam persistidos
+para demais acessos além do atual.
 
 A API do Web Storage é simples, consistindo em uma interface para
 buscar dados e outra para armazenar, no formato chave/valor.
-
 
 \begin{figure}
 \centering
@@ -1259,10 +1257,14 @@ alert(localStorage.getItem('key'));
 \source{https://en.wikipedia.org/wiki/Web\_storage\#usage}
 \end{figure}
 
-Web storage  é uma soluçãos simples que comporta muitos casos de uso. Não obstante
-muitas vezes é necessário um controle mais refinado sobre os dados, ou mais performance
-em uma base de dados massiva. Para responder a estes desafios existe a especificação do IndexedDB.
+A figura \ref{fig:WebStorage} exemplifica a utilização do Web Storage,
+para utilizar o armazenamento de sessão utiliza-se o objeto sessionStorage. Já
+para utilizar o armazenamento local utiliza-se o objeto localStorage.
 
+Web Storage é uma solução simples que comporta muitos casos de uso.
+Não obstante muitas vezes é necessário um controle mais refinado
+sobre os dados, ou mais performance em uma base de dados massiva. Para
+responder a estes desafios existe a especificação do IndexedDB.
 
 \subsection{IndexedDB}
 %{{{
@@ -1416,4 +1418,3 @@ de tecnologias e não especificamente nas limitações conforme o meu
 trabalho. Em outras palavras seu escopo é mais genérico e não tão
 preciso quanto este
 
-%}}
