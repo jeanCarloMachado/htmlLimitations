@@ -348,10 +348,10 @@ que estão em acordo com o padrão especificado.
 \section{CSS}
 %{{{
 CSS (\textit{Cascading Style Sheets}) é uma linguagem de folhas de
-estilo, criada por Håkon Wium Lie em 1994, com intuito de definir a
+estilo criada por Håkon Wium Lie em 1994 com intuito de definir a
 apresentação de páginas HTML. CSS, juntamente com JavaScript e HTML,
 compõem as tecnologias centrais no desenvolvimento WEB tornando-se
-parte da OWP, sua especificação é atualmente mantida pela W3C.
+parte da OWP; sua especificação é atualmente mantida pela W3C.
 
 O termo \textit{Cascading} refere-se ao fato de regras serem herdadas
 pelos filhos de um elemento, eliminando grande parcela de duplicação
@@ -361,7 +361,7 @@ apresentação, é um dos pontos chave do SGML, motivo que tornou a
 utilização do CSS tão conveniente para o desenvolvimento WEB.
 
 Antes do CSS era impossível ter estilos diferenciados para diferentes
-tipos de dispositivos, limitando a aplicabilidade dos documentos. 
+tipos de dispositivos, limitando a aplicabilidade dos documentos.
 Com CSS também tornou-se possível que o usuário declare suas próprias
 folhas de estilo, um recurso importante para acessibilidade.
 
@@ -383,7 +383,7 @@ quais partes do documento HTML serão afetadas por determinado bloco de
 declaração.
 
 A figura \ref{fig:CSSSample} exemplifica este processo. O seletor em
-questão é o elemento p, simbolizando todos os parágrafos. O bloco de
+questão é o elemento \textit{<p>}, simbolizando todos os parágrafos. O bloco de
 declaração é o que está dentro das chaves, aplicando alinhamento e
 cores aos parágrafos.
 
@@ -402,16 +402,22 @@ p {
 \end{figure}
 
 CSS é dividido em módulos, que representam conjuntos de
-funcionalidades, contendo aproximadamente 50 deles, cada qual evoluindo
-separadamente. Além do módulos, CSS também é organizado por perfis e
-níveis.
+funcionalidades, contendo aproximadamente 50 deles. Cada módulo evolui
+separadamente, esta abordagem é preferida pois permite uma maior
+entrega de novas funcionalidades, pois novos recursos não dependem da
+aceitação de outros para serem disponibilizados.
 
-Os perfis do CSS dividem a especificação por dispositivo de
-utilização. Existem perfis para dispositivos móveis, televisores,
-impressoras, etc. Já os níveis dividem o CSS por camadas de
-abstração. Os níveis inferiores representam as funcionalidades vitais
-do CSS, os níveis superiores dependem dos inferiores para construir as
-funcionalidades elaboradas.
+Além do módulos, CSS também é organizado por perfis e níveis. 
+
+Os perfis do CSS organizam a especificação por dispositivo de utilização.
+Existem perfis para dispositivos móveis, televisores, impressoras, etc.
+Existem conjuntos de regras que se aplicam somente a uma classe de dispositivos,
+ou que sofrem alterações nas regras conforme as regras.
+
+Já os níveis organizam o CSS por camadas de abstração. Os níveis
+inferiores representam as funcionalidades vitais do CSS, os níveis
+superiores dependem dos inferiores para construir as funcionalidades
+elaboradas.
 
 A primeira especificação do CSS, CSS1 (ou nível 1) foi lançada em
 1996. Em 1997 foi lançado o CSS2 com o intuito de ampliar a completude
