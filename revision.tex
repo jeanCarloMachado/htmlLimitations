@@ -449,7 +449,6 @@ A especificação prevê a possibilidade de aplicar seletores  entro de arquivos
 CSS, ou aplicar arquivos inteiros dependentemente das configuração do aparelho
 em questão.
 
-
 \begin{figure}
 \centering
 \begin{verbatim}
@@ -1014,27 +1013,30 @@ da especificação CANVAS, como o recurso de desenhar elipses e o caminho 2D.
 \subsection{WEBGL}
 %{{{
 
-WebGL é uma API JavaScript para desenhar gráficos em três dimensões..
-Apesar de ter sido desenvolvido com foco em 3D, WebGL pode ser utilizados para
-2D também \autocite[pp. 6]{3daps}.
-Foi desenvolvido baseando-se em OpenGL, especificamente OpenGL ES 2.0,
-uma versão do OpenGL otimizada para dispositivos móveis. O órgão que
-especifica o WebGL é o mesmo que especifica o OpenGL, o Kronos.
+WebGL é uma API JavaScript para desenhar gráficos em três dimensões.
+Apesar de ter sido desenvolvido com foco em 3D, WebGL pode ser
+utilizados para 2D também \autocite[pp. 6]{3daps}. Os primeiros
+rascunhos do WebGL iniciaram em 2006, não obstante o grupo de trabalho
+não foi formado até 2009. E a primeira versão do foi lançada em
+2011.
+A especificação do WebGL foi desenvolvida baseando-se em OpenGL,
+especificamente OpenGL ES 2.0, uma versão do OpenGL otimizada para
+dispositivos móveis. O órgão que especifica o WebGL é o mesmo que
+especifica o OpenGL: Kronos Working Group.
 
-Os primeiros rascunhos do WebGL iniciaram em 2006, não obstante o grupo
-de trabalho não foi formado até 2009. E a primeira versão do foi
-lançada em 2011.
-
-O elemento que provê a interface do WebGL é o canvas, no contexto 3D.
+O elemento do DOM que provê a interface do WebGL é o canvas, no contexto 3D.
+Essa integração com o DOM permite que o WebGL seja manipulado assim como os demais elementos HTML.
 
 A especificação é composta por uma API de controle em JavaScript e o
 processamento shaders.
 
-É digno de nota que é recomendável se testar WebGL em todos os navegadores 
-e plataformas alvo. Pode haver diferenças substanciais de performance em 
+É digno de nota que é recomendável se testar WebGL em todos os navegadores
+e plataformas alvo. Pode haver diferenças substanciais de performance em
 plataformas diferentes e em navegadores diferentes. Existe também uma lista
 de placas gráficas com drivers bloqueados por não funcionarem corretamente no
 Firefox \autocite[pp.42]{3daps}.
+
+WebGL só se tornou uma possibilidade performática para jogos pois parte do seu processamento pode ser delegado para a GPU. Shaders são os elementos que são executados do lado da GPU.
 
 \subsection{Shaders}
 
