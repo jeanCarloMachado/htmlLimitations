@@ -1,0 +1,177 @@
+Este capítulo tem por objetivo detalhar os aspectos do desenvolvimento
+do protótipo. Mecânica, o loop de eventos, diagramas entre outros
+aspectos do jogo serão abordados aqui.
+
+\section{MECÂNICA}
+
+Para a análise prática das limitações foi escolhido um jogo de
+matemática simples. O qual consiste na geração de equações com uma
+resposta candidata. Cabe ao usuário informar se o resultado apontado
+pelo jogo está correto ou não. A cada resposta dada o nível de
+complexidade da equação cresce. O tempo é um fator determinante
+no resultado do jogo pois quão mais rápido o jogador acertar se a
+afirmação está correta ou não mais pontos ele receberá.
+
+Esta categoria de jogo foi selecionada pois oferece uma experiência
+interessante, tem profundidade - oferencendo a possibilidade
+de explorar diversos recursos do HTML5. Por ser de razoável
+tradutibilidade em tamanhos de telas diferentes e tipos de entrada de
+dados diferentes. E, por fim, por oferecer uma dificuldade técnica não
+tão desafiadora. Visto que não disponho de experiência profunda no
+desenvolvimento de jogos para HTML5.
+
+Jogos como o Math Workout para Android tem uma temática similar.
+Não obstante, este jogo não sugere respostas para o usuário
+e o questiona sobre a veracidade delas, apresenta apenas a equação
+e requer uma respota. O jogo aqui desenvolvido parece ter uma melhor
+jogabilidade para dispositivos móveis, pois não requer a presença
+de um teclado. Os botões de verdadeiro ou falso contém todas as
+possibilidades.
+
+%Também para não interferir na pesquisa busquei não me distanciar do
+%que é considerado padrão em ferramentas e métodos.
+
+%Comecei escrevendo o aplicativo para o Navegador do desktop pois era o
+%que estava mais acessível no momento.
+
+\section{Requisitos}
+
+Abaixo estão dispostos os requisitos do sistema.
+
+\subsection{Requisitos funcionais}
+
+As funcionalidades que o sistema deve apresentar estão descritas abaixo.
+
+\begin{itemize}
+    \item O sistema deve prover equações matemáticas de dificuldade crescente para o usuário informar se estão corretas ou não.
+    \item O sistema deve pontuar as respostas dadas com maior agilidade com uma pontuação maior, que as respondidas com menor agilidade.
+    \item O sistema deve apresentar um ranking com os resultados dos  jogos anteriores.
+\end{itemize}
+
+\subsection{Requisitos não funcionais}
+
+\begin{itemize}
+    \item O sistema deve ser desenvolvido utilizando as ferramentas da web.
+    \item O sistema deve funcionar para a plataforma desktop e Android.
+    \item O sistema deve ser desenvolvido sem a utilização de nenhuma biblioteca ou framework.
+\end{itemize}
+
+\section{Modelagem}
+
+Abaixo segue o diagrama de classes simplificado.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{ClassesSimpleView.png}
+	\caption{Diagrama de classes simplificado}
+\end{figure}
+
+Nos anexos pode-se encontrar a versão completa.
+
+\section{Desenvolvimento}
+
+O desenvolvimento se deu com a estratégia de melhoria progressiva.
+Desenvolvendo a versão mais simples possível para atingir as
+requisitos funcionais. Essa versão mais simples, apesar de não ter
+sido testado, deve funcionar na grade maioria dos navegadores.
+
+O primeiro passo foi a criação do documento HTML. Utilizei divs
+para simbolizar telas do jogo. Caracterizando o jogo como uma
+aplicação SPA (\textit{Single page application}).  A alternativa
+seria depender de um servidor para mandar as páginas prontas,
+mas isso acarreta na necessidade de acesso à internet constante,
+coisa nem sempre viável em dispositivos móveis.
+
+Seguindo a construção do markup, veio o desenvolvimento da 
+classe Match, a qual simboliza uma partida dentro do jogo.
+
+No início da construção não  havia um gerador de equações, o jogo
+contava apenas com um vetor de equações pré-estabelecidas que
+eram selecionadas aleatoriamente a cada turno.
+
+Isso se provou uma boa escolha pois possibilitou que o desenvolvimento
+se focasse em outros aspectos importantes como a elaboração do laço do jogo.
+
+O aspecto central do laço do jogo consiste em apresentar uma equação
+ao usuário com a possibilidade de ele responder se ela está correta ou
+errada.
+
+Uma estratégia interessante que foi adotada na construção foi
+declarar todos os objetos relativos ao objeto window. Isso se demonstrou
+uma boa forma de separar os objetos, tornando o conflito de variáveis
+globais um problema irrelevante.
+
+Outro aspecto positivo foi a utilização de um meta objeto para encapsular
+os demais, neste caso utilizei o nome MyMath, funcionando como um namespace,
+garantindo que problemas de conflitos de nomes não aconteçam.
+
+Devido ao fato deste trabalho explorar as limitações dos jogos em
+HTML5, optei por evitar a utilização de plugins e ferramentas de
+terceiros que pudessem ocultar alguma limitação.
+
+Escolhi a simplicidade para não precisar ficar muito tempo aprendendo
+as coisas em detrimento do refinamento da pesquisa.
+
+Como armazenamento local foi optado por Web Storage por ser uma API simples,
+visto que os requerimentos do protótipo não demandam grande performance ou
+armazenamento massivo de dados a opção mais modesta foi preferida.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{board.png}
+	\caption{Tabuleiro do jogo}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{score.png}
+	\caption{Placar do jogo}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{settings.png}
+	\caption{Configurações do jogo}
+\end{figure}
+
+
+\subsection{Otimizando o CSS para jogos}
+
+Scroll é um recurso interessante para longas páginas de texto,
+o mesmo não se pode dizer à respeito de jogos.
+Principalmente aqueles dependente de contato com a tela, pois
+no contato a tela pode se mover e desconcentrar o usuário. Para
+remover este comportamento deve-se utilizar o \textit{overflow:
+hidden;} do seletor do corpo do documento (\textit{body}).
+
+A barra de endereço é outro recurso de pouca utilidade no contexto de
+jogos, e muitas vezes um empecilho para jogos em dispositivos móveis,
+devido ao limitado tamanho da tela.
+
+Para desabilitar a barra em dispositivos da Apple pode-se utilizar a
+seguinte configuração:
+
+\begin{verbatim}
+<meta name="apple-mobile-web-app-capable" content="yes" />
+\end{verbatim}
+
+Para os demais dispositivos não existe meio oficial de esconder a barra
+de endereço. Não obstante, alguns sites recomendam a solução descrita abaixo:
+
+\begin{verbatim}
+<body onload="setTimeout(function() {window.scrollTo(0, 1)}, 100)">
+</body>
+\end{verbatim}
+
+Apesar de não fazer parte da especificação, a maioria dos navegadores
+implementa a possibilidade de desativar a seleção de elementos na tela.
+Em jogos essa possibilidade é útil, pois não é natural a seleção de texto
+neste tipo de software. Para desabilitar a seleção pode-se utilizar as 
+regras CSS demonstradas abaixo.
+
+\begin{verbatim}
+-moz-user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+\end{verbatim}
+
