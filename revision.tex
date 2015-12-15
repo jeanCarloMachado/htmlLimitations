@@ -348,7 +348,6 @@ que estão em acordo com o padrão especificado.
 
 \section{CSS}
 %{{{
-
 CSS (\textit{Cascading Style Sheets}) é uma linguagem de folhas de
 estilo, criada por Håkon Wium Lie em 1994, com intuito de definir a
 apresentação de páginas HTML. CSS, juntamente com JavaScript e HTML,
@@ -817,7 +816,7 @@ polyfills.
 
 Polyfills são recursos que simulam uma funcionalidade não disponível
 nativamente nos navegadores. A
-biblioteca Gears https://developers.google.com/gears é um exemplo.Gears
+biblioteca Gears https://developers.google.com/gears é um exemplo. A biblioteca
 serve para prover recursos de Geolocalização para navegadores que não
 implementam a especificação do HTML5. Essa capacidade de suportar
 tecnologias que não estão ainda disponíveis ou nunca estarão, no caso de dispositivos legados, através de polyfills é
@@ -1177,7 +1176,7 @@ Alguns codecs de vídeo
 %}}}
 %}}}
 \section{ARMAZENAMENTO}
-
+%{{{
 Uma das grades limitações do HTML era a ausência de capacidade
 de armazenamento de dados. Armazenamento no lado do cliente é um
 requerimento básico para qualquer aplicação moderna. Essa área
@@ -1343,8 +1342,9 @@ premissa de não perturbar o fluxo principal da aplicação enquanto
 processamento não vital, e possivelmente demorado, ocorre. Outra
 tecnologia da web que utiliza os mesmos princípios é o Web Workers.
 
+%}}}
 \section{Web Workers}
-
+%{{{
 É uma API que possibilita executar programas em paralelo com a página principal.
 
 A \textit{thread} fila pode comunicar-se com seu pai.
@@ -1362,12 +1362,13 @@ Dentro de um worker não é possível manipular o DOM.
 
 O worker se comunica com outros scripts através de mensagens.
 
+%}}}
+
 \section{OFFLINE}
 
 Não é extraordinário que um jogo tenha que ser reverso para um estado
 válido anterior por motivo de um erro na base de dados \autocite[pp.
 5]{browserGamesTechnologyAndFuture}.
-
 
 \subsection{Aplicações offline}
 Na sua versão mais simples, um aplicativo offline é um conjunto de
@@ -1396,17 +1397,13 @@ The source map file will only be downloaded if you have source maps enabled and 
 
 Debugar aplicativos 3D pode ser complexo, o debugger do chrome é uma boa opção.
 
-
 \section{DISPONIBILIZAÇÃO DA APLICAÇÃO}
-
 
 Aplicativos baseados na web não requerem instalação ou atualizações
 manuais e sua distribuição é superior ao estilo convencional de
 aplicações desktop \autocite{browserGamesTechnologyAndFuture}.
 
-
 Links com manifestos
-
 
 \subsection{INSTALAÇÃO}
 %{{{
