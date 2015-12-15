@@ -1237,6 +1237,33 @@ além do atual.
 A API do Web Storage é simples, consistindo em uma interface para
 buscar dados e outra para armazenar, no formato chave/valor.
 
+
+\begin{figure}
+\centering
+\begin{verbatim}
+// Store value on browser for duration of the session
+sessionStorage.setItem('key', 'value');
+
+// Retrieve value (gets deleted when browser is closed and re-opened)
+alert(sessionStorage.getItem('key'));
+
+// Store value on the browser beyond the duration of the session
+localStorage.setItem('key', 'value');
+
+// Retrieve value (persists even after closing and re-opening the browser)
+alert(localStorage.getItem('key'));
+
+\end{verbatim}
+\caption{Web Storage na prática}
+\label{fig:WebStorage}
+\source{https://en.wikipedia.org/wiki/Web_storage#usage}
+\end{figure}
+
+Web storage  é uma soluçãos simples que comporta muitos casos de uso. Não obstante
+muitas vezes é necessário um controle mais refinado sobre os dados, ou mais performance
+em uma base de dados massiva. Para responder a estes desafios existe a especificação do IndexedDB.
+
+
 \subsection{IndexedDB}
 %{{{
 IndexedDB é um banco de dados que suporta o armazenamento de grandes
