@@ -151,7 +151,6 @@ Mais do que um conjunto de tecnologias Open Web, é um conjunto de
 filosofias as quais a web se baseia.
 
 Neste conjunto inclui-se:
-
 \begin{itemize}
 \item Descentralização;
 \item Transparência;
@@ -163,7 +162,7 @@ Neste conjunto inclui-se:
 \end{itemize}
 
 A W3C é a empresa responsável por grande parte das especificações
-da web como: HTML (em conjunto com a WHATWG), CSS, entre outros. 
+da web como: HTML (em conjunto com a WHATWG), CSS, entre outros.
 
 O processo da W3C consiste na elaboração de rascunhos de
 (\textit{working drafts}) que passam por vários passos de revisão
@@ -171,7 +170,8 @@ até se tornarem recomendações. As recomendações podem ser implementadas com
 segurança de que a especiação não mudará substancialmente.
 Apesar do processo ser rigoroso, está longe de perfeito. A
 especificação final do HTML4 contava com quatro erros publicados via
-errata \autocite{HTML5}.
+errata \autocite{HTML5}. Uma lista completa das especificações mantidas
+pela W3C pode ser encontrada em: http://www.w3.org/TR/.
 
 Outras empresas estão envolvidas nas especificações da web, como a
 ECMA, responsável pelo JavaScript; Kronos, responsável pelo tEBGL,
@@ -1176,34 +1176,48 @@ Alguns codecs de vídeo
 %}}}
 \section{ARMAZENAMENTO}
 
-Armazenamento local é um recurso importante para jogos,tanto por diminuir a latência
-da persistência que na rede pode ser grande, ou para possibilitar um experiência off-line.
+Armazenamento local é um recurso importante para jogos, tanto por
+diminuir a latência da persistência na rede, ou para possibilitar um
+experiência offline.
 
-Existem várias especificações sobre armazenamento, mas a grande maioria delas não conta como
-suporte completo em todos os navegadores comuns, um polyfill interessante para localstorage
-IndexedDB e WebSQL é o projeto localForge https://github.com/mozilla/localForage da mozilla.
-
-\subsection{LOCAL STORAGE}
-Também conhecido como Web Storage na especificação do HTML5. Provê
-uma forma de armazenar os dados como chave valor dentro do navegador. Os
-dados são persistido mesmo que o navegador seja fechado.
+Existem várias especificações sobre armazenamento, mas a grande
+maioria delas não conta como suporte completo em todos os navegadores
+comuns, um polyfill interessante para Web Storage  e IndexedDB é o
+projeto localForge \textit{https://github.com/mozilla/localForage} da
+Mozilla.
 
 \subsection{WEB SQL}
-Um banco de dados SQLite embebido no navegador. Permite
-tabelas relacionais. O tamanho padrão do banco de dados é 5 megabytes
-e pode ser estendido pelo usuário.
+
+A especificação Web SQL introduz uma API para manipular banco de dados
+relacionais em SQL. A especificação suporta transações, operações
+assíncronas e tamanho de banco de dados é de 5 megabytes o qual pode
+ser estendido pelo usuário.
+
+O grupo de trabalho iniciou-se em 2010 e foi suspendido como um
+rascunho. A implementação do Web SQL, apesar de ser um recurso
+desejável para muitos desenvolvedores, foi descontinuada pelos motivos
+descritos abaixo.
 
 Segundo \cite{diveIntohtml}
 \begin{quote}
-Todos os implementadores interessados utilizaram a mesma tecnologia
-(Sqlite), mas para a padronização ficar completa é necessário
-múltiplas implementações. Até outro implementador se interessar
-em desenvolver a especificação a descriação do dialeto SQL apenas
-referencia o SQLITE, o que não é aceitável para um padrão.
+Todos os implementadores interessados em Web SQL utilizaram a mesma
+tecnologia (Sqlite), mas para a padronização ficar completa é
+necessário múltiplas implementações. Até outro implementador se
+interessar em desenvolver a especificação a descrição do dialeto SQL
+apenas referencia o SQLITE, o que não é aceitável para um padrão.
 \end{quote}
 
-Web Sql foi depreciado em favor da especificação do IndexedDB.
-Não obstante, IndexedDB ainda é comummente utilizado em sistemas móveis \autocite{html5Test}.
+Não obstante, a especificação ainda é suportada pelo Google
+Chrome, Safari, Opera e Android, entre outros. Mas até que outros
+implementadores se prontifiquem a especificação continuará suspensa.
+No lugar do Web SQL a W3C recomenda a utilização do Web Storage e do
+IndexedDB.
+
+\subsection{WEB STORAGE}
+
+Também conhecido como Local Storage, provê uma forma de armazenar os
+dados como chave valor dentro do navegador. Os dados são persistidos
+mesmo que o navegador seja fechado.
 
 \subsection{IndexedDB}
 %{{{
@@ -1276,12 +1290,12 @@ tecnologia da web que utiliza os mesmos princípios é o Web Workers.
 
 É uma API que possibilita executar programas em paralelo com a página principal.
 
-A thread fila pode comunicar-se com seu pai.
+A \textit{thread} fila pode comunicar-se com seu pai.
 
 Existem workers dedicados, que podem ser acessados por seus criadores, e Workers
-copartilhados.
+compartilhados.
 
-O contexto global (objeto window) não existe em um worker, ao invés disso
+O contexto global (objeto janela) não existe em um worker, ao invés disso
 o objeto \textit{DedicatedWorkerGlobalScope} pode ser utilizado.
 Workers compartilhados podem utilizar o \textit{SharedWorkerGlobalScope}.
 Estes objetos contém grande parte das funcionalidades proporcionadas pelo window
@@ -1308,8 +1322,6 @@ formas de armazenamento de dados \autocite{html5Tradeoffs}.
 Na sua versão mais simples, um aplicativo offline é um conjunto de
 URLs para arquivos HTML, CSS, JavaScript, imagens ou qualquer outro tipo
 de recurso \autocite{diveIntohtml}.
-
-
 
 \section{ENTRADA DE COMANDOS}
 

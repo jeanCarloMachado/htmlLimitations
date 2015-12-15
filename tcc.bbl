@@ -149,12 +149,6 @@
   \field{title}{HTML HyperText Markup Language}
 \endentry
 
-\entry{html5Test}{online}{}
-  \field{howpublished}{Available at \url{http://html5test.com/about.html}
-  (2015/12/02)}
-  \field{title}{HTML5 Test, how well does your browser support HTML5?}
-\endentry
-
 \entry{HTML5CrossPlatformGameDevelopment}{thesis}{}
   \name{author}{1}{}{%
     {{}%
