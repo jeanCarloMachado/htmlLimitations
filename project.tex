@@ -177,8 +177,35 @@ regras CSS demonstradas abaixo.
 
 \subsection{Otimizando JavaScript para jogos}
 
+\subsubsection{Modo estrito}
 Algumas das recomendações nesta seção podem não se aplicam exclusivamente ao desenvolvimento de jogos. Outrossim são de grande relevância para a criação de sistemas de grande complexidade, característica comum da grande maioria dos jogos.
 
 Um recurso interessante do JavaScript é seu modo estrito, este faz um conjunto de modificação na semântica do interpretador de modo que alguns recursos suportados, mas propensos a problemas, sejam desabilitados. Pode ser entendido como uma variante mais estrita do JavaScript. O modo restrito pode ser habilitado por arquivos ou funções permitindo que código não estrito trabalhe em conjunto com código estrito, característica conveniente para a utilização em sistemas legados.
+
+\subsubsection{Funções imediatamente invocadas}
+
+Um problema comum de sistemas complexos em JavaScript é que muitos objetos vivem em ambiente global. Isso pode causar uma coleção de problemas, desde conflitos de nomes à sobrescrita de variáveis. Para contornar esse problema pode-se utilizar as funções imediatamente invocadas IIFE (\texit{Immediatly invoked function expression}).
+
+\begin{figure}
+    \centering
+    \begin{verbatim}
+    (function() {
+        'use strict';
+
+        function bar() {
+            return 'foo';
+        }
+
+        window.bar = bar;
+    })();
+
+    window.bar();
+
+    \end{verbatim}
+	\caption{Exemplo de utilização de funções imediatamente invocadas}
+    \label{fig:iife}
+\end{figure}
+
+A figura \ref{fig:iife} demonstra a utilização deste padrão. As funções definidas no mesmo nível que bar não estarão no contexto global - a não ser que seja especificado diretamente - e não sofrerão conflitos de nomes.
 
 
