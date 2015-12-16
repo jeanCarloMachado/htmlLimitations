@@ -30,6 +30,24 @@ right=2cm
 \usepackage{indentfirst}
 \usepackage{csquotes}
 
+\usepackage{xcolor,mdframed}
+
+\newenvironment{draft}[1][]{%
+   \begin{mdframed}[%
+      backgroundcolor={red!15}, hidealllines=true,
+      skipabove=0.7\baselineskip, skipbelow=0.7\baselineskip,
+      splitbottomskip=2pt, splittopskip=4pt, #1]%
+   \makebox[0pt]{% ignore the withd of !
+      \smash{% ignor the height of !
+         \fontsize{32pt}{32pt}\selectfont% make the ! bigger
+         \hspace*{-19pt}% move ! to the left
+         \raisebox{-2pt}{% move ! up a little
+            {\color{red!70!black}\sffamily\bfseries !}% type the bold red !
+         }%
+      }%
+   }%
+}{\end{mdframed}}
+
 \pagestyle{myheadings}
 %ovewrite plain to my headings style
 \makeatletter
@@ -142,6 +160,7 @@ obtenção do título de Tecnólogo em Análise e Desenvolvimento de Sistemas.
 %{{{ Resumo
 \onehalfspacing
 \renewcommand{\abstractname}{\Large\bfseries RESUMO}
+\begin{draft}
 \begin{abstract}
 { LLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
@@ -163,6 +182,7 @@ orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in
 {\bfseries Palavras-chave:} HTML5, Limitações, Jogos,
 Multiplataforma
 \end{abstract}
+\end{draft}
 
 %}}}
 %LISTS
@@ -177,15 +197,11 @@ Multiplataforma
 \input{contextualization}
 %}}}
 \chapter{PROBLEMA}
-%{{{
-
+%{{
 A carência de definições concretas sobre a viabilidade da atual
-versão do HTML5 - aplicado ao desenvolvimento de jogos. O senso comum, 
-acostumado com soluções nativas, acabam por monopolizar à construção de jogos nativos.
-
-Os custos introduzidos no ciclo vida de um jogo, para diversas
-plataformas, é muito alto para ser considerado trivial. Cerca de 65%
-mais altos (segundo trabalho 2)
+versão do HTML quando aplicado ao desenvolvimento de jogos. E o senso
+comum, acostumado com soluções nativas, acabam por praticamente
+monopolizar à construção de jogos nativos.
 %}}}
 \section{OBJETIVOS}
 %{{{
@@ -199,37 +215,31 @@ implementação do HTML5.
 
 Não é objetivo deste trabalho demonstrar os pontos fortes do HTML5,
 apenas suas limitações. Também não é objetivo deste trabalho
-comparar o HTML com outras tecnologias de desenvolvimento de jogos, c
-omo Flash Player, Silverlight ou alternativas Desktop.
+comparar o HTML com outras tecnologias de desenvolvimento de jogos, como
+Flash Player, Silverlight ou alternativas Desktop.
 %}}}
 
 \subsection{OBJETIVOS ESPECÍFICOS}
 
-Estudar as limitações de desenvolvimento de jogos nas plataformas
-Android e navegadores Desktop Google Chrome
-e Firefox. Os navegadores foram testados em suas últimas versões.
+Este trabalho tem por objetivo estudar as limitações de
+desenvolvimento de jogos nas plataformas Android e navegadores Desktop
+Google Chrome e Firefox em suas últimas versões. Optamos por Android,
+e não IOS, pois o primeiro contém a vasta maioria do mercado de
+dispositivos inteligentes, e por termos maior experiência na já
+mencionada plataforma.
 
-Optamos por Android, e não IOS, pois o primeiro contém
-a vasta maioria do mercado de dispositivos inteligentes, e por termos
-maior experiência na já mencionada plataforma.
+A fim de refinar nossa perspectiva com uma experiência prática,
+também é objetivo deste trabalho construir um protótipo de um jogo.
 
-Construir um protótipo que colabore para a fundamentação prática do assunto.
-
-Não se pode detectar suporte ao HTML5. Pode-se detectar suporte as
-funcionalidades individuais como canvas, vídeo e geolocalização
-\autocite{diveIntohtml}. O mesmo vale para HTML5 no contexto de jogos.
-
-\cite{browserGamesTechnologyAndFuture} cita que video, audio, drag
-and drop, funcionalidades de gráficos e armazenamento offline são
+\cite{browserGamesTechnologyAndFuture} cita que vídeo, áudio,
+drag-and-drop, funcionalidades de gráficos e armazenamento offline são
 aspectos importantes do HTML5 para o desenvolvimento de jogos.
-
-Com base nos estudos efetuados, e na experiência adquirida elencamos os
-seguintes itens que serão abordados neste trabalho:
+Atém dos elementos já citados, julgamos relevante estudar os seguintes
+aspectos e tecnologias relacionadas aos jogos:
 
 \begin{itemize}
-\item Performance
-\item Canvas
-\item CSS media queries
+\item HTML e tecnologias relacionadas (CSS, JavaScript)
+\item Tecnologias de renderização (WebGL, Canvas, SVG)
 \item Empacotadores HTML5
 \item Eventos de entrada
 \item Armazenamento
