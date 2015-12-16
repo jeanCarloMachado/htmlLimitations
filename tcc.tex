@@ -421,8 +421,6 @@ jogos. Alguns frameworks reconhecidos são:
 \item quintus: especialista em jogos de plataforma 2D
 \end{itemize}
 
-\section{JAVASCRIPT NÃO OBSTRUTIVO}
-
 \section{NODEJS}
 
 Permite rodar JavaScript fora do navegador. Utiliza um modelo dirigido
@@ -458,6 +456,7 @@ Utiliza o conceito de streams para aplicar todas as modificações sobre
 um arquivo de uma vez só.
 
 \section{CROSSWALK}
+
 Crosswalk empacota os fontes juntamente com uma versão do Chromium, a
 versão Open-source do Google Chrome. Isso faz com que o software se
 comporte da mesma forma para todas as versões de dispositivos Android.
@@ -473,13 +472,27 @@ para o Android nativamente.
 
 \subsection{BIBLIOTECAS WEB}
 
-O Google Chrome utilizá o Webkit para renderizar seu conteúdo HTML5. O
-webkit foi criado pela Apple baseando-se no motor de renderização do
-Konkeror do projeto KDE. Safari e Opera também fazem uso do Webkit. V8
-para JavaScript.
 
-O motor de renderização do HTML5 do Firefox é o XXX. O motor de
-JavaScript é o.
+\cite{creatingFun} ressalta a importância de sermos moderados
+quanto a escolha de bibliotecas no contexto WEB multiplataforma.
+\begin{quote}
+Muitos desenvolvedores da WEB utilizam bibliotecas como jQuery e o
+Prototype de modo que se vejam livres de terem que lidar com
+partes triviais do desenvolvimento WEB, como selecionar e
+manipular elementos do DOM. Muitas vezes essas bibliotecas incluem
+várias funcionalidades que não são utilizadas. É recomendável
+cautela para verificar se realmente é necessário adicionar 50-100k
+de bibliotecas, ou se alguma coisa mais simples e menor não trará
+os mesmo benefícios, especialmente quando desenvolvendo
+multiplataforma onde uma rápida conexão a internet nem sempre é
+garantida.
+\end{quote}
+
+Esta preocupação aumenta no contexto de desenvolvimento de jogos.
+Ainda segundo \cite{creatingFun} o website MicroJS
+https://microjs.com oferece uma coleção de micro bibliotecas
+focadas em áreas particulares em detrimento de grandes bibliotecas
+cheias de funcionalidades.
 %}}}
 
 \chapter{Diagrama de classes}
