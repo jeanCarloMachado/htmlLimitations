@@ -1,4 +1,7 @@
-Grande parte da detecção de funcionalidades é feita através de JavaScript, isso força os desenvolvedores a criarem pelo menos parte da marcação em JavaScript, isso pode ser um fator limitante para o uso generalizado de HTML5 \autocite{diveIntohtml}.
+Grande parte da detecção de funcionalidades é feita através de
+JavaScript, isso força os desenvolvedores a criarem pelo menos parte da
+marcação em JavaScript, isso pode ser um fator limitante para o uso
+generalizado de HTML5 \autocite{diveIntohtml}.
 
 Abaixo constam as limitações encontradas durante a pesquisa e concepção do jogo.
 
@@ -102,8 +105,17 @@ especificação entrem em consenso e implementem a.
 11  Detecção de recursos
 Muitas das detecções de recursos é feita via JavaScript, isso
 força os desenvolvedores a fazer ao menos parte da marcação em
-JavaScript\autocite{diveIntohtml}.
+JavaScript \autocite{diveIntohtml}.
+
+A manipulação de erros é bastante consistente nos navegadores mas 
+incrivelemente não faz parte da especificação \autocite{howBrowsersWork}.
 
 Desktop/Firefox
 Desktop/Google Chrome
 Smatphone/Android
+
+Um problema comum no desenvolvimento WEB é, segundo \cite{howBrowsersWork}
+scripts requerendo informações de estilo durante o processo de 
+parsing. Se o estilo ainda não foi carregado o script vai utilizar 
+informações erradas, causando uma série de problemas.
+

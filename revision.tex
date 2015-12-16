@@ -307,14 +307,14 @@ existem aproximadamente cem \autocite{diveIntohtml}. Não obstante, foi
 no HTML5 que a maior parte dos elementos que viabilizam a construção
 de jogos foram adicionados.
 
-Uma das características do HTML que o torna tão popular
-é seu interesse em manter manter a retrocompatibilidade.
-Interpretadores HTML atingem isso ignorando os elementos que não
-conhecem, tratando seu vocabulário exclusivamente. Esse mecanismo
-permite que os desenvolvedores incluam marcação de reserva dentro
-dos elementos que podem não ser suportados. O elemento \textit{span}
-na figura \ref{fig:htmlSample} só aparecerá para o usuário caso seu
-navegador não suporta a tag vídeo.
+Uma das características do HTML que o torna tão popular é seu
+interesse em manter manter a retrocompatibilidade. Interpretadores
+HTML atingem isso ignorando os elementos que não conhecem, tratando
+seu vocabulário exclusivamente. Esse mecanismo permite que os
+desenvolvedores incluam marcação de reserva dentro dos elementos
+que podem não ser suportados. O elemento \textit{span} na figura
+\ref{fig:htmlSample} só aparecerá para o usuário caso seu navegador
+não suporta a tag vídeo.
 
 Além da convencional linguagem de marcação, HTML é muitas vezes
 interpretado como um conceito guarda chuva para designar as tecnologias
@@ -322,14 +322,13 @@ da web. Segundo \autocite{diveIntohtml} algumas dessas tecnologias (como geoloca
 tecnologias foram removidas do HTML5 estritamente falando, mas são tratados
 como HTML5 (como a API de armazenamento de dados).
 
-
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{html5.jpg}
     \caption{Suíte HTML}
 \end{figure}
 
-Uma tecnologia fortemente entrelaçada com o HTML é o DOM. Este permite a interação entre documentos HTML e as demais tecnologias da WEB de uma forma fácil e padronizada.
+Uma tecnologia fortemente entrelaçada com o HTML é o DOM. Tendo uma relação próxima de um para um com a marcaçaõ \autocite{howBrowsersWork}. DOM permite a interação entre documentos HTML e as demais tecnologias da WEB de uma forma fácil e padronizada.
 
 \subsection{DOM}
 %{{{
@@ -791,49 +790,6 @@ elem.getAnimations().filter(
 \end{figure}
 
 %}}}
-\section{DETECÇÃO DE RECURSOS}
-%{{{
-Visto que nenhum navegador implementa as especificações HTML
-completamente cabe ao desenvolvedor detectar os navegadores que não
-comportam as necessidades tecnológicas dos aplicativos que cria. Ao
-deparar-se com uma funcionalidade faltante o desenvolvedor tem duas
-possibilidades: notificar o usuário sobre o problema ou utilizar
-polyfills.
-
-Polyfills são recursos que simulam uma funcionalidade não
-disponível nativamente nos navegadores. A biblioteca Gears
-https://developers.google.com/gears é um exemplo. Gears
-serve para prover recursos de Geolocalização para navegadores que
-não implementam a especificação do HTML5. 
-
-Essa capacidade de suportar tecnologias que não estão ainda
-disponíveis (ou nunca estarão no caso de dispositivos legados)
-através de polyfills é uma das características que faz a WEB uma
-plataforma de tão grande abrangência. Novas tecnologias são criadas a
-todo o momento; entretanto, o suporte a essas funcionalidades geralmente
-não acompanham o passo das inovações. E ainda assim os usuários
-podem se beneficiar de uma taxa substancial delas através de polyfills.
-
-Algumas funcionalidades do HTML, como geolocalização e vídeo
-foram primeiramente disponibilizadas através de plugins. Outras
-funcionalidades, como o Canvas, podem ser totalmente emuladas via
-JavaScript \autocite{diveIntohtml}.
-
-Detectar suporte aos variados recursos do HTML5 no navegador
-pode ser uma tarefa entediante. É possível implementar testes para
-cada funcionalidade utilizada abordando os detalhes de implementação
-de cada uma ou então fazer uso de alguma biblioteca especializada
-neste processo. O Modernizr é uma opção open-source deste tipo de
-biblioteca, este gera uma lista de booleanos sobre grande variedade dos
-recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e
-armazenamento local.
-
-A quantidade de especificações que um aplicativo complexo como um jogo
-utiliza pode ser bem grande, e muitas vezes é difícil dizer qual quais
-navegadores implementam o quê. Uma boa referência do suporte a recursos
-nos navegadores é o site http://caniuse.com/.
-
-%}}}
 \section{NAVEGADORES}
 %{{{
 Navegadores são as plataformas de WEB, onde as tecnologias até então
@@ -869,6 +825,8 @@ Alguns motores de renderização incluem:
     \item KHTML: Utilizada no navegador Konkeror, esta serviu de base para o Blink
     \item WebKit: Utilizada no Safari e versões antigas do Google Chrome.
 \end{itemize}
+
+Para interpretar HTML o motor WebKit utiliza a biblioteca Bison, já o Gecko utiliza uma biblioteca própria \autocite{howBrowsersWork}.
 
 Alguns motores de JavaScript incluem:
 
@@ -912,6 +870,49 @@ terceiros como o Google Chrome, Firefox, Opera, etc.
 No quesito jogos para dispositivos móveis é preferível disponibilizar
 os jogos através da interface nativa pois dá a sensação de
 continuidade para com os demais aplicativos instalados no dispositivo.
+
+%}}}
+\section{DETECÇÃO DE RECURSOS}
+%{{{
+Visto que nenhum navegador implementa as especificações HTML
+completamente cabe ao desenvolvedor detectar os navegadores que não
+comportam as necessidades tecnológicas dos aplicativos que cria. Ao
+deparar-se com uma funcionalidade faltante o desenvolvedor tem duas
+possibilidades: notificar o usuário sobre o problema ou utilizar
+polyfills.
+
+Polyfills são recursos que simulam uma funcionalidade não
+disponível nativamente nos navegadores. A biblioteca Gears
+https://developers.google.com/gears é um exemplo. Gears
+serve para prover recursos de Geolocalização para navegadores que
+não implementam a especificação do HTML5. 
+
+Essa capacidade de suportar tecnologias que não estão ainda
+disponíveis (ou nunca estarão no caso de dispositivos legados)
+através de polyfills é uma das características que faz a WEB uma
+plataforma de tão grande abrangência. Novas tecnologias são criadas a
+todo o momento; entretanto, o suporte a essas funcionalidades geralmente
+não acompanham o passo das inovações. E ainda assim os usuários
+podem se beneficiar de uma taxa substancial delas através de polyfills.
+
+Algumas funcionalidades do HTML, como geolocalização e vídeo
+foram primeiramente disponibilizadas através de plugins. Outras
+funcionalidades, como o Canvas, podem ser totalmente emuladas via
+JavaScript \autocite{diveIntohtml}.
+
+Detectar suporte aos variados recursos do HTML5 no navegador
+pode ser uma tarefa entediante. É possível implementar testes para
+cada funcionalidade utilizada abordando os detalhes de implementação
+de cada uma ou então fazer uso de alguma biblioteca especializada
+neste processo. O Modernizr é uma opção open-source deste tipo de
+biblioteca, este gera uma lista de booleanos sobre grande variedade dos
+recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e
+armazenamento local.
+
+A quantidade de especificações que um aplicativo complexo como um jogo
+utiliza pode ser bem grande, e muitas vezes é difícil dizer qual quais
+navegadores implementam o quê. Uma boa referência do suporte a recursos
+nos navegadores é o site http://caniuse.com/.
 
 %}}}
 \section{RENDERIZAÇÃO}
