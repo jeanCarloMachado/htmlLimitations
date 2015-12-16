@@ -2,12 +2,6 @@
 
 ##Quotes
 
-This is the main reason why HTML is so popular - it forgives your
-mistakes and make life easy for the web author.
-
-Html cannot be parsed easily, not by conventional parsers since
-it's grammar is not a context free grammar, and not by XML parsers.
-
 The DOM has an almost one to one relation to the markup.
 
 The error handling is quite consistent in browsers but amazingly

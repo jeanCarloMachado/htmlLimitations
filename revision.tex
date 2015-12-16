@@ -250,18 +250,19 @@ Uma das maiores vantagem do XML é que sistemas sem erros de sintaxe
 que podem ser facilmente interpretadas por outras tecnologias como
 sistemas de indexação, buscadores, etc.
 
-Para transformar o HTML em algo visível os navegadores utilizam
-motores de renderização. O primeiro passo efetuado por esses sistemas
-é decodificar o documento HTML para sua representação em memória.
-Este processo dá-se através da análise (\textit{parsing}) e posterior
+Para transformar o HTML em algo visível os navegadores utilizam motores
+de renderização. O primeiro passo efetuado por esses sistemas é
+decodificar o documento HTML para sua representação em memória. Este
+processo dá-se através da análise (\textit{parsing}) e posterior
 tokenização, que é a separação do HTML em palavras chave que o
-interpretador pode utilizar.
-
-Diferentemente do XHTML, HTML não pode ser decodificado através de
-tokenização tradicional. Deve-se ao HTML ser amigável ao programador,
-aceitando erros de sintaxe, dependente de contexto, buscando entregar a
-melhor aproximação possível. Esta característica deu origem a uma
-especificação para renderizar HTML (\textit{HTML parser}).
+interpretador pode utilizar. Diferentemente do XHTML, HTML não pode
+ser decodificado através de tokenização tradicional. Deve-se ao HTML
+ser amigável ao programador, aceitando erros de sintaxe, dependente
+de contexto, buscando entregar a melhor aproximação possível. 
+Segundo \cite{howBrowsersWork} essa é a maior razão do HTML ser tão popular - 
+ele perdoa os erros e torna a vida dos autores da WEB mais fácil. Esta
+característica deu origem a uma especificação para renderizar HTML
+(\textit{HTML parser}).
 
 Antes do HTML5 várias versões foram propostas, algumas radicais
 em seus preceitos. O XHTML 2.0, por exemplo, quebrava com toda

@@ -83,6 +83,26 @@
   \field{title}{ECMAScript 2015 Language Specification}
 \endentry
 
+\entry{howBrowsersWork}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Garisel}{G.}%
+     {Tali}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Irish}{I.}%
+     {Paul}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{GTIP1}
+  \strng{fullhash}{GTIP1}
+  \field{labelyear}{2011}
+  \field{title}{How Browsers Work: Behind the scenes of modern web browsers}
+  \field{year}{2011}
+\endentry
+
 \entry{gamebenefits}{article}{}
   \name{author}{3}{}{%
     {{}%

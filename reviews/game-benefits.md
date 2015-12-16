@@ -5,13 +5,6 @@
 
 #Quotes
 
-Those in shooter video game condition show faster and more accurate
-attention allocation, higher spatial resolution in visual processing and
-enhanced mental rotation abilities.
-
-Established the power of spatial skills in predicting achievement in
-science, technology, engineering, and mathematics.
-
 Motivational styles characterized by persistence and continuous
 effortful engagement are key contributors to success and achievement.
 
