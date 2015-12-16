@@ -14,15 +14,8 @@ advantage of web technologies.
 The good thing with HTML- and JavaScript-based applications is
 that the technology itself forces you into some kind of structure.
 
-[sound api] it's fine if you want to play some music, but if
-you're triggering sounds as you play a game, it's patchy.
-
 Everything seems very easy at first, but it's for sure that it
 will turn into more code  than you originally expected.
-
-Performance optimizations depend on the runtime environment.
-Optimizations that have a positive impact today can become
-useless, or even harmful, tomorrow. Pag 131
 
 A good tool to perform this [micro optimizations] is found at jsfiddle.net.
 The more advanced engines become, the less important these micro
