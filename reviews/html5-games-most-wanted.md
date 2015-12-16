@@ -17,11 +17,6 @@ A CSS stylesheet is structured as a set of rules. A CSS rule has
 two main parts: a selector and one or more declarations. A
 declaration is composed of a property and a value.
 
-Web usage is huge, but creating dynamic and real-time games is not
-the primary purpose of the web.
-
-Avoiding text selection in games is important.
-
 #Pure DOM Vs. canvas-based game
 
 Both solutions are viable, but do not cover the same needs. The
