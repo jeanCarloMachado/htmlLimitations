@@ -1,14 +1,3 @@
-HTTML5 Games most wanted
-2012
-
-The negative aspects of canvas are that performance varies across
-platforms and animation functionality isn't built in.
-
-WebGl is based on OpenGl ES 2.0. It's hardware accelerated (fast)
-and allows for some pretty complex visual effects. The negative
-aspects are that it is complicated to learn and isn't supported by
-Internet Exploer yet.
-
 The limitation of the HTML5 audio element is that it's purpose is
 really to play single audio files, like background music within a
 game.

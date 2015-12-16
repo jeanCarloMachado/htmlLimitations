@@ -61,6 +61,30 @@ Quando o download offline falha o browser emite um evento mas não há
 indicação de qual problema aconteceu. Isso pode tornar a depuração
 tinda complicada que o usual \autocite{diveIntohtml}.
 
+\subsection{SVG}
+
+Segundo \cite{html5mostwanted} a grande desvantagem do SVG é que quão
+maior o documento mais lenta a renderização.
+
+\subsection{Canvas}
+
+Os aspectos negativos do canvas é que a performance varia de plataformas para plataformas e não existe implementação nativa para animações \autocite{html5mostwanted}.
+
+\subsection{WebGL}
+
+Segundo \cite{html5mostwanted} um dos problemas do WebGL é sua alta curva de aprendizagem e o fato de não ter suporte para o Internet Explorer. Entretanto o suporte  foi adicionado na última versão do Internet Explorer (11). Não obstante a dificuldade de utilização ainda persiste, forçando a maioria dos desenvolvedores a utilizarem abstrações criadas por bibliotecas de terceiros.
+
+\subsection{VIDEO}
+
+\subsection{ASSETS}
+
+Trafegar muitos assets deixa o sistema lento.
+
+ Contorno
+Utilizando páginas de carregamento e/ou cache;
+
+\subsection{Codecs}
+
 \subsection{AUDIO}
 Api de som quebra quando executado diversas vezes.
 Os navegadores variam na disponibilização de formatos aceitáveis
@@ -76,28 +100,8 @@ suportado pelo IE9. Ambos, Iphone e Android suportam H.264 em seus
 navegadores. A W3C recomenda OggVorbis e OggTheora para áudio e vídeo
 respectivamente. (HASAN et al, 2012)
 
-\subsection{SVG}
 
-Segundo \cite{html5mostwanted} a grande desvantagem do SVG é que quão
-maior o documento mais lenta a renderização.
-
-
-\subsection{Canvas}
-
-Os aspectos negativos do canvas é que a performance varia de plataformas para plataformas e não existe implementação nativa para animações \autocite{html5mostwanted}.
-
-\subsection{VIDEO}
-
-Codecs
-
-4. ASSETS
-
-Trafegar muitos assets deixa o sistema lento.
-
- Contorno
-Utilizando páginas de carregamento e/ou cache;
-
-5. UI
+\subsection{UI}
 
 É muito custoso desenvolver uma interfaces que pareçam nativas
 para cada dispositivo sem a utilização de plugins e ferramentas
@@ -107,7 +111,7 @@ há casos, como o dos botões de certo e errado que a proporções ficam
 exageradas, nesses casos a utilizada de max-width é uma solução
 conveniente.
 
-6. PERFORMANCE
+\subsection{PERFORMANCE}
 
 De acordo com uma pesquisa, para um usuário uma tarefa é instantânea
 se ele leva até 0.1 segundos para ser executada. Se a tarefa toma
@@ -116,8 +120,6 @@ usuário não se incomodará com ela. Entretanto, se a tarefa leva
 aproximadamente 10 segundos para terminar o usuário então começa a
 ficar aborrecido e esse é o limite que algum feedback deve ser dado
 para um usuário.
-
-ACELERAÇÃO DE GPU
 
 7. Acelerômetro
 
