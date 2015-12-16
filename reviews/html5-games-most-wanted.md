@@ -21,25 +21,10 @@ A good tool to perform this [micro optimizations] is found at jsfiddle.net.
 The more advanced engines become, the less important these micro
 optimizations will become.
 
-WebGL is a very new emerging technology. As such, unfortunately,
-not every computer supports it. In order to view a WebGl progam,
-you need a new browser, a newer graphics card, an Operating
-System.
-
-OpenGL ES is a subset of OpenGL and is built for use in embedded
-devices like mobile phones, which have lower processing power and
-fewer capabilities than a desktop computer.
-
-To use WebGL you need a browser that supports WebGL and a graphics
-card and  operating system that are new enough to support OpenGL.
 
 As your skill level improves, you will find that moving more
 functionality to the shader can improve perfomance and offer a
 wide range of cool effects and realism.
-
-
-WebGL-inspector let's you see the state of your buffers, texture
-information, individual frames, and other useful data.
 
 It's a good idea to use the newer browser method,
 window.requestAnimationFrame, because it will not animate a scene
