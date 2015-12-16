@@ -1,7 +1,6 @@
-Not all assets  need to be preloaded right away, but it creates a
+Not all assets need to be preloaded right away, but it creates a
 better impression if all the graphics for the next stage are
 immediately available when the stage is activated. Pg 39
-
 
 Many web developers use libraries as jQuery and Prototype so they
 don't have to deal with the trivial parts of web development, such

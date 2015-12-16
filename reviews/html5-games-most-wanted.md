@@ -171,4 +171,3 @@ Recommends Pro HTML5 and CSS3 Design Patterns by Michael Bowers
 
 Checkout the #bbg channel on freenode.
 
-checkout: caniuse.com
