@@ -22,10 +22,6 @@ As your skill level improves, you will find that moving more
 functionality to the shader can improve perfomance and offer a
 wide range of cool effects and realism.
 
-When creating a geme, you should plan what you whish to accomplish
-and how to implement it (at a high level) before you write any
-code.
-
 One can only hope that as browser technology progress and WebGL
 becomes more robustly supported, the guarantees on frame rate will
 become more robust as well.
