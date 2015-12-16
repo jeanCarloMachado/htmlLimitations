@@ -139,14 +139,13 @@ mercado não atendido de qualquer forma.
 %{{{
 
 \subsection{OPEN WEB}
-A OWP (\textit{Open Web Platform}), uma coleção de tecnologias livres,
-amplamente utilizadas e padronizadas.
-Quando uma tecnologia se torna amplamente popular, através da
-adoção de grandes empresas e desenvolvedores, ela se torna candidata a
-adoção pela OWP.
+A OWP (\textit{Open Web Platform}) é uma coleção de tecnologias
+livres, amplamente utilizadas e padronizadas. Quando uma tecnologia se
+torna amplamente popular, através da adoção de grandes empresas e
+desenvolvedores, ela se torna candidata a adoção pela OWP.
 
 Mais do que um conjunto de tecnologias Open Web, é um conjunto
-de filosofias e ideias as quais a web se baseia. Transparência,
+de filosofias e ideias as quais a web se fundamenta. Transparência,
 imparcialidade nos processos de criação e padronização de novas
 tecnologias. Retro compatibilidade com as especificações anteriores.
 Consenso entre o mercado e o meio acadêmico, nunca um distanciando-se
@@ -156,13 +155,13 @@ A W3C é a empresa responsável por grande parte das especificações
 da web como: HTML (em conjunto com a WHATWG), CSS, entre outros.
 
 O processo da W3C consiste na elaboração de rascunhos de
-(\textit{working drafts}) que passam por vários passos de revisão
-até se tornarem recomendações. As recomendações podem ser implementadas com
-segurança de que a especiação não mudará substancialmente.
+(\textit{working drafts}) que passam por vários passos de revisão até
+se tornarem recomendações. As recomendações podem ser implementadas
+com segurança de que a especiação não mudará substancialmente.
 Apesar do processo ser rigoroso, está longe de perfeito. A
-especificação final do HTML4 contava com quatro erros publicados via
-errata \autocite{HTML5}. Uma lista completa das especificações mantidas
-pela W3C pode ser encontrada em: http://www.w3.org/TR/.
+especificação final do HTML4 contava com quatro erros publicados
+via errata \autocite{HTML5}. Uma lista completa das especificações
+mantidas pela W3C pode ser encontrada em: http://www.w3.org/TR/.
 
 Outras empresas estão envolvidas nas especificações da web, como a
 ECMA, responsável pelo JavaScript; Kronos, responsável pelo WebGL,
@@ -177,8 +176,8 @@ HTML (\textit{Hyper Text Markup Language}) é uma linguagem de
 marcação que define a estrutura semântica do conteúdo das páginas
 da web. Criada por Tim Berners Lee em 1989 no CERN. HTML é a tecnologia
 base para a criação de páginas web e aplicativos online. A parte
-denominada: "Hipertexto", refere-se a links que conectam páginas umas
-as outras, fazendo a Web como conhecemos hoje
+denominada: "\textit{Hyper Text}", refere-se a links que conectam
+páginas HTML umas as outras, fazendo a Web como conhecemos hoje
 \autocite{mdn2015}.
 
 A última versão do HTML é o HTML5, iniciado pela WHATWG e
@@ -192,7 +191,7 @@ Além da nomenclatura, exitem pequenas diferenças nas especificações
 da W3C e WHATWG. A W3C vê a especificação do HTML5 como algo fechado,
 inclusive já iniciou o desenvolvimento do HTML 5.1. Já a WHATWG vê o
 HTML5 como uma especificação viva. A postura da W3C tende a criar uma
-especificação mais estável, já a da W3C reflete mais a realidade dos
+especificação estável, já a da W3C reflete mais a realidade dos
 navegadores, que nunca implementam uma versão completamente. A Mozilla
 utiliza a especificação da WHATWG no desenvolvimento do Firefox e
 recomenda a da W3C para sistemas que requeiram maior estabilidade. Neste
@@ -273,9 +272,11 @@ dos elementos que podem não ser suportados. O elemento \textit{span}
 na figura \ref{fig:htmlSample} só aparecerá para o usuário caso seu
 navegador não suporta a tag vídeo.
 
-Além da convencional linguagem de marcação, HTML5 ou "HTML5 e amigos"
-é muitas vezes interpretado como um conceito guarda chuva para designar
-as tecnologias da web: HTML, CSS3 e JavaScript.
+Além da convencional linguagem de marcação, HTML é muitas vezes
+interpretado como um conceito guarda chuva para designar as tecnologias
+da web. Segundo \autocite{diveIntohtml} algumas dessas tecnologias (como geolocalização) estão em especificações separadas mas são tratadas como HTML5 também. Outras
+tecnologias foram removidas do HTML5 estritamente falando, mas são tratados
+como HTML5 (como a API de armazenamento de dados).
 
 
 \begin{figure}
@@ -1351,14 +1352,14 @@ tecnologia da web que utiliza os mesmos princípios é o Web Workers.
 %{{{
 
 É uma API que possibilita executar vários scripts
-(\textit{threads})JavaScript ao mesmo tempo. O script que cria uma
+(\textit{threads}) JavaScript ao mesmo tempo. O script que cria uma
 thread é chamado de pai da thread, e a comunicação entre pai e filhos
 pode acontecer de ambos os lados através de mensagem encapsuladas
 em eventos. Um script que não seja pai de uma thread não pode se
 comunicar com ela, a não ser que a thread seja em modo compartilhado.
 
-O contexto global (objeto janela) não existe em uma thread,
-ao invés disso o objeto \textit{DedicatedWorkerGlobalScope}
+O contexto global (objeto \textit{window}) não existe em uma
+thread, no seu lugar o objeto \textit{DedicatedWorkerGlobalScope}
 pode ser utilizado. Workers compartilhados podem utilizar o
 \textit{SharedWorkerGlobalScope}. Estes objetos contém grande parte das
 funcionalidades proporcionadas pelo window com algumas exceções, por

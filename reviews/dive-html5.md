@@ -1,7 +1,3 @@
-Some things (as geolocation) are different specifications but are treated as the HTML5 as well. Others we're splited from the HTML5
-strictly speaking, but are treated once again as HTML5 (as the
-data storage api).
-
 Much of the detection of features is done via JavaScript, this
 forces developers to do at least some set of the markup on
 javascript, it may be a limitation factor for the generalized use
