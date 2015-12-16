@@ -1,6 +1,3 @@
-The limitation of the HTML5 audio element is that it's purpose is
-really to play single audio files, like background music within a
-game.
 
 #Pure DOM Vs. canvas-based game
 
@@ -30,9 +27,6 @@ useless, or even harmful, tomorrow. Pag 131
 A good tool to perform this [micro optimizations] is found at jsfiddle.net.
 The more advanced engines become, the less important these micro
 optimizations will become.
-
-Version 1.0 of the WebGL specification was completed in March 2011
-by Khronos Group.
 
 WebGL is a very new emerging technology. As such, unfortunately,
 not every computer supports it. In order to view a WebGl progam,

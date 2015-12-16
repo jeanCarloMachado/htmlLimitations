@@ -72,6 +72,8 @@ Os aspectos negativos do canvas é que a performance varia de plataformas para p
 
 \subsection{WebGL}
 
+Como WebGL é baseada na versão otimizada para dispositivos móveis do OpenGL não é possível utilizar muitos recursos especiais disponível para os ambientes desktop.
+
 Segundo \cite{html5mostwanted} um dos problemas do WebGL é sua alta curva de aprendizagem e o fato de não ter suporte para o Internet Explorer. Entretanto o suporte  foi adicionado na última versão do Internet Explorer (11). Não obstante a dificuldade de utilização ainda persiste, forçando a maioria dos desenvolvedores a utilizarem abstrações criadas por bibliotecas de terceiros.
 
 \subsection{VIDEO}
@@ -88,6 +90,9 @@ informações erradas, causando uma série de problemas.
 \subsection{Codecs}
 
 \subsection{ÁUDIO}
+
+Segundo \cite{html5mostwanted} a limitação do elemento de audio do HTML5 é que seu propósito é para executar apenas um som, como o som de fundo dentro de um jogo.
+
 A API de som no protótipo nem sempre emite o som quando o evento é disparado
 sucessivamente.
 
@@ -149,7 +154,10 @@ menos eficiente produzir animações em JavaScript do que utilizando
 transições e animações do CSS, que por sua vez são mais otimizados
 e acelerados via hardware \autocite{html5mostwanted}.
 
-Erros numéricos resultam no valor NaN (\textit{not a number}). Todas as operações com NaN como operadores irão retornar outro NaN. Isso torna a depuração de erros desnecessariamente complexa \autocite{html5mostwanted}.
+Erros numéricos resultam no valor NaN (\textit{not a number}).
+Todas as operações com NaN como operadores irão retornar outro
+NaN. Isso torna a depuração de erros desnecessariamente complexa
+\autocite{html5mostwanted}.
 
 \subsection{Detecção de recursos}
 
