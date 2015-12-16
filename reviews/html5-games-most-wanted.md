@@ -1,13 +1,6 @@
 HTTML5 Games most wanted
 2012
 
-[open web technologies] ..have evolved since the dawn of the
-internet and have been proven as reliable and stable while other
-technologies rise and fall beside them.
-
-..very little investment needs to be made to begin developing
-games using open web technologies.
-
 The negative aspects of canvas are that performance varies across
 platforms and animation functionality isn't built in.
 
