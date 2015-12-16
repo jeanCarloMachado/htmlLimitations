@@ -77,7 +77,7 @@ sido testado, deve funcionar na grade maioria dos navegadores.
 
 O primeiro passo foi a criação do documento HTML. Utilizei divs
 para simbolizar telas do jogo. Caracterizando o jogo como uma
-aplicação SPA (\textit{Single page application}).  A alternativa
+aplicação SPA (\textit{Single Page Application}).  A alternativa
 seria depender de um servidor para mandar as páginas prontas,
 mas isso acarreta na necessidade de acesso à internet constante,
 coisa nem sempre viável em dispositivos móveis.
@@ -135,7 +135,12 @@ armazenamento massivo de dados a opção mais modesta foi preferida.
 \end{figure}
 
 
-\subsection{Otimizando o CSS para jogos}
+\section{Otimizações para jogos}
+Abaixo seguem algumas otimizações que foram utilizadas no jogo, e são  aplicáveis 
+em grande parte dos jogos.
+
+
+\subsection{CSS}
 
 Scroll é um recurso interessante para longas páginas de texto,
 o mesmo não se pode dizer à respeito de jogos.
@@ -175,7 +180,7 @@ regras CSS demonstradas abaixo.
 -ms-user-select: none;
 \end{verbatim}
 
-\subsection{Otimizando JavaScript para jogos}
+\subsection{JavaScript}
 
 \subsubsection{Modo estrito}
 Algumas das recomendações nesta seção podem não se aplicar
@@ -225,3 +230,18 @@ A figura \ref{fig:iife} demonstra a utilização deste padrão. As
 funções definidas no mesmo nível que bar não estarão no contexto
 global - a não ser que seja especificado diretamente - e não sofrerão
 conflitos de nomes e outros problemas relativos ao contexto global.
+
+\subsubsection{HTML}
+
+Um problema que jogos sofrem em geral é a demora no carregamento da
+grande quantidade de recursos que precisam estar em memória para o jogo
+funcionar. Muitos jogos utilizam uma tela de carregamento enquanto os 
+recursos são adquiridos. 
+
+Um recurso do HTML interessante para este tipo de situação é o pré carregamento
+de recursos (\textit{Link Prefetching}). Esta tecnologia possibilita que o navegador
+, em seu tempo livre, adquira recursos que provavelmente serão necessários em um futuro próximo.
+
+Nem todos os recursos necessitam ser pré carregados, mas uma impressão
+muito superiora é criada se os recursos estão imediatamente
+disponíveis quando uma nova fase é carregada \autocite[pp. 39]{creatingFun}.

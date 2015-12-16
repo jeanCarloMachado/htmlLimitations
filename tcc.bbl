@@ -371,6 +371,21 @@
   \field{title}{A first look at what might be in ECMAScript 7 and 8}
 \endentry
 
+\entry{creatingFun}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Seidelin}{S.}%
+     {Jacob}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SJ1}
+  \strng{fullhash}{SJ1}
+  \field{labelyear}{2010}
+  \field{title}{HTML5 Games - Creating fun with HTML5, CSS3, and WebGL}
+  \field{year}{2010}
+\endentry
+
 \entry{cssSelectors}{misc}{}
   \field{howpublished}{Available at
   \url{http://www.w3.org/TR/CSS21/selector.html} (2015/11/17)}
