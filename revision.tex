@@ -258,6 +258,27 @@ uma tag e todo o conteúdo que dentro dele reside \autocite[pp.
 meta (<meta>) tem um atributo \textit{charset}, que especifica o formato de 
 codificação do documento.
 
+\begin{figure}
+\centering
+\begin{verbatim}
+<}!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+    <video>
+        <span>Seu navegador não suporta vídeo</span>
+    </video>
+</body>
+</html>
+\end{verbatim}
+\caption{Exemplo] de documento HTML}
+\label{fig:htmlSample}
+\end{figure}
+
+
 Na sua versão inicial, o HTML contava com 18 elementos; atualmente
 existem aproximadamente cem \autocite{diveIntohtml}. Não obstante, foi
 no HTML5 que a maior parte dos elementos que viabilizam a construção
@@ -280,30 +301,13 @@ como HTML5 (como a API de armazenamento de dados).
 
 
 \begin{figure}
-\centering
-\begin{verbatim}
-<}!DOCTYPE HTML>
-<html lang="en-US">
-<head>
-	<meta charset="UTF-8">
-	<title></title>
-</head>
-<body>
-    <video>
-        <span>Seu navegador não suporta vídeo</span>
-    </video>
-</body>
-</html>
-\end{verbatim}
-\caption{Exemplo de documento HTML}
-\label{fig:htmlSample}
-\end{figure}
-
-\begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{html5.jpg}
     \caption{Suíte HTML}
 \end{figure}
+
+Uma tecnologia fortemente entrelaçada com o HTML é o DOM. Este permite a interação entre documentos HTML e as demais tecnologias da WEB de uma forma fácil e padronizada.
+
 \subsection{DOM}
 %{{{
 
@@ -319,7 +323,7 @@ Foi somente com a especificação do JavaScript em 1998 que o DOM nível
 nível 2 e 3 seguiram com melhorias nas consultas aos elementos e CSS.
 
 A API de seletores do DOM permite alto nível de precisão e performance
-para buscar elementos.
+para buscar elementos
 
 \begin{figure}
 \centering
@@ -774,16 +778,19 @@ deparar-se com uma funcionalidade faltante o desenvolvedor tem duas
 possibilidades: notificar o usuário sobre o problema ou utilizar
 polyfills.
 
-Polyfills são recursos que simulam uma funcionalidade não disponível
-nativamente nos navegadores. A
-biblioteca Gears https://developers.google.com/gears é um exemplo. A biblioteca
-serve para prover recursos de Geolocalização para navegadores que não
-implementam a especificação do HTML5. Essa capacidade de suportar
-tecnologias que não estão ainda disponíveis ou nunca estarão, no caso de dispositivos legados, através de polyfills é
-uma das características que faz a WEB uma plataforma de tão grande
-abrangência. Novas tecnologias são criadas a todo o momento, entretanto o
-suporte a essas funcionalidades geralmente não acompanham o passo das
-inovações. E ainda assim os usuários podem se bonificar em uma taxa substancial.
+Polyfills são recursos que simulam uma funcionalidade não
+disponível nativamente nos navegadores. A biblioteca Gears
+https://developers.google.com/gears é um exemplo. Gears
+serve para prover recursos de Geolocalização para navegadores que
+não implementam a especificação do HTML5. 
+
+Essa capacidade de suportar tecnologias que não estão ainda
+disponíveis (ou nunca estarão no caso de dispositivos legados)
+através de polyfills é uma das características que faz a WEB uma
+plataforma de tão grande abrangência. Novas tecnologias são criadas a
+todo o momento; entretanto, o suporte a essas funcionalidades geralmente
+não acompanham o passo das inovações. E ainda assim os usuários
+podem se beneficiar de uma taxa substancial delas através de polyfills.
 
 Algumas funcionalidades do HTML, como geolocalização e vídeo
 foram primeiramente disponibilizadas através de plugins. Outras
