@@ -2,10 +2,6 @@ The limitation of the HTML5 audio element is that it's purpose is
 really to play single audio files, like background music within a
 game.
 
-A CSS stylesheet is structured as a set of rules. A CSS rule has
-two main parts: a selector and one or more declarations. A
-declaration is composed of a property and a value.
-
 #Pure DOM Vs. canvas-based game
 
 Both solutions are viable, but do not cover the same needs. The

@@ -83,23 +83,36 @@ Trafegar muitos assets deixa o sistema lento.
  Contorno
 Utilizando páginas de carregamento e/ou cache;
 
+Um problema comum no desenvolvimento WEB é, segundo \cite{howBrowsersWork}
+scripts requerendo informações de estilo durante o processo de 
+parsing. Se o estilo ainda não foi carregado o script vai utilizar 
+informações erradas, causando uma série de problemas.
+
 \subsection{Codecs}
 
-\subsection{AUDIO}
-Api de som quebra quando executado diversas vezes.
+\subsection{ÁUDIO}
+
+
+A API de som no protótipo nem sempre emite o som quando o evento é disparado
+sucessivamente.
+
 Os navegadores variam na disponibilização de formatos aceitáveis
 Somente um áudio pode ser tocado no Navegador do Android
+
 Não é possível trocar o volume no IOS.
+
 Alguns navegadores favorecem formatos ogg (vorbis) e outros, como o
 Safari, favorecem o MP3.
 
+Segundo \cite{html5Tradeoffs}
+\begin{quote}
 O maior problema com as API's de áudio e de vídeo do HTML5 é
 a disputa entre os codecs dos navegadores. Por exemplo, Mozilla e
 Opera suportam Theora, já o Safari suporta H.264 que também é
 suportado pelo IE9. Ambos, Iphone e Android suportam H.264 em seus
 navegadores. A W3C recomenda OggVorbis e OggTheora para áudio e vídeo
-respectivamente. (HASAN et al, 2012)
-
+respectivamente.
+\end{quote}
 
 \subsection{UI}
 
@@ -130,24 +143,19 @@ Em alguns casos o tamanho das telas pode ser um fator limitante – como
 no caso de jogos de estratégia. Jogadores com telas menores podem sair
 em desvantagem. 9. CÂMERA
 
-10 . JavaScript
+\subseciton{JavaScript}
 Ciclo de vida demorado pois necessita que todos os consumidores da
 especificação entrem em consenso e implementem a.
 
-11  Detecção de recursos
+\subseciton{Detecção de recursos}
 Muitas das detecções de recursos é feita via JavaScript, isso
 força os desenvolvedores a fazer ao menos parte da marcação em
 JavaScript \autocite{diveIntohtml}.
 
-A manipulação de erros é bastante consistente nos navegadores mas 
-incrivelemente não faz parte da especificação \autocite{howBrowsersWork}.
+
 
 Desktop/Firefox
 Desktop/Google Chrome
 Smatphone/Android
 
-Um problema comum no desenvolvimento WEB é, segundo \cite{howBrowsersWork}
-scripts requerendo informações de estilo durante o processo de 
-parsing. Se o estilo ainda não foi carregado o script vai utilizar 
-informações erradas, causando uma série de problemas.
 
