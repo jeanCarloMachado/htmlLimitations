@@ -1,8 +1,3 @@
-Much of the detection of features is done via JavaScript, this
-forces developers to do at least some set of the markup on
-javascript, it may be a limitation factor for the generalized use
-of HTML5.
-
 When you "watch a video", your video player is doing at least
 three things at once:
 
@@ -52,12 +47,6 @@ that are children of a <video> element must be ignored altogether.
 That allows you to use HTML5 in newer browsers and fall back to
 Flash gracefully in older browsers, without requiring any fancy
 JavaScript hacks.
-
-There is more than one way to figure out where you are - your IP
-address, our wireless network connection, which cell tower your
-phone is talking to, or dedicated GPS hardware that calculates
-latitude and longitude from information sent by satellites in the
-sky.
 
 While we're on the subject of legacy platforms, I should point out
 that many older mobile phone platforms had their own

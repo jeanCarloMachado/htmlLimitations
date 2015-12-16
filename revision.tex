@@ -770,7 +770,6 @@ elem.getAnimations().filter(
 %}}}
 \section{DETECÇÃO DE RECURSOS}
 %{{{
-
 Visto que nenhum navegador implementa as especificações HTML
 completamente cabe ao desenvolvedor detectar os navegadores que não
 comportam as necessidades tecnológicas dos aplicativos que cria. Ao
@@ -1080,7 +1079,7 @@ Google Chrome já permitem a utilização.
 
 %}}}
 \section{WebCL}
-
+%{{{
 É uma API em JavaScript para o recursos de OpenCL que permitem
 computação paralela com grandes ganhos de performance. Aplicativos
 como moteres de física e renderizadores de imagens, ambos relevantes
@@ -1390,15 +1389,18 @@ de recurso \autocite{diveIntohtml}.
 %{{{
 Na construção da grande maioria dos jogos é muitas vezes
 imprescindível grande flexibilidade na gestão de entrada comandos.
-
-Este fator se amplia na criação de jogos multiplataforma,
-seja através de teclado, tela sensível ou sensor de movimentos, o
-importante é oferecer a melhor experiência possível por plataforma.
+Esta necessidade amplia na criação de jogos multiplataforma, em
+determinadas plataformas a entrada de comandos pode-se dar través de
+teclado, em dispositivos móveis através tela sensível ou sensor de
+movimentos.
 
 O HTML5 trata todos estes casos abstratamente na forma de eventos, os
 quais podem ser escutados através de \textit{listeners}. Os eventos
 básicos são: keydown (tecla baixa), keyup (tecla solta) e keypress
 (tecla pressionada).
+
+\subsection{Acelerômetro}
+
 %}}}
 \section{HTTP/2}
 %{{{
