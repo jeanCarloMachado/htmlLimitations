@@ -52,11 +52,4 @@ While we're on the subject of legacy platforms, I should point out
 that many older mobile phone platforms had their own
 device-specific geolocation API's.
 
-Persistent local storage is one fo the areas where native client
-applications have held an advantage over web applications.
-
-(wen off-line downloading fails) Your browser will fire the error
-event, but there is no indication of what the actual problem was.
-This cam make debugging off-line web applications even more
-frustrating than usual.
 

@@ -20,6 +20,8 @@ Write abut web assembly
 
 #TODO
 
+Add more content about Audio & Video & codecs
+Add more content about Canvas
 Adicionar fontes as imagens que se aplicam
 Melhorar a aparte da revisão do projeto
 Talk about chrome developer tools for debugging animations
@@ -29,9 +31,6 @@ Terminar de migrar os reviews para dentro do trabalho
 Escrever sobre debugging
 Remove numbering from the bibliography
 Add canvas to the prototype
-Add more content about Audio
-Add more content about Video
-Add more content about Canvas
 Add a example about webgl
 Write about phonegap on appendices
 Incrementar a sessao openweb com o processo da W3C, mencionar alguns outros orgaos como o ecma e o kronos tambem
