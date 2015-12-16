@@ -377,10 +377,12 @@ parte da OWP; sua especificação é atualmente mantida pela W3C.
 
 O termo \textit{Cascading} refere-se ao fato de regras serem herdadas
 pelos filhos de um elemento, eliminando grande parcela de duplicação
-antes necessária para estilizar uma página. A diferenciação entre
-apresentação e estrutura, sendo neste caso o CSS responsável pela
-apresentação, é um dos pontos chave do SGML, motivo que tornou a
-utilização do CSS tão conveniente para o desenvolvimento WEB.
+antes necessária para estilizar uma página. Segundo \cite{html5mostwanted} pode-se expressar regras gerais que são "cascateadas" para muitos elementos, e então sobrescrever os elementos específicos conforme a necessidade.
+
+A diferenciação entre apresentação e estrutura, sendo neste caso
+o CSS responsável pela apresentação, é um dos pontos chave do
+SGML, motivo que tornou a utilização do CSS tão conveniente para o
+desenvolvimento WEB.
 
 Antes do CSS era impossível ter estilos diferenciados para diferentes
 tipos de dispositivos, limitando a aplicabilidade dos documentos.
@@ -521,8 +523,10 @@ CSS.customMedia.set('--foo', 5);
 É uma forma de adicionar animações em uma página web.
 Estas animações são compostas por um estado inicial e um
 final. A especificação de transições permite grande controle
-sobre a transição. Habilitando o desenvolvedor a controlar
-o tempo de execução os estados intermediários de uma transição.
+sobre seus estados. Habilitando o desenvolvedor a controlar
+o tempo de execução, os estados intermediários, e efeitos aplicados uma transição.
+
+Para utilizar transições, como em uma máquina de estados, precisamos identificar estados e ações. Estados são seletores do CSS e ações são modificações  realizadas entre esses dois seletores CSS \autocite{html5mostwanted}.
 
 Atualmente um conjunto finito de propriedades podem ser animadas
 com transições, e essas lista tende a mudar com o tempo, cabe ao
@@ -533,6 +537,8 @@ Transições são interessantes em jogos, especialmente pois muitos
 navegadores suportam aceleração de GPU (Unidade de processamento
 gráfico) para estas operações. Isso garante grandes benefícios de
 performance sobre implementações diretamente em JavaScript.
+
+Segundo \cite{html5mostwanted} transições nos permitem construir jogos degradáveis pois os interpretadores de CSS são amigáveis; se eles encontrarem propriedades desconhecidas eles simplesmente as ignoram e continuam a funcionar.
 
 \begin{figure}
 \centering
