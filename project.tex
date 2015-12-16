@@ -92,6 +92,20 @@ eram selecionadas aleatoriamente a cada turno.
 Isso se provou uma boa escolha pois possibilitou que o desenvolvimento
 se focasse em outros aspectos importantes como a elaboração do laço do jogo.
 
+\section{Laço do jogo}
+
+O laço do jogo (\textit{game loop}) é peça central em praticamente
+qualquer jogo eletrônico. A cada iteração do jogo o laço é
+executado e o processamento de entrada de usuário e computações
+correlacionadas são executadas.
+
+Para escrever o laço é possível utilizar as funções do JavaScript
+\textit{window.settimeout}. Não obstante, a forma mais recomendada é
+utilizar o \textit{window.requestAnimationFrame} reduz ou completamente
+para a execução do laço enquanto o usuário está em outra aba.
+Isso reduz o consumo de bateria, uma característica importante para
+dispositivos móveis.
+
 O aspecto central do laço do jogo consiste em apresentar uma equação
 ao usuário com a possibilidade de ele responder se ela está correta ou
 errada.
