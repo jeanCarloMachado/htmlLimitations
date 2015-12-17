@@ -23,7 +23,7 @@ HTML5. Outros serviços utilitários como o C2DM do Google que está
 disponível para desenvolvedores Android para utilizar serviços de push
 também não estão disponíveis para o HTML5.
 
-\cite{browserGamesTechnologyAndFuture} apresenta as seguintes limitações 
+\cite{browserGamesTechnologyAndFuture} apresenta as seguintes limitações
 no contexto de jogos de navegador
 
 \begin{itemize}
@@ -31,14 +31,12 @@ no contexto de jogos de navegador
 \item Não tem acesso a funcionalidades específicas dos dispositivos e recursos como notificações, use de hardware nativo ou comunicação entre aplicativos.
 \end{itemize}
 
-
 \subsection{VERSÕES}
 A grande maioria dos dispositivos atualmente no mercado utilizam
 obsoletas de seus softwares. Isso dificulta o desenvolvimento. Se a
 tecnologia de tradução para o navegador utilizar o a classe Webview do
 Android - como o Apache Cordova faz - as versões mais antigas podem ser
 penalizadas com problemas de performance ou falta de recursos.
-
 
 Segundo \cite{crossPlatformMobileGame}
 \begin{quote}
@@ -49,7 +47,6 @@ acarreta em suporte inconsistente. A forma mais segura de garantir
 suporte é testando em todas as versões alvo, todavia essa solução
 não é prática.
 \end{quote}
-
 
 \subsection{OFFLINE}
 
@@ -67,9 +64,41 @@ maior o documento mais lenta a renderização.
 
 \subsection{Canvas}
 
+Canvas tem uma característica peculiar quanto ao seu tamanho.
+Em suma existem dois tamanhos, o tamanho do elemento e da superfície de
+desenho. Quando o tamanho do elemento é maior do que o da superfície
+de desenho do documento escala a superfície de desenho para preencher o
+elemento, o que pode gerar resultados inesperados.
+Apesar de ser geralmente bem suportado nos navegadores atuais, canvas
+ainda sofre de problemas de performance. Para navegadores antigos -
+abaixo do Internet Explorer 9 - existe o polyfill Explorer Canvas
+do Google, que emula em JavaScript as funcionalidades do canvas. O
+FastCanvas é uma iniciativa híbrida para Android que busca mitigar os
+problemas de performance do Canvas com uma API nativa. Não obstante, o
+FastCanvas não suporta a especificação do canvas completamente, não
+permite ser integrado com outros elementos do DOM.
+
+A API canvas cresceu com o tempo, e algumas funcionalidades - como
+suporte a texto, foram adicionadas tardiamente. E alguns navegadores
+lançaram antes da especificação estar completa e hoje tem problema
+de suporte para essas áreas \autocite{diveIntohtml}. Apesar de muitas
+vezes incompleto, o canvas é suportado em todos os maiores navegadores
+à partir do Internet Explorer 9. Não obstante existe a possibilidade de utilizar
+a biblioteca https://github.com/google/canvas-5-polyfill para
+suprir aos navegadores que ainda não implementaram, os últimos recursos
+da especificação Canvas, como o recurso de desenhar elipses e o caminho 2D.
+
+
 Os aspectos negativos do canvas é que a performance varia de
 plataformas para plataformas e não existe implementação nativa para
 animações \autocite{html5mostwanted}.
+
+Algumas outras fraquezas do canvas são:
+\begin{itemize}
+\item{Não há suporte a animações}
+\item{Não é possível alterar uma parte já desenhada a não ser sobrescrevendo ou pintando o canvas novamente}
+\item{Por ser um vetor de pixeis não existe possibilidade de utilização do DOM nem seus eventos, limitado muito a iteratividade}
+\end{itemize}
 
 \subsection{WebGL}
 
@@ -94,6 +123,20 @@ com drivers bloqueados por não funcionarem corretamente no Firefox
 Para ver um programa em WebGL é necessário um navegador recente, uma
 placa gráfica recente e um sistema operacional que suporte a tecnologia
 \autocite{html5mostwanted}
+
+\subsubsection{Bibliotecas WebGL}
+
+CocoonJS é uma aplicativo híbrido que preenche a fraca implementação
+de WebGL nos dispositivos móveis possibilitando se desenvolver em
+WEBGL, CSS. Conta com suporte a dispositivos legados à partir do
+Android 2.3 e IPhone 5.
+
+Treejs é um framework popular para o desenvolvimento em WebGL.
+Consistem em uma abstração sobre WebGL que permite os autores se
+focarem na criação de conteúdo para WEB, ao invés de dispenderem
+tempo manipulando os detalhes da WebGL. Possibilita trabalhar com
+efeitos, luzes, cenas e outras abstrações em detrimento de shaders,
+vértices, e conceitos mais primitivos.
 
 
 \subsection{VIDEO}

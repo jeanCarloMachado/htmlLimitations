@@ -148,7 +148,7 @@ reaproveitar grande parcela do conhecimento adquirido através do
 desenvolvimento de páginas WEB na criação de jogos. O custo do
 desenvolvimento de jogos também é reduzido devido a inexistência de
 duplicação de código. Jogos WEB não requerem atualizações manuais.
-Sua di]stribuição é superior ao estilo convencional de aplicações
+Sua di]]stribuição é superior ao estilo convencional de aplicações
 desktop \autocite{browserGamesTechnologyAndFuture}. Jogos 
 WEB, por serem criados à partir das tecnologias da WEB se beneficia de uma
 arquitetura construída para um ambiente social, sendo relativamente
@@ -888,35 +888,38 @@ coleção de animações utilizando a tecnologia.
 %}}}
 \section{NAVEGADORES}
 %{{{
-Navegadores são softwares, onde as tecnologias da OWP são
+Navegadores são aplicações, onde as tecnologias da OWP são
 interpretadas e geram um conteúdo útil para os usuários.
-Navegadores adotam a arquitetura cliente servidor. Sendo
-o navegador o lado cliente e o servidor sendo o computador
-que fornece código em HTML.
 
-Aplicações do lado do cliente geralmente se comunicam com um
-servidor através de documentos em HTTP. Quado o navegador recebe um
-destes pacotes em HTML ele começa o processo de renderização. A
-renderização pode requisitar outros arquivos a fim de completar a
-experiência desenvolvida para o endereço em questão.
+Navegadores geralmente são os clientes em uma arquitetura cliente
+servidor. O servidor geralmente é um servidor WEB que disponibiliza
+páginas HTML para o navegador processar. A comunicação entre o 
+navegador e o servidor se dá através da troca de mensagens no protocolo
+HTTP.
 
-Nos navegadores os usuários necessitam localizar a página que desejam,
-sabendo o endereço, ou pesquisando em buscadores. Isso é um processo
+Nos navegadores os usuários necessitam saber o endereço de determinado
+servidor, ou utilizar buscadores para auxiliá-los. Este é um processo
 árduo para a plataformas móveis pois necessitam maior interação
-do usuários e não são “naturais” se comparado ao modo normal
+do usuários e não são “naturais” se comparado ao modo 
 de consumir aplicativos nestas mesmas plataformas – simplesmente
 adquirindo o aplicativo na loja e abrindo-o no sistema operacional.
-Alguns contornos para este problema serão descritos nas tecnologias
-offline.
+Algumas formas de contornar este problema serão descritos nas tecnologias offline.
 
-Para transformar as instruções retornadas pelo servidor em algo útil
-para o usuário final os navegadores geralmente fazem uso de bibliotecas
-externas capazes de interpretar HTML5 e gerar o conteúdo iterativo.
+Uma vez localizado o endereço o cliente manda uma mensagem em http requisitando 
+o conteúdo de determinado endereço.
+O servidor responde a mensagem HTTP com um documento HTML
+ e o cliente, ao receber, começa o processo de renderização. A renderização consiste
+na decodificação de um documento em HTML para sua representação
+memória e posterior pintura no espaço de tela do navegador. Para
+concluir o processo de renderização o navegador pode requisitar outros
+arquivos a fim de completar a experiência desejada para o endereço
+em questão.
 
-A mais importante destas bibliotecas que compõem os navegadores é o
-motor de renderização, seguindo por um motor JavaScript.
+O processo de renderização é complexo e a grande maioria dos navegadores
+confia em bibliotecas especializadas para efetuar este trabalho.
 
 Alguns motores de renderização incluem:
+
 \begin{itemize}
     \item Blink: Utilizada no Chromium e projetos relacionados, Opera
     \item Gecko: Utilizada nos produtos da Mozilla
@@ -927,7 +930,8 @@ Alguns motores de renderização incluem:
 Para interpretar HTML o motor WebKit utiliza a biblioteca Bison, já o
 Gecko utiliza uma biblioteca própria \autocite{howBrowsersWork}.
 
-Alguns motores de JavaScript incluem:
+O código que é executado no lado do servidor geralmente é terceirizado pelos navegadores.
+As bibliotecas que executam JavaScript são os motores de JavaScript.
 
 \begin{itemize}
     \item SpiderMonkey: Primeiro motor, desenvolvido por Brendan Eich, escrito em C++
@@ -1053,47 +1057,18 @@ perfeição na posição dos pixels, por ser uma linguagem vetorizada
 %}}}
 \subsection{CANVAS}
 %%{{{
-
 A tag \textit{canvas} define uma camada de mapa de bits em documentos
 HTML que pode ser usada para criar diagramas, gráficos e animações
 2D. Foi criada pela Apple em 2004 para renderizar elementos de interface
 no Webkit, logo foi adotado por outros navegadores e se tornou um
 padrão.
 
-A API canvas cresceu com o tempo, e algumas funcionalidades - como
-suporte a texto, foram adicionadas tardiamente. E alguns navegadores
-lançaram antes da especificação estar completa e hoje tem problema
-de suporte para essas áreas \autocite{diveIntohtml}. Apesar de muitas
-vezes incompleto, o canvas é suportado em todos os maiores navegadores
-à partir do Internet Explorer 9. Não obstante existe a possibilidade de utilizar
-a biblioteca https://github.com/google/canvas-5-polyfill para
-suprir aos navegadores que ainda não implementaram, os últimos recursos
-da especificação CANVAS, como o recurso de desenhar elipses e o caminho 2D.
-
-Apesar de ser geralmente bem suportado nos navegadores atuais, canvas
-ainda sofre de problemas de performance. Para navegadores antigos -
-abaixo do Internet Explorer 9 - existe o polyfill Explorer Canvas
-do Google, que emula em JavaScript as funcionalidades do canvas. O
-FastCanvas é uma iniciativa híbrida para Android que busca mitigar os
-problemas de performance do Canvas com uma API nativa. Não obstante, o
-FastCanvas não suporta a especificação do canvas completamente, não
-permite ser integrado com outros elementos do DOM.
-
 Em um documento HTML, Canvas é um retângulo onde pode-se usar
-JavaScript para desenhar \autocite[pp. 113]{diveIntohtml}.
-
-Canvas tem uma característica peculiar quanto ao seu tamanho.
-Em suma existem dois tamanhos, o tamanho do elemento e da superfície de
-desenho. Quando o tamanho do elemento é maior do que o da superfície
-de desenho do documento escala a superfície de desenho para preencher o
-elemento, o que pode gerar resultados inesperados.
-
-Algumas outras fraquezas do canvas são:
-\begin{itemize}
-\item{Não há suporte a animações}
-\item{Não é possível alterar uma parte já desenhada a não ser sobrescrevendo ou pintando o canvas novamente}
-\item{Por ser um vetor de pixeis não existe possibilidade de utilização do DOM nem seus eventos, limitado muito a iteratividade}
-\end{itemize}
+JavaScript para desenhar \autocite[pp. 113]{diveIntohtml}. Manipular o
+retângulo é bem similar ao processo de desenhar manualmente, move-se
+o "lápis" para o local desejado, e traça-se os pontos onde a linha
+deve percorrer - similar ao planejamento. E desenha-se efetivamente,
+preenchendo os pontos demarcados.
 
 O canvas até aqui descrito trata-se de sua forma, ou contexto 2D. A
 especificação 3D do canvas é o WebGl.
@@ -1104,74 +1079,51 @@ especificação 3D do canvas é o WebGl.
 \begin{draft}
 
 WebGL é uma API JavaScript otimizada desenhar gráficos em três dimensões.
-Ideal para a criação de ambientes virtuais, jogos e simulações.
+WebGL é ideal para a criação de ambientes virtuais, jogos e simulações.
 Por ser uma tecnologia da OWP WebGL foi especificado para funcionar
 nativamente nos navegadores sem a ajuda de plugins ou ferramentas de terceiros.
 
-A especificação do WebGL foi desenvolvida baseando-se em OpenGL,
-especificamente OpenGL ES 2.0, uma versão do OpenGL otimizada para
-dispositivos móveis. O órgão que especifica o WebGL é o mesmo que
-especifica o OpenGL, o grupo sem fins lucrativos Kronos. Os primeiros
-rascunhos do WebGL iniciaram em 2006, não obstante o grupo de trabalho
-não foi formado até 2009. E a primeira versão do foi lançada em
-2011.
+WebGL foi desenvolvido baseando-se na especificação OpenGL, que trata
+de definir como renderizar gráficos multiplataforma, especificamente
+OpenGL ES 2.0, uma versão do OpenGL otimizada para dispositivos
+móveis. O órgão que especifica o WebGL é o mesmo que especifica o
+OpenGL, o grupo sem fins lucrativos Kronos. Os primeiros rascunhos do
+WebGL iniciaram em 2006, não obstante o grupo de trabalho não foi
+formado até 2009. E a primeira versão do foi lançada em 2011.
 
 Apesar de ter sido desenvolvido com foco em 3D, WebGL pode ser
 igualmente utilizado para criação de gráficos em duas
 dimensões\autocite[pp. 6]{3daps}. O elemento do DOM que provê a
-interface do WebGL é o canvas, no contexto 3D. Essa integração com o
-DOM permite que o WebGL seja manipulado assim como os demais elementos
-HTML.
+interface do WebGL é o canvas, no contexto 3D. Essa integração com
+o DOM via tag canvas permite que o WebGL seja manipulado assim como os
+demais elementos HTML.
 
-
-WebGL só se tornou uma possibilidade performática para jogos
-pois parte do seu processamento pode ser delegado para a GPU. A
-especificação é composta por uma API de controle em JavaScript e o
-processamento shaders. Shaders são responsáveis por grande parcela dos
-efeitos 3D e são executados do lado da GPU.
+Especificação é composta por uma API de controle em JavaScript e o
+processamento shaders do lado da GPU (Central de processamento gráfico).
 
 \subsection{Shaders}
 
-Shaders definem níveis de cor ou efeitos especiais sobre um modelo 2d
-ou 3D. Contam com grande performance, possibilitando conteúdo em tempo
-real - como no caso dos jogos - por executarem dentro da GPU.
-São utilizados no cinema, em imagens geradas por computadores e vídeo games.
+Shaders são scripts que definem níveis de cor ou efeitos especiais
+sobre um modelo 2D ou 3D. Contam com grande performance, possibilitando
+conteúdo em tempo real - como no caso dos jogos - por executarem dentro
+da GPU. São utilizados no cinema, em imagens geradas por computadores e
+vídeo games.
 
 Existem dois shaders principais, de vértices e fragmentos.
 Shaders de vértices são chamados para cada vértice sendo desenhado
 definindo suas posições e shaders de fragmentos a cor para cada pixel
 a ser desenhado \autocite[pp.15]{3daps}.
 
-\subsection{Bibliotecas OpenGL}
-
-CocoonJS é uma aplicativo híbrido que preenche a fraca implementação
-de WebGL nos dispositivos móveis possibilitando se desenvolver em
-WEBGL, CSS. Conta com suporte a dispositivos legados à partir do
-Android 2.3 e IPhone 5.
-
-Treejs é uma abstração sobre WebGL que permite os autores se focarem
-na criação de conteúdo para web, ao invés de dispenderem tempo manipulando
-os detalhes da WebGL. Possibilita trabalhar com efeitos, luzes, cenas
-e outras abstrações em detrimento de shaders, vértices, e conceitos mais
-primitivos.
-
-\subsection{Otimizações}
-CPU? JavaScript, DOM, etc.
-GPU?
-
-- Texture compression
-- Mipmaps (LOD)
-- Draw calls
-
 Um site interessante para explorar exemplos WebGL avançados é o blog
 http://learningwebgl.com que conta com tutoriais cobrindo áreas como
-diferentes tipos de iluminação, carrecamento de modelos em json,
+diferentes tipos de iluminação, carregamento de modelos em JSON,
 gerenciando eventos do mouse e teclado; e como renderizar uma cena WebGL
 em uma textura \autocite[pp.42]{3daps}.
 
-Apesar da relevância, WebGL não foi utilizada no trabalho pois ainda
-não está completamente especificada e a dificuldade e escopo do
-projeto aumentariam muito se tivessem de incluir um jogos 3D.
+Apesar da relevância, WebGL não foi utilizado no protótipo pois
+ainda não está completamente suportado em navegadores populares como
+o Firefox e a grande curva de aprendizado do WebGL puro é muito grande
+para se encaixar no escopo deste projeto.
 
 Uma tecnologia que se integra profundamente como ambientes virtuais
 em três dimensões criados via OpenGL é o WebVR.
@@ -1201,8 +1153,6 @@ do contexto de uma um contexto 3D através de JavaScript.
 Atualmente a especificação do WebVR se encontra em fase de rascunho e
 as últimas versões do Firefox, e versões compiladas manualmente do
 Google Chrome já permitem a utilização.
-
-
 %}}}
 \section{WebCL}
 %{{{
