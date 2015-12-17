@@ -178,34 +178,40 @@ mercado não atendido de qualquer forma.
 %{{{
 
 \subsection{OPEN WEB}
+
 A OWP (\textit{Open Web Platform}) é uma coleção de tecnologias
-livres, amplamente utilizadas e padronizadas. Quando uma tecnologia se
-torna amplamente popular, através da adoção de grandes empresas e]nc
-desenvolvedores, ela se torna candidata a adoção pela OWP. 
-As tecnologias da Open WEB tem evoluído desde os princípios da internet e já provaram sua robusteza e estabilidade enquanto outras tecnologias crescem e morrem ao redor dela \autocite{html5mostwanted}.
+livres, amplamente utilizadas e padronizadas. Quando uma tecnologia
+se torna amplamente popular, através da adoção de grandes empresas
+e desenvolvedores, ela se torna candidata a adoção pela OWP.
 
-Mais do que um conjunto de tecnologias Open Web, é um conjunto
-de filosofias e ideias as quais a web se fundamenta. Transparência,
-imparcialidade nos processos de criação e padronização de novas
-tecnologias. Retro compatibilidade com as especificações anteriores.
-Consenso entre o mercado e o meio acadêmico, nunca um distanciando-se
-muito do outro.
+A Open Web, mais que uma coleção de tecnologias, é um conjunto de
+filosofias as quais a WEB se fundamenta. Entre outras, a Open Web
+busca transparência, imparcialidade nos processos de criação
+e padronização de novas tecnologias. Retro compatibilidade com
+as especificações anteriores. Consenso entre o mercado e o meio
+acadêmico, nunca um distanciando-se muito do outro.
 
-A W3C é a empresa responsável por grande parte das especificações
-da web como: HTML (em conjunto com a WHATWG), CSS, entre outros.
+Várias pessoas, empresas e comunidades estão interessadas neste
+processo. A W3C é uma comunidade responsável por boa parte das
+especificações da web como: HTML (em conjunto com a WHATWG), CSS,
+entre outras\footnote{Uma lista completa das especificações mantidas pela
+W3C pode ser encontrada em: http://www.w3.org/TR/}. Outros grupos
+detém responsabilidade por outras tecnologias da OWP, como a ECMA,
+responsável pelo JavaScript; ou Kronos, responsável pelo WebGL.
 
-O processo da W3C consiste na elaboração de rascunhos de
-(\textit{working drafts}) que passam por vários passos de revisão até
-se tornarem recomendações. As recomendações podem ser implementadas
-com segurança de que a especiação não mudará substancialmente.
-Apesar do processo ser rigoroso, está longe de perfeito. A
+Na W3C o processo de desenvolvimento de especificações consiste
+na elaboração de rascunhos (\textit{working drafts}) que passam
+por vários passos de revisão até se tornarem recomendações.
+As recomendações podem ser implementadas com segurança de que a
+especiação não mudará substancialmente.
+
+Apesar do processo da W3C ser rigoroso, está longe de perfeito. A
 especificação final do HTML4 contava com quatro erros publicados
-via errata \autocite{HTML5}. Uma lista completa das especificações
-mantidas pela W3C pode ser encontrada em: http://www.w3.org/TR/.
-
-Outras empresas estão envolvidas nas especificações da web, como a
-ECMA, responsável pelo JavaScript; Kronos, responsável pelo WebGL,
-etc.
+via errata \autocite{HTML5}. 
+Não obstante, o cenário é animador \autocite{html5mostwanted} cita que
+as tecnologias da Open WEB tem evoluído desde os princípios da internet
+e já provaram sua robusteza e estabilidade enquanto outras tecnologias
+crescem e morrem ao redor dela.
 
 A tecnologia chave que inaugurou e alavancou este processo é o HTML.
 %}}}
@@ -362,9 +368,6 @@ Foi somente com a especificação do JavaScript em 1998 que o DOM nível
 1 foi especificado, permitindo a manipulação de qualquer elemento. DOM
 nível 2 e 3 seguiram com melhorias nas consultas aos elementos e CSS.
 
-A API de seletores do DOM permite alto nível de precisão e performance
-para buscar elementos
-
 \begin{figure}
 \centering
 \begin{verbatim}
@@ -375,10 +378,13 @@ para buscar elementos
 \label{fig:selectorsSample}
 \end{figure}
 
-A figura \ref{fig:selectorsSample} demonstra a utilização dos seletores do DOM em um documento
-JavaScript. O método \textit{querySelector} seleciona o primeiro elemento em conformidade
-com o padrão especificado. Já o método \textit{querySelectorAll} seleciona todos os elementos
-que estão em acordo com o padrão especificado.
+A API de seletores (\textit{querySelector}) do DOM permite alto
+nível de precisão e performance para buscar elementos. A figura
+\ref{fig:selectorsSample} exemplifica a utilização dos seletores
+do DOM em um documento JavaScript. O método \textit{querySelector}
+seleciona o primeiro elemento em conformidade com o padrão
+especificado. Já o método \textit{querySelectorAll} seleciona todos os
+elementos que estão em acordo com o padrão especificado.
 
 %}}}
 %}}}
@@ -390,22 +396,14 @@ apresentação de páginas HTML. CSS, juntamente com JavaScript e HTML,
 compõem as tecnologias centrais no desenvolvimento WEB tornando-se
 parte da OWP; sua especificação é atualmente mantida pela W3C.
 
-O termo \textit{Cascading} refere-se ao fato de regras serem herdadas
-pelos filhos de um elemento, eliminando grande parcela de duplicação
-antes necessária para estilizar uma página. Segundo \cite{html5mostwanted} pode-se expressar regras gerais que são "cascateadas" para muitos elementos, e então sobrescrever os elementos específicos conforme a necessidade.
-
-A diferenciação entre apresentação e estrutura, sendo neste caso
-o CSS responsável pela apresentação, é um dos pontos chave do
-SGML, motivo que tornou a utilização do CSS tão conveniente para o
-desenvolvimento WEB.
-
-Antes do CSS era impossível ter estilos diferenciados para diferentes
-tipos de dispositivos, limitando a aplicabilidade dos documentos.
-Com CSS também tornou-se possível que o usuário declare suas próprias
-folhas de estilo, um recurso importante para acessibilidade.
+O termo \textit{Cascading} refere-se ao fato de regras serem
+herdadas pelos filhos de um elemento, eliminando grande parcela de
+duplicação antes necessária para estilizar uma página. Segundo
+\cite{html5mostwanted} pode-se expressar regras gerais que são
+"cascateadas" para muitos elementos, e então sobrescrever os elementos
+específicos conforme a necessidade.
 
 Segundo \cite[pp. 23--24]{CascadingStyleSheets}:
-
 \begin{quote}
 CSS possibilita a ligação tardia (\textit{late biding}) com
 páginas HTML. Essa característica é atrativa para os publicadores
@@ -414,12 +412,22 @@ publicações, segundo pois os publicadores podem focar-se no conteúdo
 ao invés de se preocuparem-se com detalhes de apresentação.
 \end{quote}
 
-CSS é formado por um conjunto de regras, dentro de uma tag HTML
-denominada \textit{style}, que são agrupadas por seletores em blocos
-de declaração. Os elementos selecionados são denominados o assunto
-do seletor \autocite{cssSelectors}. Seletores tem o intuito de definir
-quais partes do documento HTML serão afetadas por determinado bloco de
-declaração.
+Esta ligação tardia permitiu diferenciação entre apresentação e
+estrutura, sendo neste caso o CSS responsável pela apresentação. Esta
+característica é uma das ideias pioneiras do SGML, motivo que tornou a
+utilização do CSS tão conveniente para o desenvolvimento WEB.
+
+Antes do CSS era impossível ter estilos diferenciados para diferentes
+tipos de dispositivos, limitando a aplicabilidade dos documentos.
+Com CSS também tornou-se possível que o usuário declare suas próprias
+folhas de estilo, um recurso importante para acessibilidade.
+
+Estruturalmente falando, CSS é formado por um conjunto de regras,
+dentro de uma tag HTML denominada \textit{style}, que são agrupadas
+por seletores em blocos de declaração. Os elementos selecionados são
+denominados o assunto do seletor \autocite{cssSelectors}. Seletores tem
+o intuito de definir quais partes do documento HTML serão afetadas por
+determinado bloco de declaração.
 
 A figura \ref{fig:CSSSample} exemplifica este processo. O seletor em
 questão é o elemento \textit{<p>}, simbolizando todos os parágrafos. O bloco de
@@ -448,15 +456,17 @@ da aceitação de outros para serem disponibilizados.
 
 Além do módulos, CSS também é organizado por perfis e níveis.
 
-Os perfis do CSS organizam a especificação por dispositivo de utilização.
-Existem perfis para dispositivos móveis, televisores, impressoras, etc.
-Existem conjuntos de regras que se aplicam somente a uma classe de dispositivos,
-ou que sofrem alterações nas regras conforme as regras.
+Os perfis do CSS organizam a especificação por dispositivo de
+utilização. Existem perfis para dispositivos móveis, televisores,
+impressoras, etc. A aplicabilidade das regras do CSS varia dependendo do
+perfil. O conteúdo do elemento \textit{strong}, por exemplo, pode ser
+traduzido em uma entonação mais forte em um leitor de telas, já em um
+navegador convencional pode ser apresentado como negrito.
 
 Já os níveis organizam o CSS por camadas de abstração. Os níveis
 inferiores representam as funcionalidades vitais do CSS, os níveis
 superiores dependem dos inferiores para construir as funcionalidades
-elaboradas.
+elaboradas. %um exemplo seria legal
 
 A primeira especificação do CSS, CSS1 (ou nível 1) foi lançada em
 1996. Em 1997 foi lançado o CSS2 com o intuito de ampliar a completude
@@ -476,20 +486,19 @@ CSS3 e Texto do CSS3 de recomendações para rascunhos.
     \source{https://commons.wikimedia.org/wiki/File:CSS3\_taxonomy\_and\_status-v2.png}
 \end{figure}
 
-O CSS3, introduziu várias funcionalidades relevantes para jogos, como
-\textit{media-queries}, transições, transformações 3D, entre outros.
+A última versão do CSS, o CSS3, introduziu várias funcionalidades
+relevantes para jogos, como \textit{media-queries}, transições,
+transformações 3D, entre outros.
 
 \subsection{Media Queries}
 
 Media Queries permitem aplicar regras a dispositivos específicos,
 dependendo de suas capacidades, como resolução, orientação, tamanho
-de tela, entre outros.
+de tela, entre outros. A especificação prevê a possibilidade de
+condicionalmente carregar arquivos JavaScript ou CSS, ou utilizar
+seletores dentro do CSS de acordo com regras de Media Queries.
 
-A especificação prevê a possibilidade de aplicar seletores entro
-de arquivos CSS, ou aplicar arquivos inteiros dependentemente das
-configuração do aparelho em questão.
-
-Carregar regras condicionalmente permite implementar fluidez e
+Esse carregamento condicional  permite implementar fluidez e
 adaptabilidade de layout para diferentes resoluções. Que segundo
 \cite{HTML5CrossPlatformGameDevelopment} é o mais importante aspecto do
 desenvolvimento de jogos multiplataforma com as tecnologias da WEB.
@@ -507,7 +516,7 @@ desenvolvimento de jogos multiplataforma com as tecnologias da WEB.
 
 A figura \ref{fig:MediaQuery} demostra a aplicação de uma regra via
 seletor Media Query, aplicando o a cor de fundo para dispositivos com no
-minimo 1024 px de resolução.
+minimo 1024 pixels de resolução.
 
 CSS nível 4 permite a utilização de media queries (\textit{Custom
 Media Queries}) criados pelo usuário, com regras e definições
