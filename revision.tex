@@ -102,21 +102,14 @@ híbrido, ou nativo. As opções serão descritas abaixo.
 
 \subsection{DESENVOLVIMENTO DE JOGOS NATIVOS}
 
-Pontos fortes:
-\begin{itemize}
-\item Habilita a melhor experiência de usuário pois permite utilizar ao
-máximo os recursos e funcionalidades dos dispositivos.
-\end{itemize}
-
-Pontos fracos:
-\begin{itemize}
-\item Porém, devido a cada plataforma conter seu próprio sistema operacional,
-com seus próprios *SDK's* totalmente incompatíveis, os desenvolvedores são
-forçados a desenvolver uma versão do jogo para cada plataforma alvo.
-\item Requer mais pessoas, e maior custo com possivelmente parte do
-mercado não atendido de qualquer forma.
-\end{itemize}
-\end{draft}
+Jogos nativos são jogos desenvolvidos através da linguagem recomendada para o dispositivo.
+Jogos nativos tendem a oferecer uma experiência mais próxima com a do resto
+do sistema operacional o qual está rodando, softwares nativos tendem a ser mais rápidos que
+suas alternativas da WEB. A maior quantidade de recursos possível está disponível para
+jogos nativos.
+Desenvolver jogos nativos tende a ser mais caro que a alternativa da WEB visto que é ncessário
+duplicar funcionalidades em sistemas e manter um profissional por ambiente suportado.
+As versões nativas são totalmente incompatíveis impossibilitando reúso.
 
 \subsection{JOGOS WEB}
 
@@ -155,7 +148,7 @@ reaproveitar grande parcela do conhecimento adquirido através do
 desenvolvimento de páginas WEB na criação de jogos. O custo do
 desenvolvimento de jogos também é reduzido devido a inexistência de
 duplicação de código. Jogos WEB não requerem atualizações manuais.
-Sua distribuição é superior ao estilo convencional de aplicações
+Sua di]stribuição é superior ao estilo convencional de aplicações
 desktop \autocite{browserGamesTechnologyAndFuture}. Jogos 
 WEB, por serem criados à partir das tecnologias da WEB se beneficia de uma
 arquitetura construída para um ambiente social, sendo relativamente
@@ -170,16 +163,18 @@ a comportamento inesperados em alguns caos, sendo necessário desenvolver
 regras específicas para dispositivos e versões de navegadores. Outro
 aspecto negativo da WEB é que nem todas as funcionalidades dos dispositivos
 estão especificados com as tecnologias da WEB e muitas vezes o dispositivo
-fica sub-utilizado.
+fica sub utilizado.
 
 Além dos jogos web, há a possibilidade de criar jogos híbridos e nativos.
 
 \subsection{JOGOS HÍBRIDOS}
 
-Jogos híbridos são jogos geralmente desenvolvidos com tecnologias da
-web que rodam nativamente.
-
+A alernativa híbria tenta utilizar o melhor do nativo e o melhor do desenvolvimento WEB.
+Geralmente se desenvove híbrido utilizando as tecnologias da WEB só que ao invés de 
+disponibilizar a aplicação através de um navegador a aplicação WEB é instalada
+como um aplicativo normal e roda em uma webview do sistema operacional.
 %}}}
+\end{draft}
 \section{WEB}
 %{{{
 
@@ -1108,26 +1103,26 @@ especificação 3D do canvas é o WebGl.
 %{{{
 \begin{draft}
 
-WebGL é uma API JavaScript para desenhar gráficos em três dimensões.
-Apesar de ter sido desenvolvido com foco em 3D, WebGL pode ser
-utilizados para 2D também \autocite[pp. 6]{3daps}. 
+WebGL é uma API JavaScript otimizada desenhar gráficos em três dimensões.
+Ideal para a criação de ambientes virtuais, jogos e simulações.
+Por ser uma tecnologia da OWP WebGL foi especificado para funcionar
+nativamente nos navegadores sem a ajuda de plugins ou ferramentas de terceiros.
 
 A especificação do WebGL foi desenvolvida baseando-se em OpenGL,
 especificamente OpenGL ES 2.0, uma versão do OpenGL otimizada para
 dispositivos móveis. O órgão que especifica o WebGL é o mesmo que
-especifica o OpenGL: Kronos Working Group.Os primeiros
+especifica o OpenGL, o grupo sem fins lucrativos Kronos. Os primeiros
 rascunhos do WebGL iniciaram em 2006, não obstante o grupo de trabalho
 não foi formado até 2009. E a primeira versão do foi lançada em
 2011.
 
-O elemento do DOM que provê a interface do WebGL é o canvas, no contexto 3D.
-Essa integração com o DOM permite que o WebGL seja manipulado assim como os demais elementos HTML.
+Apesar de ter sido desenvolvido com foco em 3D, WebGL pode ser
+igualmente utilizado para criação de gráficos em duas
+dimensões\autocite[pp. 6]{3daps}. O elemento do DOM que provê a
+interface do WebGL é o canvas, no contexto 3D. Essa integração com o
+DOM permite que o WebGL seja manipulado assim como os demais elementos
+HTML.
 
-É digno de nota que é recomendável se testar WebGL em todos os navegadores
-e plataformas alvo. Pode haver diferenças substanciais de performance em
-plataformas diferentes e em navegadores diferentes. Existe também uma lista
-de placas gráficas com drivers bloqueados por não funcionarem corretamente no
-Firefox \autocite[pp.42]{3daps}.
 
 WebGL só se tornou uma possibilidade performática para jogos
 pois parte do seu processamento pode ser delegado para a GPU. A
