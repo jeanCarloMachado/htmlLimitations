@@ -1099,7 +1099,8 @@ especificação 3D do canvas é o WebGl.
 
 %}}}
 \subsection{WEBGL}
-%{{
+%{{{
+\begin{draft}
 
 WebGL é uma API JavaScript para desenhar gráficos em três dimensões.
 Apesar de ter sido desenvolvido com foco em 3D, WebGL pode ser
@@ -1173,6 +1174,7 @@ projeto aumentariam muito se tivessem de incluir um jogos 3D.
 
 Uma tecnologia que se integra profundamente como ambientes virtuais
 em três dimensões criados via OpenGL é o WebVR.
+\end{draft}
 %}}}
 \subsection{WEBVR}
 %{{{
@@ -1277,23 +1279,33 @@ formatos existentes, considerando o fator taxa de bits versus qualidade.
 \begin{draft}
 \section{VIDEO}
 %{{{
-Antes do HTML5 era impossível adicionar vídeos nas páginas sem a utilização de algum plugin.
+Antes do HTML5 era impossível adicionar vídeos nas páginas sem a
+utilização de algum plugin.
 
-A especificação define uma tag \textit{video} que pode ser embida em uma página HTML. Segundo \cite{diveIntohtml} não existem restrições quando ao codec de vídeo ou áudio, um elemento vídeo pode fazer referência a múltiplos arquivos de vídeos, cabe ao navegador decidir qual arquivo de fato será executado.
+A especificação define uma tag \textit{video} que pode ser embida em
+uma página HTML. Segundo \cite{diveIntohtml} não existem restrições
+quando ao codec de vídeo ou áudio, um elemento vídeo pode fazer
+referência a múltiplos arquivos de vídeos, cabe ao navegador decidir
+qual arquivo de fato será executado.
 
-Os navegadores não concordam em qual formato de vídeo suportar.
-Uma tag vídeo pode apontar para vários arquivos em diversos formatos, e os navegadores que suportarem determinado irão escolhê-lo.
+Os navegadores não concordam em qual formato de vídeo suportar Uma   .
+tag vídeo pode apontar para vários arquivos em diversos formatos, e  .
+os navegadores que suportarem determinado irão escolhê-lo            .
 
 Um formato de vídeo é a combinação de várias tecnologias.
 
-AVI e MP4 são apenas containers de formatos. Como um arquivo zip, podendo conter qualquer coisa dentro de si \autocite{diveIntohtml}.
+AVI e MP4 são apenas contêiner de formatos. Como um arquivo zip,
+podendo conter qualquer coisa dentro de si \autocite{diveIntohtml}.
 
-Existem formatos desenvolvidos especificamente para a Web. Buscam uma razão de tamanho e qualidade aceitável, mas prezando por tamanho. A maioria dos codecs de vídeo não mudam todo o conteúdo de um quadro para o próximo, possibilitando maiores taxas de compressão, que resulta em arquivos menores \autocite{diveIntohtml}.
+Existem formatos desenvolvidos especificamente para a Web. Buscam uma
+razão de tamanho e qualidade aceitável, mas prezando por tamanho. A
+maioria dos codecs de vídeo não mudam todo o conteúdo de um quadro
+para o próximo, possibilitando maiores taxas de compressão, que
+resulta em arquivos menores \autocite{diveIntohtml}.
 
 O projeto \textit{Vídeo for Everybody} \begin{verbatim} http://camendesign.com/code/video_for_everybody \end{verbatim} é um polyfill que recorre à flash quando o vídeo não é suportado pelo navegador.
 
-
-Segue uma lista de alguns dos containers de video:
+Segue uma lista de alguns dos contêiner de video:
 \begin{itemize}
     \item{MPEG4}
     \item{Flash Video}
@@ -1529,10 +1541,12 @@ básicos são: keydown (tecla baixa), keyup (tecla solta) e keypress
 (tecla pressionada).
 
 \subsection{Acelerômetro}
-
+\begin{draft}
+\end{draft}
 %}}}
 \section{HTTP/2}
 %{{{
+\begin{draft}
 
 HTTP/2 é a última verão do protocolo de trocas de documentos da WEB. Quando um cliente requisita algum 
 documento de um servidor esta requisição é feita, geralmente, através do protocolo HTTP2.
@@ -1543,11 +1557,14 @@ Htt2 também não recomenda a utilização de minificação nos arquivos, o que 
 de performance agora pode ser um malefício. No contexto dos jogos onde o carregamento da tela inical 
 pode demorar muito isso é um fator vital.
 
+\end{draft}
+%}}}
 %}}}
 \section{DEBUG}
 %{{{
 \begin{draft}
 Com o inspetor do WebGL é possível conferir os estados dos buffers, informações de texturas, frames individuais e outras informações úteis \autocite{html5mostwanted}.
+\end{draft}
 
 \subsection{Source Maps}
 
@@ -1586,6 +1603,7 @@ algumas outras configurações.
 Para gerar os arquivos é possível utilizar ferramentas como o
 https://github.com/mishoo/UglifyJS2.
 
+\begin{draft}
 \subsection{Debug 3D}
 Debugar aplicativos 3D pode ser complexo, o debugger do chrome é uma boa opção.
 
