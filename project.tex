@@ -1,7 +1,6 @@
-\begin{draft}
 Este capítulo tem por objetivo detalhar os aspectos do desenvolvimento
 do protótipo. Mecânica, o loop de eventos, diagramas entre outros
-aspectos do jogo serão abordados aqui.
+aspectos serão tratados aqui.
 
 \section{MECÂNICA}
 
@@ -34,7 +33,6 @@ possibilidades.
 
 %Comecei escrevendo o aplicativo para o Navegador do desktop pois era o
 %que estava mais acessível no momento.
-\end{draft}
 
 \section{Requisitos}
 
@@ -62,7 +60,7 @@ Outros aspectos requisitados mas que todavia não fazem parte da regra de negóc
 
 \section{Modelagem}
 
-Abaixo segue o diagrama de classes simplificado.
+Abaixo segue o diagrama de classes simplificado \footnote{Nos anexos pode-se encontrar a versão completa}.
 
 \begin{figure}
     \centering
@@ -70,8 +68,8 @@ Abaixo segue o diagrama de classes simplificado.
 	\caption{Diagrama de classes simplificado}
 \end{figure}
 
-Nos anexos pode-se encontrar a versão completa.
 
+\begin{draft}
 \section{Desenvolvimento}
 
 O desenvolvimento se deu com a estratégia de melhoria progressiva.
@@ -263,11 +261,13 @@ grande quantidade de recursos que precisam estar em memória para o jogo
 funcionar. Muitos jogos utilizam uma tela de carregamento enquanto os 
 recursos são adquiridos. 
 
-Um recurso do HTML interessante para este tipo de situação é o pré carregamento
-de recursos (\textit{Link Prefetching}). Esta tecnologia possibilita que o navegador
-, em seu tempo livre, adquira recursos que provavelmente serão necessários em um futuro próximo.
+Um recurso do HTML interessante para este tipo de situação é o pré
+carregamento de recursos (\textit{Link Prefetching}). Esta tecnologia
+possibilita que o navegador , em seu tempo livre, adquira recursos que
+provavelmente serão necessários em um futuro próximo.
 
 Nem todos os recursos necessitam ser pré carregados, mas uma impressão
 muito superiora é criada se os recursos estão imediatamente
 disponíveis quando uma nova fase é carregada \autocite[pp. 39]{creatingFun}.
 
+\end{draft}
