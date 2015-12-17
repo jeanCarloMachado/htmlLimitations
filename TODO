@@ -16,23 +16,24 @@ Talk about CSS next
 Talk about CSS animations specification
 Talk about webvr
 Talk about javascript strict
+Look for the difference between transition and transforms
 Write abut web assembly
+Add canvas to the prototype
 
 #TODO
 
+%Talk about HTTP2
 Move introduction comments about the benefits of the WEB to it's place on the revision (think well)
-Look for the difference between transition and transforms
 Add more content about Audio & Video & codecs
 Add more content about Canvas
 Adicionar fontes as imagens que se aplicam
 Melhorar a aparte da revisão do projeto
 Talk about chrome developer tools for debugging animations
 %Talk about webrtc
-%Talk about HTTP2
 Terminar de migrar os reviews para dentro do trabalho
 Escrever sobre debugging
 Remove numbering from the bibliography
-Add canvas to the prototype
+Write about the canvas to the prototype
 Add a example about webgl
 Write about phonegap on appendices
 Incrementar a sessao openweb com o processo da W3C, mencionar alguns outros orgaos como o ecma e o kronos tambem
