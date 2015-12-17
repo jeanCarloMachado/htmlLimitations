@@ -1105,7 +1105,7 @@ processamento shaders do lado da GPU (Central de processamento gráfico).
 
 Shaders são scripts que definem níveis de cor ou efeitos especiais
 sobre um modelo 2D ou 3D. Contam com grande performance, possibilitando
-conteúdo em tempo real - como no caso dos jogos - por executarem dentro
+conteúdo em tempo real (como no caso de jogos) por executarem dentro
 da GPU. São utilizados no cinema, em imagens geradas por computadores e
 vídeo games.
 
@@ -1179,7 +1179,6 @@ Codecs é uma área problemática do HTML5. Segundo \cite{diveIntohtml}
 não existe uma única combinação de containers e codecs que funcionem
 em todos os navegadores.
 
-
 \section{AUDIO}
 %{{{
 Áudio é um componente vital para oferecer imersão e feddback
@@ -1228,7 +1227,7 @@ formatos existentes, considerando o fator taxa de bits versus qualidade.
 %}}}
 
 \begin{draft}
-\section{VIDEO}
+\section{VÍDEO}
 %{{{
 Antes do HTML5 era impossível adicionar vídeos nas páginas sem a
 utilização de algum plugin.
@@ -1368,9 +1367,10 @@ alert(localStorage.getItem('key'));
 \source{https://en.wikipedia.org/wiki/Web\_storage\#usage}
 \end{figure}
 
-A figura \ref{fig:WebStorage} exemplifica a utilização do Web Storage,
-para utilizar o armazenamento de sessão utiliza-se o objeto sessionStorage. Já
-para utilizar o armazenamento local utiliza-se o objeto localStorage.
+A figura \ref{fig:WebStorage} exemplifica a utilização do Web
+Storage, para utilizar o armazenamento de sessão utiliza-se o objeto
+sessionStorage. Já para utilizar o armazenamento local utiliza-se o
+objeto localStorage.
 
 Web Storage é uma solução simples que comporta muitos casos de uso.
 Não obstante muitas vezes é necessário um controle mais refinado
@@ -1500,11 +1500,11 @@ básicos são: keydown (tecla baixa), keyup (tecla solta) e keypress
 \begin{draft}
 
 HTTP/2 é a última verão do protocolo de trocas de documentos da WEB. Quando um cliente requisita algum 
-documento de um servidor esta requisição é feita, geralmente, através do protocolo HTTP2.
+documento de um servidor esta requisição é feita, geralmente, através do protocolo HTTP/2.
 
-A versão 2 trouxe grandes benefícios em potencial para performance, visto que o htt2 abre apenas
-uma conexão por host. 
-Htt2 também não recomenda a utilização de minificação nos arquivos, o que antes era um benefício 
+A versão 2 trouxe grandes benefícios em potencial para performance, visto que o HTTP/2 abre apenas
+uma conexão por host.
+HTTP/2 também não recomenda a utilização de minificação nos arquivos, o que antes era um benefício 
 de performance agora pode ser um malefício. No contexto dos jogos onde o carregamento da tela inical 
 pode demorar muito isso é um fator vital.
 
