@@ -209,7 +209,7 @@ segurança de que a especiação não mudará substancialmente.
 
 Apesar do processo da W3C ser rigoroso, está longe de perfeito. A
 especificação final do HTML4 contava com quatro erros publicados
-via errata \autocite{HTML5}. 
+via errata \autocite{HTML5}.
 Não obstante, o cenário é animador \autocite{html5mostwanted} cita que
 as tecnologias da Open WEB tem evoluído desde os princípios da internet
 e já provaram sua robusteza e estabilidade enquanto outras tecnologias
@@ -1135,6 +1135,7 @@ Uma tecnologia que se integra profundamente como ambientes virtuais
 em três dimensões criados via OpenGL é o WebVR.
 \end{draft}
 %}}}
+%}}}
 \subsection{WEBVR}
 %{{{
 Segundo \cite{virtualReality} realidade virtual é uma experiência em
@@ -1485,6 +1486,7 @@ de recurso \autocite{diveIntohtml}.
 %}}}
 \section{ENTRADA DE COMANDOS}
 %{{{
+
 Na construção da grande maioria dos jogos é muitas vezes
 imprescindível grande flexibilidade na gestão de entrada comandos.
 Esta necessidade amplia na criação de jogos multiplataforma, em
@@ -1503,19 +1505,40 @@ básicos são: keydown (tecla baixa), keyup (tecla solta) e keypress
 %}}}
 \section{HTTP/2}
 %{{{
-\begin{draft}
+HTTP/2 é a última verão do protocolo de trocas de documentos da
+WEB. Quando um navegador requisita algum documento de um servidor esta
+requisição é geralmente feita através do protocolo HTTP. A forma
+que os documentos trafegam do servidor para o cliente afeta diretamente
+a performance de uma aplicação, nos jogos esse fator se amplia devido
+a grande quantidade de arquivos geralmente necessários para montar uma
+cena de jogo.
 
-HTTP/2 é a última verão do protocolo de trocas de documentos da WEB. Quando um cliente requisita algum 
-documento de um servidor esta requisição é feita, geralmente, através do protocolo HTTP/2.
+A nova versão do HTTP traz grandes benefícios de performance
+pois, diferentemente do HTTP/1, HTTP/2 abre apenas uma conexão por
+servidor. Usando a mesma para trafegar todos os dados necessários para
+montar a página HTML. Dessa forma o HTTP/2 não necessita repetir
+as negociações de protocolo nem aguardar parado quando o limite de
+requisições que os navegadores suportam concorrentemente é atingido.
 
-A versão 2 trouxe grandes benefícios em potencial para performance, visto que o HTTP/2 abre apenas
-uma conexão por host.
-HTTP/2 também não recomenda a utilização de minificação nos arquivos, o que antes era um benefício 
-de performance agora pode ser um malefício. No contexto dos jogos onde o carregamento da tela inical 
-pode demorar muito isso é um fator vital.
+Outro benefício do HTTP/2 em relação a seu predecessor é que os
+cabeçalhos das requisições são comprimidos, diminuindo
+substancialmente o tamanho das requisições. HTTP/2 também permite
+mensagens do servidor  para o cliente (\texit{full-duplex}), o que 
+abre um leque de novas oportunidades que antes só podiam ser obtidas através
+de pooling ou WebSockets.
 
-\end{draft}
-%}}}
+HTTP/2 não recomenda a utilização de minificação nos arquivos,
+visto que não existe abertura de novas conexões, trafegar múltiplos
+arquivos se tornou barato. Dessa forma, algumas práticas, antes
+recomendadas no desenvolvimento WEB, tem de ser revistas depois do
+HTTP/2.
+
+Dentro do navegador as requisições HTTP/2 não convertidas em
+equivalentes do HTTP/1, mantendo a retrocompatibilidade em aplicações
+legadas. Sendo assim, os fatores que justifiquem a utilização do HTTP/1
+são escassos e a tendência é observarmos cada vez mais aplicações
+utilizando com o HTTP/2.
+
 %}}}
 \section{DEBUG}
 %{{{
