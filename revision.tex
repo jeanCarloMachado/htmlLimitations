@@ -544,9 +544,9 @@ CSS.customMedia.set('--foo', 5);
 
 \subsection{Transições}
 
-São uma forma de adicionar animações em uma página web. Estas
-animações são compostas por um estado inicial e um final. A
-especificação de transições permite grande controle sobre seus
+Transições são uma forma de adicionar animações em uma página
+web. Estas animações são compostas por um estado inicial e um final.
+A especificação de transições permite grande controle sobre seus
 estados, habilitando o desenvolvedor a controlar o tempo de execução,
 os estados intermediários, e efeitos aplicados uma transição.
 
@@ -554,11 +554,6 @@ Para utilizar transições, assim omo em uma máquina de estados,
 precisamos identificar estados e ações. Estados são seletores do CSS
 e ações são modificações realizadas entre esses dois seletores CSS
 \autocite{html5mostwanted}.
-
-Atualmente um conjunto finito de propriedades podem ser animadas
-com transições, e essas lista tende a mudar com o tempo, cabe ao
-desenvolvedor assegurar-se que determinada propriedade está disponível
-\autocite{mdnTransitions}.
 
 Transições são interessantes em jogos, especialmente pois muitos
 navegadores suportam aceleração de GPU (Unidade de processamento
@@ -570,15 +565,52 @@ degradáveis pois os interpretadores de CSS são amigáveis; se eles
 encontrarem propriedades desconhecidas eles simplesmente as ignoram e
 continuam a funcionar.
 
+\begin{figure}
+\centering
+\begin{verbatim}
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s;
+}
+
+div:hover {
+    width: 300px;
+}
+
+\end{verbatim}
+\caption{Exemplo de transição}
+\label{fig:CSSTransition}
+\soruce{http://www.w3schools.com/CSS/css3_transitions.asp}
+\end{figure}
+
+A figura \ref{fig:CSSTransition} demostra a utilização de uma
+transição de tamanho em uma \textit{div} quando o mouse está sobre o
+elemento. No período de 2 segundos a largura da \textit{div} vai de 100
+pixels ara 300 pixels.
+
+Atualmente um conjunto finito de propriedades podem ser animadas
+com transições, e essas lista tende a mudar com o tempo, cabe ao
+desenvolvedor assegurar-se que determinada propriedade está disponível
+\autocite{mdnTransitions}.
+
 \subsection{Transformações 3D}
 
-Permitem que elementos sejam traduzidos, rotacionados, escalados e distorcidos em um espaço de duas dimensões \autocite{html5mostwanted}.
+Transformações é outra tecnologia do CSS3 que permite grande
+flexibilidade na construção de jogos. Transformações permitem que
+elementos sejam traduzidos, rotacionados, escalados e distorcidos em um
+espaço de duas dimensões \autocite{html5mostwanted}.
 
-A transformação demonstrada na figura \ref{fig:CSSTransition} escala o
+A transformação demonstrada na figura \ref{fig:CSSTransform} escala o
 tamanho do elemento com a classe (\textit{test}) para vinte porcento a
 mais do seu tamanho original. Perceba também os comandos repetidos com
 o prefixo ms e WebKit. Esse tipo de abordagem é comum para tecnologias
 que não passam de rascunhos na especificação.
+
+Assim como transições, as transformações são muitas vezes aceleradas
+via GPU incrementando a performance de animações criadas com a tecnologia.
+
 \begin{figure}
 \centering
 \begin{verbatim}
@@ -591,7 +623,7 @@ que não passam de rascunhos na especificação.
 }
 </style>
 \end{verbatim}
-\caption{Exemplo de transição}
+\caption{Exemplo de transformação}
 \label{fig:CSSTransform}
 \end{figure}
 
@@ -956,7 +988,6 @@ nos navegadores é o site http://caniuse.com/.
 %}}}
 \section{Pré Carregamento}
 %{{{
-
 %}}}
 \section{RENDERIZAÇÃO}
 %{{{
@@ -1442,7 +1473,7 @@ exemplo threads não podem fazer alterações no DOM.
 %}}}
 \section{OFFLINE}
 %{{{
-
+\begin{draft}
 Não é extraordinário que um jogo tenha que ser reverso para um estado
 válido anterior por motivo de um erro na base de dados \autocite[pp.
 5]{browserGamesTechnologyAndFuture}.
@@ -1452,6 +1483,7 @@ Na sua versão mais simples, um aplicativo offline é um conjunto de
 URLs para arquivos HTML, CSS, JavaScript, imagens ou qualquer outro tipo
 de recurso \autocite{diveIntohtml}.
 
+\end{draft}
 %}}}
 \section{ENTRADA DE COMANDOS}
 %{{{
@@ -1485,7 +1517,7 @@ pode demorar muito isso é um fator vital.
 %}}}
 \section{DEBUG}
 %{{{
-
+\begin{draft}
 Com o inspetor do WebGL é possível conferir os estados dos buffers, informações de texturas, frames individuais e outras informações úteis \autocite{html5mostwanted}.
 
 \subsection{Source Maps}
@@ -1528,14 +1560,17 @@ https://github.com/mishoo/UglifyJS2.
 \subsection{Debug 3D}
 Debugar aplicativos 3D pode ser complexo, o debugger do chrome é uma boa opção.
 
+\end{draft}
 %}}}
 \section{DISPONIBILIZAÇÃO DA APLICAÇÃO}
 %{{{
+\begin{draft}
 Aplicativos baseados na web não requerem instalação ou atualizações
 manuais e sua distribuição é superior ao estilo convencional de
 aplicações desktop \autocite{browserGamesTechnologyAndFuture}.
 
 Links com manifestos
+
 
 \subsection{INSTALAÇÃO}
 %{{{
@@ -1544,6 +1579,7 @@ experiência ao adquirir uma aplicação normal. Este tipo de
 aplicação é comummente referido como "híbrido".
 %}}}
 
+\end{draft}
 %}}}
 \section{TRABALHOS SIMILARES}
 %{{{
