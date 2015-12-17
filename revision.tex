@@ -811,33 +811,35 @@ implementando a grande maioria dos recursos do asm.js.
 %{{{
 Web Assembly é uma tecnologia recentemente proposta que pretende se
 tornar o formato de máquina da Web. Irá permitir que outras linguagens
-além do JavaScript gerem código que rode nativamente nos navegadores
-com grande ganhos de performance e flexibilidade, visto que será
-possível utilizar qualquer linguagem para gerar código especificado
-pelo Web Assembly.
+além do JavaScript gerem código binário que rode nos navegadores com
+grande ganhos de performance e flexibilidade. Além da versão binária,
+otimizada para performance, uma versão em texto também está prevista,
+ideal para desenvolvimento e depuração. Bibliotecas aplicações que
+requeiram grande performance como motores de física, simulações e
+jogos em geral vão se beneficiar substancialmente com o Web Assembly.
 
-WebAssembly (short: wasm) is a new binary format for the WEB, created by Google, Microsoft, Mozilla and others. It will be used for performance critical code and to compile languages other than JavaScript (especially C/C++) to the WEB platform. It can be seen as a next step for asm.JavaScript 
+A iniciativa do Web Assembly está sendo desenvolvida pelo Google,
+Microsoft, Mozilla entre outros, tornando a proposta uma possibilidade
+promissora. Seu objetivo não é substituir o JavaScript, outrossim
+habilitar que aplicações que necessitem de grande performance possam
+ser incluídas na WEB também. A ideia do WEB Assembly é uma
+continuação do trabalho do asm.js, uma forma de trazer performance
+similar a nativa eliminando grande parte das abstrações que o
+JavaScript embutidas.
 
-In general, by keeping the non-Web path such that it doesn't require Web APIs, WebAssembly could be used as a portable binary format on many platforms, bringing great benefits in portability, tooling and language-agnosticity (since it supports C/C++ level semantics).
+Visto que os desenvolvedores de motores JavaScript terão que colocar
+o código do Web Assembly na mesma base que o do JavaScript as
+expectativas são de que o JavaScript consiga aproveitar partes da
+implementação do Web Assembly ganhando em performance.
 
+A aplicabilidade do Web Assembly em jogos em produção ainda
+é praticamente nula. Até então apenas um polyfill do Web
+Assembly está disponível e pode ser encontrado no seguinte link
+https://github.com/Web Assembly/polyfill-prototype-1. Mas conforme a
+especificação evolui a probabilidade é que as empresas interessadas
+implementem a especificação em seus navegadores e os desenvolvedores
+de jogos comecem a integrar a tecnóloga em suas aplicações.
 
-External code bases, especially those in C/C++, will be easy to port to the WEB platform, via WebAssembly.
-%https://github.com/WebAssembly/design/blob/master/Rationale.md#why-ast
-%http://www.2ality.com/2015/06/WEB-assembly.html
-
-First, this is a collaborative effort, no single company goes it alone. At the moment, the following projects are involved: Firefox, Chromium, Edge and WebKit.
-Third, this is not about replacing JavaScript engines, it is more about adding a new feature to them. That greatly reduces the amount of work to implement WebAssembly and should help with getting the support of the WEB development community.
-j
-
-WebAssembly is not bytecode: Bytecode is linear and (usually) stack-, register- or SSA-based, WebAssembly is a binary format for an abstract syntax tree (AST). Compared to bytecode, this has the following advantages:
-
-WebAssembly is relatively easy to add to all current JavaScript engines, because it is high-level and similar to parts of JavaScript. That is, it builds on the infrastructures of engines, instead of replacing them. Engines will continue to have different compilation strategies and/or bytecode, which is good for the WEB ecosystem, because the differences have fostered experimentation and innovation.
-
-WebAssembly is not versioned. It uses the same evolution strategy as JavaScript (feature detection and polyfills).
-
-For the Unity Game Engine, first tests we're made with WebAssembly.
-
-WebAssembly will include both a binary notation, that compilers will produce, and a corresponding text notation, suitable for display in debuggers or development environments. Early prototypes are already showing some of the expected advantages; the binary representation is 20 times faster to parse than the equivalent asm.JavaScript.
 %}}}
 \end{draft}
 \subsection{Web Animations}
@@ -1158,7 +1160,7 @@ Google Chrome já permitem a utilização.
 %{{{
 É uma API em JavaScript para o recursos de OpenCL que permitem
 computação paralela com grandes ganhos de performance. Aplicativos
-como moteres de física e renderizadores de imagens, ambos relevantes
+como motores de física e renderizadores de imagens, ambos relevantes
 para os jogos, podem se beneficiar grandemente de processamento feito em
 paralelo, possivelmente na GPU. OpenCL é um framework para escrever
 programas que funcionem em plataformas com diversas unidades de
