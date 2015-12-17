@@ -544,13 +544,16 @@ CSS.customMedia.set('--foo', 5);
 
 \subsection{Transições}
 
-É uma forma de adicionar animações em uma página web.
-Estas animações são compostas por um estado inicial e um
-final. A especificação de transições permite grande controle
-sobre seus estados. Habilitando o desenvolvedor a controlar
-o tempo de execução, os estados intermediários, e efeitos aplicados uma transição.
+São uma forma de adicionar animações em uma página web. Estas
+animações são compostas por um estado inicial e um final. A
+especificação de transições permite grande controle sobre seus
+estados, habilitando o desenvolvedor a controlar o tempo de execução,
+os estados intermediários, e efeitos aplicados uma transição.
 
-Para utilizar transições, como em uma máquina de estados, precisamos identificar estados e ações. Estados são seletores do CSS e ações são modificações  realizadas entre esses dois seletores CSS \autocite{html5mostwanted}.
+Para utilizar transições, assim omo em uma máquina de estados,
+precisamos identificar estados e ações. Estados são seletores do CSS
+e ações são modificações realizadas entre esses dois seletores CSS
+\autocite{html5mostwanted}.
 
 Atualmente um conjunto finito de propriedades podem ser animadas
 com transições, e essas lista tende a mudar com o tempo, cabe ao
@@ -562,8 +565,20 @@ navegadores suportam aceleração de GPU (Unidade de processamento
 gráfico) para estas operações. Isso garante grandes benefícios de
 performance sobre implementações diretamente em JavaScript.
 
-Segundo \cite{html5mostwanted} transições nos permitem construir jogos degradáveis pois os interpretadores de CSS são amigáveis; se eles encontrarem propriedades desconhecidas eles simplesmente as ignoram e continuam a funcionar.
+Segundo \cite{html5mostwanted} transições nos permitem construir jogos
+degradáveis pois os interpretadores de CSS são amigáveis; se eles
+encontrarem propriedades desconhecidas eles simplesmente as ignoram e
+continuam a funcionar.
 
+\subsection{Transformações 3D}
+
+Permitem que elementos sejam traduzidos, rotacionados, escalados e distorcidos em um espaço de duas dimensões \autocite{html5mostwanted}.
+
+A transformação demonstrada na figura \ref{fig:CSSTransition} escala o
+tamanho do elemento com a classe (\textit{test}) para vinte porcento a
+mais do seu tamanho original. Perceba também os comandos repetidos com
+o prefixo ms e WebKit. Esse tipo de abordagem é comum para tecnologias
+que não passam de rascunhos na especificação.
 \begin{figure}
 \centering
 \begin{verbatim}
@@ -577,24 +592,8 @@ Segundo \cite{html5mostwanted} transições nos permitem construir jogos degrad�
 </style>
 \end{verbatim}
 \caption{Exemplo de transição}
-\label{fig:CSSTransition}
+\label{fig:CSSTransform}
 \end{figure}
-
-A transição demonstrada na figura \ref{fig:CSSTransition} escala o
-tamanho do elemento com a classe (\textit{test}) para vinte porcento a
-mais do seu tamanho original. Perceba também os comandos repetidos com
-o prefixo ms e WebKit. Esse tipo de abordagem é comum para tecnologias
-que não passam de rascunhos na especificação.
-
-Navegadores tentam otimizar a experiência de navegação definindo
-um conjunto de regras e configurações razoáveis para a maioria dos
-casos. Não obstante, nem sempre estes valores padrões são as melhores
-opções no contexto de jogos. Abaixo segue uma lista de configurações
-interessantes para se fazer com CSS no contexto de desenvolvimento de
-jogos.
-\subsection{Transformações 3D}
-
-Permitem que elementos sejam traduzidos, rotacionados, escalados e distorcidos em um espaço de duas dimensões \autocite{html5mostwanted}.
 
 \subsection{CSS 4}
 
