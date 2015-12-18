@@ -1520,12 +1520,13 @@ montar a página HTML. Dessa forma o HTTP/2 não necessita repetir
 as negociações de protocolo nem aguardar parado quando o limite de
 requisições que os navegadores suportam concorrentemente é atingido.
 
-Outro benefício do HTTP/2 em relação a seu predecessor é que os
-cabeçalhos das requisições são comprimidos, diminuindo
+Outro benefício do HTTP/2 em relação a seu predecessor é que
+os cabeçalhos das requisições são comprimidos, diminuindo
 substancialmente o tamanho das requisições. HTTP/2 também permite
-mensagens do servidor  para o cliente (\textit{full-duplex}), o que 
-abre um leque de novas oportunidades que antes só podiam ser obtidas através
-de pooling ou WebSockets.
+mensagens do servidor para o cliente (\textit{full-duplex}), o
+que abre um leque de novas oportunidades que antes só podiam ser
+obtidas através de requisições de tempos em tempos ao servidor
+(\textit{pooling}) ou através de WebSockets.
 
 HTTP/2 não recomenda a utilização de minificação nos arquivos,
 visto que não existe abertura de novas conexões, trafegar múltiplos
