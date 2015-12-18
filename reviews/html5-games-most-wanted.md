@@ -1,4 +1,3 @@
-
 #Pure DOM Vs. canvas-based game
 
 Both solutions are viable, but do not cover the same needs. The
@@ -18,8 +17,7 @@ A good tool to perform this [micro optimizations] is found at jsfiddle.net.
 The more advanced engines become, the less important these micro
 optimizations will become.
 
-As your skill level improves, you will find that moving more
-functionality to the shader can improve perfomance and offer a
+As your skill level improves, you will find that moving more functionality to the shader can improve perfomance and offer a
 wide range of cool effects and realism.
 
 One can only hope that as browser technology progress and WebGL
