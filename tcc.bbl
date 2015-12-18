@@ -356,6 +356,23 @@
   \field{year}{2010}
 \endentry
 
+\entry{gwt}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Prado}{P.}%
+     {Ely~Fernando}{E.~F.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{PEF1}
+  \strng{fullhash}{PEF1}
+  \field{labelyear}{2012}
+  \field{title}{Introdução ao desenvolvimento de Games com GWT e HTML5}
+  \field{journaltitle}{Departamento de Computação, Univerisidade de São
+  Carlos}
+  \field{year}{2012}
+\endentry
+
 \entry{ecma7}{online}{}
   \name{author}{1}{}{%
     {{}%

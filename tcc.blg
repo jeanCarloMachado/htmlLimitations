@@ -16,48 +16,49 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: tcc-blx.bib
 Database file #2: tcc.bib
 Warning--I didn't find a database entry for "HTML5"
+Warning--I didn't find a database entry for "gtw"
 Biblatex version: 3.0
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
-You've used 25 entries,
+You've used 26 entries,
             6047 wiz_defined-function locations,
-            1237 strings with 11346 characters,
-and the built_in function-call counts, 64571 in all, are:
-= -- 2370
-> -- 1935
-< -- 666
-+ -- 550
-- -- 676
-* -- 4145
-:= -- 3694
+            1242 strings with 11485 characters,
+and the built_in function-call counts, 67117 in all, are:
+= -- 2457
+> -- 2013
+< -- 691
++ -- 565
+- -- 701
+* -- 4309
+:= -- 3836
 add.period$ -- 0
-call.type$ -- 25
-change.case$ -- 289
+call.type$ -- 26
+change.case$ -- 299
 chr.to.int$ -- 36
-cite$ -- 48
-duplicate$ -- 7594
-empty$ -- 7404
-format.name$ -- 1214
-if$ -- 15063
+cite$ -- 50
+duplicate$ -- 7900
+empty$ -- 7704
+format.name$ -- 1262
+if$ -- 15658
 int.to.chr$ -- 0
-int.to.str$ -- 46
+int.to.str$ -- 48
 missing$ -- 0
-newline$ -- 439
-num.names$ -- 902
-pop$ -- 7912
+newline$ -- 455
+num.names$ -- 943
+pop$ -- 8235
 preamble$ -- 1
-purify$ -- 327
+purify$ -- 338
 quote$ -- 0
-skip$ -- 3920
+skip$ -- 4078
 stack$ -- 0
-substring$ -- 871
-swap$ -- 2102
-text.length$ -- 595
-text.prefix$ -- 24
+substring$ -- 886
+swap$ -- 2190
+text.length$ -- 619
+text.prefix$ -- 25
 top$ -- 1
-type$ -- 926
+type$ -- 964
 warning$ -- 0
-while$ -- 383
+while$ -- 399
 width$ -- 0
-write$ -- 413
-(There was 1 warning)
+write$ -- 428
+(There were 2 warnings)
