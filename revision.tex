@@ -1271,8 +1271,9 @@ no navegador.
 
 O objetivo inicial da tag \textit{audio} é reproduzir um som e parar.
 Ideal para ouvir música, como um som de fundo. Entretanto, a tag
-\textit{audio} não é o suficiente para a grande maioria de jogos, os
-quais muitas vezes precisam lançar múltiplos sons derivados de ações
+\textit{audio} não é o suficiente para comportar aplicações de
+áudio complexas \autocitea{audioApiSpec}. A grande maioria de jogos
+muitas vezes precisam lançar múltiplos sons derivados de ações
 de usuário e outros eventos, nestes casos a API de áudio é mais
 adequada.
 
@@ -1280,7 +1281,13 @@ adequada.
 \begin{draft}
 
 É uma interface experimental (ainda em rascunho) em JavaScript para
-criar e processar áudio. Provê uma interface para manipular nodos de
+criar e processar áudio. O objetivo da especificação é incluir
+capacidades encontradas em motores de jogos modernos e também permitir
+o processamento, mistura e filtragem, funcionalidades que estão
+presentes nas aplicações de processamento de áudio modernas para
+desktop \autocite{audioApiSpec}.
+
+A API especificada provê uma interface para manipular nodos de
 áudio que podem ser conectados permitindo refinado controle sobre os
 efeitos sonoros. O processamento se dará primeiramente em uma cada
 inferior (tipicamente código Assembly / C / C++), mas síntese e
@@ -1291,10 +1298,12 @@ dos demais navegadores o Internet Explorer não dá nenhum nível de
 suporte a API.
 
 \subsubsection{Áudio Workers}
+
 As últimas versões da especificação contam com a possibilidade
 de manipular a API de áudio através de WEB Workers, o que traz
 oportunidades interessantes para aplicações que dependam de muito
-processamento de áudio.
+processamento de áudio, de modo que este processamento possa ser feito
+em uma thread separada.
 
 \end{draft}
 %}}}
