@@ -1009,7 +1009,7 @@ podem se beneficiar de uma taxa substancial delas através de polyfills.
 
 Algumas funcionalidades do HTML, como geolocalização e vídeo
 foram primeiramente disponibilizadas através de plugins. Outras
-funcionalidades, como o Canvas, podem ser totalmente emuladas via
+funcionalidades, como o canvas, podem ser totalmente emuladas via
 JavaScript \autocite{diveIntohtml}.
 
 Detectar suporte aos variados recursos do HTML5 no navegador
@@ -1065,22 +1065,28 @@ perfeição na posição dos pixels, por ser uma linguagem vetorizada
 %}}}
 \subsection{CANVAS}
 %%{{{
-A tag \textit{canvas} define uma camada de mapa de bits em documentos
+\begin{draft}
+O elemento \textit{canvas} define uma camada de mapa de bits em documentos
 HTML que pode ser usada para criar diagramas, gráficos e animações
 2D. Foi criada pela Apple em 2004 para renderizar elementos de interface
 no Webkit, logo foi adotado por outros navegadores e se tornou um
 padrão.
 
-Em um documento HTML, Canvas é um retângulo onde pode-se usar
+Em um documento HTML, canvas é um retângulo onde pode-se usar
 JavaScript para desenhar \autocite[pp. 113]{diveIntohtml}. Manipular o
-retângulo é bem similar ao processo de desenhar manualmente, move-se
+retângulo é uma analogia de como desenhar manualmente, move-se
 o "lápis" para o local desejado, e traça-se os pontos onde a linha
 deve percorrer - similar ao planejamento. E desenha-se efetivamente,
 preenchendo os pontos demarcados.
 
+Segundo \cite{gwt} uma característica importante deste [canvas]
+elemento é que ele consegue redimensionar seu conteúdo para adequar à
+resolução do navegador do usuário.
+
 O canvas até aqui descrito trata-se de sua forma, ou contexto 2D. A
 especificação 3D do canvas é o WebGl.
 
+\end{draft}
 %}}}
 \subsection{WEBGL}
 %{{{
