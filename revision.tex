@@ -1199,9 +1199,9 @@ que limitam sua utilização. Não obstante, também existem opções
 livres de patentes e licenças.
 
 O suporte a codecs na WEB varia de navegador para navegador, de acordo
-com as preferências mercadológicas ou filosofias das empresas. Segundo \cite{diveIntohtml} não existe
-uma única combinação de contêiner e codecs que funcionem em todos os
-navegadores.
+com as preferências mercadológicas ou filosofias das empresas. Segundo
+\cite{diveIntohtml} não existe uma única combinação de contêiner e
+codecs que funcionem em todos os navegadores.
 
 
 \section{AUDIO}
@@ -1220,6 +1220,20 @@ Através do elemento HTML áudio ou através da API JavaScript de áudio.
 A tag \textit{audio} define um som dentro de um documento HTML. Quando o
 elemento é renderizado pelos navegadores, ele carrega o conteúdo que
 pode ser reproduzido pelo player de audio do navegador.
+
+\begin{figure}
+\centering
+\begin{verbatim}
+<audio controls>
+<source src="horse.ogg" type="audio/ogg">
+<source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+\end{verbatim}
+\caption{Exemplo de utilização da tag áudio}
+\label{fig:selectorsSample}
+\source{http://www.w3schools.com/HTML/HTML5_audio.asp}
+\end{figure}
 
 A especificação declara que todo o conteúdo dentro de uma tag áudio
 (e vídeo também), que não sejam tags source, sejam ignoradas pelo navegador.
