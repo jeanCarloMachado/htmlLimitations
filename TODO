@@ -19,13 +19,15 @@ Talk about javascript strict
 Look for the difference between transition and transforms
 Write abut web assembly
 Add canvas to the prototype
+Talk about HTTP2
+Add more content about codecs
 
 #TODO
 
-Talk about HTTP2
 Talk about Android
 Move introduction comments about the benefits of the WEB to it's place on the revision (think well)
-Add more content about Audio & Video & codecs
+Add more content about Audio
+Add more content about Video
 Add more content about Canvas
 Adicionar fontes as imagens que se aplicam
 Melhorar a aparte da revisão do projeto
@@ -43,6 +45,7 @@ Comentar as citaçẽos com referencia direta (que foram traduzidas por mim)
 Trabalhar na introdução
 Complete image descriptions (look for missing names on lof)
 Add accelerometer integration
+Fix refereces not showing all info
 
 #FUTURE
 
