@@ -1196,37 +1196,35 @@ A complexidade do funcionamento de codecs varia conforme sua qualidade
 e taxa de compressão. Visto que os algoritmos podem adquirir grande
 complexidade, muitos codecs e contêiner são encobertos por licenças
 que limitam sua utilização. Não obstante, também existem opções
-livres de patentes e licenças. 
-
+livres de patentes e licenças.
 
 O suporte a codecs na WEB varia de navegador para navegador, de acordo
 com as preferências mercadológicas ou filosofias das empresas. Segundo \cite{diveIntohtml} não existe
 uma única combinação de contêiner e codecs que funcionem em todos os
 navegadores.
 
+
 \section{AUDIO}
 %{{{
+Áudio é um componente vital para oferecer imersão e feedback aos
+usuários de jogos. O componente de áudio é especialmente útil para
+jogos de ação \autocite{browserGamesTechnologyAndFuture}. Efeitos de
+som e música podem servir como mecanismo. Por outro lado, jogadores tem
+baixa tolerância a volume, deve ser utilizado com cautela.
 
-Áudio é um componente vital para oferecer imersão e feedback
-aos usuários de jogos. Efeitos de som e música podem servir como
-mecanismo. Por outro lado, jogadores tem baixa tolerância a volume,
-deve ser utilizado com cautela.
-
-Segundo \cite{browserGamesTechnologyAndFuture} em sido difícil
-construir aplicações sofisticadas e interativas sem a utilização de
-plugins para áudio.
-
-O componente de áudio é especialmente útil para jogos de ação
-\autocite{browserGamesTechnologyAndFuture}.
+HTML5 especifica duas formas de utilizar utilizar áudio na WEB.
+Através do elemento HTML áudio ou através da API JavaScript de áudio.
 
 \subsection{TAG ÁUDIO}
 
-A tag <audio> define um som dentro de um documento HTML. Quando o
+A tag \textit{audio} define um som dentro de um documento HTML. Quando o
 elemento é renderizado pelos navegadores, ele carrega o conteúdo que
-pode ser reproduzido pelo player de audio do navegador. Existem muitas
-discrepâncias entre os formados aceitáveis pelos navegadores. É um
-tanto limitada quanto comparada ao áudio de múltiplos canais
-disponibilizados por SDKs nativas.
+pode ser reproduzido pelo player de audio do navegador.
+
+A especificação declara que todo o conteúdo dentro de uma tag áudio
+(e vídeo também), que não sejam tags source, sejam ignoradas pelo navegador.
+O que permite que, quando audio não é suportado pelo navegador conteúdo 
+extra seja mostrado.
 
 \subsection{API DE ÁUDIO}
 

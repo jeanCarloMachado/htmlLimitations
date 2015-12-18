@@ -9,22 +9,6 @@ three things at once:
 3. Decoding the audio stream and sending the sound to your
    speakers
 
-The word "codec" is a portmanteau, a combination of the words
-"coder" and "decoder".
-
-Most videos don't actually change all that much from one frame to
-the next, so this allows for high compression rates, which results
-in smaller file sizes.
-
-Audio codecs are algorithms by which an audio stream is encoded.
-
-...there is an entire category of audio codecs optimized for
-encoding speech.
-
-...due to lack of support in both native browsers and third-party
-plugins, speech-optimized audio codecs never really took off on
-the web.
-
 The MP3 standard doesn't define exactly how to encode MP3
 (although if does define exactly how to decode them).
 
@@ -39,17 +23,9 @@ as WebM is implemented in multiple browsers, those browsers ship
 non-experimental WebM enabled versions, and users upgrade to those
 versions.
 
-There is no single combination of containers and codecs that works
-in all HTML5 browsers.
-
 HTML5 specifies that all elements (other than <source> elements)
 that are children of a <video> element must be ignored altogether.
 That allows you to use HTML5 in newer browsers and fall back to
 Flash gracefully in older browsers, without requiring any fancy
 JavaScript hacks.
-
-While we're on the subject of legacy platforms, I should point out
-that many older mobile phone platforms had their own
-device-specific geolocation API's.
-
 
