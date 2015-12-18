@@ -965,7 +965,7 @@ versões de navegadores em dezembro de 2015.
 %}}}
 \section{ANDROID}
 %{{{
-
+\begin{draft}
 É um sistema operacional open-source desenvolvido pela Google. Utiliza
 o kernel Linux . Softwares para Android são geralmente escritos em Java
 e executados através da máquina virtual Dalvik.
@@ -980,7 +980,7 @@ terceiros como o Google Chrome, Firefox, Opera, etc.
 No quesito jogos para dispositivos móveis é preferível disponibilizar
 os jogos através da interface nativa pois dá a sensação de
 continuidade para com os demais aplicativos instalados no dispositivo.
-
+\end{draft}
 %}}}
 \section{DETECÇÃO DE RECURSOS}
 %{{{
@@ -1179,22 +1179,23 @@ então nenhum navegador implementa o definido.
 %{{{
 \begin{draft}
 
-Codec é o algoritmo usado para codificar e decodificar o vídeo ou
+Codec é o algoritmo usado para codificar e decodificar vídeo ou
 áudio em um conjunto de bits \cite{diveIntohtml}. O termo Codec
 é um acrônimo, significando codificar/decodificar. O objetivo
 dos codecs é diminuir o tamanho dos arquivos com a menor perda de
-qualidade possível, para isso eles utilizam de várias estratégias de
-compressão ou descarte de dados.
+qualidade possível, para isso os codecs utilizam de várias estratégias de
+compressão ou descarte de dados; rodando tanto em hardware quanto em
+software.
 
 Depois de comprimido, o fluxo de dados é armazenado em um contêiner,
 que é um conjunto de metadados sobre as informações codificadas
 modo a possibilitar que outros programas consigam interpretar estas
 informações de forma padronizada.
 
-O funcionamento dos codecs e contêiner varia de produto para produto.
-A complexidade do funcionamento de codecs varia conforme sua qualidade
-e taxa de compressão. Visto que os algoritmos podem adquirir grande
-complexidade, muitos codecs e contêiner são encobertos por licenças
+O funcionamento de codecs pode variar muito, conforme as estratégias de
+compressão utilizadas, a quantidade de bits por segundo, entre outros
+fatores. Visto que os algoritmos de compressão podem adquirir grande
+complexidade muitos codecs e contêiners são encobertos por licenças
 que limitam sua utilização. Não obstante, também existem opções
 livres de patentes e licenças.
 
@@ -1202,8 +1203,7 @@ O suporte a codecs na WEB varia de navegador para navegador, de acordo
 com as preferências mercadológicas ou filosofias das empresas. Segundo
 \cite{diveIntohtml} não existe uma única combinação de contêiner e
 codecs que funcionem em todos os navegadores.
-
-
+%}}}
 \section{AUDIO}
 %{{{
 Áudio é um componente vital para oferecer imersão e feedback aos
@@ -1212,6 +1212,24 @@ jogos de ação \autocite{browserGamesTechnologyAndFuture}. Efeitos de
 som e música podem servir como mecanismo. Por outro lado, jogadores tem
 baixa tolerância a volume, deve ser utilizado com cautela.
 
+Abaixo segue alguns dos codecs de áudio tradicionais:
+
+\begin{itemize}
+    \item{MP3: comum, mas não é livre de patentes}
+    \item{ACC: advanced audio coding, is patent encumbered} \item{Vorbis - patent free}
+\end{itemize}
+
+A figura \ref{fig:audioCodecs} é um comparativo interessante sobre os
+formatos existentes, considerando o fator taxa de bits versus qualidade.
+
+\end{draft}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{codec.png}
+	\caption{Comparação de codecs de áudio}
+    \label{fig:audioCodecs}
+\end{figure}
+
 HTML5 especifica duas formas de utilizar utilizar áudio na WEB.
 Através do elemento HTML áudio ou através da API JavaScript de áudio.
 
@@ -1219,7 +1237,7 @@ Através do elemento HTML áudio ou através da API JavaScript de áudio.
 
 A tag \textit{audio} define um som dentro de um documento HTML. Quando o
 elemento é renderizado pelos navegadores, ele carrega o conteúdo que
-pode ser reproduzido pelo player de audio do navegador.
+pode ser reproduzido pelo programa dentro do navegador.
 
 \end{draft}
 \begin{figure}
@@ -1232,43 +1250,42 @@ Your browser does not support the audio element.
 </audio>
 \end{verbatim}
 \caption{Exemplo de utilização da tag áudio}
-\label{fig:selectorsSample}
-\source{http://www.w3schools.com/HTML/HTML5_audio.asp}
+\label{fig:htmlAudio}
+\source{http://www.w3schools.com/HTML/HTML5\_audio.asp}
 \end{figure}
 \begin{draft}
 
+A imagem \ref{fig:htmlAudio} demonstra a utilização da tag
+\textit{audio}. Os elementos \textit{source} demonstrados na figura
+referenciam a arquivos de áudio contendo um contêiner e codec
+específico, mais de um elemento \textit{source } por áudio é
+necessário para dar suporte aos diferentes navegadores.
+
 A especificação declara que todo o conteúdo dentro de uma tag áudio
-(e vídeo também), que não sejam tags source, sejam ignoradas pelo navegador.
-O que permite que, quando audio não é suportado pelo navegador conteúdo 
-extra seja mostrado.
+(e vídeo também), que não sejam tags \textit{source}, sejam ignoradas
+pelo navegador. O que permite que seja adicionada marcação de reserva
+para tratar os casos de quando não existe suporte a tag \textit{audio}
+no navegador.
+
+O objetivo inicial da tag \textit{audio} é reproduzir um som e parar.
+Ideal para ouvir música, como um som de fundo. Entretanto, a tag
+\textit{audio} não é o suficiente para a grande maioria de jogos, os
+quais muitas vezes precisam lançar múltiplos sons derivados de ações
+de usuário e outros eventos, nestes casos a API de áudio é mais
+adequada.
 
 \subsection{API DE ÁUDIO}
 
-É uma interface de audio experimental para JavaScript. Provê maior
-flexibilidade na manipulação de audio. Essa tecnologia é muito mais
-nova do que a tag áudio.
-Abaixo segue alguns dos codecs de audio tradicionais:
+É uma interface de áudio experimental para JavaScript. Provê maior
+flexibilidade na manipulação de áudio. Essa tecnologia é muito mais
+nova do que a tag áudio. 
 
-\begin{itemize}
-    \item{MP3: comum, mas não é livre de patentes}
-    \item{ACC: advanced audio coding, is patent encumbered} \item{Vorbis - patent free}
-\end{itemize}
 
-A figura \ref{fig:audioCodecs} é um comparativo interessante sobre os
-formatos existentes, considerando o fator taxa de bits versus qualidade.
-\end{draft}
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{codec.png}
-	\caption{Comparação de codecs de áudio}
-    \label{fig:audioCodecs}
-\end{figure}
 
 %}}}
-
-\begin{draft}
 \section{VÍDEO}
 %{{{
+\begin{draft}
 Antes do HTML5 era impossível adicionar vídeos nas páginas sem a
 utilização de algum plugin.
 
@@ -1313,7 +1330,6 @@ Alguns codecs de vídeo
 \end{itemize}
 
 \end{draft}
-%}}}
 %}}}
 \section{ARMAZENAMENTO}
 %{{{
