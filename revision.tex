@@ -1180,29 +1180,33 @@ então nenhum navegador implementa o definido.
 \begin{draft}
 
 Codec é o algoritmo usado para codificar e decodificar vídeo ou
-áudio em um conjunto de bits \cite{diveIntohtml}. O termo Codec
-é um acrônimo, significando codificar/decodificar. O objetivo
-dos codecs é diminuir o tamanho dos arquivos com a menor perda de
-qualidade possível, para isso os codecs utilizam de várias estratégias de
-compressão ou descarte de dados; rodando tanto em hardware quanto em
+áudio em um conjunto de bits \cite{diveIntohtml}. O termo Codec é
+um acrônimo, significando o processo de codificar um fluxo de dados
+para armazenamento e decodificá-lo para ser consumido. O objetivo dos
+codecs é diminuir o tamanho dos arquivos com a menor perda de qualidade
+possível, para isso os codecs utilizam de várias estratégias de
+compressão ou descarte de dados; podendo rodar tanto em hardware quanto em
 software.
-
-Depois de comprimido, o fluxo de dados é armazenado em um contêiner,
-que é um conjunto de metadados sobre as informações codificadas
-modo a possibilitar que outros programas consigam interpretar estas
-informações de forma padronizada.
 
 O funcionamento de codecs pode variar muito, conforme as estratégias de
 compressão utilizadas, a quantidade de bits por segundo, entre outros
 fatores. Visto que os algoritmos de compressão podem adquirir grande
-complexidade muitos codecs e contêiners são encobertos por licenças
+complexidade muitos codecs são encobertos por licenças
 que limitam sua utilização. Não obstante, também existem opções
 livres de patentes e licenças.
 
-O suporte a codecs na WEB varia de navegador para navegador, de acordo
-com as preferências mercadológicas ou filosofias das empresas. Segundo
+Após ter sido codificado um fluxo de dados é armazenado em um
+contêiner. Contêiners são um padrão de metadados sobre as informações
+codificadas de modo a possibilitar que outros programas consigam
+interpretar estas informações de forma padronizada. Assim como
+codecs existem contêiners livres e com restrições de licença.
+
+O suporte a codecs e contêiners na WEB varia de navegador para
+navegador, de acordo com as preferências mercadológicas, técnicas
+ou filosofias das empresas por trás dos navegadores. Segundo
 \cite{diveIntohtml} não existe uma única combinação de contêiner e
 codecs que funcionem em todos os navegadores.
+
 %}}}
 \section{AUDIO}
 %{{{
