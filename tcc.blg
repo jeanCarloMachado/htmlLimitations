@@ -15,11 +15,6 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: tcc-blx.bib
 Database file #2: tcc.bib
-I was expecting a `,' or a `}'---line 69 of file tcc.bib
- :     
- :     year={2013}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "HTML5"
 Warning--I didn't find a database entry for "gtw"
 Biblatex version: 3.0
@@ -27,37 +22,37 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 You've used 27 entries,
             6047 wiz_defined-function locations,
-            1246 strings with 11608 characters,
-and the built_in function-call counts, 69954 in all, are:
+            1247 strings with 11612 characters,
+and the built_in function-call counts, 70022 in all, are:
 = -- 2549
 > -- 2122
 < -- 721
 + -- 594
 - -- 745
-* -- 4522
-:= -- 4010
+* -- 4538
+:= -- 4011
 add.period$ -- 0
 call.type$ -- 27
-change.case$ -- 308
+change.case$ -- 309
 chr.to.int$ -- 36
 cite$ -- 52
-duplicate$ -- 8223
-empty$ -- 8003
+duplicate$ -- 8232
+empty$ -- 8014
 format.name$ -- 1331
-if$ -- 16318
+if$ -- 16331
 int.to.chr$ -- 0
 int.to.str$ -- 50
 missing$ -- 0
-newline$ -- 473
+newline$ -- 475
 num.names$ -- 984
-pop$ -- 8565
+pop$ -- 8564
 preamble$ -- 1
-purify$ -- 350
+purify$ -- 351
 quote$ -- 0
 skip$ -- 4257
 stack$ -- 0
-substring$ -- 901
-swap$ -- 2274
+substring$ -- 902
+swap$ -- 2286
 text.length$ -- 649
 text.prefix$ -- 26
 top$ -- 1
@@ -65,5 +60,5 @@ type$ -- 1002
 warning$ -- 0
 while$ -- 415
 width$ -- 0
-write$ -- 445
-(There was 1 error message)
+write$ -- 447
+(There were 2 warnings)

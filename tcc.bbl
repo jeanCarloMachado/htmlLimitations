@@ -371,7 +371,9 @@
   }
   \strng{namehash}{PMLY1}
   \strng{fullhash}{PMLY1}
+  \field{labelyear}{2013}
   \field{title}{HTML5 - A Serious Contender to Native App Development or Not?}
+  \field{year}{2013}
 \endentry
 
 \entry{gwt}{article}{}
