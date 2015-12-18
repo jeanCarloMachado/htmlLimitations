@@ -371,6 +371,22 @@
   \field{title}{A first look at what might be in ECMAScript 7 and 8}
 \endentry
 
+\entry{audioApiSpec}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Rogers}{R.}%
+     {Chris}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RC1}
+  \strng{fullhash}{RC1}
+  \field{howpublished}{Available at
+  \url{https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html}
+  (2015/12/18)}
+  \field{title}{Web Audio API}
+\endentry
+
 \entry{creatingFun}{book}{}
   \name{author}{1}{}{%
     {{}%

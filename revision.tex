@@ -1279,9 +1279,23 @@ adequada.
 \subsection{API DE ÁUDIO}
 \begin{draft}
 
-É uma interface de áudio experimental para JavaScript. Provê maior
-flexibilidade na manipulação de áudio. Essa tecnologia é muito mais
-nova do que a tag áudio. 
+É uma interface experimental (ainda em rascunho) em JavaScript para
+criar e processar áudio. Provê uma interface para manipular nodos de
+áudio que podem ser conectados permitindo refinado controle sobre os
+efeitos sonoros. O processamento se dará primeiramente em uma cada
+inferior (tipicamente código Assembly / C / C++), mas síntese e
+processamento em JavaScript também será suportado \autocite{audioApiSpec}.
+
+Essa tecnologia é muito mais nova do que a tag áudio. Diferentemente
+dos demais navegadores o Internet Explorer não dá nenhum nível de
+suporte a API.
+
+\subsubsection{Áudio Workers}
+As últimas versões da especificação contam com a possibilidade
+de manipular a API de áudio através de WEB Workers, o que traz
+oportunidades interessantes para aplicações que dependam de muito
+processamento de áudio.
+
 \end{draft}
 %}}}
 \section{VÍDEO}
