@@ -356,6 +356,24 @@
   \field{year}{2010}
 \endentry
 
+\entry{aSeriousContender}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Powell}{P.}%
+     {Mark}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Li}{L.}%
+     {Yuesong}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{PMLY1}
+  \strng{fullhash}{PMLY1}
+  \field{title}{HTML5 - A Serious Contender to Native App Development or Not?}
+\endentry
+
 \entry{gwt}{article}{}
   \name{author}{1}{}{%
     {{}%
