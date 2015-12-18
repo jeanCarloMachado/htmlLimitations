@@ -1052,6 +1052,7 @@ Renderização é parte fundamental de muitos jogos. As tecnologias atualmente e
 
 \subsection{SVG}
 %{{{
+\begin{draft}
 SVG (\textit{Gráficos de vetores escaláveis}), é uma linguagem
 baseada em XML especializada na criação de vetores bidimensionais
 \autocite{html5mostwanted}. Por usar XML SVG permite a utilização da
@@ -1068,6 +1069,7 @@ Um aspecto negativo do SVG é que é muito difícil atingir a
 perfeição na posição dos pixels, por ser uma linguagem vetorizada
 \autocite{html5mostwanted}.
 
+\end{draft}
 \begin{figure}
 \centering
 \begin{verbatim}
@@ -1096,6 +1098,8 @@ retângulo é uma analogia de como desenhar manualmente, move-se
 o "lápis" para o local desejado, e traça-se os pontos onde a linha
 deve percorrer - similar ao planejamento. E desenha-se efetivamente,
 preenchendo os pontos demarcados.
+
+Os desenhos do canvas não podem ser acessados via dom nem serem manipulados via CSS, todas as modificações necessárias devem ser feitas via JavaScript.
 
 Segundo \cite{gwt} uma característica importante deste [canvas]
 elemento é que ele consegue redimensionar seu conteúdo para adequar à
