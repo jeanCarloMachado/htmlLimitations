@@ -5,7 +5,9 @@ específicos dos jogos, mas aplicam-se a todos tipos de software
 \parencite{currentStateCrossPlatform}. Alguns problemas são inerentes
 das tecnologias, outras dos dispostivos ou da característica
 multiplataforma.
-Abaixo constam as limitações encontradas durante a pesquisa e concepção do jogo.
+
+Abaixo constam as limitações encontradas durante a
+pesquisa e concepção do jogo.
 
 \section{LIMITAÇÕES}
 
@@ -138,12 +140,12 @@ tempo manipulando os detalhes da WebGL. Possibilita trabalhar com
 efeitos, luzes, cenas e outras abstrações em detrimento de shaders,
 vértices, e conceitos mais primitivos.
 
-
 \subsection{VIDEO}
 
 \subsection{ASSETS}
 
-Trafegar muitos assets deixa o sistema lento.  Pode-se contornar este problema utilizando páginas de carregamento e/ou cache;
+Trafegar muitos assets deixa o sistema lento. Pode-se contornar este
+problema utilizando páginas de carregamento e/ou cache;
 
 Outro problema relativo aos assets é descrito por \cite{howBrowsersWork}
 scripts requerendo informações de estilo durante o processo de 
@@ -161,15 +163,18 @@ Segundo \cite{html5mostwanted} a limitação do elemento de áudio do
 HTML5 é que seu propósito é para executar apenas um som, como o som
 de fundo dentro de um jogo.
 
-A API de som no protótipo nem sempre emite o som quando o evento é disparado
-sucessivamente. Confirmando a afirmação de \cite{html5mostwanted} a API de som é boa se você deseja apenas tocar alguma música, mas se você está lançando eventos em um jogo ela é problemática.
+A API de som no protótipo nem sempre emite o som quando o
+evento é disparado sucessivamente. Confirmando a afirmação de
+\cite{html5mostwanted} a API de som é boa se você deseja apenas tocar
+alguma música, mas se você está lançando eventos em um jogo ela é
+problemática.
 
 Os navegadores variam na disponibilização de formatos aceitáveis
 Somente um áudio pode ser tocado no Navegador do Android
 
 Não é possível trocar o volume no IOS.
 
-Alguns navegadores favorecem formatos ogg (vorbis) e outros, como o
+Alguns navegadores favorecem formatos OGG (vorbis) e outros, como o
 Safari, favorecem o MP3.
 
 Segundo \cite{html5Tradeoffs}
@@ -202,10 +207,10 @@ aproximadamente 10 segundos para terminar o usuário então começa a
 ficar aborrecido e esse é o limite que algum feedback deve ser dado
 para um usuário.
 
-Otimizações de performance dependem do ambiente em que estão        .
-sendo feitas E aquelas que hoje tem um impacto positivo hoje podem     .
-se tornar inúteis, ou mesmo prejudiciais, amanhã \autocite[pp.       .
-131]{html5mostwanted}                                                  .
+Otimizações de performance dependem do ambiente em que estão
+sendo feitas. E aquelas que hoje tem um impacto positivo hoje
+podem se tornar inúteis, ou mesmo prejudiciais, amanhã
+\autocite[pp.131]{html5mostwanted}.
 
 \subsection{Acelerômetro}
 
@@ -242,5 +247,12 @@ generalizado de HTML5 \autocite{diveIntohtml}.
 Desktop/Firefox
 Desktop/Google Chrome
 Smatphone/Android
+
+\subsection{Scroll}
+\autocite[pp. 9]{aSeriousContender} cita que:
+Fazer scroll juntamente com gestos de ações similares é uma área
+onde o HTML ainda é fraco. Existem várias tentativas para solucionar
+esse problema como o iScroll, TouchScroll, GloveBox, Sencha, jQuery
+Mobile.
 
 \end{draft}
