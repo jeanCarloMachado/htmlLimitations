@@ -119,31 +119,12 @@ Designers de jogos tem as seguintes possibilidades quando em face
 de desenvolver um jogo multiplataforma: criar um jogo web, um jogo
 híbrido, ou nativo. As opções serão descritas abaixo.
 
-\subsection{DESENVOLVIMENTO DE JOGOS NATIVOS}
-
-Uma aplicação nativa é uma aplicação que foi desenvolvida para ser
-utilizada em uma plataforma ou dispositivo específico \autocite[pp.
-7]{aSeriousContender}. Aplicativos nativos tendem a oferecer uma
-experiência mais próxima com a do resto do sistema operacional o qual
-está rodando. Geralmente softwares nativos são mais rápidos que suas
-alternativas da WEB visto que interagem com o dispositivo através do
-sistema operacional - diferentemente dos jogos WEB que necessitam que o
-navegador interaja com o sistema operacional para por sua ver interagir
-com o dispositivo.
-Por terem acesso total ao dispositivo aplicativos nativos podem aproveitar
-o hardware da melhor forma possível e oferecer ao usuário a melhor experiência 
-possível \autocite[pp. 7]{aSeriousContender}.
-
-Desenvolver jogos nativos tende a ser mais caro que a alternativa da WEB
-visto que é necessário duplicar funcionalidades em sistemas e manter um
-profissional por ambiente suportado. As versões nativas são totalmente
-incompatíveis impossibilitando reúso.
-
 \subsection{JOGOS WEB}
 
 %Este tipo de jogo é o que será abordado neste trabalho. 
 
-Um jogo web é um jogo que utiliza o HTML e ferramentas correlacionadas para sua construção.
+Um jogo web é um jogo que utiliza o HTML e ferramentas correlacionadas
+para sua construção.
 
 O objetivo primário da WEB nunca foi o desenvolvimento de
 jogos, mas as novas versões do HTML estão provendo funcionalidades
@@ -198,12 +179,42 @@ utilizado.
 
 Além dos jogos web, há a possibilidade de criar jogos híbridos e nativos.
 
+\subsection{DESENVOLVIMENTO DE JOGOS NATIVOS}
+
+Uma aplicação nativa é uma aplicação que foi desenvolvida para ser
+utilizada em uma plataforma ou dispositivo específico \autocite[pp.
+7]{aSeriousContender}. Aplicativos nativos tendem a oferecer uma
+experiência mais próxima com a do resto do sistema operacional o qual
+está rodando. Geralmente softwares nativos são mais rápidos que suas
+alternativas da WEB visto que interagem com o dispositivo através do
+sistema operacional - diferentemente dos jogos WEB que necessitam que o
+navegador interaja com o sistema operacional para por sua ver interagir
+com o dispositivo.
+Por terem acesso total ao dispositivo aplicativos nativos podem aproveitar
+o hardware da melhor forma possível e oferecer ao usuário a melhor experiência 
+possível \autocite[pp. 7]{aSeriousContender}.
+
+Desenvolver jogos nativos tende a ser mais caro que a alternativa da
+WEB visto que é necessário duplicar funcionalidades em sistemas e
+manter um profissional por ambiente suportado. As versões nativas são
+totalmente incompatíveis impossibilitando reúso.
+
 \subsection{JOGOS HÍBRIDOS}
 
-A alternativa híbrida tenta utilizar o melhor do nativo e o melhor do desenvolvimento WEB.
-Geralmente se desenvolve híbrido utilizando as tecnologias da WEB só que ao invés de 
-disponibilizar a aplicação através de um navegador a aplicação WEB é instalada
-como um aplicativo normal e roda em uma webview do sistema operacional.
+A alternativa híbrida tenta utilizar o melhor do nativo e o melhor do
+desenvolvimento WEB. Geralmente se desenvolve híbrido utilizando as
+tecnologias da WEB só que ao invés de disponibilizar a aplicação
+através de um navegador a aplicação WEB é instalada como um
+aplicativo normal e roda em uma WebWiew que é um componente do sistema
+operacional capaz de rodar as tecnologias da WEB.
+
+Visto que a estratégia híbrida roda diretamente no sistema
+operacional é possível criar APIs para acessar recursos não sempre
+disponíveis para a plataforma WEB. Não obstante, segundo \cite[pp.
+8]{aSeriousContender} a diferença entre o que é possível com a
+estratégia híbrida e a WEB está diminuindo devido ao grande esforço
+da comunidade WEB para prover especificações.
+
 %}}}
 \end{draft}
 \section{WEB}
