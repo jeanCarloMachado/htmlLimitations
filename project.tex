@@ -91,11 +91,9 @@ coisa nem sempre viável em dispositivos móveis.
 
 Seguindo a construção do markup, veio o desenvolvimento da 
 classe Match, a qual simboliza uma partida dentro do jogo.
-
 No início da construção não  havia um gerador de equações, o jogo
 contava apenas com um vetor de equações pré-estabelecidas que
 eram selecionadas aleatoriamente a cada turno.
-
 Isso se provou uma boa escolha pois possibilitou que o desenvolvimento
 se focasse em outros aspectos importantes como a elaboração do laço do jogo.
 
@@ -108,13 +106,15 @@ declarar todos os objetos relativos ao objeto window. Isso se demonstrou
 uma boa forma de separar os objetos, tornando o conflito de variáveis
 globais um problema irrelevante.
 
-Outro aspecto positivo foi a utilização de um meta objeto para encapsular
-os demais, neste caso utilizei o nome MyMath, funcionando como um namespace,
-garantindo que problemas de conflitos de nomes não aconteçam.
+Outro aspecto positivo foi a utilização de um meta objeto para
+encapsular os demais, neste caso utilizei o nome MyMath, funcionando
+como um namespace, garantindo que problemas de conflitos de nomes não
+aconteçam.
 
-Devido ao fato deste trabalho explorar as limitações dos jogos em
-HTML5, optei por evitar a utilização de plugins e ferramentas de
-terceiros que pudessem ocultar alguma limitação.
+Um processo trabalhoso foi a criação da interface sem ajuda de plugins.
+Apesar de a interface ser simples, fazer os elementos se alinharem em 
+diversos tamanhos de telas não é um processo trivial sem a ajuda de uma
+biblioteca especializada como o jQuery UI.
 
 Escolhi a simplicidade para não precisar ficar muito tempo aprendendo
 as coisas em detrimento do refinamento da pesquisa.
@@ -143,6 +143,7 @@ armazenamento massivo de dados a opção mais modesta foi preferida.
 \end{figure}
 
 \begin{draft}
+
 \section{Otimizações para jogos}
 
 Navegadores tentam otimizar a experiência de navegação definindo
@@ -254,7 +255,7 @@ conflitos de nomes e outros problemas relativos ao contexto global.
 Um problema que jogos sofrem em geral é a demora no carregamento da
 grande quantidade de recursos que precisam estar em memória para o jogo
 funcionar. Muitos jogos utilizam uma tela de carregamento enquanto os 
-recursos são adquiridos. 
+recursos são adquiridos.
 
 Um recurso do HTML interessante para este tipo de situação é o pré
 carregamento de recursos (\textit{Link Prefetching}). Esta tecnologia
@@ -264,5 +265,9 @@ provavelmente serão necessários em um futuro próximo.
 Nem todos os recursos necessitam ser pré carregados, mas uma impressão
 muito superiora é criada se os recursos estão imediatamente
 disponíveis quando uma nova fase é carregada \autocite[pp. 39]{creatingFun}.
+
+\section{Performance}
+
+O jogo ficou rápido...
 
 \end{draft}
