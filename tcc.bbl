@@ -424,6 +424,22 @@
   \field{title}{A first look at what might be in ECMAScript 7 and 8}
 \endentry
 
+\entry{buildingHtml5Game}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Rocheleau}{R.}%
+     {Jake}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RJ1}
+  \strng{fullhash}{RJ1}
+  \field{howpublished}{Available at
+  \url{http://marketblog.envato.com/tips/building-your-first-html5-game/}
+  (2015/12/19)}
+  \field{title}{Introductory Guide to Building Your First HTML5 Game}
+\endentry
+
 \entry{audioApiSpec}{online}{}
   \name{author}{1}{}{%
     {{}%

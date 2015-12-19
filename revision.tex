@@ -1132,6 +1132,10 @@ o "lápis" para o local desejado, e traça-se os pontos onde a linha
 deve percorrer - similar ao planejamento. E desenha-se efetivamente,
 preenchendo os pontos demarcados.
 
+Além da possibilidade de desenhar programaticamente é possível carregar
+gráficos. A maioria dos jogos HTML5 utilizam sprites ou padrões recortáveis \textit{tiled},
+muito similar aos títulos antigos da SNES e Game Boy \autocite{buildingHtml5Game}.
+
 Os desenhos do canvas não podem ser acessados via dom nem serem manipulados via CSS, todas as modificações necessárias devem ser feitas via JavaScript.
 
 Segundo \cite{gwt} uma característica importante deste [canvas]
@@ -1661,9 +1665,11 @@ teclado, em dispositivos móveis através tela sensível ou sensor de
 movimentos.
 
 O HTML5 trata todos estes casos abstratamente na forma de eventos, os
-quais podem ser escutados através de \textit{listeners}. Os eventos
-básicos são: keydown (tecla baixa), keyup (tecla solta) e keypress
-(tecla pressionada).
+quais podem ser escutados através de \textit{listeners}. JavaScript
+pode ser configurado para escutar cada vez que um evento ocorre, como
+um clique do mouse ou o pressionar da tecla "A". Quando isso acontece o
+listener pode invocar uma função e realizar qualquer coisa desejada
+\autocite{buildingHtml5Game}.
 
 \subsection{Acelerômetro}
 \begin{draft}
