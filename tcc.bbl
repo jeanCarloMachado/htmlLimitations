@@ -184,6 +184,22 @@
   \field{title}{HTML HyperText Markup Language}
 \endentry
 
+\entry{researchOnHtml}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Huang}{H.}%
+     {Jun~Steed}{J.~S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HJS1}
+  \strng{fullhash}{HJS1}
+  \field{labelyear}{2011}
+  \field{title}{Research on Html5 Development}
+  \field{journaltitle}{Jiangsu University}
+  \field{year}{2011}
+\endentry
+
 \entry{HTML5CrossPlatformGameDevelopment}{thesis}{}
   \name{author}{1}{}{%
     {{}%
