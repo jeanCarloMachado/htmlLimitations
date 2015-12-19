@@ -1382,26 +1382,35 @@ em uma thread separada.
 %{{{
 \begin{draft}
 
-\cite{diveIntohtml}
-\begin{quote}
-HTML5 inclui o elemento \textit{video} para adicionar vídeo em uma página da WEB. Não existe restrição no codec  de vídeo e áudio, nem no formato de contêiner. Um elemento vídeo pode ser ligado a múltiplos arquivos de vídeo e o navegador vai escolher o primeiro que ele pode de fato executar.
-\end{quote}
+O elemento \textit{video} especifica uma forma de adicionar vídeos nativamente,
+sem necessitar depender de plugins de terceiros como o Flash Player.
+Pode-se adicionar um arquivo através do atributo \textit{src} do elemento
+ou adicionar vários formatos de contêiner e codec dentro do elemento através
+de elementos \textit{source}. Assim como o elemento \textit{audio} o navegador
+decidirá em tempo de execução qual formato executar dependendo de suas capacidades.
 
 
-Antes do HTML5 era impossível adicionar vídeos nas páginas sem a
-utilização de algum plugin como o Flash Player.
+\begin{figure}
+\centering
+\begin{verbatim}
+<video controls style="width:640px;height:360px;" poster="poster.png">
+  <source src="devstories.webm" 
+          type='video/webm;codecs="vp8, vorbis"' />
+  <source src="devstories.mp4" 
+          type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+  <track src="devstories-en.vtt" label="English subtitles" 
+         kind="subtitles" srclang="en" default></track>
+</video>
+\end{verbatim}
+\caption{Exemplo de utilização de vídeo}
+\source{http://www.html5rocks.com/en/tutorials/video/basics/}
+\label{fig:video}
+\end{figure}
 
-A especificação define uma tag \textit{video} que pode ser embida em
-uma página HTML. Segundo \cite{diveIntohtml} não existem restrições
-quando ao codec de vídeo ou áudio, um elemento vídeo pode fazer
-referência a múltiplos arquivos de vídeos, cabe ao navegador decidir
-qual arquivo de fato será executado.
+Pode-se controlar quais partes do vídeo serão mostradas através de parâmetros de tempo.
+Através do elemento track é possível informar subtítulos para os vídeos sendo apresentados.
 
-Os navegadores não concordam em qual formato de vídeo suportar Uma   .
-tag vídeo pode apontar para vários arquivos em diversos formatos, e  .
-os navegadores que suportarem determinado irão escolhê-lo            .
-
-Um formato de vídeo é a combinação de várias tecnologias.
+A figura \ref{fig:video} demonstra a utilização das funcionalidades descritas acima.
 
 AVI e MP4 são apenas contêiner de formatos. Como um arquivo zip,
 podendo conter qualquer coisa dentro de si \autocite{diveIntohtml}.
@@ -1412,9 +1421,12 @@ maioria dos codecs de vídeo não mudam todo o conteúdo de um quadro
 para o próximo, possibilitando maiores taxas de compressão, que
 resulta em arquivos menores \autocite{diveIntohtml}.
 
-O projeto \textit{Vídeo for Everybody} \begin{verbatim} http://camendesign.com/code/video_for_everybody \end{verbatim} é um polyfill que recorre à flash quando o vídeo não é suportado pelo navegador.
+O projeto \textit{Vídeo for Everybody} \begin{verbatim}
+http://camendesign.com/code/video_for_everybody \end{verbatim} é um
+polyfill que recorre à flash quando o vídeo não é suportado pelo
+navegador.
 
-Segue uma lista de alguns dos contêiner de video:
+Segue uma lista de alguns dos contêiners de vídeo:
 \begin{itemize}
     \item{MPEG4}
     \item{Flash Video}
@@ -1425,6 +1437,7 @@ Segue uma lista de alguns dos contêiner de video:
 \end{itemize}
 
 Alguns codecs de vídeo
+
 \begin{itemize}
     \item{H.264, is one of the video codecs mandated by the Blue-Ray specification}
     \item{Theora, native in Linux}
