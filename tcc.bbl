@@ -63,6 +63,12 @@
   \field{year}{2014}
 \endentry
 
+\entry{chromeDevTools}{online}{}
+  \field{howpublished}{Available at \url{https://developer.chrome.com/devtools}
+  (2015/12/19)}
+  \field{title}{Chrome DevTools Overview}
+\endentry
+
 \entry{htmlAndCssDucket}{book}{}
   \name{author}{1}{}{%
     {{}%
