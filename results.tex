@@ -66,41 +66,39 @@ maior o documento mais lenta a renderização.
 
 \subsection{Canvas}
 
+A API canvas cresceu com o tempo, e algumas funcionalidades - como
+suporte a texto, foram adicionadas tardiamente. E alguns navegadores
+lançaram antes da especificação estar completa e hoje tem problema de
+suporte para essas áreas \autocite{diveIntohtml}. Não obstante, canvas
+está presente em todos os navegadores populares à partir do Internet
+Explorer 9. Para navegadores antigos, abaixo do Internet Explorer 9,
+existe o polyfill Explorer Canvas do Google, que emula em JavaScript as
+funcionalidades do canvas.
+
+Muitas das variadas implementações do canvas tem problemas de performance.
+O FastCanvas é uma iniciativa híbrida para Android que busca mitigar os
+problemas de performance do Canvas com uma API nativa. Não obstante, o
+FastCanvas não suporta a especificação do canvas completamente, não
+permite ser integrado com outros elementos do DOM.
+
+Segundo \autocite{html5mostwanted}, os aspectos negativos do canvas é
+que a performance varia de plataformas para plataformas e não existe
+implementação nativa para animações.
+
+Por ser apenas sistema de mapa de pixels canvas carece de integração
+com o restante das tecnologias da WEB. Não é possível aproveitar as
+facilidades de animações do CSS, manipulação do DOM, entre outras
+tecnologias.
+
+Um fator descoberto durante o desenvolvimento do protótipo é que o
 Canvas tem uma característica peculiar quanto ao seu tamanho.
 Em suma existem dois tamanhos, o tamanho do elemento e da superfície de
 desenho. Quando o tamanho do elemento é maior do que o da superfície
 de desenho do documento escala a superfície de desenho para preencher o
 elemento, o que pode gerar resultados inesperados.
 
-Apesar de ser geralmente bem suportado nos navegadores atuais, canvas
-ainda sofre de problemas de performance. Para navegadores antigos -
-abaixo do Internet Explorer 9 - existe o polyfill Explorer Canvas
-do Google, que emula em JavaScript as funcionalidades do canvas. O
-FastCanvas é uma iniciativa híbrida para Android que busca mitigar os
-problemas de performance do Canvas com uma API nativa. Não obstante, o
-FastCanvas não suporta a especificação do canvas completamente, não
-permite ser integrado com outros elementos do DOM.
-
-A API canvas cresceu com o tempo, e algumas funcionalidades - como
-suporte a texto, foram adicionadas tardiamente. E alguns navegadores
-lançaram antes da especificação estar completa e hoje tem problema
-de suporte para essas áreas \autocite{diveIntohtml}. Apesar de muitas
-vezes incompleto, o canvas é suportado em todos os maiores navegadores
-à partir do Internet Explorer 9. Não obstante existe a possibilidade de utilizar
-a biblioteca https://github.com/google/canvas-5-polyfill para
-suprir aos navegadores que ainda não implementaram, os últimos recursos
-da especificação Canvas, como o recurso de desenhar elipses e o caminho 2D.
-
-Os aspectos negativos do canvas é que a performance varia de
-plataformas para plataformas e não existe implementação nativa para
-animações \autocite{html5mostwanted}.
-
-Algumas outras fraquezas do canvas são:
-\begin{itemize}
-\item{Não há suporte a animações}
-\item{Não é possível alterar uma parte já desenhada a não ser sobrescrevendo ou pintando o canvas novamente}
-\item{Por ser um vetor de pixeis não existe possibilidade de utilização do DOM nem seus eventos, limitado muito a iteratividade}
-\end{itemize}
+Canvas também não permite a manipulação das camadas já desenhadas, sendo 
+necessário sobrescrever o canvas ou limpá-lo.
 
 \subsection{WebGL}
 
