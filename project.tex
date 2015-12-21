@@ -13,25 +13,25 @@ no resultado do jogo pois quão mais rápido o jogador acertar se a
 afirmação está correta ou não mais pontos ele receberá.
 
 Esta categoria de jogo foi selecionada pois oferece uma experiência
-interessante e por ter profundidade oferecendo a possibilidade de
-explorar diversos recursos do HTML, e criar melhorias incrementais. 
-Por não ser tão complexo de suportar em diversos tamanhos de telas e tipos
-de entrada de dados diferentes. E, por fim, por oferecer uma dificuldade
-técnica não tão desafiadora. Visto que não disponho de experiência
-profunda no desenvolvimento de jogos HTML.
+interessante e por ter profundidade, oferecendo a possibilidade de
+explorar diversos recursos do HTML, e criar melhorias incrementais. E,
+por fim, por oferecer uma dificuldade técnica não tão desafiadora.
+Visto que não disponho de experiência profunda no desenvolvimento de
+jogos HTML.
 
 Jogos como o Math Workout para Android tem uma temática similar.
 Não obstante, este jogo não sugere respostas para o usuário
 e o questiona sobre a veracidade delas, apresenta apenas a equação
-e requer uma resposta. O jogo aqui desenvolvido parece ter uma melhor
-jogabilidade para dispositivos móveis, pois não requer a presença
-de um teclado. Os botões de verdadeiro ou falso contém todas as
-possibilidades.
+e requer uma resposta. 
+O jogo Countdown, também para a Android, é um jogo de temática
+similar apresentando o valor final e pedindo para o usuário determinar
+a equação que resultou no valor dado à partir de um conjunto de
+números e operadores.
 
-O jogo Countdown, também para a Android apresenta o valor final mas
-pede para o usuário determinar a equação que resultou no valor dado.
-Nosso protótipo também apresenta o valor final, mas juntamente com a
-questão, não obstante este também é um exemplo de jogo similar.
+O jogo desenvolvido para o protótipo parece ter uma melhor jogabilidade
+para dispositivos móveis, pois não requer a presença de um teclado
+numérico. Os botões de verdadeiro ou falso contém todas as
+possibilidades.
 
 %Também para não interferir na pesquisa busquei não me distanciar do
 %que é considerado padrão em ferramentas e métodos.
@@ -73,38 +73,47 @@ Abaixo segue o diagrama de classes simplificado \footnote{Nos anexos pode-se enc
 	\caption{Diagrama de classes simplificado}
 \end{figure}
 
-
 \begin{draft}
 \section{Desenvolvimento}
 
-O desenvolvimento se deu com a estratégia de melhoria progressiva.
+O desenvolvimento se deu com uma postura de melhoria progressiva.
 Desenvolvendo a versão mais simples possível para atingir as
-requisitos funcionais. Essa versão mais simples, apesar de não ter
-sido testado, deve funcionar na grade maioria dos navegadores.
+requisitos funcionais. A partir dessa versão, novos recursos vão 
+sendo adicionadas para melhorar a experiência do usuário.
 
 O primeiro passo foi a criação do documento HTML. Utilizei divs
 para simbolizar telas do jogo. Caracterizando o jogo como uma
-aplicação SPA (\textit{Single Page Application}).  A alternativa
-seria depender de um servidor para mandar as páginas prontas,
-mas isso acarreta na necessidade de acesso à internet constante,
-coisa nem sempre viável em dispositivos móveis.
+aplicação de uma única página (\textit{Single Page Application}).
+Alternativamente poderia se depender de um servidor para mandar as
+páginas prontas, mas isso distribui a complexidade do sistema para
+tecnologias do lado do servidor, distanciando-se da proposta de jogos
+exclusivamente construídos com as tecnologias da WEB.
 
-Seguindo a construção do markup, veio o desenvolvimento da 
-classe Match, a qual simboliza uma partida dentro do jogo.
-No início da construção não  havia um gerador de equações, o jogo
-contava apenas com um vetor de equações pré-estabelecidas que
-eram selecionadas aleatoriamente a cada turno.
-Isso se provou uma boa escolha pois possibilitou que o desenvolvimento
-se focasse em outros aspectos importantes como a elaboração do laço do jogo.
+Seguindo a construção do documento HTML, veio o
+desenvolvimento de um CSS simples que comporta a visualização em múltiplos dispositivos.
+Para tal, foram utilizadas posições e tamanhos relativos. Por exemplo, a largura de cada
+tela da SPA é 98\% do tamanho total disponível na tela. Já o tamanho da fonte do quadro principal,
+representado pelo id \textit{billboard} é duas vezes o tamanho da fonte normal 2em.
+
+a qual simboliza uma partida dentro
+do jogo. No nesta etapa não havia um gerador de equações, o jogo
+contava apenas com uma coleção de equações preestabelecidas que eram
+selecionadas aleatoriamente a cada turno. Isso se provou uma boa escolha
+pois possibilitou que o desenvolvimento se focasse em outros aspectos
+importantes como a elaboração do laço do jogo.
 
 O aspecto central do laço do jogo consiste em apresentar uma equação
 ao usuário com a possibilidade de ele responder se ela está correta ou
-errada.
+não. Internamente, uma equação é composta por uma afirmação e o
+resultado dessa afirmação. Para permitir a interação com o usuário,
+são adicionados eventos aos botoes de certo ou errado que ao serem
+clicados vão conferir a resposta da equação e informar o usuário se
+este acertou ou não a pergunta.
 
 Uma estratégia interessante que foi adotada na construção foi
-declarar todos os objetos relativos ao objeto window. Isso se demonstrou
-uma boa forma de separar os objetos, tornando o conflito de variáveis
-globais um problema irrelevante.
+declarar todos os objetos relativos ao objeto janela (\textit{window}).
+Isso se demonstrou uma boa forma de separar os objetos, tornando o
+conflito de variáveis globais um problema irrelevante.
 
 Outro aspecto positivo foi a utilização de um meta objeto para
 encapsular os demais, neste caso utilizei o nome MyMath, funcionando
