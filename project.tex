@@ -171,10 +171,19 @@ não seja sempre correta.
 O objeto \textit{StatementGenerator} reside como membro de classe
 do objeto \textit{Match} e a cada interação com o usuário
 uma nova equação é gerada por ele e armazenada no atributo
-\textit{currentStatement} do objeto Match. Ao final das iterações com
+\textit{currentStatement} do objeto \textit{Match}. Ao final das iterações com
 o usuário o evento \textit{endOfMatch} é lançado onde os pontos são
 computados, armazenados e mostrados para o usuário. Neste ponto é
-possível também começar outra partida para reiniciar o processo.
+possível também começar outra partida reiniciando o processo.
+
+Estas classes comportam os requisitos funcionais do jogo. Ao final
+do processo foi identificado que muitas vezes o usuário começa uma
+partida e não está prestando atenção para a tela perdendo pontos
+neste período inicial. Para reduzir este problema foi adicionada 
+a classe \textit{Countdown}, que é basicamente um temporizador regressivo que 
+demarca o início de cada partida. O temporizador foi desenvolvido em canvas
+e apresenta 4 demarcações desenhadas a cada 90 graus, formando um circulo com uma
+mensagem no centro, neste caso os números do temporizador.
 
 %posteriori
 Uma estratégia interessante que foi adotada na construção foi
