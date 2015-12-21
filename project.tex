@@ -20,18 +20,18 @@ Visto que não disponho de experiência profunda no desenvolvimento de
 jogos HTML.
 
 Jogos como o Math Workout para Android tem uma temática similar.
-Não obstante, este jogo não sugere respostas para o usuário
-e o questiona sobre a veracidade delas, apresenta apenas a equação
-e requer uma resposta. 
+Não obstante, o Math Workout não apresenta a resposta, sendo o papel
+do usuário computar a equação e digitar o resultado.
+
 O jogo Countdown, também para a Android, é um jogo de temática
-similar apresentando o valor final e pedindo para o usuário determinar
-a equação que resultou no valor dado à partir de um conjunto de
+similar apresentando um número final e pedindo para o usuário determinar
+a equação que resultou no valor à partir de um dado conjunto de
 números e operadores.
 
 O jogo desenvolvido para o protótipo parece ter uma melhor jogabilidade
-para dispositivos móveis, pois não requer a presença de um teclado
-numérico. Os botões de verdadeiro ou falso contém todas as
-possibilidades.
+em dispositivos móveis que ambos citados pois não requer a presença
+de um teclado numérico. Os botões de verdadeiro ou falso contém todas
+as possibilidades.
 
 %Também para não interferir na pesquisa busquei não me distanciar do
 %que é considerado padrão em ferramentas e métodos.
@@ -78,7 +78,7 @@ Abaixo segue o diagrama de classes simplificado \footnote{Nos anexos pode-se enc
 
 O desenvolvimento se deu com uma postura de melhoria progressiva.
 Desenvolvendo a versão mais simples possível para atingir as
-requisitos funcionais. A partir dessa versão, novos recursos vão 
+requisitos funcionais. A partir dessa versão, novos recursos foram
 sendo adicionadas para melhorar a experiência do usuário.
 
 O primeiro passo foi a criação do documento HTML. Utilizei divs
@@ -89,11 +89,17 @@ páginas prontas, mas isso distribui a complexidade do sistema para
 tecnologias do lado do servidor, distanciando-se da proposta de jogos
 exclusivamente construídos com as tecnologias da WEB.
 
-Seguindo a construção do documento HTML, veio o
-desenvolvimento de um CSS simples que comporta a visualização em múltiplos dispositivos.
-Para tal, foram utilizadas posições e tamanhos relativos. Por exemplo, a largura de cada
-tela da SPA é 98\% do tamanho total disponível na tela. Já o tamanho da fonte do quadro principal,
-representado pelo id \textit{billboard} é duas vezes o tamanho da fonte normal 2em.
+Seguindo a construção do documento HTML, veio o desenvolvimento de um
+CSS simples que comporta a visualização em múltiplos dispositivos.
+Para tal, foram utilizadas posições e tamanhos relativos. Por exemplo,
+a largura de cada tela da SPA é 98\% do tamanho total disponível na
+tela. Já o tamanho da fonte do quadro principal, representado pelo id
+\textit{billboard} é duas vezes o tamanho da fonte normal 2em.
+
+Após a concepção do CSS deu-se início ao desenvolvimento da lógica do 
+negócio em JavaScript. O primeiro passo consistiu em fazer o mecanismo 
+de múltiplas telas em JavaScript. Ao iniciar a execução do JavaScript
+todas as divs que representam telas foram escondidas.
 
 a qual simboliza uma partida dentro
 do jogo. No nesta etapa não havia um gerador de equações, o jogo
