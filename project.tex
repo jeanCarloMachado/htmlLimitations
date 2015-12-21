@@ -127,18 +127,24 @@ importantes como a elaboração do laço do jogo, ranking, entre outros.
 
 O ranking serve para armazenar o resultado de cada partida do jogador
 possibilitando uma percepção de histórico da performance do jogador.
-Os dados são armazenados em Local Storage e manipulados através da
-classe Ranking. A classe ranking é simplesmente uma interface para
-converter e armazenar partidas, e recuperar informações de posição
-dessa base de dados. Os dados são convertidos em Json
+Os dados são armazenados em Local Storage, escolhido por
+ter uma API simples; visto que os requerimentos do protótipo não
+demandam grande performance ou armazenamento massivo de dados a opção
+mais modesta foi preferida. Arquiteturalmente falando, IndexedDb se
+encaixaria bem na aplicação por ter uma interface chave valor,
+ideal para um ranking, onde as chaves poderiam ser as posições do usuário,
+não obstante, a interface totalmente orientada a eventos do IndexedDb
+introduz uma complexidade desnecessária para um jogo simples.
+A classe ranking é simplesmente uma interface para converter partidas e armazenar
+e recuperas estas informações em Local Storage.
 
 O aspecto central do laço do jogo consiste em apresentar uma equação
 ao usuário com a possibilidade de ele responder se ela está correta ou
 não. Internamente, uma equação é composta por uma afirmação e o
 resultado dessa afirmação. Para permitir a interação com o usuário,
-são adicionados eventos aos botoes de certo ou errado que ao serem
-clicados vão conferir a resposta da equação e informar o usuário se
-este acertou ou não a pergunta.
+foram adicionados eventos aos botoes de certo ou errado que ao serem
+clicados vão pedir para a classe Match se o resultado da equação atual
+está correto informar o usuário do resultado.
 
 %posteriori
 Uma estratégia interessante que foi adotada na construção foi
@@ -159,9 +165,6 @@ biblioteca especializada como o jQuery UI.
 Escolhi a simplicidade para não precisar ficar muito tempo aprendendo
 as coisas em detrimento do refinamento da pesquisa.
 
-Como armazenamento local foi optado por Web Storage por ser uma API simples,
-visto que os requerimentos do protótipo não demandam grande performance ou
-armazenamento massivo de dados a opção mais modesta foi preferida.
 
 \end{draft}
 \begin{figure}
