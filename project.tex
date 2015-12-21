@@ -123,7 +123,14 @@ No nesta etapa não havia um gerador de equações, o jogo
 contava apenas com uma coleção de equações preestabelecidas que eram
 selecionadas aleatoriamente a cada turno. Isso se provou uma boa escolha
 pois possibilitou que o desenvolvimento se focasse em outros aspectos
-importantes como a elaboração do laço do jogo.
+importantes como a elaboração do laço do jogo, ranking, entre outros.
+
+O ranking serve para armazenar o resultado de cada partida do jogador
+possibilitando uma percepção de histórico da performance do jogador.
+Os dados são armazenados em Local Storage e manipulados através da
+classe Ranking. A classe ranking é simplesmente uma interface para
+converter e armazenar partidas, e recuperar informações de posição
+dessa base de dados. Os dados são convertidos em Json
 
 O aspecto central do laço do jogo consiste em apresentar uma equação
 ao usuário com a possibilidade de ele responder se ela está correta ou
@@ -133,6 +140,7 @@ são adicionados eventos aos botoes de certo ou errado que ao serem
 clicados vão conferir a resposta da equação e informar o usuário se
 este acertou ou não a pergunta.
 
+%posteriori
 Uma estratégia interessante que foi adotada na construção foi
 declarar todos os objetos relativos ao objeto janela (\textit{window}).
 Isso se demonstrou uma boa forma de separar os objetos, tornando o
