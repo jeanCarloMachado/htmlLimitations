@@ -102,13 +102,24 @@ de múltiplas telas em JavaScript. Ao iniciar a execução do JavaScript
 todas as divs que representam telas foram escondidas. O script mostra
 em seguida a página de carregamento. No final do carregamento de todos 
 os recursos é disparado o evento \textit{window.onload} neste momento
-inicia-se uma partida. Foram adicionados  listeners os eventos de 
+inicia-se uma partida. Foram adicionados  \textit{listeners} os eventos de 
 clicar nas configurações e nos botões de certo e errado da página principal, 
 o botão de configurações simplesmente esconde todas as seções  e por fim carrega
 a de configurações. Os botões de certo e errado serão explicados na sequência.
 
-a qual simboliza uma partida dentro
-do jogo. No nesta etapa não havia um gerador de equações, o jogo
+Após o esqueleto da aplicação estar definido foi introduzido a lógica de negócio.
+De toda a regra do jogo, a classe Match é a mais importante.
+Ela simboliza uma partida dentro do jogo, é na classe Match que 
+as informações de quantas equações existem, quantas foram acertadas
+e o tempo total da partida e sua pontuação. Seu propósito é iterar 
+a cada pergunta e esperar por uma resposta. Quando a resposta é dada
+a classe Match computa se a resposta está correta ou não e o tempo 
+que levou para chegar ao resultado. Quando não existem mais perguntas 
+para serem processadas é lançado um evento de final de partida onde 
+o resultado pode ser computado, demostrado para o usuário e registrado 
+no ranking.
+
+No nesta etapa não havia um gerador de equações, o jogo
 contava apenas com uma coleção de equações preestabelecidas que eram
 selecionadas aleatoriamente a cada turno. Isso se provou uma boa escolha
 pois possibilitou que o desenvolvimento se focasse em outros aspectos
