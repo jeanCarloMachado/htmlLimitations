@@ -145,17 +145,36 @@ para registrar no objeto \textit{Settings} cada mudança que ocorrer em seus est
 Os objetos que utilizam estas configurações também o fazem através do objeto settings
 então a validade das configurações é sempre garantida.
 
+Implementados estes mecanismos essenciais para o jogo, pude me focar no
+ponto centra do negócio e possivelmente o mais possivelmente o mais
+complexo: a geração de equações. As geração das equações envolve
+dois objetos. Um objeto \textit{Statement}, responsável por armazenar
+as informações de uma equação, à dizer: a afirmação sendo feita e
+se seu resultado está correto ou não (a reposta da afirmação).
+O outro objeto envolvido neste processo é o \textit{StatementGenerator},
+responsável por gerar \textit{Statements}.
 
-Implementados estes mecanismos essenciais para o jogo, pude me focar no 
-ponto centra do negócio e possivelmente o mais possivelmente o mais complexo: a geração de equações.
+A classe \textit{StatementGenerator} conta com um método
+\textit{getStatement} que realiza o processamento para gerar um novo
+\textit{Statement}. Esta função recebe como argumento um inteiro que
+simboliza a dificuldade da equação, a cada iteração do usuário
+armazenada no objeto \textit{Match} a dificuldade é incrementada
+e repassada para o gerador. O valor da dificuldade é utilizado
+internamente no para selecionar qual operador será utilizado e como
+multiplicador nos números componentes das equações. Superficialmente
+falando, as equações são geradas através da randomização de
+valores e operadores (com suas respectivas dificuldades processadas),
+seguido da execução da equação para determinar seu resultado e a
+geração, em 50\% dos casos, de um valor errado, de modo que a resposta
+não seja sempre correta. 
 
-O aspecto central do laço do jogo consiste em apresentar uma equação
-ao usuário com a possibilidade de ele responder se ela está correta ou
-não. Internamente, uma equação é composta por uma afirmação e o
-resultado dessa afirmação. Para permitir a interação com o usuário,
-foram adicionados eventos aos botoes de certo ou errado que ao serem
-clicados vão pedir para a classe Match se o resultado da equação atual
-está correto informar o usuário do resultado.
+O objeto \textit{StatementGenerator} reside como membro de classe
+do objeto \texit{Match} e a cada interação com o usuário
+uma nova equação é gerada por ele e armazenada no atributo
+\texit{currentStatement} do objeto Match. Ao final das iterações com
+o usuário o evento \textit{endOfMatch} é lançado onde os pontos são
+computados, armazenados e mostrados para o usuário. Neste ponto é
+possível também começar outra partida para reiniciar o processo.
 
 %posteriori
 Uma estratégia interessante que foi adotada na construção foi
