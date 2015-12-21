@@ -123,7 +123,7 @@ No nesta etapa não havia um gerador de equações, o jogo
 contava apenas com uma coleção de equações preestabelecidas que eram
 selecionadas aleatoriamente a cada turno. Isso se provou uma boa escolha
 pois possibilitou que o desenvolvimento se focasse em outros aspectos
-importantes como a elaboração do laço do jogo, ranking, entre outros.
+importantes como a elaboração do laço do jogo, ranking, configurações entre outros.
 
 O ranking serve para armazenar o resultado de cada partida do jogador
 possibilitando uma percepção de histórico da performance do jogador.
@@ -137,6 +137,17 @@ não obstante, a interface totalmente orientada a eventos do IndexedDb
 introduz uma complexidade desnecessária para um jogo simples.
 A classe ranking é simplesmente uma interface para converter partidas e armazenar
 e recuperas estas informações em Local Storage.
+
+O objeto \textit{Settings}, assim como o Ranking, utiliza Local Storage
+e provê uma interface para armazenar e recuperar preferências sobre o jogo.
+Cada campo editável na tela de configurações contém listeners prontos
+para registrar no objeto \textit{Settings} cada mudança que ocorrer em seus estados.
+Os objetos que utilizam estas configurações também o fazem através do objeto settings
+então a validade das configurações é sempre garantida.
+
+
+Implementados estes mecanismos essenciais para o jogo, pude me focar no 
+ponto centra do negócio e possivelmente o mais possivelmente o mais complexo: a geração de equações.
 
 O aspecto central do laço do jogo consiste em apresentar uma equação
 ao usuário com a possibilidade de ele responder se ela está correta ou
