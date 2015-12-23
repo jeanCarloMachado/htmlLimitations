@@ -25,7 +25,7 @@ etc. Similarmente, existem muitas API's de nuvem como os serviços
 de impressão do ICloud ou Google Cloud que estão disponíveis para
 aplicações nativas mas não para HTML5. Outros serviços utilitários
 como o C2DM do Google que está disponível para desenvolvedores Android
-para utilizar serviços de \texit{push} também não estão disponíveis
+para utilizar serviços de \textit{push} também não estão disponíveis
 para o HTML5.
 \end{quote}
 
@@ -62,39 +62,41 @@ maior o documento mais lenta a renderização.
 
 \subsection{Canvas}
 
-
+A literatura aponta várias limitações distintas na API do canvas.
 Segundo \autocite{html5mostwanted}, os aspectos negativos do canvas é
 que a performance varia de plataformas para plataformas e não existe
 implementação nativa para animações.
 
-A API canvas cresceu com o tempo, e algumas funcionalidades - como
-suporte a texto, foram adicionadas tardiamente. E alguns navegadores
-lançaram antes da especificação estar completa e hoje tem problema de
-suporte para essas áreas \autocite{diveIntohtml}. 
-
-Para navegadores antigos, abaixo do Internet Explorer 9,
-existe o polyfill Explorer Canvas do Google, que emula em JavaScript as
-funcionalidades do canvas.
-
-Muitas das variadas implementações do canvas tem problemas de performance.
+O problema de performance  mencionado pode ser remediado com o FastCanvas.
 O FastCanvas é uma iniciativa híbrida para Android que busca mitigar os
 problemas de performance do Canvas com uma API nativa. Não obstante, o
-FastCanvas não suporta a especificação do canvas completamente, não
-permite ser integrado com outros elementos do DOM.
+FastCanvas não suporta a especificação do canvas completamente,
 
-Por ser apenas sistema de mapa de pixels canvas carece de integração
-com o restante das tecnologias da WEB. Não é possível aproveitar as
-facilidades de animações do CSS, manipulação do DOM, entre outras
-tecnologias.
+A implementação de animações de fato não existe no canvas,
+similarmente carece-se de integração com as demais tecnologias
+da WEB. Os desenhos do canvas não podem ser acessados via DOM nem
+serem manipulados via CSS, todas as modificações necessárias devem
+ser feitas via JavaScript. CSS já conta com definições quanto a
+animações e a manipulação de elementos do canvas através do DOM
+facilitaria uma gama de situações, por exemplo com interações do
+usuário com algum elemento do canvas. Que hoje são geralmente feitos
+acessando as coordenadas do canvas onde uma interação aconteceu e
+fazendo o processamento com aquela determinada área, poderia ser feito
+adicionando-se um \textit{listener} para determinado objeto do canvas.
 
-Um fator descoberto durante o desenvolvimento do protótipo é que o
-Canvas tem uma característica peculiar quanto ao seu tamanho.
-Em suma existem dois tamanhos, o tamanho do elemento e da superfície de
+No protótipo, especificamente na classe \textit{Countdown}, foi necessário
+adicionar regras de estilo no JavaScript para  a interação com o canvas
+ficar completa.
+
+Uma característica peculiar descoberta durante o desenvolvimento
+do protótipo é que o Canvas pode gerar resultados inesperados se
+seus tamanhos de elemento e tela diferirem de formas específicas. Em
+suma, existem dois tamanhos, o tamanho do elemento e da superfície de
 desenho. Quando o tamanho do elemento é maior do que o da superfície
 de desenho do documento escala a superfície de desenho para preencher o
 elemento, o que pode gerar resultados inesperados.
 
-Canvas também não permite a manipulação das camadas já desenhadas, sendo 
+Canvas também não permite a manipulação das camadas já desenhadas, sendo
 necessário sobrescrever o canvas ou limpá-lo.
 
 \subsection{WebGL}
@@ -247,10 +249,6 @@ Grande parte da detecção de funcionalidades é feita através de
 JavaScript, isso força os desenvolvedores a criarem pelo menos parte da
 marcação em JavaScript, isso pode ser um fator limitante para o uso
 generalizado de HTML5 \autocite{diveIntohtml}.
-
-Desktop/Firefox
-Desktop/Google Chrome
-Smatphone/Android
 
 \subsection{Scroll}
 \autocite[pp. 9]{aSeriousContender} cita que:
