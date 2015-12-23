@@ -1,43 +1,39 @@
 \begin{draft}
 
+\section{LIMITAÇÕES}
+
 Muitos dos problemas dos jogos multiplataforma não são
 específicos dos jogos, mas aplicam-se a todos tipos de software
 \parencite{currentStateCrossPlatform}. Alguns problemas são inerentes
-das tecnologias, outras dos dispostivos ou da característica
+das tecnologias, outras dos dispositivos ou da característica
 multiplataforma.
 
-Abaixo constam as limitações encontradas durante a
-pesquisa e concepção do jogo.
+Não obstante, abaixo constam as limitações aplicáveis, mesmo
+que não exclusivamente, aos jogos. Encontradas durante a pesquisa e
+concepção do protótipo.
 
-\section{LIMITAÇÕES}
+\subsection{Recursos}
 
 Apesar da grande maioria dos recursos oferecidos nativamente
 nos dispositivos estar presente em HTML5 ainda existem algumas
 funcionalidades faltando para este tipo de aplicação.
 
-\cite{html5Tradeoffs} cita algumas limitações no contexto geral.
-
-Não podemos mudar a imagem de fundo do
-dispositivo, ou adicionar toques etc. Similarmente, existem muitas
-API's de nuvem como os serviços de impressão do ICloud ou Google
-Cloud que estão disponíveis para aplicações nativas mas não para
-HTML5. Outros serviços utilitários como o C2DM do Google que está
-disponível para desenvolvedores Android para utilizar serviços de push
-também não estão disponíveis para o HTML5.
-
-\cite{browserGamesTechnologyAndFuture} apresenta as seguintes limitações
-no contexto de jogos de navegador
-
-\begin{itemize}
-\item Não podem ser instalados em um dispositivo móvel como um aplicativo separado
-\item Não tem acesso a funcionalidades específicas dos dispositivos e recursos como notificações, use de hardware nativo ou comunicação entre aplicativos.
-\end{itemize}
+\cite{html5Tradeoffs} cita algumas limitações no contexto geral
+\begin{quote}
+Não podemos mudar a imagem de fundo do dispositivo, ou adicionar toques
+etc. Similarmente, existem muitas API's de nuvem como os serviços
+de impressão do ICloud ou Google Cloud que estão disponíveis para
+aplicações nativas mas não para HTML5. Outros serviços utilitários
+como o C2DM do Google que está disponível para desenvolvedores Android
+para utilizar serviços de \texit{push} também não estão disponíveis
+para o HTML5.
+\end{quote}
 
 \subsection{VERSÕES}
 A grande maioria dos dispositivos atualmente no mercado utilizam
 obsoletas de seus softwares. Isso dificulta o desenvolvimento. Se a
 tecnologia de tradução para o navegador utilizar o a classe Webview do
-Android - como o Apache Cordova faz - as versões mais antigas podem ser
+Android, como o Apache Cordova faz, as versões mais antigas podem ser
 penalizadas com problemas de performance ou falta de recursos.
 
 Segundo \cite{crossPlatformMobileGame}
@@ -52,12 +48,12 @@ não é prática.
 
 \subsection{OFFLINE}
 
+Quando o download offline falha o navegador emite um evento mas não há
+indicação de qual problema aconteceu. Isso pode tornar a depuração
+ainda mais complicada que o usual \autocite{diveIntohtml}.
+
 Refresh duplo para ver assets cacheados. Ver:
 http://buildnewgames.com/game-asset-management/
-
-Quando o download offline falha o browser emite um evento mas não há
-indicação de qual problema aconteceu. Isso pode tornar a depuração
-tinda complicada que o usual \autocite{diveIntohtml}.
 
 \subsection{SVG}
 
@@ -66,12 +62,17 @@ maior o documento mais lenta a renderização.
 
 \subsection{Canvas}
 
+
+Segundo \autocite{html5mostwanted}, os aspectos negativos do canvas é
+que a performance varia de plataformas para plataformas e não existe
+implementação nativa para animações.
+
 A API canvas cresceu com o tempo, e algumas funcionalidades - como
 suporte a texto, foram adicionadas tardiamente. E alguns navegadores
 lançaram antes da especificação estar completa e hoje tem problema de
-suporte para essas áreas \autocite{diveIntohtml}. Não obstante, canvas
-está presente em todos os navegadores populares à partir do Internet
-Explorer 9. Para navegadores antigos, abaixo do Internet Explorer 9,
+suporte para essas áreas \autocite{diveIntohtml}. 
+
+Para navegadores antigos, abaixo do Internet Explorer 9,
 existe o polyfill Explorer Canvas do Google, que emula em JavaScript as
 funcionalidades do canvas.
 
@@ -80,10 +81,6 @@ O FastCanvas é uma iniciativa híbrida para Android que busca mitigar os
 problemas de performance do Canvas com uma API nativa. Não obstante, o
 FastCanvas não suporta a especificação do canvas completamente, não
 permite ser integrado com outros elementos do DOM.
-
-Segundo \autocite{html5mostwanted}, os aspectos negativos do canvas é
-que a performance varia de plataformas para plataformas e não existe
-implementação nativa para animações.
 
 Por ser apenas sistema de mapa de pixels canvas carece de integração
 com o restante das tecnologias da WEB. Não é possível aproveitar as
@@ -149,15 +146,14 @@ http://camendesign.com/code/video_for_everybody \end{verbatim} é um
 polyfill que recorre à flash quando o vídeo não é suportado pelo
 navegador.
 
-
 \subsection{ASSETS}
 
 Trafegar muitos assets deixa o sistema lento. Pode-se contornar este
 problema utilizando páginas de carregamento e/ou cache;
 
 Outro problema relativo aos assets é descrito por \cite{howBrowsersWork}
-scripts requerendo informações de estilo durante o processo de 
-parsing. Se o estilo ainda não foi carregado o script vai utilizar 
+scripts requerendo informações de estilo durante o processo de
+parse. Se o estilo ainda não foi carregado o script vai utilizar
 informações erradas, causando uma série de problemas.
 
 \subsection{Codecs}
@@ -268,5 +264,17 @@ Mobile.
 Em praticamente nenhuma das tecnologias da WEB é possível armazenar objetos e  seu estado atual.
 
 IndexedDB é uma API interessante mas para projetos menores é um tanto complexa.
+
+%unsorted
+
+\cite{browserGamesTechnologyAndFuture} apresenta as seguintes limitações
+no contexto de jogos de navegador.
+
+\begin{itemize}
+\item Não podem ser instalados em um dispositivo móvel como um aplicativo separado
+\item Não tem acesso a funcionalidades específicas dos dispositivos e recursos como notificações, use de hardware nativo ou comunicação entre aplicativos.
+\end{itemize}
+
+
 
 \end{draft}
