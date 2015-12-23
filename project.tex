@@ -138,6 +138,16 @@ Match computa se a resposta está correta ou não e o tempo que levou
 para chegar ao resultado. Quando não existem mais perguntas para serem
 processadas é lançado um evento de final de partida onde o resultado
 pode ser processado pelas demais classes do jogo.
+A figura \ref{fig:interface} demostra o mecanismo da classe \texit{Match} integrado
+ao jogo.
+
+\end{draft}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{board.png}
+	\caption{Interface do jogo com equação sendo apresentada}
+    \label{fig:interface}
+\end{figure}
 
 A construção da classe Match concebeu o comportamento principal do
 jogo, entretanto, nesta etapa não havia um gerador de equações. O
@@ -162,51 +172,56 @@ converter partidas e armazenar e recuperas estas informações em Local
 Storage.
 
 O objeto \textit{Settings}, assim como o Ranking, utiliza Local Storage
-e provê uma interface para armazenar e recuperar preferências sobre o jogo.
-Cada campo editável na tela de configurações contém listeners prontos
-para registrar no objeto \textit{Settings} cada mudança que ocorrer em seus estados.
-Os objetos que utilizam estas configurações também o fazem através do objeto settings
-então a validade das configurações é sempre garantida.
+e provê uma interface para armazenar e recuperar preferências sobre
+o jogo. Cada campo editável na tela de configurações contém
+\textit{listeners} prontos para registrar no objeto \textit{Settings}
+cada mudança que ocorrer em seus estados. Os objetos que utilizam estas
+configurações também o fazem através do objeto Settings, nunca
+acessando configurações diretamente em Web Storage, dessa forma a
+validade das configurações é garantida a a migração para uma forma
+de armazenamento diferente é permitida com relativa facilidade.
 
-Implementados estes mecanismos essenciais para o jogo, pude me focar no
-ponto centra do negócio e possivelmente o mais possivelmente o mais
-complexo: a geração de equações. As geração das equações envolve
-dois objetos. Um objeto \textit{Statement}, responsável por armazenar
-as informações de uma equação, à dizer: a afirmação sendo feita e
-se seu resultado está correto ou não (a reposta da afirmação).
-O outro objeto envolvido neste processo é o \textit{StatementGenerator},
-responsável por gerar \textit{Statements}.
+Implementados estes mecanismos essenciais para o jogo, pude me
+focar no ponto central do negócio e possivelmente o mais complexo:
+a geração de equações. As geração das equações é feita
+randomicamente envolve duas classes. Um objeto \textit{Statement},
+responsável por armazenar as informações de uma equação, à dizer:
+a afirmação sendo feita e se seu resultado está correto ou não (a
+reposta da afirmação). O outro objeto envolvido neste processo é o
+\textit{StatementGenerator}, responsável por gerar \textit{Statements}.
 
 A classe \textit{StatementGenerator} conta com um método
-\textit{getStatement} que realiza o processamento para gerar um novo
-\textit{Statement}. Esta função recebe como argumento um inteiro que
-simboliza a dificuldade da equação, a cada iteração do usuário
-armazenada no objeto \textit{Match} a dificuldade é incrementada
-e repassada para o gerador. O valor da dificuldade é utilizado
-internamente no para selecionar qual operador será utilizado e como
-multiplicador nos números componentes das equações. Superficialmente
-falando, as equações são geradas através da randomização de
-valores e operadores (com suas respectivas dificuldades processadas),
-seguido da execução da equação para determinar seu resultado e a
-geração, em 50\% dos casos, de um valor errado, de modo que a resposta
-não seja sempre correta. 
+\textit{getStatement} que realiza o processamento para gerar um
+novo \textit{Statement}. Esta função recebe como argumento um
+inteiro que simboliza a dificuldade da equação, a cada iteração
+do usuário armazenada no objeto \textit{Match} a dificuldade é
+incrementada e repassada para o gerador. O valor da dificuldade
+é utilizado internamente no para selecionar qual operador será
+utilizado e o tamanho do multiplicador dos números que compõem
+as equações. Para colocar claramente: as equações são geradas
+através da randomização de valores e operadores (com suas respectivas
+dificuldades processadas), seguido da execução da equação para
+determinar seu resultado e a geração, em 50\% dos casos, de um valor
+errado, de modo que a resposta não seja sempre correta.
 
-O objeto \textit{StatementGenerator} reside como membro de classe
-do objeto \textit{Match} e a cada interação com o usuário
-uma nova equação é gerada por ele e armazenada no atributo
-\textit{currentStatement} do objeto \textit{Match}. Ao final das iterações com
-o usuário o evento \textit{endOfMatch} é lançado onde os pontos são
-computados, armazenados e mostrados para o usuário. Neste ponto é
-possível também começar outra partida reiniciando o processo.
+O objeto \textit{StatementGenerator} reside como membro de classe de
+\textit{Match} e a cada interação com o usuário uma nova equação
+é gerada por ele e armazenada no atributo \textit{currentStatement}
+do objeto \textit{Match}. Ao final das iterações com o usuário o
+evento \textit{endOfMatch} é lançado onde os pontos são computados,
+armazenados e mostrados para o usuário. Neste ponto é possível
+também começar outra partida reiniciando o processo.
 
-Estas classes comportam os requisitos funcionais do jogo. Ao final
-do processo foi identificado que muitas vezes o usuário começa uma
-partida e não está prestando atenção para a tela perdendo pontos
-neste período inicial. Para reduzir este problema foi adicionada 
-a classe \textit{Countdown}, que é basicamente um temporizador regressivo que 
-demarca o início de cada partida. O temporizador foi desenvolvido em canvas
-e apresenta 4 demarcações desenhadas a cada 90 graus, formando um circulo com uma
-mensagem no centro, neste caso os números do temporizador.
+Estas classes comportam os requisitos funcionais do jogo. Após um
+período de uso, foi identificado que muitas vezes o usuário começa
+uma partida e não está prestando atenção para a tela o que acarreta
+na perd de pontos no período inicial da partida. Para reduzir este
+problema foi adicionada a classe \textit{Countdown}, que é basicamente
+um temporizador regressivo que demarca o início de cada partida,
+notificando o usuário que o jogo está para iniciar. O temporizador foi
+desenvolvido em canvas e apresenta 4 demarcações desenhadas a cada 90
+graus, formando um circulo com uma mensagem no centro, neste caso os
+números do temporizador.
 
 %posteriori
 Uma estratégia interessante que foi adotada na construção foi
@@ -218,14 +233,6 @@ Outro aspecto positivo foi a utilização de um meta objeto para
 encapsular os demais, neste caso utilizei o nome MyMath, funcionando
 como um namespace, garantindo que problemas de conflitos de nomes não
 aconteçam.
-
-\end{draft}
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{board.png}
-	\caption{Interface do jogo com equação sendo apresentada}
-    \label{fig:interface}
-\end{figure}
 
 \begin{figure}
     \centering
