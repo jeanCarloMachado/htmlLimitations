@@ -137,26 +137,29 @@ pergunta e esperar por uma resposta. Quando a resposta é dada a classe
 Match computa se a resposta está correta ou não e o tempo que levou
 para chegar ao resultado. Quando não existem mais perguntas para serem
 processadas é lançado um evento de final de partida onde o resultado
-pode ser computado e processado pelas demais classes do jogo.
+pode ser processado pelas demais classes do jogo.
 
-No nesta etapa não havia um gerador de equações, o jogo
-contava apenas com uma coleção de equações preestabelecidas que eram
-selecionadas aleatoriamente a cada turno. Isso se provou uma boa escolha
-pois possibilitou que o desenvolvimento se focasse em outros aspectos
-importantes como a elaboração do laço do jogo, ranking, configurações entre outros.
+A construção da classe Match concebeu o comportamento principal do
+jogo, entretanto, nesta etapa não havia um gerador de equações. O
+jogo contava apenas com uma coleção de equações preestabelecidas que
+eram selecionadas aleatoriamente a cada turno. Isso se provou uma boa
+escolha pois possibilitou que o desenvolvimento se focasse em outros
+aspectos importantes como a elaboração do laço do jogo, ranking,
+configurações entre outros.
 
 O ranking serve para armazenar o resultado de cada partida do jogador
 possibilitando uma percepção de histórico da performance do jogador.
-Os dados são armazenados em Local Storage, escolhido por
-ter uma API simples; visto que os requerimentos do protótipo não
-demandam grande performance ou armazenamento massivo de dados a opção
-mais modesta foi preferida. Arquiteturalmente falando, IndexedDb se
-encaixaria bem na aplicação por ter uma interface chave valor,
-ideal para um ranking, onde as chaves poderiam ser as posições do usuário,
-não obstante, a interface totalmente orientada a eventos do IndexedDb
-introduz uma complexidade desnecessária para um jogo simples.
-A classe ranking é simplesmente uma interface para converter partidas e armazenar
-e recuperas estas informações em Local Storage.
+Os dados são armazenados em Local Storage, escolhido por ter uma API
+simples. Arquiteturalmente falando, IndexedDb se encaixaria bem na
+aplicação por ter uma interface chave valor, ideal para um ranking,
+onde as chaves poderiam ser as posições do usuário. Não obstante,
+a interface totalmente orientada a eventos do IndexedDb introduz uma
+camada de complexidade desnecessária para os casos simples. Visto que
+os requerimentos do protótipo não demandam grande performance ou
+armazenamento massivo de dados a opção mais modesta, Local Storage,
+foi preferida. A classe ranking é simplesmente uma interface para
+converter partidas e armazenar e recuperas estas informações em Local
+Storage.
 
 O objeto \textit{Settings}, assim como o Ranking, utiliza Local Storage
 e provê uma interface para armazenar e recuperar preferências sobre o jogo.
