@@ -68,6 +68,7 @@ Abaixo segue o diagrama de classes simplificado \footnote{Nos anexos pode-se enc
     \centering
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{ClassesSimpleView.png}
 	\caption{Diagrama de classes simplificado}
+    \label{fig:simpleDiagram}
 \end{figure}
 
 \begin{draft}
@@ -117,27 +118,26 @@ adicionamos esta funcionalidade pois a quantidade de telas é realmente
 baixa e os benefícios introduzidos seriam baixos.
 
 Ao iniciar a execução do JavaScript todas as divs que representam
-telas foram escondidas. O script mostra em seguida o HTML de
-carregamento de recursos. No final do carregamento de todos os recursos
-é disparado o evento \textit{window.onload} neste momento inicia-se uma
-partida. Nesta fase também foram adicionados \textit{listeners} aos
-elementos interativos do jogo, como clicar nas configurações e nos
-botões de certo e errado da página principal.
-Os botões de certo
-e errado serão explicados na sequência.
+telas são escondidas e a div de carregamento de recursos é mostrada em
+seguida. No final do carregamento de todos os recursos é disparado o
+evento \textit{window.onload} neste momento carrega-se a div da partida
+e dá-se início a ela. Durante esta fase do desenvolvimento também
+foram adicionados \textit{listeners} aos demais elementos interativos do
+jogo, como clicar nas configurações e nos botões de certo e errado da
+página principal.
 
-
-Após o esqueleto da aplicação estar definido foi introduzido a lógica de negócio.
-De toda a regra do jogo, a classe Match é a mais importante.
-Ela simboliza uma partida dentro do jogo, é na classe Match que 
-as informações de quantas equações existem, quantas foram acertadas
-e o tempo total da partida e sua pontuação. Seu propósito é iterar 
-a cada pergunta e esperar por uma resposta. Quando a resposta é dada
-a classe Match computa se a resposta está correta ou não e o tempo 
-que levou para chegar ao resultado. Quando não existem mais perguntas 
-para serem processadas é lançado um evento de final de partida onde 
-o resultado pode ser computado, demostrado para o usuário e registrado 
-no ranking.
+Após o esqueleto da aplicação estar definido foi introduzido a
+lógica de negócio. A figura \ref{fig:simpleDiagram} apresenta do
+a relação entre as classes do jogo. De toda a regra do jogo, a
+classe Match é a mais importante. Ela simboliza uma partida dentro do
+jogo, é na classe Match que as informações de quantas equações
+existem, quantas foram acertadas e o tempo total da partida bem como
+sua pontuação atual. O propósito da classe Match é iterar a cada
+pergunta e esperar por uma resposta. Quando a resposta é dada a classe
+Match computa se a resposta está correta ou não e o tempo que levou
+para chegar ao resultado. Quando não existem mais perguntas para serem
+processadas é lançado um evento de final de partida onde o resultado
+pode ser computado e processado pelas demais classes do jogo.
 
 No nesta etapa não havia um gerador de equações, o jogo
 contava apenas com uma coleção de equações preestabelecidas que eram
@@ -228,12 +228,14 @@ aconteçam.
     \centering
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{score.png}
 	\caption{Placar do jogo}
+    \label{fig:placar}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{settings.png}
 	\caption{Configurações do jogo}
+    \label{fig:cofigurations}
 \end{figure}
 
 \begin{draft}
