@@ -1,13 +1,23 @@
-\chapter{CONVERSORES PARA HTML}
-\begin{draft}
+\chapter{Diagrama de classes}
 
-Além da possibilidade de escrever em HTML, pode-se optar pela
-alternativa de utilizar-se um conversor de linguagens.
+A figura \ref{fig:fullDiagram} é o diagrama de classes detalhado do protótipo.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{ClassesFullView.png}
+	\caption{Diagrama de classes completo}
+    \label{fig:fullDiagram}
+\end{figure}
 
-\subsection{Bibliotecas relevantes do desenvolvimento de jogos}
 
-Desenvolvedores da WEB são geralmente de mente aberta e desenvolveram
-uma variedade de bibliotecas e frameworks pela internet \autocite{html5mostwanted}.
+\chapter{Bibliotecas relevantes do desenvolvimento de jogos}
+
+A quantidade de ferramentas WEB á disposição dos usuário é
+enorme. Segundo \autocite{html5mostwanted} desenvolvedores da WEB são
+geralmente de mente aberta e desenvolveram uma variedade de bibliotecas e frameworks pela internet. Dessa forma, é uma tarefa praticamente
+impossível ter habilidade em todas as ferramentas disponíveis.
+Não obstante é importante que os desenvolvedores ao menos conheça
+as ferramentas mais importantes disponíveis para que no momento
+necessário saibam qual aprender.
 
 \cite{creatingFun} ressalta a importância de sermos moderados
 quanto a escolha de bibliotecas no contexto WEB multiplataforma.
@@ -28,10 +38,9 @@ Esta preocupação aumenta no contexto de desenvolvimento de jogos.
 Ainda segundo \cite{creatingFun} o site MicroJS https://microjs.com
 oferece uma coleção de micro bibliotecas focadas em áreas
 particulares em detrimento de grandes bibliotecas cheias de
-funcitnalidades.
+funcionalidades.
 
-
-\subsubsection{WebGL}
+\section{WebGL}
 
 CocoonJS é uma aplicativo híbrido que preenche a fraca implementação
 de WebGL nos dispositivos móveis possibilitando se desenvolver em
@@ -45,7 +54,6 @@ tempo manipulando os detalhes da WebGL. Possibilita trabalhar com
 efeitos, luzes, cenas e outras abstrações em detrimento de shaders,
 vértices, e conceitos mais primitivos.
 
-
 \section{Frameworks de jogos}
 
 Com o intuito de simplificar o processo para os desenvolvedores,
@@ -53,12 +61,10 @@ auxiliando-os a focarem-se apenas nas soluções que estão
 desenvolvendo, foram criados os frameworks para desenvolvimento de
 jogos. Alguns frameworks reconhecidos são:
 
-\begin{itemize}
-\item enchant.js: dentre suas funcionalidades constam: orientação à, orientado à eventos, contém um motor de animação,
-\item suporta WebGL e Canvas, etc three.js: considerada leve, renderiza, WebGL e Canvas, arquitetura procedural
-\item limeJs: bom para 2d
-\item quintus: especialista em jogos de plataforma 2D
-\end{itemize}
+enchant.js: dentre suas funcionalidades constam: orientação à, orientado à eventos, contém um motor de animação,
+suporta WebGL e Canvas, etc three.js: considerada leve, renderiza, WebGL e Canvas, arquitetura procedural
+limeJs: bom para 2d
+quintus: especialista em jogos de plataforma 2D
 
 \section{CROSSWALK}
 
@@ -67,46 +73,15 @@ versão Open-source do Google Chrome. Isso faz com que o software se
 comporte da mesma forma para todas as versões de dispositivos Android.
 
 \section{PHONEGAP}
+
+PhoneGap é uma plataforma que permite o desenvolvimento de aplicativos híbridos baseados nas tecnologias da WEB.
+
 \section{PHONEGAP CLOUD}
 
 Este serviço possibilita que se faça upload de um arquivo compactado
 contendo os fontes – ou apontando para um repositório no GitHub –
 que no tempo desta pesquisa não estava funcionando; e se gere o APK
 para o Android nativamente.
-
-\section{NODEJS}
-
-Permite rodar JavaScript fora do navegador. Utiliza um modelo dirigido
-à eventos sem bloqueio, tornando-o rápido e eficiente.
-
-\chapter{ALTERNATIVAS AO JAVASCRIPT}
-
-Abaixo seguem algumas tecnologias que servem de alternativa ao
-JavaScript.
-
-\section{TYPESCRIPT}
-
-Conhecido como uma versão estendida do JavaScript que compila para
-JavaScript normal.
-
-\section{DART}
-
-Google. DartVM é uma máquina virtual que está embebido no Google
-Chrome. Significante melhorias em performance quando comparado
-ao JavaScript. Existe o dart2js que compila código em Dart para
-JavaScript.
-
-\chapter{SISTEMAS DE BUILDING}
-
-Aquivos JavaScript são requisitados do servidor assincronamente. Isso
-pode levar a tempos de requisição pouco desejáveis. Uma saída seria
-escrever o código em apenas um arquivo mais isso leva a gerência de
-código bagunçada. A saída mais comum entre desenvolvedores é utilizá
-ruma ferramenta que junta todos os arquivos e disponibiliza apenas um
-para o usuário.
-
-Utiliza o conceito de streams para aplicar todas as modificações sobre
-um arquivo de uma vez só.
 
 \chapter{AMBIENTES PARA DESENVOLVIMENTO HTML5}
 
@@ -150,22 +125,44 @@ na nuvem, possibilitou a Intel criar compiladores para cada uma das
 plataformas disponibilizadas pelo PhoneGap, que é o framework polyfill
 utilizado na solução.
 
-\chapter{METODOLOGIA DE DESENVOLVIMENTO DE SOFTWARE PARA A CONSTRUÇÃO DE GAMES}
+
+\chapter{ALTERNATIVAS AO JAVASCRIPT}
+
+Abaixo seguem algumas tecnologias que servem de alternativa ao
+JavaScript.
+
+\section{TYPESCRIPT}
+
+Conhecido como uma versão estendida do JavaScript que compila para
+JavaScript normal.
+
+\section{DART}
+
+Google. DartVM é uma máquina virtual que está embebido no Google
+Chrome. Significante melhorias em performance quando comparado
+ao JavaScript. Existe o dart2js que compila código em Dart para
+JavaScript.
+
+\chapter{CONVERSORES PARA HTML}
+
+Além da possibilidade de escrever em HTML, pode-se optar pela
+alternativa de utilizar-se um conversor de linguagens.
+
+\chapter{METODOLOGIAS DE CRIAÇÃO DE SOFTWARE PARA GAMES}
 
 Como o jogo é um software complexo demanda-se a utilização de
 metodologias de engenharia de software, dentre os processos de software
 mais conhecidos academicamente destacamos:
 
-\begin{itemize}
-\item OpenUP: este é bem detalhado e de característica iterativa e
+OpenUP: este é bem detalhado e de característica iterativa e
 incremental. Gerando assim, um levantamento mais apurado dos riscos,
 requisitos e outros detalhes do sistema e a criação incremental do
 sistema, com requisitos maleáveis;
 
-\item Cascata: processo antigo, caracteriza-se por ser pouco maleável aos
+Cascata: processo antigo, caracteriza-se por ser pouco maleável aos
 requisitos mapeados posteriormente ao processo de análise;
 
-\item  Processo ágil - SCRUM: sua utilização é flexível e sendo
+Processo ágil - SCRUM: sua utilização é flexível e sendo
 um método ágil especifica pouca documentação, ou como dizem,
 somente a documentação necessária, este processo é bem conhecido e
 aceito na comunidade de desenvolvimento de software. Suas principais
@@ -174,18 +171,21 @@ uma série de iterações chamadas sprints. Cada sprint consiste
 tipicamente em duas a quatro semanas. É bem aplicado a projetos que
 mudam constantemente e que demandam rápidas adaptações;
 
-\item Processo ágil – XP: tem muitas características similares ao SCRUM
+Processo ágil – XP: tem muitas características similares ao SCRUM
 por este também ser um processo ágil. Dentre suas especifidades
 destaca-se: versões frequentes, pequenos ciclos de desenvolvimento que
 buscam aumentar a produtividade, introduzem checkpoints onde os clientes
 podem agregar novas funcionalidades;
-\end{itemize}
 
-\end{draft}
+\chapter{SISTEMAS DE BUILDING}
 
-\chapter{Diagrama de classes}
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{ClassesFullView.png}
-	\caption{Diagrama de classes completo}
-\end{figure}
+Aquivos JavaScript são requisitados do servidor assincronamente. Isso
+pode levar a tempos de requisição pouco desejáveis. Uma saída seria
+escrever o código em apenas um arquivo mais isso leva a gerência de
+código bagunçada. A saída mais comum entre desenvolvedores é utilizá
+ruma ferramenta que junta todos os arquivos e disponibiliza apenas um
+para o usuário.
+
+Utiliza o conceito de streams para aplicar todas as modificações sobre
+um arquivo de uma vez só.
+

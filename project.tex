@@ -160,7 +160,11 @@ cálculo acima descrito.
 \begin{figure}
 \centering
 \begin{verbatim}
-parseInt((this.rightAnswered * 10 ) / ((this.answersTotal - this.rightAnswered) + (this.duration*0.2)))
+parseInt(
+(this.rightAnswered * 10 ) / (
+    (this.answersTotal - this.rightAnswered) 
+    + (this.duration*0.2))
+)
 \end{verbatim}
 \caption{Exemplo de utilização de funções imediatamente invocadas}
 \label{fig:punctuationCalculation}
