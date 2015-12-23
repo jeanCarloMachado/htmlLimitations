@@ -96,6 +96,11 @@ a largura de cada tela da SPA é 98\% do tamanho total disponível na
 tela. Já o tamanho da fonte do quadro principal, representado pelo id
 \textit{billboard} é duas vezes o tamanho da fonte normal 2em.
 
+Sem a ajuda de bibliotecas especializadas o processo de criação da
+interface não é trivial. Apesar de a interface ser simples, fazer os
+elementos se alinharem em diversos tamanhos de telas não é fácill e
+pode se tornar um grande problma para interfaces realmente complexas.
+
 Após a concepção do CSS deu-se início ao desenvolvimento da lógica do 
 negócio em JavaScript. O primeiro passo consistiu em fazer o mecanismo 
 de múltiplas telas em JavaScript. Ao iniciar a execução do JavaScript
@@ -196,15 +201,6 @@ encapsular os demais, neste caso utilizei o nome MyMath, funcionando
 como um namespace, garantindo que problemas de conflitos de nomes não
 aconteçam.
 
-Um processo trabalhoso foi a criação da interface sem ajuda de plugins.
-Apesar de a interface ser simples, fazer os elementos se alinharem em 
-diversos tamanhos de telas não é um processo trivial sem a ajuda de uma
-biblioteca especializada como o jQuery UI.
-
-Escolhi a simplicidade para não precisar ficar muito tempo aprendendo
-as coisas em detrimento do refinamento da pesquisa.
-
-
 \end{draft}
 \begin{figure}
     \centering
@@ -280,7 +276,6 @@ CSS demonstradas abaixo.
 \end{verbatim}
 
 \subsection{JavaScript}
-
 \subsubsection{Modo estrito}
 Algumas das recomendações nesta seção podem não se aplicar
 exclusivamente ao desenvolvimento de jogos. Outrossim são de grande
