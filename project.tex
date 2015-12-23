@@ -105,11 +105,11 @@ elementos se alinharem em diversos tamanhos de telas não é fácil e
 pode se tornar um grande problema para interfaces realmente complexas.
 
 Após a concepção do CSS deu-se início ao desenvolvimento da lógica
-do negócio em JavaScript. O primeiro passo consistiu em fazer o
-mecanismo de múltiplas telas em um SPA através de JavaScript. Os
+das páginas em JavaScript. O primeiro passo consistiu em fazer o
+mecanismo de múltiplas telas em um único arquivo HTML através de JavaScript. Os
 botões que levam a outras telas, quando clicados, simplesmente escondem
-todas as seções e por fim carrega a que querem mostrar. Aplicativos
-SPA introduzem outros problemas, por exemplo o botão de voltar
+todas as seções e por fim carregam a que querem mostrar. Aplicativos
+SPA introduzem outros desafios, por exemplo o botão de voltar
 perde sua utilização visto que não se está trafegando de uma página
 a outra de fato. HTML5 provê uma API em JavaScript para manipular o histórico
 que pode resolver este problema; não obstante, no protótipo não
@@ -246,6 +246,15 @@ prestes a iniciar uma nova partida.
 	\caption{Contador em Canvas}
     \label{fig:counter}
 \end{figure}
+
+Para melhorar a experiência em desktops foram adicionados controles de
+teclado além dos já presentes botões na interface, possibilitando que
+o usuário utilize o teclado além do mouse. Quando o usuário utilizar
+a seta para esquerda e direita os botões Sim e Não, respectivamente,
+são clicados através de JavaScript. Simular o clique ao invés ao
+invés de duplicar o tratamento das escolhas de resposta foi uma boa
+estratégia pois centralizou o tratamento das respostas e evitou
+duplicação.
 
 \begin{draft}
 %posteriori
