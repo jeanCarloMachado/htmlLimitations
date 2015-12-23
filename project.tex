@@ -62,7 +62,7 @@ Outros aspectos requisitados mas que todavia não fazem parte da regra de negóc
 
 \section{Modelagem}
 
-Abaixo segue o diagrama de classes simplificado \footnote{Nos anexos pode-se encontrar a versão completa}.
+Abaixo segue o diagrama de classes simplificado \footnote{Nos anexos pode-se encontrar a versão completa do diagrama de classes}.
 
 \begin{figure}
     \centering
@@ -170,6 +170,7 @@ converter partidas e armazenar e recuperas estas informações em Local
 Storage. A figura \ref{fig:placar} demostra as informações do resultado
 de uma partida bem como a posição do ranking.
 
+%get a better image with better alignment
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{score.png}
@@ -230,13 +231,21 @@ também começar outra partida reiniciando o processo.
 Estas classes comportam os requisitos funcionais do jogo. Após um
 período de uso, foi identificado que muitas vezes o usuário começa
 uma partida e não está prestando atenção para a tela o que acarreta
-na perd de pontos no período inicial da partida. Para reduzir este
+na perda de pontos no período inicial da partida. Para reduzir este
 problema foi adicionada a classe \textit{Countdown}, que é basicamente
 um temporizador regressivo que demarca o início de cada partida,
-notificando o usuário que o jogo está para iniciar. O temporizador foi
+notificando o usuário quanto falta para a partida iniciar. O temporizador foi
 desenvolvido em canvas e apresenta 4 demarcações desenhadas a cada 90
 graus, formando um circulo com uma mensagem no centro, neste caso os
-números do temporizador.
+números do temporizador. A  figura \ref{fig:counter} demonstra o contador 
+prestes a iniciar uma nova partida.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{countdown.png}
+	\caption{Contador em Canvas}
+    \label{fig:counter}
+\end{figure}
 
 \begin{draft}
 %posteriori
