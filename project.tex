@@ -28,14 +28,13 @@ números e operadores.
 O jogo desenvolvido para o protótipo parece ter uma melhor jogabilidade
 em dispositivos móveis que ambos os jogos acima citados pois não
 requer a presença de um teclado numérico. Os botões de verdadeiro
-ou falso contém todas as possibilidades. A figura \ref{fig:tabuleiro}
+ou falso contém todas as possibilidades. A figura \ref{fig:interface}
 demonstra a interface contendo com os botões.
 
+Abaixo são descritos os requisitos que uma mecânica como a descrita 
+acima deve prover.
 %Também para não interferir na pesquisa busquei não me distanciar do
 %que é considerado padrão em ferramentas e métodos.
-
-%Comecei escrevendo o aplicativo para o Navegador do desktop pois era o
-%que estava mais acessível no momento.
 
 \section{Requisitos}
 
@@ -73,19 +72,25 @@ Abaixo segue o diagrama de classes simplificado \footnote{Nos anexos pode-se enc
 
 \begin{draft}
 \section{Desenvolvimento}
+%Comecei escrevendo o aplicativo para o Navegador do desktop pois era o
+%que estava mais acessível no momento.
 
 O desenvolvimento se deu com uma postura de melhoria progressiva.
 Desenvolvendo a versão mais simples possível para atingir as
 requisitos funcionais. A partir dessa versão, novos recursos foram
-sendo adicionadas para melhorar a experiência do usuário.
+sendo adicionadas para melhorar a experiência do usuário. Iniciei o
+desenvolvimento criando para a plataforma Desktop pois esta contém
+um grande número de ferramentas de desenvolvimento nativas que não
+requerem integração especial.
 
 O primeiro passo foi a criação do documento HTML. Utilizei divs
-para simbolizar telas do jogo. Caracterizando o jogo como uma
-aplicação de uma única página (\textit{Single Page Application}).
-Alternativamente poderia se depender de um servidor para mandar as
-páginas prontas, mas isso distribui a complexidade do sistema para
-tecnologias do lado do servidor, distanciando-se da proposta de jogos
-exclusivamente construídos com as tecnologias da WEB.
+para simbolizar telas do jogo. Conter todas as telas em único
+HTML caracteriza o jogo como uma aplicação de uma única página
+(\textit{Single Page Application}). Alternativamente poderia se depender
+de um servidor para mandar as páginas prontas, mas isso distribui
+a complexidade do sistema para tecnologias do lado do servidor,
+distanciando-se da proposta de jogos exclusivamente construídos com as
+tecnologias da WEB.
 
 Seguindo a construção do documento HTML, veio o desenvolvimento de um
 CSS simples que comporta a visualização em múltiplos dispositivos.
@@ -95,20 +100,32 @@ tela. Já o tamanho da fonte do quadro principal, representado pelo id
 \textit{billboard} é duas vezes o tamanho da fonte normal 2em.
 
 Sem a ajuda de bibliotecas especializadas o processo de criação da
-interface não é trivial. Apesar de a interface ser simples, fazer os
-elementos se alinharem em diversos tamanhos de telas não é fácill e
-pode se tornar um grande problma para interfaces realmente complexas.
+interface não é trivial. Apesar dela ser simples, fazer os
+elementos se alinharem em diversos tamanhos de telas não é fácil e
+pode se tornar um grande problema para interfaces realmente complexas.
 
-Após a concepção do CSS deu-se início ao desenvolvimento da lógica do 
-negócio em JavaScript. O primeiro passo consistiu em fazer o mecanismo 
-de múltiplas telas em JavaScript. Ao iniciar a execução do JavaScript
-todas as divs que representam telas foram escondidas. O script mostra
-em seguida a página de carregamento. No final do carregamento de todos 
-os recursos é disparado o evento \textit{window.onload} neste momento
-inicia-se uma partida. Foram adicionados  \textit{listeners} os eventos de 
-clicar nas configurações e nos botões de certo e errado da página principal, 
-o botão de configurações simplesmente esconde todas as seções  e por fim carrega
-a de configurações. Os botões de certo e errado serão explicados na sequência.
+Após a concepção do CSS deu-se início ao desenvolvimento da lógica
+do negócio em JavaScript. O primeiro passo consistiu em fazer o
+mecanismo de múltiplas telas em um SPA através de JavaScript. Os
+botões que levam a outras telas, quando clicados, simplesmente escondem
+todas as seções e por fim carrega a que querem mostrar. Aplicativos
+SPA introduzem outros problemas, por exemplo o botão de voltar
+perde sua utilização visto que não se está trafegando de uma página
+a outra de fato. HTML5 provê uma API em JavaScript para manipular o histórico
+que pode resolver este problema; não obstante, no protótipo não
+adicionamos esta funcionalidade pois a quantidade de telas é realmente
+baixa e os benefícios introduzidos seriam baixos.
+
+Ao iniciar a execução do JavaScript todas as divs que representam
+telas foram escondidas. O script mostra em seguida o HTML de
+carregamento de recursos. No final do carregamento de todos os recursos
+é disparado o evento \textit{window.onload} neste momento inicia-se uma
+partida. Nesta fase também foram adicionados \textit{listeners} aos
+elementos interativos do jogo, como clicar nas configurações e nos
+botões de certo e errado da página principal.
+Os botões de certo
+e errado serão explicados na sequência.
+
 
 Após o esqueleto da aplicação estar definido foi introduzido a lógica de negócio.
 De toda a regra do jogo, a classe Match é a mais importante.
@@ -203,8 +220,8 @@ aconteçam.
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{board.png}
-	\caption{Tabuleiro do jogo com equação sendo apresentada}
-    \label{fig:tabuleiro}
+	\caption{Interface do jogo com equação sendo apresentada}
+    \label{fig:interface}
 \end{figure}
 
 \begin{figure}
