@@ -29,16 +29,14 @@ O jogo desenvolvido para o protótipo parece ter uma melhor jogabilidade
 em dispositivos móveis que ambos os jogos acima citados pois não
 requer a presença de um teclado numérico. Os botões de verdadeiro
 ou falso contém todas as possibilidades. A figura \ref{fig:gameScreen}
-demonstra a interface contendo com os botões.
+demonstra a interface contendo os botões.
 
-Abaixo são descritos os requisitos que uma mecânica como a descrita 
+Abaixo são descritos os requisitos que uma mecânica como a descrita
 acima deve prover.
 %Também para não interferir na pesquisa busquei não me distanciar do
 %que é considerado padrão em ferramentas e métodos.
 
 \section{Requisitos}
-
-Abaixo estão dispostos os requisitos do sistema.
 
 \subsection{Requisitos funcionais}
 
@@ -62,7 +60,9 @@ Outros aspectos requisitados mas que todavia não fazem parte da regra de negóc
 
 \section{Modelagem}
 
-Abaixo segue o diagrama de classes simplificado \footnote{Nos anexos pode-se encontrar a versão completa do diagrama de classes}.
+A figura \ref{fig:simpleDiagram} apresenta o diagrama de classes
+simplificado \footnote{Nos anexos pode-se encontrar a versão completa
+do diagrama de classes}.
 
 \begin{figure}
     \centering
@@ -75,8 +75,8 @@ Abaixo segue o diagrama de classes simplificado \footnote{Nos anexos pode-se enc
 %Comecei escrevendo o aplicativo para o Navegador do desktop pois era o
 %que estava mais acessível no momento.
 
-O desenvolvimento se deu com uma postura de melhoria progressiva.
-Desenvolvendo a versão mais simples possível para atingir as
+O desenvolvimento se deu com uma postura de melhoria progressiva
+criando primeiramente  a versão mais simples possível para atingir as
 requisitos funcionais. A partir dessa versão, novos recursos foram
 sendo adicionadas para melhorar a experiência do usuário. Iniciei o
 desenvolvimento criando para a plataforma Desktop pois esta contém
@@ -89,15 +89,15 @@ HTML caracteriza o jogo como uma aplicação de uma única página
 (\textit{Single Page Application}). Alternativamente poderia se depender
 de um servidor para mandar as páginas prontas, mas isso distribui
 a complexidade do sistema para tecnologias do lado do servidor,
-distanciando-se da proposta de jogos exclusivamente construídos com as
+distanciando-se da proposta de um jogo construído exclusivamente com as
 tecnologias da WEB.
 
 Seguindo a construção do documento HTML, veio o desenvolvimento de um
 CSS simples que comporta a visualização em múltiplos dispositivos.
 Para tal, foram utilizadas posições e tamanhos relativos. Por exemplo,
-a largura de cada tela da SPA é 98\% do tamanho total disponível na
-tela. Já o tamanho da fonte do quadro principal, representado pelo id
-\textit{billboard} é duas vezes o tamanho da fonte normal 2em.
+a largura de cada tela da SPA é 98\% do tamanho total disponível no
+dispositivo. Já o tamanho da fonte do quadro principal, representado pelo id
+\textit{billboard}, é duas vezes o tamanho da fonte normal 2em.
 
 Sem a ajuda de bibliotecas especializadas o processo de criação da
 interface não é trivial. Apesar dela ser simples, fazer os
@@ -109,23 +109,30 @@ das páginas em JavaScript. O primeiro passo consistiu em fazer o
 mecanismo de múltiplas telas em um único arquivo HTML através de JavaScript. Os
 botões que levam a outras telas, quando clicados, simplesmente escondem
 todas as seções e por fim carregam a que querem mostrar. Aplicativos
-SPA introduzem outros desafios, por exemplo o botão de voltar
+SPA introduzem outros desafios, por exemplo, o botão de voltar
 perde sua utilização visto que não se está trafegando de uma página
 a outra de fato. HTML5 provê uma API em JavaScript para manipular o histórico
 que pode resolver este problema; não obstante, no protótipo não
 adicionamos esta funcionalidade pois a quantidade de telas é realmente
-baixa e os benefícios introduzidos seriam baixos.
+baixa e os benefícios introduzidos seriam pequenos.
 
 Ao iniciar a execução do JavaScript todas as divs que representam
 telas são escondidas e a div de carregamento de recursos é mostrada em
-seguida. No final do carregamento de todos os recursos é disparado o
+seguida. O objetivo desta tela é não deixar o usuário sem feedback enquanto
+todos os recursos necessários para a utilização do jogo estejam disponíveis.
+Não obstante o carregamento é realmente rápido e o usuário, a não ser que 
+dependa de uma rede muito lenta, geralmente não vê a tela.
+No final do carregamento de todos os recursos é disparado o
 evento \textit{window.onload} neste momento carrega-se a div da partida
-e dá-se início a ela. Durante esta fase do desenvolvimento também
-foram adicionados \textit{listeners} aos demais elementos interativos do
-jogo, como clicar nas configurações e nos botões de certo e errado da
-página principal.
+e dá-se início a ela. 
 
-Após o esqueleto da aplicação estar definido foi introduzido a
+Durante esta fase do desenvolvimento também foram adicionados
+\textit{listeners} aos demais elementos interativos do jogo, como
+clicar nas configurações e nos botões de certo e errado da página
+principal. Deixando a página  pronta para receber a funcionalidade 
+propriamente dita.
+
+Com esqueleto da aplicação estar definido foi introduzido a
 lógica de negócio. A figura \ref{fig:simpleDiagram} apresenta do
 a relação entre as classes do jogo. De toda a regra do jogo, a
 classe Match é a mais importante. Ela simboliza uma partida dentro do
@@ -256,21 +263,27 @@ invés de duplicar o tratamento das escolhas de resposta foi uma boa
 estratégia pois centralizou o tratamento das respostas e evitou
 duplicação.
 
-\begin{draft}
-%posteriori
-Uma estratégia interessante que foi adotada na construção foi
-declarar todos os objetos relativos ao objeto janela (\textit{window}).
-Isso se demonstrou uma boa forma de separar os objetos, tornando o
-conflito de variáveis globais um problema irrelevante.
+No mobile, com intuito de melhorar a experiência, foi adicionada
+vibração para as respostas erradas. A API de vibração é trivial e sua 
+utilização possibilita uma experiência mais profunda com a aplicação, sendo 
+uma adição com bom custo/beneficio.
 
-Outro aspecto positivo foi a utilização de um meta objeto para
-encapsular os demais, neste caso utilizei o nome MyMath, funcionando
-como um namespace, garantindo que problemas de conflitos de nomes não
-aconteçam.
+Durante o desenvolvimento foram utilizadas funções imediatamente
+invocadas para declarar as classes. Isso se demonstrou uma boa forma
+de separar os objetos, tornando o conflito de variáveis globais um
+problema inexistente. Outro aspecto positivo foi a utilização de
+um meta objeto para encapsular os demais, similar ao conceito de
+namespaces, neste caso utilizei o nome MyMath garantindo que problemas
+de conflitos de nomes não aconteçam.
+
+\subsection{Performance}
+
+A performance, mesmo sem otimizações ficou razoável. O tempo de
+carregamento no Google Chrome desktop em uma rede 4G, comum no Brasil,
+ficou em 1.4 segundos em média. Esta métrica foi extraída através da
+ferramenta de depuração do Google Chrome que fornece a possibilidade
+de simular a velocidades de redes.
 
 
-\section{Performance}
-
-O jogo ficou rápido...
-
-\end{draft}
+A seguir serão apresentadas as limitações do HTML encontradas durante o desenvolvimento do 
+protótipo e pesquisa relacionada.
