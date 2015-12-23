@@ -132,13 +132,13 @@ clicar nas configurações e nos botões de certo e errado da página
 principal. Deixando a página  pronta para receber a funcionalidade 
 propriamente dita.
 
-Com esqueleto da aplicação estar definido foi introduzido a
+Com esqueleto da aplicação definido foi introduzido a
 lógica de negócio. A figura \ref{fig:simpleDiagram} apresenta do
 a relação entre as classes do jogo. De toda a regra do jogo, a
 classe Match é a mais importante. Ela simboliza uma partida dentro do
 jogo, é na classe Match que as informações de quantas equações
 existem, quantas foram acertadas e o tempo total da partida bem como
-sua pontuação atual. O propósito da classe Match é iterar a cada
+a pontuação atual do usuário. O propósito da classe Match é iterar a cada
 pergunta e esperar por uma resposta. Quando a resposta é dada a classe
 Match computa se a resposta está correta ou não e o tempo que levou
 para chegar ao resultado. Quando não existem mais perguntas para serem
@@ -173,7 +173,7 @@ camada de complexidade desnecessária para os casos simples. Visto que
 os requerimentos do protótipo não demandam grande performance ou
 armazenamento massivo de dados a opção modesta, Local Storage,
 foi preferida. A classe ranking é simplesmente uma interface para
-converter partidas e armazenar e recuperas estas informações em Local
+converter partidas e armazenar e recuperar estas informações em Local
 Storage. A figura \ref{fig:placar} demostra as informações do resultado
 de uma partida bem como a posição do ranking.
 
@@ -201,7 +201,7 @@ jogo.
     \centering
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{settings.png}
 	\caption{Configurações do jogo}
-    \label{fig:cofigurations}
+    \label{fig:configurations}
 \end{figure}
 
 Implementados estes mecanismos essenciais para o jogo, pude me
