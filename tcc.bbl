@@ -69,6 +69,13 @@
   \field{title}{Chrome DevTools Overview}
 \endentry
 
+\entry{mdnCanvas}{online}{}
+  \field{howpublished}{Available at
+  \url{https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes}
+  (2015/12/23)}
+  \field{title}{Drawing shapes with canvas}
+\endentry
+
 \entry{htmlAndCssDucket}{book}{}
   \name{author}{1}{}{%
     {{}%
