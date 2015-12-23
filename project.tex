@@ -1,37 +1,35 @@
 Este capítulo tem por objetivo detalhar os aspectos do desenvolvimento
-do protótipo. Mecânica, o loop de eventos, diagramas entre outros
+do protótipo. Sua mecânica, o loop de eventos, diagramas entre outros
 aspectos serão tratados aqui.
 
 \section{MECÂNICA}
 
 Para a análise prática das limitações foi escolhido um jogo de
-matemática simples. O jogo consiste na geração de equações com uma
+matemática simples. Consistindo na geração de equações com uma
 resposta candidata. Cabe ao usuário informar se o resultado apontado
 pelo jogo está correto ou não. A cada resposta dada o nível de
 complexidade da equação cresce. O tempo é um fator determinante
 no resultado do jogo pois quão mais rápido o jogador acertar se a
 afirmação está correta ou não mais pontos ele receberá.
 
-Esta categoria de jogo foi selecionada pois oferece uma experiência
-interessante e por ter profundidade, oferecendo a possibilidade de
-explorar diversos recursos do HTML, e criar melhorias incrementais. E,
-por fim, por oferecer uma dificuldade técnica não tão desafiadora.
-Visto que não disponho de experiência profunda no desenvolvimento de
-jogos HTML.
+Esta categoria de jogo foi selecionada por ter profundidade, oferecendo
+a possibilidade de explorar diversos recursos do HTML, e criar melhorias
+incrementais. E também por oferecer uma dificuldade técnica não
+tão desafiadora visto que não disponho de experiência profunda no
+desenvolvimento de jogos em HTML.
 
-Jogos como o Math Workout para Android tem uma temática similar.
-Não obstante, o Math Workout não apresenta a resposta, sendo o papel
-do usuário computar a equação e digitar o resultado.
-
-O jogo Countdown, também para a Android, é um jogo de temática
-similar apresentando um número final e pedindo para o usuário determinar
+Jogos como o Math Workout e o Countdown para Android tem uma temática
+similar. Não obstante, o Math Workout não apresenta a resposta, sendo
+o papel do usuário computar a equação e digitar o resultado. Já o jogo
+Countdown apresenta um número final e requer que o usuário determine
 a equação que resultou no valor à partir de um dado conjunto de
 números e operadores.
 
 O jogo desenvolvido para o protótipo parece ter uma melhor jogabilidade
-em dispositivos móveis que ambos citados pois não requer a presença
-de um teclado numérico. Os botões de verdadeiro ou falso contém todas
-as possibilidades.
+em dispositivos móveis que ambos os jogos acima citados pois não
+requer a presença de um teclado numérico. Os botões de verdadeiro
+ou falso contém todas as possibilidades. A figura \ref{fig:tabuleiro}
+demonstra a interface contendo com os botões.
 
 %Também para não interferir na pesquisa busquei não me distanciar do
 %que é considerado padrão em ferramentas e métodos.
@@ -205,7 +203,8 @@ aconteçam.
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{board.png}
-	\caption{Tabuleiro do jogo}
+	\caption{Tabuleiro do jogo com equação sendo apresentada}
+    \label{fig:tabuleiro}
 \end{figure}
 
 \begin{figure}
