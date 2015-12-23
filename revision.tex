@@ -1139,6 +1139,8 @@ padrões recortáveis \textit{tiled}, bastante similar aos títulos antigos da S
 
 Apesar da API do canvas ser poderosa não é possível manipular diretamente as camadas já desenhadas. Alternativamente pode-se limpar o canvas inteiramente em pontos determinados ou então sobrescrever as partes que se deseja alterar.
 
+Escrever no canvas envolve a manipulação de  diversos caminhos e retângulos, em jogos que fazem extensivo uso do canvas a complexidade de manipulação de linhas pode crescer incrivelmente. As últimas versões do Canvas introduziram o objeto Path2D que possibilita o armazenamento  e composição de instruções de caminhos a fim de possibilitar o reuso de formas. Ao invés de utilizar os métodos de caminhos diretamente no contexto do canvas utiliza-se uma instancia do objeto Path2D. Todos os métodos relacionados aos caminhos como o moveTo, arc or quadraticCurveTo estão disponíveis no objeto Path2D \autocite{mdnCanvas}.
+
 O canvas até aqui descrito trata-se de sua forma, ou contexto 2D. A
 especificação 3D do canvas é o WebGl.
 
