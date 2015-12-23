@@ -1131,17 +1131,15 @@ cuja origem se da na esquerda superior. Normalmente cada unidade do plano cartes
 
 Manipular o retângulo é uma analogia de como desenhar manualmente,
 move-se o "lápis" para o local desejado, e traça-se os pontos onde
-a linha deve percorrer. Além da possibilidade de desenhar linhas
-livremente também é possível retângulos nativamente, todas as demais figuras geométricas precisam ser feitas através da junção de linhas \autocite{mdnCanvas}.
+a linha (caminho) deve percorrer. Além da possibilidade de desenhar linhas
+livremente também é possível criar retângulos nativamente. Todas as demais figuras geométricas precisam ser feitas através da junção de caminhos \autocite{mdnCanvas}. Para desenhar caminhos curvos, de modo a criar círculos e elipses, existem funções especiais de arco.
 
 Além da possibilidade de desenhar programaticamente é possível
-carregar gráficos. A maioria dos jogos HTML5 utilizam sprites ou
-padrões recortáveis \textit{tiled}, muito similar aos títulos antigos
-da SNES e Game Boy \autocite{buildingHtml5Game}.
+carregar gráficos. Muitos dos jogos HTML5 utilizam sprites ou
+padrões recortáveis \textit{tiled}, bastante similar aos títulos antigos da SNES e Game Boy \autocite{buildingHtml5Game}.
 
-Não é possível manipular diretamente as camadas já desenhadas do canvas. As alternativas são limpar o canvas em determinada área ou sobrescrevê-la.
+Apesar da API do canvas ser poderosa não é possível manipular diretamente as camadas já desenhadas. Alternativamente pode-se limpar o canvas inteiramente em pontos determinados ou então sobrescrever as partes que se deseja alterar.
 
-Segundo \cite{gwt} uma característica importante deste [canvas] elemento é que ele consegue redimensionar seu conteúdo para adequar à resolução do navegador do usuário.
 O canvas até aqui descrito trata-se de sua forma, ou contexto 2D. A
 especificação 3D do canvas é o WebGl.
 
