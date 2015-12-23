@@ -137,7 +137,7 @@ Match computa se a resposta está correta ou não e o tempo que levou
 para chegar ao resultado. Quando não existem mais perguntas para serem
 processadas é lançado um evento de final de partida onde o resultado
 pode ser processado pelas demais classes do jogo.
-A figura \ref{fig:interface} demostra o mecanismo da classe \texit{Match} integrado
+A figura \ref{fig:interface} demostra o mecanismo da classe \textit{Match} integrado
 ao jogo.
 
 \begin{figure}
@@ -164,10 +164,18 @@ onde as chaves poderiam ser as posições do usuário. Não obstante,
 a interface totalmente orientada a eventos do IndexedDb introduz uma
 camada de complexidade desnecessária para os casos simples. Visto que
 os requerimentos do protótipo não demandam grande performance ou
-armazenamento massivo de dados a opção mais modesta, Local Storage,
+armazenamento massivo de dados a opção modesta, Local Storage,
 foi preferida. A classe ranking é simplesmente uma interface para
 converter partidas e armazenar e recuperas estas informações em Local
-Storage.
+Storage. A figura \ref{fig:placar} demostra as informações do resultado
+de uma partida bem como a posição do ranking.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{score.png}
+	\caption{Resultado de uma partida}
+    \label{fig:placar}
+\end{figure}
 
 O objeto \textit{Settings}, assim como o Ranking, utiliza Local Storage
 e provê uma interface para armazenar e recuperar preferências sobre
@@ -178,6 +186,15 @@ configurações também o fazem através do objeto Settings, nunca
 acessando configurações diretamente em Web Storage, dessa forma a
 validade das configurações é garantida a a migração para uma forma
 de armazenamento diferente é permitida com relativa facilidade.
+A figura \ref{fig:configurations} demonstra a tela de configurações do 
+jogo.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{settings.png}
+	\caption{Configurações do jogo}
+    \label{fig:cofigurations}
+\end{figure}
 
 Implementados estes mecanismos essenciais para o jogo, pude me
 focar no ponto central do negócio e possivelmente o mais complexo:
@@ -232,23 +249,8 @@ Outro aspecto positivo foi a utilização de um meta objeto para
 encapsular os demais, neste caso utilizei o nome MyMath, funcionando
 como um namespace, garantindo que problemas de conflitos de nomes não
 aconteçam.
-\end{draft}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{score.png}
-	\caption{Placar do jogo}
-    \label{fig:placar}
-\end{figure}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{settings.png}
-	\caption{Configurações do jogo}
-    \label{fig:cofigurations}
-\end{figure}
-
-\begin{draft}
 
 \section{Otimizações para jogos}
 
