@@ -1,6 +1,6 @@
 Este capítulo tem por objetivo detalhar os aspectos do desenvolvimento
-do protótipo. Sua mecânica, o loop de eventos, diagramas entre outros
-aspectos serão tratados aqui.
+do protótipo. Sua mecânica, funcionamento, decisões tecnológicas,
+diagramas entre outros aspectos serão tratados aqui.
 
 \section{MECÂNICA}
 
@@ -28,10 +28,10 @@ números e operadores.
 O jogo desenvolvido para o protótipo parece ter uma melhor jogabilidade
 em dispositivos móveis que ambos os jogos acima citados pois não
 requer a presença de um teclado numérico. Os botões de verdadeiro
-ou falso contém todas as possibilidades. A figura \ref{fig:gameScreen}
-demonstra a interface contendo os botões.
+ou falso contém todas as possibilidades de interação com o jogo. A
+figura \ref{fig:gameScreen} demonstra a interface contendo os botões descritos.
 
-Abaixo são descritos os requisitos que uma mecânica como a descrita
+Abaixo estão detalhados os requisitos que uma mecânica como a descrita
 acima deve prover.
 %Também para não interferir na pesquisa busquei não me distanciar do
 %que é considerado padrão em ferramentas e métodos.
@@ -43,9 +43,9 @@ acima deve prover.
 As funcionalidades que o sistema deve apresentar estão descritas abaixo.
 
 \begin{itemize}
-    \item O sistema deve prover equações matemáticas de dificuldade crescente para o usuário informar se estão corretas ou não.
-    \item O sistema deve pontuar as respostas dadas com maior agilidade com uma pontuação maior, que as respondidas com menor agilidade.
-    \item O sistema deve apresentar um ranking com os resultados dos  jogos anteriores.
+    \item O sistema deve prover equações matemáticas de dificuldade crescente para o usuário informar se estão corretas ou não;
+    \item O sistema deve pontuar as respostas dadas com maior agilidade com uma pontuação maior, que as respondidas com menor agilidade;
+    \item O sistema deve apresentar a colocação da partida do usuário em comparativo com seu histórico;
 \end{itemize}
 
 \subsection{Requisitos não funcionais}
@@ -83,7 +83,7 @@ desenvolvimento criando para a plataforma Desktop pois esta contém
 um grande número de ferramentas de desenvolvimento nativas que não
 requerem integração especial.
 
-O primeiro passo foi a criação do documento HTML. Utilizei divs
+O primeiro passo foi a criação do documento HTML, foram utilizados elementos div
 para simbolizar telas do jogo. Conter todas as telas em único
 HTML caracteriza o jogo como uma aplicação de uma única página
 (\textit{Single Page Application}). Alternativamente poderia se depender
@@ -92,7 +92,7 @@ a complexidade do sistema para tecnologias do lado do servidor,
 distanciando-se da proposta de um jogo construído exclusivamente com as
 tecnologias da WEB.
 
-Seguindo a construção do documento HTML, veio o desenvolvimento de um
+Seguindo a construção do documento HTML veio o desenvolvimento de um
 CSS simples que comporta a visualização em múltiplos dispositivos.
 Para tal, foram utilizadas posições e tamanhos relativos. Por exemplo,
 a largura de cada tela da SPA é 98\% do tamanho total disponível no
@@ -102,19 +102,22 @@ dispositivo. Já o tamanho da fonte do quadro principal, representado pelo id
 Sem a ajuda de bibliotecas especializadas o processo de criação da
 interface não é trivial. Apesar dela ser simples, fazer os
 elementos se alinharem em diversos tamanhos de telas não é fácil e
-pode se tornar um grande problema para interfaces realmente complexas.
+pode se tornar um problema substancial para interfaces realmente complexas.
 
 Após a concepção do CSS deu-se início ao desenvolvimento da lógica
-das páginas em JavaScript. O primeiro passo consistiu em fazer o
-mecanismo de múltiplas telas em um único arquivo HTML através de JavaScript. Os
-botões que levam a outras telas, quando clicados, simplesmente escondem
-todas as seções e por fim carregam a que querem mostrar. Aplicativos
-SPA introduzem outros desafios, por exemplo, o botão de voltar
-perde sua utilização visto que não se está trafegando de uma página
-a outra de fato. HTML5 provê uma API em JavaScript para manipular o histórico
-que pode resolver este problema; não obstante, no protótipo não
-adicionamos esta funcionalidade pois a quantidade de telas é realmente
-baixa e os benefícios introduzidos seriam pequenos.
+das páginas em JavaScript. O primeiro passo consistiu em habilitar o
+funcionamento de múltiplas telas em um único arquivo HTML através
+de JavaScript. Os botões que levam a outras telas, quando clicados,
+simplesmente escondem todas as seções e por fim carregam a que querem
+mostrar.
+
+Aplicativos SPA introduzem outros desafios, por exemplo,
+o botão de voltar perde sua utilização visto que não se está
+trafegando de uma página a outra de fato. HTML5 provê uma API em
+JavaScript para manipular o histórico que pode resolver este problema;
+não obstante, no protótipo não adicionamos esta funcionalidade pois
+a quantidade de telas é realmente baixa e os benefícios introduzidos
+seriam pequenos.
 
 Ao iniciar a execução do JavaScript todas as divs que representam
 telas são escondidas e a div de carregamento de recursos é mostrada em
@@ -124,7 +127,7 @@ Não obstante o carregamento é realmente rápido e o usuário, a não ser que
 dependa de uma rede muito lenta, geralmente não vê a tela.
 No final do carregamento de todos os recursos é disparado o
 evento \textit{window.onload} neste momento carrega-se a div da partida
-e dá-se início a ela. 
+e dá-se início a mesma.
 
 Durante esta fase do desenvolvimento também foram adicionados
 \textit{listeners} aos demais elementos interativos do jogo, como
@@ -154,13 +157,13 @@ ao jogo.
     \label{fig:gameScreen}
 \end{figure}
 
-A construção da classe Match concebeu o comportamento principal do
-jogo, entretanto, nesta etapa não havia um gerador de equações. O
-jogo contava apenas com uma coleção de equações preestabelecidas que
-eram selecionadas aleatoriamente a cada turno. Isso se provou uma boa
-escolha pois possibilitou que o desenvolvimento se focasse em outros
-aspectos importantes como a elaboração do laço do jogo, ranking,
-configurações entre outros.
+A construção da classe Match disponibilizou o comportamento principal do
+jogo; entretanto, nesta etapa não havia um gerador de equações. O
+jogo contava apenas com uma coleção de equações preestabelecidas
+que eram selecionadas aleatoriamente a cada turno. Adiar a construção
+do gerador de equações se provou uma boa escolha pois possibilitou
+que o desenvolvimento se focasse em outros aspectos importantes como a
+elaboração do laço do jogo, ranking, configurações entre outros.
 
 O ranking serve para armazenar o resultado de cada partida do jogador
 possibilitando uma percepção de histórico da performance do jogador.
@@ -192,8 +195,8 @@ o jogo. Cada campo editável na tela de configurações contém
 cada mudança que ocorrer em seus estados. Os objetos que utilizam estas
 configurações também o fazem através do objeto Settings, nunca
 acessando configurações diretamente em Web Storage, dessa forma a
-validade das configurações é garantida a a migração para uma forma
-de armazenamento diferente é permitida com relativa facilidade.
+validade das configurações é garantida e a migração para uma forma
+de armazenamento diferente é possível com relativa facilidade.
 A figura \ref{fig:configurations} demonstra a tela de configurações do 
 jogo.
 
