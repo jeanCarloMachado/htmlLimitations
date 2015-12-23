@@ -150,6 +150,21 @@ pode ser processado pelas demais classes do jogo.
 A figura \ref{fig:gameScreen} demostra o mecanismo da classe \textit{Match} integrado
 ao jogo.
 
+O cálculo da pontuação se dá por uma operação matemática simples. Ao final de uma partida 
+é computado o total de questões acertadas vezes 10 divido pelo total de respostas menos o 
+total de respostas certas adicionando-se 20\% do temo da duração. A figura \ref{fig:punctuationCalculation}
+apresenta o código utilizado para o cálculo acima descrito.
+
+\begin{figure}
+\centering
+\begin{verbatim}
+parseInt((this.rightAnswered * 10 ) / ((this.answersTotal - this.rightAnswered) + (this.duration*0.2)))
+\end{verbatim}
+\caption{Exemplo de utilização de funções imediatamente invocadas}
+\label{fig:punctuationCalculation}
+\end{figure}
+
+
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{board.png}
