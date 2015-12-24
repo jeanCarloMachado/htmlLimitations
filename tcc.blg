@@ -13,16 +13,18 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated field_info (elt_size=8) to 10004 items from 5000.
 Database file #1: tcc-blx.bib
 Database file #2: tcc.bib
 Warning--I didn't find a database entry for "HTML5"
+Warning--I didn't find a database entry for "devdocs"
 Warning--I didn't find a database entry for "gtw"
 Biblatex version: 3.0
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 You've used 33 entries,
             6047 wiz_defined-function locations,
-            1274 strings with 12525 characters,
+            1275 strings with 12532 characters,
 and the built_in function-call counts, 83858 in all, are:
 = -- 2993
 > -- 2496
@@ -61,4 +63,4 @@ warning$ -- 0
 while$ -- 483
 width$ -- 0
 write$ -- 520
-(There were 2 warnings)
+(There were 3 warnings)
