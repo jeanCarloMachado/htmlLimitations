@@ -189,13 +189,18 @@ podem agregar novas funcionalidades;
 
 \chapter{SISTEMAS DE BUILDING}
 
-Aquivos JavaScript são requisitados do servidor assincronamente. Isso
-pode levar a tempos de requisição pouco desejáveis. Uma saída seria
-escrever o código em apenas um arquivo mais isso leva a gerência de
-código bagunçada. A saída mais comum entre desenvolvedores é utilizá
-ruma ferramenta que junta todos os arquivos e disponibiliza apenas um
-para o usuário.
+Segundo \cite{gruntTutorial}
+\begin{quote}
+Durante o desenvolvimento de aplicações WEB, existem muitas tarefas
+que tem que ser feitas repetidamente. Estas tarefas incluem 
+minificar o JavaScript e CSS, rodar testes unitário, aplicar linters
+nosarquivos para checar erros, compilar os préprocessadores de CSS (LESS, SASS), 
+e muito mais.
+\end{quote}
 
-Utiliza o conceito de streams para aplicar todas as modificações sobre
+O Grunt é um automatizador destas tarefas quotidianas.
+
+
+O Gulp utiliza o conceito de streams para aplicar todas as modificações sobre
 um arquivo de uma vez só.
 

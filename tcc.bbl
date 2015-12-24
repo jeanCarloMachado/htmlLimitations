@@ -63,6 +63,22 @@
   \field{year}{2014}
 \endentry
 
+\entry{gruntTutorial}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Cevelleja}{C.}%
+     {Chris}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{CC1}
+  \strng{fullhash}{CC1}
+  \field{howpublished}{Available at
+  \url{https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes}
+  (2015/12/24)}
+  \field{title}{A Simple Guide to Getting Started With Grunt}
+\endentry
+
 \entry{chromeDevTools}{online}{}
   \field{howpublished}{Available at \url{https://developer.chrome.com/devtools}
   (2015/12/19)}
