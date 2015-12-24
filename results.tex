@@ -35,6 +35,28 @@ irá rodá-la versões de software para dispositivos móveis não é
 um problema problema. Não obstante, o Crosswalk só é suportado para
 Android \footnote{Nos apêndices o Crosswalk é tratado com mais detalhes}.
 
+\subsection{CSS}
+
+É muito custoso desenvolver uma interfaces que pareçam nativas
+para cada dispositivo sem a utilização de plugins e ferramentas
+especializadas. Em termos gerais, trabalhar com proporções é
+positivo. Não obstante
+há casos, como o dos botões de certo e errado que a proporções ficam
+exageradas, nesses casos a utilizada de max-width é uma solução
+conveniente.
+
+\subsubsection{TAMANHO DE TELA}
+Em alguns casos o tamanho das telas pode ser um fator limitante – como
+no caso de jogos de estratégia. Jogadores com telas menores podem sair
+em desvantagem.
+
+\subsubsection{Scroll}
+\autocite[pp. 9]{aSeriousContender} cita que:
+Fazer scroll juntamente com gestos de ações similares é uma área
+onde o HTML ainda é fraco. Existem várias tentativas para solucionar
+esse problema como o iScroll, TouchScroll, GloveBox, Sencha, jQuery
+Mobile.
+
 \subsection{JavaScript}
 
 O JavaScript, por ser uma tecnologia desenvolvida por consenso, tem um
@@ -50,8 +72,6 @@ Erros numéricos resultam no valor NaN (\textit{not a number}).
 Todas as operações com NaN como operadores irão retornar outro
 NaN. Isso torna a depuração de erros desnecessariamente complexa
 \autocite{html5mostwanted}.
-
-
 
 
 \subsection{SVG}
@@ -180,7 +200,6 @@ http://camendesign.com/code/video_for_everybody \end{verbatim} é um
 polyfill que recorre à flash quando o vídeo não é suportado pelo
 navegador.
 
-
 \subsection{Armazenamento}
 
 Em praticamente nenhuma das tecnologias da WEB é possível armazenar objetos e  seu estado atual.
@@ -197,16 +216,23 @@ no contexto de jogos de navegador.
 \item Não tem acesso a funcionalidades específicas dos dispositivos e recursos como notificações, use de hardware nativo ou comunicação entre aplicativos.
 \end{itemize}
 
+\subsection{OFFLINE}
 
-\subsection{INTERFACE GRÁFICA}
+Quando o download offline falha o navegador emite um evento mas não há
+indicação de qual problema aconteceu. Isso pode tornar a depuração
+ainda mais complicada que o usual \autocite{diveIntohtml}.
 
-É muito custoso desenvolver uma interfaces que pareçam nativas
-para cada dispositivo sem a utilização de plugins e ferramentas
-especializadas. Em termos gerais, trabalhar com proporções é
-positivo. Não obstante
-há casos, como o dos botões de certo e errado que a proporções ficam
-exageradas, nesses casos a utilizada de max-width é uma solução
-conveniente.
+Refresh duplo para ver assets cacheados. Ver:
+http://buildnewgames.com/game-asset-management/
+
+\subsection{Acelerômetro}
+
+\subsection{Detecção de recursos}
+
+Grande parte da detecção de funcionalidades é feita através de
+JavaScript, isso força os desenvolvedores a criarem pelo menos parte da
+marcação em JavaScript, isso pode ser um fator limitante para o uso
+generalizado de HTML5 \autocite{diveIntohtml}.
 
 \subsection{Recursos}
 
@@ -225,7 +251,6 @@ para utilizar serviços de \textit{push} também não estão disponíveis
 para o HTML5.
 \end{quote}
 
-
 \subsection{PERFORMANCE GERAL}
 
 De acordo com uma pesquisa, para um usuário uma tarefa é instantânea
@@ -240,37 +265,5 @@ Otimizações de performance dependem do ambiente em que estão
 sendo feitas. E aquelas que hoje tem um impacto positivo hoje
 podem se tornar inúteis, ou mesmo prejudiciais, amanhã
 \autocite[pp.131]{html5mostwanted}.
-
-\subsection{Acelerômetro}
-
-\subsection{TAMANHO DE TELA}
-Em alguns casos o tamanho das telas pode ser um fator limitante – como
-no caso de jogos de estratégia. Jogadores com telas menores podem sair
-em desvantagem.
-
-\subsection{Detecção de recursos}
-
-Grande parte da detecção de funcionalidades é feita através de
-JavaScript, isso força os desenvolvedores a criarem pelo menos parte da
-marcação em JavaScript, isso pode ser um fator limitante para o uso
-generalizado de HTML5 \autocite{diveIntohtml}.
-
-\subsection{Scroll}
-\autocite[pp. 9]{aSeriousContender} cita que:
-Fazer scroll juntamente com gestos de ações similares é uma área
-onde o HTML ainda é fraco. Existem várias tentativas para solucionar
-esse problema como o iScroll, TouchScroll, GloveBox, Sencha, jQuery
-Mobile.
-
-
-\subsection{OFFLINE}
-
-Quando o download offline falha o navegador emite um evento mas não há
-indicação de qual problema aconteceu. Isso pode tornar a depuração
-ainda mais complicada que o usual \autocite{diveIntohtml}.
-
-Refresh duplo para ver assets cacheados. Ver:
-http://buildnewgames.com/game-asset-management/
-
 
 \end{draft}
