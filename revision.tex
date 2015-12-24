@@ -406,7 +406,10 @@ como HTML5 (como a API de armazenamento de dados).
     \caption{Suíte HTML}
 \end{figure}
 
-Uma tecnologia fortemente entrelaçada com o HTML é o DOM. Tendo uma relação próxima de um para um com a marcaçaõ \autocite{howBrowsersWork}. DOM permite a interação entre documentos HTML e as demais tecnologias da WEB de uma forma fácil e padronizada.
+Uma tecnologia fortemente entrelaçada com o HTML é o DOM.
+Tendo uma relação próxima de um para um com a marcaçaõ
+\autocite{howBrowsersWork}. DOM permite a interação entre documentos
+HTML e as demais tecnologias da WEB de uma forma fácil e padronizada.
 
 \subsection{DOM}
 %{{{
@@ -440,7 +443,23 @@ seleciona o primeiro elemento em conformidade com o padrão
 especificado. Já o método \textit{querySelectorAll} seleciona todos os
 elementos que estão em acordo com o padrão especificado.
 
+DOM também conta com uma API de eventos que possibilita que, através
+de JavaScript, se saiba quando algum evento interessante aconteceu.
+Os eventos podem ser criados pelo usuário ou serem lançados pelo
+navegador, possibilitando uma manipulação consistente dos mais
+variados aspectos de uma aplicação. Cada evento é representado por um
+objeto baseado na interface \textit{Event} e pode ter campos e funções
+adicionais para prover maior informação do evento ocorrido \autocite{devdocs}.
+
+Manipulação de entrada de comandos, e muitas varias outras APIs do
+HTML como o IndexedDB se dá através de eventos, tornando o assunto
+relevante aos jogos. O site http://devdocs.io/dom_events/ contém uma
+lista dos eventos lançados automaticamente pelos navegadores.
 %}}}
+
+Fortemente entrelaçado com o HTML e o DOM está o CSS que possibilita
+customizar a apresentação do markup possibilitando experiencias muito
+mais ricas do que o conteúdo bruto.
 %}}}
 \section{CSS}
 %{{{
