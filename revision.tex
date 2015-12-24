@@ -1262,6 +1262,12 @@ possível, para isso os codecs utilizam de várias estratégias de
 compressão ou descarte de dados; podendo rodar tanto em hardware quanto
 em software.
 
+Existem codecs desenvolvidos especificamente para a Web. Buscam uma
+razão de tamanho e qualidade aceitável, mas prezando por tamanho. A
+maioria dos codecs de vídeo não mudam todo o conteúdo de um quadro
+para o próximo, possibilitando maiores taxas de compressão, que
+resulta em arquivos menores \autocite{diveIntohtml}.
+
 O funcionamento de codecs pode variar muito, conforme as estratégias de
 compressão utilizadas, a quantidade de bits por segundo suportada, entre outros
 fatores. Visto que os algoritmos de compressão podem adquirir grande
@@ -1285,10 +1291,12 @@ Ainda segundo \cite[pp. 67]{proHtml5} abaixo segue uma lista de codecs populares
 \end{itemize}
 
 Após ter sido codificado um fluxo de dados é armazenado em um
-contêiner. Contêiners são um padrão de metadados sobre as informações
-codificadas de modo a possibilitar que outros programas consigam
-interpretar estas informações de forma padronizada. Assim como
-codecs existem contêiners livres e com restrições de licença.
+contêiner. Contêiners são um padrão de metadados sobre as
+informações codificadas de modo a possibilitar que outros programas
+consigam interpretar estas informações de forma padronizada. Como
+um arquivo \textit{zip}, contêiners podem conter qualquer coisa dentro de si
+\autocite{diveIntohtml}. Assim como codecs existem contêiners livres e
+com restrições de licença.
 
 Abaixo segue uma lista de alguns contêiners de áudio.
 \begin{itemize}
@@ -1405,7 +1413,7 @@ Essa tecnologia é muito mais nova do que a tag áudio. Diferentemente
 dos demais navegadores o Internet Explorer não dá nenhum
 nível de suporte a API. O polyfill AudioContext suporta as partes
 básicas da API e pode ser utilizada nos casos onde não existe suporte
-para a API do HTML \footenote{O polyfill AudioContext pode ser encontrado no seguinte endereço https://github.com/shinnn/AudioContext-Polyfill}.
+para a API do HTML \footnote{O polyfill AudioContext pode ser encontrado no seguinte endereço https://github.com/shinnn/AudioContext-Polyfill}.
 
 As últimas versões da especificação da Audio API contam com a
 possibilidade de manipular a API de áudio através de WEB Workers, o
@@ -1413,19 +1421,22 @@ que traz oportunidades interessantes para aplicações que dependam de
 muito processamento de áudio, de modo que este processamento possa ser
 feito em uma thread separada.
 
-Além do áudio alguns jogos fazem uso de vídeo como introdução, cinemáticas,
-entre outros recursos que habilitam uma experiência mais rica ao usuário.
-Abaixo será feita uma revisão sobre a tecnologia de vídeo em HTML.
+Além de grande flexibilidade com áudio alguns jogos requerem a
+disponibilidade de vídeo para utilizar como introdução, cinemáticas,
+entre outros recursos que habilitam uma experiência mais rica ao
+usuário. Abaixo será feita uma revisão sobre a tecnologia de vídeo
+em HTML.
 %}}}
 \section{VÍDEO}
 %{{{
 
-O elemento \textit{video} especifica uma forma de adicionar vídeos nativamente,
-sem necessitar depender de plugins de terceiros como o Flash Player.
-Pode-se adicionar um arquivo através do atributo \textit{src} do elemento
-ou adicionar vários formatos de contêiner e codec dentro do elemento através
-de elementos \textit{source}. Assim como o elemento \textit{audio} o navegador
-decidirá em tempo de execução qual formato executar dependendo de suas capacidades.
+O elemento \textit{video} especifica uma forma de adicionar vídeos na
+WEB nativamente, sem a necessidade de utilizar plugins de terceiros
+como o Flash Player. Assim como com o elemento \textit{audio} pode-se
+adicionar um arquivo através do atributo \textit{src} do elemento
+ou adicionar vários formatos de contêiner e codec dentro da tag
+através de elementos \textit{source}. O navegador decidirá em tempo de
+execução qual formato executar dependendo de suas capacidades.
 
 \begin{figure}
 \centering
@@ -1443,28 +1454,26 @@ decidirá em tempo de execução qual formato executar dependendo de suas capaci
 \source{http://www.html5rocks.com/en/tutorials/video/basics/}
 \label{fig:video}
 \end{figure}
-\begin{draft}
 
-Pode-se controlar quais partes do vídeo serão mostradas através de parâmetros de tempo.
-Através do elemento track é possível informar subtítulos para os vídeos sendo apresentados.
+A figura \ref{fig:video} demonstra a utilização de algumas
+funcionalidades do elemento \textit{video}. Como demonstrado na figura,
+além do elemento \textit{source}, a tag \textit{video} suporta o
+elemento \textit{track}, o qual permite informar subtítulos para os
+vídeos sendo apresentados. Também é possível habilitar controles
+de vídeo nativos dos navegadores, como demonstrado na figura através do 
+atributo \textit{controls}.
 
-A figura \ref{fig:video} demonstra a utilização das funcionalidades descritas acima.
+Como o elemento vídeo se encontra no HTML é possível manipulá-lo com
+uma gama de tecnologias. Com CSS é possível aplicar escala de cinza do
+sobre o elemento vídeo gerando um efeito preto e branco interessante.
+A especificação do elemento \textit{video} também permite controlar
+quais partes do vídeo serão mostradas através de parâmetros de tempo
+passados como argumentos junto ao nome do arquivo.
 
-É possível aplicar escala de cinza do CSS sobre o elemento vídeo e conseguir efeitos interessantes.
-
-Apesar de geralmente não serem peça central dos jogos vídeos são
-usualmente observados como introduções ou cinemáticas.
-
-AVI e MP4 são apenas contêiner de formatos. Como um arquivo zip,
-podendo conter qualquer coisa dentro de si \autocite{diveIntohtml}.
-
-Existem formatos desenvolvidos especificamente para a Web. Buscam uma
-razão de tamanho e qualidade aceitável, mas prezando por tamanho. A
-maioria dos codecs de vídeo não mudam todo o conteúdo de um quadro
-para o próximo, possibilitando maiores taxas de compressão, que
-resulta em arquivos menores \autocite{diveIntohtml}.
-
-\end{draft}
+Além de ser flexível nas tecnologias de multimídia jogos um
+requerimento comum em jogos é haver uma forma de armazenar dados
+eficientemente e buscá-los com agilidade. Abaixo serão discutidas as
+tecnologias de armazenamento disponíveis para a WEB.
 %}}}
 \section{ARMAZENAMENTO}
 %{{{
@@ -1670,7 +1679,7 @@ de recurso \autocite{diveIntohtml}.
 %}}}
 \section{ENTRADA DE COMANDOS}
 %{{{
-
+\begin{draft}
 Na construção da grande maioria dos jogos é muitas vezes
 imprescindível grande flexibilidade na gestão de entrada comandos.
 Esta necessidade amplia na criação de jogos multiplataforma, em
@@ -1685,7 +1694,11 @@ um clique do mouse ou o pressionar da tecla "A". Quando isso acontece o
 listener pode invocar uma função e realizar qualquer coisa desejada
 \autocite{buildingHtml5Game}.
 
+
+\end{draft}
+%}}}
 \subsection{Acelerômetro}
+%{{{
 \begin{draft}
     Descrever o acelerometro
 \end{draft}
