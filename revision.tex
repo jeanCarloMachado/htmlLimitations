@@ -1831,34 +1831,46 @@ Debugar aplicativos 3D pode ser complexo, o debugger do chrome é uma boa opçã
 %}}}
 \section{DISPONIBILIZAÇÃO DA APLICAÇÃO}
 %{{{
-\begin{draft}
 
 Os aplicativos puramente em HTML não requerem instalação e
 funcionam apenas acessando o endereço através de um navegador.
-\autocite{browserGamesTechnologyAndFuture} cita que: aplicativos
-baseados na web, por não requererem instalação, sua distribuição é
-superior ao estilo convencional de aplicações desktop .
+\autocite{browserGamesTechnologyAndFuture} cita à respeito de
+aplicações WEB: por não requererem instalação, sua distribuição é
+superior ao estilo convencional de aplicações desktop.
 
-%Links com manifestos
-
-Não obstante, se o objetivo é fornecer uma experiência similar aos 
+Não obstante, se o objetivo é fornecer uma experiência similar aos
 demais aplicativos mobile, geralmente disponibilizados através de um mercado,
 pode-se adotar a alternativa híbrida criando um pacote para o software.
 
-O PhoneGap é uma tecnologia que permite encapsular um código em HTML e disponibilizá-lo
-nativamente. Não obstante, para empacotar os aplicativos localmente é necessária configuração
-substancial e só é possível empacotar para IOs em um computador da Apple. Alternativamente
-o PhoneGap disponibiliza um serviço de empacotamento na nuvem que soluciona estes problemas
-o PhoneGap Build.
+O PhoneGap é uma tecnologia que permite encapsular um código em
+HTML e disponibilizá-lo nativamente. Não obstante, para empacotar
+os aplicativos localmente é necessária configuração substancial
+e só é possível empacotar para IOS em um computador da Apple.
+Alternativamente o PhoneGap disponibiliza um serviço de empacotamento
+na nuvem que soluciona estes problemas o PhoneGap Build.
 
-\subsection{INSTALAÇÃO}
-%{{{
-Este método é benéfico pois possibilita ao usuário a mesma
-experiência ao adquirir uma aplicação normal. Este tipo de
-aplicação é comummente referido como "híbrido".
-%}}}
+Através do PhoneGap Build pode-se carregar um arquivo zip, seguindo
+determinado formato, o qual contenha os arquivos HTML que o
+PhoneGap Cloud se responsabiliza por criar os arquivos prontos
+para serem instalados em Android, IOS e Windows Phone.
 
-\end{draft}
+\cite{publishHtml5} descreve os passos que são feitos pelo PhoneGap para 
+disponibilizar a aplicação nativamente.
+
+\begin{itemize}
+\item É criada uma aplicação nativa utilizando a WebView da plataforma;
+\item Todos os recursos da aplicação são armazenados dentro da aplicação nativa;
+\item O PhoneGap carrega o HTML dentro da WebView;
+\item A WebView mostra a aplicação para o usuário;
+\end{itemize}
+
+No endereço https://github.com/phonegap/phonegap-start encontra-se um
+template no formato requerido pelo PhoneGap Build que pode ser utilizado
+para começar aplicações que serão servidas através da solução.
+
+Em seguida serão abordadas algumas otimizações das tecnologias 
+da WEB relevantes ao desenvolvimento de jogos.
+
 %}}}
 \section{Otimizações para jogos}
 
