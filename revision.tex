@@ -1697,6 +1697,9 @@ Na sua versão mais simples, um aplicativo offline é um conjunto de
 URLs para arquivos HTML, CSS, JavaScript, imagens ou qualquer outro tipo
 de recurso \autocite{diveIntohtml}.
 
+Para aqueles que desejam publicar em mercados como o do IOs pensar 
+a gestão de conteúdo offline é quase uma obrigação \autocite{publishHtml5}.
+
 \end{draft}
 %}}}
 \section{ENTRADA DE COMANDOS}
@@ -1767,10 +1770,17 @@ utilizando com o HTTP/2.
 %{{{
 \begin{draft}
 
-As ferramentas de desenvolvimento do  Google Chrome (\textit{DevTools}) são uma boa opção para desenvolver e depurar aplicações WEB em JavaScript. 
+As ferramentas de desenvolvimento do Google Chrome (\textit{DevTools})
+são uma boa opção para desenvolver e depurar aplicações WEB em
+J-avaScript.
 
-Provê aos desenvolvedores profundo acesso as camadas internas do navegador e aplicações WEB. É possível utilizar  o  DevTools para eficientemente detectar 
-problemas de layout, adicionar breakpoints em JavaScript, e pegar dicas de otimização de código \autocite{chromeDevTools}.
+Provê aos desenvolvedores profundo acesso as camadas internas do
+navegador e aplicações WEB. É possível utilizar o DevTools
+para eficientemente detectar problemas de layout, adicionar
+breakpoints em JavaScript, e pegar dicas de otimização de código
+\autocite{chromeDevTools}.
+
+Também é possível emular os dispositivos alvo da aplicação.
 
 
 Com o inspetor do WebGL é possível conferir os estados dos buffers, informações de texturas, frames individuais e outras informações úteis \autocite{html5mostwanted}.
@@ -1822,11 +1832,24 @@ Debugar aplicativos 3D pode ser complexo, o debugger do chrome é uma boa opçã
 \section{DISPONIBILIZAÇÃO DA APLICAÇÃO}
 %{{{
 \begin{draft}
-Aplicativos baseados na web não requerem instalação ou atualizações
-manuais e sua distribuição é superior ao estilo convencional de
-aplicações desktop \autocite{browserGamesTechnologyAndFuture}.
 
-Links com manifestos
+Os aplicativos puramente em HTML não requerem instalação e
+funcionam apenas acessando o endereço através de um navegador.
+\autocite{browserGamesTechnologyAndFuture} cita que: aplicativos
+baseados na web, por não requererem instalação, sua distribuição é
+superior ao estilo convencional de aplicações desktop .
+
+%Links com manifestos
+
+Não obstante, se o objetivo é fornecer uma experiência similar aos 
+demais aplicativos mobile, geralmente disponibilizados através de um mercado,
+pode-se adotar a alternativa híbrida criando um pacote para o software.
+
+O PhoneGap é uma tecnologia que permite encapsular um código em HTML e disponibilizá-lo
+nativamente. Não obstante, para empacotar os aplicativos localmente é necessária configuração
+substancial e só é possível empacotar para IOs em um computador da Apple. Alternativamente
+o PhoneGap disponibiliza um serviço de empacotamento na nuvem que soluciona estes problemas
+o PhoneGap Build.
 
 \subsection{INSTALAÇÃO}
 %{{{
