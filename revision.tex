@@ -1250,16 +1250,16 @@ então nenhum navegador implementa o definido.
 
 Codec é o algoritmo usado para codificar e decodificar vídeo ou
 áudio em um conjunto de bits \autocite{diveIntohtml}. O termo Codec é
-um acrônimo, significando o processo de codificar um fluxo de dados
-para armazenamento e decodificá-lo para ser consumido. 
-Dados multimídia são enormes, sem serem codificados, um vídeo ou áudio
-consistiriam em uma enorme quantidade de dados que seriam muito 
-grandes para serem transmitidos pela internet em um período de tempo razoável \autocite{proHtml5}.
-O objetivo dos
-codecs é diminuir o tamanho dos arquivos com a menor perda de qualidade
-possível, para isso os codecs utilizam de várias estratégias de
-compressão ou descarte de dados; podendo rodar tanto em hardware quanto em
-software.
+um acrônimo, significando o processo de codificar (\textit{coder}) um fluxo de dados
+para armazenamento e decodificá-lo (\textit{decoder}) para ser consumido.
+Dados multimídia são enormes, sem serem codificados, um vídeo ou
+áudio consistiriam em uma enorme quantidade de dados que seriam muito
+grandes para serem transmitidos pela Internet em um período de tempo
+razoável \autocite[pp. 66]{proHtml5}.
+O objetivo dos codecs é diminuir o tamanho dos arquivos com a menor
+perda de qualidade possível, para isso os codecs utilizam de várias
+estratégias de compressão ou descarte de dados; podendo rodar tanto em
+hardware quanto em software.
 
 O funcionamento de codecs pode variar muito, conforme as estratégias de
 compressão utilizadas, a quantidade de bits por segundo, entre outros
@@ -1267,6 +1267,22 @@ fatores. Visto que os algoritmos de compressão podem adquirir grande
 complexidade muitos codecs são encobertos por licenças
 que limitam sua utilização. Não obstante, também existem opções
 livres de patentes e licenças.
+
+Abaixo segue uma lista de alguns codecs populares para áudio segundo \autocite[pp. 67]{proHtml5}.
+
+\begin{itemize}
+    \item ACC
+    \item MPEG-3
+    \item Vorbis
+\end{itemize}
+
+Ainda segundo  \autocite[pp. 67]{proHtml5} abaixo segue uma lista de codecs populares para vídeo.
+\begin{itemize}
+    \item H.264
+    \item VP8
+    \item OggTheora
+\end{itemize}
+
 
 Após ter sido codificado um fluxo de dados é armazenado em um
 contêiner. Contêiners são um padrão de metadados sobre as informações
@@ -1279,7 +1295,6 @@ navegador, de acordo com as preferências mercadológicas, técnicas
 ou filosofias das empresas por trás dos navegadores. Segundo
 \cite{diveIntohtml} não existe uma única combinação de contêiner e
 codecs que funcionem em todos os navegadores.
-
 
 %}}}
 \section{ÁUDIO}
@@ -1297,13 +1312,6 @@ através da API JavaScript de áudio.
 
 Abaixo segue uma lista dos codecs mais comuns em áudio:
 
-\end{draft}
-\begin{itemize}
-    \item ACC: avançado mas também conta com problemas de patentes
-    \item MP3: comummente utilizado mas não é livre de patentes
-    \item Vorbis: livre de patentes
-\end{itemize}
-
 A figura \ref{fig:audioCodecs} é um comparativo interessante sobre os
 formatos existentes, considerando o fator taxa de bits versus qualidade.
 
@@ -1313,6 +1321,7 @@ formatos existentes, considerando o fator taxa de bits versus qualidade.
 	\caption{Comparação de codecs de áudio}
     \label{fig:audioCodecs}
 \end{figure}
+\end{draft}
 
 
 \subsection{TAG ÁUDIO}
