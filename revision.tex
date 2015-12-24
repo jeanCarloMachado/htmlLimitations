@@ -445,16 +445,19 @@ elementos que estão em acordo com o padrão especificado.
 
 DOM também conta com uma API de eventos que possibilita que, através
 de JavaScript, se saiba quando algum evento interessante aconteceu.
+Cada evento é representado por um objeto baseado na interface
+\textit{Event} e pode ter campos e funções adicionais para prover
+maior informação do evento ocorrido \autocite{devdocs}.
+
 Os eventos podem ser criados pelo usuário ou serem lançados pelo
 navegador, possibilitando uma manipulação consistente dos mais
-variados aspectos de uma aplicação. Cada evento é representado por um
-objeto baseado na interface \textit{Event} e pode ter campos e funções
-adicionais para prover maior informação do evento ocorrido \autocite{devdocs}.
+variados aspectos de uma aplicação.
 
 Manipulação de entrada de comandos, e muitas varias outras APIs do
-HTML como o IndexedDB se dá através de eventos, tornando o assunto
-relevante aos jogos. O site http://devdocs.io/dom\_events/ contém uma
-lista dos eventos lançados automaticamente pelos navegadores.
+HTML, como o IndexedDB, se dá através de eventos, tornando o assunto
+relevante aos jogos \footnote{O site http://devdocs.io/dom\_events/
+contém uma lista dos eventos lançados automaticamente pelos
+navegadores}.
 %}}}
 
 Fortemente entrelaçado com o HTML e o DOM está o CSS que possibilita
