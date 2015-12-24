@@ -1252,23 +1252,24 @@ Codec é o algoritmo usado para codificar e decodificar vídeo ou
 áudio em um conjunto de bits \autocite{diveIntohtml}. O termo Codec é
 um acrônimo, significando o processo de codificar (\textit{coder}) um fluxo de dados
 para armazenamento e decodificá-lo (\textit{decoder}) para ser consumido.
-Dados multimídia são enormes, sem serem codificados, um vídeo ou
-áudio consistiriam em uma enorme quantidade de dados que seriam muito
-grandes para serem transmitidos pela Internet em um período de tempo
-razoável \autocite[pp. 66]{proHtml5}.
-O objetivo dos codecs é diminuir o tamanho dos arquivos com a menor
-perda de qualidade possível, para isso os codecs utilizam de várias
-estratégias de compressão ou descarte de dados; podendo rodar tanto em
-hardware quanto em software.
+
+Dados multimídia são geralmente enormes, sem serem codificados,
+um vídeo ou áudio consistiriam em uma enorme quantidade de dados
+que seriam muito grandes para serem transmitidos pela Internet em um
+período de tempo razoável \autocite[pp. 66]{proHtml5}. O objetivo dos
+codecs é diminuir o tamanho dos arquivos com a menor perda de qualidade
+possível, para isso os codecs utilizam de várias estratégias de
+compressão ou descarte de dados; podendo rodar tanto em hardware quanto
+em software.
 
 O funcionamento de codecs pode variar muito, conforme as estratégias de
-compressão utilizadas, a quantidade de bits por segundo, entre outros
+compressão utilizadas, a quantidade de bits por segundo suportada, entre outros
 fatores. Visto que os algoritmos de compressão podem adquirir grande
 complexidade muitos codecs são encobertos por licenças
 que limitam sua utilização. Não obstante, também existem opções
 livres de patentes e licenças.
 
-Abaixo segue uma lista de alguns codecs populares para áudio segundo \autocite[pp. 67]{proHtml5}.
+Abaixo segue uma lista de alguns codecs populares para áudio segundo \cite[pp. 67]{proHtml5}.
 
 \begin{itemize}
     \item ACC
@@ -1276,13 +1277,12 @@ Abaixo segue uma lista de alguns codecs populares para áudio segundo \autocite[
     \item Vorbis
 \end{itemize}
 
-Ainda segundo  \autocite[pp. 67]{proHtml5} abaixo segue uma lista de codecs populares para vídeo.
+Ainda segundo \cite[pp. 67]{proHtml5} abaixo segue uma lista de codecs populares para vídeo.
 \begin{itemize}
     \item H.264
     \item VP8
     \item OggTheora
 \end{itemize}
-
 
 Após ter sido codificado um fluxo de dados é armazenado em um
 contêiner. Contêiners são um padrão de metadados sobre as informações
@@ -1290,16 +1290,38 @@ codificadas de modo a possibilitar que outros programas consigam
 interpretar estas informações de forma padronizada. Assim como
 codecs existem contêiners livres e com restrições de licença.
 
+Abaixo segue uma lista de alguns contêiners de áudio.
+\begin{itemize}
+    \item Audio Video Interleave (.avi)
+    \item MPEG-2 Audio Layer III (.mp3)
+    \item Matroska (.mkv)
+    \item Vorbis (.ogg)
+    \item Opus (.opus)
+\end{itemize}
+
+Abaixo segue uma lista de alguns contêiners de vídeo.
+\begin{itemize}
+    \item Audio Video Interleave (.avi)
+    \item Flash Video (.flv)
+    \item MPEG4 (.mp4)
+    \item Matroska (.mkv)
+    \item Ogg (.ogv)
+    \item WebM (.webm)
+\end{itemize}
+
 O suporte a codecs e contêiners na WEB varia de navegador para
 navegador, de acordo com as preferências mercadológicas, técnicas
 ou filosofias das empresas por trás dos navegadores. Segundo
 \cite{diveIntohtml} não existe uma única combinação de contêiner e
-codecs que funcionem em todos os navegadores.
+codecs que funcionem em todos os navegadores
+\footnote{A figura \ref{fig:audioCodecs} apresenta um comparativo interessante
+sobre os formatos populares de áudio considerando o fator taxa de bits
+(quantidade de informação armazenável por segundo) versus qualidade
+(perceptível por humanos).}.
 
 %}}}
 \section{ÁUDIO}
 %{{{
-\begin{draft}
 
 Áudio é um componente vital para oferecer imersão e feedback aos
 usuários de jogos. O componente de áudio é especialmente útil para
@@ -1310,25 +1332,20 @@ plugins de terceiros. A especificação do HTML define duas formas de
 utilizar utilizar áudio na WEB: através do elemento HTML áudio ou
 através da API JavaScript de áudio.
 
-Abaixo segue uma lista dos codecs mais comuns em áudio:
-
-A figura \ref{fig:audioCodecs} é um comparativo interessante sobre os
-formatos existentes, considerando o fator taxa de bits versus qualidade.
-
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{codec.png}
 	\caption{Comparação de codecs de áudio}
     \label{fig:audioCodecs}
+    \source{https://www.opus-codec.org/comparison/}
 \end{figure}
-\end{draft}
 
+\subsection{ELEMENTO ÁUDIO}
 
-\subsection{TAG ÁUDIO}
-
-A tag \textit{audio} define um som dentro de um documento HTML. Quando o
-elemento é renderizado pelos navegadores, ele carrega o conteúdo que
-pode ser reproduzido pelo programa dentro do navegador.
+O elemento \textit{audio} foi a primeira tecnologia de áudio nativa para
+WEB, ele define um som dentro de um documento HTML. Quando o elemento
+é renderizado pelos navegadores, ele carrega o conteúdo que pode ser
+reproduzido pelo programa dentro do navegador.
 
 \begin{figure}
 \centering
@@ -1347,17 +1364,22 @@ Your browser does not support the audio element.
 A imagem \ref{fig:htmlAudio} demonstra a utilização da tag
 \textit{audio}. Os elementos \textit{source} demonstrados na figura
 referenciam a arquivos de áudio contendo um contêiner e codec
-específico, mais de um elemento \textit{source } por áudio é
-necessário para dar suporte aos diferentes navegadores.
+específicos. Mais de um \textit{source } é necessário pois 
+os criadores de navegadores não chegaram a um consenso sobre 
+qual formato deve ser usado, sendo necessário utilizar vários para suportar
+todos os navegadores populares.
 
-A especificação declara que todo o conteúdo dentro de uma tag áudio
-(e vídeo também), que não sejam tags \textit{source}, sejam ignoradas
+A especificação declara que todo o conteúdo dentro de uma tag audio
+(e video também), que não sejam tags \textit{source}, sejam ignoradas
 pelo navegador. O que permite que seja adicionada marcação de reserva
 para tratar os casos de quando não existe suporte a tag \textit{audio}
-no navegador.
+no navegador. A figura \ref{fig:htmlAudio} ilustra este comportamento 
+através da mensagem \textit{Your browser does not support the audio element
+} que só será apresentada se o navegador do usuário não tiver suporte
+a tag audio.
 
 O objetivo inicial da tag \textit{audio} é reproduzir um som e parar.
-Ideal para ouvir música, como um som de fundo. Entretanto, a tag
+Ideal para ouvir música, como um som de fundo. Por conseguinte, a tag
 \textit{audio} não é o suficiente para comportar aplicações de
 áudio complexas \autocite{audioApiSpec}. A grande maioria de jogos
 muitas vezes precisam lançar múltiplos sons derivados de ações
@@ -1365,7 +1387,6 @@ de usuário e outros eventos, nestes casos a API de áudio é mais
 adequada.
 
 \subsection{API DE ÁUDIO}
-\begin{draft}
 
 É uma interface experimental (ainda em rascunho) em JavaScript para
 criar e processar áudio. O objetivo da especificação é incluir
@@ -1381,24 +1402,25 @@ inferior (tipicamente código Assembly / C / C++), mas síntese e
 processamento em JavaScript também será suportado \autocite{audioApiSpec}.
 
 Essa tecnologia é muito mais nova do que a tag áudio. Diferentemente
-dos demais navegadores o Internet Explorer não dá nenhum nível de
-suporte a API. O polyfill https://github.com/shinnn/AudioContext-Polyfill
-suporta as partes básicas da API e pode ser utilizada nos casos onde 
-não existe suporte para a API do HTML.
+dos demais navegadores o Internet Explorer não dá nenhum
+nível de suporte a API. O polyfill AudioContext \footenote{ O
+polyfill AudioContext pode ser encontrado no seguinte endereço
+https://github.com/shinnn/AudioContext-Polyfill} suporta as partes
+básicas da API e pode ser utilizada nos casos onde não existe suporte
+para a API do HTML.
 
-\subsubsection{Áudio Workers}
+As últimas versões da especificação da Audio API contam com a
+possibilidade de manipular a API de áudio através de WEB Workers, o
+que traz oportunidades interessantes para aplicações que dependam de
+muito processamento de áudio, de modo que este processamento possa ser
+feito em uma thread separada.
 
-As últimas versões da especificação contam com a possibilidade
-de manipular a API de áudio através de WEB Workers, o que traz
-oportunidades interessantes para aplicações que dependam de muito
-processamento de áudio, de modo que este processamento possa ser feito
-em uma thread separada.
-
-\end{draft}
+Além do áudio alguns jogos fazem uso de vídeo como introdução, cinemáticas,
+entre outros recursos que habilitam uma experiência mais rica ao usuário.
+Abaixo será feita uma revisão sobre a tecnologia de vídeo em HTML.
 %}}}
 \section{VÍDEO}
 %{{{
-\begin{draft}
 
 O elemento \textit{video} especifica uma forma de adicionar vídeos nativamente,
 sem necessitar depender de plugins de terceiros como o Flash Player.
@@ -1407,19 +1429,6 @@ ou adicionar vários formatos de contêiner e codec dentro do elemento através
 de elementos \textit{source}. Assim como o elemento \textit{audio} o navegador
 decidirá em tempo de execução qual formato executar dependendo de suas capacidades.
 
-
-Abaixo segue uma lista de contêiners  de vídeo populares.
-\begin{itemize}
-    \item Audio Video Interleave (.avi)
-    \item Flash Video (.flv)
-    \item MPEG4 (.mp4)
-    \item Matroska (.mkv)
-    \item Ogg (.ogv)
-\end{itemize}
-
-
-
-\end{draft}
 \begin{figure}
 \centering
 \begin{verbatim}
@@ -1456,24 +1465,6 @@ razão de tamanho e qualidade aceitável, mas prezando por tamanho. A
 maioria dos codecs de vídeo não mudam todo o conteúdo de um quadro
 para o próximo, possibilitando maiores taxas de compressão, que
 resulta em arquivos menores \autocite{diveIntohtml}.
-
-Segue uma lista de alguns dos contêiners de vídeo:
-\begin{itemize}
-    \item{MPEG4}
-    \item{Flash Video}
-    \item{Ogg} (for video Theora), (audio Vorbis)
-    \item{WebM}
-    \item{Matroska}
-    \item{Audio Video Interleave}
-\end{itemize}
-
-Alguns codecs de vídeo
-
-\begin{itemize}
-    \item{H.264, is one of the video codecs mandated by the Blue-Ray specification}
-    \item{Theora, native in Linux}
-    \item{VP8 royality free from Google}
-\end{itemize}
 
 \end{draft}
 %}}}
