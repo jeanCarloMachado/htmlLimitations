@@ -85,6 +85,12 @@
   \field{title}{Chrome DevTools Overview}
 \endentry
 
+\entry{devdocs}{online}{}
+  \field{howpublished}{Available at \url{http://devdocs.io/dom_events/}
+  (2015/12/24)}
+  \field{title}{DOM Events}
+\endentry
+
 \entry{mdnCanvas}{online}{}
   \field{howpublished}{Available at
   \url{https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes}
