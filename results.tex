@@ -12,22 +12,6 @@ Não obstante, abaixo constam as limitações aplicáveis, mesmo
 que não exclusivamente, aos jogos. Encontradas durante a pesquisa e
 concepção do protótipo.
 
-\subsection{Recursos}
-
-Apesar da grande maioria dos recursos oferecidos nativamente
-nos dispositivos estar presente em HTML5 ainda existem algumas
-funcionalidades faltando para este tipo de aplicação.
-
-\cite{html5Tradeoffs} cita algumas limitações no contexto geral
-\begin{quote}
-Não podemos mudar a imagem de fundo do dispositivo, ou adicionar toques
-etc. Similarmente, existem muitas API's de nuvem como os serviços
-de impressão do ICloud ou Google Cloud que estão disponíveis para
-aplicações nativas mas não para HTML5. Outros serviços utilitários
-como o C2DM do Google que está disponível para desenvolvedores Android
-para utilizar serviços de \textit{push} também não estão disponíveis
-para o HTML5.
-\end{quote}
 
 \subsection{VERSÕES}
 
@@ -44,7 +28,6 @@ suporte é testando em todas as versões alvo, todavia essa solução
 não é prática.
 \end{quote}
 
-
 O Crosswalk é uma tecnologia que pode resolver parcialmente
 este problema para jogos híbridos. Visto que a aplicação é
 disponibilizada juntamente com uma versão recente do navegador que a
@@ -52,14 +35,24 @@ irá rodá-la versões de software para dispositivos móveis não é
 um problema problema. Não obstante, o Crosswalk só é suportado para
 Android \footnote{Nos apêndices o Crosswalk é tratado com mais detalhes}.
 
-\subsection{OFFLINE}
+\subsection{JavaScript}
 
-Quando o download offline falha o navegador emite um evento mas não há
-indicação de qual problema aconteceu. Isso pode tornar a depuração
-ainda mais complicada que o usual \autocite{diveIntohtml}.
+O JavaScript, por ser uma tecnologia desenvolvida por consenso, tem um
+ciclo de vida de atualizações demorado; pois necessita que todos os
+consumidores da especificação entrem em consenso e implementem a.
 
-Refresh duplo para ver assets cacheados. Ver:
-http://buildnewgames.com/game-asset-management/
+Apesar da performance ter notavelmente melhorado, ainda é geralmente
+menos eficiente produzir animações em JavaScript do que utilizando
+transições e animações do CSS, que por sua vez são mais otimizados
+e acelerados via hardware \autocite{html5mostwanted}.
+
+Erros numéricos resultam no valor NaN (\textit{not a number}).
+Todas as operações com NaN como operadores irão retornar outro
+NaN. Isso torna a depuração de erros desnecessariamente complexa
+\autocite{html5mostwanted}.
+
+
+
 
 \subsection{SVG}
 
@@ -130,18 +123,6 @@ Para ver um programa em WebGL é necessário um navegador recente, uma
 placa gráfica recente e um sistema operacional que suporte a tecnologia
 \autocite{html5mostwanted}
 
-\subsection{VIDEO}
-
-O suporte a vídeo apesar de estar melhorando ainda é básico. No
-Silverlight existem uma coleção de possibilidades como aplicar shaders
-diretamente no vídeo e streaming suave de 1080px HD \autocite[pp.
-8]{researchOnHtml}.
-
-O projeto \textit{Vídeo for Everybody} \begin{verbatim}
-http://camendesign.com/code/video_for_everybody \end{verbatim} é um
-polyfill que recorre à flash quando o vídeo não é suportado pelo
-navegador.
-
 \subsection{ASSETS}
 
 Trafegar muitos assets deixa o sistema lento. Pode-se contornar este
@@ -187,6 +168,36 @@ navegadores. A W3C recomenda OggVorbis e OggTheora para áudio e vídeo
 respectivamente.
 \end{quote}
 
+\subsection{VIDEO}
+
+O suporte a vídeo apesar de estar melhorando ainda é básico. No
+Silverlight existem uma coleção de possibilidades como aplicar shaders
+diretamente no vídeo e streaming suave de 1080px HD \autocite[pp.
+8]{researchOnHtml}.
+
+O projeto \textit{Vídeo for Everybody} \begin{verbatim}
+http://camendesign.com/code/video_for_everybody \end{verbatim} é um
+polyfill que recorre à flash quando o vídeo não é suportado pelo
+navegador.
+
+
+\subsection{Armazenamento}
+
+Em praticamente nenhuma das tecnologias da WEB é possível armazenar objetos e  seu estado atual.
+
+IndexedDB é uma API interessante mas para projetos menores é um tanto complexa.
+
+%unsorted
+
+\cite{browserGamesTechnologyAndFuture} apresenta as seguintes limitações
+no contexto de jogos de navegador.
+
+\begin{itemize}
+\item Não podem ser instalados em um dispositivo móvel como um aplicativo separado
+\item Não tem acesso a funcionalidades específicas dos dispositivos e recursos como notificações, use de hardware nativo ou comunicação entre aplicativos.
+\end{itemize}
+
+
 \subsection{INTERFACE GRÁFICA}
 
 É muito custoso desenvolver uma interfaces que pareçam nativas
@@ -196,6 +207,24 @@ positivo. Não obstante
 há casos, como o dos botões de certo e errado que a proporções ficam
 exageradas, nesses casos a utilizada de max-width é uma solução
 conveniente.
+
+\subsection{Recursos}
+
+Apesar da grande maioria dos recursos oferecidos nativamente
+nos dispositivos estar presente em HTML5 ainda existem algumas
+funcionalidades faltando para este tipo de aplicação.
+
+\cite{html5Tradeoffs} cita algumas limitações no contexto geral
+\begin{quote}
+Não podemos mudar a imagem de fundo do dispositivo, ou adicionar toques
+etc. Similarmente, existem muitas API's de nuvem como os serviços
+de impressão do ICloud ou Google Cloud que estão disponíveis para
+aplicações nativas mas não para HTML5. Outros serviços utilitários
+como o C2DM do Google que está disponível para desenvolvedores Android
+para utilizar serviços de \textit{push} também não estão disponíveis
+para o HTML5.
+\end{quote}
+
 
 \subsection{PERFORMANCE GERAL}
 
@@ -214,28 +243,10 @@ podem se tornar inúteis, ou mesmo prejudiciais, amanhã
 
 \subsection{Acelerômetro}
 
-\subsection{IMPLEMENTAÇÃO INCONSISTENTE DE APIs}
-
 \subsection{TAMANHO DE TELA}
 Em alguns casos o tamanho das telas pode ser um fator limitante – como
 no caso de jogos de estratégia. Jogadores com telas menores podem sair
 em desvantagem.
-
-\subsection{JavaScript}
-
-O JavaScript, por ser uma tecnologia desenvolvida por consenso, tem um
-ciclo de vida de atualizações demorado; pois necessita que todos os
-consumidores da especificação entrem em consenso e implementem a.
-
-Apesar da performance ter notavelmente melhorado, ainda é geralmente
-menos eficiente produzir animações em JavaScript do que utilizando
-transições e animações do CSS, que por sua vez são mais otimizados
-e acelerados via hardware \autocite{html5mostwanted}.
-
-Erros numéricos resultam no valor NaN (\textit{not a number}).
-Todas as operações com NaN como operadores irão retornar outro
-NaN. Isso torna a depuração de erros desnecessariamente complexa
-\autocite{html5mostwanted}.
 
 \subsection{Detecção de recursos}
 
@@ -251,22 +262,15 @@ onde o HTML ainda é fraco. Existem várias tentativas para solucionar
 esse problema como o iScroll, TouchScroll, GloveBox, Sencha, jQuery
 Mobile.
 
-\subsection{Armazenamento}
 
-Em praticamente nenhuma das tecnologias da WEB é possível armazenar objetos e  seu estado atual.
+\subsection{OFFLINE}
 
-IndexedDB é uma API interessante mas para projetos menores é um tanto complexa.
+Quando o download offline falha o navegador emite um evento mas não há
+indicação de qual problema aconteceu. Isso pode tornar a depuração
+ainda mais complicada que o usual \autocite{diveIntohtml}.
 
-%unsorted
-
-\cite{browserGamesTechnologyAndFuture} apresenta as seguintes limitações
-no contexto de jogos de navegador.
-
-\begin{itemize}
-\item Não podem ser instalados em um dispositivo móvel como um aplicativo separado
-\item Não tem acesso a funcionalidades específicas dos dispositivos e recursos como notificações, use de hardware nativo ou comunicação entre aplicativos.
-\end{itemize}
-
+Refresh duplo para ver assets cacheados. Ver:
+http://buildnewgames.com/game-asset-management/
 
 
 \end{draft}
