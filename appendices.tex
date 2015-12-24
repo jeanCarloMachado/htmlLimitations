@@ -134,7 +134,11 @@ na nuvem, possibilitou a Intel criar compiladores para cada uma das
 plataformas disponibilizadas pelo PhoneGap, que é o framework polyfill
 utilizado na solução.
 
-O website https://codepen.io e https://jsfiddle.net permitem a construção e visualização de aplicações utilizando as tecnologias da WEB. Apesar de ser possível, criação de aplicações utilizando estas tecnologias não é muito comum, servindo principalmente para visualizar trechos de códigos de exemplos na WEB.
+O website https://codepen.io e https://jsfiddle.net permitem a
+construção e visualização de aplicações utilizando as tecnologias
+da WEB. Apesar de ser possível, criação de aplicações utilizando
+estas tecnologias não é muito comum, servindo principalmente para
+visualizar trechos de códigos de exemplos na WEB.
 
 \chapter{ALTERNATIVAS AO JAVASCRIPT}
 
@@ -192,15 +196,32 @@ podem agregar novas funcionalidades;
 Segundo \cite{gruntTutorial}
 \begin{quote}
 Durante o desenvolvimento de aplicações WEB, existem muitas tarefas
-que tem que ser feitas repetidamente. Estas tarefas incluem 
-minificar o JavaScript e CSS, rodar testes unitário, aplicar linters
-nosarquivos para checar erros, compilar os préprocessadores de CSS (LESS, SASS), 
-e muito mais.
+que tem que ser feitas repetidamente. Estas tarefas incluem minificar o
+JavaScript e CSS, rodar testes unitário, aplicar linters nos arquivos
+para checar erros, compilar os pré processadores de CSS (LESS, SASS), e
+muito mais.
 \end{quote}
 
-O Grunt é um automatizador destas tarefas quotidianas.
+O Grunt é um automatizador destas tarefas quotidianas. Para realizar
+a automação o Grunt conta com um grande ecossistema de plugins que
+podem ser compostos para realizar as tarefas desejadas para determinada
+aplicação.
 
+No protótipo o Grunt foi utilizado com o intuito primário de realizar
+a minificação e disponibilização da aplicação como um conjunto de
+arquivos prontos para a produção.
+
+Para tanto os seguintes plugins foram utilizados:
+
+\begin{itemize}
+    \item grunt-contrib-uglify: responsável por minificar os arquivos JavaScript;
+    \item grunt-contrib-cssmin: responsável por minificar arquivos CSS;
+    \item grunt-contrib-copy: responsável por copiar os arquivos de desenvolvimento para a pasta de distribuição;
+    \item grunt-contrib-watch: observar modificações nos arquivos de desenvolvimento e iniciar o processamento dos plugins acima;
+\end{itemize}
 
 O Gulp utiliza o conceito de streams para aplicar todas as modificações sobre
 um arquivo de uma vez só.
+
+
 
