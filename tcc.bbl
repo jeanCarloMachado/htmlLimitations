@@ -334,6 +334,32 @@
   }
 \endentry
 
+\entry{proHtml5}{book}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Lubbers}{L.}%
+     {Petter}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Brian}{B.}%
+     {Albers}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Frank}{F.}%
+     {Salim}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{LPBAFS1}
+  \strng{fullhash}{LPBAFS1}
+  \field{labelyear}{2010}
+  \field{title}{Pro HTML5 Programming - Powerful APIs for Rich Internet
+  Application Development}
+  \field{year}{2010}
+\endentry
+
 \entry{3daps}{article}{}
   \name{author}{2}{}{%
     {{}%

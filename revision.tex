@@ -1251,7 +1251,11 @@ então nenhum navegador implementa o definido.
 Codec é o algoritmo usado para codificar e decodificar vídeo ou
 áudio em um conjunto de bits \autocite{diveIntohtml}. O termo Codec é
 um acrônimo, significando o processo de codificar um fluxo de dados
-para armazenamento e decodificá-lo para ser consumido. O objetivo dos
+para armazenamento e decodificá-lo para ser consumido. 
+Dados multimídia são enormes, sem serem codificados, um vídeo ou áudio
+consistiriam em uma enorme quantidade de dados que seriam muito 
+grandes para serem transmitidos pela internet em um período de tempo razoável \autocite{proHtml5}.
+O objetivo dos
 codecs é diminuir o tamanho dos arquivos com a menor perda de qualidade
 possível, para isso os codecs utilizam de várias estratégias de
 compressão ou descarte de dados; podendo rodar tanto em hardware quanto em
@@ -1281,17 +1285,22 @@ codecs que funcionem em todos os navegadores.
 \section{ÁUDIO}
 %{{{
 \begin{draft}
+
 Áudio é um componente vital para oferecer imersão e feedback aos
 usuários de jogos. O componente de áudio é especialmente útil para
-jogos de ação \autocite{browserGamesTechnologyAndFuture}. Efeitos de
-som e música podem servir como parte da mecânica do jogo.
+jogos de ação \autocite{browserGamesTechnologyAndFuture}. Efeitos
+de som e música podem servir como parte da mecânica do jogo. Antes
+do HTML5 não havia como consumir áudio na WEB sem a utilização de
+plugins de terceiros. A especificação do HTML define duas formas de
+utilizar utilizar áudio na WEB: através do elemento HTML áudio ou
+através da API JavaScript de áudio.
 
 Abaixo segue uma lista dos codecs mais comuns em áudio:
 
 \end{draft}
 \begin{itemize}
-    \item MP3: comummente utilizado mas não é livre de patentes
     \item ACC: avançado mas também conta com problemas de patentes
+    \item MP3: comummente utilizado mas não é livre de patentes
     \item Vorbis: livre de patentes
 \end{itemize}
 
@@ -1305,8 +1314,6 @@ formatos existentes, considerando o fator taxa de bits versus qualidade.
     \label{fig:audioCodecs}
 \end{figure}
 
-HTML5 especifica duas formas de utilizar utilizar áudio na WEB.
-Através do elemento HTML áudio ou através da API JavaScript de áudio.
 
 \subsection{TAG ÁUDIO}
 
@@ -1390,6 +1397,17 @@ Pode-se adicionar um arquivo através do atributo \textit{src} do elemento
 ou adicionar vários formatos de contêiner e codec dentro do elemento através
 de elementos \textit{source}. Assim como o elemento \textit{audio} o navegador
 decidirá em tempo de execução qual formato executar dependendo de suas capacidades.
+
+
+Abaixo segue uma lista de contêiners  de vídeo populares.
+\begin{itemize}
+    \item Audio Video Interleave (.avi)
+    \item Flash Video (.flv)
+    \item MPEG4 (.mp4)
+    \item Matroska (.mkv)
+    \item Ogg (.ogv)
+\end{itemize}
+
 
 
 \end{draft}

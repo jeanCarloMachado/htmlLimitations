@@ -20,45 +20,45 @@ Warning--I didn't find a database entry for "gtw"
 Biblatex version: 3.0
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
-You've used 31 entries,
+You've used 32 entries,
             6047 wiz_defined-function locations,
-            1265 strings with 12181 characters,
-and the built_in function-call counts, 78094 in all, are:
-= -- 2809
-> -- 2278
-< -- 801
-+ -- 626
-- -- 797
-* -- 4952
-:= -- 4356
+            1269 strings with 12324 characters,
+and the built_in function-call counts, 81380 in all, are:
+= -- 2906
+> -- 2418
+< -- 836
++ -- 669
+- -- 860
+* -- 5253
+:= -- 4564
 add.period$ -- 0
-call.type$ -- 31
-change.case$ -- 338
+call.type$ -- 32
+change.case$ -- 348
 chr.to.int$ -- 36
-cite$ -- 60
-duplicate$ -- 9257
-empty$ -- 9105
-format.name$ -- 1427
-if$ -- 18272
+cite$ -- 62
+duplicate$ -- 9618
+empty$ -- 9428
+format.name$ -- 1517
+if$ -- 19026
 int.to.chr$ -- 0
-int.to.str$ -- 56
+int.to.str$ -- 58
 missing$ -- 0
-newline$ -- 515
-num.names$ -- 1066
-pop$ -- 9859
+newline$ -- 540
+num.names$ -- 1107
+pop$ -- 10197
 preamble$ -- 1
-purify$ -- 380
+purify$ -- 395
 quote$ -- 0
-skip$ -- 4727
+skip$ -- 4922
 stack$ -- 0
-substring$ -- 951
-swap$ -- 2552
-text.length$ -- 723
-text.prefix$ -- 30
+substring$ -- 968
+swap$ -- 2662
+text.length$ -- 759
+text.prefix$ -- 31
 top$ -- 1
-type$ -- 1154
+type$ -- 1192
 warning$ -- 0
-while$ -- 451
+while$ -- 467
 width$ -- 0
-write$ -- 483
+write$ -- 507
 (There were 2 warnings)
