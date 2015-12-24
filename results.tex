@@ -1,8 +1,6 @@
 \begin{draft}
 
-\section{LIMITAÇÕES}
-
-Muitos dos problemas dos jogos multiplataforma não são
+Muitos das limitações dos jogos multiplataforma não são
 específicos dos jogos, mas aplicam-se a todos tipos de software
 \parencite{currentStateCrossPlatform}. Alguns problemas são inerentes
 das tecnologias, outras dos dispositivos ou da característica
@@ -12,8 +10,7 @@ Não obstante, abaixo constam as limitações aplicáveis, mesmo
 que não exclusivamente, aos jogos. Encontradas durante a pesquisa e
 concepção do protótipo.
 
-
-\subsection{VERSÕES}
+\section{VERSÕES}
 
 A grande maioria dos dispositivos atualmente no mercado utilizam
 obsoletas de seus softwares.
@@ -35,7 +32,7 @@ irá rodá-la versões de software para dispositivos móveis não é
 um problema problema. Não obstante, o Crosswalk só é suportado para
 Android \footnote{Nos apêndices o Crosswalk é tratado com mais detalhes}.
 
-\subsection{CSS}
+\section{CSS}
 
 É muito custoso desenvolver uma interfaces que pareçam nativas
 para cada dispositivo sem a utilização de plugins e ferramentas
@@ -57,7 +54,7 @@ onde o HTML ainda é fraco. Existem várias tentativas para solucionar
 esse problema como o iScroll, TouchScroll, GloveBox, Sencha, jQuery
 Mobile.
 
-\subsection{JavaScript}
+\section{JavaScript}
 
 O JavaScript, por ser uma tecnologia desenvolvida por consenso, tem um
 ciclo de vida de atualizações demorado; pois necessita que todos os
@@ -74,12 +71,12 @@ NaN. Isso torna a depuração de erros desnecessariamente complexa
 \autocite{html5mostwanted}.
 
 
-\subsection{SVG}
+\section{SVG}
 
 Segundo \cite{html5mostwanted} a grande desvantagem do SVG é que quão
 maior o documento mais lenta a renderização.
 
-\subsection{Canvas}
+\section{Canvas}
 
 A literatura aponta várias limitações distintas na API do canvas.
 Segundo \autocite{html5mostwanted}, os aspectos negativos do canvas é
@@ -117,7 +114,7 @@ desenho. Quando o tamanho do elemento é maior do que o da superfície
 de desenho do documento escala a superfície de desenho para preencher o
 elemento, o que pode gerar resultados inesperados.
 
-\subsection{WebGL}
+\section{WebGL}
 
 Como WebGL é baseada na versão otimizada para dispositivos móveis do
 OpenGL não é possível utilizar muitos recursos especiais disponível
@@ -143,17 +140,7 @@ Para ver um programa em WebGL é necessário um navegador recente, uma
 placa gráfica recente e um sistema operacional que suporte a tecnologia
 \autocite{html5mostwanted}
 
-\subsection{ASSETS}
-
-Trafegar muitos assets deixa o sistema lento. Pode-se contornar este
-problema utilizando páginas de carregamento e/ou cache;
-
-Outro problema relativo aos assets é descrito por \cite{howBrowsersWork}
-scripts requerendo informações de estilo durante o processo de
-parse. Se o estilo ainda não foi carregado o script vai utilizar
-informações erradas, causando uma série de problemas.
-
-\subsection{Codecs}
+\section{Codecs}
 
 \subsection{ÁUDIO}
 
@@ -200,7 +187,14 @@ http://camendesign.com/code/video_for_everybody \end{verbatim} é um
 polyfill que recorre à flash quando o vídeo não é suportado pelo
 navegador.
 
-\subsection{Armazenamento}
+Não é possível controlar a entrada em tela cheia através de script pois 
+é considerado uma violação de segurança. Não obstante, os navegadores
+tem a opção de deixar os usuários escolherem ver vídeos em tela cheia
+através de  controles adicionais \autocite[pp. 68]{proHtml5}.
+
+As tecnologias de mídia são restringidas pelo política de mesma origem \autocite[pp. 68]{proHtml5}.
+
+\section{Armazenamento}
 
 Em praticamente nenhuma das tecnologias da WEB é possível armazenar objetos e  seu estado atual.
 
@@ -216,7 +210,7 @@ no contexto de jogos de navegador.
 \item Não tem acesso a funcionalidades específicas dos dispositivos e recursos como notificações, use de hardware nativo ou comunicação entre aplicativos.
 \end{itemize}
 
-\subsection{OFFLINE}
+\section{OFFLINE}
 
 Quando o download offline falha o navegador emite um evento mas não há
 indicação de qual problema aconteceu. Isso pode tornar a depuração
@@ -225,16 +219,16 @@ ainda mais complicada que o usual \autocite{diveIntohtml}.
 Refresh duplo para ver assets cacheados. Ver:
 http://buildnewgames.com/game-asset-management/
 
-\subsection{Acelerômetro}
+\section{Acelerômetro}
 
-\subsection{Detecção de recursos}
+\section{Detecção de recursos}
 
 Grande parte da detecção de funcionalidades é feita através de
 JavaScript, isso força os desenvolvedores a criarem pelo menos parte da
 marcação em JavaScript, isso pode ser um fator limitante para o uso
 generalizado de HTML5 \autocite{diveIntohtml}.
 
-\subsection{Recursos}
+\section{Recursos}
 
 Apesar da grande maioria dos recursos oferecidos nativamente
 nos dispositivos estar presente em HTML5 ainda existem algumas
@@ -251,7 +245,7 @@ para utilizar serviços de \textit{push} também não estão disponíveis
 para o HTML5.
 \end{quote}
 
-\subsection{PERFORMANCE GERAL}
+\section{PERFORMANCE}
 
 De acordo com uma pesquisa, para um usuário uma tarefa é instantânea
 se ele leva até 0.1 segundos para ser executada. Se a tarefa toma
@@ -265,5 +259,15 @@ Otimizações de performance dependem do ambiente em que estão
 sendo feitas. E aquelas que hoje tem um impacto positivo hoje
 podem se tornar inúteis, ou mesmo prejudiciais, amanhã
 \autocite[pp.131]{html5mostwanted}.
+
+\subsubsection{ASSETS}
+
+Trafegar muitos assets deixa o sistema lento. Pode-se contornar este
+problema utilizando páginas de carregamento e/ou cache;
+
+Outro problema relativo aos assets é descrito por \cite{howBrowsersWork}
+scripts requerendo informações de estilo durante o processo de
+parse. Se o estilo ainda não foi carregado o script vai utilizar
+informações erradas, causando uma série de problemas.
 
 \end{draft}
