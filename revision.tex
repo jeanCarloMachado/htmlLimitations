@@ -1791,9 +1791,11 @@ dispositivo no Google Chrome ou habilitando o modo depuração nos
 aplicativos híbridos. Dessa forma é possível visualizar a aplicação
 dentro Google Chrome do computador e utilizar as já mencionadas tecnologias do DevTools.
 
-Existem ferramentas especializadas na depuração de
-Com o inspetor do WebGL é possível conferir os estados dos buffers, informações de texturas, frames individuais e outras informações úteis \autocite{html5mostwanted}.
-Debugar aplicativos 3D pode ser complexo, o debugger do chrome é uma boa opção.
+Existem ferramentas especializadas na depuração de Com o inspetor
+do WebGL é possível conferir os estados dos buffers, informações
+de texturas, frames individuais e outras informações úteis
+\autocite{html5mostwanted}. Debugar aplicativos 3D pode ser complexo, o
+debugger do chrome é uma boa opção.
 
 \subsection{Source Maps}
 
@@ -1812,10 +1814,10 @@ considerável estável e não recebe modificações na especificação
 desde 2013. Sendo suportado por diversas ferramentas de desenvolvimento
 como Google Chrome (DevTools) e Firefox.
 
-A especificação prevê a existência de um arquivo \textit{.map}
-o qual contém os metadados sobre os arquivos fonte e algumas outras
-configurações. Este arquivo é referenciado pelos arquivos minificados
-de modo a permitirem o navegador a realizar o mapeamento.
+A especificação prevê a existência de um arquivo \textit{.map} o
+qual contém o mapeamento dos arquivos fonte e outros metadados. Este
+arquivo é referenciado pelos arquivos minificados de modo a permitirem
+o navegador a realizar o mapeamento.
 
 É possível informar o navegador a localização do arquivo de metadados
 seguindo a seguinte sintaxe.
@@ -1835,6 +1837,10 @@ especializadas ou integrá-los ao processo de \textit{build} como Grunt ou Gulp
 \footnote{A biblioteca https://github.com/mishoo/UglifyJS2 é uma
 ferramenta de minificação capaz de gerar Source Maps}.
 
+Após ter o jogo ter sido depurado e seus erros minimizados, pode-se
+disponibilizar para ser consumido por seus usuários finais.
+Abaixo será abordada algumas formas de disponibilizar jogos web em 
+ambientes multiplataforma.
 %}}}
 \section{DISPONIBILIZAÇÃO DA APLICAÇÃO}
 %{{{
@@ -1857,9 +1863,10 @@ Alternativamente o PhoneGap disponibiliza um serviço de empacotamento
 na nuvem que soluciona estes problemas o PhoneGap Build.
 
 Através do PhoneGap Build pode-se carregar um arquivo zip, seguindo
-determinado formato, o qual contenha os arquivos HTML que o
-PhoneGap Cloud se responsabiliza por criar os arquivos prontos
-para serem instalados em Android, IOS e Windows Phone.
+determinado formato, o qual contenha os arquivos escritos com as
+ferramentas da web, que o PhoneGap Build se responsabiliza por
+empacotá-los nos formatos requeridos para serem instalados em Android,
+IOS e Windows Phone.
 
 \cite{publishHtml5} descreve os passos que são feitos pelo PhoneGap para 
 disponibilizar a aplicação nativamente.
@@ -1875,7 +1882,7 @@ No endereço https://github.com/phonegap/phonegap-start encontra-se um
 template no formato requerido pelo PhoneGap Build que pode ser utilizado
 para começar aplicações que serão servidas através da solução.
 
-Em seguida serão abordadas algumas otimizações das tecnologias 
+Em seguida serão abordadas algumas otimizações das tecnologias
 da WEB relevantes ao desenvolvimento de jogos.
 
 %}}}
