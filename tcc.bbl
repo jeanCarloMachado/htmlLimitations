@@ -155,6 +155,12 @@
   \field{title}{ECMAScript 2015 Language Specification}
 \endentry
 
+\entry{gamepad}{online}{}
+  \field{howpublished}{Available at \url{https://w3c.github.io/gamepad}
+  (2015/12/25)}
+  \field{title}{Gamepad}
+\endentry
+
 \entry{howBrowsersWork}{article}{}
   \name{author}{2}{}{%
     {{}%

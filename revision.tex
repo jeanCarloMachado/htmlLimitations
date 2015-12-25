@@ -1765,6 +1765,7 @@ número corresponde a um botão do teclado especificado através da tabela ASCII
 
 \begin{figure}
 \centering
+\begin{verbatim}
 window.addEventListener('keydown', function(event) {
   switch (event.keyCode) {
     case 37: // Left
@@ -1784,10 +1785,18 @@ window.addEventListener('keydown', function(event) {
     break;
   }
 }, false);
+\end{verbatim}
 \caption{Utilização dos eventos do teclado}
 \label{fig:keyboardEvents}
-\source{http://nokarma.org/2011/02/27/javascript-game-development-keyboard-input/}
+\source{\url{http://nokarma.org/2011/02/27/javascript-game-development-keyboard-input/}}
 \end{figure}
+
+\subsection{Gamepad}
+
+Atualmente a única forma de utilizar gamepads é usando-os emulados através de software 
+de terceiros para se comportarem como mouses e teclados \autocite{gamepad}.
+
+A API de Gamepad é uma especificação que define a interação de uma página WEB com Gamepads.
 
 %}}}
 \section{ORIENTAÇÃO}
