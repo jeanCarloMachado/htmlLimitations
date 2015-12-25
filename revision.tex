@@ -1687,23 +1687,37 @@ exemplo threads não podem fazer alterações no DOM.
 %}}}
 \section{OFFLINE}
 %{{{
-\begin{draft}
-Disponibilizar aplicações WEB offline é uma possibilidade introduzida
-do HTML5. Para tanto é necessário poder armazenar dados
-locais, tecnologias como IndexedDB e Web Storage permitem isso. Outro
+Disponibilizar aplicações WEB offline é uma característica
+introduzida no HTML5. Uma nova gama de aplicativos WEB foram
+possibilitados devido as tecnologias offline. A importância de gestão
+offline é tanta em alguns nichos que os avaliadores do mercado
+de software do IOs consideram quase uma obrigação da gestão da
+aplicação offline \autocite{publishHtml5}.
+
+Jogos de usuário único podem se beneficiar enormemente de aplicativos
+offline, tornando possível utilizar a aplicação com ou sem a
+presença de rede. Para tanto é necessário poder armazenar dados
+locais, tecnologias como IndexedDB e Web Storage permitem isso. O outro
 requerimento para estar offline é uma forma de armazenar os arquivos
 da WEB localmente de forma que sejam utilizados quando não houver uma
 conexão a rede.
 
-Para tanto HTML5 provê uma especificação de APIs de cache offline.
-A especificação determina que uma arquivo de manifesto contenha 
-quais arquivos serão guardados para utilização offline e possivelmente 
-quais serão usados pela rede.
+HTML5 conta com uma especificação estável de APIs de cache offline
+mantida pela W3C. Esta especificação determina que uma arquivo de
+manifesto contenha quais arquivos serão guardados para utilização
+offline e possivelmente quais serão usados pela rede.
 
-A figura \ref{fig:off-line} exemplifica um arquivo de manifesto. 
-Os arquivos abaixo da palavra \textit{CACHE MANIFEST} serão armazenados
-em cache para utilização offline. Já os arquivos abaixo da palavra \textit{NETWORK:}
-serão exclusivamente da rede.
+A figura \ref{fig:offline} exemplifica um arquivo de manifesto. Os
+arquivos abaixo da palavra \textit{CACHE MANIFEST} serão armazenados
+em cache e não serão buscados na rede a não ser que o arquivo
+de manifesto seja modificado. Já os arquivos abaixo da palavra
+\textit{NETWORK:} serão exclusivamente da rede e serão buscado todas
+as vezes.
+
+É uma boa prática colocar um comentário com a versão do arquivo de
+manifestos. Desse modo quando um arquivo for modificado incrementa-se a
+versão do arquivo de manifestos e as modificações serão baixadas nos
+navegadores clientes.
 
 \begin{figure}
 \centering
@@ -1720,21 +1734,9 @@ server.cgi
 \end{verbatim}
 \caption{Exemplo de arquivo de manifesto offline}
 \source{http://www.w3.org/TR/offline-webapps/}
-\label{fig:off-line}
+\label{fig:offline}
 \end{figure}
 
-Não é extraordinário que um jogo tenha que ser reverso para um estado
-válido anterior por motivo de um erro na base de dados \autocite[pp.
-5]{browserGamesTechnologyAndFuture}.
-
-Na sua versão mais simples, um aplicativo offline é um conjunto de
-URLs para arquivos HTML, CSS, JavaScript, imagens ou qualquer outro tipo
-de recurso \autocite{diveIntohtml}.
-
-Para aqueles que desejam publicar em mercados como o do IOs pensar 
-a gestão de conteúdo offline é quase uma obrigação \autocite{publishHtml5}.
-
-\end{draft}
 %}}}
 \section{ENTRADA DE COMANDOS}
 %{{{
