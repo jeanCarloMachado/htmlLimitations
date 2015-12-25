@@ -16,6 +16,21 @@
   {}
 \endgroup
 
+\entry{gamesDebug}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Alexander}{A.}%
+     {Mark}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{AM1}
+  \strng{fullhash}{AM1}
+  \field{labelyear}{2013}
+  \field{title}{Debugging HTML5 Games In The Browser}
+  \field{year}{2013}
+\endentry
+
 \entry{crossPlatformMobileGame}{article}{}
   \name{author}{1}{}{%
     {{}%

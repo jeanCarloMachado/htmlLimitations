@@ -13,53 +13,58 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated field_info (elt_size=8) to 10282 items from 5000.
+Reallocated field_info (elt_size=8) to 10421 items from 5000.
 Database file #1: tcc-blx.bib
 Database file #2: tcc.bib
+I was expecting a `,' or a `}'---line 138 of file tcc.bib
+ :    
+ :    howpublished={Available at \url{http://help.yoyogames.com/entries/25057993-Debugging-HTML5-Games-In-The-Browser} (2015/12/25)},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "HTML5"
 Warning--I didn't find a database entry for "gtw"
 Biblatex version: 3.0
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
-You've used 36 entries,
+You've used 37 entries,
             6047 wiz_defined-function locations,
-            1284 strings with 12933 characters,
-and the built_in function-call counts, 88430 in all, are:
-= -- 3122
-> -- 2496
-< -- 906
-+ -- 687
-- -- 888
-* -- 5554
-:= -- 4798
+            1288 strings with 13004 characters,
+and the built_in function-call counts, 90954 in all, are:
+= -- 3209
+> -- 2574
+< -- 931
++ -- 702
+- -- 913
+* -- 5711
+:= -- 4940
 add.period$ -- 0
-call.type$ -- 36
-change.case$ -- 372
+call.type$ -- 37
+change.case$ -- 382
 chr.to.int$ -- 36
-cite$ -- 70
-duplicate$ -- 10548
-empty$ -- 10470
-format.name$ -- 1565
-if$ -- 20754
+cite$ -- 72
+duplicate$ -- 10851
+empty$ -- 10767
+format.name$ -- 1613
+if$ -- 21346
 int.to.chr$ -- 0
-int.to.str$ -- 63
+int.to.str$ -- 65
 missing$ -- 0
-newline$ -- 569
-num.names$ -- 1148
-pop$ -- 11493
+newline$ -- 584
+num.names$ -- 1189
+pop$ -- 11818
 preamble$ -- 1
-purify$ -- 417
+purify$ -- 428
 quote$ -- 0
-skip$ -- 5311
+skip$ -- 5469
 stack$ -- 0
-substring$ -- 1012
-swap$ -- 2891
-text.length$ -- 822
-text.prefix$ -- 35
+substring$ -- 1027
+swap$ -- 2973
+text.length$ -- 846
+text.prefix$ -- 36
 top$ -- 1
-type$ -- 1344
+type$ -- 1382
 warning$ -- 0
-while$ -- 489
+while$ -- 505
 width$ -- 0
-write$ -- 532
-(There were 2 warnings)
+write$ -- 546
+(There was 1 error message)
