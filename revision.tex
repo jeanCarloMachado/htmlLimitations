@@ -1722,11 +1722,24 @@ listener pode invocar uma função e realizar qualquer coisa desejada
 
 \end{draft}
 %}}}
-\subsection{Acelerômetro}
+\subsection{Orientação}
 %{{{
-\begin{draft}
-    Descrever o acelerometro
-\end{draft}
+Muitos dispositivos móveis contam com tecnologias que permitem detectar
+a orientação física e movimento como acelerômetros e giroscópios.
+Visto que são comuns em dispositivos móveis, jogos podem se beneficiar
+deste tipo de ferramenta para criar experiências peculiares para seus
+usuários.
+
+A W3C tem uma especificação em rascunho que abstrai as diferenças dos
+dispositivos e prove uma API padronizada para consumir informações
+de orientação. A especificação define dois eventos de DOM
+principais: \textit{deviceorientation} e \textit{devicemotion}. O evento
+\textit{deviceorientation} prove a orientação do dispositivo expressa
+como uma série de rotações a partir de um frame de coordenadas locais
+\autocite{orientationSpec}. Já o evento \textit{devicemotion} dispõe
+de informações de movimento através de um sistema cartesiano e taxa
+de movimento.
+
 %}}}
 \section{HTTP/2}
 %{{{
