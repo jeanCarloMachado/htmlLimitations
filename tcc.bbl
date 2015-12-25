@@ -109,6 +109,13 @@
   \field{title}{Depuração}
 \endentry
 
+\entry{mdnOrientation}{online}{}
+  \field{howpublished}{Available at
+  \url{https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation}
+  (2015/12/25)}
+  \field{title}{Detecting device orientation}
+\endentry
+
 \entry{orientationSpec}{online}{}
   \field{howpublished}{Available at
   \url{http://www.w3.org/TR/orientation-event/} (2015/12/25)}
