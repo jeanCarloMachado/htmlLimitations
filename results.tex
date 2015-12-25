@@ -237,6 +237,18 @@ Os desenvolvedores mencionaram criar uma extensão para a funcionalidade mas
 até o tempo de desenvolvimento deste trabalho não havia extensão disponível. 
 A única alternativa viável até o momento é utilizar uma versão antiga do Chromium.
 
+Atualmente as ferramentas para depuração do canvas 2d ficaram
+comprometidas por não existir um plugin de terceiro tão bem
+consolidado como o WebGl Inspector. O projeto Canvas Interceptor é
+uma iniciativa para preencher esta demanda permitindo capturar alguns
+eventos do contexto 2d e tirar snapshoots dos passos da renderização
+do canvas. Entretanto o projeto requer que o desenvolvedor inclua
+um arquivo JavaScript e inicialize o depurador dentro do código,
+se tornando uma saída mais custosa do que um inspetor nativo no
+navegador ou via extensão. \footnote{Mais informações sobre o
+projeto Canvas Interceptor podem ser encontradas no seguinte endereço
+https://github.com/Rob--W/canvas-interceptor}
+
 \section{Recursos}
 
 Apesar da grande maioria dos recursos oferecidos nativamente
