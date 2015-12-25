@@ -217,10 +217,16 @@ http://buildnewgames.com/game-asset-management/
 
 \section{Orientação}
 
-Visto que a especificação não está pronta existem diferenças 
-substanciais entre navegadores, por exemplo:
-O Firefox e Google Chrome não manipulam angulos da mesma forma, por
-conseguinte alguns eixos se comportam de maneiras opostas \autocite{mdnOrientation}.
+Visto que a especificação o suporte está longe de completo, até
+o momento da pesquisa o único navegador popular que implementa a
+especificação completamente é o Edge da Microsoft.
+
+Outrossim, existem diferenças substanciais entre navegadores, por
+exemplo: O Firefox e Google Chrome não manipulam angulos da mesma
+forma, por conseguinte alguns eixos se comportam de maneiras opostas
+\autocite{mdnOrientation}. O polyfill gyronorm.js é uma tentativa de
+normalizar o uso de dados de orientação nos navegadores que pode ser
+utilizada até a especificação e os navegadores evoluírem.
 
 \section{Detecção de recursos}
 
