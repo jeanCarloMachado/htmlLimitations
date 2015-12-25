@@ -85,6 +85,12 @@
   \field{title}{Chrome DevTools Overview}
 \endentry
 
+\entry{depuracao}{online}{}
+  \field{howpublished}{Available at
+  \url{https://pt.wikipedia.org/wiki/Depuração} (2015/12/25)}
+  \field{title}{Depuração}
+\endentry
+
 \entry{devdocs}{online}{}
   \field{howpublished}{Available at \url{http://devdocs.io/dom_events/}
   (2015/12/24)}
