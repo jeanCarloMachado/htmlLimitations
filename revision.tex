@@ -1757,6 +1757,38 @@ Quando um evento de interação é disparado, um \textit{listener}
 que esteja ouvindo a este evento pode invocar uma função e realizar
 qualquer controle desejado \autocite{buildingHtml5Game}.
 
+O teclado é um periférico comum no caso de jogos da WEB, para existem
+os eventos \textit{keyup} e \textit{keydown} que representam uma tecla
+sendo solta e pressionada respectivamente. A \ref{fig:keyboardEvents}
+demostra a captura do pressionar das setas em JavaScript. Cada
+número corresponde a um botão do teclado especificado através da tabela ASCII.
+
+\begin{figure}
+\centering
+window.addEventListener('keydown', function(event) {
+  switch (event.keyCode) {
+    case 37: // Left
+      Game.player.moveLeft();
+    break;
+
+    case 38: // Up
+      Game.player.moveUp();
+    break;
+
+    case 39: // Right
+      Game.player.moveRight();
+    break;
+
+    case 40: // Down
+      Game.player.moveDown();
+    break;
+  }
+}, false);
+\caption{Utilização dos eventos do teclado}
+\label{fig:keyboardEvents}
+\source{http://nokarma.org/2011/02/27/javascript-game-development-keyboard-input/}
+\end{figure}
+
 %}}}
 \section{ORIENTAÇÃO}
 %{{{
