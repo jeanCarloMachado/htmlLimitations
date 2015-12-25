@@ -1740,7 +1740,6 @@ server.cgi
 %}}}
 \section{ENTRADA DE COMANDOS}
 %{{{
-\begin{draft}
 Na construção da grande maioria dos jogos é muitas vezes
 imprescindível grande flexibilidade na gestão de entrada comandos.
 Esta necessidade amplia na criação de jogos multiplataforma, em
@@ -1750,12 +1749,14 @@ movimentos.
 
 O HTML5 trata todos estes casos abstratamente na forma de eventos, os
 quais podem ser escutados através de \textit{listeners}. JavaScript
-pode ser configurado para escutar cada vez que um evento ocorre, como
-um clique do mouse ou o pressionar da tecla "A". Quando isso acontece o
-\textit{listener} pode invocar uma função e realizar qualquer coisa desejada
-\autocite{buildingHtml5Game}.
+pode ser configurado para escutar cada vez que um evento ocorre seja um
+clique do mouse o pressionar de uma tecla ou o mover de um eixo em um
+joystick.
 
-\end{draft}
+Quando um evento de interação é disparado, um \textit{listener}
+que esteja ouvindo a este evento pode invocar uma função e realizar
+qualquer controle desejado \autocite{buildingHtml5Game}.
+
 %}}}
 \section{ORIENTAÇÃO}
 %{{{

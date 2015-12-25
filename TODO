@@ -21,32 +21,36 @@ Write abut web assembly
 Add canvas to the prototype
 Talk about HTTP2
 Add more content about codecs
-
-#TODO
-
-Talk about Android
-Move introduction comments about the benefits of the WEB to it's place on the revision (think well)
 Add more content about Audio
 Add more content about Video
 Add more content about Canvas
-Adicionar fontes as imagens que se aplicam
 Melhorar a aparte da revisão do projeto
 Talk about chrome developer tools for debugging animations
-%Talk about webrtc
-Terminar de migrar os reviews para dentro do trabalho
+Talk about webrtc - I will not write about it
 Escrever sobre debugging
+Add accelerometer integration - I will not do
+Write about movimentation API
+Terminar de migrar os reviews para dentro do trabalho
+Escrever sobre os novos codecs WEBM
+
+#TODO
+
+Remove jquery from the prototype
+Fix refereces not showing all info
+Fix aspects that Rafa suggested
+Fix aspects suggested by reviewer
+Write limitations well
+Talk about Android
+Move introduction comments about the benefits of the WEB to it's place on the revision (think well)
+Adicionar fontes as imagens que se aplicam
 Remove numbering from the bibliography
 Write about the canvas to the prototype
 Add a example about webgl
-Write about phonegap on appendices
-Incrementar a sessao openweb com o processo da W3C, mencionar alguns outros orgaos como o ecma e o kronos tambem
-Escrever sobre os novos codecs WEBM
 Comentar as citaçẽos com referencia direta (que foram traduzidas por mim)
 Trabalhar na introdução
 Complete image descriptions (look for missing names on lof)
-Add accelerometer integration
-Fix refereces not showing all info
 Talk about monetization (think about it)
+Write about phonegap on appendices
 
 #FUTURE
 
