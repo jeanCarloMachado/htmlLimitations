@@ -243,6 +243,13 @@
   \field{title}{HTML HyperText Markup Language}
 \endentry
 
+\entry{canvasinspector}{online}{}
+  \field{howpublished}{Available at
+  \url{http://stackoverflow.com/questions/31439201/chrome-canvas-inspector-2015}
+  (2015/12/25)}
+  \field{title}{HTML5 canvas inspector?}
+\endentry
+
 \entry{http2}{online}{}
   \field{howpublished}{Available at \url{https://http2.github.io/}
   (2015/12/25)}
