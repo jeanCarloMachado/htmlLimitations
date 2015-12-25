@@ -16,11 +16,6 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated field_info (elt_size=8) to 10421 items from 5000.
 Database file #1: tcc-blx.bib
 Database file #2: tcc.bib
-I was expecting a `,' or a `}'---line 138 of file tcc.bib
- :    
- :    howpublished={Available at \url{http://help.yoyogames.com/entries/25057993-Debugging-HTML5-Games-In-The-Browser} (2015/12/25)},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "HTML5"
 Warning--I didn't find a database entry for "gtw"
 Biblatex version: 3.0
@@ -28,37 +23,37 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 You've used 37 entries,
             6047 wiz_defined-function locations,
-            1288 strings with 13004 characters,
-and the built_in function-call counts, 90954 in all, are:
+            1289 strings with 13115 characters,
+and the built_in function-call counts, 90976 in all, are:
 = -- 3209
 > -- 2574
 < -- 931
 + -- 702
 - -- 913
-* -- 5711
+* -- 5718
 := -- 4940
 add.period$ -- 0
 call.type$ -- 37
 change.case$ -- 382
 chr.to.int$ -- 36
 cite$ -- 72
-duplicate$ -- 10851
-empty$ -- 10767
+duplicate$ -- 10854
+empty$ -- 10770
 format.name$ -- 1613
-if$ -- 21346
+if$ -- 21349
 int.to.chr$ -- 0
 int.to.str$ -- 65
 missing$ -- 0
-newline$ -- 584
+newline$ -- 585
 num.names$ -- 1189
-pop$ -- 11818
+pop$ -- 11816
 preamble$ -- 1
 purify$ -- 428
 quote$ -- 0
 skip$ -- 5469
 stack$ -- 0
 substring$ -- 1027
-swap$ -- 2973
+swap$ -- 2979
 text.length$ -- 846
 text.prefix$ -- 36
 top$ -- 1
@@ -66,5 +61,5 @@ type$ -- 1382
 warning$ -- 0
 while$ -- 505
 width$ -- 0
-write$ -- 546
-(There was 1 error message)
+write$ -- 547
+(There were 2 warnings)
