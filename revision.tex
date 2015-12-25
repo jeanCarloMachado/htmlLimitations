@@ -1688,11 +1688,45 @@ exemplo threads não podem fazer alterações no DOM.
 \section{OFFLINE}
 %{{{
 \begin{draft}
+Disponibilizar aplicações WEB offline é uma possibilidade introduzida
+do HTML5. Para tanto é necessário poder armazenar dados
+locais, tecnologias como IndexedDB e Web Storage permitem isso. Outro
+requerimento para estar offline é uma forma de armazenar os arquivos
+da WEB localmente de forma que sejam utilizados quando não houver uma
+conexão a rede.
+
+Para tanto HTML5 provê uma especificação de APIs de cache offline.
+A especificação determina que uma arquivo de manifesto contenha 
+quais arquivos serão guardados para utilização offline e possivelmente 
+quais serão usados pela rede.
+
+A figura \ref{fig:off-line} exemplifica um arquivo de manifesto. 
+Os arquivos abaixo da palavra \textit{CACHE MANIFEST} serão armazenados
+em cache para utilização offline. Já os arquivos abaixo da palavra \textit{NETWORK:}
+serão exclusivamente da rede.
+
+\begin{figure}
+\centering
+\begin{verbatim}
+CACHE MANIFEST
+index.html
+help.html
+style/default.css
+images/logo.png
+images/backgound.png
+
+NETWORK:
+server.cgi
+\end{verbatim}
+\caption{Exemplo de arquivo de manifesto offline}
+\source{http://www.w3.org/TR/offline-webapps/}
+\label{fig:off-line}
+\end{figure}
+
 Não é extraordinário que um jogo tenha que ser reverso para um estado
 válido anterior por motivo de um erro na base de dados \autocite[pp.
 5]{browserGamesTechnologyAndFuture}.
 
-\subsection{Aplicações offline}
 Na sua versão mais simples, um aplicativo offline é um conjunto de
 URLs para arquivos HTML, CSS, JavaScript, imagens ou qualquer outro tipo
 de recurso \autocite{diveIntohtml}.
@@ -1721,7 +1755,7 @@ um clique do mouse ou o pressionar da tecla "A". Quando isso acontece o
 
 \end{draft}
 %}}}
-\subsection{Orientação}
+\section{ORIENTAÇÃO}
 %{{{
 Muitos dispositivos móveis contam com tecnologias que permitem detectar
 a orientação física e movimento como acelerômetros e giroscópios.
