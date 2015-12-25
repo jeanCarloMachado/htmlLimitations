@@ -1730,16 +1730,19 @@ listener pode invocar uma função e realizar qualquer coisa desejada
 %}}}
 \section{HTTP/2}
 %{{{
-HTTP/2 é a última verão do protocolo de trocas de documentos da
-WEB. Quando um navegador requisita algum documento de um servidor esta
-requisição é geralmente feita através do protocolo HTTP. A forma
-que os documentos trafegam do servidor para o cliente afeta diretamente
-a performance de uma aplicação, nos jogos esse fator se amplia devido
-a grande quantidade de arquivos geralmente necessários para montar uma
-cena de jogo.
+HTTP/2 é a última verão do protocolo de trocas de documentos entre
+cliente e servidor na WEB. Quando um navegador requisita algum documento
+de esta requisição é geralmente feita através do
+protocolo HTTP. 
+O foco da nova versão do HTTP é performance; especialmente a
+latência percebida pelos usuários e o uso de rede e servidores \autocite{http2}.
 
-A nova versão do HTTP traz grandes benefícios de performance
-pois, diferentemente do HTTP/1, HTTP/2 abre apenas uma conexão por
+A forma que os documentos trafegam do servidor para o
+cliente afeta diretamente a performance de uma aplicação, nos jogos
+esse fator se amplia devido a grande quantidade de arquivos geralmente
+necessários para montar uma cena de jogo.
+
+Diferentemente do HTTP/1, HTTP/2 abre apenas uma conexão por
 servidor. Usando a mesma para trafegar todos os dados necessários para
 montar a página HTML. Dessa forma o HTTP/2 não necessita repetir
 as negociações de protocolo nem aguardar parado quando o limite de
@@ -1790,20 +1793,20 @@ Estas características são comuns na maioria dos depuradores dos
 navegadores como o do Internet Explorer (Visual Studio For Web) e do
 Firefox (FireBug) \autocite{gamesDebug}.
 
-Com o DevTools também é possível emular dispositivos alvo da aplicação ou
-conectar-se a um dispositivo Android real. Para conectar-se a um
-dispositivo real é necessário habilitar a depuração em USB no
-dispositivo, conectar o dispositivo via cabo, e rodar o aplicativo no
-dispositivo no Google Chrome ou habilitando o modo depuração nos
-aplicativos híbridos. Dessa forma é possível visualizar a aplicação
-dentro Google Chrome do computador e utilizar as já mencionadas
-tecnologias do DevTools.
+Com o DevTools também é possível emular dispositivos alvo da
+aplicação ou conectar-se a um dispositivo Android real, ideal para
+testar ambientes multiplataforma. Para conectar-se a um dispositivo real
+é necessário habilitar a depuração em USB no dispositivo, conectar
+o dispositivo via cabo, e rodar o aplicativo no dispositivo no Google
+Chrome ou habilitando o modo depuração nos aplicativos híbridos.
+Dessa forma é possível visualizar a aplicação dentro Google Chrome
+do computador e utilizar as já mencionadas tecnologias do DevTools.
 
-Existem ferramentas especializadas na depuração de tecnologias
-quase exclusivas de jogos como inspetor do WebGL do Google Chrome.
-Com o inspetor WebGl é possível conferir os estados dos buffers,
-informações de texturas, frames individuais e outras informações
-úteis \autocite{html5mostwanted}.
+O DevTools também permite depuração do elemento canvas. Segundo
+\cite{html5mostwanted} com o inspetor WebGl é possível conferir os
+estados dos buffers, informações de texturas, frames individuais e
+outras informações úteis. Todos os recursos mencionados acima estão
+disponíveis tanto para o contexto 2d quanto o 3d do canvas (WebGL).
 
 \subsection{Source Maps}
 
@@ -1847,7 +1850,7 @@ ferramenta de minificação capaz de gerar Source Maps}.
 
 Após ter o jogo ter sido depurado e seus erros minimizados, pode-se
 disponibilizar para ser consumido por seus usuários finais.
-Abaixo será abordada algumas formas de disponibilizar jogos web em 
+Abaixo será abordada algumas formas de disponibilizar jogos web em
 ambientes multiplataforma.
 %}}}
 \section{DISPONIBILIZAÇÃO DA APLICAÇÃO}

@@ -243,6 +243,12 @@
   \field{title}{HTML HyperText Markup Language}
 \endentry
 
+\entry{http2}{online}{}
+  \field{howpublished}{Available at \url{https://http2.github.io/}
+  (2015/12/25)}
+  \field{title}{HTTP/2}
+\endentry
+
 \entry{researchOnHtml}{article}{}
   \name{author}{1}{}{%
     {{}%
