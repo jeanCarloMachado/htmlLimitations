@@ -272,6 +272,13 @@
   \field{year}{2011}
 \endentry
 
+\entry{firefoxCanvasDebug}{online}{}
+  \field{howpublished}{Available at
+  \url{https://hacks.mozilla.org/2014/03/introducing-the-canvas-debugger-in-firefox-developer-tools/}
+  (2015/12/25)}
+  \field{title}{Introducing the Canvas Debugger in Firefox Developer Tools}
+\endentry
+
 \entry{HTML5CrossPlatformGameDevelopment}{thesis}{}
   \name{author}{1}{}{%
     {{}%

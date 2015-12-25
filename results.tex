@@ -226,24 +226,30 @@ generalizado de HTML5 \autocite{diveIntohtml}.
 
 \section{Debug}
 
-Com o depurador do Google Chrome remoto foi observado uma falta de sincronia
-na atualização da imagem no computador. Os efeitos do CSS não são bem apresentados
-e algumas vezes a tela foi completamente alterada (como na mudança de páginas)
-e no computador o estado anterior é apresentado.
+Com o depurador do Google Chrome remoto foi observado uma falta de
+sincronia na atualização da imagem no computador. Os efeitos do CSS
+não são bem apresentados e algumas vezes a tela foi completamente
+alterada (como na mudança de páginas) e no computador o estado
+anterior é apresentado.
 
-O inspetor de canvas nativo do Google Chrome foi removido pois o inspetor
-tinha comportamentos indesejáveis para os desenvolvedores do navegador \autocite{canvasinspector}.
-Os desenvolvedores mencionaram criar uma extensão para a funcionalidade mas 
-até o tempo de desenvolvimento deste trabalho não havia extensão disponível. 
-A única alternativa viável até o momento é utilizar uma versão antiga do Chromium.
+O inspetor de canvas nativo do Google Chrome foi removido pois continha
+comportamentos indesejáveis para os desenvolvedores do navegador
+\autocite{canvasinspector}. Os desenvolvedores mencionaram criar uma
+extensão para a funcionalidade mas até o tempo de desenvolvimento
+deste trabalho não havia nenhuma disponível. A única alternativa
+viável até o momento é utilizar uma versão antiga do Chromium.
 
-Atualmente as ferramentas para depuração do canvas 2d ficaram
+O Firefox introduziu uma ferramenta de inspeção para o canvas 2d
+em uma Conferência de desenvolvimento de jogos em São Francisco em 2014,
+mas até a tecnologia não apareceu no navegador \autocite{firefoxCanvasDebug}.
+
+Atualmente a área de ferramentas para depuração do canvas 2D estão
 comprometidas por não existir um plugin de terceiro tão bem
 consolidado como o WebGl Inspector. O projeto Canvas Interceptor é
 uma iniciativa para preencher esta demanda permitindo capturar alguns
-eventos do contexto 2d e tirar snapshoots dos passos da renderização
-do canvas. Entretanto o projeto requer que o desenvolvedor inclua
-um arquivo JavaScript e inicialize o depurador dentro do código,
+eventos do contexto 2d e tirar \textit{snapshoots} dos passos da renderização
+do canvas. Entretanto, o projeto requer que o desenvolvedor inclua
+um arquivo JavaScript em seu projeto e inicialize o depurador dentro do código,
 se tornando uma saída mais custosa do que um inspetor nativo no
 navegador ou via extensão. \footnote{Mais informações sobre o
 projeto Canvas Interceptor podem ser encontradas no seguinte endereço
