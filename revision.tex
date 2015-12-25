@@ -1909,9 +1909,7 @@ da WEB relevantes ao desenvolvimento de jogos.
 Navegadores tentam otimizar a experiência de navegação definindo
 um conjunto de regras e configurações razoáveis para a maioria dos
 casos. Não obstante, nem sempre estes valores padrões são as melhores
-opções no contexto de jogos. Abaixo segue uma lista de configurações
-interessantes para se fazer com CSS no contexto de desenvolvimento de
-jogos.
+opções no contexto de jogos.
 
 \subsection{CSS}
 
@@ -1958,19 +1956,15 @@ CSS demonstradas abaixo.
 \subsection{JavaScript}
 
 \subsubsection{Modo estrito}
-Algumas das recomendações nesta seção podem não se aplicar
-exclusivamente ao desenvolvimento de jogos. Outrossim são de grande
-relevância para a criação de sistemas de grande complexidade em geral,
-característica comum da grande maioria dos jogos.
-
 Um recurso interessante do JavaScript é seu modo estrito, este faz
 um conjunto de modificação na semântica do interpretador de modo
 que alguns recursos suportados, mas propensos a problemas, sejam
-desabilitados. Um exemplo é variáveis sem o prefixo var.
+desabilitados. Um exemplo é variáveis não prefixadas pela palavra
+chave \textit{var}.
 
 O modo estrito pode ser entendido como uma variante mais rígida
 do JavaScript. O modo restrito pode ser habilitado utilizando o
-termo \textit{"use strict";} nos cabeçahos de arquivos ou funções
+termo \textit{"use strict";} nos cabeçalhos de arquivos ou funções
 permitindo que código não estrito trabalhe em conjunto com código
 estrito, característica conveniente para a utilização em sistemas
 legados.
@@ -2013,10 +2007,10 @@ grande quantidade de recursos que precisam estar em memória para o jogo
 funcionar. Muitos jogos utilizam uma tela de carregamento enquanto os 
 recursos são adquiridos.
 
-Um recurso do HTML interessante para este tipo de situação é o pré
-carregamento de recursos (\textit{Link Prefetching}). Esta tecnologia
-possibilita que o navegador , em seu tempo livre, adquira recursos que
-provavelmente serão necessários em um futuro próximo.
+Uma funcionalidade do HTML interessante para este tipo de situação
+é o pré carregamento de recursos (\textit{Link Prefetching}). Esta
+tecnologia possibilita que o navegador , em seu tempo livre, adquira
+recursos que provavelmente serão necessários em um futuro próximo.
 
 Nem todos os recursos necessitam ser pré carregados, mas uma impressão
 muito superiora é criada se os recursos estão imediatamente
