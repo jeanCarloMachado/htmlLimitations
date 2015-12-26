@@ -1,19 +1,22 @@
 \begin{draft}
 
 Muitos das limitações dos jogos multiplataforma não são
-específicos dos jogos, mas aplicam-se a todos tipos de software
+problemas específicos dos jogos, mas aplicam-se a todos tipos de software
 \parencite{currentStateCrossPlatform}. Alguns problemas são inerentes
 das tecnologias, outras dos dispositivos ou da característica
 multiplataforma.
 
-Não obstante, abaixo constam as limitações aplicáveis, mesmo
-que não exclusivamente, aos jogos. Encontradas durante a pesquisa e
+Não obstante, abaixo constam as limitações aplicáveis, mesmo que
+não exclusivamente, aos jogos. Encontradas durante a pesquisa e
 concepção do protótipo.
 
 \section{VERSÕES}
 
 A grande maioria dos dispositivos atualmente no mercado utilizam
 obsoletas de seus softwares.
+
+Além das versões obsoletas existe o problema de muitos navegadores 
+implementarem especificações incompleta ou incorretamente.
 
 Segundo \cite{crossPlatformMobileGame}
 \begin{quote}
@@ -25,22 +28,21 @@ suporte é testando em todas as versões alvo, todavia essa solução
 não é prática.
 \end{quote}
 
-O Crosswalk é uma tecnologia que pode resolver parcialmente
-este problema para jogos híbridos. Visto que a aplicação é
-disponibilizada juntamente com uma versão recente do navegador que a
-irá rodá-la versões de software para dispositivos móveis não é
-um problema problema. Não obstante, o Crosswalk só é suportado para
-Android \footnote{Nos apêndices o Crosswalk é tratado com mais detalhes}.
+O Crosswalk é uma tecnologia que pode resolver parcialmente o problema
+de versões de software antigas para Android. Visto que a aplicação
+é disponibilizada juntamente com uma versão recente do navegador que
+a irá rodá-la. Não obstante, o Crosswalk só é suportado
+para Android \footnote{Nos apêndices o Crosswalk é tratado com mais
+detalhes}.
 
 \section{CSS}
 
 É muito custoso desenvolver uma interfaces que pareçam nativas
-para cada dispositivo sem a utilização de plugins e ferramentas
-. 
+para cada dispositivo sem a utilização de plugins e ferramentas.
 
 Em termos gerais, trabalhar com proporções é positivo. Não obstante
 há casos, como o dos botões de certo e errado que a proporções ficam
-exageradas, nesses casos a utilizada de max-width é uma solução
+exageradas, nesses casos a utilizada de \textit{max-width} é uma solução
 conveniente.
 
 Frameworks como o Ionic e Sencha Touch  possibilitam criar elementos 
@@ -160,11 +162,15 @@ Segundo \cite{html5mostwanted} a limitação do elemento de áudio do
 HTML5 é que seu propósito é para executar apenas um som, como o som
 de fundo dentro de um jogo.
 
-A API de som no protótipo nem sempre emite o som quando o
-evento é disparado sucessivamente. Confirmando a afirmação de
-\cite{html5mostwanted} a API de som é boa se você deseja apenas tocar
-alguma música, mas se você está lançando eventos em um jogo ela é
-problemática.
+Durante a concepção do protótipo foi utilizado o elemento audio
+para emitir sons na utilização dos botões de resposta do aplicativo, 
+não obstante sons consecutivos tiveram problemas no Android. 
+Depois de migrado para a API  de áudio os problemas aparentemente foram 
+resolvidos. 
+
+Confirmando a afirmação de \cite{html5mostwanted} a API de som é
+boa se você deseja apenas tocar alguma música, mas se você está
+lançando eventos em um jogo ela é problemática.
 
 Os navegadores variam na disponibilização de formatos aceitáveis
 Somente um áudio pode ser tocado no Navegador do Android
@@ -191,29 +197,34 @@ Silverlight existem uma coleção de possibilidades como aplicar shaders
 diretamente no vídeo e streaming suave de 1080px HD \autocite[pp.
 8]{researchOnHtml}.
 
-O projeto \textit{Vídeo for Everybody} \begin{verbatim}
-http://camendesign.com/code/video_for_everybody \end{verbatim} é um
-polyfill que recorre à flash quando o vídeo não é suportado pelo
-navegador.
+O projeto \textit{Vídeo for Everybody}
+\url{http://camendesign.com/code/video_for_everybody} é um polyfill que
+recorre à flash quando o vídeo não é suportado pelo navegador.
 
-Não é possível controlar a entrada em tela cheia através de script pois 
-é considerado uma violação de segurança. Não obstante, os navegadores
-tem a opção de deixar os usuários escolherem ver vídeos em tela cheia
-através de  controles adicionais \autocite[pp. 68]{proHtml5}.
+Não é possível controlar a entrada em tela cheia através de script
+pois é considerado uma violação de segurança. Não obstante,
+os navegadores tem a opção de deixar os usuários escolherem ver
+vídeos em tela cheia através de controles adicionais \autocite[pp.
+68]{proHtml5}.
 
-As tecnologias de mídia são restringidas pelo política de mesma origem \autocite[pp. 68]{proHtml5}.
+As tecnologias de mídia são restringidas pelo política de mesma
+origem \autocite[pp. 68]{proHtml5}.
 
 \section{Armazenamento}
 
 Em praticamente nenhuma das tecnologias da WEB é possível armazenar objetos e  seu estado atual.
-
 IndexedDB é uma API interessante mas para projetos menores é um tanto complexa.
 
 \section{OFFLINE}
 
-Quando o download offline falha o navegador emite um evento mas não há
-indicação de qual problema aconteceu. Isso pode tornar a depuração
-ainda mais complicada que o usual \autocite{diveIntohtml}.
+Nos arquivos de cache via manifestos, quando o download falha, o
+navegador emite um evento mas não há indicação de qual problema
+aconteceu. Isso pode tornar a depuração ainda mais complicada que o
+usual \autocite{diveIntohtml}.
+
+Este problema aconteceu durante o desenvolvimento do protótipo e
+foi trabalhoso de depurar até descobrir que um arquivo estava faltando, e qual
+especificamente.
 
 Refresh duplo para ver assets cacheados. Ver:
 http://buildnewgames.com/game-asset-management/
