@@ -1142,8 +1142,8 @@ E cada um dos elementos, ou agrupamento de elementos podem ser
 transformados; traduzidos, redimensionados, rotacionados e distorcidos
 \autocite[pp. 5]{svgTime}.
 
-Para ilustrar a utilização, a figura \ref{fig:svgCircle} demonstra um círculo sendo definido 
-em SVG.
+Para ilustrar a utilização, a figura \ref{fig:svgCircle} demonstra um
+círculo sendo definido em SVG.
 
 \begin{figure}
 \centering
@@ -1164,29 +1164,68 @@ diferente do SVG é o canvas.
 %}}}
 \subsection{CANVAS}
 %%{{{
-O elemento \textit{canvas} define uma camada de mapa de bits em documentos
-HTML que pode ser usada para criar diagramas, gráficos e animações
-2D. Foi criado pela Apple em 2004 para renderizar elementos de interface
-no Webkit, logo foi adotado por outros navegadores e se tornou um
-padrão da OWP.
+O elemento \textit{canvas} define uma camada de mapa de bits em
+documentos HTML que pode ser usada para criar diagramas, gráficos e
+animações 2D. Foi criado pela Apple em 2004 para renderizar elementos
+de interface no Webkit, logo foi adotado por outros navegadores e se
+tornou um padrão da OWP.
 
 Em um documento HTML, canvas é um retângulo onde pode-se usar
-JavaScript para desenhar \autocite[pp. 113]{diveIntohtml}. 
-Mais especificamente, o retângulo do canvas é um espaço vetorial 
-cuja origem se da na esquerda superior. Normalmente cada unidade do plano cartesiano corresponde a um pixel no canvas \autocite{mdnCanvas}.
+JavaScript para desenhar \autocite[pp. 113]{diveIntohtml}. Mais
+especificamente, o retângulo do canvas é um espaço vetorial cuja
+origem se da na esquerda superior. Normalmente cada unidade do plano
+cartesiano corresponde a um pixel no canvas \autocite{mdnCanvas}.
 
 Manipular o retângulo é uma analogia de como desenhar manualmente,
 move-se o "lápis" para o local desejado e traça-se os pontos onde
-a linha (caminho) deve percorrer. Além da possibilidade de desenhar linhas
-livremente também é possível criar retângulos nativamente. Todas as demais figuras geométricas precisam ser feitas através da junção de caminhos \autocite{mdnCanvas}. Para desenhar caminhos curvos, de modo a criar círculos e elipses, existem funções especiais de arco.
+a linha (caminho) deve percorrer. Além da possibilidade de desenhar
+linhas livremente também é possível criar retângulos nativamente.
+Todas as demais figuras geométricas precisam ser feitas através da
+junção de caminhos \autocite{mdnCanvas}. Para desenhar caminhos
+curvos, de modo a criar círculos e elipses, existem funções especiais
+de arco.
+
+Escrever no canvas envolve a manipulação de diversos caminhos e
+retângulos, em jogos que fazem extensivo uso do canvas a complexidade
+de manipulação de linhas pode crescer muito. As últimas versões do
+Canvas introduziram o objeto Path2D que possibilita o armazenamento e
+composição de instruções de caminhos a fim de possibilitar o reuso
+de formas. Ao invés de utilizar os métodos de caminhos diretamente no
+contexto do canvas utiliza-se uma instancia do objeto \textit{Path2D}.
+Todos os métodos relacionados aos caminhos como o \textit{moveTo},
+\textit{arc} ou \textit{quadraticCurveTo} estão disponíveis no
+objeto Path2D \autocite{mdnCanvas}. Também é possível utilizar a
+notação do SVG na criação de uma instancia de Path2D possibilitando
+a reutilização de conteúdo para ambas as tecnologias.
 
 Além da possibilidade de desenhar programaticamente é possível
-carregar gráficos. Muitos dos jogos HTML5 utilizam sprites ou
-padrões recortáveis \textit{tiled}, bastante similar aos títulos antigos da SNES e Game Boy \autocite{buildingHtml5Game}.
+carregar gráficos. Muitos dos jogos HTML5 utilizam sprites ou padrões
+recortáveis \textit{tiled}, bastante similar aos títulos antigos da
+SNES e Game Boy \autocite{buildingHtml5Game}.
 
-Apesar da API do canvas ser poderosa não é possível manipular diretamente as camadas já desenhadas. Alternativamente pode-se limpar o canvas inteiramente em pontos determinados ou então sobrescrever as partes que se deseja alterar.
+Apesar da API do canvas ser poderosa não é possível manipular
+diretamente as camadas já desenhadas. Alternativamente pode-se limpar
+o canvas inteiramente em pontos determinados ou então sobrescrever as
+partes que se deseja alterar.
 
-Escrever no canvas envolve a manipulação de  diversos caminhos e retângulos, em jogos que fazem extensivo uso do canvas a complexidade de manipulação de linhas pode crescer incrivelmente. As últimas versões do Canvas introduziram o objeto Path2D que possibilita o armazenamento  e composição de instruções de caminhos a fim de possibilitar o reuso de formas. Ao invés de utilizar os métodos de caminhos diretamente no contexto do canvas utiliza-se uma instancia do objeto Path2D. Todos os métodos relacionados aos caminhos como o moveTo, arc or quadraticCurveTo estão disponíveis no objeto Path2D \autocite{mdnCanvas}. Também é possível utilizar a notação do SVG na criação de uma instancia de Path2D possibilitando a reutilização  de conteúdo para ambas as tecnologias.
+\begin{figure}
+\centering
+\begin{verbatim}
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(0,0,150,75);
+
+\end{verbatim}
+\caption{Canvas}
+\source{html/html5_canvas.asp}
+\label{img:retangleOnCanvas}
+\end{figure}
+
+A figura \ref{img:retangleOnCanvas} demonstra a utilização do canvas 2d
+para a criação de um retângulo. Note que o objeto canvas tem que carregar um
+contexto que então é utilizado como API para manipular a mapa de bits em 2D.
 
 O canvas até aqui descrito trata-se de sua forma, ou contexto 2D. A
 especificação 3D do canvas é o WebGl.
