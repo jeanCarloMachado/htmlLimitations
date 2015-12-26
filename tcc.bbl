@@ -103,6 +103,13 @@
   \field{title}{Chrome DevTools Overview}
 \endentry
 
+\entry{chromeVsAndroid}{online}{}
+  \field{howpublished}{Available at
+  \url{http://www.computerworld.com/article/2469738/mobile-apps/chrome-os-vs--android--what-s-the-difference-.html}
+  (2015/12/26)}
+  \field{title}{Chrome OS vs. Android: What's the difference?}
+\endentry
+
 \entry{depuracao}{online}{}
   \field{howpublished}{Available at
   \url{https://pt.wikipedia.org/wiki/Depuração} (2015/12/25)}
