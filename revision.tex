@@ -106,7 +106,7 @@ móveis.
 \section{JOGOS MULTIPLATAFORMA}
 
 Jogos multiplataforma são jogos que rodam em mais de uma plataforma.
-Cada plataforma contém sua própria API (\texit{Application
+Cada plataforma contém sua própria API (\textit{Application
 Programming Interface}), sendo que se um aplicativo foi criado para
 uma plataforma ele não vai poder ser utilizado em outra pois as APIs
 são diferentes \autocite{crossPlatformMobileGameDevelopment}. Além da
@@ -139,7 +139,7 @@ híbrido, ou nativo. As opções serão descritas abaixo.
 \subsection{JOGOS WEB}
 
 Um jogo web é um jogo que utiliza o HTML e ferramentas correlacionadas
-para sua construção.
+para sua construção e disponibilização.
 
 O objetivo primário da WEB nunca foi o desenvolvimento de
 jogos, mas as novas versões do HTML estão provendo funcionalidades
@@ -181,7 +181,6 @@ Por serem criados à partir das tecnologias da WEB, jogos na WEB, se
 beneficiam de uma arquitetura construída para um ambiente social, sendo
 relativamente mais fácil criar experiências sociais.
 
-
 A performance é um ponto negativo da abordagem WEB, é difícil
 chegar a performance comparável a abordagem nativa. Não obstante
 esse problema é cada vez menor o hardware dos dispositivos são cada
@@ -196,7 +195,6 @@ de navegadores.
 Outro aspecto negativo da WEB é que nem todas as funcionalidades dos
 dispositivos estão especificados com as tecnologias da WEB e muitas
 vezes os recursos do dispositivo ficam sub utilizados.
-
 
 Além dos jogos web, há a possibilidade de criar jogos nativos e híbridos.
 
@@ -221,6 +219,16 @@ visto que é necessário duplicar funcionalidades em sistemas distintos
 e manter um profissional por ambiente suportado. As versões nativas
 são totalmente incompatíveis impossibilitando reúso.
 
+\subsubsection{Compiladores Multiplataforma}
+
+Utilizando tecnologias como o Xamarin é possível desenvolver em um a
+linguagem e compilar para diversas plataformas nativamente. Através
+dessa abordagem é possível beneficiar-se de um aplicativo nativo e
+eliminar grande parte da duplicação geralmente imposta. Não obstante
+abstrair plataformas geralmente é uma tarefa complexa e a garantia 
+de qualidade parece ser melhor atendida por grupos de interesses como a
+Open Web do que as empresas que fornecem estes produtos.
+
 A alternativa hibrida é uma junção da alternativa nativa com a alternativa WEB.
 
 \subsection{JOGOS HÍBRIDOS}
@@ -234,7 +242,7 @@ sistema operacional capaz de rodar as tecnologias da WEB. Desta forma
 o aplicativo WEB conversa diretamente com o sistema operacional não
 necessitando de um software de terceiro para mediar a interação.
 
-Visto que a estratégia híbrida roda diretamente no sistema operacional
+Visto que a estratégia híbrida tem acesso ao sistema operacional
 é possível criar APIs para acessar recursos não sempre disponíveis
 para a plataforma WEB. Soluções como o PhoneGap adotam essa
 estratégia para possibilitar granular controle sobre os dispositivos
