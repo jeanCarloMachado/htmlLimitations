@@ -665,6 +665,22 @@
   \field{year}{2014}
 \endentry
 
+\entry{gameCommunities}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Vanhatupa}{V.}%
+     {Juha-Matti}{J.-M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{VJM2}
+  \strng{fullhash}{VJM2}
+  \field{labelyear}{2010}
+  \field{title}{Browser Games for Online Communities}
+  \field{journaltitle}{International Journal of Wireless and Mobile Networks}
+  \field{year}{2010}
+\endentry
+
 \entry{developingEffect}{article}{}
   \name{author}{1}{}{%
     {{}%

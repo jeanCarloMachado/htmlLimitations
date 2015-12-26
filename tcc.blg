@@ -13,7 +13,7 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated field_info (elt_size=8) to 11672 items from 5000.
+Reallocated field_info (elt_size=8) to 11811 items from 5000.
 Database file #1: tcc-blx.bib
 Database file #2: tcc.bib
 Warning--I didn't find a database entry for "HTML5"
@@ -21,45 +21,45 @@ Warning--I didn't find a database entry for "gtw"
 Biblatex version: 3.0
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
-You've used 46 entries,
+You've used 47 entries,
             6047 wiz_defined-function locations,
-            1323 strings with 14452 characters,
-and the built_in function-call counts, 106027 in all, are:
-= -- 3645
-> -- 2683
-< -- 1081
-+ -- 739
-- -- 965
-* -- 6346
-:= -- 5362
+            1328 strings with 14592 characters,
+and the built_in function-call counts, 108679 in all, are:
+= -- 3740
+> -- 2772
+< -- 1106
++ -- 758
+- -- 992
+* -- 6512
+:= -- 5520
 add.period$ -- 0
-call.type$ -- 46
-change.case$ -- 431
+call.type$ -- 47
+change.case$ -- 441
 chr.to.int$ -- 36
-cite$ -- 90
-duplicate$ -- 12868
-empty$ -- 13080
-format.name$ -- 1682
-if$ -- 25068
+cite$ -- 92
+duplicate$ -- 13180
+empty$ -- 13385
+format.name$ -- 1736
+if$ -- 25690
 int.to.chr$ -- 0
-int.to.str$ -- 75
+int.to.str$ -- 79
 missing$ -- 0
-newline$ -- 644
-num.names$ -- 1230
-pop$ -- 14736
+newline$ -- 660
+num.names$ -- 1277
+pop$ -- 15061
 preamble$ -- 1
-purify$ -- 472
+purify$ -- 483
 quote$ -- 0
-skip$ -- 6264
+skip$ -- 6429
 stack$ -- 0
-substring$ -- 1122
-swap$ -- 3477
-text.length$ -- 980
-text.prefix$ -- 45
+substring$ -- 1137
+swap$ -- 3565
+text.length$ -- 1004
+text.prefix$ -- 46
 top$ -- 1
-type$ -- 1724
+type$ -- 1762
 warning$ -- 0
-while$ -- 537
+while$ -- 555
 width$ -- 0
-write$ -- 597
+write$ -- 612
 (There were 2 warnings)

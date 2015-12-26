@@ -86,13 +86,12 @@ de jogos: Desafio, socializar, experiência solitária, respeito e
 fantasia. Jogos que conseguem integrar o maior número destes aspectos 
 em sua mecânica serão os mais apreciados.
 
-\section{Laço do jogo}
-
-Os jogos são dirigidos por um laço que executa uma série de tarefas
-a cada frame, construindo a ilusão de um mundo animado \autocite[pp.
-31]{gwt}. O laço do jogo (\textit{game loop}) é peça central em
-praticamente qualquer jogo eletrônico. A cada iteração do jogo
-o laço é executado e o processamento de entrada de usuário e
+Depois dos preparativos efetuados, pode-se começar a construção
+do jogo. Os jogos são dirigidos por um laço que executa uma série
+de tarefas a cada frame, construindo a ilusão de um mundo animado
+\autocite[pp. 31]{gwt}. O laço do jogo (\textit{game loop}) é peça
+central em praticamente qualquer jogo eletrônico. A cada iteração do
+jogo o laço é executado e o processamento de entrada de usuário e
 computações correlacionadas são executadas.
 
 %maybe move it to JavaScript section
@@ -107,11 +106,17 @@ móveis.
 \section{JOGOS MULTIPLATAFORMA}
 
 Jogos multiplataforma são jogos que rodam em mais de uma plataforma.
-Este tipo de jogo traz uma nova gama de oportunidades e desafios para
-produtores de jogos.
+Cada plataforma contém sua própria API (\texit{Application Programming
+Interface}), sendo que se um aplicativo foi criado para uma plataforma
+ele não vai poder ser utilizado em outra pois as APIs são diferentes
+\autocite{cross}. Além da API, dispositivos de múltiplas plataformas 
+variam em seus recursos, habilidades e qualidade.
+
+Jogos que almejem múltiplas plataformas introduzem uma nova gama de
+oportunidades e desafios para produtores de jogos.
 
 Um destes desafios é fornecer feedback suficiente para o jogador pois
-muitas vezes o dispositivo é limitado em proporções, som, tela. 
+muitas vezes o dispositivo é limitado em proporções, som, tela.
 Por estas peculiaridades tendências como WEB design responsivo (RWD)
 emergiram, requerendo interfaces mais fluídas e intuitivas o possível.
 As tecnologias também tiveram que evoluir, como o CSS3 media queries,
@@ -121,8 +126,10 @@ Outro desafio multiplataforma é suportar os vários ecossistemas
 de software com tecnologias diferenciadas e versões de software
 divergentes.
 
-\cite{html5mostwanted} afirma que: o estágio mais complicado e crucial
-do desenvolvimento de jogo é a escolha das tecnologias utilizadas.
+Para que um jogo multiplataforma tenha sucesso é necessário definir
+com cautela suas tecnologias. \cite{html5mostwanted} afirma que: o
+estágio mais complicado e crucial do desenvolvimento de jogo é a
+escolha das tecnologias utilizadas.
 
 Designers de jogos tem as seguintes possibilidades quando em face
 de desenvolver um jogo multiplataforma: criar um jogo web, um jogo
@@ -168,10 +175,11 @@ adquirido através do desenvolvimento de páginas WEB na criação de
 jogos.
 
 Sua distribuição também é superior ao estilo convencional de
-aplicações desktop \autocite{browserGamesTechnologyAndFuture}. Por
-serem criados à partir das tecnologias da WEB, jogos na WEB, se
+aplicações desktop \autocite{browserGamesTechnologyAndFuture}. 
+Por serem criados à partir das tecnologias da WEB, jogos na WEB, se
 beneficiam de uma arquitetura construída para um ambiente social, sendo
 relativamente mais fácil criar experiências sociais.
+
 
 A performance é um ponto negativo da abordagem WEB, é difícil
 chegar a performance comparável a abordagem nativa. Não obstante
@@ -187,6 +195,7 @@ de navegadores.
 Outro aspecto negativo da WEB é que nem todas as funcionalidades dos
 dispositivos estão especificados com as tecnologias da WEB e muitas
 vezes os recursos do dispositivo ficam sub utilizados.
+
 
 Além dos jogos web, há a possibilidade de criar jogos nativos e híbridos.
 
