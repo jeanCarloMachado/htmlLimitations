@@ -298,6 +298,13 @@
   \field{title}{Introducing the Canvas Debugger in Firefox Developer Tools}
 \endentry
 
+\entry{gamesIntroduction}{online}{}
+  \field{howpublished}{Available at
+  \url{https://developer.mozilla.org/en-US/docs/Games/Introduction}
+  (2015/12/25)}
+  \field{title}{Introduction to game development for the Web}
+\endentry
+
 \entry{HTML5CrossPlatformGameDevelopment}{thesis}{}
   \name{author}{1}{}{%
     {{}%
