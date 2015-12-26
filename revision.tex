@@ -18,7 +18,7 @@ tornando cada vez mais complexos, diversos, realísticos e sociais em
 sua natureza.
 
 Com as inovações nas tecnologias relacionadas ao HTML novas
-possibilidades e gêneros de jogos podem ser explorados na WEB. Sendo
+mecânicas e gêneros de jogos podem ser explorados na WEB. Sendo
 que cada gênero acompanha um conjunto de desafios específicos.
 Jogos de FPS (tiro em primeira pessoa) requerem menor latência de
 rede, já jogos de RPG podem requerer vastas quantidades de cache
@@ -49,7 +49,7 @@ interesse humano, \cite{gamebenefits} afirmam que habilidades espaciais
 estão diretamente relacionadas com o sucesso em ciência, tecnologia,
 engenharia e matemática.
 
-Outra outro ponto importar dos jogos é seu aspecto social. Apesar de a
+Outra outro ponto importante dos jogos é seu aspecto social. Apesar de a
 mídia ter criado uma perspectiva negativa sobre jogos, especialmente
 os violentos, a realidade é mais complexa do que se pensa. Jogadores
 de jogos violentos, cuja jogabilidade encoraje a cooperatividade, são
@@ -59,14 +59,15 @@ jogos, do que jogadores de jogos não violentos \autocite{gamebenefits}.
 \cite{html5mostwanted} ressalta a importância do planejamento antes do
 desenvolvimento de jogos. Ao criar jogos deve-se planejar o que se
 pretende atingir e como chegar lá antes de se escrever qualquer
-código.
+código, definições quanto a mecânica é um passo vital neste planejamento.
 
 \subsection{MECÂNICA}
 
 A mecânica é composta pelas regras do jogo. Quais as ações
-disponíveis aos usuários, é fortemente influenciada pela categoria do
-jogo em questão. Dedicar-se na elaboração de uma mecânica é tarefa
-quintessencial para a construção de um jogo de sucesso.
+disponíveis aos usuários, e seu funcionamento, é fortemente
+influenciada pela categoria do jogo em questão. Dedicar-se na
+elaboração de uma mecânica é tarefa quintessencial para a
+construção de um jogo de sucesso.
 
 \autocite{html5mostwanted} afirma que se os gráficos e áudio são
 espetaculares mas a jogabilidade é chata o jogador vai parar de jogar.
@@ -79,10 +80,11 @@ pode ser integrada dentro de um processo de engenharia de software
 desenvolvimento de software contextualizada para a criação jogos}.
 Os desenvolvedores tem que evitar fazer o jogo para eles mesmos.
 Falta de crítica  antes do desenvolvimento também tende a gerar criações ruins.
-Bons jogos são aqueles que ao menos  suprem as expectativas dos usuário.
+Bons jogos são aqueles que ao menos suprem as expectativas dos usuário.
 \cite{indieGamesLemes} aponta alguns fatores procurados pelos usuários
 de jogos: Desafio, socializar, experiência solitária, respeito e
-fantasia.
+fantasia. Jogos que conseguem integrar o maior número destes aspectos 
+em sua mecânica serão os mais apreciados.
 
 \section{Laço do jogo}
 
@@ -93,12 +95,14 @@ praticamente qualquer jogo eletrônico. A cada iteração do jogo
 o laço é executado e o processamento de entrada de usuário e
 computações correlacionadas são executadas.
 
-Para escrever o laço é possível utilizar as funções do JavaScript
-\textit{window.settimeout}. Não obstante, a forma mais recomendada é
-utilizar o \textit{window.requestAnimationFrame} reduz ou completamente
-para a execução do laço enquanto o usuário está em outra aba.
-Isso reduz o consumo de bateria, uma característica importante para
-dispositivos móveis.
+%maybe move it to JavaScript section
+Para escrever o laço é possível utilizar as funções do
+JavaScript \textit{window.settimeout} ou \textit{window.setInterval}.
+Não obstante, a forma mais recomendada é utilizar o
+\textit{window.requestAnimationFrame} reduz ou completamente para a
+execução do laço enquanto o usuário está em outra aba. Isso reduz
+o consumo de bateria, uma característica importante para dispositivos
+móveis.
 
 \section{JOGOS MULTIPLATAFORMA}
 \begin{draft}
