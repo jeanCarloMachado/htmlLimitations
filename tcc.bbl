@@ -488,6 +488,25 @@
   \field{title}{ECMAScript 6 Today}
 \endentry
 
+\entry{svgTime}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Neumann}{N.}%
+     {Andreas}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Winter}{W.}%
+     {M.~Andréas}{M.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{NAWMA1}
+  \strng{fullhash}{NAWMA1}
+  \field{title}{Time for SVG - Towards High Quality Interactive Web - Maps}
+  \field{journaltitle}{Institute of Cartography, ETH Zurich}
+\endentry
+
 \entry{diveIntohtml}{book}{}
   \name{author}{1}{}{%
     {{}%
