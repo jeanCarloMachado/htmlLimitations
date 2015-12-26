@@ -1046,46 +1046,35 @@ navegadores em dezembro de 2015.
 %}}}
 \section{ANDROID}
 %{{{
-\begin{draft}
-
-É um sistema operacional open-source desenvolvido e mantido pelo
-Google. Android funciona em uma variedade de dispositivos desde
-celulares a tablets, netbooks a computadores desktop, mas seu foco é dispositivos com tela sensível \autocite{chromeVsAndroid}.
-
-O sistema
-operacional é composto por diversos projetos open source, sendo o mais
-proeminente deles o kernel Linux, utilizado como fundamento do sistema
-operacional.
+É um sistema operacional open-source e mantido pelo Google desde 2005.
+Android funciona em uma variedade de dispositivos desde celulares a
+tablets, netbooks a computadores desktop, mas seu foco é dispositivos
+com tela sensível \autocite{chromeVsAndroid}. O sistema operacional é
+composto por diversos projetos open-source, sendo o mais proeminente
+deles o kernel Linux, utilizado como fundamento do sistema operacional.
 
 Softwares para Android são geralmente escritos em Java e executados
 através da máquina virtual Dalvik. Dalvik é similar a máquina
 virtual Java, mas roda um formato de arquivo diferenciado (.dex),
 otimizados para consumir pouca memória, que são agrupados em um único
-pacote (.apk).
+pacote (.apk). Aplicativos da WEB podem ser integrados no Android através de uma
+arquitetura híbrida. Os arquivos da aplicação são empacotados dentro
+de um apk utilizando um componente nativo do Android, a API WebView, para
+executar as tecnologias da OWP.
 
-É possível executar jogos WEB em dispositivos Android através dos
-navegadores presentes nestes dispositivos ou através de aplicações
-híbridas.
+Além da arquitetura híbrida, é possível executar jogos WEB em
+dispositivos Android através dos navegadores presentes nestes
+aparelhos. As novas versões do Android contam com o Google Chrome
+como navegador padrão; não obstante, versões mais antigas contavam
+com um navegador próprio baseado em WebKit. Além do padrão outros
+navegadores como o Firefox ou Opera também podem ser instalados.
 
-As novas versões do Android contam com o Google Chrome como navegador
-padrão; não obstante, versões mais antigas contavam com um navegador
-próprio baseado em WebKit. Outros como o Firefox ou Opera também podem
-ser instalados.
+Além do Android o sistema IOS é de grande relevância mercadológica
+para o desenvolvimento de jogos. Não obstante, não será tratado neste
+trabalho pelos motivos supracitados. A próxima seção deste trabalho
+descreve como detectar recursos nas variadas plataformas que a WEB se
+apresenta.
 
-ou através da opção híbrida.
-Aplicativos WEB híbridos são possibilitados através renderização de documentos HTML com a API WEBVIEW do Android.
-
-No quesito jogos para dispositivos móveis é preferível disponibilizar
-os jogos através da interface nativa pois dá a sensação de
-continuidade para com os demais aplicativos instalados no dispositivo.
-
-
-Além do Android o sistema IOS é de grande relevância mercadológica para o desenvolvimento 
-de jogos. Não obstante, não será tratado neste trabalho pelos motivos supracitados.
-A próxima seção deste trabalho descreve como detectar recursos nas variadas plataformas que a
-WEB se apresenta.
-
-\end{draft}
 %}}}
 \section{DETECÇÃO DE RECURSOS}
 %{{{
@@ -1131,7 +1120,6 @@ nos navegadores é o site http://caniuse.com/.
 
 %}}}
 \section{RENDERIZAÇÃO}
-%{{{
 
 Renderização é parte fundamental de muitos jogos. As tecnologias que
 permitem renderização na WEB serão descritas abaixo.
