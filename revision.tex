@@ -941,7 +941,7 @@ unificar animações.
 
 Grande controle sobre animações é desejável para os jogos, não obstante,
 visto que a especificação é muito nova somente o Google Chrome a implementa.
-A biblioteca https://github.com/web-animations/web-animations-js serve
+A biblioteca \url{https://github.com/web-animations/web-animations-js} serve
 como polyfill para os demais navegadores.
 
 \begin{figure}
@@ -964,7 +964,7 @@ elem.getAnimations().filter(
     \label{fig:webAnimations}
 \end{figure}
 
-O site http://web-animations.github.io/web-animations-demos/ contém uma
+O site \url{http://web-animations.github.io/web-animations-demos/} contém uma
 coleção de animações utilizando a tecnologia.
 
 %\end{draft}
@@ -973,49 +973,52 @@ coleção de animações utilizando a tecnologia.
 \section{NAVEGADORES}
 %{{{
 Navegadores são aplicações, onde as tecnologias da OWP são
-interpretadas e geram um conteúdo útil para os usuários.
-
-Navegadores geralmente são os clientes em uma arquitetura cliente
-servidor. O servidor geralmente é um servidor WEB que disponibiliza
-páginas HTML para o navegador processar. A comunicação entre o 
-navegador e o servidor se dá através da troca de mensagens no protocolo
-HTTP.
+interpretadas e geram um conteúdo útil para os usuários. Navegadores
+geralmente são os clientes em uma arquitetura cliente servidor. O
+servidor desta arquitetura geralmente é um servidor WEB cujo objetivo
+principal é fornecer páginas HTML para o navegador processar. A
+comunicação entre o navegador e o servidor WEB se dá através da troca de
+mensagens no protocolo HTTP.
 
 Nos navegadores os usuários necessitam saber o endereço de determinado
 servidor, ou utilizar buscadores para auxiliá-los. Este é um processo
-árduo para a plataformas móveis pois necessitam maior interação
-do usuários e não são “naturais” se comparado ao modo 
-de consumir aplicativos nestas mesmas plataformas – simplesmente
-adquirindo o aplicativo na loja e abrindo-o no sistema operacional.
-Algumas formas de contornar este problema serão descritos nas tecnologias offline.
+árduo para a plataformas móveis pois necessitam maior interação do
+usuários, e não são “naturais” se comparado ao modo de consumir
+aplicativos nestas mesmas plataformas – simplesmente adquirindo
+o aplicativo na loja e abrindo-o no sistema operacional. Algumas
+formas de contornar este problema serão descritos nas seção de
+Disponibilização da Aplicação.
 
-Uma vez localizado o endereço o cliente manda uma mensagem em http requisitando 
-o conteúdo de determinado endereço.
-O servidor responde a mensagem HTTP com um documento HTML
- e o cliente, ao receber, começa o processo de renderização. A renderização consiste
-na decodificação de um documento em HTML para sua representação
-memória e posterior pintura no espaço de tela do navegador. Para
-concluir o processo de renderização o navegador pode requisitar outros
-arquivos a fim de completar a experiência desejada para o endereço
-em questão.
+Uma vez localizado o endereço o navegador manda uma mensagem em HTTP
+requisitando o conteúdo de determinado endereço. O servidor responde a
+mensagem HTTP com um documento HTML e o cliente, ao receber, começa o
+processo de renderização.
 
-O processo de renderização é complexo e a grande maioria dos navegadores
-confia em bibliotecas especializadas para efetuar este trabalho.
+O processo de renderização é complexo e a grande maioria dos
+navegadores confia em bibliotecas especializadas para efetuar este
+trabalho os motores de renderização.
 
 Alguns motores de renderização incluem:
 
 \begin{itemize}
-    \item Blink: Utilizada no Chromium e projetos relacionados, Opera
-    \item Gecko: Utilizada nos produtos da Mozilla
-    \item KHTML: Utilizada no navegador Konkeror, esta serviu de base para o Blink
-    \item WebKit: Utilizada no Safari e versões antigas do Google Chrome.
+    \item Blink: Utilizado no Opera, Google Chrome e projetos relacionados;
+    \item Gecko: Utilizado nos produtos da Mozilla;
+    \item KHTML: Utilizado no navegador Konkeror, esta serviu de base para o Blink;
+    \item WebKit: Utilizado no Safari e versões antigas do Google Chrome;
 \end{itemize}
 
-Para interpretar HTML o motor WebKit utiliza a biblioteca Bison, já o
-Gecko utiliza uma biblioteca própria \autocite{howBrowsersWork}.
+A renderização consiste na decodificação de um documento em HTML
+para sua representação memória e posterior pintura no espaço de tela
+do navegador. Interpretar os documentos é processo árduo e alguns
+motores dependem de bibliotecas externas para fazê-lo. Para interpretar
+HTML o motor WebKit utiliza a biblioteca Bison, já o Gecko utiliza uma
+biblioteca própria \autocite{howBrowsersWork}. Durante o processo de
+renderização o navegador pode requisitar outros arquivos do servidor a
+fim de completar a experiência desejada para o documento em questão.
 
-O código que é executado no lado do servidor geralmente é terceirizado pelos navegadores.
-As bibliotecas que executam JavaScript são os motores de JavaScript.
+Geralmente após a renderização do documento vem a execução de scripts.
+As bibliotecas que executam JavaScript são chamadas de motores de JavaScript.
+Abaixo segue uma lista dos motores de JavaScript mais comuns.
 
 \begin{itemize}
     \item SpiderMonkey: Primeiro motor, desenvolvido por Brendan Eich, escrito em C++
@@ -1025,13 +1028,13 @@ As bibliotecas que executam JavaScript são os motores de JavaScript.
     \item TraceMonkey: Criada pela Mozilla
 \end{itemize}
 
-O suporte ao HTML vem crescendo com o tempo, o site HTML5Test
-http://html5test.com/about.html, oferece um placar atualizado
-dinamicamente, conforme utilização dos navegadores, sobre os recursos
-do HTML.
-
-A figura \ref{fig:audioCodecs} apresenta o gráfico de suporte por
-versões de navegadores em dezembro de 2015.
+Cada um dos motores que compõem um navegador implementam partes da
+especificação do HTML. E, operando em conjunto, tentam comportar
+todas as tecnologias da WEB. Infelizmente a forma que as tecnologias
+são suportadas varia e algumas não estão presentes de qualquer
+forma nos navegadores. Não obstante o suporte vem crescendo. A figura
+\ref{fig:audioCodecs} apresenta o gráfico de suporte por versões de
+navegadores em dezembro de 2015.
 
 \begin{figure}
     \centering
@@ -1150,7 +1153,14 @@ círculo sendo definido em SVG.
 \begin{verbatim}
 
 <svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+  <circle 
+    cx="50" 
+    cy="50" 
+    r="40" 
+    stroke="green" 
+    stroke-width="4" 
+    fill="yellow" 
+  />
 </svg>
 
 \end{verbatim}
@@ -1233,20 +1243,20 @@ especificação 3D do canvas é o WebGl.
 %}}}
 \subsection{WEBGL}
 %{{{
-\begin{draft}
 
-WebGL é uma API JavaScript otimizada desenhar gráficos em três dimensões.
-WebGL é ideal para a criação de ambientes virtuais, jogos e simulações.
-Por ser uma tecnologia da OWP WebGL foi especificado para funcionar
-nativamente nos navegadores sem a ajuda de plugins ou ferramentas de terceiros.
+WebGL é uma API JavaScript otimizada desenhar gráficos em três
+dimensões. Ideal para a criação de ambientes virtuais, jogos e
+simulações. Por ser uma tecnologia da OWP WebGL foi especificado
+para funcionar nativamente nos navegadores sem a ajuda de plugins ou
+ferramentas de terceiros.
 
 WebGL foi desenvolvido baseando-se na especificação OpenGL, que trata
 de definir como renderizar gráficos multiplataforma, especificamente
-OpenGL ES 2.0, uma versão do OpenGL otimizada para dispositivos
+OpenGL ES, uma versão do OpenGL otimizada para dispositivos
 móveis. O órgão que especifica o WebGL é o mesmo que especifica o
 OpenGL, o grupo sem fins lucrativos Kronos. Os primeiros rascunhos do
 WebGL iniciaram em 2006, não obstante o grupo de trabalho não foi
-formado até 2009. E a primeira versão do foi lançada em 2011.
+formado até 2009 e a primeira versão do foi lançada em 2011.
 
 Apesar de ter sido desenvolvido com foco em 3D, WebGL pode ser
 igualmente utilizado para criação de gráficos em duas
@@ -1255,16 +1265,13 @@ interface do WebGL é o canvas, no contexto 3D. Essa integração com
 o DOM via tag canvas permite que o WebGL seja manipulado assim como os
 demais elementos HTML.
 
-Especificação é composta por uma API de controle em JavaScript e o
-processamento shaders do lado da GPU (Central de processamento gráfico).
-
-\subsection{Shaders}
-
-Shaders são scripts que definem níveis de cor ou efeitos especiais
-sobre um modelo 2D ou 3D. Contam com grande performance, possibilitando
-conteúdo em tempo real (como no caso de jogos) por executarem dentro
-da GPU. São utilizados no cinema, em imagens geradas por computadores e
-vídeo games.
+Especificação é composta por uma API de controle em JavaScript
+e o processamento shaders do lado da GPU (Central de processamento
+gráfico). Shaders são scripts que definem níveis de cor ou efeitos
+especiais sobre um modelo 2D ou 3D. Contam com grande performance,
+possibilitando conteúdo em tempo real (como no caso de jogos). São
+utilizados no cinema, em imagens geradas por computadores e vídeo
+games.
 
 Existem dois shaders principais, de vértices e fragmentos.
 Shaders de vértices são chamados para cada vértice sendo desenhado
@@ -1277,8 +1284,8 @@ pode aumentar a performance e oferecer uma ampla coleção de efeitos e
 realismo.
 
 Um site interessante para explorar exemplos WebGL avançados é o blog
-http://learningwebgl.com que conta com tutoriais cobrindo áreas como
-diferentes tipos de iluminação, carregamento de modelos em JSON,
+\url{http://learningwebgl.com} que conta com tutoriais cobrindo áreas
+como diferentes tipos de iluminação, carregamento de modelos em JSON,
 gerenciando eventos do mouse e teclado; e como renderizar uma cena WebGL
 em uma textura \autocite[pp.42]{3daps}.
 
@@ -1289,8 +1296,6 @@ para se encaixar no escopo deste projeto.
 
 Uma tecnologia que se integra profundamente como ambientes virtuais
 em três dimensões criados via OpenGL é o WebVR.
-\end{draft}
-%}}}
 %}}}
 \subsection{WEBVR}
 %{{{
@@ -1915,7 +1920,7 @@ em eixos e sua unidade de medida é metros por segundo.
 HTTP/2 é a última verão do protocolo de trocas de documentos entre
 cliente e servidor na WEB. Quando um navegador requisita algum documento
 de esta requisição é geralmente feita através do
-protocolo HTTP. 
+protocolo HTTP.
 O foco da nova versão do HTTP é performance; especialmente a
 latência percebida pelos usuários e o uso de rede e servidores \autocite{http2}.
 
@@ -1995,7 +2000,7 @@ A ferramenta permite fazer inspeção da execução de métodos
 WebGL, observar o estado de texturas, buffers, controlar o tempo de
 execução entre outras funcionalidades \footnote{Mais informações
 sobre o WebGL Inspector podem ser encontradas no seguinte endereço
-http://benvanik.github.io/WebGL-Inspector/}.
+\url{http://benvanik.github.io/WebGL-Inspector/}}.
 
 \subsection{Source Maps}
 
