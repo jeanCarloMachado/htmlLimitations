@@ -89,19 +89,14 @@ em sua mecânica serão os mais apreciados.
 Depois dos preparativos efetuados, pode-se começar a construção
 do jogo. Os jogos são dirigidos por um laço que executa uma série
 de tarefas a cada frame, construindo a ilusão de um mundo animado
-\autocite[pp. 31]{gwt}. O laço do jogo (\textit{game loop}) é peça
-central em praticamente qualquer jogo eletrônico. A cada iteração do
-jogo o laço é executado e o processamento de entrada de usuário e
+\autocite[pp. 31]{gwt}. Da perspectiva da programação a parte
+principal de um jogo é o laço onde o jogo é executado \autocite[pp.
+17]{crossPlatformMobileGameDevelopment}. A cada iteração do jogo
+o laço é executado e o processamento de entrada de usuário e
 computações correlacionadas são executadas.
 
-%maybe move it to JavaScript section
-Para escrever o laço é possível utilizar as funções do
-JavaScript \textit{window.settimeout} ou \textit{window.setInterval}.
-Não obstante, a forma mais recomendada é utilizar o
-\textit{window.requestAnimationFrame} reduz ou completamente para a
-execução do laço enquanto o usuário está em outra aba. Isso reduz
-o consumo de bateria, uma característica importante para dispositivos
-móveis.
+Na seção Otimizações para jogos em JavaScript será abordada as
+possibilidades na hora de construir o laço.
 
 \section{JOGOS MULTIPLATAFORMA}
 
@@ -1163,10 +1158,7 @@ nos navegadores é o site http://caniuse.com/.
 %}}}
 \section{RENDERIZAÇÃO}
 
-Renderização é parte fundamental de muitos jogos. As tecnologias que
-permitem renderização na WEB serão descritas abaixo.
-
-\subsection{SVG}
+Renderização é parte fundamental de muitos jogos. As tecnologias que permitem renderização na WEB serão descritas abaixo.  \subsection{SVG}
 %{{{
 SVG (\textit{Gráficos de vetores escaláveis}), é uma linguagem
 baseada em XML especializada na criação de vetores bidimensionais
@@ -2240,6 +2232,15 @@ A figura \ref{fig:iife} demonstra a utilização deste padrão. As
 funções definidas no mesmo nível que bar não estarão no contexto
 global - a não ser que seja especificado diretamente - e não sofrerão
 conflitos de nomes e outros problemas relativos ao contexto global.
+
+Outro fator importante na construção de jogos em JavaScript é a
+otimização do laço do jogo. Para escrever o laço é possível
+utilizar as funções do JavaScript \textit{window.settimeout} ou
+\textit{window.setInterval}. Não obstante, a forma mais recomendada é
+utilizar o \textit{window.requestAnimationFrame} reduz ou completamente
+para a execução do laço enquanto o usuário está em outra aba.
+Isso reduz o consumo de bateria, uma característica importante para
+dispositivos móveis.
 
 \subsubsection{HTML}
 
