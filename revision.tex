@@ -1793,10 +1793,30 @@ window.addEventListener('keydown', function(event) {
 
 \subsection{Gamepad}
 
-Atualmente a única forma de utilizar gamepads é usando-os emulados através de software 
-de terceiros para se comportarem como mouses e teclados \autocite{gamepad}.
+Atualmente a única forma de utilizar gamepads na WEB é
+através software de terceiros. E sua utilização é limitada
+restringida a emulação de mouse e teclado subutilizando seus
+recursos \autocite{gamepad}.
 
-A API de Gamepad é uma especificação que define a interação de uma página WEB com Gamepads.
+Em 2015 a W3C introduziu uma API de Gamepads, atualmente em rascunho,
+que pretende solucionar estes problemas. A especificação define um
+conjunto de eventos e um objeto \textit{Gamepad} que, em conjunto,
+permitem manipular os estados de um Gamepad eficientemente.
+
+Exitem eventos para atividades esporádicas como a conexão de
+desconexão de dispositivos. Já acontecimentos mais frequentes, como o
+pressionar de botões, é detectado através da inspeção dos objetos
+aninhados ao principal \textit{Gamepad}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{html5.jpg}
+    \caption{Objetos de um Gamepad}
+    \label{fig:gamepad}
+    \source{https://w3c.github.io/gamepad}
+\end{figure}
+
+A figura \ref{fig:gamepad} contém os objetos tradicionais de um Gamepad.
 
 %}}}
 \section{ORIENTAÇÃO}

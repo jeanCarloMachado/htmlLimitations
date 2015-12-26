@@ -42,6 +42,7 @@ Talk about Android
 Move introduction comments about the benefits of the WEB to it's place on the revision (think well)
 Adicionar fontes as imagens que se aplicam
 Remove numbering from the bibliography
+Use requestAnimationFrame on prototype
 Write about the canvas to the prototype
 Add a example about webgl
 Comentar as citaçẽos com referencia direta (que foram traduzidas por mim)

@@ -270,8 +270,12 @@ navegador ou via extensão. \footnote{Mais informações sobre o
 projeto Canvas Interceptor podem ser encontradas no seguinte endereço
 https://github.com/Rob--W/canvas-interceptor}
 
-\section{Recursos}
+\section{Entrada de comandos}
 
+\subsection{Gamepad}
+Chrome does things differently here. Instead of constantly storing the gamepad's latest state in a variable it only stores a snapshot, so to do the same thing in Chrome you have to keep polling it and then only use the Gamepad object in code when it is available.
+
+\section{Recursos}
 Apesar da grande maioria dos recursos oferecidos nativamente
 nos dispositivos estar presente em HTML5 ainda existem algumas
 funcionalidades faltando para este tipo de aplicação.
