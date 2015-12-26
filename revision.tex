@@ -1106,40 +1106,61 @@ nos navegadores é o site http://caniuse.com/.
 \section{RENDERIZAÇÃO}
 %{{{
 
-Renderização é parte fundamental de muitos jogos. As tecnologias atualmente existes são o SVG e Canvas.
+Renderização é parte fundamental de muitos jogos. As tecnologias que
+permitem renderização na WEB serão descritas abaixo.
 
 \subsection{SVG}
 %{{{
-\begin{draft}
 SVG (\textit{Gráficos de vetores escaláveis}), é uma linguagem
 baseada em XML especializada na criação de vetores bidimensionais
-\autocite{html5mostwanted}. Por usar XML SVG permite a utilização da
-API do DOM para manipular os elementos.
+\autocite{html5mostwanted}. Segundo \cite[pp. 4]{svgTime} svg foi criada
+em conjunto por empresas como: Adobe, Apple, AutoDesk, entre outas,
+sendo que seus produtos contam com rápida integração a tecnologia.
 
-Entre os benefícios do SVG encontram-se:
-\begin{itemize}
-\item Não há diferença de qualidade em resoluções pois os vetores são escaláveis;
-\item Suporta animações nativamente;
-\item Conta com integração através da api do DOM. Tornando simples a integração com as outras tecnologias da web.
-\end{itemize}
+Por descrever imagens utilizando vetores ao invés de mapas de bits
+os tamanhos dos arquivos em SVG são geralmente pequenos e podem
+ser comprimidos com grande eficiência. Talvez a característica mais
+marcante do SVG é que não há diferença de qualidade em resoluções
+visto que os vetores são escaláveis. Sendo que pequenos arquivos
+servem igualmente bem um monitor com baixa resolução como um monitor
+retina.
 
-Um aspecto negativo do SVG é que é muito difícil atingir a
-perfeição na posição dos pixels, por ser uma linguagem vetorizada
-\autocite{html5mostwanted}.
+Por ser baseado em XML, uma das tecnologias da WEB, SVG permite a
+utilização da API do DOM para manipular seus elementos. Tornando
+simples a integração com outras tecnologias da WEB. Pode-se utilizar
+arquivos CSS para customizar a apresentação, JavaScript para adicionar
+interatividade, etc.
 
-\end{draft}
+Além de grande integração com as demais tecnologias, SVG conta com
+uma API nativa poderosa. Os elementos geométricos do SVG incluem
+retângulos, círculos, elipses, linhas e polígonos \autocite[pp.
+5]{svgTime}. Também existe a possibilidade de declarar caminhos
+customizados através do elemento \textit{path}, algo similar com o
+\textit{Path2D} do Canvas.
+
+E cada um dos elementos, ou agrupamento de elementos podem ser
+transformados; traduzidos, redimensionados, rotacionados e distorcidos
+\autocite[pp. 5]{svgTime}.
+
+Para ilustrar a utilização, a figura \ref{fig:svgCircle} demonstra um círculo sendo definido 
+em SVG.
+
 \begin{figure}
 \centering
 \begin{verbatim}
 
-<svg height="100" width="100">
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3"/>
-  Sorry, your browser does not support inline SVG.
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
 </svg>
 
 \end{verbatim}
 \caption{Círculo em SVG.}
+\source{http://www.w3schools.com/svg/}
+\label{img:svgCircle}
 \end{figure}
+
+Outra tecnologia popular da WEB para renderização que adota uma filosofia totalmente 
+diferente do SVG é o canvas.
 %}}}
 \subsection{CANVAS}
 %%{{{
