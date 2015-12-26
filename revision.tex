@@ -1806,7 +1806,8 @@ permitem manipular os estados de um Gamepad eficientemente.
 Exitem eventos para atividades esporádicas como a conexão de
 desconexão de dispositivos. Já acontecimentos mais frequentes, como o
 pressionar de botões, é detectado através da inspeção dos objetos
-aninhados ao principal \textit{Gamepad}.
+aninhados ao principal \textit{Gamepad}. Cada objeto botão contém um 
+atributo \textit{pressed} que pode ser utilizado para saber se foi pressionado.
 
 \begin{figure}
     \centering
