@@ -67,16 +67,43 @@ O JavaScript, por ser uma tecnologia desenvolvida por consenso, tem um
 ciclo de vida de atualizações demorado; pois necessita que todos os
 consumidores da especificação entrem em consenso e implementem a.
 
-Apesar da performance ter notavelmente melhorado, ainda é geralmente
-menos eficiente produzir animações em JavaScript do que utilizando
-transições e animações do CSS, que por sua vez são mais otimizados
-e acelerados via hardware \autocite{html5mostwanted}.
-
+O sistema de tipos do JavaScript também é problemático.
 Erros numéricos resultam no valor NaN (\textit{not a number}).
 Todas as operações com NaN como operadores irão retornar outro
 NaN. Isso torna a depuração de erros desnecessariamente complexa
 \autocite{html5mostwanted}.
 
+Ao testar o tipo (\textit{typeof}) de uma variável vazia o JavaScript retorna 
+como se fosse um objeto.
+
+\begin{figure}
+\centering
+\begin{verbatim}
+function is(type, object) {
+    type = type[0].toUpperCase + type.slice(1);
+    return Object.prototype.toString.call(object)
+    === '[object ]' +  type + ']';
+}
+\end{verbatim}
+\caption{Função para testar tipos que funciona como o esperado.}
+\label{fig:fixJSTypes}
+\source{http://www.slideshare.net/fdaciuk/javascript-secrets-front-in-floripa-2015}
+\end{figure}
+
+A figura \ref{fig:fixJSTypes} demonstra uma solução possível para
+remediar o problema dos testes de tipos em JavaScript. A diferença
+desta função é que ela converte a variável que se está testando
+para sua representação em texto a qual contém o nome do tipo escrito
+- utilizando-se deste valor pode-se deduzir o tipo da variável
+corretamente.
+
+Apesar da performance ter notavelmente melhorado, ainda é geralmente
+menos eficiente produzir animações em JavaScript do que utilizando
+transições e animações do CSS, que por sua vez são mais otimizados
+e acelerados via hardware \autocite{html5mostwanted}.
+O WEB Assembly pode resolve este problema, substituindo o JavaScript
+para os casos onde grande performance é necessária. Mas para isso
+o Web Assembly precisa evoluir na especificação e implementações.
 
 \section{SVG}
 
