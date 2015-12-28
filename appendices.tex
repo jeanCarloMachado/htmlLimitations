@@ -43,42 +43,13 @@ focadas em áreas particulares em detrimento de grandes bibliotecas
 cheias de funcionalidades.
 
 \section{CSS}
+
 A biblioteca -prefix-free \url{http://leaverou.github.io/prefixfree/}
 é um polyfill que possibilita os desenvolvedores utilizarem CSS sem
 a adição de prefixos, o que torna o trabalho de desenvolvedores bem
 menos redundante. A biblioteca é razoavelmente leve (2KB), e quando o
 sistema desenvolvido com ela estiver pronto e o CSS evoluir removendo os
 prefixos utilizados, ela pode ser removida.
-
-\section{WebGL}
-
-Treejs é um framework popular para o desenvolvimento em WebGL.
-Consistem em uma abstração sobre WebGL que permite os autores se
-focarem na criação de conteúdo para WEB, ao invés de dispenderem
-tempo manipulando os detalhes da WebGL. Possibilita trabalhar com
-efeitos, luzes, cenas e outras abstrações em detrimento de shaders,
-vértices, e conceitos mais primitivos.
-
-\section{Frameworks de jogos}
-
-Motores de jogos são bibliotecas que agregam várias funcionalidades
-usualmente úteis para o desenvolvimento de jogos \autocite[pp.
-5]{browserGamesTechnologyAndFuture}. Elas podem incluir controle
-de usuário, cena, áudio, física, etc. Também servem como uma camada de 
-segurança adicional \autocite{browserGamesTechnologyAndFuture}.
-
-Outrossim, motores de jogos não são amplamente difundidos no mercado
-de jogos de navegadores \autocite{browserGamesTechnologyAndFuture}.
-Com o intuito de simplificar o processo para os desenvolvedores,
-auxiliando-os a focarem-se apenas nas soluções que estão
-desenvolvendo, foram criados os frameworks para desenvolvimento de
-jogos. Alguns frameworks reconhecidos são:
-
-enchant.js: dentre suas funcionalidades constam: orientação à,
-orientado à eventos, contém um motor de animação, suporta WebGL
-e Canvas, etc three.js: considerada leve, renderiza, WebGL e Canvas,
-arquitetura procedural limeJs: bom para 2d quintus: especialista em
-jogos de plataforma 2D
 
 \chapter{CROSSWALK}
 
@@ -96,6 +67,74 @@ Este serviço possibilita que se faça upload de um arquivo compactado
 contendo os fontes – ou apontando para um repositório no GitHub –
 que no tempo desta pesquisa não estava funcionando; e se gere o APK
 para o Android nativamente.
+
+
+\section{Frameworks de jogos}
+
+Motores de jogos são bibliotecas que agregam várias funcionalidades
+usualmente úteis para o desenvolvimento de jogos \autocite[pp.
+5]{browserGamesTechnologyAndFuture}. Elas podem incluir controle de
+usuário, cena, áudio, física, etc. Também servem como uma camada de
+segurança adicional \autocite{browserGamesTechnologyAndFuture}.
+
+Outrossim, motores de jogos não são amplamente difundidos no mercado
+de jogos de navegadores \autocite{browserGamesTechnologyAndFuture}.
+Com o intuito de simplificar o processo para os desenvolvedores,
+auxiliando-os a focarem-se apenas nas soluções que estão
+desenvolvendo, foram criados os frameworks para desenvolvimento de
+jogos. 
+
+Alguns frameworks reconhecidos serão descritos abaixo:
+
+Enchant.js, dentre suas funcionalidades constam: orientação à,
+orientado à eventos, contém um motor de animação, suporta WebGL
+e Canvas, etc three.js: considerada leve, renderiza, WebGL e Canvas,
+arquitetura procedural limeJs: bom para 2d quintus: especialista em
+jogos de plataforma 2D
+
+Treejs é um framework popular para o desenvolvimento em WebGL.
+Consistem em uma abstração sobre WebGL que permite os autores se
+focarem na criação de conteúdo para WEB, ao invés de dispenderem
+tempo manipulando os detalhes da WebGL. Possibilita trabalhar com
+efeitos, luzes, cenas e outras abstrações em detrimento de shaders,
+vértices, e conceitos mais primitivos.
+
+Appcelerator Titanium é um framework JavaScript que possibilita a construção 
+de aplicativos mobile nativos para Android, IOS e outras plataformas.
+Titanium oferece uma vasta quantidade de APIs. Sendo bem documentadas,
+contendo descrições de métodos, parâmetros  de entrada e saída e algumas vezes 
+exemplos de utilização \autocite[pp. 2]{crossPlatformAppsAnimations}.
+A tecnologia também conta com uma IDE especializada para o desenvolvimento 
+em Titanium, enquadrando-se também em um ambiente desenvolvimento de jogos.
+
+
+\chapter{Ambientes de desenvolvimento de jogos em HTML}
+
+Construct 2: é um editor na nuvem focado para usuários sem
+conhecimento prévio em programação orientado a comportamento;
+
+PlayCanvas: é uma plataformas para a construção de jogos 3D
+na nuvem, desenvolvida com foco em performance. Permite a hospedagem,
+controle de versão e publicação dos aplicativos nela criados,
+possibilita também a importação de modelos 3D de softwares populares
+como: Maya, 3ds Max e Blender;
+
+O Intel® HTML5 Development Environment fornece uma solução na nuvem,
+completa para o desenvolvimento em plataforma cruzada, com serviços de
+empacotamento, serviços para a criação e testes de aplicativos com
+montagem de interfaces \textit{drag and drop} (Intel XDK) e bibliotecas para a
+construção de jogos utilizando aceleração de hardware, o que garante
+até duas vezes mais performance que aplicativos mobile baseados em
+Web tradicionais. 
+
+Esta solução é gratuita, open-source e funciona através de um
+plugin para o Google Chrome, ou seja, o desenvolvimento também é
+multiplataforma e devido ao fato de os binários ficarem hospedados
+na nuvem, possibilitou a Intel criar compiladores para cada uma das
+plataformas disponibilizadas pelo PhoneGap, que é o framework polyfill
+utilizado na solução.
+
+O website https://codepen.io e https://jsfiddle.net permitem a construção e visualização de aplicações utilizando as tecnologias da WEB. Apesar de ser possível, criação de aplicações utilizando estas tecnologias não é muito comum, servindo principalmente para visualizar trechos de códigos de exemplos na WEB.
 
 \chapter{Tecnologias de Compilação multiplataforma}
 
@@ -121,35 +160,6 @@ todas as plataformas sem nenhuma modificação \autocite[pp.
 A linguagem do Libgdx é Java, e é possível compilar para Android,
 IOS, HTML5, entre outros. Visto que a linguagem do Libgdx é Java
 também é possível desenvolver em todos os desktops comuns.
-
-
-\chapter{Ambientes de desenvolvimento de jogos em HTML}
-
-Construct 2: é um editor na nuvem focado para usuários sem
-conhecimento prévio em programação orientado a comportamento;
-
-PlayCanvas: é uma plataformas para a construção de jogos 3D
-na nuvem, desenvolvida com foco em performance. Permite a hospedagem,
-controle de versão e publicação dos aplicativos nela criados,
-possibilita também a importação de modelos 3D de softwares populares
-como: Maya, 3ds Max e Blender;
-
-O Intel® HTML5 Development Environment  fornece uma solução na nuvem,
-completa para o desenvolvimento em plataforma cruzada, com serviços de
-empacotamento, serviços para a criação e testes de aplicativos com
-montagem de interfaces \textit{drag and drop} (Intel XDK) e bibliotecas para a
-construção de jogos utilizando aceleração de hardware, o que garante
-até duas vezes mais performance que aplicativos mobile baseados em
-Web tradicionais. 
-
-Esta solução é gratuita, open-source e funciona através de um
-plugin para o Google Chrome, ou seja, o desenvolvimento também é
-multiplataforma e devido ao fato de os binários ficarem hospedados
-na nuvem, possibilitou a Intel criar compiladores para cada uma das
-plataformas disponibilizadas pelo PhoneGap, que é o framework polyfill
-utilizado na solução.
-
-O website https://codepen.io e https://jsfiddle.net permitem a construção e visualização de aplicações utilizando as tecnologias da WEB. Apesar de ser possível, criação de aplicações utilizando estas tecnologias não é muito comum, servindo principalmente para visualizar trechos de códigos de exemplos na WEB.
 
 \chapter{ALTERNATIVAS AO JAVASCRIPT}
 
