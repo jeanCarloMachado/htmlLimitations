@@ -520,6 +520,23 @@
   \field{title}{ECMAScript 6 Today}
 \endentry
 
+\entry{viabilityBusinessApplications}{thesis}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Morony}{M.}%
+     {Joshua}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MJ1}
+  \strng{fullhash}{MJ1}
+  \field{labelyear}{2013}
+  \field{title}{Viability of developing cross-platform mobile business
+  applications using HTML5 Mobile Framework}
+  \field{journaltitle}{Flinders University}
+  \field{year}{2013}
+\endentry
+
 \entry{svgTime}{article}{}
   \name{author}{2}{}{%
     {{}%
