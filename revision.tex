@@ -55,12 +55,15 @@ de jogos violentos, cuja jogabilidade encoraje a cooperatividade, são
 mais prováveis de exibir comportamento altruísta fora do contexto dos
 jogos, do que jogadores de jogos não violentos \autocite{gamebenefits}.
 
+Além dos aspectos benéficos, adiante serão abordados alguns aspectos técnicos 
+e gerenciais dos jogos.
+
+\subsection{MECÂNICA}
+
 \cite{html5mostwanted} ressalta a importância do planejamento antes do
 desenvolvimento de jogos. Ao criar jogos deve-se planejar o que se
 pretende atingir e como chegar lá antes de se escrever qualquer
 código, definições quanto a mecânica é um passo vital neste planejamento.
-
-\subsection{MECÂNICA}
 
 A mecânica é composta pelas regras do jogo. Quais as ações
 disponíveis aos usuários, e seu funcionamento, é fortemente
@@ -78,7 +81,7 @@ pode ser integrada dentro de um processo de engenharia de software
 \footnote{O sumário também conta com um resumo sobre metodologias de
 desenvolvimento de software contextualizada para a criação jogos}.
 Os desenvolvedores tem que evitar fazer o jogo para eles mesmos.
-Falta de crítica  antes do desenvolvimento também tende a gerar criações ruins.
+Falta de crítica antes do desenvolvimento também tende a gerar criações ruins.
 Bons jogos são aqueles que ao menos suprem as expectativas dos usuário.
 \cite{indieGamesLemes} aponta alguns fatores procurados pelos usuários
 de jogos: Desafio, socializar, experiência solitária, respeito e
@@ -105,10 +108,11 @@ Programming Interface}), sendo que se um aplicativo foi criado para
 uma plataforma ele não vai poder ser utilizado em outra pois as APIs
 são diferentes \autocite{crossPlatformMobileGameDevelopment}. Além da
 API, dispositivos de múltiplas plataformas variam em seus recursos,
-habilidades e qualidade.
+capacidades e qualidade.
 
-Jogos que almejem múltiplas plataformas introduzem uma nova gama de
-oportunidades e desafios para produtores de jogos.
+Desenvolvedores de jogos que almejem múltiplas plataformas, devido aos
+fatores acima citados, deparam-se com uma nova gama de oportunidades e
+desafios.
 
 Um destes desafios é fornecer feedback suficiente para o jogador pois
 muitas vezes o dispositivo é limitado em proporções, som, tela.
@@ -2138,131 +2142,6 @@ disponibilizar a aplicação nativamente.
 No endereço https://github.com/phonegap/phonegap-start encontra-se um
 template no formato requerido pelo PhoneGap Build que pode ser utilizado
 para começar aplicações que serão servidas através da solução.
-
-Em seguida serão abordadas algumas otimizações das tecnologias
-da WEB relevantes ao desenvolvimento de jogos.
-
-%}}}
-\section{Otimizações para jogos}
-%{{{
-Navegadores tentam otimizar a experiência de navegação definindo
-um conjunto de regras e configurações razoáveis para a maioria dos
-casos. Não obstante, nem sempre estes valores padrões são as melhores
-opções no contexto de jogos.
-
-\subsection{CSS}
-
-Scroll é um recurso interessante para longas páginas de texto,
-o mesmo não se pode dizer à respeito de jogos.
-Principalmente aqueles dependente de contato com a tela, pois
-no contato a tela pode se mover e desconcentrar o usuário. Para
-remover este comportamento deve-se utilizar o \textit{overflow:
-hidden;} do seletor do corpo do documento (\textit{body}).
-
-A barra de endereço é outro recurso de pouca utilidade no contexto de
-jogos, e muitas vezes um empecilho para jogos em dispositivos móveis,
-devido ao limitado tamanho da tela.
-
-Para desabilitar a barra em dispositivos da Apple pode-se utilizar a
-seguinte configuração:
-
-\begin{verbatim}
-<meta name="apple-mobile-web-app-capable" content="yes" />
-\end{verbatim}
-
-Para os demais dispositivos não existe meio oficial de esconder a barra
-de endereço. Não obstante, alguns sites recomendam a solução descrita abaixo:
-
-\begin{verbatim}
-<body onload="setTimeout(function() {window.scrollTo(0, 1)}, 100)">
-</body>
-\end{verbatim}
-
-Apesar de não fazer parte da especificação, a maioria dos navegadores
-implementa a possibilidade de desativar a seleção de elementos na tela.
-Em jogos essa possibilidade é útil, pois não é natural a seleção de texto
-neste tipo de software. \cite{html5mostwanted} cita que desabilitar
-a seleção de texto em jogos é uma otimização importante para a
-experiência do usuário. Para desabilitar pode-se utilizar as regras
-CSS demonstradas abaixo.
-
-\begin{verbatim}
--moz-user-select: none;
--webkit-user-select: none;
--ms-user-select: none;
-\end{verbatim}
-
-\subsection{JavaScript}
-
-\subsubsection{Modo estrito}
-Um recurso interessante do JavaScript é seu modo estrito, este faz
-um conjunto de modificação na semântica do interpretador de modo
-que alguns recursos suportados, mas propensos a problemas, sejam
-desabilitados. Um exemplo é variáveis não prefixadas pela palavra
-chave \textit{var}.
-
-O modo estrito pode ser entendido como uma variante mais rígida
-do JavaScript. O modo restrito pode ser habilitado utilizando o
-termo \textit{"use strict";} nos cabeçalhos de arquivos ou funções
-permitindo que código não estrito trabalhe em conjunto com código
-estrito, característica conveniente para a utilização em sistemas
-legados.
-
-\subsubsection{Funções imediatamente invocadas}
-
-Um problema comum de sistemas complexos em JavaScript é que muitos
-objetos vivem em ambiente global. Isso pode causar uma coleção de
-problemas, desde conflitos de nomes à sobrescrita de variáveis. Para
-contornar esse problema pode-se utilizar as funções imediatamente
-invocadas IFE (\textit{Immediatly invoked function expression}).
-
-\begin{figure}
-\centering
-\begin{verbatim}
-    (function() {
-        'use strict';
-
-        function bar() {
-            return 'foo';
-        }
-
-        window.bar = bar;
-    })();
-    window.bar();
-\end{verbatim}
-\caption{Exemplo de utilização de funções imediatamente invocadas}
-\label{fig:iife}
-\end{figure}
-
-A figura \ref{fig:iife} demonstra a utilização deste padrão. As
-funções definidas no mesmo nível que bar não estarão no contexto
-global - a não ser que seja especificado diretamente - e não sofrerão
-conflitos de nomes e outros problemas relativos ao contexto global.
-
-Outro fator importante na construção de jogos em JavaScript é a
-otimização do laço do jogo. Para escrever o laço é possível
-utilizar as funções do JavaScript \textit{window.settimeout} ou
-\textit{window.setInterval}. Não obstante, a forma mais recomendada é
-utilizar o \textit{window.requestAnimationFrame} reduz ou completamente
-para a execução do laço enquanto o usuário está em outra aba.
-Isso reduz o consumo de bateria, uma característica importante para
-dispositivos móveis.
-
-\subsubsection{HTML}
-
-Um problema que jogos sofrem em geral é a demora no carregamento da
-grande quantidade de recursos que precisam estar em memória para o jogo
-funcionar. Muitos jogos utilizam uma tela de carregamento enquanto os 
-recursos são adquiridos.
-
-Uma funcionalidade do HTML interessante para este tipo de situação
-é o pré carregamento de recursos (\textit{Link Prefetching}). Esta
-tecnologia possibilita que o navegador , em seu tempo livre, adquira
-recursos que provavelmente serão necessários em um futuro próximo.
-
-Nem todos os recursos necessitam ser pré carregados, mas uma impressão
-muito superiora é criada se os recursos estão imediatamente
-disponíveis quando uma nova fase é carregada \autocite[pp. 39]{creatingFun}.
 %}}}
 \section{TRABALHOS SIMILARES}
 %{{{

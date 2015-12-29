@@ -11,7 +11,6 @@ pelo jogo está correto ou não. A cada resposta dada o nível de
 complexidade da equação cresce. O tempo é um fator determinante
 no resultado do jogo pois quão mais rápido o jogador acertar se a
 afirmação está correta ou não mais pontos ele receberá.
-
 Esta categoria de jogo foi selecionada por ter profundidade, oferecendo
 a possibilidade de explorar diversos recursos do HTML, e criar melhorias
 incrementais. E também por oferecer uma dificuldade técnica não
@@ -319,5 +318,128 @@ minificados o tempo médio de download ficou em 1.1 segundos. Uma
 diferença substancial dada a quantidade pequena de arquivos minificados
 8 arquivos JavaScript e um arquivo CSS.
 
-A seguir serão apresentadas as limitações do HTML encontradas durante o desenvolvimento do 
-protótipo e pesquisa relacionada.
+A seguir serão apresentadas as limitações do HTML encontradas durante
+o desenvolvimento do protótipo e pesquisa relacionada.
+
+\section{Otimizações para jogos}
+%{{{
+Navegadores tentam otimizar a experiência de navegação definindo
+um conjunto de regras e configurações razoáveis para a maioria dos
+casos. Não obstante, nem sempre estes valores padrões são as melhores
+opções no contexto de jogos. Abaixo seguem algumas otimizações nas tecnologias da WEB para jogos que foram identificadas através da revisão e desenvolvimento do protótipo.
+
+\subsection{CSS}
+
+Scroll é um recurso interessante para longas páginas de texto,
+o mesmo não se pode dizer à respeito de jogos.
+Principalmente aqueles dependente de contato com a tela, pois
+no contato a tela pode se mover e desconcentrar o usuário. Para
+remover este comportamento deve-se utilizar o \textit{overflow:
+hidden;} do seletor do corpo do documento (\textit{body}).
+
+A barra de endereço é outro recurso de pouca utilidade no contexto de
+jogos, e muitas vezes um empecilho para jogos em dispositivos móveis,
+devido ao limitado tamanho da tela.
+
+Para desabilitar a barra em dispositivos da Apple pode-se utilizar a
+seguinte configuração:
+
+\begin{verbatim}
+<meta name="apple-mobile-web-app-capable" content="yes" />
+\end{verbatim}
+
+Para os demais dispositivos não existe meio oficial de esconder a barra
+de endereço. Não obstante, alguns sites recomendam a solução descrita abaixo:
+
+\begin{verbatim}
+<body onload="setTimeout(function() {window.scrollTo(0, 1)}, 100)">
+</body>
+\end{verbatim}
+
+Apesar de não fazer parte da especificação, a maioria dos navegadores
+implementa a possibilidade de desativar a seleção de elementos na tela.
+Em jogos essa possibilidade é útil, pois não é natural a seleção de texto
+neste tipo de software. \cite{html5mostwanted} cita que desabilitar
+a seleção de texto em jogos é uma otimização importante para a
+experiência do usuário. Para desabilitar pode-se utilizar as regras
+CSS demonstradas abaixo.
+
+\begin{verbatim}
+-moz-user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+\end{verbatim}
+
+\subsection{JavaScript}
+
+\subsubsection{Modo estrito}
+Um recurso interessante do JavaScript é seu modo estrito, este faz
+um conjunto de modificação na semântica do interpretador de modo
+que alguns recursos suportados, mas propensos a problemas, sejam
+desabilitados. Um exemplo é variáveis não prefixadas pela palavra
+chave \textit{var}.
+
+O modo estrito pode ser entendido como uma variante mais rígida
+do JavaScript. O modo restrito pode ser habilitado utilizando o
+termo \textit{"use strict";} nos cabeçalhos de arquivos ou funções
+permitindo que código não estrito trabalhe em conjunto com código
+estrito, característica conveniente para a utilização em sistemas
+legados.
+
+\subsubsection{Funções imediatamente invocadas}
+
+Um problema comum de sistemas complexos em JavaScript é que muitos
+objetos vivem em ambiente global. Isso pode causar uma coleção de
+problemas, desde conflitos de nomes à sobrescrita de variáveis. Para
+contornar esse problema pode-se utilizar as funções imediatamente
+invocadas IFE (\textit{Immediatly invoked function expression}).
+
+\begin{figure}
+\centering
+\begin{verbatim}
+    (function() {
+        'use strict';
+
+        function bar() {
+            return 'foo';
+        }
+
+        window.bar = bar;
+    })();
+    window.bar();
+\end{verbatim}
+\caption{Exemplo de utilização de funções imediatamente invocadas}
+\label{fig:iife}
+\end{figure}
+
+A figura \ref{fig:iife} demonstra a utilização deste padrão. As
+funções definidas no mesmo nível que bar não estarão no contexto
+global - a não ser que seja especificado diretamente - e não sofrerão
+conflitos de nomes e outros problemas relativos ao contexto global.
+
+Outro fator importante na construção de jogos em JavaScript é a
+otimização do laço do jogo. Para escrever o laço é possível
+utilizar as funções do JavaScript \textit{window.settimeout} ou
+\textit{window.setInterval}. Não obstante, a forma mais recomendada é
+utilizar o \textit{window.requestAnimationFrame} reduz ou completamente
+para a execução do laço enquanto o usuário está em outra aba.
+Isso reduz o consumo de bateria, uma característica importante para
+dispositivos móveis.
+
+\subsubsection{HTML}
+
+Um problema que jogos sofrem em geral é a demora no carregamento da
+grande quantidade de recursos que precisam estar em memória para o jogo
+funcionar. Muitos jogos utilizam uma tela de carregamento enquanto os 
+recursos são adquiridos.
+
+Uma funcionalidade do HTML interessante para este tipo de situação
+é o pré carregamento de recursos (\textit{Link Prefetching}). Esta
+tecnologia possibilita que o navegador , em seu tempo livre, adquira
+recursos que provavelmente serão necessários em um futuro próximo.
+
+Nem todos os recursos necessitam ser pré carregados, mas uma impressão
+muito superiora é criada se os recursos estão imediatamente
+disponíveis quando uma nova fase é carregada \autocite[pp. 39]{creatingFun}.
+%}}}
+
