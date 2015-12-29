@@ -23,11 +23,10 @@ implementarem especificações incompleta ou incorretamente.
 Segundo \cite{crossPlatformMobileGame}
 \begin{quote}
 Enquanto o HTML é desenvolvido muitas das funcionalidades
-disponibilizadas são testadas em um pequeno conjunto de
-navegadores para um pequeno conjunto de versões. Isso
-acarreta em suporte inconsistente. A forma mais segura de garantir
-suporte é testando em todas as versões alvo, todavia essa solução
-não é prática.
+disponibilizadas são testadas em um pequeno conjunto de navegadores
+para um pequeno conjunto de versões. Isso acarreta em suporte
+inconsistente. A forma mais segura de garantir suporte é testando em
+todas as versões alvo, todavia essa solução não é prática.
 \end{quote}
 
 O Crosswalk é uma tecnologia que pode resolver parcialmente o problema
@@ -47,16 +46,18 @@ há casos, como o dos botões de certo e errado que a proporções ficam
 exageradas, nesses casos a utilizada de \textit{max-width} é uma solução
 conveniente.
 
-Frameworks como o Ionic e Sencha Touch  possibilitam criar elementos 
+Frameworks como o Ionic e Sencha Touch  possibilitam criar elementos
 típicos de interfaces mobile como listas com scroll, botões e transições
 facilmente \autocite{publishHtml5}.
 
 \subsubsection{TAMANHO DE TELA}
+
 Em alguns casos o tamanho das telas pode ser um fator limitante – como
 no caso de jogos de estratégia. Jogadores com telas menores podem sair
 em desvantagem.
 
 \subsubsection{Scroll}
+
 \autocite[pp. 9]{aSeriousContender} cita que:
 Fazer scroll juntamente com gestos de ações similares é uma área
 onde o HTML ainda é fraco. Existem várias tentativas para solucionar
@@ -112,6 +113,7 @@ Apesar da performance ter notavelmente melhorado, ainda é geralmente
 menos eficiente produzir animações em JavaScript do que utilizando
 transições e animações do CSS, que por sua vez são mais otimizados
 e acelerados via hardware \autocite{html5mostwanted}.
+
 O WEB Assembly pode resolve este problema, substituindo o JavaScript
 para os casos onde grande performance é necessária. Mas para isso
 o Web Assembly precisa evoluir na especificação e implementações.
@@ -132,10 +134,13 @@ Segundo \autocite{html5mostwanted}, os aspectos negativos do canvas é
 que a performance varia de plataformas para plataformas e não existe
 implementação nativa para animações.
 
-O problema de performance  mencionado pode ser remediado com o FastCanvas.
-O FastCanvas é uma iniciativa híbrida para Android que busca mitigar os
-problemas de performance do Canvas com uma API nativa. Não obstante, o
-FastCanvas não suporta a especificação do canvas completamente,
+O problema de performance mencionado pode ser parcialmente remediado
+com o FastCanvas. FastCanvas é uma implementação nativa em C++ do
+Canvas para Android que roda separadamente do JavaScript. Devidas as
+características acima citadas FastCanvas é substancialmente mais
+rápido do que a tag canvas para navegadores Android. Não obstante, o
+FastCanvas não suporta a especificação do canvas completamente, e
+existem umas diferenças no comportamento de de ambos.
 
 A implementação de animações de fato não existe no canvas,
 similarmente carece-se de integração com as demais tecnologias
