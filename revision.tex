@@ -217,34 +217,35 @@ visto que é necessário duplicar funcionalidades em sistemas distintos
 e manter um profissional por ambiente suportado. As versões nativas
 são totalmente incompatíveis impossibilitando reúso.
 
-\subsubsection{Compiladores Multiplataforma}
-
-Utilizando tecnologias como o Xamarin é possível desenvolver em um a
-linguagem e compilar para diversas plataformas nativamente. Através
-dessa abordagem é possível beneficiar-se de um aplicativo nativo e
-eliminar grande parte da duplicação geralmente imposta. Não obstante
-abstrair plataformas geralmente é uma tarefa complexa e a garantia 
-de qualidade parece ser melhor atendida por grupos de interesses como a
-Open Web do que as empresas que fornecem estes produtos.
-
-A alternativa hibrida é uma junção da alternativa nativa com a alternativa WEB.
+A alternativa hibrida fica em meios ao desenvolvimento nativo e WEB e
+será explicada abaixo.
 
 \subsection{JOGOS HÍBRIDOS}
 
-A alternativa híbrida tenta utilizar o melhor do nativo e o melhor do
-desenvolvimento WEB. Geralmente se desenvolve híbrido utilizando as
+A alternativa híbrida busca beneficiar-se das melhores características
+do nativo e o melhor do desenvolvimento WEB.
+
+Muitas vezes desenvolve-se aplicações híbridas utilizando as
 tecnologias da WEB só que ao invés de disponibilizar a aplicação
 através de um navegador a aplicação WEB é instalada como um
-aplicativo normal e roda em uma WebWiew que é um componente do
-sistema operacional capaz de rodar as tecnologias da WEB. Desta forma
-o aplicativo WEB conversa diretamente com o sistema operacional não
-necessitando de um software de terceiro para mediar a interação.
+aplicativo normal. A aplicação roda em uma WebWiew que é um
+componente do sistema operacional capaz de rodar as tecnologias da
+WEB. Desta forma o aplicativo WEB conversa diretamente com o sistema
+operacional não necessitando de um software de terceiro para mediar a
+interação.
 
-Visto que a estratégia híbrida tem acesso ao sistema operacional
-é possível criar APIs para acessar recursos não sempre disponíveis
-para a plataforma WEB. Soluções como o PhoneGap adotam essa
-estratégia para possibilitar granular controle sobre os dispositivos
-através de APIs JavaScript implementadas nativamente.
+Outra possibilidade híbrida é escrever o software em uma linguagem e
+gerar binários para as plataformas alvo. Utilizando o Xamarin
+é possível desenvolver em C# e compilar para diversas plataformas
+nativamente. Através dessa abordagem é possível beneficiar-se de um
+aplicativo nativo e eliminar grande parte da duplicação geralmente
+imposta.
+
+Visto que a estratégia híbrida geralmente tem acesso ao sistema
+operacional é possível criar APIs para acessar recursos não sempre
+disponíveis para a plataforma WEB. Soluções como o PhoneGap
+adotam essa estratégia para possibilitar granular controle sobre os
+dispositivos através de APIs JavaScript implementadas nativamente.
 
 Outro benefício da estratégia híbrida em relação a WEB é que
 ela permite empacotar as aplicações com um experiência exata a dos
