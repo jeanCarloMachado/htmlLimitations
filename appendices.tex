@@ -93,18 +93,18 @@ vértices, e conceitos mais primitivos.
 
 Appcelerator Titanium é um framework JavaScript que possibilita a
 construção de aplicativos mobile nativos para Android, IOS e outras
-plataformas. Titanium oferece uma vasta quantidade de APIs. Sendo
+plataformas. Titanium oferece uma vasta quantidade de APIs; sendo
 bem documentadas, contendo descrições de métodos, parâmetros de
 entrada e saída e algumas vezes exemplos de utilização \autocite[pp.
 2]{crossPlatformAppsAnimations}. A tecnologia também conta com uma IDE
 especializada para o desenvolvimento em Titanium, enquadrando-se também
-em um ambiente desenvolvimento de jogos. JQuery mobile é um framework
-WEB que que disponibiliza componentes especializados para dispositivos
-móveis.
+em um ambiente desenvolvimento de jogos.
 
 \subsection{jQuery Mobile}
+
 jQuery Mobile é um dos mais famosos frameworks mobile da WEB, isso 
 se dá, parcialmente, pela popuplaridade od jQuery em si \autocite[pp. 14]{viabilityBusinessApplications}.
+
 \autocite[pp. 2]{crossPlatformAppsAnimations} cita que:
 \begin{quote}
 j0uery prove uma grande game de APIs para muitos propósitos, por
@@ -124,12 +124,16 @@ como fazem alguns concorrentes como o Sencha Touch\autocite[pp.
 
 \subsection{PhoneGap}
 
-PhoneGap é uma tecnologia para desenvolvimento de sistemas híbridos 
-que empacota uma aplicação WEB dentro de um contêiner nativo. PhoneGap 
-permite acesso através de JavaScript as APIs de câmera, geolocalização,
-contatos calendário, etc \autocite[pp. 3]{crossPlatformAppsAnimations}.
-Todos os sistemas populares são suportados pelo PhoneGap: Android, IOS,
-Windows Phone, etc.
+PhoneGap é um framework para desenvolvimento de sistemas híbridos que
+empacota uma aplicação WEB dentro de um contêiner nativo e provê um
+conjunto de funcionalidades nativas via JavaScript. PhoneGap permite
+acesso as APIs de câmera, geolocalização, contatos calendário,
+etc \autocite[pp. 3]{crossPlatformAppsAnimations}. Todos os sistemas
+populares são suportados pelo PhoneGap: Android, IOS, Windows Phone,
+etc. Diferentemente de outros frameworks, PhoneGap não provê uma
+forma para criar funcionalidades de interface como animações e listas
+\autocite[pp. 15]{viabilityBusinessApplications}. O framework 
+geralmente é combinado com outros para obter-se este tipo de funcionalidade.
 
 PhoneGap também conta com um serviço para empacotamento online o
 PhoneGap Build. Este serviço possibilita que se carregue de um arquivo
@@ -188,11 +192,11 @@ visualizar trechos de códigos de exemplos na WEB.
 
 Segundo \cite[pp. 29]{gtw}
 \begin{quote}
-O GWT é um framework essencialmente para o lado do cliente (client
-side) e dá suporte à comunicação com o servidor através de RPCs
-(\textit{Remote Procedure Calls}). Ele não é um framework para
-aplicações clássicas da web, pois deixa a implementação da
-aplicação web parecida com implementações em desktop.
+O GWT é um framework essencialmente para o lado do cliente quee dá
+suporte à comunicação com o servidor através de RPCs (\textit{Remote
+Procedure Calls}). Ele não é um framework para aplicações clássicas
+da WEB, pois deixa a implementação da aplicação web parecida com
+implementações em desktop.
 \end{quote}
 
 Com o GWT se programa em Java e exporta-se com código otimizado para
@@ -261,7 +265,7 @@ Segundo \cite{gruntTutorial}
 \begin{quote}
 Durante o desenvolvimento de aplicações WEB, existem muitas tarefas
 que tem que ser feitas repetidamente. Estas tarefas incluem minificar o
-JavaScript e CSS, rodar testes unitário, aplicar linters nos arquivos
+JavaScript e CSS, rodar testes unitário, aplicar \textit{linters} nos arquivos
 para checar erros, compilar os pré processadores de CSS (LESS, SASS), e
 muito mais.
 \end{quote}
@@ -284,8 +288,5 @@ Para tanto os seguintes plugins foram utilizados:
     \item grunt-contrib-watch: observar modificações nos arquivos de desenvolvimento e iniciar o processamento dos plugins acima;
 \end{itemize}
 
-O Gulp utiliza o conceito de streams para aplicar todas as modificações sobre
+O Gulp utiliza o conceito de atremas para aplicar todas as modificações sobre
 um arquivo de uma vez só.
-
-
-
