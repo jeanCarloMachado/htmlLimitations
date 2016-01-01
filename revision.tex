@@ -1095,24 +1095,27 @@ computadores desktop, mas seu foco é dispositivos com tela sensível
 \autocite{chromeVsAndroid}. O sistema operacional é composto por
 diversos projetos open-source, sendo o mais proeminente deles o kernel
 Linux, utilizado como fundamento do sistema operacional. Além
-da versão open-source (aosp), existe a versão do Google que utiliza
+da versão open-source (AOSP), existe a versão do Google que utiliza
 ferramentas proprietárias  para adicionar funcionalidades aos dispositivos.
 
 Softwares para Android são geralmente escritos em Java e executados
 através da máquina virtual Dalvik. Dalvik é similar a máquina
 virtual Java, mas roda um formato de arquivo diferenciado (.dex),
 otimizados para consumir pouca memória, que são agrupados em um único
-pacote (.apk). Aplicativos da WEB podem ser integrados no Android através de uma
+pacote (.apk). 
+
+Aplicativos da WEB podem ser integrados no Android através de uma
 arquitetura híbrida. Os arquivos da aplicação são empacotados dentro
 de um apk utilizando um componente nativo do Android, a API WebView, para
 executar as tecnologias da OWP.
 
 Além da arquitetura híbrida, é possível executar jogos WEB em
 dispositivos Android através dos navegadores presentes nestes
-aparelhos. As novas versões do Android contam com o Google Chrome
-como navegador padrão; não obstante, versões mais antigas contavam
-com um navegador próprio baseado em WebKit. Além do padrão outros
-navegadores como o Firefox ou Opera também podem ser instalados.
+aparelhos. A versão do Google conta com o Google Chrome como navegador
+padrão. Não obstante, a versão AOSP contém um navegador próprio
+que utiliza o motor de renderização LibWebCore, baseado no WebKit
+\autocite{comparisonPlatforms}. Além do padrão outros navegadores como
+o Firefox ou Opera também podem ser instalados.
 
 Além do Android o sistema IOS é de grande relevância mercadológica
 para o desenvolvimento de jogos. Não obstante, não será tratado neste

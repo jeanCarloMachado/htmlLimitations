@@ -113,11 +113,32 @@ para os casos onde grande performance é necessária. Mas para isso o
 Web Assembly precisa evoluir na especificação e implementações.
 
 
+\subsection{Fullscreen}
+
+Não existe forma padronizada de detectar se uma aplicação está em
+tela cheia ou não através de JavaScript. O IOS suporta a variável
+\textit{navigator.standalone } para identificar se a aplicação está
+em tela cheia. \cite{homescreenwebapps} recomenda a utilização do
+trecho de código para determinar se está em modo tela cheia
+nos demais navegadores.
+
+\begin{figure}[H]
+\centering
+\begin{verbatim}
+navigator.standalone = navigator.standalone || (screen.height-document.documentElement.clientHeight<40)
+\end{verbatim}
+\caption{Teste de tela cheia}
+\label{fig:fixJSTypes}
+\source{\url{http://www.mobilexweb.com/blog/home-screen-web-apps-android-chrome-31}}
+\end{figure}
+
 \section{SVG}
 
-Uma das grandes vantagens do SVG é que é definido via linguagem de marcação e se integra bem com as demais tecnologias da WEB. Não obstante, isso também implica em problemas de performance para arquivos muito grandes.
-Segundo \cite{html5mostwanted} a grande desvantagem do SVG é que quão
-maior o documento mais lenta a renderização.
+Uma das grandes vantagens do SVG é que é definido via linguagem de
+marcação e se integra bem com as demais tecnologias da WEB. Não
+obstante, isso também implica em problemas de performance para arquivos
+muito grandes. Segundo \cite{html5mostwanted} a grande desvantagem do
+SVG é que quão maior o documento mais lenta a renderização.
 
 Controle refinado também é um problema do SVG \cite{html5mostwanted} cita que
 um aspecto negativo do SVG é que é muito difícil atingir a
@@ -202,22 +223,23 @@ Android 2.3 e IPhone 5.
 
 \subsection{ÁUDIO}
 
-Segundo \cite{browserGamesTechnologyAndFuture} em sido difícil
-construir aplicações sofisticadas e interativas sem a utilização de
-plugins para áudio.
 Segundo \cite{html5mostwanted} a limitação do elemento de áudio do
 HTML5 é que seu propósito é para executar apenas um som, como o som
 de fundo dentro de um jogo.
 
-Durante a concepção do protótipo foi utilizado o elemento audio
-para emitir sons na utilização dos botões de resposta do aplicativo, 
-não obstante sons consecutivos tiveram problemas no Android. 
-Depois de migrado para a API  de áudio os problemas aparentemente foram 
-resolvidos. 
+Durante a concepção do protótipo foi utilizado o elemento \textit{audio} para
+emitir sons na utilização dos botões de resposta do aplicativo. Não
+obstante, sons consecutivos tiveram problemas no Android. 
 
-Confirmando a afirmação de \cite{html5mostwanted} a API de som é
-boa se você deseja apenas tocar alguma música, mas se você está
-lançando eventos em um jogo ela é problemática.
+Depois de migrado para a API de áudio os problemas foram minimizados
+, mesmo assim, algumas vezes o som não é executado ou demora até
+executar de modo de o que é executado ao mesmo tempo que o próximo
+som.
+
+A experimentação do protótipo relativo a API de áudio confirmou as
+afirmações de \cite{html5mostwanted} a API de som é boa se você
+deseja apenas tocar alguma música, mas se você está lançando eventos
+em um jogo ela é problemática.
 
 Os navegadores variam na disponibilização de formatos aceitáveis
 Somente um áudio pode ser tocado no Navegador do Android
@@ -239,7 +261,7 @@ respectivamente.
 
 \subsection{VIDEO}
 
-O suporte a vídeo apesar de estar melhorando ainda é básico. No
+O suporte a vídeo, apesar de estar melhorando, ainda é rudimentar. No
 Silverlight existem uma coleção de possibilidades como aplicar shaders
 diretamente no vídeo e streaming suave de 1080px HD \autocite[pp.
 8]{researchOnHtml}.
@@ -294,6 +316,7 @@ Grande parte da detecção de funcionalidades é feita através de
 JavaScript, isso força os desenvolvedores a criarem pelo menos parte da
 marcação em JavaScript, isso pode ser um fator limitante para o uso
 generalizado de HTML5 \autocite{diveIntohtml}.
+
 
 \section{Debug}
 
@@ -389,7 +412,6 @@ optarem pela arquitetura híbrida.
 A grande maioria dos dispositivos atualmente no mercado utilizam
 obsoletas de seus softwares.
 
-
 Além de obsoletas, as implementações podem conter erros.
 
 Segundo \cite{crossPlatformMobileGame}
@@ -423,6 +445,8 @@ SVG & Sim & Sim \\
 Gamepad & Não & Sim \\
 WebGL & Parcial & Sim \\
 WebSockets & Sim & Sim \\
+Video & Sim & Sim \\
+Audio & Sim & Sim \\
 \hline
 \end{tabular}
 
@@ -445,5 +469,6 @@ Outro problema relativo aos assets é descrito por \cite{howBrowsersWork}
 scripts requerendo informações de estilo durante o processo de
 parse. Se o estilo ainda não foi carregado o script vai utilizar
 informações erradas, causando uma série de problemas.
+
 
 
