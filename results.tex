@@ -12,44 +12,27 @@ A abaixo constam as limitações aplicáveis, mesmo que não
 exclusivamente, aos jogos encontradas durante a pesquisa e concepção
 do protótipo. Quando aplicável, buscou-se apresentar as limitações
 na mesma ordem das tecnologias estudadas na revisão bibliográfica.
-
-\section{VERSÕES}
-
-A grande maioria dos dispositivos atualmente no mercado utilizam
-obsoletas de seus softwares.
-
-Além das versões obsoletas existe o problema de muitos navegadores 
-implementarem especificações incompleta ou incorretamente.
-
-Segundo \cite{crossPlatformMobileGame}
-\begin{quote}
-Enquanto o HTML é desenvolvido muitas das funcionalidades
-disponibilizadas são testadas em um pequeno conjunto de navegadores
-para um pequeno conjunto de versões. Isso acarreta em suporte
-inconsistente. A forma mais segura de garantir suporte é testando em
-todas as versões alvo, todavia essa solução não é prática.
-\end{quote}
-
-O Crosswalk é uma tecnologia que pode resolver parcialmente o problema
-de versões de software antigas para Android. Visto que a aplicação
-é disponibilizada juntamente com uma versão recente do navegador que
-a irá rodá-la. Não obstante, o Crosswalk só é suportado
-para Android \footnote{Nos apêndices o Crosswalk é tratado com mais
-detalhes}.
+Não obstante, algumas limitaçãos como performance e versões foram tratadas 
+em uma partes separadas visto que se aplicam a várias das tecnologias da WEB.
 
 \section{CSS}
 
-É muito custoso desenvolver uma interfaces que pareçam nativas
-para cada dispositivo sem a utilização de plugins e ferramentas.
+É muito custoso desenvolver uma interfaces que pareçam nativas para
+cada dispositivo sem a utilização de plugins e ferramentas. No
+protótipo foi utilizada uma estilização simples, que se pode parecer
+natural na WEB; não obstante, nos dispositivos móveis o layout é
+muito diferente da experiência normal.
+
+Uma solução para este problema é utilizar frameworks como o Ionic
+e Sencha Touch ou jQuery Mobile os quais possibilitam criar elementos
+típicos de interfaces mobile como listas com scroll, botões e
+transições com uma aparência nativa de forma relativamente fácil
+\autocite{publishHtml5}.
 
 Em termos gerais, trabalhar com proporções é positivo. Não obstante
 há casos, como o dos botões de certo e errado que a proporções ficam
 exageradas, nesses casos a utilizada de \textit{max-width} é uma solução
 conveniente.
-
-Frameworks como o Ionic e Sencha Touch  possibilitam criar elementos
-típicos de interfaces mobile como listas com scroll, botões e transições
-facilmente \autocite{publishHtml5}.
 
 \subsubsection{TAMANHO DE TELA}
 
@@ -385,6 +368,30 @@ Não obstante jogos WEB podem ser integrados pelos desenvolvedores
 a sistemas de pagamento - possivelmente aumentado a complexidade da
 aplicação. Ou serem integrados a algum mercado como o do Android, se
 optarem pela arquitetura híbrida.
+
+\section{VERSÕES}
+
+A grande maioria dos dispositivos atualmente no mercado utilizam
+obsoletas de seus softwares.
+
+Além das versões obsoletas existe o problema de muitos navegadores 
+implementarem especificações incompleta ou incorretamente.
+
+Segundo \cite{crossPlatformMobileGame}
+\begin{quote}
+Enquanto o HTML é desenvolvido muitas das funcionalidades
+disponibilizadas são testadas em um pequeno conjunto de navegadores
+para um pequeno conjunto de versões. Isso acarreta em suporte
+inconsistente. A forma mais segura de garantir suporte é testando em
+todas as versões alvo, todavia essa solução não é prática.
+\end{quote}
+
+O Crosswalk é uma tecnologia que pode resolver parcialmente o problema
+de versões de software antigas para Android. Visto que a aplicação
+é disponibilizada juntamente com uma versão recente do navegador que
+a irá rodá-la. Não obstante, o Crosswalk só é suportado
+para Android \footnote{Nos apêndices o Crosswalk é tratado com mais
+detalhes}.
 
 \section{PERFORMANCE}
 
