@@ -101,6 +101,12 @@ para sua representação em texto a qual contém o nome do tipo escrito
 por extenso - utilizando-se deste valor pode-se deduzir o tipo da
 variável corretamente.
 
+Segundo \cite{htmlResearchJournal}, um problema do JavaScript é que
+não é possível transferir métodos de objetos através de sistemas,
+via WebSocket, somente dados. Uma forma de contornar este problema é
+utilizar funções para converter os dados em objetos em cada ponta do
+processamento mas isto adiciona complexidade ao software.
+
 Apesar da performance ter notavelmente melhorado, ainda é geralmente
 menos eficiente produzir animações em JavaScript do que utilizando
 transições e animações do CSS, que por sua vez são mais otimizados
@@ -109,6 +115,7 @@ e acelerados via hardware \autocite{html5mostwanted}.
 O WEB Assembly pode resolver este problema, substituindo o JavaScript
 para os casos onde grande performance é necessária. Mas para isso o
 Web Assembly precisa evoluir na especificação e implementações.
+
 
 \section{SVG}
 
@@ -256,7 +263,6 @@ origem \autocite[pp. 68]{proHtml5}.
 
 \section{Armazenamento}
 
-Em praticamente nenhuma das tecnologias da WEB é possível armazenar objetos e  seu estado atual.
 IndexedDB é uma API interessante mas para projetos menores é um tanto complexa.
 
 \section{OFFLINE}
@@ -266,16 +272,12 @@ navegador emite um evento mas não há indicação de qual problema
 aconteceu. Isso pode tornar a depuração ainda mais complicada que o
 usual \autocite{diveIntohtml}.
 
-Este problema aconteceu durante o desenvolvimento do protótipo e
-foi trabalhoso de depurar até descobrir que um arquivo estava faltando, e qual
-especificamente.
+Este problema aconteceu durante o desenvolvimento do protótipo e foi
+trabalhoso de depurar até descobrir que um arquivo estava faltando, e
+qual especificamente.
 
 Refresh duplo para ver assets cacheados. Ver:
 http://buildnewgames.com/game-asset-management/
-
-Não é extraordinário que um jogo tenha que ser reverso para um estado
-válido anterior por motivo de um erro na base de dados \autocite[pp.
-5]{browserGamesTechnologyAndFuture}.
 
 \section{Orientação}
 
@@ -312,7 +314,7 @@ extensão para a funcionalidade mas até o tempo de desenvolvimento
 deste trabalho não havia nenhuma disponível. A única alternativa
 viável até o momento é utilizar uma versão antiga do Chromium.
 
-O Firefox introduziu uma ferramenta de inspeção para o canvas 2d
+O Firefox introduziu uma ferramenta de inspeção para o canvas 2D
 em uma Conferência de desenvolvimento de jogos em São Francisco em 2014,
 mas até a tecnologia não apareceu no navegador \autocite{firefoxCanvasDebug}.
 
