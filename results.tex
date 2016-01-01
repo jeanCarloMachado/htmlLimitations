@@ -10,29 +10,39 @@ dispositivos ou da tecnologia.
 
 A abaixo constam as limitações aplicáveis, mesmo que não
 exclusivamente, aos jogos encontradas durante a pesquisa e concepção
-do protótipo. Quando aplicável, buscou-se apresentar as limitações
+do protótipo. Quando possível, buscou-se apresentar as limitações
 na mesma ordem das tecnologias estudadas na revisão bibliográfica.
-Não obstante, algumas limitaçãos como performance e versões foram tratadas 
-em uma partes separadas visto que se aplicam a várias das tecnologias da WEB.
+Não obstante, algumas limitaçãos como performance e versões foram
+tratadas em uma partes separadas visto que se aplicam a várias das
+tecnologias da WEB.
 
 \section{CSS}
 
 É muito custoso desenvolver uma interfaces que pareçam nativas para
 cada dispositivo sem a utilização de plugins e ferramentas. No
-protótipo foi utilizada uma estilização simples, que se pode parecer
-natural na WEB; não obstante, nos dispositivos móveis o layout é
-muito diferente da experiência normal.
+protótipo foi utilizada uma estilização simples, que pode se parecer
+natural na WEB; não obstante, nos dispositivos móveis, o layout criado
+é muito diferente da experiência normal nestes aparelhos.
 
-Uma solução para este problema é utilizar frameworks como o Ionic
-e Sencha Touch ou jQuery Mobile os quais possibilitam criar elementos
-típicos de interfaces mobile como listas com scroll, botões e
-transições com uma aparência nativa de forma relativamente fácil
-\autocite{publishHtml5}.
+Uma solução para este problema é utilizar frameworks como o jQuery
+Mobile e Kendo UI Mobile \footnote{Mais informações sobre o Kendo UI
+e jQuery Mobile podem ser encontradas nos apendice.}. Estes frameworks
+permitem criar elementos típicos de interfaces mobile como listas
+com scroll, botões e transições com uma aparência nativa de forma
+relativamente fácil \autocite{publishHtml5}.
 
-Em termos gerais, trabalhar com proporções é positivo. Não obstante
-há casos, como o dos botões de certo e errado que a proporções ficam
-exageradas, nesses casos a utilizada de \textit{max-width} é uma solução
-conveniente.
+Em termos gerais, trabalhar com tamanhos relativos em CSS é positivo.
+Não obstante, há casos, como o dos botões de certo e errado, em que
+a proporções ficam exageradas, nesses casos utilizar controles como o
+\textit{max-width} e \textit{min-width} é uma solução conveniente.
+
+Tecnologias experimentais em CSS geralmente levam o nome do distribuidor
+como prefixo. Utilizar as mesmas regras em CSS com prefixos diferentes
+é um processo entediante e propenso à duplicação e erros. A
+biblioteca \textit{-prefix-free} é uma possível solução para este
+problema, detectando automaticamente quando prefixos são necessários e
+adicionado em tempo de execução \footnote{Mais informações sobre a
+biblioteca pode ser encontradas nos apêndices}.
 
 \subsubsection{TAMANHO DE TELA}
 
