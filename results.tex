@@ -16,6 +16,25 @@ Não obstante, algumas limitaçãos como performance e versões foram
 tratadas em uma partes separadas visto que se aplicam a várias das
 tecnologias da WEB.
 
+\section{HTML}
+
+Segundo \cite{crossPlatformMobileGame}
+\begin{quote}
+Enquanto o HTML é desenvolvido muitas das funcionalidades
+disponibilizadas são testadas em um pequeno conjunto de navegadores
+para um pequeno conjunto de versões. Isso acarreta em suporte
+inconsistente. A forma mais segura de garantir suporte é testando em
+todas as versões alvo, todavia essa solução não é prática.
+\end{quote}
+
+O Crosswalk é uma tecnologia que pode resolver parcialmente o problema
+de versões de software antigas para Android. Visto que a aplicação
+é disponibilizada juntamente com uma versão recente do navegador que
+a irá rodá-la. Não obstante, o Crosswalk só é suportado
+para Android \footnote{Nos apêndices o Crosswalk é tratado com mais
+detalhes}.
+
+
 \section{CSS}
 
 É muito custoso desenvolver uma interfaces que pareçam nativas para
@@ -49,7 +68,6 @@ processo entediante e propenso à duplicação e erros. A biblioteca
 detectando automaticamente quando prefixos são necessários e
 adicionado em tempo de execução \footnote{Mais informações sobre a
 biblioteca pode ser encontradas nos apêndices}.
-
 
 \section{JavaScript}
 
@@ -112,7 +130,6 @@ O WEB Assembly pode resolver este problema, substituindo o JavaScript
 para os casos onde grande performance é necessária. Mas para isso o
 Web Assembly precisa evoluir na especificação e implementações.
 
-
 \subsection{Fullscreen}
 
 Não existe forma padronizada de detectar se uma aplicação está em
@@ -131,6 +148,35 @@ navigator.standalone = navigator.standalone || (screen.height-document.documentE
 \label{fig:fixJSTypes}
 \source{\url{http://www.mobilexweb.com/blog/home-screen-web-apps-android-chrome-31}}
 \end{figure}
+
+\section{Navegadores}
+
+A tabela abaixo demonstra é um comparativo das tecnologias pesquisadas,
+relevantes aos jogos e seu suporte. As informações de suporte foram
+extraídas do site Can I Use e os navegadores populares em questão
+são: Internet Explorer (11), Edge (13), Firefox (43), Google Chorme
+(47), Safari (9) e Opera(34).
+
+\begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|  }
+\hline
+Tecnologia & Suporte nas últimas versões estáveis dos navegadores populares & Polyfills disponíveis  para versões antigas \\
+\hline
+Canvas & Sim & Sim \\
+SVG & Sim & Sim \\
+Gamepad & Não & Sim \\
+WebGL & Parcial & Sim \\
+WebSockets & Sim & Sim \\
+Video & Sim & Sim \\
+Audio & Sim & Sim \\
+\hline
+\end{tabular}
+
+\section{Android}
+
+Segundo \cite{chromeWebView} da versão 4.4 do Android em diante a
+WebView mudou de um projeto local para utilizar o Chromium. Entretanto,
+grande parcela dos usuários Android ainda utilizam o sistema antigo o
+que força os desenvolvedores suportarem ambas as versões.
 
 \section{SVG}
 
@@ -407,48 +453,6 @@ a sistemas de pagamento - possivelmente aumentado a complexidade da
 aplicação. Ou serem integrados a algum mercado como o do Android, se
 optarem pela arquitetura híbrida.
 
-\section{VERSÕES}
-
-A grande maioria dos dispositivos atualmente no mercado utilizam
-obsoletas de seus softwares.
-
-Além de obsoletas, as implementações podem conter erros.
-
-Segundo \cite{crossPlatformMobileGame}
-\begin{quote}
-Enquanto o HTML é desenvolvido muitas das funcionalidades
-disponibilizadas são testadas em um pequeno conjunto de navegadores
-para um pequeno conjunto de versões. Isso acarreta em suporte
-inconsistente. A forma mais segura de garantir suporte é testando em
-todas as versões alvo, todavia essa solução não é prática.
-\end{quote}
-
-O Crosswalk é uma tecnologia que pode resolver parcialmente o problema
-de versões de software antigas para Android. Visto que a aplicação
-é disponibilizada juntamente com uma versão recente do navegador que
-a irá rodá-la. Não obstante, o Crosswalk só é suportado
-para Android \footnote{Nos apêndices o Crosswalk é tratado com mais
-detalhes}.
-
-A tabela abaixo demonstra é um comparativo das tecnologias pesquisadas,
-relevantes aos jogos e seu suporte. As informações de suporte foram
-extraídas do site Can I Use e os navegadores populares em questão
-são: Internet Explorer (11), Edge (13), Firefox (43), Google Chorme
-(47), Safari (9) e Opera(34).
-
-\begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|  }
-\hline
-Tecnologia & Suporte nas últimas versões estáveis dos navegadores populares & Polyfills disponíveis  para versões antigas \\
-\hline
-Canvas & Sim & Sim \\
-SVG & Sim & Sim \\
-Gamepad & Não & Sim \\
-WebGL & Parcial & Sim \\
-WebSockets & Sim & Sim \\
-Video & Sim & Sim \\
-Audio & Sim & Sim \\
-\hline
-\end{tabular}
 
 \section{PERFORMANCE}
 
@@ -469,6 +473,4 @@ Outro problema relativo aos assets é descrito por \cite{howBrowsersWork}
 scripts requerendo informações de estilo durante o processo de
 parse. Se o estilo ainda não foi carregado o script vai utilizar
 informações erradas, causando uma série de problemas.
-
-
 
