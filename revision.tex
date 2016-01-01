@@ -404,7 +404,7 @@ uma tag e todo o conteúdo que dentro dele reside \autocite[pp.
 meta (<meta>) tem um atributo \textit{charset}, que especifica o formato de 
 codificação do documento.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{verbatim}
 <}!DOCTYPE HTML>
@@ -444,7 +444,7 @@ da web. Segundo \autocite{diveIntohtml} algumas dessas tecnologias (como geoloca
 tecnologias foram removidas do HTML5 estritamente falando, mas são tratados
 como HTML5 (como a API de armazenamento de dados).
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{html5.jpg}
     \caption{Suíte HTML}
@@ -470,7 +470,7 @@ com a especificação do JavaScript em 1998 que o DOM nível 1 foi
 especificado, permitindo a manipulação de qualquer elemento. DOM
 nível 2 e 3 seguiram com melhorias nas consultas aos elementos e CSS.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{verbatim}
     var elementos = document.querySelector( ".main, #sceen"  );
@@ -555,7 +555,7 @@ questão é o elemento \textit{<p>}, simbolizando todos os parágrafos. O bloco 
 declaração é o que está dentro das chaves, aplicando alinhamento e
 cores aos parágrafos.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{verbatim}
 <style>
@@ -600,7 +600,7 @@ sempre é linear. Em 2005 o grupo de trabalho do CSS decidiu aumentar a
 restrição de suas especificações rebaixando o CSS 2.1, Seletores do
 CSS3 e Texto do CSS3 de recomendações para rascunhos.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{cssModules.png}
     \caption{Os módulos do CSS}
@@ -624,7 +624,7 @@ adaptabilidade de layout para diferentes resoluções. Que segundo
 \cite{HTML5CrossPlatformGameDevelopment} é o mais importante aspecto do
 desenvolvimento de jogos multiplataforma com as tecnologias da WEB.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{verbatim}
 @media only screen and (min-width: 1024px) {
@@ -645,7 +645,7 @@ customizadas. A figura \ref{fig:MediaQueryCustom} demostra as novas
 possibilidades de definição de media queries tanto em CSS como em
 JavaScript.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{verbatim}
 @custom-media --narrow-window (max-width: 30em);
@@ -686,7 +686,7 @@ degradáveis pois os interpretadores de CSS são amigáveis; se eles
 encontrarem propriedades desconhecidas eles simplesmente as ignoram e
 continuam a funcionar.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{verbatim}
 div {
@@ -732,7 +732,7 @@ que não passam de rascunhos na especificação.
 Assim como transições, as transformações são muitas vezes aceleradas
 via GPU incrementando a performance de animações criadas com a tecnologia.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{verbatim}
 <style>
@@ -892,7 +892,7 @@ funcionalidades sugeridas e seu estágio no caminho da especificação.
 Alguns dos recursos esperados para o JavaScript 7 são: guards,
 contratos e concorrência no laço de eventos \autocite{ecma7}.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{ecma7.png}
 	\caption{Propostas do ECMA 7}
@@ -986,7 +986,7 @@ nova somente o Google Chrome a implementa. A biblioteca
 \url{https://github.com/web-animations/web-animations-js} serve como
 polyfill para os demais navegadores.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \begin{verbatim}
 elem.getAnimations().filter(
@@ -1077,7 +1077,7 @@ forma nos navegadores. Não obstante o suporte vem crescendo. A figura
 \ref{fig:audioCodecs} apresenta o gráfico de suporte por versões de
 navegadores em dezembro de 2015.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{htmlSupport.png}
 	\caption{Suporte das especificações do HTML nos navegadores}
@@ -1203,7 +1203,7 @@ transformados; traduzidos, redimensionados, rotacionados e distorcidos
 Para ilustrar a utilização, a figura \ref{fig:svgCircle} demonstra um
 círculo sendo definido em SVG.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{verbatim}
 
@@ -1273,7 +1273,7 @@ diretamente as camadas já desenhadas. Alternativamente pode-se limpar
 o canvas inteiramente em pontos determinados ou então sobrescrever as
 partes que se deseja alterar.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{verbatim}
 
@@ -1486,7 +1486,7 @@ plugins de terceiros. A especificação do HTML define duas formas de
 utilizar utilizar áudio na WEB: através do elemento HTML áudio ou
 através da API JavaScript de áudio.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{codec.png}
 	\caption{Comparação de codecs de áudio}
@@ -1501,7 +1501,7 @@ WEB, ele define um som dentro de um documento HTML. Quando o elemento
 é renderizado pelos navegadores, ele carrega o conteúdo que pode ser
 reproduzido pelo programa dentro do navegador.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{verbatim}
 <audio controls>
@@ -1584,7 +1584,7 @@ ou adicionar vários formatos de contêiner e codec dentro da tag
 através de elementos \textit{source}. O navegador decidirá em tempo de
 execução qual formato executar dependendo de suas capacidades.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{verbatim}
 <video controls style="width:640px;height:360px;" poster="poster.png">
@@ -1692,7 +1692,7 @@ para demais acessos além do atual.
 A API do Web Storage é simples, consistindo em uma interface para
 buscar dados e outra para armazenar, no formato chave/valor.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{verbatim}
 // Store value on browser for duration of the session
@@ -1745,7 +1745,7 @@ Cada entrada, tupla em SQL, de um determinado repositório pode ser de
 um formato diferenciado, com exceção da chave única que deve estar
 presente em cada uma das entradas.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{verbatim}
 	var db;
@@ -1843,7 +1843,7 @@ manifestos. Desse modo quando um arquivo for modificado incrementa-se a
 versão do arquivo de manifestos e as modificações serão baixadas nos
 navegadores clientes.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{verbatim}
 CACHE MANIFEST
@@ -1887,7 +1887,7 @@ sendo solta e pressionada respectivamente. A \ref{fig:keyboardEvents}
 demostra a captura do pressionar das setas em JavaScript. Cada
 número corresponde a um botão do teclado especificado através da tabela ASCII.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{verbatim}
 window.addEventListener('keydown', function(event) {
@@ -1933,7 +1933,7 @@ pressionar de botões, é detectado através da inspeção dos objetos
 aninhados ao principal \textit{Gamepad}. Cada objeto botão contém um 
 atributo \textit{pressed} que pode ser utilizado para saber se foi pressionado.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{gamepad.png}
     \caption{Objetos de um Gamepad}
