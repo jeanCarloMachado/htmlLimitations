@@ -50,10 +50,6 @@ detectando automaticamente quando prefixos são necessários e
 adicionado em tempo de execução \footnote{Mais informações sobre a
 biblioteca pode ser encontradas nos apêndices}.
 
-\autocite[pp. 9]{aSeriousContender} cita que: Fazer scroll juntamente
-com gestos de ações similares é uma área onde o HTML ainda é
-fraco. Para contornar este problema pode-se utilizar bibliotecas como o
-iScroll, TouchScroll, GloveBox, Sencha, jQuery Mobile, entre outros.
 
 \section{JavaScript}
 
@@ -332,6 +328,11 @@ https://github.com/Rob--W/canvas-interceptor}
 
 \section{Entrada de comandos}
 
+\autocite[pp. 9]{aSeriousContender} cita que: Fazer scroll juntamente
+com gestos de ações similares é uma área onde o HTML ainda é
+fraco. Para contornar este problema pode-se utilizar bibliotecas como o
+iScroll, TouchScroll, GloveBox, Sencha, jQuery Mobile, entre outros.
+
 \subsection{Gamepad}
 Chrome does things differently here. Instead of constantly storing the gamepad's latest state in a variable it only stores a snapshot, so to do the same thing in Chrome you have to keep polling it and then only use the Gamepad object in code when it is available.
 
@@ -372,7 +373,7 @@ no contexto de jogos de navegador.
 para navegador, visto que não existem pacotes de jogos para vender
 \autocite[pp. 44]{gameCommunities}.
 
-Os desenvolvedores são muitas vezes forçados a criar formas alternativas
+Dado este  este problema, desenvolvedores são muitas vezes forçados a criar formas alternativas
 de lucro. A monetização de aplicativos WEB é geralmente feita através de
 propagandas \autocite[pp. 44]{gameCommunities}. Outra saída é a venda
 de recursos extra, \cite[pp. 44]{gameCommunities} afirma
@@ -388,8 +389,8 @@ optarem pela arquitetura híbrida.
 A grande maioria dos dispositivos atualmente no mercado utilizam
 obsoletas de seus softwares.
 
-Além das versões obsoletas existe o problema de muitos navegadores 
-implementarem especificações incompleta ou incorretamente.
+
+Além de obsoletas, as implementações podem conter erros.
 
 Segundo \cite{crossPlatformMobileGame}
 \begin{quote}
@@ -407,6 +408,24 @@ a irá rodá-la. Não obstante, o Crosswalk só é suportado
 para Android \footnote{Nos apêndices o Crosswalk é tratado com mais
 detalhes}.
 
+A tabela abaixo demonstra é um comparativo das tecnologias pesquisadas,
+relevantes aos jogos e seu suporte. As informações de suporte foram
+extraídas do site Can I Use e os navegadores populares em questão
+são: Internet Explorer (11), Edge (13), Firefox (43), Google Chorme
+(47), Safari (9) e Opera(34).
+
+\begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|  }
+\hline
+Tecnologia & Suporte nas últimas versões estáveis dos navegadores populares & Polyfills disponíveis  para versões antigas \\
+\hline
+Canvas & Sim & Sim \\
+SVG & Sim & Sim \\
+Gamepad & Não & Sim \\
+WebGL & Parcial & Sim \\
+WebSockets & Sim & Sim \\
+\hline
+\end{tabular}
+
 \section{PERFORMANCE}
 
 Otimizações de performance dependem do ambiente em que estão
@@ -414,25 +433,17 @@ sendo feitas. E aquelas que hoje tem um impacto positivo hoje
 podem se tornar inúteis, ou mesmo prejudiciais, amanhã
 \autocite[pp.131]{html5mostwanted}.
 
-\subsubsection{ASSETS}
+Com o HTTP/2 minificar arquivos pode não ser mais benéfico, visto que
+todos passam pelo mesmo canal de comunicação.
 
-Trafegar muitos assets deixa o sistema lento. Pode-se contornar este
-problema utilizando páginas de carregamento e/ou cache;
+\subsection{ASSETS}
+
+Trafegar muitos arquivos deixa o sistema lento. Pode-se contornar este
+problema utilizando páginas de carregamento e/ou cache.
 
 Outro problema relativo aos assets é descrito por \cite{howBrowsersWork}
 scripts requerendo informações de estilo durante o processo de
 parse. Se o estilo ainda não foi carregado o script vai utilizar
 informações erradas, causando uma série de problemas.
 
-
-A tabela abaixo demonstra é um comparativo das tecnologias
-pesquisadas, relevantes aos jogos e seu suporte.
-
-\begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|  }
-\hline
-Tecnologia & Suporte nos navegadores atuais & Polyfills disponíveis  para versões antigas \\
-\hline
-WebSoket & Sim & Sim \\
-\hline
-\end{tabular}
 
