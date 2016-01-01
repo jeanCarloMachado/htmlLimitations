@@ -301,6 +301,18 @@ um meta objeto para encapsular os demais, similar ao conceito de
 namespaces, neste caso utilizei o nome MyMath garantindo que problemas
 de conflitos de nomes não aconteçam.
 
+Ao final do desenvolvimento foi feita a integração de Grunt com
+plugins de minificação do JavaScript e CSS \footnote{Para mais
+informações sobre o Grunt veja os apêndices}. O grunt foi configurado 
+para disponibilizar a aplicação para distribuição dentro do diretório
+\textit{dist/web}. 
+
+Após de a disponibilização WEB estar funcionando, foi feita a
+integração para o PhoneGap build. Para tanto foi utilizado um makefile
+que simplesmente copia os arquivos de distribuição da WEB, gerados
+pelo grunt, e o arquivo de metadados do Phonegap Build e cria a árvore
+de arquivos padronizada que o phonegp build requer.
+
 %Para melhor a experiencia do usuário foram adicionados sons nos botẽos utilizando a Api de audio em JavaScript.
 
 \subsection{Performance}
@@ -311,12 +323,10 @@ ficou em 1.4 segundos em média. Esta métrica foi extraída através da
 ferramenta de depuração do Google Chrome que fornece a possibilidade
 de simular a velocidades de redes.
 
-Ao final do desenvolvimento foi feita a integração de Grunt com
-plugins de minificação do JavaScript e CSS \footnote{Para mais
-informações sobre o Grunt veja os apêndices}. Utilizado os arquivos
-minificados o tempo médio de download ficou em 1.1 segundos. Uma
-diferença substancial dada a quantidade pequena de arquivos minificados
-8 arquivos JavaScript e um arquivo CSS.
+Utilizado os arquivos minificados, gerados pelo Grunt, o tempo médio
+de download ficou em 1.1 segundos. Uma diferença substancial dada a
+quantidade pequena de arquivos minificados 8 arquivos JavaScript e um
+arquivo CSS.
 
 A seguir serão apresentadas as limitações do HTML encontradas durante
 o desenvolvimento do protótipo e pesquisa relacionada.

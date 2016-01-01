@@ -8,9 +8,10 @@ mais complexo obter aparência nativa, funcionalidade e performance
 em aplicações multiplataforma. Outros problemas derivam-se dos
 dispositivos ou da tecnologia.
 
-Não obstante, abaixo constam as limitações aplicáveis, mesmo que
-não exclusivamente, aos jogos encontradas durante a pesquisa e
-concepção do protótipo.
+A abaixo constam as limitações aplicáveis, mesmo que não
+exclusivamente, aos jogos encontradas durante a pesquisa e concepção
+do protótipo. Quando aplicável, buscou-se apresentar as limitações
+na mesma ordem das tecnologias estudadas na revisão bibliográfica.
 
 \section{VERSÕES}
 
@@ -281,7 +282,6 @@ Não é extraordinário que um jogo tenha que ser reverso para um estado
 válido anterior por motivo de um erro na base de dados \autocite[pp.
 5]{browserGamesTechnologyAndFuture}.
 
-
 \section{Orientação}
 
 Visto que a especificação o suporte está longe de completo, até
@@ -337,6 +337,13 @@ https://github.com/Rob--W/canvas-interceptor}
 
 \subsection{Gamepad}
 Chrome does things differently here. Instead of constantly storing the gamepad's latest state in a variable it only stores a snapshot, so to do the same thing in Chrome you have to keep polling it and then only use the Gamepad object in code when it is available.
+
+\section{Disponibilização}
+
+O serviço PhoneGap Build não contém a última versão do PhoneGap e
+não é possível utilizar plugins através deles. Embora no protótipo
+isso não tenha sido um problema, em projetos maiores estes tipos de
+requerimentos podem ser vitais.
 
 \section{Recursos}
 Apesar da grande maioria dos recursos oferecidos nativamente
