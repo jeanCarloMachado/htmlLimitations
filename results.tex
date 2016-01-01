@@ -1,14 +1,14 @@
 
 Muitos das limitações dos jogos multiplataforma não são
 problemas específicos dos jogos, mas aplicam-se a todos tipos
-de software \parencite{currentStateCrossPlatform}. Alguns
+de software \autocite[pp. 3]{currentStateCrossPlatform}. Alguns
 problemas são inerentes da categoria multiplataforma \cite[pp.
 7 ]{viabilityBusinessApplications} afirma que é geralmente muito
 mais complexo obter aparência nativa, funcionalidade e performance
 em aplicações multiplataforma. Outros problemas derivam-se dos
-dispositivos ou da tecnologia.
+dispositivos ou da tecnologia atual.
 
-A abaixo constam as limitações aplicáveis, mesmo que não
+A abaixo constam as limitaçõesd do HTML5 aplicáveis, mesmo que não
 exclusivamente, aos jogos encontradas durante a pesquisa e concepção
 do protótipo. Quando possível, buscou-se apresentar as limitações
 na mesma ordem das tecnologias estudadas na revisão bibliográfica.
@@ -31,47 +31,45 @@ permitem criar elementos típicos de interfaces mobile como listas
 com scroll, botões e transições com uma aparência nativa de forma
 relativamente fácil \autocite{publishHtml5}.
 
-Em termos gerais, trabalhar com tamanhos relativos em CSS é positivo.
-Não obstante, há casos, como o dos botões de certo e errado, em que
-a proporções ficam exageradas, nesses casos utilizar controles como o
-\textit{max-width} e \textit{min-width} é uma solução conveniente.
-
-Tecnologias experimentais em CSS geralmente levam o nome do distribuidor
-como prefixo. Utilizar as mesmas regras em CSS com prefixos diferentes
-é um processo entediante e propenso à duplicação e erros. A
-biblioteca \textit{-prefix-free} é uma possível solução para este
-problema, detectando automaticamente quando prefixos são necessários e
-adicionado em tempo de execução \footnote{Mais informações sobre a
-biblioteca pode ser encontradas nos apêndices}.
-
-\subsubsection{TAMANHO DE TELA}
-
 Em alguns casos o tamanho das telas pode ser um fator limitante – como
 no caso de jogos de estratégia. Jogadores com telas menores podem sair
 em desvantagem.
 
-\subsubsection{Scroll}
+Para muitos caso pode-se contornar o problema de tamanhos diferenciados
+trabalhando com tamanhos relativos via CSS. Não obstante, há casos,
+como o dos botões de certo e errado, em que a proporções ficam
+exageradas, nesses casos utilizar controles como o \textit{max-width} e
+\textit{min-width} é uma solução conveniente.
 
-\autocite[pp. 9]{aSeriousContender} cita que:
-Fazer scroll juntamente com gestos de ações similares é uma área
-onde o HTML ainda é fraco. Existem várias tentativas para solucionar
-esse problema como o iScroll, TouchScroll, GloveBox, Sencha, jQuery
-Mobile.
+Tecnologias experimentais do CSS geralmente levam o nome do distribuidor
+como prefixo. Utilizar as mesmas regras em CSS com prefixos
+diferentes para suportar diversos motores de renderização é um
+processo entediante e propenso à duplicação e erros. A biblioteca
+\textit{-prefix-free} é uma possível solução para este problema,
+detectando automaticamente quando prefixos são necessários e
+adicionado em tempo de execução \footnote{Mais informações sobre a
+biblioteca pode ser encontradas nos apêndices}.
+
+\autocite[pp. 9]{aSeriousContender} cita que: Fazer scroll juntamente
+com gestos de ações similares é uma área onde o HTML ainda é
+fraco. Para contornar este problema pode-se utilizar bibliotecas como o
+iScroll, TouchScroll, GloveBox, Sencha, jQuery Mobile, entre outros.
 
 \section{JavaScript}
 
-O JavaScript, por ser uma tecnologia desenvolvida por consenso, tem um
-ciclo de vida de atualizações demorado; pois necessita que todos os
-consumidores da especificação entrem em consenso e implementem a.
+O JavaScript, por ser uma tecnologia desenvolvida por consenso, tem
+um ciclo de vida de atualizações demorado; pois necessita que todos
+os consumidores da especificação entrem em consenso e implementem o
+concordado.
 
-Por ser uma linguagem interpretada, erros tem de descobertos rodando 
-a aplicação. Alternativamente se JavaScript fosse compilado vários 
-problemas poderiam ser capturados e informações úteis reveladas antes 
+Por ser uma linguagem interpretada, erros tem de descobertos rodando
+a aplicação. Alternativamente se JavaScript fosse compilado vários
+problemas poderiam ser capturados e informações úteis reveladas antes
 de se testar \autocite[pp. 12]{viabilityBusinessApplications}.
 
-Aplicações para produção muitas vezes necessitam ser minificadas por performance
-e ofuscação. Sem a utilização de automatizadores como o Grunt Watch essa tarefa 
-é entediante e propensa a erros.
+Aplicações para produção muitas vezes necessitam ser minificadas por
+performance e ofuscação. Sem a utilização de automatizadores como o
+Grunt Watch essa tarefa é entediante e propensa a erros.
 
 O sistema de tipos do JavaScript também é problemático.
 Erros numéricos resultam no valor NaN (\textit{not a number}).
@@ -79,8 +77,8 @@ Todas as operações com NaN como operadores irão retornar outro
 NaN. Isso torna a depuração de erros desnecessariamente complexa
 \autocite{html5mostwanted}.
 
-Ao testar o tipo (\textit{typeof}) de uma variável vazia o JavaScript retorna 
-como se fosse um objeto.
+Ao testar o tipo (\textit{typeof}) de uma variável vazia o JavaScript
+retorna como se fosse um objeto.
 
 \begin{figure}[H]
 \centering
@@ -100,26 +98,27 @@ A figura \ref{fig:fixJSTypes} demonstra uma solução possível para
 remediar o problema dos testes de tipos em JavaScript. A diferença
 desta função é que ela converte a variável que se está testando
 para sua representação em texto a qual contém o nome do tipo escrito
-- utilizando-se deste valor pode-se deduzir o tipo da variável
-corretamente.
+por extenso - utilizando-se deste valor pode-se deduzir o tipo da
+variável corretamente.
 
 Apesar da performance ter notavelmente melhorado, ainda é geralmente
 menos eficiente produzir animações em JavaScript do que utilizando
 transições e animações do CSS, que por sua vez são mais otimizados
 e acelerados via hardware \autocite{html5mostwanted}.
 
-O WEB Assembly pode resolve este problema, substituindo o JavaScript
-para os casos onde grande performance é necessária. Mas para isso
-o Web Assembly precisa evoluir na especificação e implementações.
+O WEB Assembly pode resolver este problema, substituindo o JavaScript
+para os casos onde grande performance é necessária. Mas para isso o
+Web Assembly precisa evoluir na especificação e implementações.
 
 \section{SVG}
 
+Uma das grandes vantagens do SVG é que é definido via linguagem de marcação e se integra bem com as demais tecnologias da WEB. Não obstante, isso também implica em problemas de performance para arquivos muito grandes.
 Segundo \cite{html5mostwanted} a grande desvantagem do SVG é que quão
 maior o documento mais lenta a renderização.
 
-Um aspecto negativo do SVG é que é muito difícil atingir a
+Controle refinado também é um problema do SVG \cite{html5mostwanted} cita que
+um aspecto negativo do SVG é que é muito difícil atingir a
 perfeição na posição dos pixels, por ser uma linguagem vetorizada
-\autocite{html5mostwanted}.
 
 \section{Canvas}
 
@@ -140,19 +139,23 @@ A implementação de animações de fato não existe no canvas,
 similarmente carece-se de integração com as demais tecnologias
 da WEB. Os desenhos do canvas não podem ser acessados via DOM nem
 serem manipulados via CSS, todas as modificações necessárias devem
-ser feitas via JavaScript. CSS já conta com definições quanto a
-animações e a manipulação de elementos do canvas através do DOM
-facilitaria uma gama de situações, por exemplo com interações do
-usuário com algum elemento do canvas. Que hoje são geralmente feitos
-acessando as coordenadas do canvas onde uma interação aconteceu e
-fazendo o processamento com aquela determinada área, poderia ser feito
-adicionando-se um \textit{listener} para determinado objeto do canvas.
-A interoperabilidade entre o Path2D do canvas e a notação SVG é uma iniciativa
-na direção correta, tornando as tecnologias cada vez mais interoperáveis.
-
+ser feitas através de JavaScript. 
 No protótipo, especificamente na classe \textit{Countdown}, foi necessário
-adicionar regras de estilo no JavaScript para  a interação com o canvas
+adicionar regras de estilo no JavaScript para a interação com o canvas
 ficar completa.
+
+CSS já conta com definições quanto a animações e a manipulação de
+elementos do canvas através do DOM facilitaria uma gama de situações.
+Por exemplo, poderia se utilizar os eventos do DOM para capturar
+interações do usuário através de elementos utilizados no canvas.
+Controle similar é implementado atualmente acessando as coordenadas
+do canvas onde uma interação aconteceu e fazendo o processamento com
+aquela determinada área.
+
+Não obstante a integração entre o canvas e as demais tecnologias da
+WEB está começando a acontecer. A interoperabilidade entre o Path2D
+do canvas e a notação SVG é uma iniciativa na direção correta,
+tornando as tecnologias cada vez úteis e dinâmicas.
 
 Uma característica peculiar descoberta durante o desenvolvimento
 do protótipo é que o Canvas pode gerar resultados inesperados se
@@ -175,7 +178,6 @@ Internet Explorer (11). Não obstante a dificuldade de utilização
 ainda persiste, forçando a maioria dos desenvolvedores a utilizarem
 abstrações criadas por bibliotecas de terceiros.
 
-\footnote{Os apêndices contam com uma coleção de bibliotecas que facilitam a utilização de WebGL}
 
 É importante ressaltar que o WebGL não se comporta de maneira
 simétrica nos navegadores que implementam a especificação. Pode haver

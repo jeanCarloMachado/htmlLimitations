@@ -1305,13 +1305,13 @@ simulações. Por ser uma tecnologia da OWP WebGL foi especificado
 para funcionar nativamente nos navegadores sem a ajuda de plugins ou
 ferramentas de terceiros.
 
-WebGL foi desenvolvido baseando-se na especificação OpenGL, que trata
-de definir como renderizar gráficos multiplataforma, especificamente
-OpenGL ES, uma versão do OpenGL otimizada para dispositivos
-móveis. O órgão que especifica o WebGL é o mesmo que especifica o
-OpenGL, o grupo sem fins lucrativos Kronos. Os primeiros rascunhos do
-WebGL iniciaram em 2006, não obstante o grupo de trabalho não foi
-formado até 2009 e a primeira versão do foi lançada em 2011.
+WebGL foi desenvolvido baseando-se na especificação OpenGL a
+qual trata de definir como renderizar gráficos multiplataforma.
+Especificamente OpenGL ES, uma versão do OpenGL otimizada para
+dispositivos móveis. O órgão que especifica o WebGL é o mesmo que
+especifica o OpenGL, o grupo sem fins lucrativos Kronos. Os primeiros
+rascunhos do WebGL iniciaram em 2006, não obstante o grupo de trabalho
+não foi formado até 2009 e a primeira versão do foi lançada em 2011.
 
 Apesar de ter sido desenvolvido com foco em 3D, WebGL pode ser
 igualmente utilizado para criação de gráficos em duas
@@ -1322,16 +1322,17 @@ demais elementos HTML.
 
 Especificação é composta por uma API de controle em JavaScript
 e o processamento shaders do lado da GPU (Central de processamento
-gráfico). Shaders são scripts que definem níveis de cor ou efeitos
-especiais sobre um modelo 2D ou 3D. Contam com grande performance,
-possibilitando conteúdo em tempo real (como no caso de jogos). São
-utilizados no cinema, em imagens geradas por computadores e vídeo
-games.
+gráfico). 
 
-Existem dois shaders principais, de vértices e fragmentos.
-Shaders de vértices são chamados para cada vértice sendo desenhado
-definindo suas posições e shaders de fragmentos a cor para cada pixel
-a ser desenhado \autocite[pp.15]{3daps}.
+Shaders são scripts que definem níveis de cor ou efeitos especiais
+sobre um modelo 2D ou 3D. Contam com grande performance, possibilitando
+conteúdo em tempo real como no caso de jogos. São utilizados no
+cinema, em imagens geradas por computadores e vídeo games.
+
+Existem dois shaders principais, de vértices e fragmentos. Shaders de
+vértices são chamados para cada vértice sendo desenhado definindo
+suas posições definitivas. Já shaders de fragmentos atuam na cor de
+cada pixel a ser desenhado \autocite[pp.15]{3daps}.
 
 \cite{html5mostwanted} cita que conforme a habilidade do desenvolvedor
 aumenta, mover funções antes delegadas ao JavaScript para os shaders
@@ -1342,12 +1343,13 @@ Um site interessante para explorar exemplos WebGL avançados é o blog
  \url{http://learningwebgl.com} que conta com tutoriais cobrindo áreas
 como diferentes tipos de iluminação, carregamento de modelos em JSON,
 gerenciando eventos do mouse e teclado; e como renderizar uma cena WebGL
-em uma textura \autocite[pp.42]{3daps}.
+em uma textura \autocite[pp.42]{3daps}\footnote{Os apêndices contam.
+com uma coleção de bibliotecas que facilitam a utilização de WebGL}.
 
 Apesar da relevância, WebGL não foi utilizado no protótipo pois
 ainda não está completamente suportado em navegadores populares como
 o Firefox e a grande curva de aprendizado do WebGL puro é muito grande
-para se encaixar no escopo deste projeto.
+para se encaixar no escopo deste projeto .
 
 Uma tecnologia que se integra profundamente como ambientes virtuais
 em três dimensões criados via OpenGL é o WebVR.
