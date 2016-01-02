@@ -1590,7 +1590,7 @@ em HTML.
 \section{VÍDEO}
 %{{{
 
-O elemento \textit{video} especifica uma forma de adicionar vídeos na
+O elemento \textit{video} define uma forma de adicionar vídeos na
 WEB nativamente, sem a necessidade de utilizar plugins de terceiros
 como o Flash Player. Assim como com o elemento \textit{audio} pode-se
 adicionar um arquivo através do atributo \textit{src} do elemento
@@ -1618,17 +1618,18 @@ execução qual formato executar dependendo de suas capacidades.
 A figura \ref{fig:video} demonstra a utilização de algumas
 funcionalidades do elemento \textit{video}. Como demonstrado na figura,
 além do elemento \textit{source}, a tag \textit{video} suporta o
-elemento \textit{track}, o qual permite informar subtítulos para os
-vídeos sendo apresentados. Também é possível habilitar controles
-de vídeo nativos dos navegadores, como demonstrado na figura através do 
-atributo \textit{controls}.
+elemento \textit{track}. O qual permite informar subtítulos para os
+vídeos sendo apresentados. Também é possível habilitar controles de
+vídeo nativos dos navegadores, como demonstrado através do atributo
+\textit{controls}.
 
 Como o elemento vídeo se encontra no HTML é possível manipulá-lo com
 uma gama de tecnologias. Com CSS é possível aplicar escala de cinza do
 sobre o elemento vídeo gerando um efeito preto e branco interessante.
 A especificação do elemento \textit{video} também permite controlar
 quais partes do vídeo serão mostradas através de parâmetros de tempo
-passados como argumentos junto ao nome do arquivo.
+passados como argumentos junto ao nome do arquivo. Ou capturar 
+frames de vídeo dentro do elemento canvas.
 
 Além de ser flexível nas tecnologias de multimídia jogos um
 requerimento comum em jogos é haver uma forma de armazenar dados
