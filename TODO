@@ -30,26 +30,31 @@ Add accelerometer integration - I will not do
 Write about movimentation API
 Terminar de migrar os reviews para dentro do trabalho
 Escrever sobre os novos codecs WEBM
+Fix refereces not showing all info
+Fix aspects that Rafa suggested
+Talk about Android
+Adicionar fontes as imagens que se aplicam
+Talk about monetization (think about it)
+Write about phonegap on appendices
 
 #TODO
 
 Remove jquery from the prototype
-Fix refereces not showing all info
-Fix aspects that Rafa suggested
 Fix aspects suggested by reviewer
 Write limitations well
-Talk about Android
+Complete image descriptions (look for missing names on lof)
 Move introduction comments about the benefits of the WEB to it's place on the revision (think well)
-Adicionar fontes as imagens que se aplicam
 Remove numbering from the bibliography
 Use requestAnimationFrame on prototype
 Write about the canvas to the prototype
 Add a example about webgl
 Comentar as citaçẽos com referencia direta (que foram traduzidas por mim)
 Trabalhar na introdução
-Complete image descriptions (look for missing names on lof)
-Talk about monetization (think about it)
-Write about phonegap on appendices
+Finish results
+Finish conclusion
+Finish future work
+Write abstract
+Translate Abstract
 
 #FUTURE
 

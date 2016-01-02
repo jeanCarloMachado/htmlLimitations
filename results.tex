@@ -74,7 +74,9 @@ biblioteca pode ser encontradas nos apêndices}.
 O JavaScript, por ser uma tecnologia desenvolvida por consenso, tem
 um ciclo de vida de atualizações demorado; pois necessita que todos
 os consumidores da especificação entrem em consenso e implementem o
-concordado.
+concordado. O site \url{https://kangax.github.io/compat-table/es6/}
+contém uma lista do suporte aos recursos do ECMAScript 6 nos motores
+JavaScript.
 
 Por ser uma linguagem interpretada, erros tem de descobertos rodando
 a aplicação. Alternativamente se JavaScript fosse compilado vários
@@ -168,6 +170,10 @@ WebGL & Parcial & Sim \\
 WebSockets & Sim & Sim \\
 Video & Sim & Sim \\
 Audio & Sim & Sim \\
+IndexedDB & Parcial & Sim \\
+WebCL & Não & Não
+WebVR & Não & Não
+WebAssembly & Não & Sim
 \hline
 \end{tabular}
 
@@ -176,18 +182,22 @@ Audio & Sim & Sim \\
 Segundo \cite{chromeWebView} da versão 4.4 do Android em diante a
 WebView mudou de um projeto local para utilizar o Chromium. Entretanto,
 grande parcela dos usuários Android ainda utilizam o sistema antigo o
-que força os desenvolvedores suportarem ambas as versões.
+que força os desenvolvedores suportarem ambas as versões. É razoável
+afirmar que para o início de 2016 um terço dos usuários de Android
+ainda utilizem a versão antiga da WebView \cite{chromeWebView}.
+
 
 \section{SVG}
 
 Uma das grandes vantagens do SVG é que é definido via linguagem de
 marcação e se integra bem com as demais tecnologias da WEB. Não
 obstante, isso também implica em problemas de performance para arquivos
-muito grandes. Segundo \cite{html5mostwanted} a grande desvantagem do
-SVG é que quão maior o documento mais lenta a renderização.
+muito grandes pois os elementos são manipulados via DOM. Segundo
+\cite{html5mostwanted} a grande desvantagem do SVG é que quão maior o
+documento mais lenta a renderização.
 
-Controle refinado também é um problema do SVG \cite{html5mostwanted} cita que
-um aspecto negativo do SVG é que é muito difícil atingir a
+Controle refinado também é um problema do SVG \cite{html5mostwanted}
+cita que um aspecto negativo do SVG é que é muito difícil atingir a
 perfeição na posição dos pixels, por ser uma linguagem vetorizada
 
 \section{Canvas}
@@ -199,33 +209,35 @@ implementação nativa para animações.
 
 O problema de performance mencionado pode ser parcialmente remediado
 com o FastCanvas. FastCanvas é uma implementação nativa em C++ do
-Canvas para Android que roda separadamente do JavaScript. Devidas as
+canvas para Android que roda separadamente do JavaScript. Devidas as
 características acima citadas FastCanvas é substancialmente mais
 rápido do que a tag canvas para navegadores Android. Não obstante, o
 FastCanvas não suporta a especificação do canvas completamente, e
-existem umas diferenças no comportamento de de ambos.
+existem umas diferenças no comportamento entre o canvas original e o
+FastCanvas.
 
 A implementação de animações de fato não existe no canvas,
 similarmente carece-se de integração com as demais tecnologias
 da WEB. Os desenhos do canvas não podem ser acessados via DOM nem
 serem manipulados via CSS, todas as modificações necessárias devem
-ser feitas através de JavaScript. 
+ser feitas através de JavaScript.
 No protótipo, especificamente na classe \textit{Countdown}, foi necessário
 adicionar regras de estilo no JavaScript para a interação com o canvas
 ficar completa.
 
 CSS já conta com definições quanto a animações e a manipulação de
 elementos do canvas através do DOM facilitaria uma gama de situações.
-Por exemplo, poderia se utilizar os eventos do DOM para capturar
+Por exemplo, seria possível utilizar os eventos do DOM para capturar
 interações do usuário através de elementos utilizados no canvas.
+Se um retângulo fosse clicado o evento seria lançado a partir dele.
 Controle similar é implementado atualmente acessando as coordenadas
 do canvas onde uma interação aconteceu e fazendo o processamento com
 aquela determinada área.
 
-Não obstante a integração entre o canvas e as demais tecnologias da
+Felizmente a integração entre o canvas e as demais tecnologias da
 WEB está começando a acontecer. A interoperabilidade entre o Path2D
 do canvas e a notação SVG é uma iniciativa na direção correta,
-tornando as tecnologias cada vez úteis e dinâmicas.
+tornando ambas tecnologias cada vez relevantes e dinâmicas.
 
 Uma característica peculiar descoberta durante o desenvolvimento
 do protótipo é que o Canvas pode gerar resultados inesperados se
@@ -238,22 +250,24 @@ elemento, o que pode gerar resultados inesperados.
 \section{WebGL}
 
 Como WebGL é baseada na versão otimizada para dispositivos móveis do
-OpenGL não é possível utilizar muitos recursos especiais disponível
-para os ambientes desktop.
+OpenGL não é possível utilizar muitos recursos especiais disponíveis
+para os ambientes desktop. Como a definição de caminhos com a função
+\textit{glBegin} e a impossibilidade de utilizar pontos flutuantes para
+calcular coordenadas de vértices \autocite{esVsGl}.
 
 Segundo \cite{html5mostwanted} um dos problemas do WebGL é sua alta
 curva de aprendizagem e o fato de não ter suporte para o Internet
-Explorer. Entretanto o suporte foi adicionado na última versão do
-Internet Explorer (11). Não obstante a dificuldade de utilização
+Explorer. Entretanto, o suporte foi adicionado na última versão do
+Internet Explorer (11). Infelizmente a dificuldade de utilização
 ainda persiste, forçando a maioria dos desenvolvedores a utilizarem
-abstrações criadas por bibliotecas de terceiros.
-
+abstrações criadas por bibliotecas de terceiros \footnote{Os apendices
+contém algumas destas bibliotecas como o tree.JavaScript}.
 
 É importante ressaltar que o WebGL não se comporta de maneira
 simétrica nos navegadores que implementam a especificação. Pode haver
 diferenças substanciais de performance em plataformas diferentes e em
-navegadores diferentes. Existe também uma lista de placas gráficas
-com drivers bloqueados por não funcionarem corretamente no Firefox
+navegadores diferentes. Existe também uma lista de placas gráficas com
+\textit{drivers} bloqueados por não funcionarem corretamente no Firefox
 \autocite[pp.42]{3daps}.
 
 Para ver um programa em WebGL é necessário um navegador recente, uma
@@ -264,8 +278,6 @@ CocoonJS é uma aplicativo híbrido que preenche a fraca implementação
 de WebGL nos dispositivos móveis possibilitando se desenvolver em
 WEBGL, CSS. Conta com suporte a dispositivos legados à partir do
 Android 2.3 e IPhone 5.
-
-\section{Codecs}
 
 \subsection{ÁUDIO}
 
@@ -328,6 +340,12 @@ origem \autocite[pp. 68]{proHtml5}.
 \section{Armazenamento}
 
 IndexedDB é uma API interessante mas para projetos menores é um tanto complexa.
+
+Não existe tecnologia oficial que permita a utilização de tecnologias
+SQL para Frontend. O WebSQL foi uma tentativa nesta direção mas, visto
+que não continha mais de uma implementação, foi descontinuado. SQL seria 
+interessante pois muitos desenvolvedores tem experiência  com este tipo de tecnologia
+e suporta estruturas de filtragem de dados realmente poderosas.
 
 \section{OFFLINE}
 
