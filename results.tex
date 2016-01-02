@@ -396,7 +396,7 @@ Visto que a especificação o suporte está longe de completo, até
 o momento da pesquisa o único navegador popular que implementa a
 especificação completamente é o Edge da Microsoft.
 
-Outrossim, existem diferenças substanciais entre navegadores, por
+Por conseguinte, existem diferenças substanciais entre navegadores. Por
 exemplo: O Firefox e Google Chrome não manipulam ângulos da mesma
 forma, por conseguinte alguns eixos se comportam de maneiras opostas
 \autocite{mdnOrientation}. O polyfill \textit{gyronorm.js} é uma
@@ -406,51 +406,66 @@ evoluírem.
 
 \section{Detecção de recursos}
 
+\autocite{diveIntohtml} cita que:
+\begin{quote}
 Grande parte da detecção de funcionalidades é feita através de
 JavaScript, isso força os desenvolvedores a criarem pelo menos parte da
 marcação em JavaScript, isso pode ser um fator limitante para o uso
-generalizado de HTML5 \autocite{diveIntohtml}.
+generalizado de HTML5.
+\end{quote}
 
 \section{Debug}
 
-Com o depurador do Google Chrome remoto foi observado uma falta de
-sincronia na atualização da imagem no computador. Os efeitos do CSS
-não são bem apresentados e algumas vezes a tela foi completamente
-alterada (como na mudança de páginas) e no computador o estado
-anterior é apresentado.
+Com o depurador remoto do Google Chrome foi observado uma falta de
+sincronia nas taxas de atualização de imagem no computador. Os
+efeitos do CSS não são bem apresentados sendo provavelmente difícil
+depurar animações. Em alguns casos quando a tela foi modificada
+substancialmente (com nas mudanças de tela) a mudança de estado no
+computador levou vários segundos para ser atualizada.
 
-O inspetor de canvas nativo do Google Chrome foi removido pois continha
-comportamentos indesejáveis para os desenvolvedores do navegador
-\autocite{canvasinspector}. Os desenvolvedores mencionaram criar uma
-extensão para a funcionalidade mas até o tempo de desenvolvimento
-deste trabalho não havia nenhuma disponível. A única alternativa
-viável até o momento é utilizar uma versão antiga do Chromium.
+Outro problema do depurar do Chrome é que não existe inspetor nativo
+de canvas. O inspetor de embutido do Google Chrome foi removido pois
+continha comportamentos indesejáveis para os desenvolvedores do
+navegador \autocite{canvasinspector}.
+
+Os desenvolvedores mencionaram criar uma extensão para a funcionalidade
+mas até o tempo de desenvolvimento deste trabalho não havia nenhuma
+disponível. A única alternativa viável até o momento é utilizar uma
+versão antiga do Chromium.
 
 O Firefox introduziu uma ferramenta de inspeção para o canvas 2D
 em uma Conferência de desenvolvimento de jogos em São Francisco em 2014,
 mas até a tecnologia não apareceu no navegador \autocite{firefoxCanvasDebug}.
 
-Atualmente a área de ferramentas para depuração do canvas 2D estão
-comprometidas por não existir um plugin de terceiro tão bem
-consolidado como o WebGl Inspector. O projeto Canvas Interceptor é
-uma iniciativa para preencher esta demanda permitindo capturar alguns
-eventos do contexto 2d e tirar \textit{snapshoots} dos passos da renderização
-do canvas. Entretanto, o projeto requer que o desenvolvedor inclua
-um arquivo JavaScript em seu projeto e inicialize o depurador dentro do código,
-se tornando uma saída mais custosa do que um inspetor nativo no
-navegador ou via extensão. \footnote{Mais informações sobre o
+Atualmente a área de ferramentas para depuração do canvas 2D está
+parcialmente comprometida por não existir um plugin de terceiro
+onipresente nos navegadores como o WebGl Inspector.
+
+O projeto Canvas Interceptor é uma iniciativa para preencher
+esta demanda permitindo capturar alguns eventos do contexto 2D e
+tirar \textit{snapshoots} dos passos da renderização do canvas.
+Entretanto, o projeto requer que o desenvolvedor inclua um arquivo
+JavaScript em seu projeto e inicialize o depurador dentro do código,
+se tornando uma saída mais custosa do que um inspetor integrado
+no navegador ou via extensão \footnote{Mais informações sobre o
 projeto Canvas Interceptor podem ser encontradas no seguinte endereço
-https://github.com/Rob--W/canvas-interceptor}
+\url{https://github.com/Rob--W/canvas-interceptor}}.
 
 \section{Entrada de comandos}
 
-\autocite[pp. 9]{aSeriousContender} cita que: Fazer scroll juntamente
+\autocite[pp. 9]{aSeriousContender} cita que: fazer scroll juntamente
 com gestos de ações similares é uma área onde o HTML ainda é
 fraco. Para contornar este problema pode-se utilizar bibliotecas como o
 iScroll, TouchScroll, GloveBox, Sencha, jQuery Mobile, entre outros.
 
 \subsection{Gamepad}
-Chrome does things differently here. Instead of constantly storing the gamepad's latest state in a variable it only stores a snapshot, so to do the same thing in Chrome you have to keep polling it and then only use the Gamepad object in code when it is available.
+
+A forma de gerenciar a conexão de Gamepads é diferente entre o Firefox
+e Google Chrome. No Firefox é lançado um evento toda a vez que o
+Gamepad é desconectado, já no Google Chrome é necessário verificar
+um vetor de gamepads pela existência do objeto de tempos em tempos \autocite{gamepad}.
+Este problema é reflexo da especificação ainda incompleta e força os
+desenvolvedores a duplicarem a mesma atividade no código.
 
 \section{Disponibilização}
 
