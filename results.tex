@@ -123,6 +123,12 @@ via WebSocket, somente dados. Uma forma de contornar este problema é
 utilizar funções para converter os dados em objetos em cada ponta do
 processamento mas isto adiciona complexidade ao software.
 
+\cite{howBrowsersWork} cita que scripts requerendo informações de
+estilo durante o processo de parse. Se o estilo ainda não foi carregado
+o script vai utilizar informações erradas, causando uma série de
+problemas. Pode-se contornar este problema executando scripts apenas 
+ao final da renderização.
+
 Apesar da performance ter notavelmente melhorado, ainda é geralmente
 menos eficiente produzir animações em JavaScript do que utilizando
 transições e animações do CSS, que por sua vez são mais otimizados
@@ -131,6 +137,7 @@ e acelerados via hardware \autocite{html5mostwanted}.
 O WEB Assembly pode resolver este problema, substituindo o JavaScript
 para os casos onde grande performance é necessária. Mas para isso o
 Web Assembly precisa evoluir na especificação e implementações.
+
 
 \subsection{Fullscreen}
 
@@ -344,14 +351,11 @@ recorre à flash para apresentar o conteúdo.
 
 \section{Armazenamento}
 
-IndexedDB é uma API interessante mas para projetos menores é um tanto complexa.
-
 Não existe tecnologia oficial que permita a utilização de tecnologias
 SQL para Frontend. O WebSQL foi uma tentativa nesta direção mas, visto
 que não continha mais de uma implementação, foi descontinuado. SQL seria 
 interessante pois muitos desenvolvedores tem experiência  com este tipo de tecnologia
 e suporta estruturas de filtragem de dados realmente poderosas.
-
 
 \subsection{Web Storage}
 
@@ -501,15 +505,6 @@ a sistemas de pagamento - possivelmente aumentado a complexidade da
 aplicação. Ou serem integrados a algum mercado como o do Android, se
 optarem pela arquitetura híbrida.
 
-\subsection{ASSETS}
-
-Trafegar muitos arquivos deixa o sistema lento. Pode-se contornar este
-problema utilizando páginas de carregamento e/ou cache.
-
-Outro problema relativo aos assets é descrito por \cite{howBrowsersWork}
-scripts requerendo informações de estilo durante o processo de
-parse. Se o estilo ainda não foi carregado o script vai utilizar
-informações erradas, causando uma série de problemas.
 
 \section{Outras Limitações}
 
