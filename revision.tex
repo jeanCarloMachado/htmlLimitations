@@ -1987,6 +1987,140 @@ em eixos e sua unidade de medida é metros por segundo.
 %}}}
 \section{HTTP/2}
 %{{
+HTTP/2 é a última verão do protocolo de trocas de documentos entre
+cliente e servidor na WEB. Quando um navegador requisita algum documento
+de esta requisição é geralmente feita através do
+protocolo HTTP.
+O foco da nova versão do HTTP é performance; especialmente a
+latência percebida pelos usuários e o uso de rede e servidores \autocite{http2}.
+
+A forma que os documentos trafegam do servidor para o
+cliente afeta diretamente a performance de uma aplicação, nos jogos
+esse fator se amplia devido a grande quantidade de arquivos geralmente
+necessários para montar uma cena de jogo.
+
+Diferentemente do HTTP/1, HTTP/2 abre apenas uma conexão por
+servidor. Usando a mesma para trafegar todos os dados necessários para
+montar a página HTML. Dessa forma o HTTP/2 não necessita repetir
+as negociações de protocolo nem aguardar parado quando o limite de
+requisições que os navegadores suportam concorrentemente é atingido.
+
+Outro benefício do HTTP/2 em relação a seu predecessor é que
+os cabeçalhos das requisições são comprimidos, diminuindo
+substancialmente o tamanho das requisições. HTTP/2 também permite
+mensagens do servidor para o cliente (\textit{full-duplex}), o
+que abre um leque de novas oportunidades que antes só podiam ser
+obtidas através de requisições de tempos em tempos ao servidor
+(\textit{pooling}) ou através de WebSockets.
+
+HTTP/2 não recomenda a utilização de minificação nos arquivos,
+visto que não existe abertura de novas conexões, trafegar múltiplos
+arquivos se tornou barato. Dessa forma, algumas práticas, antes
+recomendadas no desenvolvimento WEB, tem de ser revistas depois do
+HTTP/2.
+
+Dentro do navegador as requisições HTTP/2 não convertidas em
+equivalentes do HTTP/1, mantendo a retrocompatibilidade em aplicações
+legadas. Sendo assim, os fatores que justifiquem a utilização do HTTP/1
+são escassos e a tendência é observarmos cada vez mais aplicações
+utilizando com o HTTP/2.
+
+%}}}
+\section{DEBUG}
+%{{{
+
+Depuração (\textit{debug}) é o processo de encontrar e reduzir defeitos
+em um aplicativo de software ou mesmo hardware \autocite{depuracao}.
+As ferramentas de desenvolvimento do Google Chrome (\textit{DevTools})
+são uma boa opção para depurar aplicações feitas utilizando as
+tecnologias da WEB.
+
+Dos depuradores para navegadores o do Google Chrome é o mais fácil
+de utilizar e já vem integrado nativamente junto com o software
+\autocite{gamesDebug}.
+
+\cite{chromeDevTools} cita algumas funcionalidades do DevTools:
+\begin{quote}
+Provê aos desenvolvedores profundo acesso as camadas internas do
+navegador e aplicações WEB. É possível utilizar o DevTools
+para eficientemente detectar problemas de layout, adicionar
+breakpoints em JavaScript, e pegar dicas de otimização de código.
+\end{quote}
+
+Estas características são comuns na maioria dos depuradores dos
+navegadores como o do Internet Explorer (Visual Studio For Web) e do
+Firefox (FireBug) \autocite{gamesDebug}.
+
+Com o DevTools também é possível emular dispositivos alvo da
+aplicação ou conectar-se a um dispositivo Android real, ideal para
+testar ambientes multiplataforma. Para conectar-se a um dispositivo real
+é necessário habilitar a depuração via USB no dispositivo, conectar
+o dispositivo via cabo, e rodar o aplicativo no dispositivo através
+do Google Chrome ou habilitando o modo depuração nos aplicativos
+híbridos. Dessa forma é possível visualizar a aplicação dentro
+Google Chrome do computador e utilizar as já mencionadas tecnologias do
+DevTools.
+
+O DevTools também permite depuração do elemento canvas. Segundo
+\cite{html5mostwanted} com o inspetor WebGl é possível conferir os
+estados dos buffers, informações de texturas, frames individuais e
+outras informações úteis. Todos os recursos mencionados acima estão
+disponíveis tanto para o contexto 2d quanto o 3d do canvas (WebGL).
+
+Especificamente para WebGl existe o plugin independente WebGL Inspector.
+A ferramenta permite fazer inspeção da execução de métodos
+WebGL, observar o estado de texturas, buffers, controlar o tempo de
+execução entre outras funcionalidades \footnote{Mais informações
+sobre o WebGL Inspector podem ser encontradas no seguinte endereço
+\url{http://benvanik.github.io/WebGL-Inspector/}}.
+
+\subsection{Source Maps}
+
+Source Maps é uma tecnologia que permite mapear códigos fontes
+minificados para seus respectivos originais. Este recurso é
+interessante pois permite que os desenvolvedores visualizem o código
+fonte em sua versão original, legível e fácil de depurar, enquanto
+entregam ao usuário final a versão minificada, optimizada para
+performance. Para o usuário final não há diferença pois Source Maps
+são carregados apenas se as ferramentas de desenvolvimento estão
+abertas e com a funcionalidade de Source Maps habilitada.
+
+Source Maps foi desenvolvido como um trabalho em conjunto entre a
+Mozilla e Google em 2010, atualmente na terceira revisão o projeto é
+considerável estável e não recebe modificações na especificação
+desde 2013. Sendo suportado por diversas ferramentas de desenvolvimento
+como Google Chrome (DevTools) e Firefox.
+
+A especificação prevê a existência de um arquivo \textit{.map} o
+qual contém o mapeamento dos arquivos fonte e outros metadados. Este
+arquivo é referenciado pelos arquivos minificados de modo a permitirem
+o navegador a realizar o mapeamento.
+
+É possível informar o navegador a localização do arquivo de metadados
+seguindo a seguinte sintaxe.
+
+\begin{verbatim}
+//# sourceMappingURL=/path/to/script.JavaScript.map
+\end{verbatim}
+
+Ou através de cabeçalhos HTTP como demostrado abaixo.
+
+\begin{verbatim}
+X-SourceMap: /path/to/script.JavaScript.map
+\end{verbatim}
+
+Para os arquivos de Source Maps é possível utilizar ferramentas
+especializadas ou integrá-los ao processo de \textit{build} como Grunt ou Gulp
+\footnote{A biblioteca https://github.com/mishoo/UglifyJS2 é uma
+ferramenta de minificação capaz de gerar Source Maps}.
+
+Após ter o jogo ter sido depurado e seus erros minimizados, pode-se
+disponibilizar para ser consumido por seus usuários finais.
+Abaixo será abordada algumas formas de disponibilizar jogos web em
+ambientes multiplataforma.
+%}}}
+%}}}
+
 \section{DISPONIBILIZAÇÃO DA APLICAÇÃO}
 %{{{
 
