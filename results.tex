@@ -174,6 +174,9 @@ IndexedDB & Parcial & Sim \\
 WebCL & Não & Não \\
 WebVR & Não & Não \\
 WebAssembly & Não & Sim \\
+Tag áudio & Sim & Sim \\
+Áudio API & Não & Sim \\
+Vídeo & Não & Sim \\
 \hline
 \end{tabular}
 
@@ -185,7 +188,6 @@ grande parcela dos usuários Android ainda utilizam o sistema antigo o
 que força os desenvolvedores suportarem ambas as versões. É razoável
 afirmar que para o início de 2016 um terço dos usuários de Android
 ainda utilizem a versão antiga da WebView \cite{chromeWebView}.
-
 
 \section{SVG}
 
@@ -283,39 +285,27 @@ Android 2.3 e IPhone 5.
 
 Segundo \cite{html5mostwanted} a limitação do elemento de áudio do
 HTML5 é que seu propósito é para executar apenas um som, como o som
-de fundo dentro de um jogo.
+de fundo dentro de um jogo. Não sendo adequada para efeitos sonoros 
+ou necessidades flexíveis de áudio.
 
-Durante a concepção do protótipo foi utilizado o elemento \textit{audio} para
-emitir sons na utilização dos botões de resposta do aplicativo. Não
-obstante, sons consecutivos tiveram problemas no Android. 
-
-Depois de migrado para a API de áudio os problemas foram minimizados
-, mesmo assim, algumas vezes o som não é executado ou demora até
-executar de modo de o que é executado ao mesmo tempo que o próximo
-som.
+Durante a concepção do protótipo foi utilizada a API de audio, devido
+sua maior flexibilidade. Infelizmente, algumas vezes o som não é
+executado ou demora até executar de modo de o que é executado ao mesmo
+tempo que o próximo som.
 
 A experimentação do protótipo relativo a API de áudio confirmou as
 afirmações de \cite{html5mostwanted} a API de som é boa se você
 deseja apenas tocar alguma música, mas se você está lançando eventos
-em um jogo ela é problemática.
+em um jogo ela ainda é problemática.
 
-Os navegadores variam na disponibilização de formatos aceitáveis
-Somente um áudio pode ser tocado no Navegador do Android
+Outro problema de áudio em HTML5 são os codecs. Alguns navegadores
+favorecem formatos OGG (vorbis) e outros, como o Safari, favorecem o
+MP3.
 
-Não é possível trocar o volume no IOS.
-
-Alguns navegadores favorecem formatos OGG (vorbis) e outros, como o
-Safari, favorecem o MP3.
-
-Segundo \cite{html5Tradeoffs}
-\begin{quote}
-O maior problema com as API's de áudio e de vídeo do HTML5 é
-a disputa entre os codecs dos navegadores. Por exemplo, Mozilla e
-Opera suportam Theora, já o Safari suporta H.264 que também é
-suportado pelo IE9. Ambos, Iphone e Android suportam H.264 em seus
-navegadores. A W3C recomenda OggVorbis e OggTheora para áudio e vídeo
-respectivamente.
-\end{quote}
+Audio no Safari do IOS contém alguns problemas específicos.
+Por exemplo, não é possível trocar o volume através de
+JavaScript também não é possível tocar mais de um som ou vídeo
+simultaneamente \autocite{unsolvedMediaHtmlIssues}.
 
 \subsection{VIDEO}
 
@@ -336,6 +326,18 @@ vídeos em tela cheia através de controles adicionais \autocite[pp.
 
 As tecnologias de mídia são restringidas pelo política de mesma
 origem \autocite[pp. 68]{proHtml5}.
+
+Segundo \cite{html5Tradeoffs}
+\begin{quote}
+O maior problema com as API's de áudio e de vídeo do HTML5 é
+a disputa entre os codecs dos navegadores. Por exemplo, Mozilla e
+Opera suportam Theora, já o Safari suporta H.264 que também é
+suportado pelo IE9. Ambos, Iphone e Android suportam H.264 em seus
+navegadores. A W3C recomenda OggVorbis e OggTheora para áudio e vídeo
+respectivamente.
+\end{quote}
+
+
 
 \section{Armazenamento}
 

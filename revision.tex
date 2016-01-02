@@ -1394,6 +1394,10 @@ pelo grupo Kronos.
 A primeira versão da especificação foi no início de 2014 mas até
 então nenhum navegador implementa o definido.
 %}}}
+
+Após a revisão de tecnologias de renderização serão abordadas tecnologias de 
+multimídia de áudio e vídeo. Mas para falar de ambos, antes é necessário falar de codecs.
+
 \section{CODECS}
 %{{{
 
@@ -1403,24 +1407,24 @@ um acrônimo, significando o processo de codificar (\textit{coder}) um fluxo de 
 para armazenamento e decodificá-lo (\textit{decoder}) para ser consumido.
 
 Dados multimídia são geralmente enormes, sem serem codificados,
-um vídeo ou áudio consistiriam em uma enorme quantidade de dados
+um vídeo ou áudio consistiriam em uma vasta quantidade de dados
 que seriam muito grandes para serem transmitidos pela Internet em um
 período de tempo razoável \autocite[pp. 66]{proHtml5}. O objetivo dos
 codecs é diminuir o tamanho dos arquivos com a menor perda de qualidade
-possível, para isso os codecs utilizam de várias estratégias de
+possível. Para isso os codecs utilizam de várias estratégias de
 compressão ou descarte de dados; podendo rodar tanto em hardware quanto
 em software.
 
 Existem codecs desenvolvidos especificamente para a Web. Buscam uma
 razão de tamanho e qualidade aceitável, mas prezando por tamanho. A
-maioria dos codecs de vídeo não mudam todo o conteúdo de um quadro
+maioria dos codecs de vídeo da WEB não mudam todo o conteúdo de um quadro
 para o próximo, possibilitando maiores taxas de compressão, que
 resulta em arquivos menores \autocite{diveIntohtml}.
 
-O funcionamento de codecs pode variar muito, conforme as estratégias de
-compressão utilizadas, a quantidade de bits por segundo suportada, entre outros
-fatores. Visto que os algoritmos de compressão podem adquirir grande
-complexidade muitos codecs são encobertos por licenças
+O funcionamento de codecs pode variar muito, conforme as estratégias
+de compressão utilizadas, a quantidade de bits por segundo suportada,
+entre outros fatores. Visto que os algoritmos de compressão podem
+adquirir grande complexidade muitos codecs são encobertos por licenças
 que limitam sua utilização. Não obstante, também existem opções
 livres de patentes e licenças.
 
@@ -1442,10 +1446,10 @@ Ainda segundo \cite[pp. 67]{proHtml5} abaixo segue uma lista de codecs populares
 Após ter sido codificado um fluxo de dados é armazenado em um
 contêiner. Contêiners são um padrão de metadados sobre as
 informações codificadas de modo a possibilitar que outros programas
-consigam interpretar estas informações de forma padronizada. Como
-um arquivo \textit{zip}, contêiners podem conter qualquer coisa dentro de si
-\autocite{diveIntohtml}. Assim como codecs existem contêiners livres e
-com restrições de licença.
+consigam interpretar estas informações de forma padronizada. Como um
+arquivo \textit{zip}, contêiners podem conter qualquer coisa dentro de
+si \autocite{diveIntohtml}. Assim como codecs existem contêiners livres
+e com restrições de licença.
 
 Abaixo segue uma lista de alguns contêiners de áudio.
 \begin{itemize}
@@ -1469,10 +1473,10 @@ Abaixo segue uma lista de alguns contêiners de vídeo.
 O suporte a codecs e contêiners na WEB varia de navegador para
 navegador, de acordo com as preferências mercadológicas, técnicas
 ou filosofias das empresas por trás dos navegadores. Segundo
-\cite{diveIntohtml} não existe uma única combinação de contêiner e
-codecs que funcionem em todos os navegadores
-\footnote{A figura \ref{fig:audioCodecs} apresenta um comparativo interessante
-sobre os formatos populares de áudio considerando o fator taxa de bits
+\cite{diveIntohtml} não existe uma única combinação de contêiner
+e codecs que funcionem em todos os navegadores \footnote{A figura
+\ref{fig:audioCodecs} apresenta um comparativo interessante sobre
+os formatos populares de áudio considerando o fator taxa de bits
 (quantidade de informação armazenável por segundo) versus qualidade
 (perceptível por humanos).}.
 
@@ -1483,8 +1487,9 @@ sobre os formatos populares de áudio considerando o fator taxa de bits
 Áudio é um componente vital para oferecer imersão e feedback aos
 usuários de jogos. O componente de áudio é especialmente útil para
 jogos de ação \autocite{browserGamesTechnologyAndFuture}. Efeitos
-de som e música podem servir como parte da mecânica do jogo. Antes
-do HTML5 não havia como consumir áudio na WEB sem a utilização de
+de som e música podem servir como parte da mecânica dos jogos.
+
+Antes do HTML5 não havia como consumir áudio na WEB sem a utilização de
 plugins de terceiros. A especificação do HTML define duas formas de
 utilizar utilizar áudio na WEB: através do elemento HTML áudio ou
 através da API JavaScript de áudio.
@@ -1499,10 +1504,10 @@ através da API JavaScript de áudio.
 
 \subsection{ELEMENTO ÁUDIO}
 
-O elemento \textit{audio} foi a primeira tecnologia de áudio nativa para
-WEB, ele define um som dentro de um documento HTML. Quando o elemento
-é renderizado pelos navegadores, ele carrega o conteúdo que pode ser
-reproduzido pelo programa dentro do navegador.
+O elemento \textit{audio} foi a primeira tecnologia de áudio nativa
+para WEB, ele define um som dentro de um documento HTML. Quando o
+elemento é renderizado pelos navegadores, ele carrega o conteúdo que
+pode ser reproduzido pelo programa dentro do navegador.
 
 \begin{figure}[H]
 \centering
@@ -1520,20 +1525,23 @@ Your browser does not support the audio element.
 
 A imagem \ref{fig:htmlAudio} demonstra a utilização da tag
 \textit{audio}. Os elementos \textit{source} demonstrados na figura
-referenciam a arquivos de áudio contendo um contêiner e codec
-específicos. Mais de um \textit{source } é necessário pois 
-os criadores de navegadores não chegaram a um consenso sobre 
-qual formato deve ser usado, sendo necessário utilizar vários para suportar
-todos os navegadores populares.
+referenciam arquivos de áudio contendo um par de contêiner e
+codec. Mais de um \textit{source } é necessário pois os criadores
+de navegadores não chegaram a um consenso sobre qual formato deve
+ser usado, sendo necessário utilizar vários para suportar todos os
+navegadores populares.
 
-A especificação declara que todo o conteúdo dentro de uma tag audio
-(e video também), que não sejam tags \textit{source}, sejam ignoradas
+A especificação declara que todo o conteúdo dentro de uma tag
+\textit{audio}, que não sejam elementos \textit{source}, sejam ignoradas
 pelo navegador. O que permite que seja adicionada marcação de reserva
 para tratar os casos de quando não existe suporte a tag \textit{audio}
-no navegador. A figura \ref{fig:htmlAudio} ilustra este comportamento 
-através da mensagem \textit{Your browser does not support the audio element
-} que só será apresentada se o navegador do usuário não tiver suporte
-a tag audio.
+no navegador. Visto que os navegadores que não suportam áudio vão buscar
+renderizar o conteúdo dentro da tag.
+
+A figura \ref{fig:htmlAudio} ilustra este comportamento através da
+mensagem \textit{Your browser does not support the audio element } que
+só será apresentada se o navegador do usuário não tiver suporte a
+tag \textit{audio}.
 
 O objetivo inicial da tag \textit{audio} é reproduzir um som e parar.
 Ideal para ouvir música, como um som de fundo. Por conseguinte, a tag
@@ -1558,16 +1566,18 @@ efeitos sonoros. O processamento se dará primeiramente em uma cada
 inferior (tipicamente código Assembly / C / C++), mas síntese e
 processamento em JavaScript também será suportado \autocite{audioApiSpec}.
 
-Essa tecnologia é muito mais nova do que a tag áudio. Diferentemente
-dos demais navegadores o Internet Explorer não dá nenhum
-nível de suporte a API. O polyfill AudioContext suporta as partes
-básicas da API e pode ser utilizada nos casos onde não existe suporte
-para a API do HTML \footnote{O polyfill AudioContext pode ser encontrado no seguinte endereço https://github.com/shinnn/AudioContext-Polyfill}.
+Essa tecnologia é muito mais nova do que o elemento \textit{audio}.
+Diferentemente dos demais navegadores o Internet Explorer não
+dá nenhum nível de suporte a API. O polyfill AudioContext
+suporta as partes básicas da API e pode ser utilizada nos
+casos onde não existe suporte para a API do HTML \footnote{O
+polyfill AudioContext pode ser encontrado no seguinte endereço
+\url{https://github.com/shinnn/AudioContext-Polyfill}}.
 
 As últimas versões da especificação da Audio API contam com a
 possibilidade de manipular a API de áudio através de WEB Workers, o
 que traz oportunidades interessantes para aplicações que dependam de
-muito processamento de áudio, de modo que este processamento possa ser
+muito processamento de áudio, visto que o processamento pode ser
 feito em uma thread separada.
 
 Além de grande flexibilidade com áudio alguns jogos requerem a
@@ -1575,6 +1585,7 @@ disponibilidade de vídeo para utilizar como introdução, cinemáticas,
 entre outros recursos que habilitam uma experiência mais rica ao
 usuário. Abaixo será feita uma revisão sobre a tecnologia de vídeo
 em HTML.
+
 %}}}
 \section{VÍDEO}
 %{{{
