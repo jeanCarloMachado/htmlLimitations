@@ -36,14 +36,14 @@ Talk about Android
 Adicionar fontes as imagens que se aplicam
 Talk about monetization (think about it)
 Write about phonegap on appendices
+Write limitations well
+Move introduction comments about the benefits of the WEB to it's place on the revision (think well)
 
 #TODO
 
 Remove jquery from the prototype
 Fix aspects suggested by reviewer
-Write limitations well
 Complete image descriptions (look for missing names on lof)
-Move introduction comments about the benefits of the WEB to it's place on the revision (think well)
 Remove numbering from the bibliography
 Use requestAnimationFrame on prototype
 Write about the canvas to the prototype
@@ -57,6 +57,7 @@ Write abstract
 Translate Abstract
 Check quotes width
 Check sections cases
+Table of lilitation codes, description and if it is avoidable
 
 #FUTURE
 
