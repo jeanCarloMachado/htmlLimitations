@@ -1989,21 +1989,24 @@ em eixos e sua unidade de medida é metros por segundo.
 %{{
 HTTP/2 é a última verão do protocolo de trocas de documentos entre
 cliente e servidor na WEB. Quando um navegador requisita algum documento
-de esta requisição é geralmente feita através do
-protocolo HTTP.
-O foco da nova versão do HTTP é performance; especialmente a
-latência percebida pelos usuários e o uso de rede e servidores \autocite{http2}.
+de esta requisição é geralmente feita através do protocolo HTTP. O
+foco da nova versão do HTTP é performance; especialmente a latência
+percebida pelos usuários e o uso de rede e servidores \autocite{http2}.
 
 A forma que os documentos trafegam do servidor para o
 cliente afeta diretamente a performance de uma aplicação, nos jogos
 esse fator se amplia devido a grande quantidade de arquivos geralmente
 necessários para montar uma cena de jogo.
 
-Diferentemente do HTTP/1, HTTP/2 abre apenas uma conexão por
-servidor. Usando a mesma para trafegar todos os dados necessários para
-montar a página HTML. Dessa forma o HTTP/2 não necessita repetir
-as negociações de protocolo nem aguardar parado quando o limite de
+Diferentemente do HTTP/1, HTTP/2 abre apenas uma conexão por servidor.
+Usando a mesma para trafegar todos os dados necessários para montar
+a página HTML. Dessa forma o HTTP/2 não necessita repetir as
+negociações de protocolo nem aguardar parado quando o limite de
 requisições que os navegadores suportam concorrentemente é atingido.
+Segundo \cite{gameAssetManagement} o limite concorrente de conexões por
+servidor é geralmente 5. Jogos que muitas vezes trafegam muitos objetos
+via rede, podem se beneficiar substancialmente.
+
 
 Outro benefício do HTTP/2 em relação a seu predecessor é que
 os cabeçalhos das requisições são comprimidos, diminuindo
@@ -2120,9 +2123,7 @@ Abaixo será abordada algumas formas de disponibilizar jogos web em
 ambientes multiplataforma.
 %}}}
 %}}}
-
-\section{DISPONIBILIZAÇÃO DA APLICAÇÃO}
-%{{{
+\section{DISPONIBILIZAÇÃO DA APLICAÇÃO} %{{{
 
 Os aplicativos puramente em HTML não requerem instalação e
 funcionam apenas acessando o endereço através de um navegador.
