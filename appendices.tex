@@ -280,6 +280,8 @@ para checar erros, compilar os pré processadores de CSS (LESS, SASS), e
 muito mais.
 \end{quote}
 
+\section{Grunt}
+
 O Grunt é um automatizador destas tarefas quotidianas. Para realizar
 a automação o Grunt conta com um grande ecossistema de plugins que
 podem ser compostos para realizar as tarefas desejadas para determinada
@@ -298,5 +300,20 @@ Para tanto os seguintes plugins foram utilizados:
     \item grunt-contrib-watch: observar modificações nos arquivos de desenvolvimento e iniciar o processamento dos plugins acima;
 \end{itemize}
 
-O Gulp utiliza o conceito de atremas para aplicar todas as modificações sobre
+\section{Gulp}
+
+O Gulp utiliza o conceito de streams para aplicar todas as modificações sobre
 um arquivo de uma vez só.
+
+\cite{crossPlatformMobileGame} afirma que:
+\begin{quote}
+Essencialmente, Gulp trabalha com streams de arquivos para dentro e fora
+dos módulos do node possibilitando que a aplicação se transforme
+em uma variedade de combinações. Uma vez que a transformação é
+completa, a saída pode ser escrita em um arquivo no sistema. Essa forma
+de trabalhar com streams é possibilitada pelo Node.js, sendo altamente
+eficiente comparado com a maioria dos sistemas de build, visto que não
+existem arquivos temporários para serem escritos em disco (tudo é
+feito em tempo de execução utilizando objetos de virtuais).
+\end{quote}
+
