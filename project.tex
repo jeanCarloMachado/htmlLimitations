@@ -445,14 +445,17 @@ dispositivos móveis.
 
 \subsubsection{HTML}
 
-Um problema que jogos sofrem em geral é a demora no carregamento da
-grande quantidade de recursos que precisam estar em memória para o jogo
-funcionar. Muitos jogos utilizam uma tela de carregamento enquanto os 
-recursos são adquiridos.
+Um problema que jogos em HTML sofrem é a demora no carregamento da
+grande quantidade de recursos que geralmente precisam estar em memória
+para o jogo funcionar. Muitos jogos utilizam uma tela de carregamento
+enquanto os recursos são adquiridos.
 
-Uma funcionalidade do HTML interessante para este tipo de situação
-é o pré carregamento de recursos (\textit{Link Prefetching}). Esta
-tecnologia possibilita que o navegador , em seu tempo livre, adquira
+Existem algumas formas de minimizar este problema, como 
+utilização de cache, CDN's, minificação, entre outros.
+
+Uma funcionalidade do HTML interessante para otimizar o tempo de rede
+o pré carregamento de recursos (\textit{Link Prefetching}). Esta
+tecnologia possibilita que o navegador, em seu tempo livre, adquira
 recursos que provavelmente serão necessários em um futuro próximo.
 
 Nem todos os recursos necessitam ser pré carregados, mas uma impressão
