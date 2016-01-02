@@ -11,7 +11,7 @@ bastante na validação de algumas limitações previamente encontradas
 e na detecção de alguns problemas adicionais os quais foram citados
 previamente.
 
-As limitações encontradas através do processo mencionado, foram
+As limitações encontradas através do processo mencionado foram
 registradas e avaliadas. Os resultados obtidos nos levam a crer que,
 apesar de o número de limitações ser substancial, a grande maioria
 destas limitações podem ser contornadas pelo programador ou já estão
@@ -22,9 +22,15 @@ positivos da abordagem HTML para desenvolvimento de jogos é muito
 grande em comparação as limitações.
 
 É seguro dizer que o HTML ainda não está pronto para substituir todas
-as estratégias de desenvolvimento de jogos. Não obstante as tecnologias
+as estratégias de desenvolvimento de jogos. Não obstante, as tecnologias
 da WEB podem ser aplicadas ao desenvolvimento de jogos em uma gama
 crescente de casos.
+
+No contexto multiplataforma, apesar de ser difícil de prover a
+mesma experiência em duas plataformas diferentes, é possível
+utilizar algumas plataformas com funcionalidades limitadas enquanto
+outras recebem a experiência completa dos jogos \autocite[pp.
+1]{currentStateCrossPlatform}.
 
 Da mesma maneira, existem várias funcionalidades interessantes para
 jogos que ainda não estão prontas ou, por hora, não funcionam
@@ -34,55 +40,26 @@ principalmente após o lançamento do HTML5, são passageiros. A figura
 \ref{fig:htmlSupport} corrobora com esta hipótese, o crescimento do
 suporte das tecnologias nesta imagem apresenta uma curva aparentemente
 exponencial. Ao que tudo indica o futuro dos jogos em HTML5 parece
-\end{draft}
 brilhante.
 
-%draft
-Se uma empresa deseja produzir jogos nativos elas precisarão de vários
-desenvolvedores. Eu sozinho fui capaz de produzir um jogo em tempo
-razoável trabalhando com a plataforma WEB.
-
-Só poderemos considerar o HTML como uma especificação pronta quando
-for possível fazer tudo o que se faz nativamente com os dispositivos
-através de uma API WEB padronizada.
-
-O suporte ao HTML vem crescendo com o tempo, o site HTML5Test
-\url{http://html5test.com/about.html}, oferece um placar atualizado
-dinamicamente, conforme utilização dos navegadores, sobre os recursos
-do HTML.
-
-Apesar de ser difífil de prover a mesma experiência em duas plataformas diferentes, é possível utilizar algumas plataformas com funcionalidades limitadas enquanto outras recebem a expeirência completa dos jogos \autocite[pp. 1]{currentStateCrossPlatform}.
-
 \subsection{TRABALHOS FUTUROS}
-A manipulação de erros é bastante consistente nos navegadores mas 
-incrivelmente não faz parte da especificação \autocite{howBrowsersWork}.
-Não pude testar todos os métodos e ferramentas e versões à
-disposição, um trabalho completo demandaria esforços conjuntos de
-muitos indivíduos ou um período de tempo bem mais extenso. 
 
-Trabalhos que explorem os benefícios mercadológicos do HTML5 em comparação com alternativas nativas.
-EMACSCRIPT 7.
+Visto que a especificação do HTML é viva, checar suas limitações
+é uma tarefa que deveria ser feita de tempos em tempos. Tecnologias
+como o EMACScript 6 e Web Assembly podem mudar completamente o cenário
+de desenvolvimento de jogos WEB assim que se tornarem opções viáveis,
+comercialmente falando.
 
-HTTP2 também traz boas perspectivas em relação a performance.
+Seria interessante que assuntos como o WebGL e WebVR, levemente
+abordados neste trabalho, fossem estudado com profundidade visto que
+são deveras importantes para a criação de jogos cada vez mais
+iterativos. O suporte a mais versões de navegadores e plataformas
+também poderia ser estudado, algo que as limitações de tempo deste
+trabalho não me permitiu.
 
-Um trabalho com criação de protótipos em WebGL seria interessante.
-
-A utilização de plugins foi interacionalmente ignorada trabalhos
-que analisem a construção de um jogo comercial utilizando plugins,
-da forma mais aproximada possível da realidade mercadológica seria
-igualmente interessante.
-
-Não obstante, otimizações de performance dependem do ambiente em
-que estão sendo feitas. E aquelas que hoje tem um impacto positivo
-hoje podem se tornar inúteis, ou mesmo prejudiciais, amanhã
-\autocite[pp.131]{html5mostwanted}.
-
-Um exemplo disso se dá com a introdução do HTTP/2. Minificar arquivos
-pode não ser mais benéfico, visto que todos passam pelo mesmo canal
-de comunicação, não havendo mais problemas de bloqueio de máximas
-requisições.
-
-Por não utilizar frameworks e bibliotecas estou me distanciando
-dos casos da vida real.
-
+A utilização de plugins foi intencionalmente ignorada deste
+trabalho. Não obstante, em jogos comerciais estas ferramentas são
+imprescindíveis. Trabalhos que analisem a construção de um jogo sob
+a perspectiva comercial, utilizando plugins, da forma mais aproximada
+possível da realidade mercadológica, seriam igualmente interessantes.
 
