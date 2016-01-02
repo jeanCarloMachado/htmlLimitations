@@ -8,7 +8,7 @@ mais complexo obter aparência nativa, funcionalidade e performance
 em aplicações multiplataforma. Outros problemas derivam-se dos
 dispositivos ou da tecnologia atual.
 
-A abaixo constam as limitaçõesd do HTML5 aplicáveis, mesmo que não
+A abaixo constam as limitações do HTML5 aplicáveis, mesmo que não
 exclusivamente, aos jogos encontradas durante a pesquisa e concepção
 do protótipo. Quando possível, buscou-se apresentar as limitações
 na mesma ordem das tecnologias estudadas na revisão bibliográfica.
@@ -50,31 +50,33 @@ permitem criar elementos típicos de interfaces mobile como listas
 com scroll, botões e transições com uma aparência nativa de forma
 relativamente fácil \autocite{publishHtml5}.
 
-Em alguns casos o tamanho das telas pode ser um fator limitante – como
-no caso de jogos de estratégia. Jogadores com telas menores podem sair
-em desvantagem.
+Em alguns casos o tamanho das telas pode ser um fator limitante –
+como no caso de jogos de estratégia, nestes casos, jogadores com telas
+menores podem sair em desvantagem.
 
-Para muitos caso pode-se contornar o problema de tamanhos diferenciados
-trabalhando com tamanhos relativos via CSS. Não obstante, há casos,
-como o dos botões de certo e errado, em que a proporções ficam
-exageradas, nesses casos utilizar controles como o \textit{max-width} e
-\textit{min-width} é uma solução conveniente.
+Na perspectiva do desenvolvedor, pode-se lidar com múltiplos tamanhos
+de tela trabalhando com tamanhos relativos via CSS. Não obstante, há
+casos, como o dos botões de certo e errado do protótipo, em que a
+proporções ficam exageradas, nesses casos utilizar controles como o
+\textit{max-width} e \textit{min-width} é uma solução conveniente.
 
-Tecnologias experimentais do CSS geralmente levam o nome do distribuidor
-como prefixo. Utilizar as mesmas regras em CSS com prefixos
-diferentes para suportar diversos motores de renderização é um
-processo entediante e propenso à duplicação e erros. A biblioteca
-\textit{-prefix-free} é uma possível solução para este problema,
-detectando automaticamente quando prefixos são necessários e
-adicionado em tempo de execução \footnote{Mais informações sobre a
-biblioteca pode ser encontradas nos apêndices}.
+Outro fator problemático do CSS é a presença de prefixos. Tecnologias
+experimentais do CSS geralmente levam o nome do distribuidor como
+prefixo. Utilizar as mesmas regras em CSS com prefixos diferentes para
+suportar diversos motores de renderização é um processo entediante e
+propenso à duplicação e erros. A biblioteca \textit{-prefix-free} é
+uma possível solução para este problema, detectando automaticamente
+quando prefixos são necessários e adicionado-os em tempo de execução
+\footnote{Mais informações sobre a biblioteca pode ser encontradas nos
+apêndices}.
 
 \section{JavaScript}
 
-O JavaScript, por ser uma tecnologia desenvolvida por consenso, tem
-um ciclo de vida de atualizações demorado; pois necessita que todos
-os consumidores da especificação entrem em consenso e implementem o
-concordado. O site \url{https://kangax.github.io/compat-table/es6/}
+O JavaScript, por ser uma linguagem desenvolvida por consenso, tem um
+ciclo de vida de atualizações demorado; pois necessita que todos os
+consumidores da especificação entrem em acordo. Com a especificação
+pronta, outra fase demorada é a adoção das tecnologias nos
+navegadores, o site \url{https://kangax.github.io/compat-table/es6/}
 contém uma lista do suporte aos recursos do ECMAScript 6 nos motores
 JavaScript.
 
@@ -86,6 +88,20 @@ de se testar \autocite[pp. 12]{viabilityBusinessApplications}.
 Aplicações para produção muitas vezes necessitam ser minificadas por
 performance e ofuscação. Sem a utilização de automatizadores como o
 Grunt Watch essa tarefa é entediante e propensa a erros.
+
+Segundo \cite{htmlResearchJournal}, um problema do JavaScript é que
+não é possível transferir métodos de objetos através de sistemas,
+via WebSocket, somente dados. Uma forma de contornar este problema é
+utilizar funções para converter os dados em objetos em cada ponta do
+processamento mas isto adiciona complexidade ao software.
+
+\cite{howBrowsersWork} cita que scripts requerendo informações de
+estilo durante o processo de parse. Se o estilo ainda não foi carregado
+o script vai utilizar informações erradas, causando uma série de
+problemas. Pode-se contornar este problema executando scripts apenas 
+ao final da renderização.
+
+\subsection{Sistema de tipos}
 
 O sistema de tipos do JavaScript também é problemático.
 Erros numéricos resultam no valor NaN (\textit{not a number}).
@@ -117,17 +133,7 @@ para sua representação em texto a qual contém o nome do tipo escrito
 por extenso - utilizando-se deste valor pode-se deduzir o tipo da
 variável corretamente.
 
-Segundo \cite{htmlResearchJournal}, um problema do JavaScript é que
-não é possível transferir métodos de objetos através de sistemas,
-via WebSocket, somente dados. Uma forma de contornar este problema é
-utilizar funções para converter os dados em objetos em cada ponta do
-processamento mas isto adiciona complexidade ao software.
-
-\cite{howBrowsersWork} cita que scripts requerendo informações de
-estilo durante o processo de parse. Se o estilo ainda não foi carregado
-o script vai utilizar informações erradas, causando uma série de
-problemas. Pode-se contornar este problema executando scripts apenas 
-ao final da renderização.
+\subsection{Performance}
 
 Apesar da performance ter notavelmente melhorado, ainda é geralmente
 menos eficiente produzir animações em JavaScript do que utilizando
@@ -137,7 +143,6 @@ e acelerados via hardware \autocite{html5mostwanted}.
 O WEB Assembly pode resolver este problema, substituindo o JavaScript
 para os casos onde grande performance é necessária. Mas para isso o
 Web Assembly precisa evoluir na especificação e implementações.
-
 
 \subsection{Fullscreen}
 
@@ -151,7 +156,8 @@ nos demais navegadores.
 \begin{figure}[H]
 \centering
 \begin{verbatim}
-navigator.standalone = navigator.standalone || (screen.height-document.documentElement.clientHeight<40)
+navigator.standalone = navigator.standalone 
+|| (screen.height-document.documentElement.clientHeight<40)
 \end{verbatim}
 \caption{Teste de tela cheia}
 \label{fig:fixJSTypes}
@@ -505,10 +511,10 @@ a sistemas de pagamento - possivelmente aumentado a complexidade da
 aplicação. Ou serem integrados a algum mercado como o do Android, se
 optarem pela arquitetura híbrida.
 
-
 \section{Outras Limitações}
 
-\cite{html5Tradeoffs} cita algumas limitações no contexto geral
+
+\cite{html5Tradeoffs} cita algumas limitações em uma âmbito geral:
 \begin{quote}
 Não podemos mudar a imagem de fundo do dispositivo, ou adicionar toques
 etc. Similarmente, existem muitas API's de nuvem como os serviços
@@ -518,12 +524,4 @@ como o C2DM do Google que está disponível para desenvolvedores Android
 para utilizar serviços de \textit{push} também não estão disponíveis
 para o HTML5.
 \end{quote}
-
-\cite{browserGamesTechnologyAndFuture} apresenta as seguintes limitações
-no contexto de jogos de navegador.
-
-\begin{itemize}
-\item Não podem ser instalados em um dispositivo móvel como um aplicativo separado
-\item Não tem acesso a funcionalidades específicas dos dispositivos e recursos como notificações, use de hardware nativo ou comunicação entre aplicativos.
-\end{itemize}
 
