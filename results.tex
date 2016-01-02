@@ -365,7 +365,7 @@ respectivas mensagens na especificação poderia solucionar este
 problema.
 
 Refresh duplo para ver assets cacheados. Ver:
-http://buildnewgames.com/game-asset-management/
+
 
 \section{Orientação}
 
@@ -374,11 +374,12 @@ o momento da pesquisa o único navegador popular que implementa a
 especificação completamente é o Edge da Microsoft.
 
 Outrossim, existem diferenças substanciais entre navegadores, por
-exemplo: O Firefox e Google Chrome não manipulam angulos da mesma
+exemplo: O Firefox e Google Chrome não manipulam ângulos da mesma
 forma, por conseguinte alguns eixos se comportam de maneiras opostas
-\autocite{mdnOrientation}. O polyfill gyronorm.js é uma tentativa de
-normalizar o uso de dados de orientação nos navegadores que pode ser
-utilizada até a especificação e os navegadores evoluírem.
+\autocite{mdnOrientation}. O polyfill \textit{gyronorm.js} é uma
+tentativa de normalizar o uso de dados de orientação nos navegadores
+que pode ser utilizada até a especificação e os navegadores
+evoluírem.
 
 \section{Detecção de recursos}
 
@@ -386,7 +387,6 @@ Grande parte da detecção de funcionalidades é feita através de
 JavaScript, isso força os desenvolvedores a criarem pelo menos parte da
 marcação em JavaScript, isso pode ser um fator limitante para o uso
 generalizado de HTML5 \autocite{diveIntohtml}.
-
 
 \section{Debug}
 
@@ -436,29 +436,6 @@ não é possível utilizar plugins através deles. Embora no protótipo
 isso não tenha sido um problema, em projetos maiores estes tipos de
 requerimentos podem ser vitais.
 
-\section{Recursos}
-Apesar da grande maioria dos recursos oferecidos nativamente
-nos dispositivos estar presente em HTML5 ainda existem algumas
-funcionalidades faltando para este tipo de aplicação.
-
-\cite{html5Tradeoffs} cita algumas limitações no contexto geral
-\begin{quote}
-Não podemos mudar a imagem de fundo do dispositivo, ou adicionar toques
-etc. Similarmente, existem muitas API's de nuvem como os serviços
-de impressão do ICloud ou Google Cloud que estão disponíveis para
-aplicações nativas mas não para HTML5. Outros serviços utilitários
-como o C2DM do Google que está disponível para desenvolvedores Android
-para utilizar serviços de \textit{push} também não estão disponíveis
-para o HTML5.
-\end{quote}
-
-\cite{browserGamesTechnologyAndFuture} apresenta as seguintes limitações
-no contexto de jogos de navegador.
-
-\begin{itemize}
-\item Não podem ser instalados em um dispositivo móvel como um aplicativo separado
-\item Não tem acesso a funcionalidades específicas dos dispositivos e recursos como notificações, use de hardware nativo ou comunicação entre aplicativos.
-\end{itemize}
 
 \section{Monetização}
 
@@ -466,11 +443,12 @@ no contexto de jogos de navegador.
 para navegador, visto que não existem pacotes de jogos para vender
 \autocite[pp. 44]{gameCommunities}.
 
-Dado este  este problema, desenvolvedores são muitas vezes forçados a criar formas alternativas
-de lucro. A monetização de aplicativos WEB é geralmente feita através de
-propagandas \autocite[pp. 44]{gameCommunities}. Outra saída é a venda
-de recursos extra, \cite[pp. 44]{gameCommunities} afirma
-que a venda de moeda virtual é uma forma comum monetização.
+Dado este este problema, desenvolvedores são muitas vezes forçados
+a criar formas alternativas de lucro. A monetização de aplicativos
+WEB é geralmente feita através de propagandas \autocite[pp.
+44]{gameCommunities}. Outra saída é a venda de recursos extra,
+\cite[pp. 44]{gameCommunities} afirma que a venda de moeda virtual é
+uma forma comum monetização.
 
 Não obstante jogos WEB podem ser integrados pelos desenvolvedores
 a sistemas de pagamento - possivelmente aumentado a complexidade da
@@ -497,4 +475,25 @@ Outro problema relativo aos assets é descrito por \cite{howBrowsersWork}
 scripts requerendo informações de estilo durante o processo de
 parse. Se o estilo ainda não foi carregado o script vai utilizar
 informações erradas, causando uma série de problemas.
+
+\section{Outras Limitações}
+
+\cite{html5Tradeoffs} cita algumas limitações no contexto geral
+\begin{quote}
+Não podemos mudar a imagem de fundo do dispositivo, ou adicionar toques
+etc. Similarmente, existem muitas API's de nuvem como os serviços
+de impressão do ICloud ou Google Cloud que estão disponíveis para
+aplicações nativas mas não para HTML5. Outros serviços utilitários
+como o C2DM do Google que está disponível para desenvolvedores Android
+para utilizar serviços de \textit{push} também não estão disponíveis
+para o HTML5.
+\end{quote}
+
+\cite{browserGamesTechnologyAndFuture} apresenta as seguintes limitações
+no contexto de jogos de navegador.
+
+\begin{itemize}
+\item Não podem ser instalados em um dispositivo móvel como um aplicativo separado
+\item Não tem acesso a funcionalidades específicas dos dispositivos e recursos como notificações, use de hardware nativo ou comunicação entre aplicativos.
+\end{itemize}
 
