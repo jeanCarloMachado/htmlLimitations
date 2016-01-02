@@ -243,7 +243,7 @@ elemento, o que pode gerar resultados inesperados.
 Como WebGL é baseada na versão otimizada para dispositivos móveis do
 OpenGL não é possível utilizar muitos recursos especiais disponíveis
 para os ambientes desktop. Como a definição de caminhos com a função
-\textit{glBegin} e a impossibilidade de utilizar pontos flutuantes para
+\textit{glBegin} e a utilização de pontos flutuantes para
 calcular coordenadas de vértices \autocite{esVsGl}.
 
 Segundo \cite{html5mostwanted} um dos problemas do WebGL é sua alta
@@ -252,23 +252,23 @@ Explorer. Entretanto, o suporte foi adicionado na última versão do
 Internet Explorer (11). Infelizmente a dificuldade de utilização
 ainda persiste, forçando a maioria dos desenvolvedores a utilizarem
 abstrações criadas por bibliotecas de terceiros \footnote{Os apendices
-contém algumas destas bibliotecas como o tree.JavaScript}.
+contém algumas destas bibliotecas como o tree.js}.
 
-É importante ressaltar que o WebGL não se comporta de maneira
+É importante também ressaltar que o WebGL não se comporta de maneira
 simétrica nos navegadores que implementam a especificação. Pode haver
 diferenças substanciais de performance em plataformas diferentes e em
 navegadores diferentes. Existe também uma lista de placas gráficas com
 \textit{drivers} bloqueados por não funcionarem corretamente no Firefox
 \autocite[pp.42]{3daps}.
-
 Para ver um programa em WebGL é necessário um navegador recente, uma
 placa gráfica recente e um sistema operacional que suporte a tecnologia
-\autocite{html5mostwanted}
+\autocite{html5mostwanted}.
 
-CocoonJS é uma aplicativo híbrido que preenche a fraca implementação
-de WebGL nos dispositivos móveis possibilitando se desenvolver em
-WEBGL, CSS. Conta com suporte a dispositivos legados à partir do
-Android 2.3 e IPhone 5.
+Além dos problemas citados, o suporte a especificação ainda é
+incompleto em vários navegadores. CocoonJS é uma aplicativo híbrido
+que preenche a fraca implementação de WebGL nos dispositivos móveis
+possibilitando se desenvolver em WEBGL. CocoonJS conta com suporte a
+dispositivos legados à partir do Android 2.3 e IPhone 5.
 
 \subsection{ÁUDIO}
 
@@ -300,10 +300,10 @@ simultaneamente \autocite{unsolvedMediaHtmlIssues}.
 
 O suporte a vídeo, apesar de estar melhorando, ainda é rudimentar. No
 Silverlight existem uma coleção de possibilidades como aplicar shaders
-diretamente no vídeo e streaming suave de 1080px HD \autocite[pp.
-8]{researchOnHtml}.
+diretamente no vídeo e \textit{streaming} suave de 1080px HD que ainda
+não são realidade no HTML \autocite[pp. 8]{researchOnHtml}.
 
-Não é possível controlar a entrada em tela cheia através de script
+Também não é possível controlar a entrada em tela cheia através de script
 pois é considerado uma violação de segurança. Não obstante,
 os navegadores tem a opção de deixar os usuários escolherem ver
 vídeos em tela cheia através de controles adicionais \autocite[pp.
@@ -323,7 +323,7 @@ respectivamente.
 O Safari do IOS também contém problemas exclusivos de vídeo. Segundo
 \cite{unsolvedMediaHtmlIssues} não é possível capturar frames de
 vídeo usando o método \textit{drawImage} do canvas. Também não é
-possível pré carregar arquivos de vídeo sem iteração do usuário, entre outros.
+possível pré carregar arquivos de vídeo sem iteração do usuário.
 
 Para os raros casos onde o suporte a vídeo não existe,
 como no Opera Mini, o projeto \textit{Vídeo for Everybody}
@@ -334,9 +334,10 @@ recorre à flash para apresentar o conteúdo.
 
 Não existe tecnologia oficial que permita a utilização de tecnologias
 SQL para Frontend. O WebSQL foi uma tentativa nesta direção mas, visto
-que não continha mais de uma implementação, foi descontinuado. SQL seria 
-interessante pois muitos desenvolvedores tem experiência  com este tipo de tecnologia
-e suporta estruturas de filtragem de dados realmente poderosas.
+que não continha mais de uma implementação, foi descontinuado. SQL
+seria interessante pois muitos desenvolvedores tem experiência com este
+tipo de tecnologia e por SQL permitir filtragem e correlacionamento de
+dados de uma forma flexível e poderosa.
 
 \subsection{Web Storage}
 
@@ -371,20 +372,21 @@ comportamento não intuitivo. Arquivos de rede que não
 são declarados ali não poderão ser consumidos uma vez
 que exista cache na aplicação. O exemplo neste endereço
 \url{http://appcache-demo.s3-website-us-east-1.amazonaws.com/without-net
-work/} exemplifica o funcionamento. Segundo \cite{gameAssetManagement} a
+work/} demonstra este comportamento. Segundo \cite{gameAssetManagement} a
 especificação define que se um arquivo não for listado em alguma das
 seções do cache então o arquivo não estará disponível de qualquer
 forma para a aplicação.
 
 \section{Orientação}
 
-Visto que a especificação o suporte está longe de completo, até
-o momento da pesquisa o único navegador popular que implementa a
-especificação completamente é o Edge da Microsoft.
+Visto que a especificação de orientação não está pronta, o suporte
+está longe de completo. Até o momento da pesquisa o único navegador
+popular que implementa a especificação completamente é o Edge da
+Microsoft.
 
-Por conseguinte, existem diferenças substanciais entre navegadores. Por
-exemplo: O Firefox e Google Chrome não manipulam ângulos da mesma
-forma, por conseguinte alguns eixos se comportam de maneiras opostas
+Por conseguinte, existem diferenças substanciais entre navegadores.
+Por exemplo: O Firefox e Google Chrome não manipulam ângulos da
+mesma forma. Outrossim, alguns eixos se comportam de maneiras opostas
 \autocite{mdnOrientation}. O polyfill \textit{gyronorm.js} é uma
 tentativa de normalizar o uso de dados de orientação nos navegadores
 que pode ser utilizada até a especificação e os navegadores
