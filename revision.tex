@@ -1850,8 +1850,10 @@ A figura \ref{fig:offline} exemplifica um arquivo de manifesto. Os
 arquivos abaixo da palavra \textit{CACHE MANIFEST} serão armazenados
 em cache e não serão buscados na rede a não ser que o arquivo
 de manifesto seja modificado. Já os arquivos abaixo da palavra
-\textit{NETWORK:} serão exclusivamente da rede e serão buscado todas
-as vezes.
+\textit{NETWORK:} serão utilizados exclusivamente com rede e serão
+buscados todas as vezes. Ainda exite a palavra chave \textit{FALLBACK}
+onde todos os itens abaixo dela serão utilizados para substituir
+arquivos de rede.
 
 É uma boa prática colocar um comentário com a versão do arquivo de
 manifestos. Desse modo quando um arquivo for modificado incrementa-se a
@@ -2006,7 +2008,6 @@ requisições que os navegadores suportam concorrentemente é atingido.
 Segundo \cite{gameAssetManagement} o limite concorrente de conexões por
 servidor é geralmente 5. Jogos que muitas vezes trafegam muitos objetos
 via rede, podem se beneficiar substancialmente.
-
 
 Outro benefício do HTTP/2 em relação a seu predecessor é que
 os cabeçalhos das requisições são comprimidos, diminuindo

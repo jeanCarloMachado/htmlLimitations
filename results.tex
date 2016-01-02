@@ -351,6 +351,22 @@ que não continha mais de uma implementação, foi descontinuado. SQL seria
 interessante pois muitos desenvolvedores tem experiência  com este tipo de tecnologia
 e suporta estruturas de filtragem de dados realmente poderosas.
 
+
+\subsection{Web Storage}
+
+Muitos navegadores não permitem armazenar mais de 5M por domínio
+em Web Storage, apesar da especificação permitir fazê-lo
+\autocite{gameAssetManagement}. Também não é possível saber
+quanto espaço já foi consumido pelo Web Storage.
+
+Outra limitação do Web Storage é que todas as informações são
+guardadas como texto. Isso força a converter os valores toda a vez que
+algo for armazenado ou recuperado \autocite{gameAssetManagement}..
+
+No protótipo isso não foi problemático pois não existe grande
+manipulação sobre os dados. Mas no caso de jogos mais complexos esta
+característica do Web Storage pode ser uma limitação substancial.
+
 \section{OFFLINE}
 
 Nos arquivos de cache via manifestos, quando o download falha, o
@@ -364,8 +380,15 @@ e qual especificamente. Uma coleção de códigos de erro e suas
 respectivas mensagens na especificação poderia solucionar este
 problema.
 
-Refresh duplo para ver assets cacheados. Ver:
-
+Os itens da palavra chave \textit{NETWORK:} apresentam um
+comportamento não intuitivo. Arquivos de rede que não
+são declarados ali não poderão ser consumidos uma vez
+que exista cache na aplicação. O exemplo neste endereço
+\url{http://appcache-demo.s3-website-us-east-1.amazonaws.com/without-net
+work/} exemplifica o funcionamento. Segundo \cite{gameAssetManagement} a
+especificação define que se um arquivo não for listado em alguma das
+seções do cache então o arquivo não estará disponível de qualquer
+forma para a aplicação.
 
 \section{Orientação}
 
