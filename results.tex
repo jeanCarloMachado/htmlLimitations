@@ -194,6 +194,8 @@ Segundo \autocite{html5mostwanted}, os aspectos negativos do canvas é
 que a performance varia de plataformas para plataformas e não existe
 implementação nativa para animações.
 
+\subsection{Performance}
+
 O problema de performance mencionado pode ser parcialmente remediado
 com o FastCanvas. FastCanvas é uma implementação nativa em C++ do
 canvas para Android que roda separadamente do JavaScript. Devidas as
@@ -202,6 +204,8 @@ rápido do que a tag canvas para navegadores Android. Não obstante, o
 FastCanvas não suporta a especificação do canvas completamente, e
 existem umas diferenças no comportamento entre o canvas original e o
 FastCanvas.
+
+\subsection{Integrações}
 
 A implementação de animações de fato não existe no canvas,
 similarmente carece-se de integração com as demais tecnologias
@@ -226,8 +230,8 @@ WEB está começando a acontecer. A interoperabilidade entre o Path2D
 do canvas e a notação SVG é uma iniciativa na direção correta,
 tornando ambas tecnologias cada vez relevantes e dinâmicas.
 
-Uma característica peculiar descoberta durante o desenvolvimento
-do protótipo é que o Canvas pode gerar resultados inesperados se
+Outra característica peculiar, descoberta durante o desenvolvimento
+do protótipo, é que o Canvas pode gerar resultados inesperados se
 seus tamanhos de elemento e tela diferirem de formas específicas. Em
 suma, existem dois tamanhos, o tamanho do elemento e da superfície de
 desenho. Quando o tamanho do elemento é maior do que o da superfície
@@ -484,7 +488,6 @@ optarem pela arquitetura híbrida.
 
 \section{Outras Limitações}
 
-
 \cite{html5Tradeoffs} cita algumas limitações em uma âmbito geral:
 \begin{quote}
 Não podemos mudar a imagem de fundo do dispositivo, ou adicionar toques
@@ -495,7 +498,6 @@ como o C2DM do Google que está disponível para desenvolvedores Android
 para utilizar serviços de \textit{push} também não estão disponíveis
 para o HTML5.
 \end{quote}
-
 
 \section{Navegadores}
 
