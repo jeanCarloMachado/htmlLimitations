@@ -42,6 +42,7 @@ Move introduction comments about the benefits of the WEB to it's place on the re
 #TODO
 
 Fix aspects suggested by reviewer
+Check quotes font width, indenting and spacing
 Remove jquery from the prototype
 Complete image descriptions (look for missing names on lof)
 Remove numbering from the bibliography
@@ -55,7 +56,6 @@ Finish conclusion
 Finish future work
 Write abstract
 Translate Abstract
-Check quotes width
 Check sections cases
 Table of lilitation codes, description and if it is avoidable
 see lemes to more on game engenieering
