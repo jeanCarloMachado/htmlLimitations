@@ -18,7 +18,7 @@ tecnologias da WEB.
 
 \section{HTML}
 
-Segundo \cite{crossPlatformMobileGame}
+Segundo \citet{crossPlatformMobileGame}
 \begin{quote}
 Enquanto o HTML é desenvolvido muitas das funcionalidades
 disponibilizadas são testadas em um pequeno conjunto de navegadores
@@ -90,20 +90,20 @@ Aplicações para produção muitas vezes necessitam ser minificadas por
 performance e ofuscação. Sem a utilização de automatizadores como o
 Grunt Watch essa tarefa é entediante e propensa a erros.
 
-Segundo \cite{htmlResearchJournal}, um problema do JavaScript é que
+Segundo \citet{htmlResearchJournal}, um problema do JavaScript é que
 não é possível transferir métodos de objetos através de sistemas,
 via WebSocket, somente dados. Uma forma de contornar este problema é
 utilizar funções para converter os dados em objetos em cada ponta do
 processamento mas isto adiciona complexidade ao software.
 
-\cite{howBrowsersWork} cita que scripts requerendo informações de
+\citet{howBrowsersWork} cita que scripts requerendo informações de
 estilo durante o processo de parse. Se o estilo ainda não foi carregado
 o script vai utilizar informações erradas, causando uma série de
 problemas. Pode-se contornar este problema executando scripts apenas 
 ao final da renderização.
 
 
-Outra possível limitação do JavaScript é quanto a sua manutenibilidade \cite{html5Tradeoffs} afirma que:
+Outra possível limitação do JavaScript é quanto a sua manutenibilidade \citet{html5Tradeoffs} afirma que:
 \begin{quote}
 A flexibilidade de manutenção de código em JavaScript é muito
 dependente do expertise da pessoa que está escrevendo o código.
@@ -160,7 +160,7 @@ Web Assembly precisa evoluir na especificação e implementações.
 Não existe forma padronizada de detectar se uma aplicação está em
 tela cheia ou não através de JavaScript. O IOS suporta a variável
 \textit{navigator.standalone } para identificar se a aplicação está
-em tela cheia. \cite{homescreenwebapps} recomenda a utilização do
+em tela cheia. \citet{homescreenwebapps} recomenda a utilização do
 trecho de código para determinar se está em modo tela cheia
 nos demais navegadores.
 
@@ -178,12 +178,12 @@ navigator.standalone = navigator.standalone
 
 \section{Android}
 
-Segundo \cite{chromeWebView} da versão 4.4 do Android em diante a
+Segundo \citet{chromeWebView} da versão 4.4 do Android em diante a
 WebView mudou de um projeto local para utilizar o Chromium. Entretanto,
 grande parcela dos usuários Android ainda utilizam o sistema antigo o
 que força os desenvolvedores suportarem ambas as versões. É razoável
 afirmar que para o início de 2016 um terço dos usuários de Android
-ainda utilizem a versão antiga da WebView \cite{chromeWebView}.
+ainda utilizem a versão antiga da WebView \citet{chromeWebView}.
 
 \section{SVG}
 
@@ -191,10 +191,10 @@ Uma das grandes vantagens do SVG é que é definido via linguagem de
 marcação e se integra bem com as demais tecnologias da WEB. Não
 obstante, isso também implica em problemas de performance para arquivos
 muito grandes pois os elementos são manipulados via DOM. Segundo
-\cite{html5mostwanted} a grande desvantagem do SVG é que quão maior o
+\citet{html5mostwanted} a grande desvantagem do SVG é que quão maior o
 documento mais lenta a renderização.
 
-Controle refinado também é um problema do SVG \cite{html5mostwanted}
+Controle refinado também é um problema do SVG \citet{html5mostwanted}
 cita que um aspecto negativo do SVG é que é muito difícil atingir a
 perfeição na posição dos pixels, por ser uma linguagem vetorizada
 
@@ -257,7 +257,7 @@ para os ambientes desktop. Como a definição de caminhos com a função
 \textit{glBegin} e a utilização de pontos flutuantes para
 calcular coordenadas de vértices \autocite{esVsGl}.
 
-Segundo \cite{html5mostwanted} um dos problemas do WebGL é sua alta
+Segundo \citet{html5mostwanted} um dos problemas do WebGL é sua alta
 curva de aprendizagem e o fato de não ter suporte para o Internet
 Explorer. Entretanto, o suporte foi adicionado na última versão do
 Internet Explorer (11). Infelizmente a dificuldade de utilização
@@ -283,7 +283,7 @@ dispositivos legados à partir do Android 2.3 e IPhone 5.
 
 \subsection{ÁUDIO}
 
-Segundo \cite{html5mostwanted} a limitação do elemento de áudio do
+Segundo \citet{html5mostwanted} a limitação do elemento de áudio do
 HTML5 é que seu propósito é para executar apenas um som, como o som
 de fundo dentro de um jogo. Não sendo adequada para efeitos sonoros 
 ou necessidades flexíveis de áudio.
@@ -294,7 +294,7 @@ executado ou demora até executar de modo de o que é executado ao mesmo
 tempo que o próximo som.
 
 A experimentação do protótipo relativo a API de áudio confirmou as
-afirmações de \cite{html5mostwanted} a API de som é boa se você
+afirmações de \citet{html5mostwanted} a API de som é boa se você
 deseja apenas tocar alguma música, mas se você está lançando eventos
 em um jogo ela ainda é problemática.
 
@@ -321,7 +321,7 @@ vídeos em tela cheia através de controles adicionais \autocite[pp.
 68]{proHtml5}.
 
 Assim como áudio o elemento \textit{video} sofre com problemas de
-codecs, segundo \cite{html5Tradeoffs}:
+codecs, segundo \citet{html5Tradeoffs}:
 \begin{quote}
 O maior problema com as API's de áudio e de vídeo do HTML5 é
 a disputa entre os codecs dos navegadores. Por exemplo, Mozilla e
@@ -332,7 +332,7 @@ respectivamente.
 \end{quote}
 
 O Safari do IOS também contém problemas exclusivos de vídeo. Segundo
-\cite{unsolvedMediaHtmlIssues} não é possível capturar frames de
+\citet{unsolvedMediaHtmlIssues} não é possível capturar frames de
 vídeo usando o método \textit{drawImage} do canvas. Também não é
 possível pré carregar arquivos de vídeo sem iteração do usuário.
 
@@ -383,7 +383,7 @@ comportamento não intuitivo. Arquivos de rede que não
 são declarados ali não poderão ser consumidos uma vez
 que exista cache na aplicação. O exemplo neste endereço
 \url{http://appcache-demo.s3-website-us-east-1.amazonaws.com/without-net
-work/} demonstra este comportamento. Segundo \cite{gameAssetManagement} a
+work/} demonstra este comportamento. Segundo \citet{gameAssetManagement} a
 especificação define que se um arquivo não for listado em alguma das
 seções do cache então o arquivo não estará disponível de qualquer
 forma para a aplicação.
@@ -501,7 +501,7 @@ integrados a algum mercado como o do Android ou da Apple.
 
 \section{Outras Limitações}
 
-\cite{html5Tradeoffs} cita algumas limitações em uma âmbito HTML em geral: \begin{quote} Não podemos mudar a imagem de fundo do dispositivo, ou adicionar toques
+\citet{html5Tradeoffs} cita algumas limitações em uma âmbito HTML em geral: \begin{quote} Não podemos mudar a imagem de fundo do dispositivo, ou adicionar toques
 etc. Similarmente, existem muitas API's de nuvem como os serviços
 de impressão do ICloud ou Google Cloud que estão disponíveis para
 aplicações nativas mas não para HTML5. Outros serviços utilitários

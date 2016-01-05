@@ -65,7 +65,7 @@ right=2cm
 \usepackage[final]{graphicx}
 \graphicspath{ {asset/} }
 %sort by alphabetic label, name, year, volume, title 
-\usepackage[citestyle=authoryear,backend=bibtex,sorting=anyvt]{biblatex}
+\usepackage[citestyle=authoryear,sorting=anyvt,backend=bibtex, natbib]{biblatex}
 \addbibresource{tcc.bib}
 \addto\captionsportuges{
 	\renewcommand{\contentsname}{\hspace*{\fill} SUMÁRIO\hspace*{\fill}}
@@ -256,10 +256,10 @@ O primeiro objetivo é estudar e resumir as seguintes tecnologias:
 \end{itemize}
 
 Estas foram selecionadas baseando-se em recomendações da literatura
-e mercado. Por exemplo, \cite{browserGamesTechnologyAndFuture} cita
+e mercado. Por exemplo, \citet{browserGamesTechnologyAndFuture} cita
 que vídeo, áudio, drag-and-drop, funcionalidades de gráficos e
 armazenamento offline são aspectos importantes do HTML5 para o
-desenvolvimento de jogos. Já o site da Mozilla \cite{gamesIntroduction}
+desenvolvimento de jogos. Já o site da Mozilla \citet{gamesIntroduction}
 contém uma lista de tecnologias que julga relevantes ao desenvolvimento
 de jogos na WEB as quais são fortemente relacionadas aos itens acima
 mencionados.
