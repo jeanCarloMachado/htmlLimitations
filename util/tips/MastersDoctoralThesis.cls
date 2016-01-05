@@ -214,7 +214,7 @@
 \fi
 \pagestyle{thesis}
 
-\renewcommand{\chaptermark}[1]{\tttypeout{\thechapter.\space #1}\markboth{\@chapapp\ \thechapter.\ #1}{\@chapapp\ \thechapter.\ #1}} % Define what is in the header and in what order
+\renewcommand{\chaptermark}[1]{\tttypeout{\thechapter.\space #1}\markboth{\@chapap. \thechapter.\ #1}{\@chapap. \thechapter.\ #1}} % Define what is in the header and in what order
 \renewcommand{\sectionmark}[1]{}
 \renewcommand{\subsectionmark}[1]{}
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
