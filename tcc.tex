@@ -81,10 +81,6 @@ right=2cm
 \titleformat{\subsection}{\normalfont\fontsize{12}{15}\bfseries}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\normalfont\fontsize{12}{15}\bfseries}{\thesubsubsection}{1em}{}
 
-\renewenvironment{quote}
-               {\list{}{\rightmargin\leftmargin}%
-                \item\relax\fontsize{10}{12}}
-               {\endlist}
 
 \usepackage{titletoc}
 \usepackage{tocloft}
@@ -108,6 +104,14 @@ right=2cm
 % }
 % \DeclareFieldFormat{url}{\bibstring{url}\space\url{#1}}
 % \DeclareFieldFormat{urlseen}{\bibstring{urlseen}\space\url{#1}}
+
+%quotes configuration {{{
+\usepackage{relsize,etoolbox}% http://ctan.org/pkg/{relsize,etoolbox}
+\AtBeginEnvironment{quote}{\footnotesize}% Step font down one size relative to current font.
+\usepackage{etoolbox}
+\renewenvironment{quote}{\list{}{\leftmargin=4cm\rightmargin=0cm}\item[]}{\endlist}
+\expandafter\def\expandafter\quote\expandafter{\quote\singlespacing}
+%}}}
 
 %{{{ VARIABLES
 \title{\uppercase{Limitações do HTML \\ no desenvolvimento de jogos multiplataforma}}
