@@ -68,6 +68,7 @@ Remove jquery from the prototype
 Remove draft from tex header
 Falar sobre a falta de coesão entre os tipos de JavaScript, alguns são nodelists outros são arrays, etc
 Se comparado com jQuery as API's de JavaScript são muito mais verbosas
+A API do jQuery é também mais permissiva, se um elmento não eixste não vai ser lançado erro, já no JavaScript sim
 Print
 1 - vai ser importante tu anexar um CD/DVD com o código-fonte do software. geralmente a banca gosta de olhar
 Listar especificametne os objetivos específicos e não genericamente como está agora.
