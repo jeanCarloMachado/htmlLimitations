@@ -49,9 +49,8 @@ Translate Abstract
 
 #TODO
 
-Remove numbering from the bibliography
 Table of limitation codes, description and if it is avoidable
-Remove jquery from the prototype
+Remove numbering from the bibliography
 Check sections cases
 Complete image descriptions (look for missing names on lof)
 Use requestAnimationFrame on prototype
@@ -62,6 +61,7 @@ Check case of references
 Talk about ios limitation on publishing and deploying apps (the time length)
 Increment appendices
 Adjust countdown image
+Remove jquery from the prototype
 Remove draft from tex header
 Print
 

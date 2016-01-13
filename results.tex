@@ -63,8 +63,13 @@ menores podem sair em desvantagem.
 Na perspectiva do desenvolvedor, pode-se lidar com múltiplos tamanhos
 de tela trabalhando com tamanhos relativos via CSS. Não obstante, há
 casos, como o dos botões de certo e errado do protótipo, em que a
-proporções ficam exageradas, nesses casos utilizar controles como o
+proporções ficam exageradas.  Nesses casos utilizar controles como o
 \textit{max-width} e \textit{min-width} é uma solução conveniente.
+Os botões de certo e errado tem uma proporção de 40\% da tela, em
+dispositivos móveis este valor é sensato, mas em desktops com grandes
+resoluções a largura fica exagerada. Para resolver este problema foi
+configurado via CSS que a largura dos botões tenham no máximo 300
+pixels.
 
 Outro fator problemático do CSS é a presença de prefixos. Tecnologias
 experimentais do CSS geralmente levam o nome do distribuidor como
