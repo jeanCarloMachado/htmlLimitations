@@ -49,7 +49,10 @@ Translate Abstract
 
 #TODO
 
+Mudar a abreviação de figuras.
+Ajudstartas referencias das figuras.
 Table of limitation codes, description and if it is avoidable
+Colocar prints de como o protótipo fica em outras resoluções
 Remove numbering from the bibliography
 Check sections cases
 Complete image descriptions (look for missing names on lof)
@@ -64,6 +67,9 @@ Adjust countdown image
 Remove jquery from the prototype
 Remove draft from tex header
 Print
+Listar especificametne os objetivos específicos e não genericamente como está agora.
+Colocar os nomes nas tables (chamar de Quadro e dar um título)
+
 
 #FUTURE
 
