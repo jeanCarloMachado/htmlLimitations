@@ -1703,10 +1703,10 @@ IndexedDB.
 \subsection{WEB STORAGE}
 
 Web Storage, também conhecido como Local Storage, provê uma forma de
-armazenar os dados como chave valor dentro do navegador. Os dados são
-persistidos mesmo que o navegador seja fechado.
+armazenar dados no formato chave valor dentro do navegador. Os dados são
+persistidos mesmo que o usuário feche a página ou o navegador.
 
-É um recurso similar a cookies, contudo algumas diferenças
+Web Storage é um recurso similar a cookies, contudo algumas diferenças
 substanciais são perceptíveis. Web Storage não requer que os dados
 sejam trafegados como cabeçalhos nas requisições. Também provê
 maiores espaços de armazenamento quando comparado a cookies.
@@ -1748,8 +1748,8 @@ alert(localStorage.getItem('key'));
 
 A figura \ref{fig:WebStorage} exemplifica a utilização do Web
 Storage, para utilizar o armazenamento de sessão utiliza-se o objeto
-sessionStorage. Já para utilizar o armazenamento local utiliza-se o
-objeto localStorage.
+\textit{sessionStorage}. Já para utilizar o armazenamento local utiliza-se o
+objeto \textit{localStorage}.
 
 Web Storage é uma solução simples que comporta muitos casos de uso.
 Não obstante muitas vezes é necessário um controle mais refinado

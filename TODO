@@ -40,27 +40,30 @@ Write limitations well
 Move introduction comments about the benefits of the WEB to it's place on the revision (think well)
 Fix aspects suggested by reviewer
 Check quotes font width, indenting and spacing
-
-#TODO
-
-Remove jquery from the prototype
-Complete image descriptions (look for missing names on lof)
-Remove numbering from the bibliography
-Use requestAnimationFrame on prototype
-Write about the canvas to the prototype
-Add a example about webgl
-Comentar as citaçẽos com referencia direta (que foram traduzidas por mim)
 Trabalhar na introdução
 Finish results
 Finish conclusion
 Finish future work
 Write abstract
 Translate Abstract
+
+#TODO
+
+Remove numbering from the bibliography
+Table of limitation codes, description and if it is avoidable
+Remove jquery from the prototype
 Check sections cases
-Table of lilitation codes, description and if it is avoidable
-see lemes to more on game engenieering
+Complete image descriptions (look for missing names on lof)
+Use requestAnimationFrame on prototype
+Write about the canvas to the prototype
+Add a example about webgl
+see Lemes to more on game engineering
 Check case of references
-Talk about ios limitation on publishin and deploying apps (the time lenght)
+Talk about ios limitation on publishing and deploying apps (the time length)
+Increment appendices
+Adjust countdown image
+Remove draft from tex header
+Print
 
 #FUTURE
 
