@@ -46,6 +46,7 @@ Finish conclusion
 Finish future work
 Write abstract
 Translate Abstract
+Remove jquery from the prototype
 
 #TODO
 
@@ -56,15 +57,13 @@ Colocar prints de como o protótipo fica em outras resoluções
 Remove numbering from the bibliography
 Check sections cases
 Complete image descriptions (look for missing names on lof)
-Use requestAnimationFrame on prototype
 Write about the canvas to the prototype
-Add a example about webgl
 see Lemes to more on game engineering
 Check case of references
 Talk about ios limitation on publishing and deploying apps (the time length)
 Increment appendices
 Adjust countdown image
-Remove jquery from the prototype
+Added desktop prints of the prototype
 Remove draft from tex header
 Falar sobre a falta de coesão entre os tipos de JavaScript, alguns são nodelists outros são arrays, etc
 Se comparado com jQuery as API's de JavaScript são muito mais verbosas
