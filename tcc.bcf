@@ -319,8 +319,7 @@
     <bcf:option>doi</bcf:option>
     <bcf:option>eprint</bcf:option>
     <bcf:option>related</bcf:option>
-    <bcf:option>dashed</bcf:option>
-    <bcf:option>mergedate</bcf:option>
+    <bcf:option>subentry</bcf:option>
   </bcf:optionscope>
   <bcf:optionscope type="PER_TYPE">
     <bcf:option>alphaothers</bcf:option>
@@ -2239,72 +2238,165 @@
   <!-- CITATION DATA -->
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
-    <bcf:datasource type="file" datatype="bibtex">tcc.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">developingEffect</bcf:citekey>
-    <bcf:citekey order="2">HTML5CrossPlatformGameDevelopment</bcf:citekey>
-    <bcf:citekey order="3">browserGamesTechnologyAndFuture</bcf:citekey>
-    <bcf:citekey order="4">indieGamesLemes</bcf:citekey>
-    <bcf:citekey order="5">gamebenefits</bcf:citekey>
-    <bcf:citekey order="6">gamebenefits</bcf:citekey>
-    <bcf:citekey order="7">browserGamesTechnologyAndFuture</bcf:citekey>
-    <bcf:citekey order="8">mdn2015</bcf:citekey>
-    <bcf:citekey order="9">htmlIsTheNewHtml5</bcf:citekey>
-    <bcf:citekey order="10">diveIntohtml</bcf:citekey>
-    <bcf:citekey order="11">htmlAndCssDucket</bcf:citekey>
-    <bcf:citekey order="12">diveIntohtml</bcf:citekey>
-    <bcf:citekey order="13">CascadingStyleSheets</bcf:citekey>
-    <bcf:citekey order="14">cssSelectors</bcf:citekey>
-    <bcf:citekey order="15">html5mostwanted</bcf:citekey>
-    <bcf:citekey order="16">diveIntohtml</bcf:citekey>
-    <bcf:citekey order="17">diveIntohtml</bcf:citekey>
-    <bcf:citekey order="18">diveIntohtml</bcf:citekey>
-    <bcf:citekey order="19">browserGamesTechnologyAndFuture</bcf:citekey>
-    <bcf:citekey order="20">browserGamesTechnologyAndFuture</bcf:citekey>
-    <bcf:citekey order="21">diveIntohtml</bcf:citekey>
-    <bcf:citekey order="22">diveIntohtml</bcf:citekey>
-    <bcf:citekey order="23">diveIntohtml</bcf:citekey>
-    <bcf:citekey order="24">diveIntohtml</bcf:citekey>
-    <bcf:citekey order="25">html5Tradeoffs</bcf:citekey>
-    <bcf:citekey order="26">diveIntohtml</bcf:citekey>
-    <bcf:citekey order="27">diveIntohtml</bcf:citekey>
-    <bcf:citekey order="28">browserGamesTechnologyAndFuture</bcf:citekey>
-    <bcf:citekey order="29">currentStateCrossPlatform</bcf:citekey>
-    <bcf:citekey order="30">html5mostwanted</bcf:citekey>
-    <bcf:citekey order="31">diveIntohtml</bcf:citekey>
-  </bcf:section>
-  <bcf:sortlist section="0" name="anyvt" type="entry" sortscheme="anyvt">
-  <bcf:sorting>
-    <bcf:sort order="1">
-      <bcf:sortitem order="1">presort</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="2">
-      <bcf:sortitem order="1">labelalpha</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="3" final="1">
-      <bcf:sortitem order="1">sortkey</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="4">
-      <bcf:sortitem order="1">sortname</bcf:sortitem>
-      <bcf:sortitem order="2">author</bcf:sortitem>
-      <bcf:sortitem order="3">editor</bcf:sortitem>
-      <bcf:sortitem order="4">translator</bcf:sortitem>
-      <bcf:sortitem order="5">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="6">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="5">
-      <bcf:sortitem order="1">sortyear</bcf:sortitem>
-      <bcf:sortitem order="2">year</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="6">
-      <bcf:sortitem order="1" pad_side="left" pad_width="4" pad_char="0">volume</bcf:sortitem>
-      <bcf:sortitem order="2">0000</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="7">
-      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="2">title</bcf:sortitem>
-    </bcf:sort>
-  </bcf:sorting>
-  </bcf:sortlist>
-</bcf:controlfile>
+    <bcf:citekey order="1">gameDesignPatterns</bcf:citekey>
+    <bcf:citekey order="2">crossPlatformMobileGameDevelopment</bcf:citekey>
+    <bcf:citekey order="3">HTML5CrossPlatformGameDevelopment</bcf:citekey>
+    <bcf:citekey order="4">html5Tradeoffs</bcf:citekey>
+    <bcf:citekey order="5">htmlSurvey</bcf:citekey>
+    <bcf:citekey order="6">html5Tradeoffs</bcf:citekey>
+    <bcf:citekey order="7">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="8">htmlSurvey</bcf:citekey>
+    <bcf:citekey order="9">html5Tradeoffs</bcf:citekey>
+    <bcf:citekey order="10">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="11">crossPlatformMobileGame</bcf:citekey>
+    <bcf:citekey order="12">browserGamesTechnologyAndFuture</bcf:citekey>
+    <bcf:citekey order="13">gamesIntroduction</bcf:citekey>
+    <bcf:citekey order="14">aSeriousContender</bcf:citekey>
+    <bcf:citekey order="15">indieGamesLemes</bcf:citekey>
+    <bcf:citekey order="16">gamebenefits</bcf:citekey>
+    <bcf:citekey order="17">gamebenefits</bcf:citekey>
+    <bcf:citekey order="18">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="19">gamebenefits</bcf:citekey>
+    <bcf:citekey order="20">gamebenefits</bcf:citekey>
+    <bcf:citekey order="21">gamebenefits</bcf:citekey>
+    <bcf:citekey order="22">gamebenefits</bcf:citekey>
+    <bcf:citekey order="23">gamebenefits</bcf:citekey>
+    <bcf:citekey order="24">gamebenefits</bcf:citekey>
+    <bcf:citekey order="25">gamebenefits</bcf:citekey>
+    <bcf:citekey order="26">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="27">crossPlatformMobileGame</bcf:citekey>
+    <bcf:citekey order="28">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="29">indieGamesLemes</bcf:citekey>
+    <bcf:citekey order="30">gwt</bcf:citekey>
+    <bcf:citekey order="31">crossPlatformMobileGameDevelopment</bcf:citekey>
+    <bcf:citekey order="32">crossPlatformMobileGameDevelopment</bcf:citekey>
+    <bcf:citekey order="33">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="34">browserGamesTechnologyAndFuture</bcf:citekey>
+    <bcf:citekey order="35">gwt</bcf:citekey>
+    <bcf:citekey order="36">browserGamesTechnologyAndFuture</bcf:citekey>
+    <bcf:citekey order="37">aSeriousContender</bcf:citekey>
+    <bcf:citekey order="38">aSeriousContender</bcf:citekey>
+    <bcf:citekey order="39">aSeriousContender</bcf:citekey>
+    <bcf:citekey order="40">svgTime</bcf:citekey>
+    <bcf:citekey order="41">openWebDefinition</bcf:citekey>
+    <bcf:citekey order="42">aSeriousContender</bcf:citekey>
+    <bcf:citekey order="43">HTML5</bcf:citekey>
+    <bcf:citekey order="44">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="45">mdn2015</bcf:citekey>
+    <bcf:citekey order="46">htmlIsTheNewHtml5</bcf:citekey>
+    <bcf:citekey order="47">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="48">howBrowsersWork</bcf:citekey>
+    <bcf:citekey order="49">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="50">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="51">htmlAndCssDucket</bcf:citekey>
+    <bcf:citekey order="52">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="53">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="54">howBrowsersWork</bcf:citekey>
+    <bcf:citekey order="55">devdocs</bcf:citekey>
+    <bcf:citekey order="56">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="57">CascadingStyleSheets</bcf:citekey>
+    <bcf:citekey order="58">cssSelectors</bcf:citekey>
+    <bcf:citekey order="59">HTML5CrossPlatformGameDevelopment</bcf:citekey>
+    <bcf:citekey order="60">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="61">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="62">mdnTransitions</bcf:citekey>
+    <bcf:citekey order="63">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="64">ecmaSpecificaton</bcf:citekey>
+    <bcf:citekey order="65">crossPlatformMobileGame</bcf:citekey>
+    <bcf:citekey order="66">ecmaSupport</bcf:citekey>
+    <bcf:citekey order="67">ecma7</bcf:citekey>
+    <bcf:citekey order="68">howBrowsersWork</bcf:citekey>
+    <bcf:citekey order="69">chromeVsAndroid</bcf:citekey>
+    <bcf:citekey order="70">comparisonPlatforms</bcf:citekey>
+    <bcf:citekey order="71">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="72">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="73">svgTime</bcf:citekey>
+    <bcf:citekey order="74">svgTime</bcf:citekey>
+    <bcf:citekey order="75">svgTime</bcf:citekey>
+    <bcf:citekey order="76">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="77">mdnCanvas</bcf:citekey>
+    <bcf:citekey order="78">mdnCanvas</bcf:citekey>
+    <bcf:citekey order="79">mdnCanvas</bcf:citekey>
+    <bcf:citekey order="80">buildingHtml5Game</bcf:citekey>
+    <bcf:citekey order="81">3daps</bcf:citekey>
+    <bcf:citekey order="82">3daps</bcf:citekey>
+    <bcf:citekey order="83">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="84">3daps</bcf:citekey>
+    <bcf:citekey order="85">virtualReality</bcf:citekey>
+    <bcf:citekey order="86">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="87">proHtml5</bcf:citekey>
+    <bcf:citekey order="88">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="89">proHtml5</bcf:citekey>
+    <bcf:citekey order="90">proHtml5</bcf:citekey>
+    <bcf:citekey order="91">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="92">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="93">browserGamesTechnologyAndFuture</bcf:citekey>
+    <bcf:citekey order="94">audioApiSpec</bcf:citekey>
+    <bcf:citekey order="95">audioApiSpec</bcf:citekey>
+    <bcf:citekey order="96">audioApiSpec</bcf:citekey>
+    <bcf:citekey order="97">html5Tradeoffs</bcf:citekey>
+    <bcf:citekey order="98">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="99">publishHtml5</bcf:citekey>
+    <bcf:citekey order="100">buildingHtml5Game</bcf:citekey>
+    <bcf:citekey order="101">gamepad</bcf:citekey>
+    <bcf:citekey order="102">orientationSpec</bcf:citekey>
+    <bcf:citekey order="103">http2</bcf:citekey>
+    <bcf:citekey order="104">gameAssetManagement</bcf:citekey>
+    <bcf:citekey order="105">depuracao</bcf:citekey>
+    <bcf:citekey order="106">gamesDebug</bcf:citekey>
+    <bcf:citekey order="107">chromeDevTools</bcf:citekey>
+    <bcf:citekey order="108">gamesDebug</bcf:citekey>
+    <bcf:citekey order="109">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="110">browserGamesTechnologyAndFuture</bcf:citekey>
+    <bcf:citekey order="111">publishHtml5</bcf:citekey>
+    <bcf:citekey order="112">crossPlatformMobileGame</bcf:citekey>
+    <bcf:citekey order="113">aSeriousContender</bcf:citekey>
+    <bcf:citekey order="114">crossPlatformMobileGameDevelopment</bcf:citekey>
+    <bcf:citekey order="115">viabilityBusinessApplications</bcf:citekey>
+    <bcf:citekey order="116">homescreenwebapps</bcf:citekey>
+    <bcf:citekey order="117">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="118">creatingFun</bcf:citekey>
+    <bcf:citekey order="119">currentStateCrossPlatform</bcf:citekey>
+    <bcf:citekey order="120">viabilityBusinessApplications</bcf:citekey>
+    <bcf:citekey order="121">crossPlatformMobileGame</bcf:citekey>
+    <bcf:citekey order="122">publishHtml5</bcf:citekey>
+    <bcf:citekey order="123">viabilityBusinessApplications</bcf:citekey>
+    <bcf:citekey order="124">htmlResearchJournal</bcf:citekey>
+    <bcf:citekey order="125">howBrowsersWork</bcf:citekey>
+    <bcf:citekey order="126">html5Tradeoffs</bcf:citekey>
+    <bcf:citekey order="127">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="128">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="129">homescreenwebapps</bcf:citekey>
+    <bcf:citekey order="130">chromeWebView</bcf:citekey>
+    <bcf:citekey order="131">chromeWebView</bcf:citekey>
+    <bcf:citekey order="132">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="133">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="134">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="135">esVsGl</bcf:citekey>
+    <bcf:citekey order="136">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="137">3daps</bcf:citekey>
+    <bcf:citekey order="138">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="139">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="140">html5mostwanted</bcf:citekey>
+    <bcf:citekey order="141">unsolvedMediaHtmlIssues</bcf:citekey>
+    <bcf:citekey order="142">researchOnHtml</bcf:citekey>
+    <bcf:citekey order="143">proHtml5</bcf:citekey>
+    <bcf:citekey order="144">html5Tradeoffs</bcf:citekey>
+    <bcf:citekey order="145">unsolvedMediaHtmlIssues</bcf:citekey>
+    <bcf:citekey order="146">gameAssetManagement</bcf:citekey>
+    <bcf:citekey order="147">gameAssetManagement</bcf:citekey>
+    <bcf:citekey order="148">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="149">gameAssetManagement</bcf:citekey>
+    <bcf:citekey order="150">mdnOrientation</bcf:citekey>
+    <bcf:citekey order="151">diveIntohtml</bcf:citekey>
+    <bcf:citekey order="152">canvasinspector</bcf:citekey>
+    <bcf:citekey order="153">firefoxCanvasDebug</bcf:citekey>
+    <bcf:citekey order="154">aSeriousContender</bcf:citekey>
+    <bcf:citekey order="155">gamepad</bcf:citekey>
+    <bcf:citekey order="156">gameCommunities</bcf:citekey>
+    <bcf:citekey order="157">gameCommunities</bcf:citekey>
+    <bcf:citekey order="158">gameCommunities</bcf:citekey>
+    <bcf:citekey order="159">html5Tradeoffs</bcf:citekey>
+    <bcf:citekey order="160">currentStateCrossPlatform</bcf:citekey>

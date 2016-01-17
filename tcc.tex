@@ -26,6 +26,7 @@ right=2cm
 \usepackage{mathptmx}
 \usepackage{titling}
 \usepackage{fancyhdr}
+\usepackage{url}
 \usepackage{anyfontsize}
 %indent first paragraphs of sections
 \usepackage{indentfirst}
@@ -68,8 +69,8 @@ right=2cm
 \usepackage[final]{graphicx}
 \graphicspath{ {asset/} }
 %sort by alphabetic label, name, year, volume, title 
-\usepackage[citestyle=authoryear,sorting=anyvt,backend=bibtex, natbib]{biblatex}
-\addbibresource{tcc.bib}
+%\usepackage[citestyle=authoryear,sorting=anyvt,backend=bibtex, natbib]{biblatex}
+%\addbibresource{tcc.bib}
 \addto\captionsportuges{
 	\renewcommand{\contentsname}{\hspace*{\fill} SUMÁRIO\hspace*{\fill}}
     \renewcommand{\listfigurename}{\hspace*{\fill} LISTA DE FIGURAS\hspace*{\fill}}
@@ -209,7 +210,7 @@ HTML5 is composed of changes rapidly and their support is miscellaneous.
 Given this situation, this work aims to study the limitations of HTML5
 when applied to multi platform game development. For that, we elaborated
 a bibliographic research and a game prototype was developed. With the
-expertize we got from it, and the data we collected, we composed a list
+expertise we got from it, and the data we collected, we composed a list
 of limitations that are present currently on HTML.
 }
 \\
@@ -255,7 +256,9 @@ of limitations that are present currently on HTML.
 
 \clearpage
 \markboth{}{}
-\printbibliography[heading=bibintoc,title={REFERÊNCIAS BIBLIOGRÁFICAS}]
+%\printbibliography[heading=bibintoc,title={REFERÊNCIAS BIBLIOGRÁFICAS}]
+\bibliographystyle{abnt}
+\bibliography{tcc}
 \markboth{}{}
 %}}}
 \appendix
