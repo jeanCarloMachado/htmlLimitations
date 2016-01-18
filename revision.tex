@@ -75,13 +75,10 @@ elaboração de uma mecânica é tarefa quintessencial para a
 construção de um jogo de sucesso.
 
 A mecânica não pode ser simplesmente boa, nos melhores jogos ela é
-intuitiva. \citet{crossPlatformMobileGame} cita que:
-\begin{quote}
-O processo de o jogador entender por si a mecânica do jogo é um
-componente vital para a sua satisfação. Se ele não entender as
+intuitiva. O processo de o jogador entender por si a mecânica do jogo
+é um componente vital para a sua satisfação. Se ele não entender as
 regras do jogo quase que instantaneamente muitas pessoas vão perder o
-interesse e desistir rapidamente.
-\end{quote}
+interesse e desistir rapidamente \autocite{crossPlatformMobileGame}.
 
 Ainda sobre a importância da mecânica \citet{html5mostwanted}, afirma
 que se os gráficos e áudio são espetaculares mas a jogabilidade
@@ -90,7 +87,7 @@ mecânica, então não invista muito em visual ao menos que isso
 desempenhe um papel essencial no jogo.
 
 Os desenvolvedores tem que evitar fazer o jogo para eles mesmos.
-Falta de crítica antes do desenvolvimento também tende a gerar criações ruins.
+Falta de crítica antes do desenvolvimento também tende a gerar jogos ruins.
 Bons jogos são aqueles que ao menos suprem as expectativas dos usuário.
 \citet{indieGamesLemes} aponta alguns fatores procurados pelos usuários
 de jogos: desafio, socializar, experiência solitária, respeito e
@@ -103,37 +100,49 @@ O sumário também conta com um resumo sobre metodologias de
 desenvolvimento de software contextualizada para a criação jogos.
 
 Depois dos preparativos efetuados, pode-se começar a construção
-do jogo. Jogos digitais geralmente operam através  um laço que executa uma série
+do jogo. 
+
+\subsection{Laço}
+
+Jogos digitais geralmente operam através um laço que executa uma série
 de tarefas a cada frame, construindo a ilusão de um mundo animado
-\autocite[p. 31]{gwt}. Da perspectiva da programação a parte
+\autocite[p. 31]{gwt}. Da perspectiva da programação, a parte
 principal de um jogo é o laço onde o jogo é executado \autocite[p.
-17]{crossPlatformMobileGameDevelopment}. A cada iteração do jogo
-o laço é executado e o processamento de entrada de usuário e
-computações correlacionadas são executadas.
+17]{crossPlatformMobileGameDevelopment}. A cada iteração do 
+laço o processamento de entrada de dados do usuário e
+alterações da cena tem de ser computados, tornando a otimização deste processo
+importantíssima para que o jogo não se torne lento.
 
 Na seção Otimizações para jogos em JavaScript será abordada as
-possibilidades na hora de construir o laço.
+opções da WEB na hora de construir um laço de jogo.
+
+Outra decisão técnica importante na hora de desenvolver jogos é a 
+seleção das plataformas alvo mais adequadas. Neste trabalho o foco será 
+em  HTML5 para desktops e dispositivos móveis inteligentes. Não obstante,
+na sessão a seguir serão descritas, genericamente, as plataformas que os
+desenvolvedores podem selecionar ao desenvolver jogos, juntamente com 
+seus benefícios e fraquezas.
 
 \section{JOGOS MULTIPLATAFORMA}
 
 Jogos multiplataforma são jogos que rodam em mais de uma plataforma.
 Cada plataforma contém sua própria API (\textit{Application
 Programming Interface}), sendo que se um aplicativo foi criado para
-uma plataforma ele não vai poder ser utilizado em outra pois as APIs
-são diferentes \autocite{crossPlatformMobileGameDevelopment}. Além da
-API, dispositivos de múltiplas plataformas variam em seus recursos,
-capacidades e qualidade.
+uma plataforma ele não vai poder ser utilizado em outra pois as
+APIs são diferentes \autocite{crossPlatformMobileGameDevelopment}.
+Além da API, dispositivos de múltiplas plataformas variam em seus
+recursos, capacidades e qualidade. Devido a essas características,
+desenvolvedores de jogos que almejem múltiplas plataformas, deparam-se
+com uma nova gama de oportunidades e desafios.
 
-Desenvolvedores de jogos que almejem múltiplas plataformas, devido aos
-fatores acima citados, deparam-se com uma nova gama de oportunidades e
-desafios.
-
-Um destes desafios é fornecer \textit{feedback} suficiente para o jogador pois
-muitas vezes o dispositivo é limitado em proporções, som, tela.
-Por estas peculiaridades tendências como WEB design responsivo (RWD)
-emergiram, requerendo interfaces mais fluídas e intuitivas o possível.
-As tecnologias também tiveram que evoluir, como o CSS3 media queries,
-tamanhos relativos, entre outros.
+Um destes desafios é fornecer \textit{feedback} suficiente para o
+jogador pois muitas vezes o dispositivo é limitado em proporções,
+som, tela. Devido a estes requerimentos, tendências como WEB design
+responsivo (RWD) emergiram. Requerendo que os desenvolvedores busquem
+criar interfaces cada vez mais fluídas e intuitivas o possível. As
+tecnologias da Web também tiveram que acompanhar a mudança. CSS3 media
+queries, tamanhos relativos, são exemplos de tecnologias desenvolvidas
+com o foco em multiplataforma.
 
 Outro desafio multiplataforma é suportar os vários ecossistemas
 de software com tecnologias diferenciadas e versões de
@@ -144,36 +153,29 @@ do desenvolvimento de jogo é a escolha das tecnologias utilizadas.
 
 Designers de jogos tem as seguintes possibilidades quando em face
 de desenvolver um jogo multiplataforma: criar um jogo web, um jogo
-híbrido, ou nativo. As opções serão descritas abaixo.
+híbrido, ou nativo. As opções serão descritas a seguir.
 
 \subsection{JOGOS WEB}
 
 Um jogo web é um jogo que utiliza o HTML e ferramentas correlacionadas
-para sua construção e disponibilização.
+para sua construção e disponibilização. Não obstante, o objetivo
+primário da WEB nunca foi o desenvolvimento de jogos. Por muito
+tempo os títulos famosos de jogos da web residiam em jogos como
+\textit{Traviam}, desprovidos de animações, compostos basicamente por
+formulários, imagens e textos. Durante esse período o interesse em
+jogos WEB residia principalmente nas de casualidade, flexibilidade, e o
+fator social dos jogos.
 
-O objetivo primário da WEB nunca foi o desenvolvimento de
-jogos, mas as novas versões do HTML estão provendo funcionalidades
-que permitem a criação de conteúdo interativo, incluindo jogos. Sendo 
-assim, nem sempre as ferramentas desejadas estão disponíveis mas a 
-maturidade atual do HTML5 aponta para a possibilidade de criação de 
-jogos cada vez mais complexos e interativos.
-
-Por muito tempo os títulos famosos de jogos da web residiam em jogos
-como \textit{Traviam}, desprovidos de animações, compostos basicamente
-por formulários, imagens e textos. Não obstante, publicar jogos
-baseados em texto é uma atividade cada vez mais rara, podendo-se
-concluir que interface gráfica se tornou uma funcionalidade mandatória
-\autocite{browserGamesTechnologyAndFuture}.
-
-Durante esse período o interesse em jogos WEB residia principalmente
-nas de casualidade, flexibilidade, e o fator social dos jogos.
 Mais recentemente é que a WEB começou a ser vista como de fato um
 ambiente com interatividade para criação de jogos dos mais variados
-gêneros. Jogos como BrowserQuest, Angry Birds, entre outros
-títulos expandiram os conceitos do que é possível se fazer utilizando
-as ferramentas da WEB. Segundo \cite[p. 28]{gwt} um bom exemplo
-que tem alcançado bastante sucesso entre o público são os jogos
-adicionados no logotipo do Google, chamados doodles.
+gêneros. Publicar jogos baseados em texto é uma atividade cada vez
+mais rara, podendo-se concluir que interface gráfica se tornou uma
+funcionalidade mandatória \autocite{browserGamesTechnologyAndFuture}.
+Jogos como BrowserQuest, Angry Birds, entre outros títulos expandiram
+os conceitos do que é possível se fazer utilizando as ferramentas
+da WEB. Segundo \cite[p. 28]{gwt} um bom exemplo que tem alcançado
+bastante sucesso entre o público são os jogos adicionados no logotipo
+do Google, chamados doodles.
 
 Quando comparados a outras abordagens de criar jogos, jogos da WEB
 contém vários aspectos positivos. Talvez o mais reconhecível
@@ -191,10 +193,10 @@ Por serem criados à partir das tecnologias da WEB, jogos na WEB, se
 beneficiam de uma arquitetura construída para um ambiente social, sendo
 relativamente mais fácil criar experiências sociais.
 
-A performance é um ponto negativo da abordagem WEB, é difícil
-chegar a performance comparável a abordagem nativa. Não obstante
-esse problema é cada vez menor o hardware dos dispositivos são cada
-vez melhores e as tecnologias tecnologias de software também avançam
+A performance é um ponto negativo da WEB, é difícil chegar a
+performance comparável a abordagem nativa. Não obstante, esse
+problema é cada vez menor o hardware dos dispositivos são cada vez
+melhores e as tecnologias tecnologias de software também avançam
 substancialmente.
 
 Existem inconsistências nas implementações das especificações
@@ -212,39 +214,37 @@ Além dos jogos web, há a possibilidade de criar jogos nativos e híbridos.
 
 Uma aplicação nativa é uma aplicação que foi desenvolvida para ser
 utilizada em uma plataforma ou dispositivo específico \autocite[p.
-7]{aSeriousContender}. 
+7]{aSeriousContender}. Aplicativos nativos tendem a oferecer uma
+experiência mais próxima com a do resto do sistema operacional o qual
+está rodando. Potencialmente softwares nativos são mais rápidos
+que suas alternativas da WEB, visto que interagem com o dispositivo
+através do sistema operacional. Diferentemente dos jogos WEB, que
+necessitam que o navegador interaja com o sistema operacional, para
+por sua ver interagir com o dispositivo. Por terem acesso total ao
+dispositivo, aplicativos nativos podem aproveitar o hardware da melhor
+forma possível e oferecer ao usuário a melhor experiência possível
+\autocite[p. 7]{aSeriousContender}.
 
-Aplicativos nativos tendem a oferecer uma experiência mais próxima com
-a do resto do sistema operacional o qual está rodando. Potencialmente
-softwares nativos são mais rápidos que suas alternativas da WEB
-visto que interagem com o dispositivo através do sistema operacional.
-Diferentemente dos jogos WEB que necessitam que o navegador interaja com
-o sistema operacional para por sua ver interagir com o dispositivo. Por
-terem acesso total ao dispositivo aplicativos nativos podem aproveitar
-o hardware da melhor forma possível e oferecer ao usuário a melhor
-experiência possível \autocite[p. 7]{aSeriousContender}.
-
-Desenvolver jogos nativos tende a ser mais caro que a alternativa da WEB
+Desenvolver jogos nativos tende a ser mais caro que a alternativa da WEB,
 visto que é necessário duplicar funcionalidades em sistemas distintos
 e manter um profissional por ambiente suportado. As versões nativas
-são totalmente incompatíveis impossibilitando reúso.
+são totalmente incompatíveis entre si, impossibilitando reúso em múltiplas plataformas.
 
 A alternativa hibrida fica em meios ao desenvolvimento nativo e WEB e
-será explicada abaixo.
+será descrita abaixo.
 
 \subsection{JOGOS HÍBRIDOS}
 
-A alternativa híbrida busca beneficiar-se das melhores características
-do nativo e o melhor do desenvolvimento WEB.
-
-Muitas vezes desenvolve-se aplicações híbridas utilizando as
+A alternativa híbrida é uma tentativa de beneficiar-se das melhores
+características da abordagem nativa e o melhor do desenvolvimento
+WEB. Muitas vezes desenvolve-se aplicações híbridas utilizando as
 tecnologias da WEB só que ao invés de disponibilizar a aplicação
 através de um navegador a aplicação WEB é instalada como um
 aplicativo normal. A aplicação roda em uma WebWiew que é um
 componente do sistema operacional capaz de rodar as tecnologias da
 WEB. Desta forma o aplicativo WEB conversa diretamente com o sistema
-operacional não necessitando de um software de terceiro para mediar a
-interação.
+operacional, não necessitando da intervenção de um software terceiro
+para mediar a interação.
 
 Outra possibilidade híbrida é escrever o software em uma linguagem
 e gerar binários para as plataformas alvo. Utilizando o Xamarin é
@@ -262,13 +262,13 @@ dispositivos através de APIs JavaScript implementadas nativamente.
 
 Outro benefício da estratégia híbrida em relação a WEB é que
 ela permite empacotar as aplicações com um experiência exata a dos
-softwares nativos. Não sendo perceptível para o usuário final a
+softwares nativos. Sendo imperceptível para o usuário final a
 diferença ente um aplicativo híbrido e um nativo.
 
 Não obstante, segundo \cite[p. 8]{aSeriousContender} a diferença
 entre o que é possível com a estratégia híbrida e a WEB está
 diminuindo devido ao grande esforço da comunidade WEB para prover
-especificações.
+novas especificações.
 
 %}}}
 \section{WEB}
@@ -460,6 +460,7 @@ como HTML5 (como a API de armazenamento de dados).
     \centering
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{html5.jpg}
     \caption{Suíte HTML}
+    \source{http://64vision.com/HTML5-what-is-it}
 \end{figure}
 
 Uma tecnologia fortemente entrelaçada com o HTML é o DOM.
@@ -1096,6 +1097,7 @@ navegadores em dezembro de 2015.
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{htmlSupport.png}
 	\caption{Suporte das especificações do HTML nos navegadores}
     \label{fig:htmlSupport}
+    \source{https://html5test.com/}
 \end{figure}
 
 %}}}

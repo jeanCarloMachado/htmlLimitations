@@ -1,0 +1,110 @@
+\ProvidesFile{abnt-authoryear.bbx}[\abx@bbxid]
+\DeclareLanguageMapping{brazilian}{abnt-brazilian}
+
+\RequireBibliographyStyle{standard}
+\ExecuteBibliographyOptions{firstinits=true}
+
+\setlength\bibhang{0pt}  % no hanging indentation
+
+% standard uses default
+\DeclareNameAlias{default}{last-first}
+
+% clean bibliography page
+\renewcommand{\bibsetup}{\thispagestyle{empty}}
+
+% how titles are shown in bibliography
+\DeclareFieldFormat
+  [article,inbook,incollection,inproceedings,patent,thesis,unpublished]
+  {title}{#1\isdot}
+
+% take out "in:" from articles
+\renewbibmacro{in:}{%
+  \ifentrytype{article}{}{\printtext{\bibstring{in}\intitlepunct}}}
+
+% punctuation for author lists
+\renewcommand*{\multinamedelim}{\addsemicolon\addspace}
+\renewcommand*{\finalnamedelim}{\addsemicolon\addspace}
+\renewcommand*{\nameyeardelim}{\addcomma\addspace}
+
+% printing authors
+\renewcommand{\mkbibnamelast}[1]{\MakeUppercase{#1}}
+
+% 'n.' before the number of a journal
+\DeclareFieldFormat[article,periodical]{number}{\bibstring{number}~#1}
+
+% 'v.' before volume of a journal
+\DeclareFieldFormat[article,periodical]{volume}{\bibstring{volume}~#1}
+
+% comma after journal volume
+\renewbibmacro*{volume+number+eid}{%
+  \printfield{volume}%
+  \setunit*{\addcomma\addspace}%
+  \printfield{number}%
+  \setunit{\addcomma\space}%
+  \printfield{eid}}
+
+% date not in parentheses
+\renewbibmacro*{issue+date}{%
+  \iffieldundef{issue}
+    {\usebibmacro{date}}
+    {\printfield{issue}%
+     \setunit*{\addspace}%
+     \usebibmacro{date}}%
+  \newunit}
+
+% journal has comma after its name, but no date
+\renewbibmacro*{journal+issuetitle}{%
+  \usebibmacro{journal}%
+  \setunit*{\addcomma\addspace}%
+  \iffieldundef{series}
+    {}
+    {\newunit
+     \printfield{series}%
+     \setunit{\addspace}}%
+  \usebibmacro{volume+number+eid}%
+  \newunit}
+
+% article takes care of date
+\DeclareBibliographyDriver{article}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author/translator+others}%
+  \setunit{\labelnamepunct}\newblock
+  \usebibmacro{title}%
+  \newunit
+  \printlist{language}%
+  \newunit\newblock
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{bytranslator+others}%
+  \newunit\newblock
+  \printfield{version}%
+  \newunit\newblock
+  \usebibmacro{in:}%
+  \usebibmacro{journal+issuetitle}%
+  \newunit
+  \usebibmacro{byeditor+others}%
+  \newunit
+  \usebibmacro{note+pages}%
+  \setunit{\addcomma\addspace}%
+  \usebibmacro{issue+date}%
+  \setunit{\addcolon\space}%
+  \usebibmacro{issue}%
+  \newunit\newblock
+  \iftoggle{bbx:isbn}
+    {\printfield{issn}}
+    {}%
+  \newunit\newblock
+  \usebibmacro{doi+eprint+url}%
+  \newunit\newblock
+  \usebibmacro{addendum+pubstate}%
+  \setunit{\bibpagerefpunct}\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \iftoggle{bbx:related}
+    {\usebibmacro{related:init}%
+     \usebibmacro{related}}
+    {}%
+  \usebibmacro{finentry}}
+
+\endinput

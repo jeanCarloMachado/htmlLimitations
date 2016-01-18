@@ -1,0 +1,27 @@
+%\documentclass{abntex2}
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}  % don't let it show up here in case you want to use abntex2
+
+\usepackage[style=abnt,backend=biber]{biblatex}
+%\usepackage[autostyle]{csquotes}  % recommended by biblatex
+\addbibresource{example.bib}
+
+\title{Lorem ipsum}
+\author{Felipe Silveira de Souza Schneider}
+\date{\today}
+
+\begin{document}
+\maketitle
+%\textual
+ Lorem ipsum dolor sit amet~\cite[p.~215]{desmond1994darwin}, consectetur adipiscing elit. Praesent tempus in ligula id consectetur~\cite{morange1998a-history-of-mo}. Nulla mattis gravida libero in mollis. Nunc efficitur quis magna a elementum~\parencite[p.~76]{semon1893zoologische-forschungsreisen}. Aenean justo nisi, dignissim ut pretium a, sodales id nulla. Maecenas ultricies, mi et mollis sodales, massa tortor tincidunt purus~\cite{adams2001last-judgment}, eget pretium tortor massa vel diam.
+
+Mauris sit amet ultrices augue. Aenean vehicula turpis non ligula scelerisque laoreet et sed dui. Mauris enim libero, vulputate non augue sed, volutpat tincidunt lacus~\parencite{2661,2619,silverstein:1974a}. Duis ac aliquam justo, id ullamcorper enim. Aliquam purus ligula, sollicitudin sit amet sagittis ac, consequat vitae nunc. Suspendisse potenti. Sed id enim eu diam maximus dictum. Curabitur vel ornare ante, ac aliquam massa~\parencite{evans1996fraud-and-illusion,burkholder1992new-phantom-dinoflag,corsi2005before-darwin}.
+
+\texttt{example.bib} taken from `biblatex-historian` style by Sander Gliboff.
+
+%\postextual
+\printbibliography
+\end{document}
