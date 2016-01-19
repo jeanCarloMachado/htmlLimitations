@@ -15,9 +15,13 @@ mesma ordem das tecnologias estudadas na revisão bibliográfica. Não
 obstante, algumas limitaçãos foram tratadas em partes
 separadas visto que se aplicam a várias das tecnologias da WEB.
 
+Para melhor organizá-las, juntamente ao texto, foram adicionados códigos as limitações
+ que seguem o seguinte padrão: LMT + número da limitação.
+
+
 \section{HTML}
 
-Segundo \citet{crossPlatformMobileGame}
+\citet{crossPlatformMobileGame} afirma que (\limitation{multipleTesting}):
 \begin{quote}
 Enquanto o HTML é desenvolvido muitas das funcionalidades
 disponibilizadas são testadas em um pequeno conjunto de navegadores
@@ -38,16 +42,16 @@ apêndices o Crosswalk é tratado com mais detalhes}.
 \section{CSS}
 
 É muito custoso desenvolver interfaces que pareçam nativas para
-cada dispositivo sem a utilização de plugins e ferramentas. No
+cada dispositivo sem a utilização de plugins e outras ferramentas auxiliares. No
 protótipo foi utilizada uma estilização simples, a qual pode se
-parecer interessante na WEB; não obstante, nos dispositivos móveis,
+parecer interessante na WEB. Não obstante, nos dispositivos móveis,
 o layout criado para o jogo é muito diferente da experiência normal
-nestes aparelhos. Sendo que cada sistema operacional conta com regras
+destes aparelhos. Sendo que cada sistema operacional conta com regras
 próprias para definir a experiência do usuário \footnote{
     O Android utiliza o projeto Material design \url{https://www.google.com/design/spec/material-design} como base para suas 
     regras de como construir interfaces.  Já o IOS utiliza um conjunto 
     de regras próprias que podem ser encontradas neste endereço \url{https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/}
-}.
+} (\limitation{hardToBuildGuis}).
 
 Uma solução para este problema é utilizar frameworks como o jQuery
 Mobile e Kendo UI Mobile \footnote{Mais informações sobre o Kendo UI
@@ -555,4 +559,16 @@ Com este comparativo fica visível que, mesmo em alguns casos não
 existindo suporte nativo ou ele sendo incompleto e com limitações, na
 vasta maioria dos casos é possível utilizar as tecnologias da WEB para
 jogos.
+
+
+
+\begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|  }
+\hline
+Limitação & Descrição & Possível solução \\ 
+\hline
+\Cref{limitation:multipleTesting} & Para garantir que algo de fato funcione é necessário testar em múltiplos dispositivos & Crosswalk  \\
+\Cref{limitation:hardToBuildGuis} & Dificuldade em construir interfaces nativas para os diversos dispositivos & Plugins como o jQuery Mobile e Kendo UI\\
+\hline
+\end{tabular}
+
 

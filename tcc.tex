@@ -35,6 +35,20 @@ right=2cm
 
 \usepackage{xcolor,mdframed}
 
+
+%limitations schema
+\usepackage{cleveref}
+\newcounter{limitation}
+\newcommand{\limitationname}{LMT}
+\newcommand{\limitation}[1]{%
+  \refstepcounter{limitation}%
+  \limitationname\ \thelimitation%
+  \label{limitation:#1}%
+}
+\crefname{limitation}{limitation}{limitations}
+\Crefname{limitation}{LMT}{LMT}
+
+
 %table settings
 \setlength{\arrayrulewidth}{1mm}
 \setlength{\tabcolsep}{18pt}
@@ -76,8 +90,10 @@ right=2cm
 	\renewcommand{\contentsname}{\hspace*{\fill} SUMÁRIO\hspace*{\fill}}
     \renewcommand{\listfigurename}{\hspace*{\fill} LISTA DE FIGURAS\hspace*{\fill}}
     \renewcommand{\chaptername}{}
-    \renewcommand{\figurename}{Fig.}
+    \renewcommand{\figurename}{Figura}
 }
+
+\newtheorem{lm}{LIM}
 
 \usepackage{setspace}
 
@@ -94,6 +110,7 @@ right=2cm
 \setlength{\cftsubsecindent}{0cm}
 \setlength{\cftsubsubsecindent}{0cm}
 \dottedcontents{chapter}[1.5em]{}{1.3em}{.6em}
+
 
 
 \renewcommand\cfttoctitlefont{\normalfont\fontsize{14}{17}}
