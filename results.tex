@@ -30,6 +30,14 @@ inconsistente. A forma mais segura de garantir suporte é testando em
 todas as versões alvo, todavia essa solução não é prática.
 \end{quote}
 
+Não obstante, este não é um problema exclusivo dos navegadores.  
+Segundo \citet{chromeWebView} da versão 4.4 do Android em diante a
+WebView mudou de um projeto local para utilizar o Chromium. Entretanto,
+grande parcela dos usuários Android ainda utilizam o sistema antigo o
+que força os desenvolvedores suportarem ambas as versões. É razoável
+afirmar que para o início de 2016 um terço dos usuários de Android
+ainda utilizem a versão antiga da WebView \citet{chromeWebView}.
+
 O Crosswalk é uma tecnologia que pode resolver parcialmente o problema
 de suporte de funcionalidades em diversas versões de dispositivos.
 O Crosswalk funciona disponibilizando, juntamente com a aplicação,
@@ -60,27 +68,30 @@ permitem criar elementos típicos de interfaces mobile como listas
 com scroll, botões e transições com uma aparência nativa de forma
 relativamente fácil \autocite{publishHtml5}.
 
-Em alguns casos o tamanho das telas pode ser um fator limitante –
-como no caso de jogos de estratégia, nestes casos, jogadores com telas
-menores podem sair em desvantagem.
+Em alguns casos o tamanho das telas pode ser um fator
+limitante – como no caso de jogos de estratégia, nestes
+casos, jogadores com telas menores podem sair em desvantagem
+(\limitation{differentScreenSizesMayPutSomeUsersInDisvantage}).
 
-Na perspectiva do desenvolvedor, pode-se lidar com múltiplos tamanhos
-de tela trabalhando com tamanhos relativos via CSS. Não obstante, há
-casos, como o dos botões de certo e errado do protótipo, em que a
-proporções ficam exageradas.  Nesses casos utilizar controles como o
-\textit{max-width} e \textit{min-width} é uma solução conveniente.
-Os botões de certo e errado tem uma proporção de 40\% da tela. Em
-dispositivos móveis este valor é sensato, mas em desktops com grandes
-resoluções a largura fica exagerada. Para resolver este problema foi
-configurado via CSS que a largura dos botões tenham no máximo 300
-pixels via regra \textit{max-width}.
+Em termos gerais, pode-se mitigar este problema utilizando design
+responsivo. Na perspectiva do desenvolvedor, pode-se lidar com
+múltiplos tamanhos de tela trabalhando com tamanhos relativos via
+CSS. Não obstante, há casos, como o dos botões de certo e errado
+do protótipo, em que a proporções ficam exageradas. Nesses casos
+utilizar controles como o \textit{max-width} e \textit{min-width} é uma
+solução conveniente. Os botões de certo e errado tem uma proporção
+de 40\% da tela. Em dispositivos móveis este valor é sensato, mas
+em desktops com grandes resoluções a largura fica exagerada. Para
+resolver este problema foi configurado via CSS que a largura dos botões
+tenham no máximo 300 pixels via regra \textit{max-width}.
 
-Outro fator problemático do CSS é a presença de prefixos. Tecnologias
-experimentais do CSS geralmente levam o nome do distribuidor como
-prefixo. Utilizar as mesmas regras em CSS com prefixos diferentes para
-suportar diversos motores de renderização é um processo entediante e
-propenso à duplicação e erros. A biblioteca \textit{-prefix-free} é
-uma possível solução para este problema, detectando automaticamente
+Outro fator problemático do CSS é a presença de prefixos
+(\limitation{cssPrefixes}). Tecnologias experimentais do CSS geralmente
+levam o nome do distribuidor como prefixo da propriedade. Utilizar as
+mesmas regras em CSS com prefixos diferentes para suportar diversos
+motores de renderização é um processo entediante e propenso à
+duplicação e erros. A biblioteca \textit{-prefix-free} é uma
+possível solução para este problema, detectando automaticamente
 quando prefixos são necessários e adicionado-os em tempo de execução
 \footnote{Mais informações sobre a biblioteca pode ser encontradas nos
 apêndices}.
@@ -89,36 +100,45 @@ apêndices}.
 
 O JavaScript, por ser uma linguagem desenvolvida por consenso, tem um
 ciclo de vida de atualizações demorado; pois necessita que todos os
-consumidores da especificação entrem em acordo. Com a especificação
+consumidores da especificação entrem em acordo \limitation{jsSpecificationCycle}. Com a especificação
 pronta, outra fase demorada é a adoção das tecnologias nos
 navegadores, o site \url{https://kangax.github.io/compat-table/es6/}
 contém uma lista do suporte aos recursos do ECMAScript 6 nos motores
-JavaScript.
+JavaScript \limitation{jsImplementaionCycle}.
 
-Por ser uma linguagem interpretada, erros tem de descobertos rodando
-a aplicação. Alternativamente se JavaScript fosse compilado vários
-problemas poderiam ser capturados e informações úteis reveladas antes
-de se testar \autocite[p. 12]{viabilityBusinessApplications}.
+Por ser uma linguagem interpretada, erros tem de descobertos rodando a
+aplicação \limitation{discoverErrorsWhileRunning}. Alternativamente,
+se JavaScript fosse compilado, vários problemas poderiam ser capturados
+e informações úteis reveladas antes de se testar \autocite[p.
+12]{viabilityBusinessApplications}. Uma forma de solucionar 
+este problema é utilizando alguma linguagem compilada através de 
+Web Assembly.
 
-
-Aplicações para produção muitas vezes necessitam ser minificadas por
-performance e ofuscação. Sem a utilização de automatizadores como o
-Grunt Watch essa tarefa é entediante e propensa a erros.
+Arquivos JavaScript geralmente necessitam ser minificados, reunidos e
+ofuscados. Muitas vezes esses processos precisam ser executadas durante
+o desenvolvimento, e sem a utilização de automatizadores como o Grunt
+Watch o processo torna-se entediante bem como propensa a erros \limitation{complexBuild}.
 
 Segundo \citet{htmlResearchJournal}, um problema do JavaScript é que
 não é possível transferir métodos de objetos através de sistemas,
-via WebSocket, somente dados. Uma forma de contornar este problema é
-utilizar funções para converter os dados em objetos em cada ponta do
-processamento mas isto adiciona complexidade ao software.
+via WebSockets, somente dados \limitation{passCompleteObjectsOnSockets}.
+Uma forma de contornar este problema é utilizar funções para
+converter os dados em objetos em cada ponta do processamento mas isto
+adiciona complexidade ao software.
 
 \citet{howBrowsersWork} cita que scripts requerendo informações de
 estilo durante o processo de parse. Se o estilo ainda não foi carregado
 o script vai utilizar informações erradas, causando uma série de
-problemas. Pode-se contornar este problema executando scripts apenas 
-ao final da renderização.
+problemas \limitation{runScriptsOnlyOnTheEndOfTheProcessment}. Pode-se
+contornar este problema executando scripts exclusivamente ao final da
+renderização do HTML.
 
+Por ser uma linguagem orientada a protótipos, JavaScript dá grande
+poder e flexibilidade para os desenvolvedores. Não obstante, um
+possível problema desta característica é quanto a manutenibilidade de
+código \limitation{harderToDoMaintainence}.
 
-Outra possível limitação do JavaScript é quanto a sua manutenibilidade \citet{html5Tradeoffs} afirma que:
+\citet{html5Tradeoffs} afirma que:
 \begin{quote}
 A flexibilidade de manutenção de código em JavaScript é muito
 dependente do expertise da pessoa que está escrevendo o código.
@@ -127,16 +147,30 @@ comparado com Java ou C\# mas, aplicando bons padrões de design, é bem
 possível escrever bom JavaScript.
 \end{quote}
 
+Além de bons padrões de design, outra forma de minimizar os
+problemas de manutenibilidade de JavaScript é utilizando guias
+de estilo de escrita. \citet{jsStyleGuide} afirma que quando
+não existem padrões de escrita todos acabam escrevendo código
+que apenas os autores conseguem entender \footnote{O endereço
+\url{http://noeticforce.com/best-JavaScript-style-guide-for-maintainable
+-code} contém um comparativo ente os guias de estilo mais comuns para
+JavaScript}.
+
 \subsection{Sistema de tipos}
 
 O sistema de tipos do JavaScript também é problemático.
 Erros numéricos resultam no valor NaN (\textit{not a number}).
-Todas as operações com NaN como operadores irão retornar outro
+Sendo que todas as operações com NaN como operadores irão retornar outro
 NaN. Isso torna a depuração de erros desnecessariamente complexa
-\autocite{html5mostwanted}.
+\autocite{html5mostwanted} (\limitation{NANPropagation}).
 
-Ao testar o tipo (\textit{typeof}) de uma variável vazia o JavaScript
-retorna como se fosse um objeto.
+Uma saída para este problema é checar constantemente os tipos de forma
+a assegurar-se que eles continuam válidos. Não obstante, este processo
+pode se tornar burocrático e uma forma adicional de criar erros.
+
+Outra limitação do JavaScript é quanto a checagem de tipos. Ao
+testar o tipo de uma variável vazia com a função \textit{typeof} o
+JavaScript retorna como se a variável fosse um objeto (\limitation{typesCheck}).
 
 \begin{figure}[H]
 \centering
@@ -164,7 +198,7 @@ variável corretamente.
 Apesar da performance ter notavelmente melhorado, ainda é geralmente
 menos eficiente produzir animações em JavaScript do que utilizando
 transições e animações do CSS, que por sua vez são mais otimizados
-e acelerados via hardware \autocite{html5mostwanted}.
+e acelerados via hardware \autocite{html5mostwanted} \limitation{JSanimations}.
 
 O WEB Assembly pode resolver este problema, substituindo o JavaScript
 para os casos onde grande performance é necessária. Mas para isso o
@@ -172,12 +206,16 @@ Web Assembly precisa evoluir na especificação e implementações.
 
 \subsection{Fullscreen}
 
-Não existe forma padronizada de detectar se uma aplicação está em
-tela cheia ou não através de JavaScript. O IOS suporta a variável
-\textit{navigator.standalone } para identificar se a aplicação está
-em tela cheia. \citet{homescreenwebapps} recomenda a utilização do
-trecho de código para determinar se está em modo tela cheia
-nos demais navegadores.
+Não existe forma padronizada de detectar se uma aplicação está
+em tela cheia ou não através de JavaScript. O IOS suporta a
+variável \textit{navigator.standalone } para identificar se a
+aplicação está em tela cheia \limitation{fullscreenManagement}.
+
+\citet{homescreenwebapps} recomenda a utilização do trecho de código
+para determinar se está em modo tela cheia nos demais navegadores. Não
+obstante, não existe solução oficial, tanto para detectar quanto para
+manipular Fullscreen. O argumento da não possibilidade de manipulação
+é que isso pode ser um problema de segurança para o usuário.
 
 \begin{figure}[H]
 \centering
@@ -190,15 +228,6 @@ navigator.standalone = navigator.standalone
 \source{\url{http://www.mobilexweb.com/blog/home-screen-web-apps-android-chrome-31}}
 \end{figure}
 
-
-\section{Android}
-
-Segundo \citet{chromeWebView} da versão 4.4 do Android em diante a
-WebView mudou de um projeto local para utilizar o Chromium. Entretanto,
-grande parcela dos usuários Android ainda utilizam o sistema antigo o
-que força os desenvolvedores suportarem ambas as versões. É razoável
-afirmar que para o início de 2016 um terço dos usuários de Android
-ainda utilizem a versão antiga da WebView \citet{chromeWebView}.
 
 \section{SVG}
 
@@ -516,7 +545,10 @@ integrados a algum mercado como o do Android ou da Apple.
 
 \section{Outras Limitações}
 
-\citet{html5Tradeoffs} cita algumas limitações em uma âmbito HTML em geral: \begin{quote} Não podemos mudar a imagem de fundo do dispositivo, ou adicionar toques
+\citet{html5Tradeoffs} cita algumas limitações em uma âmbito HTML em geral: 
+
+\begin{quote} 
+Não podemos mudar a imagem de fundo do dispositivo, ou adicionar toques
 etc. Similarmente, existem muitas API's de nuvem como os serviços
 de impressão do ICloud ou Google Cloud que estão disponíveis para
 aplicações nativas mas não para HTML5. Outros serviços utilitários
@@ -560,15 +592,42 @@ existindo suporte nativo ou ele sendo incompleto e com limitações, na
 vasta maioria dos casos é possível utilizar as tecnologias da WEB para
 jogos.
 
-
-
-\begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|  }
+\begin{tabular}{ |p{2cm}|p{4cm}|p{3cm}|  }
 \hline
 Limitação & Descrição & Possível solução \\ 
 \hline
 \Cref{limitation:multipleTesting} & Para garantir que algo de fato funcione é necessário testar em múltiplos dispositivos & Crosswalk  \\
 \Cref{limitation:hardToBuildGuis} & Dificuldade em construir interfaces nativas para os diversos dispositivos & Plugins como o jQuery Mobile e Kendo UI\\
+\Cref{limitation:differentScreenSizesMayPutSomeUsersInDisvantage} &  Desvantagem  para alguns jogadores devido ao tamanho da tela  & Design responsivo \\
+\Cref{limitation:cssPrefixes} & Tecnologias equivalentes em fase experimental levam o prefixo do motor de renderização  & Biblioteca prefix-free \\
+\Cref{limitation:jsSpecificationCycle} & Demora para chegar a um consenso na criação de especificações do JavaScript &  \\
+\Cref{limitation:jsImplementaionCycle} & Demora para implementar novas especificações do JavaScript &  \\
+\Cref{limitation:discoverErrorsWhileRunning} & Por ser interpretado, erros no código JavaScript só podem ser descobertos em tempo de execução & Web Assembly \\
+\Cref{limitation:complexBuild} & Requirimento de diversos passos para testar ou disponibilizar aplicações triviais & Utilização de automatizadores com o Grunt Build \\
 \hline
 \end{tabular}
 
+\newpage
+
+\begin{tabular}{ |p{2cm}|p{4cm}|p{3cm}|  }
+\hline
+\Cref{limitation:passCompleteObjectsOnSockets} & Impossibilidade de passar objetos completos em WebSockets & Converter os objetos em ambas as pontas da comunicação \\
+\Cref{limitation:runScriptsOnlyOnTheEndOfTheProcessment} & Scripts só podem ser rodados com segurança no final da renderização & \\
+\Cref{limitation:harderToDoMaintainence} & A manutenibilidade de JavaScript tende a ser pior do que a de outras linguagens comuns como C\# & Boas práticas e guias de estilo \\
+\Cref{limitation:NANPropagation} & Propagação de valores inválidos NAN & Checagem de tipos constante pelo programador \\
+\Cref{limitation:typesCheck} & Checagem de alguns tipos retorna resultados inesperados & Utilizar a função demonstrada na seção \\
+\Cref{limitation:JSanimations} & É pouco eficiente produzir animações em JavaScript & Utilizar CSS ou outra tecnologia da Web  \\
+\Cref{limitation:fullscreenManagement} & Impossibilidade de detectar e manipular \textit{fullscreen} de forma padronizada & \\
+\hline
+\end{tabular}
+
+As soluções presentes podem não ser completamente viáveis, mas foram
+disponibilizas de forma a ilustrar que o problema já é identificado e
+parcialmente tratável. Soluções que poderiam utilizar ferramentas que
+não são consideradas partes da WEB, como Flash, foram deliberadamente
+ignoradas.
+
+Algumas possibilidades que são triviais em ambientes desktop podem tornar-se fatores limitante
+na plataforma WEB. Como é o caso do controle de Fullscreen via JavaScript. Em plataformas nativas
+esse controle é geralmente garantido, já na WEB não se permite esse controle. %pesquisar mais sobre isso
 
