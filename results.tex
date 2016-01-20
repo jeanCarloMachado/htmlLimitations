@@ -363,15 +363,14 @@ simultaneamente \autocite{unsolvedMediaHtmlIssues} (\limitation{limitedMultimidi
 
 \subsection{VÍDEO}
 
-O suporte a vídeo, apesar de estar melhorando, ainda é rudimentar. No
-Silverlight existem uma coleção de possibilidades como aplicar shaders
-diretamente no vídeo e \textit{streaming} suave de 1080px HD que ainda
-não são realidade no HTML \autocite[p. 8]{researchOnHtml}.
-
-Efeito similar a shaders em vídeo é atingido no Firefox através da importação 
-de vídeo dentro de um contexto WebGL \footnote{O endereço \url{https://developer.Mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL} contém exemplos de como utilizar vídeos em um contexto WebGL}. Contudo, as diretivas de controle de vídeo 
-em outros navegadores como o Chrome são diferentes, devido a inexistência de especificação.
-
+O suporte a vídeo, apesar de estar melhorando, ainda é rudimentar.
+No Silverlight existem uma coleção de possibilidades como aplicar
+shaders diretamente no vídeo \autocite[p. 8]{researchOnHtml} \limitation{noEffectsOnVideo}. Não
+obstante, efeito similar a shaders em vídeo é atingido através da
+importação de vídeo dentro de um contexto WebGL \footnote{O endereço
+\url{https://developer.Mozilla.org/en-US/docs/Web/API/WebGL_API/Tutoria
+l/Animating_textures_in_WebGL} contém exemplos de como utilizar vídeos
+em um contexto WebGL}, ou utilizando o contexto 2D do canvas.
 
 Também não é possível controlar a entrada em tela cheia através de script
 pois é considerado uma violação de segurança. Não obstante,
@@ -652,6 +651,7 @@ Limitação & Descrição & Possível solução \\
 \hline
 \Cref{limitation:bestAudioCompressionNotSupportedByAllBrowsers} & Não existe um único codec suportado em todos os navegadores, o único que se aproxima disso é o MP3 mas existem opções melhores & \\
 \Cref{limitation:limitedMultimidiaControlOnSafari} & O Safari conta com problemas de controle de execução de multimídia & \\
+\Cref{limitation:noEffectsOnVideo} & Não é possível aplicar shaders diretamente em vídeo & Pode-se contornar este problema importando o vídeo para um contexto de Canvas  \\
 \hline
 \end{tabular}
 
