@@ -348,7 +348,7 @@ as indicações de \citet{html5mostwanted} que afirma que a API de som
 lançando eventos em um jogo ela ainda é problemática.
 
 Outro problema de áudio em HTML5 são os codecs. Alguns navegadores
-favorecem formatos OGG (vorbis) e outros favorecem o MP3 \limitation{bestAudioCompressionNotSupportedByAllBrowsers}. No
+favorecem formatos OGG (vorbis) e outros favorecem o MP3 (\limitation{bestAudioCompressionNotSupportedByAllBrowsers}). No
 protótipo foi utilizado o MP3, que apesar de não bem visto por
 muitos navegadores, é suportado como uma forma de mínimo múltiplo
 comum. Todavia, segundo \citet{opus}, MP3 é um codec antigo e existem
@@ -361,12 +361,17 @@ Por exemplo, não é possível trocar o volume através de
 JavaScript também não é possível tocar mais de um som ou vídeo
 simultaneamente \autocite{unsolvedMediaHtmlIssues} (\limitation{limitedMultimidiaControlOnSafari}).
 
-\subsection{VIDEO}
+\subsection{VÍDEO}
 
 O suporte a vídeo, apesar de estar melhorando, ainda é rudimentar. No
 Silverlight existem uma coleção de possibilidades como aplicar shaders
 diretamente no vídeo e \textit{streaming} suave de 1080px HD que ainda
 não são realidade no HTML \autocite[p. 8]{researchOnHtml}.
+
+Efeito similar a shaders em vídeo é atingido no Firefox através da importação 
+de vídeo dentro de um contexto WebGL \footnote{O endereço \url{https://developer.Mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL} contém exemplos de como utilizar vídeos em um contexto WebGL}. Contudo, as diretivas de controle de vídeo 
+em outros navegadores como o Chrome são diferentes, devido a inexistência de especificação.
+
 
 Também não é possível controlar a entrada em tela cheia através de script
 pois é considerado uma violação de segurança. Não obstante,
