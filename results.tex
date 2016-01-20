@@ -348,7 +348,7 @@ as indicações de \citet{html5mostwanted} que afirma que a API de som
 lançando eventos em um jogo ela ainda é problemática.
 
 Outro problema de áudio em HTML5 são os codecs. Alguns navegadores
-favorecem formatos OGG (vorbis) e outros favorecem o MP3. No
+favorecem formatos OGG (vorbis) e outros favorecem o MP3 \limitation{bestAudioCompressionNotSupportedByAllBrowsers}. No
 protótipo foi utilizado o MP3, que apesar de não bem visto por
 muitos navegadores, é suportado como uma forma de mínimo múltiplo
 comum. Todavia, segundo \citet{opus}, MP3 é um codec antigo e existem
@@ -645,6 +645,7 @@ Limitação & Descrição & Possível solução \\
 \newpage
 \begin{tabular}{ |p{2cm}|p{4cm}|p{3cm}|  }
 \hline
+\Cref{limitation:bestAudioCompressionNotSupportedByAllBrowsers} & Não existe um único codec suportado em todos os navegadores, o único que se aproxima disso é o MP3 mas existem opções melhores & \\
 \Cref{limitation:limitedMultimidiaControlOnSafari} & O Safari conta com problemas de controle de execução de multimídia & \\
 \hline
 \end{tabular}
