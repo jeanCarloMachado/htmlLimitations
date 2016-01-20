@@ -85,7 +85,7 @@ right=2cm
 %sort by alphabetic label, name, year, volume, title 
 \usepackage[style=abnt, citestyle=authoryear,sorting=anyvt,backend=bibtex, natbib]{biblatex}
 \addbibresource{tcc.bib}
-\usepackage[font=small,format=plain,labelfont=bf,up,textfont=normal,up,justification=justified,singlelinecheck=false]{caption}
+\usepackage[font=footnotesize,format=plain,labelfont=bf,up,textfont=normal,up,justification=justified,singlelinecheck=false]{caption}
 \addto\captionsportuges{
 	\renewcommand{\contentsname}{\hspace*{\fill} SUMÁRIO\hspace*{\fill}}
     \renewcommand{\listfigurename}{\hspace*{\fill} LISTA DE FIGURAS\hspace*{\fill}}
@@ -145,7 +145,9 @@ right=2cm
 \newcommand{\university}{\uppercase{Instituto Federal de Educação, Ciência \\ e Tecnologia do Rio Grande do Sul \\ Campus Bento Gonçalves}}
 \newcommand{\locale}{Bento Gonçalves, dezembro de 2015.}
 \newcommand{\website}{http://jeancarlomachado.com.br}
-\newcommand{\source}[1]{\caption*{\textbf{Fonte:} {#1}\hfill} }
+\newcommand{\source}[1]{\caption*{\textbf{Fonte:} \footnotesize{{#1}}\hfill} }
+\usepackage[textfont={footnotesize}]{caption}
+
 
 
 

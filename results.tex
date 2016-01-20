@@ -18,7 +18,6 @@ separadas visto que se aplicam a várias das tecnologias da WEB.
 Para melhor organizá-las, juntamente ao texto, foram adicionados códigos as limitações
  que seguem o seguinte padrão: LMT + número da limitação.
 
-
 \section{HTML}
 
 \citet{crossPlatformMobileGame} afirma que (\limitation{multipleTesting}):
@@ -228,15 +227,15 @@ navigator.standalone = navigator.standalone
 \source{\url{http://www.mobilexweb.com/blog/home-screen-web-apps-android-chrome-31}}
 \end{figure}
 
-
 \section{SVG}
 
-Uma das grandes vantagens do SVG é que é definido via linguagem de
-marcação e se integra bem com as demais tecnologias da WEB. Não
-obstante, isso também implica em problemas de performance para arquivos
-muito grandes pois os elementos são manipulados via DOM. Segundo
-\citet{html5mostwanted} a grande desvantagem do SVG é que quão maior o
-documento mais lenta a renderização.
+Uma das grandes vantagens do SVG é que é definido via linguagem
+de marcação e se integra bem com as demais tecnologias da WEB.
+Não obstante, isso também implica em problemas de performance para
+arquivos muito grandes pois os elementos são manipulados via DOM
+\limitation{svgDomPerformance}. Segundo \citet{html5mostwanted} a
+grande desvantagem do SVG é que quão maior o documento mais lenta a
+renderização.
 
 Controle refinado também é um problema do SVG \citet{html5mostwanted}
 cita que um aspecto negativo do SVG é que é muito difícil atingir a
@@ -251,7 +250,7 @@ implementação nativa para animações.
 
 \subsection{Performance}
 
-O problema de performance mencionado pode ser parcialmente remediado
+O problema de performance (\limitation{canvasPerformance}) pode ser parcialmente remediado
 com o FastCanvas. FastCanvas é uma implementação nativa em C++ do
 canvas para Android que roda separadamente do JavaScript. Devidas as
 características acima citadas FastCanvas é substancialmente mais
@@ -262,14 +261,14 @@ FastCanvas.
 
 \subsection{Integrações}
 
-A implementação de animações de fato não existe no canvas,
-similarmente carece-se de integração com as demais tecnologias
-da WEB. Os desenhos do canvas não podem ser acessados via DOM nem
-serem manipulados via CSS, todas as modificações necessárias devem
-ser feitas através de JavaScript.
-No protótipo, especificamente na classe \textit{Countdown}, foi necessário
-adicionar regras de estilo no JavaScript para a interação com o canvas
-ficar completa.
+A implementação de animações de fato não existe no canvas
+(\limitation{noCanvasAnimation}). Similarmente carece-se de integração
+com as demais tecnologias da WEB (\limitation{noCanvasIntegration}).
+Os desenhos do canvas não podem ser acessados via DOM nem serem
+manipulados via CSS. Todas as modificações necessárias devem ser
+feitas através de JavaScript. No protótipo, especificamente na classe
+\textit{Countdown}, foi necessário adicionar regras de estilo via
+JavaScript para a interação com o canvas ficar completa.
 
 CSS já conta com definições quanto a animações e a manipulação de
 elementos do canvas através do DOM facilitaria uma gama de situações.
@@ -297,59 +296,70 @@ elemento, o que pode gerar resultados inesperados.
 
 Como WebGL é baseada na versão otimizada para dispositivos móveis do
 OpenGL não é possível utilizar muitos recursos especiais disponíveis
-para os ambientes desktop. Como a definição de caminhos com a função
-\textit{glBegin} e a utilização de pontos flutuantes para
-calcular coordenadas de vértices \autocite{esVsGl}.
+para os ambientes desktop (\limitation{noWebglDesktopFunctions}).
+Como a definição de caminhos com a função \textit{glBegin} e a
+utilização de pontos flutuantes para calcular coordenadas de vértices
+\autocite{esVsGl}. Em outras palavras, a especificação do WebGL é
+cortada por baixo. Visto que alguns dispositivos não teriam performance
+utilizando estes recursos, nenhum dispositivo que use WebGL pode os
+desfrutar.
 
 Segundo \citet{html5mostwanted} um dos problemas do WebGL é sua alta
 curva de aprendizagem e o fato de não ter suporte para o Internet
 Explorer. Entretanto, o suporte foi adicionado na última versão do
 Internet Explorer (11). Infelizmente a dificuldade de utilização
-ainda persiste, forçando a maioria dos desenvolvedores a utilizarem
+ainda persiste \limitation{hardToUseWebGL}, forçando a maioria dos desenvolvedores a utilizarem
 abstrações criadas por bibliotecas de terceiros \footnote{Os apendices
 contém algumas destas bibliotecas como o tree.js}.
 
 É importante também ressaltar que o WebGL não se comporta de maneira
 simétrica nos navegadores que implementam a especificação. Pode haver
 diferenças substanciais de performance em plataformas diferentes e em
-navegadores diferentes. Existe também uma lista de placas gráficas com
-\textit{drivers} bloqueados por não funcionarem corretamente no Firefox
+navegadores diferentes. Para ver um programa em WebGL é necessário um
+navegador recente, uma placa gráfica recente e um sistema operacional
+que suporte a tecnologia \autocite{html5mostwanted} (\limitation{limitedToRecentThingsWebgl}).
+
+Existe também uma lista de placas gráficas com \textit{drivers}
+bloqueados por não funcionarem corretamente no Firefox
 \autocite[p.42]{3daps}.
-Para ver um programa em WebGL é necessário um navegador recente, uma
-placa gráfica recente e um sistema operacional que suporte a tecnologia
-\autocite{html5mostwanted}.
 
 Além dos problemas citados, o suporte a especificação ainda é
-incompleto em vários navegadores. CocoonJS é uma aplicativo híbrido
-que preenche a fraca implementação de WebGL nos dispositivos móveis
-possibilitando se desenvolver em WEBGL. CocoonJS conta com suporte a
-dispositivos legados à partir do Android 2.3 e IPhone 5.
+incompleto em vários navegadores \limitation{incompleteSupportWebgl}.
+CocoonJS é uma aplicativo híbrido que preenche a fraca implementação
+de WebGL nos dispositivos móveis possibilitando se desenvolver em
+WebGL. CocoonJS conta com suporte a dispositivos legados à partir do
+Android 2.3 e IPhone 5.
 
 \subsection{ÁUDIO}
 
-Segundo \citet{html5mostwanted} a limitação do elemento de áudio do
+Segundo \citet{html5mostwanted} a limitação do elemento de áudio no
 HTML5 é que seu propósito é para executar apenas um som, como o som
-de fundo dentro de um jogo. Não sendo adequada para efeitos sonoros 
+de fundo dentro de um jogo. Não sendo adequada para efeitos sonoros
 ou necessidades flexíveis de áudio.
 
 Durante a concepção do protótipo foi utilizada a API de áudio, devido
 sua maior flexibilidade. Infelizmente, algumas vezes o som não é
 executado ou demora até executar de modo de o que é executado ao mesmo
-tempo que o próximo som.
+tempo que o próximo som \limitation{soundAPIConflicts}.
 
-A experimentação do protótipo relativo a API de áudio confirmou as
-afirmações de \citet{html5mostwanted} a API de som é boa se você
-deseja apenas tocar alguma música, mas se você está lançando eventos
-em um jogo ela ainda é problemática.
+A experimentação do protótipo, relativo a API de áudio, confirmou
+as indicações de \citet{html5mostwanted} que afirma que a API de som
+é boa se você deseja apenas tocar alguma música, mas se você está
+lançando eventos em um jogo ela ainda é problemática.
 
 Outro problema de áudio em HTML5 são os codecs. Alguns navegadores
-favorecem formatos OGG (vorbis) e outros, como o Safari, favorecem o
-MP3.
+favorecem formatos OGG (vorbis) e outros favorecem o MP3. No
+protótipo foi utilizado o MP3, que apesar de não bem visto por
+muitos navegadores, é suportado como uma forma de mínimo múltiplo
+comum. Todavia, segundo \citet{opus}, MP3 é um codec antigo e existem
+alternativas mais adequadas para a Web como o codec Opus, que oferece
+uma melhor relação entre taxa de compressão e qualidade.
 
-Audio no Safari do IOS contém alguns problemas específicos.
+Além das restrições de codecs de áudio nos produtos da Apple,
+áudio especificamente no Safari do IOS contém alguns problemas específicos.
 Por exemplo, não é possível trocar o volume através de
 JavaScript também não é possível tocar mais de um som ou vídeo
-simultaneamente \autocite{unsolvedMediaHtmlIssues}.
+simultaneamente \autocite{unsolvedMediaHtmlIssues} (\limitation{limitedMultimidiaControlOnSafari}).
 
 \subsection{VIDEO}
 
@@ -606,9 +616,7 @@ Limitação & Descrição & Possível solução \\
 \Cref{limitation:complexBuild} & Requirimento de diversos passos para testar ou disponibilizar aplicações triviais & Utilização de automatizadores com o Grunt Build \\
 \hline
 \end{tabular}
-
 \newpage
-
 \begin{tabular}{ |p{2cm}|p{4cm}|p{3cm}|  }
 \hline
 \Cref{limitation:passCompleteObjectsOnSockets} & Impossibilidade de passar objetos completos em WebSockets & Converter os objetos em ambas as pontas da comunicação \\
@@ -618,6 +626,26 @@ Limitação & Descrição & Possível solução \\
 \Cref{limitation:typesCheck} & Checagem de alguns tipos retorna resultados inesperados & Utilizar a função demonstrada na seção \\
 \Cref{limitation:JSanimations} & É pouco eficiente produzir animações em JavaScript & Utilizar CSS ou outra tecnologia da Web  \\
 \Cref{limitation:fullscreenManagement} & Impossibilidade de detectar e manipular \textit{fullscreen} de forma padronizada & \\
+\Cref{limitation:svgDomPerformance} & Problemas de performance em arquivos SVG muito grandes & \\
+\hline
+\end{tabular}
+\newpage
+\begin{tabular}{ |p{2cm}|p{4cm}|p{3cm}|  }
+\hline
+\Cref{limitation:canvasPerformance} & Problemas de performance em muitas implementações do Canvas & FastCanvas \\
+\Cref{limitation:noCanvasAnimation} & Não existe suporte nativo a animações via Canvas & \\
+\Cref{limitation:noCanvasIntegration} & A integração do Canvas com as demais tecnologias da WEB é pobre & \\
+\Cref{limitation:noWebglDesktopFunctions} & Falta de recursos disponíveis para OpenGL em ambientes que os permitiriam & \\
+\Cref{limitation:hardToUseWebGL} & Para construir jogos é muito difícil utilizar apenas WebGL & Utilização de frameworks como o tree.js \\
+\Cref{limitation:incompleteSupportWebgl} & Em muitas plataformas o suporte a WebGl é incompleto & Utilização de frameworks como o CocoonJS \\
+\Cref{limitation:limitedToRecentThingsWebgl} & WebGl não funciona em placas gráficas antigas  & \\
+\Cref{limitation:soundAPIConflicts} & A API de Audio é problemática com sons frequentes no Android & \\
+\hline
+\end{tabular}
+\newpage
+\begin{tabular}{ |p{2cm}|p{4cm}|p{3cm}|  }
+\hline
+\Cref{limitation:limitedMultimidiaControlOnSafari} & O Safari conta com problemas de controle de execução de multimídia & \\
 \hline
 \end{tabular}
 
@@ -631,3 +659,6 @@ Algumas possibilidades que são triviais em ambientes desktop podem tornar-se fa
 na plataforma WEB. Como é o caso do controle de Fullscreen via JavaScript. Em plataformas nativas
 esse controle é geralmente garantido, já na WEB não se permite esse controle. %pesquisar mais sobre isso
 
+Apesar de pretender resolver os problemas de múltiplas tecnologias em
+multiplataformas, HTML5 introduz uma gama de incompatiblidade entre suas
+próprias versões e implementações.

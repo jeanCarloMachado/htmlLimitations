@@ -550,7 +550,6 @@ Esta ligação tardia permitiu diferenciação entre apresentação e
 estrutura, sendo neste caso o CSS responsável pela apresentação. Esta
 característica é uma das ideias pioneiras do SGML, motivo que tornou a
 utilização do CSS tão conveniente para o desenvolvimento WEB.
-
 Antes do CSS era impossível ter estilos diferenciados para diferentes
 tipos de dispositivos, limitando a aplicabilidade dos documentos.
 Com CSS também tornou-se possível que o usuário declare suas próprias
@@ -563,31 +562,11 @@ denominados o assunto do seletor \autocite{cssSelectors}. Seletores tem
 o intuito de definir quais partes do documento HTML serão afetadas por
 determinado bloco de declaração.
 
-A figura \ref{fig:CSSSample} exemplifica este processo. O seletor em
-questão é o elemento \textit{<p>}, simbolizando todos os parágrafos. O bloco de
-declaração é o que está dentro das chaves, aplicando alinhamento e
-cores aos parágrafos.
-
-\begin{figure}[H]
-\centering
-\begin{verbatim}
-<style>
-p {
-    text-align: center;
-    color: red;
-}
-</style>
-\end{verbatim}
-\caption{Exemplo de Folha de Estilo}
-\label{fig:CSSSample}
-\end{figure}
-
 CSS é dividido em módulos, que representam conjuntos de
 funcionalidades, contendo aproximadamente 50 deles. Cada módulo evolui
 separadamente, esta abordagem é preferível pois permite uma maior
-entrega de novas funcionalidades visto que novos recursos não dependem
-da aceitação de outros para serem disponibilizados.
-
+quantidade de entrega de novas funcionalidades. Visto que novos recursos
+não dependem da aceitação de outros para serem disponibilizados.
 Além do módulos, CSS também é organizado por perfis e níveis.
 
 Os perfis do CSS organizam a especificação por dispositivo de
@@ -600,7 +579,7 @@ navegador convencional pode ser apresentado como negrito.
 Já os níveis organizam o CSS por camadas de abstração. Os níveis
 inferiores representam as funcionalidades vitais do CSS, os níveis
 superiores dependem dos inferiores para construir as funcionalidades
-elaboradas. %um exemplo seria legal
+elaboradas. 
 
 A primeira especificação do CSS, CSS1 (ou nível 1) foi lançada em
 1996. Em 1997 foi lançado o CSS2 com o intuito de ampliar a completude
@@ -1413,8 +1392,9 @@ A primeira versão da especificação foi no início de 2014 mas até
 então nenhum navegador implementa o definido.
 %}}}
 
-Após a revisão de tecnologias de renderização serão abordadas tecnologias de 
-multimídia de áudio e vídeo. Mas para falar de ambos, antes é necessário falar de codecs.
+Após a revisão de tecnologias de renderização serão abordadas
+tecnologias de multimídia: áudio e vídeo. Mas para falar de ambos,
+antes é necessário falar de codecs.
 
 \section{CODECS}
 %{{{
@@ -1433,11 +1413,12 @@ possível. Para isso os codecs utilizam de várias estratégias de
 compressão ou descarte de dados; podendo rodar tanto em hardware quanto
 em software.
 
-Existem codecs desenvolvidos especificamente para a Web. Buscam uma
-razão de tamanho e qualidade aceitável, mas prezando por tamanho. A
-maioria dos codecs de vídeo da WEB não mudam todo o conteúdo de um quadro
-para o próximo, possibilitando maiores taxas de compressão, que
-resulta em arquivos menores \autocite{diveIntohtml}.
+Existem codecs desenvolvidos especificamente para a Web. Buscam
+uma razão de tamanho e qualidade aceitável, mas prezando por
+tamanho. Uma das otimizações realizadas por codecs de vídeo na
+Web, é a não troca de todo conteúdo de um quadro para o próximo,
+possibilitando maiores taxas de compressão, que resulta em arquivos
+menores \autocite{diveIntohtml}.
 
 O funcionamento de codecs pode variar muito, conforme as estratégias
 de compressão utilizadas, a quantidade de bits por segundo suportada,
@@ -1446,7 +1427,8 @@ adquirir grande complexidade muitos codecs são encobertos por licenças
 que limitam sua utilização. Não obstante, também existem opções
 livres de patentes e licenças.
 
-Abaixo segue uma lista de alguns codecs populares para áudio segundo \cite[p. 67]{proHtml5}.
+Abaixo segue uma lista de alguns codecs populares para áudio segundo
+\cite[p. 67]{proHtml5}.
 
 \begin{itemize}
     \item ACC
@@ -1461,13 +1443,14 @@ Ainda segundo \cite[p. 67]{proHtml5} abaixo segue uma lista de codecs populares 
     \item OggTheora
 \end{itemize}
 
-Após ter sido codificado um fluxo de dados é armazenado em um
-contêiner. Contêiners são um padrão de metadados sobre as
-informações codificadas de modo a possibilitar que outros programas
-consigam interpretar estas informações de forma padronizada. Como um
-arquivo \textit{zip}, contêiners podem conter qualquer coisa dentro de
-si \autocite{diveIntohtml}. Assim como codecs existem contêiners livres
-e com restrições de licença.
+Após um fluxo de dados multimídia ter sido codificado através do
+algoritmo de codec ele é armazenado em um contêiner. Contêiners
+são um padrão de metadados sobre as informações codificadas
+de modo a possibilitar que outros programas consigam interpretar
+estas informações de forma padronizada. Como um arquivo
+\textit{zip}, contêiners podem conter qualquer coisa dentro de si
+\autocite{diveIntohtml}. Assim como codecs existem contêiners livres e
+com restrições de licença.
 
 Abaixo segue uma lista de alguns contêiners de áudio.
 \begin{itemize}
