@@ -365,21 +365,22 @@ simultaneamente \autocite{unsolvedMediaHtmlIssues} (\limitation{limitedMultimidi
 
 O suporte a vídeo, apesar de estar melhorando, ainda é rudimentar.
 No Silverlight existem uma coleção de possibilidades como aplicar
-shaders diretamente no vídeo \autocite[p. 8]{researchOnHtml} \limitation{noEffectsOnVideo}. Não
-obstante, efeito similar a shaders em vídeo é atingido através da
-importação de vídeo dentro de um contexto WebGL \footnote{O endereço
+shaders diretamente no vídeo \autocite[p. 8]{researchOnHtml}
+\limitation{noEffectsOnVideo}. Não obstante, efeito similar 
+a shaders em vídeo é atingido através da importação de
+vídeo dentro de um contexto WebGL \footnote{O endereço
 \url{https://developer.Mozilla.org/en-US/docs/Web/API/WebGL_API/Tutoria
 l/Animating_textures_in_WebGL} contém exemplos de como utilizar vídeos
-em um contexto WebGL}, ou utilizando o contexto 2D do canvas.
+em um contexto WebGL} ou canvas 2D.
 
-Também não é possível controlar a entrada em tela cheia através de script
-pois é considerado uma violação de segurança. Não obstante,
+Também não é possível controlar a entrada em tela cheia através de
+script pois é considerado uma violação de segurança. Não obstante,
 os navegadores tem a opção de deixar os usuários escolherem ver
 vídeos em tela cheia através de controles adicionais \autocite[p.
-68]{proHtml5}.
+68]{proHtml5} (\limitation{videoFullscreenControl}).
 
 Assim como áudio o elemento \textit{video} sofre com problemas de
-codecs, segundo \citet{html5Tradeoffs}:
+codecs (\limitation{videoCodecs}), segundo \citet{html5Tradeoffs}:
 \begin{quote}
 O maior problema com as API's de áudio e de vídeo do HTML5 é
 a disputa entre os codecs dos navegadores. Por exemplo, Mozilla e
@@ -392,7 +393,7 @@ respectivamente.
 O Safari do IOS também contém problemas exclusivos de vídeo. Segundo
 \citet{unsolvedMediaHtmlIssues} não é possível capturar frames de
 vídeo usando o método \textit{drawImage} do canvas. Também não é
-possível pré carregar arquivos de vídeo sem iteração do usuário.
+possível pré carregar arquivos de vídeo sem iteração do usuário (\limitation{safariVideoMissingControlAndCanvas}).
 
 Para os raros casos onde o suporte a vídeo não existe,
 como no Opera Mini, o projeto \textit{Vídeo for Everybody}
@@ -402,7 +403,7 @@ recorre à flash para apresentar o conteúdo.
 \section{Armazenamento}
 
 Não existe tecnologia oficial que permita a utilização de tecnologias
-SQL para Frontend. O WebSQL foi uma tentativa nesta direção mas, visto
+SQL para Frontend (\limitation{noSqlSupport}). O WebSQL foi uma tentativa nesta direção mas, visto
 que não continha mais de uma implementação, foi descontinuado. SQL
 seria interessante pois muitos desenvolvedores tem experiência com este
 tipo de tecnologia e por SQL permitir filtragem e correlacionamento de
@@ -652,6 +653,10 @@ Limitação & Descrição & Possível solução \\
 \Cref{limitation:bestAudioCompressionNotSupportedByAllBrowsers} & Não existe um único codec suportado em todos os navegadores, o único que se aproxima disso é o MP3 mas existem opções melhores & \\
 \Cref{limitation:limitedMultimidiaControlOnSafari} & O Safari conta com problemas de controle de execução de multimídia & \\
 \Cref{limitation:noEffectsOnVideo} & Não é possível aplicar shaders diretamente em vídeo & Pode-se contornar este problema importando o vídeo para um contexto de Canvas  \\
+\Cref{limitation:videoFullscreenControl} & Falta de forma padronizada de controlar o modo tela cheia para vídeos & \\
+\Cref{limitation:videoCodecs} & Falta de consenso sobre um codec de vídeo padrão & \\
+\Cref{limitation:safariVideoMissingControlAndCanvas} & A integração de vídeo e canvas do Safari é problemática  e vídeo só pode ser carregado pelo usuário & \\
+\Cref{limitation:noSqlSupport} & Não existência de tecnologia oficial de SQL para WEB & \\
 \hline
 \end{tabular}
 
