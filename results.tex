@@ -13,7 +13,7 @@ exclusivamente, aos jogos encontradas durante a pesquisa e concepção
 do protótipo. Quando possível, buscou-se apresentar as limitações na
 mesma ordem das tecnologias estudadas na revisão bibliográfica. Não
 obstante, algumas limitaçãos foram tratadas em partes
-separadas visto que se aplicam a várias das tecnologias da WEB.
+separadas visto que se aplicam a várias das tecnologias da Web.
 
 Para melhor organizá-las, juntamente ao texto, foram adicionados códigos as limitações
  que seguem o seguinte padrão: LMT + número da limitação.
@@ -51,7 +51,7 @@ apêndices o Crosswalk é tratado com mais detalhes}.
 É muito custoso desenvolver interfaces que pareçam nativas para
 cada dispositivo sem a utilização de plugins e outras ferramentas auxiliares. No
 protótipo foi utilizada uma estilização simples, a qual pode se
-parecer interessante na WEB. Não obstante, nos dispositivos móveis,
+parecer interessante na Web. Não obstante, nos dispositivos móveis,
 o layout criado para o jogo é muito diferente da experiência normal
 destes aparelhos. Sendo que cada sistema operacional conta com regras
 próprias para definir a experiência do usuário \footnote{
@@ -199,7 +199,7 @@ menos eficiente produzir animações em JavaScript do que utilizando
 transições e animações do CSS, que por sua vez são mais otimizados
 e acelerados via hardware \autocite{html5mostwanted} \limitation{JSanimations}.
 
-O WEB Assembly pode resolver este problema, substituindo o JavaScript
+O Web Assembly pode resolver este problema, substituindo o JavaScript
 para os casos onde grande performance é necessária. Mas para isso o
 Web Assembly precisa evoluir na especificação e implementações.
 
@@ -230,7 +230,7 @@ navigator.standalone = navigator.standalone
 \section{SVG}
 
 Uma das grandes vantagens do SVG é que é definido via linguagem
-de marcação e se integra bem com as demais tecnologias da WEB.
+de marcação e se integra bem com as demais tecnologias da Web.
 Não obstante, isso também implica em problemas de performance para
 arquivos muito grandes pois os elementos são manipulados via DOM
 \limitation{svgDomPerformance}. Segundo \citet{html5mostwanted} a
@@ -263,7 +263,7 @@ FastCanvas.
 
 A implementação de animações de fato não existe no canvas
 (\limitation{noCanvasAnimation}). Similarmente carece-se de integração
-com as demais tecnologias da WEB (\limitation{noCanvasIntegration}).
+com as demais tecnologias da Web (\limitation{noCanvasIntegration}).
 Os desenhos do canvas não podem ser acessados via DOM nem serem
 manipulados via CSS. Todas as modificações necessárias devem ser
 feitas através de JavaScript. No protótipo, especificamente na classe
@@ -280,7 +280,7 @@ do canvas onde uma interação aconteceu e fazendo o processamento com
 aquela determinada área.
 
 Felizmente a integração entre o canvas e as demais tecnologias da
-WEB está começando a acontecer. A interoperabilidade entre o Path2D
+Web está começando a acontecer. A interoperabilidade entre o Path2D
 do canvas e a notação SVG é uma iniciativa na direção correta,
 tornando ambas tecnologias cada vez relevantes e dinâmicas.
 
@@ -402,23 +402,31 @@ recorre à flash para apresentar o conteúdo.
 
 \section{Armazenamento}
 
-Não existe tecnologia oficial que permita a utilização de tecnologias
-SQL para Frontend (\limitation{noSqlSupport}). O WebSQL foi uma tentativa nesta direção mas, visto
-que não continha mais de uma implementação, foi descontinuado. SQL
-seria interessante pois muitos desenvolvedores tem experiência com este
-tipo de tecnologia e por SQL permitir filtragem e correlacionamento de
-dados de uma forma flexível e poderosa.
+Não existe opção oficial que permita a utilização de tecnologias
+SQL para Frontend (\limitation{noSqlSupport}). O WebSQL foi uma
+tentativa nesta direção mas, visto que não continha mais de uma
+implementação, foi descontinuado. Apesar de depreciado o Web SQL ainda
+é usado por muitos desenvolvedores e mantido por alguns navegadores,
+todavia, os desenvolvedores que procedem desta maneira ficam à mercê
+dos caprichos dos navegadores não podendo contar com a força de um
+órgão regulador para manter a tecnologia.
+
+SQL seria interessante pois muitos desenvolvedores tem experiência com
+este tipo de tecnologia e por SQL permitir filtragem e correlacionamento
+de dados de uma forma flexível e poderosa.
 
 \subsection{Web Storage}
 
 Muitos navegadores não permitem armazenar mais de 5M por domínio
 em Web Storage, apesar da especificação permitir fazê-lo
-\autocite{gameAssetManagement}. Também não é possível saber
-quanto espaço já foi consumido pelo Web Storage.
+\autocite{gameAssetManagement} (\limitation{webStorageLimit}). Também
+não é possível saber quanto espaço já foi consumido pelo Web
+Storage (\limitation{webStorageQueryLimit}).
 
 Outra limitação do Web Storage é que todas as informações são
-guardadas como texto. Isso força a converter os valores toda a vez que
-algo for armazenado ou recuperado \autocite{gameAssetManagement}..
+guardadas como texto (\limitation{webStorageStringOnly}). Isso força a
+converter os valores toda a vez que algo for armazenado ou recuperado
+\autocite{gameAssetManagement}.
 
 No protótipo isso não foi problemático pois não existe grande
 manipulação sobre os dados. Mas no caso de jogos mais complexos esta
@@ -428,9 +436,8 @@ característica do Web Storage pode ser uma limitação substancial.
 
 Nos arquivos de cache via manifestos, quando o download falha, o
 navegador emite um evento mas não há indicação de qual problema
-aconteceu. Isso pode tornar a depuração ainda mais complicada que o
-usual \autocite{diveIntohtml}. 
-
+aconteceu \limitation{noErrorMessagesOffline}. Isso pode tornar a
+depuração ainda mais complicada que o usual \autocite{diveIntohtml}.
 Este problema aconteceu durante o desenvolvimento do protótipo e foi
 trabalhoso de depurar até descobrir que um arquivo estava faltando,
 e qual especificamente. Uma coleção de códigos de erro e suas
@@ -442,21 +449,18 @@ comportamento não intuitivo. Arquivos de rede que não
 são declarados ali não poderão ser consumidos uma vez
 que exista cache na aplicação. O exemplo neste endereço
 \url{http://appcache-demo.s3-website-us-east-1.amazonaws.com/without-net
-work/} demonstra este comportamento. Segundo \citet{gameAssetManagement} a
-especificação define que se um arquivo não for listado em alguma das
-seções do cache então o arquivo não estará disponível de qualquer
-forma para a aplicação.
+work/} demonstra este comportamento. Segundo \citet{gameAssetManagement}
+a especificação define que se um arquivo não for listado em alguma
+das seções do cache então o arquivo não estará disponível de
+qualquer forma para a aplicação.
 
 \section{Orientação}
 
-Visto que a especificação de orientação não está pronta, o suporte
-está longe de completo. Até o momento da pesquisa o único navegador
-popular que implementa a especificação completamente é o Edge da
-Microsoft.
-
-Por conseguinte, existem diferenças substanciais entre navegadores.
-Por exemplo: O Firefox e Google Chrome não manipulam ângulos da
-mesma forma. Outrossim, alguns eixos se comportam de maneiras opostas
+Visto que a especificação de orientação não está pronta, o
+suporte está longe de completo. Da mesma forma, existem diferenças
+substanciais nas implementações entre os navegadores (\limitation{orientationIsntReady}). Por
+exemplo, o Firefox e Google Chrome não manipulam ângulos da mesma
+forma. Outrossim, alguns eixos se comportam de maneiras opostas
 \autocite{mdnOrientation}. O polyfill \textit{gyronorm.js} é uma
 tentativa de normalizar o uso de dados de orientação nos navegadores
 que pode ser utilizada até a especificação e os navegadores
@@ -464,13 +468,19 @@ evoluírem.
 
 \section{Detecção de recursos}
 
-\citet{diveIntohtml} cita que:
+\citet{diveIntohtml} cita que (\limitation{checkResourcesOnlyOnJavascrit}):
 \begin{quote}
 Grande parte da detecção de funcionalidades é feita através de
 JavaScript, isso força os desenvolvedores a criarem pelo menos parte da
 marcação em JavaScript, isso pode ser um fator limitante para o uso
 generalizado de HTML5.
 \end{quote}
+
+Para resolver este problema, o ideal seria que cada tecnologia contasse
+com formas de detectar as funcionalidades que comporta. Não obstante,
+este tipo de mecanismo conflita com outros princípios da Web.
+Pelo fato de o HTML uma linguagem fundamentada exclusivamente em marcação e estrutura, adicionar
+estruturas de controle não é uma alternativa viável.
 
 \section{Debug}
 
@@ -484,12 +494,11 @@ computador levou vários segundos para ser atualizada.
 Outro problema do depurar do Chrome é que não existe inspetor nativo
 de canvas. O inspetor de embutido do Google Chrome foi removido pois
 continha comportamentos indesejáveis para os desenvolvedores do
-navegador \autocite{canvasinspector}.
-
-Os desenvolvedores mencionaram criar uma extensão para a funcionalidade
-mas até o tempo de desenvolvimento deste trabalho não havia nenhuma
-disponível. A única alternativa viável até o momento é utilizar uma
-versão antiga do Chromium.
+navegador \autocite{canvasinspector}. Os desenvolvedores mencionaram
+criar uma extensão para a funcionalidade mas até o tempo de
+desenvolvimento deste trabalho não havia nenhuma disponível. A única
+alternativa viável até o momento é utilizar uma versão antiga do
+Chromium.
 
 O Firefox introduziu uma ferramenta de inspeção para o canvas 2D
 em uma Conferência de desenvolvimento de jogos em São Francisco em 2014,
@@ -497,7 +506,7 @@ mas até a tecnologia não apareceu no navegador \autocite{firefoxCanvasDebug}.
 
 Atualmente a área de ferramentas para depuração do canvas 2D está
 parcialmente comprometida por não existir um plugin de terceiro
-onipresente nos navegadores como o WebGl Inspector.
+onipresente nos navegadores como o WebGl Inspector ](\limitation{noCanvas2DIsnpectorOnipresent}).
 
 O projeto Canvas Interceptor é uma iniciativa para preencher
 esta demanda permitindo capturar alguns eventos do contexto 2D e
@@ -513,7 +522,7 @@ projeto Canvas Interceptor podem ser encontradas no seguinte endereço
 
 \citet[p. 9]{aSeriousContender} cita que: fazer scroll juntamente
 com gestos de ações similares é uma área onde o HTML ainda é
-fraco. Para contornar este problema pode-se utilizar bibliotecas como o
+fraco (\limitation{multiTouch}). Para contornar este problema pode-se utilizar bibliotecas como o
 iScroll, TouchScroll, GloveBox, Sencha, jQuery Mobile, entre outros.
 
 \subsection{Gamepad}
@@ -521,9 +530,10 @@ iScroll, TouchScroll, GloveBox, Sencha, jQuery Mobile, entre outros.
 A forma de gerenciar a conexão de Gamepads é diferente entre o Firefox
 e Google Chrome. No Firefox é lançado um evento toda a vez que o
 Gamepad é desconectado, já no Google Chrome é necessário verificar
-um vetor de gamepads pela existência do objeto de tempos em tempos \autocite{gamepad}.
-Este problema é reflexo da especificação ainda incompleta e força os
-desenvolvedores a duplicarem a mesma atividade no código.
+um vetor de gamepads pela existência do objeto de tempos em tempos
+\autocite{gamepad} (]o \limitation{gamepadObject}). Este problema é
+reflexo da especificação ainda incompleta e força os desenvolvedores
+a duplicarem a mesma atividade no código.
 
 \section{Disponibilização}
 
@@ -534,35 +544,36 @@ isso não tenha sido um problema, em projetos maiores estes tipos de
 requerimentos podem ser essenciais.
 
 Outra limitação de disponibilização, neste caso para aplicativos
-WEB puros, é que a possibilidade de adicionar aplicativos a área de
-trabalho está disponível apenas para o Safari e Google Chrome. Este
-tipo de possibilidade é importante por gerar uma experiência similar a
-nativa em dispositivos móveis.
+Web puros, é que a possibilidade de adicionar aplicativos a área
+de trabalho está disponível apenas para o Safari e Google Chrome
+\limitation{desktopIcon}. Este tipo de possibilidade é importante por
+gerar uma experiência similar a nativa em dispositivos móveis.
 
 \subsection{Monetização}
 
-Outro aspecto que pode ser limitante para aplicações WEB é sua forma
-de monetização. É muitas vezes difícil encontra oportunidades
+Outro aspecto que pode ser limitante para aplicações Web é sua forma
+de monetização. É muitas vezes difícil encontrar oportunidades
 financeiras em jogos para navegador, visto que não existem pacotes de
-jogos para vender \autocite[p. 44]{gameCommunities}.
+jogos para vender \autocite[p. 44]{gameCommunities} \limitation{monetizationDifferent}.
 
 Dado este este problema, desenvolvedores são muitas vezes forçados
 a criar formas alternativas de lucro. A monetização de aplicativos
-WEB é geralmente feita através de propagandas \autocite[p.
+Web é geralmente feita através de propagandas \autocite[p.
 44]{gameCommunities}. Outra saída é a venda de recursos extra,
 \cite[p. 44]{gameCommunities} afirma que a venda de moeda virtual é
 uma forma comum de monetização em jogos.
 
-Não obstante jogos WEB podem ser integrados pelos desenvolvedores
+Não obstante jogos Web podem ser integrados pelos desenvolvedores
 a sistemas de pagamento - possivelmente aumentado a complexidade
 da aplicação. Ou se optarem pela arquitetura híbrida, podem ser
 integrados a algum mercado como o do Android ou da Apple.
 
 \section{Outras Limitações}
 
-\citet{html5Tradeoffs} cita algumas limitações em uma âmbito HTML em geral: 
+Apesar de não entrarem no contexto de jogos, \citet{html5Tradeoffs} cita
+algumas limitações em uma âmbito HTML em geral:
 
-\begin{quote} 
+\begin{quote}
 Não podemos mudar a imagem de fundo do dispositivo, ou adicionar toques
 etc. Similarmente, existem muitas API's de nuvem como os serviços
 de impressão do ICloud ou Google Cloud que estão disponíveis para
@@ -576,7 +587,7 @@ para o HTML5.
 
 A tabela abaixo demonstra é um comparativo das tecnologias pesquisadas,
 relevantes aos jogos e seu suporte. As informações de suporte foram
-extraídas do site Can I Use e os navegadores populares em questão
+extraídas do site \textit{Can I Use} e os navegadores populares em questão
 são: Internet Explorer (11), Edge (13), Firefox (43), Google Chorme
 (47), Safari (9) e Opera(34).
 
@@ -603,72 +614,92 @@ Prefetch & Não & Sim \\
 \end{tabular}
 
 Com este comparativo fica visível que, mesmo em alguns casos não
-existindo suporte nativo ou ele sendo incompleto e com limitações, na
-vasta maioria dos casos é possível utilizar as tecnologias da WEB para
-jogos.
+existindo suporte nativo ou ele sendo incompleto e com limitações,
+na vasta maioria dos casos, é possível utilizar tecnologias da Web
+direcionadas para o desenvolvimento de jogos.
 
-\begin{tabular}{ |p{2cm}|p{4cm}|p{3cm}|  }
+\begin{tabular}{ |p{2cm}|p{5cm}|p{2cm}|  }
 \hline
-Limitação & Descrição & Possível solução \\ 
+Limitação & Descrição & Existe solução ou contorno? \\ 
 \hline
-\Cref{limitation:multipleTesting} & Para garantir que algo de fato funcione é necessário testar em múltiplos dispositivos & Crosswalk  \\
-\Cref{limitation:hardToBuildGuis} & Dificuldade em construir interfaces nativas para os diversos dispositivos & Plugins como o jQuery Mobile e Kendo UI\\
-\Cref{limitation:differentScreenSizesMayPutSomeUsersInDisvantage} &  Desvantagem  para alguns jogadores devido ao tamanho da tela  & Design responsivo \\
-\Cref{limitation:cssPrefixes} & Tecnologias equivalentes em fase experimental levam o prefixo do motor de renderização  & Biblioteca prefix-free \\
-\Cref{limitation:jsSpecificationCycle} & Demora para chegar a um consenso na criação de especificações do JavaScript &  \\
-\Cref{limitation:jsImplementaionCycle} & Demora para implementar novas especificações do JavaScript &  \\
-\Cref{limitation:discoverErrorsWhileRunning} & Por ser interpretado, erros no código JavaScript só podem ser descobertos em tempo de execução & Web Assembly \\
-\Cref{limitation:complexBuild} & Requirimento de diversos passos para testar ou disponibilizar aplicações triviais & Utilização de automatizadores com o Grunt Build \\
-\hline
-\end{tabular}
-\newpage
-\begin{tabular}{ |p{2cm}|p{4cm}|p{3cm}|  }
-\hline
-\Cref{limitation:passCompleteObjectsOnSockets} & Impossibilidade de passar objetos completos em WebSockets & Converter os objetos em ambas as pontas da comunicação \\
-\Cref{limitation:runScriptsOnlyOnTheEndOfTheProcessment} & Scripts só podem ser rodados com segurança no final da renderização & \\
-\Cref{limitation:harderToDoMaintainence} & A manutenibilidade de JavaScript tende a ser pior do que a de outras linguagens comuns como C\# & Boas práticas e guias de estilo \\
-\Cref{limitation:NANPropagation} & Propagação de valores inválidos NAN & Checagem de tipos constante pelo programador \\
-\Cref{limitation:typesCheck} & Checagem de alguns tipos retorna resultados inesperados & Utilizar a função demonstrada na seção \\
-\Cref{limitation:JSanimations} & É pouco eficiente produzir animações em JavaScript & Utilizar CSS ou outra tecnologia da Web  \\
-\Cref{limitation:fullscreenManagement} & Impossibilidade de detectar e manipular \textit{fullscreen} de forma padronizada & \\
-\Cref{limitation:svgDomPerformance} & Problemas de performance em arquivos SVG muito grandes & \\
+\Cref{limitation:multipleTesting} & Para garantir que algo de fato funcione é necessário testar em múltiplos dispositivos & Parcial \\
+\Cref{limitation:hardToBuildGuis} & Dificuldade em construir interfaces nativas para os diversos dispositivos & Sim \\
+\Cref{limitation:differentScreenSizesMayPutSomeUsersInDisvantage} &  Desvantagem  para alguns jogadores devido ao tamanho da tela  & Parcial \\
+\Cref{limitation:cssPrefixes} & Tecnologias equivalentes em fase experimental levam o prefixo do motor de renderização  & Sim \\
+\Cref{limitation:jsSpecificationCycle} & Demora para chegar a um consenso na criação de especificações do JavaScript & Não \\
+\Cref{limitation:jsImplementaionCycle} & Demora para implementar novas especificações do JavaScript & Não \\
+\Cref{limitation:discoverErrorsWhileRunning} & Por ser interpretado, erros no código JavaScript só podem ser descobertos em tempo de execução & Parcial \\
+\Cref{limitation:complexBuild} & Requirimento de diversos passos para testar ou disponibilizar aplicações triviais & Sim  \\
 \hline
 \end{tabular}
 \newpage
-\begin{tabular}{ |p{2cm}|p{4cm}|p{3cm}|  }
+\begin{tabular}{ |p{2cm}|p{5cm}|p{2cm}|  }
 \hline
-\Cref{limitation:canvasPerformance} & Problemas de performance em muitas implementações do Canvas & FastCanvas \\
-\Cref{limitation:noCanvasAnimation} & Não existe suporte nativo a animações via Canvas & \\
-\Cref{limitation:noCanvasIntegration} & A integração do Canvas com as demais tecnologias da WEB é pobre & \\
-\Cref{limitation:noWebglDesktopFunctions} & Falta de recursos disponíveis para OpenGL em ambientes que os permitiriam & \\
-\Cref{limitation:hardToUseWebGL} & Para construir jogos é muito difícil utilizar apenas WebGL & Utilização de frameworks como o tree.js \\
-\Cref{limitation:incompleteSupportWebgl} & Em muitas plataformas o suporte a WebGl é incompleto & Utilização de frameworks como o CocoonJS \\
-\Cref{limitation:limitedToRecentThingsWebgl} & WebGl não funciona em placas gráficas antigas  & \\
-\Cref{limitation:soundAPIConflicts} & A API de Audio é problemática com sons frequentes no Android & \\
+\Cref{limitation:passCompleteObjectsOnSockets} & Impossibilidade de passar objetos completos em WebSockets & Parcial \\
+\Cref{limitation:runScriptsOnlyOnTheEndOfTheProcessment} & Scripts só podem ser rodados com segurança no final da renderização & Parcial \\
+\Cref{limitation:harderToDoMaintainence} & A manutenibilidade de JavaScript tende a ser pior do que a de outras linguagens comuns como C\# & Sim \\
+\Cref{limitation:NANPropagation} & Propagação de valores inválidos NAN & Parcial \\
+\Cref{limitation:typesCheck} & Checagem de alguns tipos retorna resultados inesperados & Parcial \\
+\Cref{limitation:JSanimations} & É pouco eficiente produzir animações em JavaScript & Parcial  \\
+\Cref{limitation:fullscreenManagement} & Impossibilidade de detectar e manipular \textit{fullscreen} de forma padronizada &Não \\
+\Cref{limitation:svgDomPerformance} & Problemas de performance em arquivos SVG muito grandes & Não \\
 \hline
 \end{tabular}
 \newpage
-\begin{tabular}{ |p{2cm}|p{4cm}|p{3cm}|  }
+\begin{tabular}{ |p{2cm}|p{5cm}|p{2cm}|  }
 \hline
-\Cref{limitation:bestAudioCompressionNotSupportedByAllBrowsers} & Não existe um único codec suportado em todos os navegadores, o único que se aproxima disso é o MP3 mas existem opções melhores & \\
+\Cref{limitation:noCanvasIntegration} & A integração do Canvas com as demais tecnologias da Web é pobre & Não \\
+\Cref{limitation:noWebglDesktopFunctions} & Falta de alguns recursos disponíveis para OpenGL em ambientes que os permitiriam & Não \\
+\Cref{limitation:hardToUseWebGL} & Para construir jogos é muito difícil utilizar apenas WebGL & Sim \\
+\Cref{limitation:incompleteSupportWebgl} & Em muitas plataformas o suporte a WebGl é incompleto & Parcial \\
+\Cref{limitation:limitedToRecentThingsWebgl} & WebGl não funciona em placas gráficas antigas  & Não \\
+\Cref{limitation:soundAPIConflicts} & A API de Audio é problemática com sons frequentes no Android & Não \\
+\hline
+\end{tabular}
+\newpage
+\begin{tabular}{ |p{2cm}|p{5cm}|p{2cm}|  }
+\hline
+\Cref{limitation:bestAudioCompressionNotSupportedByAllBrowsers} & Não existe um único codec moderno suportado em todos os navegadores & Parcial \\
 \Cref{limitation:limitedMultimidiaControlOnSafari} & O Safari conta com problemas de controle de execução de multimídia & \\
 \Cref{limitation:noEffectsOnVideo} & Não é possível aplicar shaders diretamente em vídeo & Pode-se contornar este problema importando o vídeo para um contexto de Canvas  \\
 \Cref{limitation:videoFullscreenControl} & Falta de forma padronizada de controlar o modo tela cheia para vídeos & \\
 \Cref{limitation:videoCodecs} & Falta de consenso sobre um codec de vídeo padrão & \\
-\Cref{limitation:safariVideoMissingControlAndCanvas} & A integração de vídeo e canvas do Safari é problemática  e vídeo só pode ser carregado pelo usuário & \\
-\Cref{limitation:noSqlSupport} & Não existência de tecnologia oficial de SQL para WEB & \\
+\Cref{limitation:safariVideoMissingControlAndCanvas} & A integração de vídeo e canvas do Safari é problemática  e vídeo só pode ser carregado pelo usuário & Não \\
+\Cref{limitation:noSqlSupport} & Não existência de tecnologia oficial de SQL para Web & Parcial \\
+\Cref{limitation:webStorageLimit} & Em muitos navegadores não é possível armazenar mais de 5MB em Web Storage & Não \\
+\hline
+\end{tabular}
+\newpage
+\begin{tabular}{ |p{2cm}|p{5cm}|p{2cm}|  }
+\hline
+\Cref{limitation:webStorageQueryLimit} & Não existe forma padronizada de descobrir quando espaço ainda resta em Web Storage & Parcial \\
+\Cref{limitation:webStorageStringOnly} & Web Storage permite que os dados sejam armazenados unicamente como Strings & Não \\
+\Cref{limitation:noErrorMessagesOffline} & Erros na configuração do manifesto offline não contém mensagens descritivas 0& Não \\
+\Cref{limitation:orientationIsntReady} & A implementação da API de orientação é divergente entre os navegadores & Sim \\
+\Cref{limitation:checkResourcesOnlyOnJavascrit} & Checagem de recursos só por JavaScript força implementação de markup em scripts & Não \\
+\Cref{limitation:noCanvas2DIsnpectorOnipresent} & Não existe inspetor Canvas 2D para navegadores multiplataforma & Utilizar ferramentas de debug dentro do código \\
+\Cref{limitation:multiTouch} & Scroll juntamente com outros gestos não funciona corretamente na maioria dos navegadores & Sim \\
+\Cref{limitation:gamepadObject} & Não existe forma padronizada de detectar a entrada e saída de controles nos navegadores & Não \\
+\Cref{limitation:desktopIcon} & Não existe forma padronizada de adicionar ícones de aplicativos Web a área de trabaho & Não \\
+\Cref{limitation:monetizationDifferent} & Jogos exclusivamente Web sentem dificuldade em monetizar jogos da forma convencional & Parcial \\
 \hline
 \end{tabular}
 
-As soluções presentes podem não ser completamente viáveis, mas foram
-disponibilizas de forma a ilustrar que o problema já é identificado e
-parcialmente tratável. Soluções que poderiam utilizar ferramentas que
-não são consideradas partes da WEB, como Flash, foram deliberadamente
-ignoradas.
+As limitações resolvidas parcialmente podem identificam que o
+problema pode ser contornado em partes, mas também quando o problema
+é contornado de forma inesperada e não intuitiva.  Como a utilização 
+de um debugger internamente no código no caso da limitação \Cref{limitation:noCanvas2DIsnpectorOnipresent}.
 
-Algumas possibilidades que são triviais em ambientes desktop podem tornar-se fatores limitante
-na plataforma WEB. Como é o caso do controle de Fullscreen via JavaScript. Em plataformas nativas
-esse controle é geralmente garantido, já na WEB não se permite esse controle. %pesquisar mais sobre isso
+As limitações as quais não tenham solução, em muitos casos, são
+problemas temporais e que podem ser solucionados com o tempo. Outras
+limitações são intrínssecas da característica do HTML e pode
+demorar muito para serem resolvidas.
+
+Algumas possibilidades que são triviais em ambientes desktop podem
+tornar-se fatores limitante na plataforma Web. Como é o caso do
+controle de Fullscreen via JavaScript. Em plataformas nativas esse
+controle é geralmente garantido, já na Web não se permite esse
+tipo de gestão. %pesquisar mais sobre isso
 
 Apesar de pretender resolver os problemas de múltiplas tecnologias em
 multiplataformas, HTML5 introduz uma gama de incompatiblidade entre suas
