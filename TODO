@@ -51,19 +51,19 @@ Mudar a abreviação de figuras.
 Remove numbering from the bibliography
 Ajudstartas referencias das figuras.
 Check case of references
+Complete image descriptions (look for missing names on lof)
 
 #TODO
 
+Talka about Electron
 Table of limitation codes, description and if it is avoidable
 Colocar prints de como o protótipo fica em outras resoluções
 Check sections cases
-Complete image descriptions (look for missing names on lof)
 Write about the canvas to the prototype
 see Lemes to more on game engineering
 Talk about ios limitation on publishing and deploying apps (the time length)
 Increment appendices
 Adjust countdown image
-Add desktop prints of the prototype
 Remove draft from tex header
 Falar sobre a falta de coesão entre os tipos de JavaScript, alguns são nodelists outros são arrays, etc
 Se comparado com jQuery as API's de JavaScript são muito mais verbosas
@@ -75,6 +75,7 @@ Colocar os nomes nas tables (chamar de Quadro e dar um título)
  talvez a gente tenha que enxugar um pouco o texto.. a escrita acabou ficando muito extensa
 talvez seja interessante enxugar, principalmente na parte da revisão bibliográfica de coisas mais básicas como HTML e JavaScript
 geralmente a banca não gosta quando tem muita revisão de coisas básicas
+Generate APK with the latest version of the prototype
 
 #FUTURE
 
