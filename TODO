@@ -52,13 +52,13 @@ Remove numbering from the bibliography
 Ajudstartas referencias das figuras.
 Check case of references
 Complete image descriptions (look for missing names on lof)
+Table of limitation codes, description and if it is avoidable
 
 
 #TODO
 
 Talka about Electron
 Search about quircks mode
-Table of limitation codes, description and if it is avoidable
 Colocar prints de como o protótipo fica em outras resoluções
 Check sections cases
 Write about the canvas to the prototype
@@ -66,7 +66,6 @@ see Lemes to more on game engineering
 Talk about ios limitation on publishing and deploying apps (the time length)
 Increment appendices
 Adjust countdown image
-Remove draft from tex header
 Falar sobre a falta de coesão entre os tipos de JavaScript, alguns são nodelists outros são arrays, etc
 Se comparado com jQuery as API's de JavaScript são muito mais verbosas
 A API do jQuery é também mais permissiva, se um elmento não eixste não vai ser lançado erro, já no JavaScript sim
