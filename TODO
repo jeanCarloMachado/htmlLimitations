@@ -57,6 +57,7 @@ Table of limitation codes, description and if it is avoidable
 
 #TODO
 
+Write about the new full screen api https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API#Things_your_users_want_to_know
 Talka about Electron
 Search about quircks mode
 Colocar prints de como o protótipo fica em outras resoluções

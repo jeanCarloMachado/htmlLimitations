@@ -599,6 +599,7 @@ extraídas do site \textit{Can I Use} e os navegadores populares em questão
 são: Internet Explorer (11), Edge (13), Firefox (43), Google Chorme
 (47), Safari (9) e Opera(34).
 
+\begin{table}
 \begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|  }
 \hline
 Tecnologia & Suporte nas últimas versões estáveis dos navegadores populares & Polyfills disponíveis  para versões antigas \\
@@ -620,6 +621,9 @@ Vídeo & Não & Sim \\
 Prefetch & Não & Sim \\
 \hline
 \end{tabular}
+\label{table:technologies}
+\caption{Tecnologias dos jogos e seu suporte}
+\end{table}
 
 Com este comparativo fica visível que, mesmo em alguns casos não
 existindo suporte nativo ou ele sendo incompleto e com limitações,
@@ -662,28 +666,29 @@ Limitação & Descrição & Existe solução ou contorno? \\
 \Cref{limitation:incompleteSupportWebgl} & Em muitas plataformas o suporte a WebGl é incompleto & Parcial \\
 \Cref{limitation:limitedToRecentThingsWebgl} & WebGl não funciona em placas gráficas antigas  & Não \\
 \Cref{limitation:soundAPIConflicts} & A API de Audio é problemática com sons frequentes no Android & Não \\
+\Cref{limitation:bestAudioCompressionNotSupportedByAllBrowsers} & Não existe um único codec moderno suportado em todos os navegadores & Parcial \\
+\Cref{limitation:limitedMultimidiaControlOnSafari} & O Safari conta com problemas de controle de execução de multimídia & \\
+\Cref{limitation:noEffectsOnVideo} & Não é possível aplicar shaders diretamente em vídeo & Pode-se contornar este problema importando o vídeo para um contexto de Canvas  \\
 \hline
 \end{tabular}
 \newpage
 \begin{tabular}{ |p{2cm}|p{5cm}|p{2cm}|  }
 \hline
-\Cref{limitation:bestAudioCompressionNotSupportedByAllBrowsers} & Não existe um único codec moderno suportado em todos os navegadores & Parcial \\
-\Cref{limitation:limitedMultimidiaControlOnSafari} & O Safari conta com problemas de controle de execução de multimídia & \\
-\Cref{limitation:noEffectsOnVideo} & Não é possível aplicar shaders diretamente em vídeo & Pode-se contornar este problema importando o vídeo para um contexto de Canvas  \\
 \Cref{limitation:videoFullscreenControl} & Falta de forma padronizada de controlar o modo tela cheia para vídeos & \\
 \Cref{limitation:videoCodecs} & Falta de consenso sobre um codec de vídeo padrão & \\
 \Cref{limitation:safariVideoMissingControlAndCanvas} & A integração de vídeo e canvas do Safari é problemática  e vídeo só pode ser carregado pelo usuário & Não \\
 \Cref{limitation:noSqlSupport} & Não existência de tecnologia oficial de SQL para Web & Parcial \\
 \Cref{limitation:webStorageLimit} & Em muitos navegadores não é possível armazenar mais de 5MB em Web Storage & Não \\
-\hline
-\end{tabular}
-\newpage
-\begin{tabular}{ |p{2cm}|p{5cm}|p{2cm}|  }
-\hline
 \Cref{limitation:webStorageQueryLimit} & Não existe forma padronizada de descobrir quando espaço ainda resta em Web Storage & Parcial \\
 \Cref{limitation:webStorageStringOnly} & Web Storage permite que os dados sejam armazenados unicamente como Strings & Não \\
 \Cref{limitation:noErrorMessagesOffline} & Erros na configuração do manifesto offline não contém mensagens descritivas 0& Não \\
 \Cref{limitation:orientationIsntReady} & A implementação da API de orientação é divergente entre os navegadores & Sim \\
+\hline
+\end{tabular}
+\newpage
+\begin{table}
+\begin{tabular}{ |p{2cm}|p{5cm}|p{2cm}|  }
+\hline
 \Cref{limitation:checkResourcesOnlyOnJavascrit} & Checagem de recursos só por JavaScript força implementação de markup em scripts & Não \\
 \Cref{limitation:noCanvas2DIsnpectorOnipresent} & Não existe inspetor Canvas 2D para navegadores multiplataforma & Utilizar ferramentas de debug dentro do código \\
 \Cref{limitation:multiTouch} & Scroll juntamente com outros gestos não funciona corretamente na maioria dos navegadores & Sim \\
@@ -692,14 +697,20 @@ Limitação & Descrição & Existe solução ou contorno? \\
 \Cref{limitation:monetizationDifferent} & Jogos exclusivamente Web sentem dificuldade em monetizar jogos da forma convencional & Parcial \\
 \hline
 \end{tabular}
+\label{table:technologies}
+\caption{Lista de problemas e limitações}
+\end{table}
 
-As limitações resolvidas parcialmente podem identificam que o
+As limitações resolvidas parcialmente podem identificar que o
 problema pode ser contornado em partes, mas também quando o problema
-é contornado de forma inesperada e não intuitiva.  Como a utilização 
-de um debugger internamente no código no caso da limitação \Cref{limitation:noCanvas2DIsnpectorOnipresent}.
+é contornado de forma inesperada e não intuitiva. Como a utilização
+de um depurador internamente no código no caso da limitação
+\Cref{limitation:noCanvas2DIsnpectorOnipresent}.
 
 As limitações as quais não tenham solução, em muitos casos, são
-problemas temporais e que podem ser solucionados com o tempo. Outras
+problemas temporais e que podem ser solucionados com o tempo. Como no
+caso da limitação \Cref{limitation:gamepadObject}, que as diferenças
+se dão em grande parte por a especificação não estar prontta. Outras
 limitações são intrínssecas da característica do HTML e pode
 demorar muito para serem resolvidas.
 
