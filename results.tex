@@ -464,15 +464,15 @@ qualquer forma para a aplicação.
 
 \section{Orientação}
 
-Visto que a especificação de orientação não está pronta, o
-suporte está longe de completo. Da mesma forma, existem diferenças
-substanciais nas implementações entre os navegadores (\limitation{orientationIsntReady}). Por
-exemplo, o Firefox e Google Chrome não manipulam ângulos da mesma
-forma. Outrossim, alguns eixos se comportam de maneiras opostas
-\autocite{mdnOrientation}. O polyfill \textit{gyronorm.js} é uma
-tentativa de normalizar o uso de dados de orientação nos navegadores
-que pode ser utilizada até a especificação e os navegadores
-evoluírem.
+Visto que a especificação de orientação não está pronta,
+o suporte está longe de completo. Da mesma forma, existem
+diferenças substanciais nas implementações entre os navegadores
+(\limitation{orientationIsntReady}). Por exemplo, o Firefox e Google
+Chrome não manipulam ângulos da mesma forma. Outrossim, alguns
+eixos se comportam de maneiras opostas \autocite{mdnOrientation}. O
+polyfill \textit{gyronorm.js} é uma tentativa de normalizar o uso de
+dados de orientação nos navegadores que pode ser utilizada até a
+especificação e os navegadores evoluírem.
 
 \section{Detecção de recursos}
 
@@ -539,7 +539,7 @@ A forma de gerenciar a conexão de Gamepads é diferente entre o Firefox
 e Google Chrome. No Firefox é lançado um evento toda a vez que o
 Gamepad é desconectado, já no Google Chrome é necessário verificar
 um vetor de gamepads pela existência do objeto de tempos em tempos
-\autocite{gamepad} (]o \limitation{gamepadObject}). Este problema é
+\autocite{gamepad} (\limitation{gamepadObject}). Este problema é
 reflexo da especificação ainda incompleta e força os desenvolvedores
 a duplicarem a mesma atividade no código.
 
