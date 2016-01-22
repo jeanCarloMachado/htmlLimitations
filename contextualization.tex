@@ -1,30 +1,27 @@
 \pagenumbering{arabic}
-%\setcounter{page}{1} 
+\setcounter{page}{11}
 
-Desde a década de 90, jogos digitais se tornaram uma forma dominante
-de recriação \autocite{gameDesignPatterns}. Devido a fatores como o
-barateamento da construção de hardware e sua crescente capacidade a massificação
-dos dispositivos móveis inteligentes se tornou possível. Os
-computadores deixaram de ser apenas ferramentas científica e de
-negócios, tornando-se plataformas de diversão. Atualmente jogos
-são utilizados em uma vasta gama de dispositivos \autocite[p.
-6]{crossPlatformMobileGameDevelopment}.
-
+Desde a década de 90, jogos digitais se tornaram uma "forma dominante
+de recriação" \autocite{gameDesignPatterns}. Devido a fatores
+como o barateamento da construção de hardware e sua crescente
+capacidade a massificação dos dispositivos móveis inteligentes
+se tornou possível. Os computadores deixaram de ser apenas
+ferramentas científica e de negócios, tornando-se plataformas de
+diversão. Atualmente jogos são utilizados em uma vasta gama de
+dispositivos \citet[p. 6]{crossPlatformMobileGameDevelopment}.
 \citet{HTML5CrossPlatformGameDevelopment} afirma que mais de 80\% do
 tempo total gasto utilizando dispositivos móveis é na utilização de
 aplicativos, e 32\% deste tempo é para jogar vídeo games.
 
-Não obstante, devido a variedade de dispositivos, é difícil para
+Entretanto, devido a variedade de dispositivos, é difícil para
 os criadores de jogos alcançarem todos os jogadores possivelmente
 interessados em suas criações. \citet{html5Tradeoffs} afirma que a
 maior dificuldade em capturar uma base de usuários é que o mercado
 de dispositivos móveis é muito fragmentado e não existe uma única
-plataforma popular.
-
-Esta característica força os criadores de jogos a suportarem diversas
-plataformas. \autocite{htmlSurvey} afirma que 81\% dos aplicativos
-mobile rodam em pelo menos dois sistemas operacionais. Para atingir
-múltiplas plataformas os desenvolvedores utilizam de variadas
+plataforma popular. Esta característica força os criadores de jogos a
+suportarem diversas plataformas. \citet{htmlSurvey} afirma que 81\% dos
+aplicativos mobile rodam em pelo menos dois sistemas operacionais. Para
+atingir múltiplas plataformas os desenvolvedores utilizam de variadas
 estratégias, sendo uma delas o HTML5.
 
 Desde o lançamento da versão 5, o HTML deixou de ser apenas uma
@@ -38,18 +35,16 @@ observáveis na construção de jogos em HTML.
 
 Muito pouco investimento é necessário para começar a desenvolver
 jogos utilizando as tecnologias da Web \autocite{html5mostwanted}.
-Desenvolvedores de sites podem reaproveitar o conhecimento direcionando-o
-para o desenvolvimento de jogos. O interesse por parte dos
-desenvolvedores também é grande \autocite{htmlSurvey} cita que cerca
-de 59\% dos desenvolvedores estão muito interessados em desenvolver
-aplicativos em HTML5.
+Desenvolvedores de sites podem reaproveitar o conhecimento
+direcionando-o para o desenvolvimento de jogos. O interesse por
+parte dos desenvolvedores também é grande \autocite{htmlSurvey}
+cita que cerca de 59\% dos desenvolvedores estão muito interessados
+em desenvolver aplicativos em HTML5. As vantagens financeiras do
+desenvolvimento de aplicações multiplataforma em HTML também são
+substanciais. O tempo de desenvolvimento de uma aplicação em HTML5 é
+67\% menor que aplicações nativas \autocite[p. 460]{html5Tradeoffs}.
 
-As vantagens financeiras do desenvolvimento de aplicações
-multiplataforma em HTML também são substanciais. O tempo de
-desenvolvimento de uma aplicação em HTML5 é 67\% menor que
-aplicações nativas \autocite[p. 460]{html5Tradeoffs}.
-
-Não obstante, apesar utilização da Web ser gigantesca, criar
+Contudo, apesar utilização da Web ser gigantesca, criar
 jogos dinâmicos e de tempo real não é seu primeiro objetivo
 \autocite{html5mostwanted}. O processo de desenvolvimento de
 aplicações HTML5 está em constante fluxo de aperfeiçoamento e novos
@@ -58,14 +53,13 @@ métodos, técnicas, e ferramentas estão aparecendo todo o tempo
 
 Neste contexto vê-se a necessidade de uma revisão das tecnologias do
 HTML para jogos, suas fraquezas e especialidades. Este trabalho propõe
-analisar as limitações do HTML5 relativo a construção de
-jogos multiplataforma através de revisão bibliográfica e da criação
-de um protótipo de jogo multiplataforma. O protótipo escolhido foi
-um jogo de matemática simples onde o usuário pode escolher se uma
-questão matemática, e seu resultado dado estão corretos.
-
-Com as informações coletas de maneira prática e teórica foram
-registradas as limitações e uma análise sobre elas foi efetuada.
+analisar as limitações do HTML5 relativo a construção de jogos
+multiplataforma através de revisão bibliográfica e da criação de um
+protótipo de jogo multiplataforma. O protótipo escolhido foi um jogo
+de matemática simples onde o usuário pode escolher se uma questão
+matemática, e seu resultado dado estão corretos. Com as informações
+coletadas, de maneira prática e teórica, foram registradas as limitações
+e uma análise sobre elas foi efetuada.
 
 \section{PROBLEMA}
 %{{
@@ -174,3 +168,43 @@ testes do jogo. Este detalhamento deve responder perguntas como:
 \end{itemize}
 
 %}}}
+
+\section{TRABALHOS RELACIONADOS}
+%{{{
+\citet{crossPlatformMobileGame} elaborou uma revisão de aspectos do
+HTML5 através da construção de um jogo. O autor foca muito nos
+aspectos de criação de jogos e feedback do desenvolvimento. Troca
+de tecnologias e não especificamente nas limitações conforme o meu
+trabalho. Em outras palavras seu escopo é mais genérico e não tão
+preciso quanto este
+
+\citet{aSeriousContender} realizou uma pesquisa através de questionário
+e protótipo sobre a viabilidade de aplicativos em HTML5, concluindo que
+no geral desenvolvimento de aplicativos em HTML5 são opções viáveis
+e lucrativas. Seu trabalho difere a este por não focar no contexto dos
+jogos, não observando muitas das nuances e necessidades específicas
+para o desenvolvimento de jogos. Outra diferença substancial é que o
+autor foca apenas na viabilidade não ressaltando as limitações da
+plataforma.
+
+\citet{crossPlatformMobileGameDevelopment} revisa algumas tecnologias
+da web e constrói um jogo protótipo para aprender um framework que
+possibilita a construção de jogos multiplataforma. Não obstante
+o autor foca em um framework de compilação múltipla, não usando
+diretamente as tecnologias da Web. O autor também não foca na experiência do
+desenvolvimento ou em coletar limitações como este projeto se propõe.
+
+\citet{viabilityBusinessApplications} estuda a viabilidade de
+aplicações comerciais multiplataforma em HTML5 através da
+construção de um aplicativo comercial em Sencha Touch. É construída
+uma lista de recursos interessantes no desenvolvimento comercial
+de aplicações e cada um destes recursos é revisado depois do
+desenvolvimento, assemelhando-se muito a metodologia deste trabalho. Em
+seu estudo o autor utiliza uma ferramenta de desenvolvimento em C\# que
+compila nativamente o que se distancia da proposta deste trabalho de
+avaliar as limitações com a construção de um protótipo diretamente
+em HTML. O autor também não se foca em tecnologias dos jogos,
+outrossim aplicações genéricas.
+
+%}}}
+
