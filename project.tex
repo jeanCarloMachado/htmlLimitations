@@ -2,7 +2,7 @@ Este capítulo tem por objetivo detalhar os aspectos do desenvolvimento
 do protótipo. Sua mecânica, funcionamento, decisões tecnológicas,
 diagramas entre outros aspectos serão tratados aqui.
 
-\section{MECÂNICA}
+\section{Mecânica}
 
 Para a análise prática das limitações foi escolhido um jogo de
 matemática simples. Consistindo na geração de equações com uma
@@ -120,7 +120,7 @@ a quantidade de telas é realmente baixa e os benefícios introduzidos
 seriam pequenos.
 
 Ao iniciar a execução do JavaScript todas as divs que representam
-telas são escondidas e a div de carregamento de recursos é mostrada em
+telas são escondidas e a \textit{div} de carregamento de recursos é mostrada em
 seguida. O objetivo desta tela é não deixar o usuário sem feedback enquanto
 todos os recursos necessários para a utilização do jogo estejam disponíveis.
 Não obstante o carregamento é realmente rápido e o usuário, a não ser que 
@@ -169,7 +169,6 @@ parseInt(
 \caption{Exemplo de utilização de funções imediatamente invocadas}
 \label{fig:punctuationCalculation}
 \end{figure}
-
 
 \begin{figure}[H]
     \centering
@@ -286,7 +285,7 @@ teclado além dos já presentes botões na interface, possibilitando que
 o usuário utilize o teclado além do mouse. Quando o usuário utilizar
 a seta para esquerda ou direita os botões Sim ou Não respectivamente,
 são clicados através de JavaScript. Simular o clique ao invés ao
-invés acionar duas vezees o tratamento das escolhas de resposta foi uma boa
+invés acionar duas vezes o tratamento das escolhas de resposta foi uma boa
 estratégia pois centralizou o tratamento evitando duplicação de código.
 
 No mobile, com intuito de melhorar a experiência, foi adicionada
@@ -299,8 +298,8 @@ invocadas para declarar as classes. Isso se demonstrou uma boa forma
 de separar os objetos, tornando o conflito de variáveis globais um
 problema inexistente. Outro aspecto positivo foi a utilização de
 um meta objeto para encapsular os demais, similar ao conceito de
-namespaces, neste caso utilizei o nome MyMath garantindo que problemas
-de conflitos de nomes não aconteçam.
+\textit{namespaces}, neste caso utilizei o nome MyMath garantindo que
+problemas de conflitos de nomes não aconteçam.
 
 Ao final do desenvolvimento foi feita a integração de Grunt com
 plugins de minificação do JavaScript e CSS \footnote{Para mais
@@ -350,23 +349,21 @@ no contato a tela pode se mover e desconcentrar o usuário. Para
 remover este comportamento deve-se utilizar o \textit{overflow:
 hidden;} do seletor do corpo do documento (\textit{body}).
 
-A barra de endereço é outro recurso de pouca utilidade no contexto de
-jogos, e muitas vezes um empecilho para jogos em dispositivos móveis,
-devido ao limitado tamanho da tela.
-
-Para desabilitar a barra em dispositivos da Apple pode-se utilizar a
-seguinte configuração:
+A barra de endereço é outro recurso de pouca utilidade no contexto
+de jogos, e muitas vezes um empecilho para jogos em dispositivos
+móveis, devido ao limitado tamanho da tela. Para desabilitar a barra em
+dispositivos da Apple pode-se utilizar a seguinte configuração:
 
 \begin{verbatim}
 <meta name="apple-mobile-web-app-capable" content="yes" />
 \end{verbatim}
 
 Segundo \citet{homescreenwebapps} o Google Chrome a partir da versão 31
-adicionou suporte a esta notação, inclusive o prefixo Apple, mas as intenções
-é que o prefixo seja removido nas próximas versões.
-
-Para os demais dispositivos não existe meio oficial de esconder a barra
-de endereço. Não obstante, alguns sites recomendam a solução descrita abaixo:
+adicionou suporte a esta notação, inclusive o prefixo Apple, mas as
+intenções é que o prefixo seja removido nas próximas versões. Para
+os demais dispositivos não existe meio oficial de esconder a barra de
+endereço. Não obstante, alguns sites recomendam a solução descrita
+abaixo:
 
 \begin{verbatim}
 <body onload="setTimeout(function() {window.scrollTo(0, 1)}, 100)">
@@ -449,13 +446,12 @@ dispositivos móveis.
 
 \subsubsection{HTML}
 
-Um problema que jogos em HTML sofrem é a demora no carregamento da
-grande quantidade de recursos que geralmente precisam estar em memória
-para o jogo funcionar. Muitos jogos utilizam uma tela de carregamento
-enquanto os recursos são adquiridos.
-
-Existem algumas formas de minimizar este problema, como 
-utilização de cache, CDN's, minificação, entre outros.
+Um problema que jogos em HTML sofrem é a demora no carregamento
+da grande quantidade de recursos que geralmente precisam estar em
+memória para o jogo funcionar. Muitos jogos utilizam uma tela de
+carregamento enquanto os recursos são adquiridos. Existem algumas
+formas de minimizar este problema, como utilização de cache, CDN's,
+minificação, entre outros.
 
 Uma funcionalidade do HTML interessante para otimizar o tempo de rede
 o pré carregamento de recursos (\textit{Link Prefetching}). Esta

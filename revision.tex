@@ -287,7 +287,7 @@ e padronização de novas tecnologias. Retro compatibilidade com
 as especificações anteriores. Consenso entre o mercado e o meio
 acadêmico, nunca um distanciando-se muito do outro \footnote{Mais
 informações sobre a Open Web podem ser encontradas no seguinte
-endereço http://tantek.com/2010/281/b1/what-is-the-open-web}.
+endereço \url{http://tantek.com/2010/281/b1/what-is-the-open-web}}.
 
 Várias pessoas, empresas e comunidades estão interessadas neste
 processo, cada qual com seus próprios conjunto de ideias sobre como
@@ -298,13 +298,13 @@ precisam ser definidos \autocite[p. 5]{aSeriousContender}.
 A W3C é uma comunidade responsável por boa parte das
 especificações da web como: HTML (em conjunto com a WHATWG), CSS,
 entre outras\footnote{Uma lista completa das especificações mantidas pela
-W3C pode ser encontrada em: http://www.w3.org/TR/}. Outros grupos
+W3C pode ser encontrada em: \url{http://www.w3.org/TR/}}. Outros grupos
 detém responsabilidade por outras tecnologias da OWP, como a ECMA,
 responsável pelo JavaScript; ou Kronos, responsável pelo WebGL.
 
 Na W3C o processo de desenvolvimento de especificações consiste
 na elaboração de rascunhos (\textit{working drafts}), criados por grupos
-de trabalhos (\textit{workin groups}) de especialistas no
+de trabalhos (\textit{working groups}) de especialistas no
 assunto, que passam por vários passos de revisão até se tornarem
 recomendações. As recomendações podem ser implementadas com
 segurança de que a especiação não mudará substancialmente.
@@ -748,19 +748,18 @@ Além da apresentação, recurso vital para jogos, e aplicativos web em
 geral, é a iteratividade. Com as tecnologias da Web esta iteratividade
 é atingida através do JavaScript.
 %}}}
-\section{JAVASCRIPT}
+\section{JavaScript}
 %{{{
 
-EMACScript, melhor conhecida como JavaScript, criada por Brendan Eich em
-1992, é a linguagem de script da Web. Devido a tremenda popularidade
-entre comunidade de desenvolvedores a linguagem foi abraçada pela W3C e
-atualmente é um dos componentes da Open Web.
-
-As definições da linguagem são descritas na especificação ECMA-262.
+EMACScript, melhor conhecida como JavaScript, criada por Brendan
+Eich em 1992, é a linguagem de script da Web. Devido a tremenda
+popularidade entre comunidade de desenvolvedores a linguagem foi
+abraçada pela W3C e atualmente é um dos componentes da Open Web. As
+definições da linguagem são descritas na especificação ECMA-262.
 Esta possibilitou o desenvolvimento de outras implementações além da
-original (SpiderMonkey) como o Rhino, V8 e TraceMonkey; bem como
-outras linguagens similares como JScript da Microsoft e o ActionScript
-da Adobe.
+original (SpiderMonkey) como o Rhino, V8 e TraceMonkey; bem como outras
+linguagens similares como JScript da Microsoft e o ActionScript da
+Adobe.
 
 Segundo a \citet{ecmaSpecificaton}:
 \begin{quote}
@@ -853,16 +852,15 @@ elemento eles fazem a requisição para o servidor e injetam o código
 retornado no documento, e a não ser que especificado de outra forma,
 iniciam sua execução.
 
-\subsection{JAVASCRIPT 7}
+\subsection{JavaScript 7}
 
 Antes da finalização da especificação 6, algumas funcionalidades
 do JavaScript 7 já haviam sido propostas. Na página
-https://github.com/tc39/ecma262 pode-se conferir os itens propostos e
-seu estágio de evolução. A figura \ref{fig:ecma7} é a tabela de
-funcionalidades sugeridas e seu estágio no caminho da especificação.
-
-Alguns dos recursos esperados para o JavaScript 7 são: guards,
-contratos e concorrência no laço de eventos \autocite{ecma7}.
+\url{https://github.com/tc39/ecma262} pode-se conferir os itens
+propostos e seu estágio de evolução. A figura \ref{fig:ecma7} é
+a tabela de funcionalidades sugeridas e seu estágio no caminho da
+especificação. Alguns dos recursos esperados para o JavaScript 7 são:
+guards, contratos e concorrência no laço de eventos \autocite{ecma7}.
 
 \begin{figure}[H]
     \centering
@@ -872,31 +870,31 @@ contratos e concorrência no laço de eventos \autocite{ecma7}.
     \label{fig:ecma7}
 \end{figure}
 
-\subsection{ASM.JS}% o correto é asm.js
+\subsection{Asm.js}
 
 Asm.js é um subconjunto da sintaxe do JavaScript a qual permite
 grandes benefícios de performance quando em comparação com
 JavaScript normal. Entretanto, não é trivial escrever código em
-asm.js e geralmente a criação de código asm.js é feita através
+Asm.js e geralmente a criação de código Asm.js é feita através
 da conversão de outras linhagens como C. O projeto Emscripten
-https://github.com/kripken/emscripten pode ser utilizado para gerar
-código em asm.js é utilizado pelo motor de jogos Unity 3D e Unreal.
+\url{https://github.com/kripken/emscripten} pode ser utilizado para gerar
+código em Asm.js é utilizado pelo motor de jogos Unity 3D e Unreal.
 
-No contexto dos jogos performance é um fator de extrema importância
-asm.js se destaca por utilizar recursos que permitam otimizações
-antes do tempo (\textit{ahead of time optimizations}). Grade parcela
-da performance adicional, em relação ao JavaScript, é devido a
-consistência de tipo e a não existência de um coletor de lixo
-(\textit{garbage collector}) a memória é gerenciada manualmente
-através de um grande vetor. Esse modelo simples desprovido de
+No contexto dos jogos performance é um fator de extrema importância,
+Asm.js se destaca por utilizar recursos que permitam otimizações
+antes do tempo (\textit{ahead of time optimizations}). Outra grade
+parcela da performance adicional, em relação ao JavaScript, é
+devido a consistência de tipo e a não existência de um coletor de
+lixo (\textit{garbage collector}) a memória é gerenciada manualmente
+através de um grande vetor. Esse modelo simples, desprovido de
 comportamento dinâmico, sem alocação e desalocação de memória,
-apenas um bem definido conjunto de operações de inteiros e flutuantes
+apenas um bem definido conjunto de operações de inteiros e flutuantes,
 possibilita grade performance e abre espaço para otimizações.
 
-O desenvolvimento do asm.js iniciou-se no final de 2013 não obstante a
-maioria dos navegadores não implementam ou implementam parcialmente o
+O desenvolvimento do Asm.js iniciou-se no final de 2013, não obstante,
+a maioria dos navegadores não implementam ou implementam parcialmente o
 rascunho. O motor JavaScript da Mozilla, SpiderMonkey, é a exceção,
-implementando a grande maioria dos recursos do asm.js.
+implementando a grande maioria dos recursos do Asm.js.
 
 \subsection{Web Assembly}
 %{{{
@@ -943,14 +941,12 @@ de jogos comecem a integrar a tecnologia em suas aplicações.
 Web Animations é uma especificação em rascunho que define uma forma
 imperativa de manipular animações através de JavaScript. Como
 demonstrado na figura \ref{fig:webAnimations} a tecnologia vai permitir
-manipular as animações de elementos do DOM, com a possibilidade de
-filtrar por tipo de animação, alterar a taxa de animações, o tempo
-de execução, entre outras propriedades de uma forma dinâmica -
-através de scripts.
-
-Visto que Web Animations lida diretamente com o DOM, animações podem
-ser aplicadas para SVG além de CSS, servindo como uma tecnologia para
-unificar animações.
+manipular as animações de elementos do DOM, com a possibilidade
+de filtrar por tipo de animação, alterar a taxa de animações, o
+tempo de execução, entre outras propriedades de uma forma dinâmica,
+através de scripts. Visto que Web Animations lida diretamente com o
+DOM, animações podem ser aplicadas para SVG além de CSS, servindo
+como uma tecnologia para unificar animações.
 
 Grande controle sobre animações é desejável para os
 jogos, não obstante, visto que a especificação é muito
@@ -983,7 +979,7 @@ coleção de animações utilizando a tecnologia.
 
 %}}}
 %}}}
-\section{NAVEGADORES}
+\section{Navegadores}
 %{{{
 Navegadores são aplicações, onde as tecnologias da OWP são
 interpretadas e geram um conteúdo útil para os usuários. São
@@ -1029,11 +1025,10 @@ Para interpretar HTML o motor WebKit utiliza a biblioteca Bison, já
 o Gecko utiliza uma biblioteca própria \autocite{howBrowsersWork}.
 Durante o processo de renderização o navegador pode requisitar outros
 arquivos do servidor a fim de completar a experiência desejada para o
-documento em questão.
-
-Geralmente após a renderização do documento vem a execução de scripts.
-As bibliotecas que executam JavaScript são chamadas de motores de JavaScript.
-Abaixo segue uma lista dos motores de JavaScript mais comuns.
+documento em questão. Geralmente após a renderização do documento
+vem a execução de scripts. As bibliotecas que executam JavaScript são
+chamadas de motores de JavaScript. Abaixo segue uma lista dos motores de
+JavaScript mais comuns.
 
 \begin{itemize}
     \item SpiderMonkey: Primeiro motor, desenvolvido por Brendan Eich, escrito em C++
@@ -1043,11 +1038,11 @@ Abaixo segue uma lista dos motores de JavaScript mais comuns.
     \item TraceMonkey: Criada pela Mozilla
 \end{itemize}
 
-Cada um dos motores que compõem um navegador implementam partes da
+Cada um dos motores que compõem um navegador implementa partes da
 especificação do HTML. E, operando em conjunto, tentam comportar
 todas as tecnologias da Web. Infelizmente a forma que as tecnologias
-são suportadas varia e algumas não estão presentes de qualquer
-forma nos navegadores. Não obstante o suporte vem crescendo. A figura
+são suportadas varia e algumas não estão presentes de qualquer forma
+nos navegadores. Não obstante, o suporte vem crescendo. A figura
 \ref{fig:audioCodecs} apresenta o gráfico de suporte por versões de
 navegadores em dezembro de 2015.
 
@@ -1060,7 +1055,7 @@ navegadores em dezembro de 2015.
 \end{figure}
 
 %}}}
-\section{ANDROID}
+\section{Android}
 %{{{
 
 É um sistema operacional open-source criado em 2003 pela Android
@@ -1099,7 +1094,7 @@ descreve como detectar recursos nas variadas plataformas que a Web se
 apresenta.
 
 %}}}
-\section{DETECÇÃO DE RECURSOS}
+\section{Detecção de Recursos}
 %{{{
 Visto que nenhum navegador implementa as especificações HTML
 completamente, cabe ao desenvolvedor detectar os navegadores que não
@@ -1142,14 +1137,14 @@ navegadores implementam o quê. Uma boa referência do suporte a recursos
 nos navegadores é o site \url{http://caniuse.com/}.
 
 %}}}
-\section{RENDERIZAÇÃO}
+\section{Renderização}
 Renderização é parte fundamental de muitos jogos. As tecnologias que
 permitem renderização na Web serão descritas abaixo.
 \subsection{SVG}
 %{{{
 SVG (\textit{Gráficos de vetores escaláveis}), é uma linguagem
 baseada em XML especializada na criação de vetores bidimensionais
-\autocite{html5mostwanted}. Segundo \cite[p. 4]{svgTime} svg foi criada
+\autocite{html5mostwanted}. Segundo \citet[p. 4]{svgTime} svg foi criada
 em conjunto por empresas como: Adobe, Apple, AutoDesk, entre outas,
 sendo que seus produtos contam com rápida integração a tecnologia.
 
@@ -1205,7 +1200,7 @@ círculo sendo definido em SVG.
 Outra tecnologia popular da Web para renderização que adota uma filosofia totalmente 
 diferente do SVG é o canvas.
 %}}}
-\subsection{CANVAS}
+\subsection{Canvas}
 %%{{{
 O elemento \textit{canvas} define uma camada de mapa de bits em
 documentos HTML que pode ser usada para criar diagramas, gráficos e
@@ -1376,7 +1371,7 @@ Após a revisão de tecnologias de renderização serão abordadas
 tecnologias de multimídia: áudio e vídeo. Mas para falar de ambos,
 antes é necessário falar de codecs.
 
-\section{CODECS}
+\section{Codecs}
 %{{{
 
 Codec é o algoritmo usado para codificar e decodificar vídeo ou
@@ -1416,7 +1411,7 @@ Abaixo segue uma lista de alguns codecs populares para áudio segundo
     \item Vorbis
 \end{itemize}
 
-Ainda segundo \cite[p. 67]{proHtml5} abaixo segue uma lista de codecs populares para vídeo.
+Ainda segundo \citet[p. 67]{proHtml5} abaixo segue uma lista de codecs populares para vídeo.
 \begin{itemize}
     \item H.264
     \item VP8
@@ -1462,7 +1457,7 @@ os formatos populares de áudio considerando o fator taxa de bits
 (perceptível por humanos).}.
 
 %}}}
-\section{ÁUDIO}
+\section{Áudio}
 %{{{
 
 Áudio é um componente vital para oferecer imersão e feedback aos
@@ -1483,7 +1478,7 @@ através da API JavaScript de áudio.
     \source{https://www.opus-codec.org/comparison/}
 \end{figure}
 
-\subsection{ELEMENTO ÁUDIO}
+\subsection{Elemento Áudio}
 
 O elemento \textit{audio} foi a primeira tecnologia de áudio nativa
 para Web, ele define um som dentro de um documento HTML. Quando o
@@ -1534,7 +1529,7 @@ muitas vezes precisam lançar múltiplos sons derivados de ações
 de usuário e outros eventos, nestes casos a API de áudio é mais
 adequada.
 
-\subsection{API DE ÁUDIO}
+\subsection{API de Áudio}
 
 É uma interface experimental (ainda em rascunho) em JavaScript para
 criar e processar áudio. O objetivo da especificação é incluir
@@ -1570,7 +1565,7 @@ usuário. Abaixo será feita uma revisão sobre a tecnologia de vídeo
 em HTML.
 
 %}}}
-\section{VÍDEO}
+\section{Vídeo}
 %{{{
 
 O elemento \textit{video} define uma forma de adicionar vídeos na
@@ -1619,7 +1614,7 @@ requerimento comum em jogos é haver uma forma de armazenar dados
 eficientemente e buscá-los com agilidade. Abaixo serão discutidas as
 tecnologias de armazenamento disponíveis para a Web.
 %}}}
-\section{ARMAZENAMENTO}
+\section{Armazenamento}
 %{{{
 Uma das grades limitações do HTML era a ausência de capacidade de
 armazenamento de dados no lado do cliente. Antes do HTML5 a única
@@ -1641,14 +1636,13 @@ Mozilla.
 
 \subsection{Web SQL}
 
-A especificação Web SQL introduz uma API para manipular banco de dados
-relacionais em SQL. A especificação suporta transações, operações
-assíncronas e um tamanho de armazenamento substancial: 5 megabytes, o
-qual pode ser estendido pelo usuário.
-
-O grupo de trabalho do Web SQL iniciou-se em 2010 e foi suspendido ainda
-como rascunho. Apesar de ser um recurso desejável para muitos
-desenvolvedores, foi descontinuada pelos motivos descritos abaixo.
+A especificação Web SQL introduz uma API para manipular banco de
+dados relacionais em SQL. A especificação suporta transações,
+operações assíncronas e um tamanho de armazenamento substancial: 5
+MB, o qual pode ser estendido pelo usuário. O grupo de trabalho do Web
+SQL iniciou-se em 2010 e foi suspendido ainda como rascunho. Apesar de
+ser um recurso desejável para muitos desenvolvedores, foi descontinuada
+pelos motivos descritos abaixo.
 
 Segundo \citet{diveIntohtml}
 \begin{quote}
@@ -1659,7 +1653,7 @@ interessar em desenvolver a especificação a descrição do dialeto SQL
 apenas referencia o SQLITE, o que não é aceitável para um padrão.
 \end{quote}
 
-Não obstante, a especificação ainda é suportada pelo Google
+Entretanto, a especificação ainda é suportada pelo Google
 Chrome, Safari, Opera e Android, entre outros. Mas até que outros
 implementadores se prontifiquem a especificação continuará suspensa.
 No lugar do Web SQL a W3C recomenda a utilização do Web Storage e do
@@ -1789,7 +1783,7 @@ processamento não vital, e possivelmente demorado, ocorre. Outra
 tecnologia da web que utiliza os mesmos princípios é o Web Workers.
 
 %}}}
-\section{Web WORKERS}
+\section{Web Workers}
 %{{{
 
 É uma API que possibilita executar vários scripts
@@ -1807,7 +1801,7 @@ funcionalidades proporcionadas pelo window com algumas exceções, por
 exemplo threads não podem fazer alterações no DOM.
 
 %}}}
-\section{OFFLINE}
+\section{Offline}
 %{{{
 Disponibilizar aplicações Web offline é uma característica
 introduzida no HTML5. Uma nova gama de aplicativos Web foram
@@ -1862,7 +1856,7 @@ server.cgi
 \end{figure}
 
 %}}}
-\section{ENTRADA DE COMANDOS}
+\section{Entrada de Comandos}
 %{{{
 Na construção da grande maioria dos jogos é muitas vezes
 imprescindível grande flexibilidade na gestão de entrada comandos.
@@ -1944,7 +1938,7 @@ atributo \textit{pressed} que pode ser utilizado para saber se foi pressionado.
 A figura \ref{fig:gamepad} contém os objetos tradicionais de um Gamepad.
 
 %}}}
-\section{ORIENTAÇÃO}
+\section{Orientação}
 %{{{
 Muitos dispositivos móveis contam com tecnologias que permitem detectar
 a orientação física e movimento como acelerômetros e giroscópios.
@@ -2013,7 +2007,7 @@ são escassos e a tendência é observarmos cada vez mais aplicações
 utilizando com o HTTP/2.
 
 %}}}
-\section{DEBUG}
+\section{Depuração}
 %{{{
 
 Depuração (\textit{debug}) é o processo de encontrar e reduzir defeitos
@@ -2098,7 +2092,7 @@ X-SourceMap: /path/to/script.JavaScript.map
 
 Para os arquivos de Source Maps é possível utilizar ferramentas
 especializadas ou integrá-los ao processo de \textit{build} como Grunt ou Gulp
-\footnote{A biblioteca https://github.com/mishoo/UglifyJS2 é uma
+\footnote{A biblioteca \url{https://github.com/mishoo/UglifyJS2} é uma
 ferramenta de minificação capaz de gerar Source Maps}.
 
 Após ter o jogo ter sido depurado e seus erros minimizados, pode-se
@@ -2107,15 +2101,16 @@ Abaixo será abordada algumas formas de disponibilizar jogos web em
 ambientes multiplataforma.
 %}}}
 %}}}
-\section{DISPONIBILIZAÇÃO DA APLICAÇÃO} %{{{
+\section{Disponibilização da Aplicação}
+%{{{
 
 Os aplicativos puramente em HTML não requerem instalação e
 funcionam apenas acessando o endereço através de um navegador.
-\autocite{browserGamesTechnologyAndFuture} cita à respeito de
-aplicações Web: por não requererem instalação, sua distribuição é
-superior ao estilo convencional de aplicações desktop.
+\citet{browserGamesTechnologyAndFuture} cita à respeito de
+aplicações Web "por não requererem instalação, sua distribuição é
+superior ao estilo convencional de aplicações desktop".
 
-Não obstante, se o objetivo é fornecer uma experiência similar aos
+Conquanto, se o objetivo é fornecer uma experiência similar aos
 demais aplicativos mobile ou integrar um sistema de compras, geralmente
 feitos através de um mercado como o GooglePlay, pode-se adotar a
 alternativa híbrida criando um pacote para o software.
@@ -2143,7 +2138,8 @@ disponibilizar a aplicação nativamente.
 \item A WebView mostra a aplicação para o usuário;
 \end{itemize}
 
-No endereço https://github.com/phonegap/phonegap-start encontra-se um
-template no formato requerido pelo PhoneGap Build que pode ser utilizado
-para começar aplicações que serão servidas através da solução.
+No endereço \url{https://github.com/phonegap/phonegap-start}
+encontra-se um template no formato requerido pelo PhoneGap Build que
+pode ser utilizado para começar aplicações que serão servidas
+através da solução.
 %}}}
