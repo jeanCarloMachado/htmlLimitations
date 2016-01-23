@@ -34,16 +34,16 @@ Enquanto o HTML é desenvolvido muitas das funcionalidades
 disponibilizadas são testadas em um pequeno conjunto de navegadores
 para um pequeno conjunto de versões. Isso acarreta em suporte
 inconsistente. A forma mais segura de garantir suporte é testando em
-todas as versões alvo, todavia essa solução não é prática.
+todas as versões alvo, entretanto essa solução não é prática.
 \end{quote}
 
-Não obstante, este não é um problema exclusivo dos navegadores.  
-Segundo \citet{chromeWebView} da versão 4.4 do Android em diante a
-WebView mudou de um projeto local para utilizar o Chromium. Entretanto,
-grande parcela dos usuários Android ainda utilizam o sistema antigo o
-que força os desenvolvedores suportarem ambas as versões. É razoável
+Este não é um problema exclusivo dos navegadores. Segundo
+\citet{chromeWebView} da versão 4.4 do Android em diante a WebView
+mudou de um projeto local para utilizar o Chromium. Entretanto, grande
+parcela dos usuários Android ainda utilizam o sistema antigo o que
+força os desenvolvedores suportarem ambas as versões. É razoável
 afirmar que para o início de 2016 um terço dos usuários de Android
-ainda utilizem a versão antiga da WebView \citet{chromeWebView}.
+ainda utilizem a versão antiga da WebView \autocite{chromeWebView}.
 
 O Crosswalk é uma tecnologia que pode resolver parcialmente o problema
 de suporte de funcionalidades em diversas versões de dispositivos.
@@ -51,22 +51,25 @@ O Crosswalk funciona disponibilizando, juntamente com a aplicação,
 uma versão recente do Chromium que será responsável por rodar a
 aplicação. Desse modo todos os dispositivos que utilizam o pacote
 gerado pelo Crosswalk vão rodar na mesma versão de navegador. Não
-obstante, o Crosswalk só é suportado para Android \footnote{Nos
-apêndices o Crosswalk é tratado com mais detalhes}.
+obstante, o Crosswalk só é suportado para Android \footnote{Na
+seção \ref{crosswalk} dos Apêndices o Crosswalk é tratado com mais
+detalhes}.
 
 \section{CSS}
 
-É muito custoso desenvolver interfaces que pareçam nativas para
-cada dispositivo sem a utilização de plugins e outras ferramentas auxiliares. No
-protótipo foi utilizada uma estilização simples, a qual pode se
-parecer interessante na Web. Não obstante, nos dispositivos móveis,
-o layout criado para o jogo é muito diferente da experiência normal
-destes aparelhos. Sendo que cada sistema operacional conta com regras
-próprias para definir a experiência do usuário \footnote{
-    O Android utiliza o projeto Material design \url{https://www.google.com/design/spec/material-design} como base para suas 
-    regras de como construir interfaces.  Já o IOS utiliza um conjunto 
-    de regras próprias que podem ser encontradas neste endereço \url{https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/}
-} (\limitation{hardToBuildGuis}).
+É muito custoso desenvolver interfaces que pareçam nativas
+para cada dispositivo sem a utilização de plugins e outras
+ferramentas auxiliares. No protótipo foi utilizada uma estilização
+simples, a qual pode se parecer interessante na Web. Conquanto, nos
+dispositivos móveis, o layout criado para o jogo é muito diferente
+da experiência normal destes aparelhos. Sendo que cada sistema
+operacional conta com regras próprias para definir a experiência
+do usuário \footnote{ O Android utiliza o projeto Material design
+\url{https://www.google.com/design/spec/material-design} como base
+para suas regras de como construir interfaces. Já o IOS utiliza um
+conjunto de regras próprias que podem ser encontradas neste endereço
+\url{https://developer.apple.com/library/ios/documentation/UserExperienc
+e/Conceptual/MobileHIG/}} (\limitation{hardToBuildGuis}).
 
 Uma solução para este problema é utilizar frameworks como o jQuery
 Mobile e Kendo UI Mobile \footnote{Mais informações sobre o Kendo UI
@@ -75,15 +78,15 @@ permitem criar elementos típicos de interfaces mobile como listas
 com scroll, botões e transições com uma aparência nativa de forma
 relativamente fácil \autocite{publishHtml5}.
 
-Em alguns casos o tamanho das telas pode ser um fator
-limitante – como no caso de jogos de estratégia, nestes
-casos, jogadores com telas menores podem sair em desvantagem
+Em alguns casos o tamanho das telas pode ser um fator limitante,
+como, por exemplo, jogos de estratégia. Estes jogos geralmente
+necessitam mostrar uma vasta quantidade de informações, neste
+contexto, jogadores com telas menores podem sair em desvantagem
 (\limitation{differentScreenSizesMayPutSomeUsersInDisvantage}).
-
 Em termos gerais, pode-se mitigar este problema utilizando design
 responsivo. Na perspectiva do desenvolvedor, pode-se lidar com
 múltiplos tamanhos de tela trabalhando com tamanhos relativos via
-CSS. Não obstante, há casos, como o dos botões de certo e errado
+CSS. Todavia, há casos, como o dos botões de certo e errado
 do protótipo, em que a proporções ficam exageradas. Nesses casos
 utilizar controles como o \textit{max-width} e \textit{min-width} é uma
 solução conveniente. Os botões de certo e errado tem uma proporção
@@ -165,19 +168,19 @@ JavaScript}.
 
 \subsection{Sistema de tipos}
 
-O sistema de tipos do JavaScript também é problemático.
-Erros numéricos resultam no valor NaN (\textit{not a number}).
-Sendo que todas as operações com NaN como operadores irão retornar outro
+O sistema de tipos do JavaScript também é problemático. Erros
+numéricos resultam no valor NaN (\textit{not a number}). Sendo que
+todas as operações com NaN como operadores irão retornar outro
 NaN. Isso torna a depuração de erros desnecessariamente complexa
-\autocite{html5mostwanted} (\limitation{NANPropagation}).
-
-Uma saída para este problema é checar constantemente os tipos de forma
-a assegurar-se que eles continuam válidos. Não obstante, este processo
+\autocite{html5mostwanted} (\limitation{NANPropagation}). Uma saída
+para este problema é checar constantemente os tipos de forma a
+assegurar-se que eles continuam válidos. Entanto, este processo
 pode se tornar burocrático e uma forma adicional de criar erros.
 
 Outra limitação do JavaScript é quanto a checagem de tipos. Ao
-testar o tipo de uma variável vazia com a função \textit{typeof} o
-JavaScript retorna como se a variável fosse um objeto (\limitation{typesCheck}).
+testar o tipo de uma variável vazia com a função \textit{typeof}
+o JavaScript retorna como se a variável fosse um objeto
+(\limitation{typesCheck}).
 
 \begin{figure}[H]
 \centering
@@ -239,15 +242,16 @@ navigator.standalone = navigator.standalone
 
 Uma das grandes vantagens do SVG é que é definido via linguagem
 de marcação e se integra bem com as demais tecnologias da Web.
-Não obstante, isso também implica em problemas de performance para
+Contudo, isso também implica em problemas de performance para
 arquivos muito grandes pois os elementos são manipulados via DOM
 \limitation{svgDomPerformance}. Segundo \citet{html5mostwanted} a
 grande desvantagem do SVG é que quão maior o documento mais lenta a
 renderização.
 
-Controle refinado também é um problema do SVG \citet{html5mostwanted}
-cita que um aspecto negativo do SVG é que é muito difícil atingir a
-perfeição na posição dos pixels, por ser uma linguagem vetorizada
+Controle refinado sobre posicionamento também é um problema do SVG.
+\citet{html5mostwanted} afirma que um aspecto negativo do SVG é que é
+muito difícil atingir a perfeição na posição dos pixels, por ser
+uma linguagem vetorizada.
 
 \section{Canvas}
 
@@ -258,14 +262,14 @@ implementação nativa para animações.
 
 \subsection{Performance}
 
-O problema de performance (\limitation{canvasPerformance}) pode ser parcialmente remediado
-com o FastCanvas. FastCanvas é uma implementação nativa em C++ do
-canvas para Android que roda separadamente do JavaScript. Devidas as
-características acima citadas FastCanvas é substancialmente mais
-rápido do que a tag canvas para navegadores Android. Não obstante, o
-FastCanvas não suporta a especificação do canvas completamente, e
-existem umas diferenças no comportamento entre o canvas original e o
-FastCanvas.
+O problema de performance (\limitation{canvasPerformance}) pode
+ser parcialmente remediado com o FastCanvas. FastCanvas é uma
+implementação nativa em C++ do canvas para Android que roda
+separadamente do JavaScript. Devidas as características acima citadas
+FastCanvas é substancialmente mais rápido do que a tag canvas para
+navegadores Android. Todavia, o FastCanvas não suporta a
+especificação do canvas completamente, e existem umas diferenças no
+comportamento entre o canvas original e o FastCanvas.
 
 \subsection{Integrações}
 
@@ -374,7 +378,7 @@ simultaneamente \autocite{unsolvedMediaHtmlIssues} (\limitation{limitedMultimidi
 O suporte a vídeo, apesar de estar melhorando, ainda é rudimentar.
 No Silverlight existem uma coleção de possibilidades como aplicar
 shaders diretamente no vídeo \autocite[p. 8]{researchOnHtml}
-\limitation{noEffectsOnVideo}. Não obstante, efeito similar 
+\limitation{noEffectsOnVideo}. Não obstante, efeito similar
 a shaders em vídeo é atingido através da importação de
 vídeo dentro de um contexto WebGL \footnote{O endereço
 \url{https://developer.Mozilla.org/en-US/docs/Web/API/WebGL_API/Tutoria
@@ -382,7 +386,7 @@ l/Animating_textures_in_WebGL} contém exemplos de como utilizar vídeos
 em um contexto WebGL} ou canvas 2D.
 
 Também não é possível controlar a entrada em tela cheia através de
-script pois é considerado uma violação de segurança. Não obstante,
+script pois é considerado uma violação de segurança. Entretanto,
 os navegadores tem a opção de deixar os usuários escolherem ver
 vídeos em tela cheia através de controles adicionais \autocite[p.
 68]{proHtml5} (\limitation{videoFullscreenControl}).
@@ -486,9 +490,10 @@ generalizado de HTML5.
 
 Para resolver este problema, o ideal seria que cada tecnologia contasse
 com formas de detectar as funcionalidades que comporta. Não obstante,
-este tipo de mecanismo conflita com outros princípios da Web.
-Pelo fato de o HTML uma linguagem fundamentada exclusivamente em marcação e estrutura, adicionar
-estruturas de controle não é uma alternativa viável.
+este tipo de mecanismo conflita com outros princípios da Web. Pelo
+fato de o HTML uma linguagem fundamentada exclusivamente em marcação
+e estrutura, adicionar estruturas de controle não é uma alternativa
+viável.
 
 \section{Debug}
 
@@ -579,8 +584,7 @@ integrados a algum mercado como o do Android ou da Apple.
 
 \section{Outras Limitações}
 
-Apesar de não entrarem no contexto de jogos, \citet{html5Tradeoffs} cita
-algumas limitações em uma âmbito HTML em geral:
+\citet{html5Tradeoffs} menciona algumas limitações em uma âmbito HTML em geral:
 
 \begin{quote}
 Não podemos mudar a imagem de fundo do dispositivo, ou adicionar toques
@@ -691,7 +695,7 @@ Limitação & Descrição & Existe solução ou contorno? \\
 \begin{tabular}{ |p{2cm}|p{5cm}|p{2cm}|  }
 \hline
 \Cref{limitation:checkResourcesOnlyOnJavascrit} & Checagem de recursos só por JavaScript força implementação de markup em scripts & Não \\
-\Cref{limitation:noCanvas2DIsnpectorOnipresent} & Não existe inspetor Canvas 2D para navegadores multiplataforma & Utilizar ferramentas de debug dentro do código \\
+\Cref{limitation:noCanvas2DIsnpectorOnipresent} & Não existe inspetor Canvas 2D para navegadores multiplataforma & Parcial \\
 \Cref{limitation:multiTouch} & Scroll juntamente com outros gestos não funciona corretamente na maioria dos navegadores & Sim \\
 \Cref{limitation:gamepadObject} & Não existe forma padronizada de detectar a entrada e saída de controles nos navegadores & Não \\
 \Cref{limitation:desktopIcon} & Não existe forma padronizada de adicionar ícones de aplicativos Web a área de trabaho & Não \\
