@@ -10,16 +10,15 @@ resposta candidata. Cabe ao usuário informar se o resultado apontado
 pelo jogo está correto ou não. A cada resposta dada o nível de
 complexidade da equação cresce. O tempo é um fator determinante
 no resultado do jogo pois quão mais rápido o jogador acertar se a
-afirmação está correta ou não mais pontos ele receberá.
-
-Esta categoria de jogo foi selecionada por ter profundidade, oferecendo
-a possibilidade de explorar diversos recursos do HTML, e criar melhorias
+afirmação está correta ou não mais pontos ele receberá. Esta
+categoria de jogo foi selecionada por ter profundidade, oferecendo a
+possibilidade de explorar diversos recursos do HTML, e criar melhorias
 incrementais. E também por oferecer uma dificuldade técnica não
 tão desafiadora visto que não disponho de experiência profunda no
 desenvolvimento de jogos em HTML.
 
 Jogos como o Math Workout e o Countdown para Android tem uma temática
-similar. Não obstante, o Math Workout não apresenta a resposta, sendo
+similar. Conquanto, o Math Workout não apresenta a resposta, sendo
 o papel do usuário computar a equação e digitar o resultado. Já o jogo
 Countdown apresenta um número final e requer que o usuário determine
 a equação que resultou no valor à partir de um dado conjunto de
@@ -50,7 +49,7 @@ As funcionalidades que o sistema deve apresentar estão descritas abaixo.
 
 \subsection{Requisitos não funcionais}
 
-Outros aspectos requisitados mas que todavia não fazem parte da regra de negócio.
+Outros aspectos requisitados mas que não fazem parte da regra de negócio.
 
 \begin{itemize}
     \item O sistema deve ser desenvolvido utilizando as ferramentas da web.
@@ -119,15 +118,15 @@ não obstante, no protótipo não adicionamos esta funcionalidade pois
 a quantidade de telas é realmente baixa e os benefícios introduzidos
 seriam pequenos.
 
-Ao iniciar a execução do JavaScript todas as divs que representam
-telas são escondidas e a \textit{div} de carregamento de recursos é mostrada em
-seguida. O objetivo desta tela é não deixar o usuário sem feedback enquanto
-todos os recursos necessários para a utilização do jogo estejam disponíveis.
-Não obstante o carregamento é realmente rápido e o usuário, a não ser que 
-dependa de uma rede muito lenta, geralmente não vê a tela.
-No final do carregamento de todos os recursos é disparado o
-evento \textit{window.onload} neste momento carrega-se a div da partida
-e dá-se início a mesma.
+Ao iniciar a execução do JavaScript todas as \textit{divs} que
+representam telas são escondidas e a \textit{div} de carregamento de
+recursos é mostrada em seguida. O objetivo desta tela é não deixar
+o usuário sem feedback enquanto os recursos necessários para a
+utilização do jogo não estão disponíveis. Todavia, o carregamento
+é realmente rápido e o usuário, a não ser que dependa de uma rede
+muito lenta, geralmente não vê a tela. No final do carregamento de
+todos os recursos é disparado o evento \textit{window.onload} neste
+momento carrega-se a div da partida e dá-se início a mesma.
 
 Durante esta fase do desenvolvimento também foram adicionados
 \textit{listeners} aos demais elementos interativos do jogo, como
@@ -177,28 +176,30 @@ parseInt(
     \label{fig:gameScreen}
 \end{figure}
 
-A construção da classe \textit{Match} disponibilizou o comportamento principal do
-jogo; entretanto, nesta etapa não havia um gerador de equações. O
-jogo contava apenas com uma coleção de equações preestabelecidas
-que eram selecionadas aleatoriamente a cada turno. Adiar a construção
-do gerador de equações se provou uma boa escolha pois possibilitou
-que o desenvolvimento se focasse em outros aspectos importantes como a
-elaboração do laço do jogo, ranking, configurações entre outros.
+A construção da classe \textit{Match} disponibilizou o comportamento
+principal do jogo; entretanto, nesta etapa não havia um gerador de
+equações. O jogo contava apenas com uma coleção de equações
+preestabelecidas que eram selecionadas aleatoriamente a cada turno.
+Adiar a construção do gerador de equações se provou uma boa
+escolha pois possibilitou que o desenvolvimento se focasse em outros
+aspectos importantes como a elaboração do laço do jogo, ranking,
+configurações entre outros.
 
 O ranking serve para armazenar o resultado de cada partida do jogador
-possibilitando uma percepção de histórico da performance do jogador.
-Os dados são armazenados em Local Storage, escolhido por ter uma API
+possibilitando uma percepção de histórico de performance. Os
+dados são armazenados em Local Storage, escolhido por ter uma API
 simples. Arquiteturalmente falando, IndexedDb se encaixaria bem na
 aplicação por ter uma interface chave valor, ideal para um ranking,
-onde as chaves poderiam ser as posições do usuário. Não obstante,
-a interface totalmente orientada a eventos do IndexedDb introduz uma
-camada de complexidade desnecessária para os casos simples. Visto que
-os requerimentos do protótipo não demandam grande performance ou
-armazenamento massivo de dados a opção modesta, Local Storage,
-foi preferida. A classe ranking é simplesmente uma interface para
-converter partidas e armazenar e recuperar estas informações em Local
-Storage. A figura \ref{fig:placar} demostra as informações do resultado
-de uma partida bem como a posição do ranking.
+onde as chaves poderiam ser as posições do usuário. Entretanto, a
+interface totalmente orientada a eventos do IndexedDb introduz uma
+camada de complexidade desnecessária para os casos simples. Por
+conseguinte, visto que os requerimentos do protótipo não demandam
+grande performance ou armazenamento massivo de dados, a opção
+modesta, Local Storage, foi preferida. A classe ranking é simplesmente
+uma interface para converter partidas e armazenar e recuperar estas
+informações em Local Storage. A figura \ref{fig:placar} demostra
+as informações do resultado de uma partida bem como a posição do
+ranking.
 
 %get a better image with better alignment
 \begin{figure}[H]
@@ -358,12 +359,12 @@ dispositivos da Apple pode-se utilizar a seguinte configuração:
 <meta name="apple-mobile-web-app-capable" content="yes" />
 \end{verbatim}
 
-Segundo \citet{homescreenwebapps} o Google Chrome a partir da versão 31
-adicionou suporte a esta notação, inclusive o prefixo Apple, mas as
-intenções é que o prefixo seja removido nas próximas versões. Para
-os demais dispositivos não existe meio oficial de esconder a barra de
-endereço. Não obstante, alguns sites recomendam a solução descrita
-abaixo:
+Segundo \citet{homescreenwebapps} o Google Chrome, a partir da versão
+31, adicionou suporte a esta notação, inclusive o prefixo Apple, mas
+as intenções é que o prefixo seja removido nas próximas versões.
+Para os demais dispositivos não existe meio oficial de esconder a
+barra de endereço. No entanto, alguns sites recomendam a solução
+descrita abaixo:
 
 \begin{verbatim}
 <body onload="setTimeout(function() {window.scrollTo(0, 1)}, 100)">
@@ -432,17 +433,17 @@ invocadas IFE (\textit{Immediatly invoked function expression}).
 
 A figura \ref{fig:iife} demonstra a utilização deste padrão. As
 funções definidas no mesmo nível que bar não estarão no contexto
-global - a não ser que seja especificado diretamente - e não sofrerão
+global, a não ser que seja especificado diretamente, e não sofrerão
 conflitos de nomes e outros problemas relativos ao contexto global.
 
 Outro fator importante na construção de jogos em JavaScript é a
 otimização do laço do jogo. Para escrever o laço é possível
 utilizar as funções do JavaScript \textit{window.settimeout} ou
 \textit{window.setInterval}. Não obstante, a forma mais recomendada é
-utilizar o \textit{window.requestAnimationFrame} reduz ou completamente
-para a execução do laço enquanto o usuário está em outra aba.
-Isso reduz o consumo de bateria, uma característica importante para
-dispositivos móveis.
+utilizar o \textit{window.requestAnimationFrame}. Esta função reduz
+ou completamente para a execução do laço enquanto o usuário está
+em outra aba. Por conseguinte, o consumo de bateria é reduzido, uma
+característica importante para dispositivos móveis.
 
 \subsubsection{HTML}
 
