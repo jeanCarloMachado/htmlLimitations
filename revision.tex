@@ -766,11 +766,11 @@ Segundo \citet{ecmaSupport}, o suporte no início de 2015 era o seguinte:
 \end{itemize}
 
 Estes esforços de padronização muitas vezes não são rápidos
-o suficiente para produtores de software Web, demora-se muito até
+o suficiente para produtores de software Web. Demora-se muito até
 obter-se um consenso sobre quais as funcionalidades desejadas em
-determinada versão e seus detalhes de implementação. Além da
+determinada versão e seus detalhes técnicos. Além da
 espera por especificações, uma vez definidas, é necessário que os
-navegadores especificado.
+navegadores implementem o especificado.
 
 O projeto babel \url{https://github.com/babel/babel} é um compilador de
 JavaScript 6 para JavaScript 5. Permitindo que, mesmo sem suporte, os
@@ -781,12 +781,12 @@ JavaScript 5 para rodar nos navegadores.
 Alternativamente, existe uma vasta gama de conversores de código
 (\textit{transpilers}) para JavaScript; possibilitando programar
 em outras linguagens posteriormente gerando código JavaScript
-\footnote{Uma lista das tecnologias para converter código HTML pode
-ser encontrada nos apêndices}. Entretanto, essa alternativa tem seus
-pontos fracos, necessita-se de mais tempo de depuração, visto que o
-JavaScript gerado não é conhecido pelo desenvolvedor, e provavelmente
-o código gerado não será tão otimizado, nem utilizará os recursos
-mais recentes do JavaScript.
+\footnote{Uma lista das tecnologias alternativas ao JavaScript pode ser
+encontrada nas seção \ref{jsAlternatives} dos apêndices}. Entretanto,
+essa alternativa tem seus pontos fracos, necessita-se de mais tempo
+de depuração, visto que o JavaScript gerado não é conhecido pelo
+desenvolvedor, e provavelmente o código gerado não será tão
+otimizado, nem utilizará os recursos mais recentes do JavaScript.
 
 Mesmo com suas fraquezas amplamente conhecidas, JavaScript está
 presente em praticamente todo navegador atual. Sendo uma espécie de
@@ -799,15 +799,15 @@ Birds, Dune II, etc.
 Jogos Web são geralmente escritos na arquitetura cliente servidor,
 JavaScript pode rodar em ambos estes contextos, para tanto, sua
 especificação não define recursos de plataforma. Distribuidores do
-JavaScript complementam a o JavaScript com recursos específicos para
+JavaScript complementam o JavaScript com recursos específicos para
 suas plataformas alvo. Por exemplo, para servidores, define-se objetos como:
-console, arquivos e dispositivos; no contexto de cliente,
+terminal, arquivos e dispositivos; no contexto de cliente,
 são definidos objetos como: janelas, quadros, DOM, etc.
 
 Para o navegador o código JavaScript geralmente é disposto no elemento
-script dentro de arquivos HTML. Quando os navegadores encontram esse
+\textit{script} dentro de arquivos HTML. Quando os navegadores encontram esse
 elemento eles fazem a requisição para o servidor e injetam o código
-retornado no documento, e a não ser que especificado de outra forma,
+retornado no documento e, a não ser que especificado de outra forma,
 iniciam sua execução.
 
 \subsection{JavaScript 7}
@@ -833,7 +833,7 @@ guards, contratos e concorrência no laço de eventos \autocite{ecma7}.
 Asm.js é um subconjunto da sintaxe do JavaScript a qual permite
 grandes benefícios de performance quando em comparação com
 JavaScript normal. Entretanto, não é trivial escrever código em
-Asm.js e geralmente a criação de código Asm.js é feita através
+Asm.js e geralmente a criação é feita automaticamente através
 da conversão de outras linhagens como C. O projeto Emscripten
 \url{https://github.com/kripken/emscripten} pode ser utilizado para gerar
 código em Asm.js é utilizado pelo motor de jogos Unity 3D e Unreal.
@@ -843,7 +843,7 @@ Asm.js se destaca por utilizar recursos que permitam otimizações
 antes do tempo (\textit{ahead of time optimizations}). Outra grade
 parcela da performance adicional, em relação ao JavaScript, é
 devido a consistência de tipo e a não existência de um coletor de
-lixo (\textit{garbage collector}) a memória é gerenciada manualmente
+lixo (\textit{garbage collector}); a memória é gerenciada manualmente
 através de um grande vetor. Esse modelo simples, desprovido de
 comportamento dinâmico, sem alocação e desalocação de memória,
 apenas um bem definido conjunto de operações de inteiros e flutuantes,
@@ -865,7 +865,7 @@ ganhos de performance e flexibilidade.
 
 Além da versão binária, otimizada para performance, uma versão em
 texto também está prevista, ideal para desenvolvimento e depuração.
-Bibliotecas aplicações que requeiram grande performance como
+Bibliotecas e aplicações que requeiram grande performance como
 motores de física, simulações e jogos em geral vão se beneficiar
 substancialmente com o Web Assembly.
 
@@ -874,15 +874,15 @@ Microsoft, Mozilla, entre outros, tornando a proposta uma possibilidade
 promissora. Seu objetivo não é substituir o JavaScript, outrossim
 habilitar que aplicações que necessitem de grande performance possam
 ser inclusas na Web. A ideia do Web Assembly é uma continuação
-do trabalho do asm.js, uma forma de trazer performance similar a
-nativa eliminando grande parte das abstrações que o traz JavaScript
-embutidas.
+do trabalho do Asm.js, uma forma de trazer performance similar a
+nativa eliminando grande parte das abstrações que o JavaScript
+traz embutidas.
 
 Visto que os desenvolvedores de motores JavaScript terão que colocar
 o código do Web Assembly na mesma base que o do JavaScript as
 expectativas são de que o JavaScript consiga aproveitar partes
 da implementação do Web Assembly incrementando a performance do
-JavaScript.
+JavaScript, sendo assim uma situação ganha/ganha.
 
 A aplicabilidade do Web Assembly em jogos em produção ainda
 é praticamente nula. Até então apenas um polyfill do Web
@@ -949,21 +949,19 @@ protocolo HTTP.
 
 Nos navegadores os usuários necessitam saber o endereço de determinado
 servidor, ou utilizar buscadores para auxiliá-los. Este é um processo
-árduo para as plataformas móveis pois necessitam maior interação dos
-usuários, e não são “naturais” se comparado ao modo de consumir
-aplicativos nestas mesmas plataformas. Simplesmente adquirindo
-o aplicativo na loja e abrindo-o no sistema operacional. Algumas
-formas de contornar este problema serão descritos nas seção de
-Disponibilização da Aplicação.
+árduo para as plataformas móveis pois necessitam maior interação
+dos usuários, e não são “naturais” se comparado ao modo de
+consumir aplicativos nestas mesmas plataformas. Simplesmente adquirindo
+o aplicativo na loja e abrindo-o no sistema operacional\footnote{Algumas
+formas de contornar este problema serão descritos nas seção
+\ref{disponibilization}.}.
 
 Uma vez localizado o endereço o navegador manda uma mensagem em HTTP
-requisitando o conteúdo de determinado endereço. O servidor responde a
+requisitando o conteúdo do determinado local. O servidor responde a
 mensagem HTTP com um documento HTML e o cliente, ao receber, começa o
-processo de renderização.
-
-O processo de renderização é complexo e a grande maioria dos
-navegadores confia em bibliotecas especializadas para efetuar este
-trabalho os motores de renderização.
+processo de renderização. O processo de renderização é complexo e a
+grande maioria dos navegadores confia em bibliotecas especializadas para
+efetuar este trabalho, estas bibliotecas são denominadas motores de renderização.
 
 Alguns motores de renderização incluem:
 
@@ -971,7 +969,7 @@ Alguns motores de renderização incluem:
     \item Blink: Utilizado no Opera, Google Chrome e projetos relacionados;
     \item Gecko: Utilizado nos produtos da Mozilla;
     \item KHTML: Utilizado no navegador Konkeror, esta serviu de base para o Blink;
-    \item WebKit: Utilizado no Safari e versões antigas do Google Chrome;
+    \item WebKit: Utilizado no Safari e versões antigas do Google Chrome.
 \end{itemize}
 
 A renderização consiste na decodificação de um documento em HTML
@@ -989,20 +987,19 @@ chamadas de motores de JavaScript. Abaixo segue uma lista dos motores de
 JavaScript mais comuns.
 
 \begin{itemize}
-    \item SpiderMonkey: Primeiro motor, desenvolvido por Brendan Eich, escrito em C++
-    \item Rhino: Criada pela Netscape, escrito em Java
-    \item Nitro: Criada pela Apple
-    \item V8: Criada pelo Google
-    \item TraceMonkey: Criada pela Mozilla
+    \item SpiderMonkey: Primeiro motor, desenvolvido por Brendan Eich, escrito em C++;
+    \item Rhino: Criada pela Netscape, escrito em Java;
+    \item Nitro: Criada pela Apple;
+    \item V8: Criada pelo Google;
+    \item TraceMonkey: Criada pela Mozilla.
 \end{itemize}
 
-Cada um dos motores que compõem um navegador implementa partes da
-especificação do HTML. E, operando em conjunto, tentam comportar
-todas as tecnologias da Web. Infelizmente a forma que as tecnologias
-são suportadas varia e algumas não estão presentes de qualquer forma
-nos navegadores. Conquanto, o suporte vem crescendo. A figura
-\ref{fig:audioCodecs} apresenta o gráfico de suporte por versões de
-navegadores em dezembro de 2015.
+Cada uma dos motores citados acima são partes que compõem um
+navegador e em conjunto buscam cobrir as especificações da Web.
+Infelizmente a forma que as tecnologias são suportadas varia e algumas
+não estão presentes de qualquer forma nos navegadores. Conquanto,
+o suporte vem crescendo. A figura \ref{fig:audioCodecs} apresenta o
+gráfico de suporte por versões de navegadores em dezembro de 2015.
 
 \begin{figure}[H]
     \centering
@@ -1034,8 +1031,8 @@ pacote (.apk).
 
 Aplicativos da Web podem ser integrados no Android através de uma
 arquitetura híbrida. Os arquivos da aplicação são empacotados dentro
-de um apk utilizando um componente nativo do Android, a API WebView, para
-executar as tecnologias da OWP.
+de um apk utilizando um componente nativo do Android, a API WebView, que
+se responsabiliza por interpretá-los.
 
 Além da arquitetura híbrida, é possível executar jogos Web em
 dispositivos Android através dos navegadores presentes nestes
@@ -1065,16 +1062,14 @@ Polyfills são recursos que simulam uma funcionalidade não
 disponível nativamente nos navegadores. A biblioteca Gears
 \url{https://developers.google.com/gears} é um exemplo. Gears
 serve para prover recursos de Geolocalização para navegadores que
-não implementam a especificação do HTML5.
-
-Essa capacidade de suportar tecnologias que não estão ainda
-disponíveis (ou nunca estarão no caso de dispositivos legados)
-através de polyfills é uma das características que faz a Web uma
-plataforma de tão grande abrangência. Novas tecnologias são criadas a
-todo o momento; entretanto, o suporte a essas funcionalidades geralmente
-não acompanham o passo das inovações. E ainda assim os usuários
-podem se beneficiar de uma taxa substancial delas através de polyfills.
-
+não implementam a especificação do HTML5. Essa capacidade de
+suportar tecnologias que não estão ainda disponíveis (ou nunca
+estarão no caso de dispositivos legados) através de polyfills é
+uma das características que faz a Web uma plataforma de tão grande
+abrangência. Novas tecnologias são criadas a todo o momento;
+entretanto, o suporte a essas funcionalidades geralmente não
+acompanham o passo das inovações. E ainda assim os usuários podem
+se beneficiar de uma taxa substancial delas através de polyfills.
 Algumas funcionalidades do HTML, como geolocalização e vídeo
 foram primeiramente disponibilizadas através de plugins. Outras
 funcionalidades, como o canvas, podem ser totalmente emuladas via
@@ -1102,11 +1097,11 @@ permitem renderização na Web serão descritas abaixo.
 %{{{
 SVG (\textit{Gráficos de vetores escaláveis}), é uma linguagem
 baseada em XML especializada na criação de vetores bidimensionais
-\autocite{html5mostwanted}. Segundo \citet[p. 4]{svgTime} svg foi criada
+\autocite{html5mostwanted}. Segundo \citet[p. 4]{svgTime} SVG foi criada
 em conjunto por empresas como: Adobe, Apple, AutoDesk, entre outas,
 sendo que seus produtos contam com rápida integração a tecnologia.
 
-Por descrever imagens utilizando vetores ao invés de mapas de bits
+Por descrever imagens utilizando vetores ao invés de mapas de bits,
 os tamanhos dos arquivos em SVG são geralmente pequenos e podem
 ser comprimidos com grande eficiência. Talvez a característica mais
 marcante do SVG é que não há diferença de qualidade em resoluções
@@ -1125,14 +1120,11 @@ uma API nativa poderosa. Os elementos geométricos do SVG incluem
 retângulos, círculos, elipses, linhas e polígonos \autocite[p.
 5]{svgTime}. Também existe a possibilidade de declarar caminhos
 customizados através do elemento \textit{path}, algo similar com o
-\textit{Path2D} do Canvas.
-
-E cada um dos elementos, ou agrupamento de elementos podem ser
-transformados; traduzidos, redimensionados, rotacionados e distorcidos
-\autocite[p. 5]{svgTime}.
-
-Para ilustrar a utilização, a figura \ref{fig:svgCircle} demonstra um
-círculo sendo definido em SVG.
+\textit{Path2D} do Canvas. E cada um dos elementos, ou agrupamento
+de elementos podem ser transformados; traduzidos, redimensionados,
+rotacionados e distorcidos \autocite[p. 5]{svgTime}. Para ilustrar a
+utilização, a figura \ref{fig:svgCircle} demonstra um círculo sendo
+definido em SVG.
 
 \begin{figure}[H]
 \centering
@@ -1156,7 +1148,7 @@ círculo sendo definido em SVG.
 \end{figure}
 
 Outra tecnologia popular da Web para renderização que adota uma filosofia totalmente 
-diferente do SVG é o canvas.
+diferente do SVG é o Canvas.
 %}}}
 \subsection{Canvas}
 %%{{{
@@ -1171,7 +1163,6 @@ JavaScript para desenhar \autocite[p. 113]{diveIntohtml}. Mais
 especificamente, o retângulo do canvas é um espaço vetorial cuja
 origem se da na esquerda superior. Normalmente cada unidade do plano
 cartesiano corresponde a um pixel no canvas \autocite{mdnCanvas}.
-
 Manipular o retângulo é uma analogia de como desenhar manualmente,
 move-se o "lápis" para o local desejado e traça-se os pontos onde
 a linha (caminho) deve percorrer. Além da possibilidade de desenhar
@@ -1187,7 +1178,7 @@ de manipulação de linhas pode crescer muito. As últimas versões do
 Canvas introduziram o objeto Path2D que possibilita o armazenamento e
 composição de instruções de caminhos a fim de possibilitar o reuso
 de formas. Ao invés de utilizar os métodos de caminhos diretamente no
-contexto do canvas utiliza-se uma instancia do objeto \textit{Path2D}.
+contexto do canvas utiliza-se uma instância do objeto \textit{Path2D}.
 Todos os métodos relacionados aos caminhos como o \textit{moveTo},
 \textit{arc} ou \textit{quadraticCurveTo} estão disponíveis no
 objeto Path2D \autocite{mdnCanvas}. Também é possível utilizar a
@@ -1219,7 +1210,7 @@ ctx.fillRect(0,0,150,75);
 \label{img:retangleOnCanvas}
 \end{figure}
 
-A figura \ref{img:retangleOnCanvas} demonstra a utilização do canvas 2d
+A figura \ref{img:retangleOnCanvas} demonstra a utilização do canvas 2D
 para a criação de um retângulo. Note que o objeto canvas tem que carregar um
 contexto que então é utilizado como API para manipular a mapa de bits em 2D.
 
@@ -1236,24 +1227,24 @@ simulações. Por ser uma tecnologia da OWP WebGL foi especificado
 para funcionar nativamente nos navegadores sem a ajuda de plugins ou
 ferramentas de terceiros.
 
-WebGL foi desenvolvido baseando-se na especificação OpenGL a
+WebGL foi desenvolvida baseando-se na especificação OpenGL a
 qual trata de definir como renderizar gráficos multiplataforma.
 Especificamente OpenGL ES, uma versão do OpenGL otimizada para
 dispositivos móveis. O órgão que especifica o WebGL é o mesmo que
 especifica o OpenGL, o grupo sem fins lucrativos Kronos. Os primeiros
-rascunhos do WebGL iniciaram em 2006; não obstante o grupo de trabalho
+rascunhos do WebGL iniciaram em 2006; não obstante, o grupo de trabalho
 não foi formado até 2009 e a primeira versão do foi lançada em 2011.
 
-Apesar de ter sido desenvolvido com foco em 3D, WebGL pode ser
-igualmente utilizado para criação de gráficos em duas
+Apesar de ter sido desenvolvida com foco em 3D, WebGL pode ser
+igualmente utilizada para criação de gráficos em duas
 dimensões\autocite[p. 6]{3daps}. O elemento do DOM que provê a
 interface do WebGL é o canvas, no contexto 3D. Essa integração com
 o DOM via tag canvas permite que o WebGL seja manipulado assim como os
 demais elementos HTML.
 
-Especificação é composta por uma API de controle em JavaScript
+A especificação é composta por uma API de controle em JavaScript
 e o processamento shaders do lado da GPU (Central de processamento
-gráfico). 
+gráfico).
 
 Shaders são scripts que definem níveis de cor ou efeitos especiais
 sobre um modelo 2D ou 3D. Contam com grande performance, possibilitando
@@ -1270,20 +1261,20 @@ aumenta, mover funções antes delegadas ao JavaScript para os shaders
 pode aumentar a performance e oferecer uma ampla coleção de efeitos e
 realismo.
 
-Um site interessante para explorar exemplos WebGL avançados é o blog
- \url{http://learningwebgl.com} que conta com tutoriais cobrindo áreas
+Um endereço interessante para explorar exemplos WebGL do iniciante ao avançado é o blog
+ \url{learningwebgl.com} que conta com tutoriais cobrindo áreas
 como diferentes tipos de iluminação, carregamento de modelos em JSON,
-gerenciando eventos do mouse e teclado; e como renderizar uma cena WebGL
+gerenciando eventos; e como renderizar uma cena WebGL
 em uma textura \autocite[p.42]{3daps}\footnote{Os apêndices contam
 com uma coleção de bibliotecas que facilitam a utilização de WebGL}.
 
 Apesar da relevância, WebGL não foi utilizado no protótipo pois
 ainda não está completamente suportado em navegadores populares como
 o Firefox e a grande curva de aprendizado do WebGL puro é muito grande
-para se encaixar no escopo deste projeto .
+para se encaixar no escopo deste projeto.
 
 Uma tecnologia que se integra profundamente como ambientes virtuais
-em três dimensões criados via OpenGL é o WebVR.
+em três dimensões criados via WebGL é o WebVR.
 %}}}
 \subsection{WebVR}
 %{{{ 
@@ -1296,15 +1287,13 @@ necessário para fornecer uma experiência minimamente viável como
 acelerômetros, câmeras e telas de alta resolução está disponível
 em praticamente todos os dispositivos comercializados.
 
-Realidade virtual é uma área de grande interessa para os produtores
-de jogos, pois pode oferecer alto nível de imersão nos já
-interativos e desafiadores ambientes dos jogos.
-
-A WebVR é uma especificação que pretende trazer os benefícios
-da realidade virtual para dentro do mundo da Web. Em termos simples
-a especificação define uma forma de traduzir movimentos de
-acelerômetros e outros sensores de posição e movimentos para dentro
-do contexto de uma um contexto 3D através de JavaScript.
+Realidade virtual é uma área de grande interesse para os produtores de
+jogos, pois pode oferecer alto nível de imersão nos já interativos
+e desafiadores ambientes dos jogos. WebVR é uma especificação que
+pretende trazer os benefícios da realidade virtual para dentro do mundo
+da Web. Em termos simples, a especificação define uma forma de traduzir
+movimentos de acelerômetros e outros sensores de posição e movimento
+para dentro do contexto de uma câmera em um ambiente 3D WebGL.
 
 Atualmente a especificação do WebVR se encontra em fase de rascunho e
 as últimas versões do Firefox, e versões compiladas manualmente do
@@ -1318,11 +1307,9 @@ como motores de física e renderizadores de imagens, ambos relevantes
 para os jogos, podem se beneficiar grandemente de processamento feito
 em paralelo, possivelmente na GPU. OpenCL é um framework para escrever
 programas que funcionem em plataformas com diversas unidades de
-processamento, assim como WebGL e WebCL é especificada e desenvolvida
-pelo grupo Kronos.
-
-A primeira versão da especificação foi no início de 2014 mas até
-então nenhum navegador implementa o definido.
+processamento. Assim como WebGL a WebCL é especificada e desenvolvida
+pelo grupo Kronos. A primeira versão da especificação foi no início
+de 2014 mas até então nenhum navegador implementa o definido.
 %}}}
 
 Após a revisão de tecnologias de renderização serão abordadas
@@ -1364,16 +1351,16 @@ Abaixo segue uma lista de alguns codecs populares para áudio segundo
 \citet[p. 67]{proHtml5}.
 
 \begin{itemize}
-    \item ACC
-    \item MPEG-3
-    \item Vorbis
+    \item ACC;
+    \item MPEG-3;
+    \item Vorbis.
 \end{itemize}
 
 Ainda segundo \citet[p. 67]{proHtml5} abaixo segue uma lista de codecs populares para vídeo.
 \begin{itemize}
-    \item H.264
-    \item VP8
-    \item OggTheora
+    \item H.264;
+    \item VP8;
+    \item OggTheora.
 \end{itemize}
 
 Após um fluxo de dados multimídia ter sido codificado através do
@@ -1385,23 +1372,23 @@ estas informações de forma padronizada. Como um arquivo
 \autocite{diveIntohtml}. Assim como codecs existem contêiners livres e
 com restrições de licença.
 
-Abaixo segue uma lista de alguns contêiners de áudio.
+\noindent Abaixo segue uma lista de alguns contêiners de áudio.
 \begin{itemize}
-    \item Audio Video Interleave (.avi)
-    \item MPEG-2 Audio Layer III (.mp3)
-    \item Matroska (.mkv)
-    \item Vorbis (.ogg)
-    \item Opus (.opus)
+    \item Audio Video Interleave (.avi);
+    \item MPEG-2 Audio Layer III (.mp3);
+    \item Matroska (.mkv);
+    \item Vorbis (.ogg);
+    \item Opus (.opus).
 \end{itemize}
 
-Abaixo segue uma lista de alguns contêiners de vídeo.
+\noindent Abaixo segue uma lista de alguns contêiners de vídeo.
 \begin{itemize}
-    \item Audio Video Interleave (.avi)
-    \item Flash Video (.flv)
-    \item MPEG4 (.mp4)
-    \item Matroska (.mkv)
-    \item Ogg (.ogv)
-    \item WebM (.webm)
+    \item Audio Video Interleave (.avi);
+    \item Flash Video (.flv);
+    \item MPEG4 (.mp4);
+    \item Matroska (.mkv);
+    \item Ogg (.ogv);
+    \item WebM (.webm).
 \end{itemize}
 
 O suporte a codecs e contêiners na Web varia de navegador para
@@ -1468,44 +1455,43 @@ suportar todos os navegadores populares \footnote{Com o site
 formatos de codecs de áudio suportados pelo navegador sendo utilizado}.
 
 A especificação declara que todo o conteúdo dentro de uma tag
-\textit{audio}, que não sejam elementos \textit{source}, sejam ignoradas
-pelo navegador. O que permite que seja adicionada marcação de reserva
-para tratar os casos de quando não existe suporte a tag \textit{audio}
-no navegador. Visto que os navegadores que não suportam áudio vão buscar
-renderizar o conteúdo dentro da tag.
-
-A figura \ref{fig:htmlAudio} ilustra este comportamento através da
-mensagem \textit{Your browser does not support the audio element } que
-só será apresentada se o navegador do usuário não tiver suporte a
-tag \textit{audio}.
+\textit{audio}, que não sejam elementos \textit{source}, sejam
+ignoradas pelo navegador. O que permite que seja adicionada marcação
+de reserva para tratar os casos de quando não existe suporte a tag
+\textit{audio} no navegador. Visto que os navegadores que não suportam
+áudio vão buscar renderizar o conteúdo dentro da tag. A figura
+\ref{fig:htmlAudio} ilustra este comportamento através da mensagem
+\textit{Your browser does not support the audio element } que só
+será apresentada se o navegador do usuário não tiver suporte a tag
+\textit{audio}.
 
 O objetivo inicial da tag \textit{audio} é reproduzir um som e parar.
-Ideal para ouvir música, como um som de fundo. Por conseguinte, a tag
-\textit{audio} não é o suficiente para comportar aplicações de
-áudio complexas \autocite{audioApiSpec}. A grande maioria de jogos
-muitas vezes precisam lançar múltiplos sons derivados de ações
-de usuário e outros eventos, nestes casos a API de áudio é mais
-adequada.
+Ideal para ouvir música ou como um som de fundo de um site. Por
+conseguinte, a tag \textit{audio} não é o suficiente para comportar
+aplicações de áudio complexas \autocite{audioApiSpec}. A grande
+maioria de jogos muitas vezes precisam lançar múltiplos sons derivados
+de ações de usuário e outros eventos, nestes casos a API de áudio é
+mais adequada.
 
 \subsection{API de Áudio}
 
 É uma interface experimental (ainda em rascunho) em JavaScript para
 criar e processar áudio. O objetivo da especificação é incluir
 capacidades encontradas em motores de jogos modernos e também permitir
-o processamento, mistura e filtragem, funcionalidades que estão
+o processamento, mistura e filtragem de som, funcionalidades que estão
 presentes nas aplicações de processamento de áudio modernas para
 desktop \autocite{audioApiSpec}.
 
 A API especificada provê uma interface para manipular nodos de
 áudio que podem ser conectados permitindo refinado controle sobre os
-efeitos sonoros. O processamento se dará primeiramente em uma cada
+efeitos sonoros. O processamento se dará primeiramente em uma camada
 inferior (tipicamente código Assembly / C / C++), mas síntese e
 processamento em JavaScript também será suportado \autocite{audioApiSpec}.
 
 Essa tecnologia é muito mais nova do que o elemento \textit{audio}.
 Diferentemente dos demais navegadores o Internet Explorer não
 dá nenhum nível de suporte a API. O polyfill AudioContext
-suporta as partes básicas da API e pode ser utilizada nos
+suporta as partes básicas da API e pode ser utilizado nos
 casos onde não existe suporte para a API do HTML \footnote{O
 polyfill AudioContext pode ser encontrado no seguinte endereço
 \url{https://github.com/shinnn/AudioContext-Polyfill}}.
@@ -1514,7 +1500,7 @@ As últimas versões da especificação da Audio API contam com a
 possibilidade de manipular a API de áudio através de Web Workers, o
 que traz oportunidades interessantes para aplicações que dependam de
 muito processamento de áudio, visto que o processamento pode ser
-feito em uma thread separada.
+feito em uma \textit{thread} separada.
 
 Além de grande flexibilidade com áudio alguns jogos requerem a
 disponibilidade de vídeo para utilizar como introdução, cinemáticas,
@@ -2045,7 +2031,7 @@ Abaixo será abordada algumas formas de disponibilizar jogos Web em
 ambientes multiplataforma.
 %}}}
 %}}}
-\section{Disponibilização da Aplicação}
+\section{Disponibilização da Aplicação}\label{disponibilization}
 %{{{
 
 Os aplicativos puramente em HTML não requerem instalação e
