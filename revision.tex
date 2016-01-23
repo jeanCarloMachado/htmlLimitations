@@ -1,4 +1,4 @@
-\section{JOGOS DIGITAIS}
+\section{Jogos Digitais}
 %{{{
 
 Segundo \citet{indieGamesLemes}, jogo digital constitui-se em uma
@@ -61,7 +61,7 @@ jogos, do que jogadores de jogos não violentos \autocite{gamebenefits}.
 Além dos aspectos benéficos, adiante serão abordados alguns aspectos
 técnicos e gerenciais dos jogos.
 
-\subsection{MECÂNICA}
+\subsection{Mecânica}
 
 \citet{html5mostwanted} ressalta a importância do planejamento antes do
 desenvolvimento de jogos. Ao criar jogos deve-se planejar o que se
@@ -72,26 +72,24 @@ A mecânica é composta pelas regras do jogo. Quais as ações
 disponíveis aos usuários, e seu funcionamento, é fortemente
 influenciada pela categoria do jogo em questão. Dedicar-se na
 elaboração de uma mecânica é tarefa quintessencial para a
-construção de um jogo de sucesso.
-
-A mecânica não pode ser simplesmente boa, nos melhores jogos ela é
-intuitiva. O processo de o jogador entender por si a mecânica do jogo
-é um componente vital para a sua satisfação. Se ele não entender as
-regras do jogo quase que instantaneamente muitas pessoas vão perder o
-interesse e desistir rapidamente \autocite{crossPlatformMobileGame}.
+construção de um jogo de sucesso. A mecânica não pode ser
+simplesmente boa, nos melhores jogos ela é intuitiva. O processo de
+o jogador entender por si a mecânica do jogo é um componente vital
+para a sua satisfação. Se ele não entender as regras do jogo quase
+que instantaneamente muitas pessoas vão perder o interesse e desistir
+rapidamente \autocite{crossPlatformMobileGame}.
 
 Ainda sobre a importância da mecânica \citet{html5mostwanted}, afirma
 que se os gráficos e áudio são espetaculares mas a jogabilidade
-é chata o jogador vai parar de jogar. A substância do jogo é sua
-mecânica, então não invista muito em visual ao menos que isso
-desempenhe um papel essencial no jogo.
-
-Os desenvolvedores tem que evitar fazer o jogo para eles mesmos.
-Falta de crítica antes do desenvolvimento também tende a gerar jogos ruins.
-Bons jogos são aqueles que ao menos suprem as expectativas dos usuário.
+é chata o jogador vai parar de jogar. A substância do jogo é
+sua mecânica, então não invista muito em visual ao menos que
+isso desempenhe um papel essencial no jogo. Os desenvolvedores tem
+que evitar fazer o jogo para eles mesmos. Falta de crítica antes
+do desenvolvimento também tende a gerar jogos ruins. Bons jogos
+são aqueles que ao menos suprem as expectativas dos usuário.
 \citet{indieGamesLemes} aponta alguns fatores procurados pelos usuários
 de jogos: desafio, socializar, experiência solitária, respeito e
-fantasia. Jogos que conseguem integrar o maior número destes aspectos 
+fantasia. Jogos que conseguem integrar o maior número destes aspectos
 em sua mecânica serão os mais apreciados.
 
 A elaboração da mecânica em jogos desenvolvidos profissionalmente
@@ -100,30 +98,29 @@ O sumário também conta com um resumo sobre metodologias de
 desenvolvimento de software contextualizada para a criação jogos.
 
 Depois dos preparativos efetuados, pode-se começar a construção
-do jogo. 
+do jogo.
 
 \subsection{Laço}
 
-Jogos digitais geralmente operam através um laço que executa uma série
-de tarefas a cada frame, construindo a ilusão de um mundo animado
-\autocite[p. 31]{gwt}. Da perspectiva da programação, a parte
+Jogos digitais geralmente operam através um laço que executa uma
+série de tarefas a cada frame, construindo a ilusão de um mundo
+animado \autocite[p. 31]{gwt}. Da perspectiva da programação, a parte
 principal de um jogo é o laço onde o jogo é executado \autocite[p.
-17]{crossPlatformMobileGameDevelopment}. A cada iteração do 
-laço o processamento de entrada de dados do usuário e
-alterações da cena tem de ser computados, tornando a otimização deste processo
-importantíssima para que o jogo não se torne lento.
+17]{crossPlatformMobileGameDevelopment}. A cada iteração do laço
+o processamento de entrada de dados do usuário e alterações da
+cena tem de ser computados, tornando a otimização deste processo
+importantíssima para que o jogo não se torne lento\footnote{Na seção
+\ref{optimizations} foram descritas as opções da Web
+na hora de construir um laço de jogo.}.
 
-Na seção Otimizações para jogos em JavaScript será abordada as
-opções da Web na hora de construir um laço de jogo.
-
-Outra decisão técnica importante na hora de desenvolver jogos é a 
-seleção das plataformas alvo mais adequadas. Neste trabalho o foco será 
+Outra decisão técnica importante na hora de desenvolver jogos é a
+seleção das plataformas alvo mais adequadas. Neste trabalho o foco será
 em  HTML5 para desktops e dispositivos móveis inteligentes. Não obstante,
-na sessão a seguir serão descritas, genericamente, as plataformas que os
-desenvolvedores podem selecionar ao desenvolver jogos, juntamente com 
+na seção a seguir serão descritas, genericamente, as plataformas que os
+desenvolvedores podem selecionar ao desenvolver jogos, juntamente com
 seus benefícios e fraquezas.
 
-\section{JOGOS MULTIPLATAFORMA}
+\section{Jogos Multiplataforma}
 
 Jogos multiplataforma são jogos que rodam em mais de uma plataforma.
 Cada plataforma contém sua própria API (\textit{Application
@@ -155,7 +152,7 @@ Designers de jogos tem as seguintes possibilidades quando em face
 de desenvolver um jogo multiplataforma: criar um jogo web, um jogo
 híbrido, ou nativo. As opções serão descritas a seguir.
 
-\subsection{JOGOS Web}
+\subsection{Jogos Web}
 
 Um jogo web é um jogo que utiliza o HTML e ferramentas correlacionadas
 para sua construção e disponibilização. Não obstante, o objetivo
@@ -177,46 +174,40 @@ da Web. Segundo \cite[p. 28]{gwt} um bom exemplo que tem alcançado
 bastante sucesso entre o público são os jogos adicionados no logotipo
 do Google, chamados doodles.
 
-Quando comparados a outras abordagens de criar jogos, jogos da Web
+Quando comparados a outras abordagens de criar jogos, jogos na Web
 contém vários aspectos positivos. Talvez o mais reconhecível
 é o fato de com uma única base de código poder suprir uma gama
-praticamente inesgotável de dispositivos. 
-
-Comparável a base de clientes está a quantidade de desenvolvedores
-Web, os quais podem reaproveitar grande parcela do conhecimento
-adquirido através do desenvolvimento de páginas Web na criação de
-jogos.
-
-Sua distribuição também é superior ao estilo convencional de
-aplicações desktop \autocite{browserGamesTechnologyAndFuture}. 
-Por serem criados à partir das tecnologias da Web, jogos na Web, se
-beneficiam de uma arquitetura construída para um ambiente social, sendo
+praticamente inesgotável de dispositivos. Comparável a base de
+clientes está a quantidade de desenvolvedores Web, os quais podem
+reaproveitar grande parcela do conhecimento adquirido através
+do desenvolvimento de páginas Web na criação de jogos. Sua
+distribuição também é superior ao estilo convencional das
+aplicações desktop \autocite{browserGamesTechnologyAndFuture}. Por
+serem criados à partir das tecnologias da Web, jogos Web, se beneficiam
+de uma arquitetura construída para um ambiente em rede, sendo
 relativamente mais fácil criar experiências sociais.
 
 A performance é um ponto negativo da Web, é difícil chegar a
 performance comparável a abordagem nativa. Não obstante, esse
 problema é cada vez menor o hardware dos dispositivos são cada vez
 melhores e as tecnologias tecnologias de software também avançam
-substancialmente.
-
-Existem inconsistências nas implementações das especificações
-Web o que leva a comportamento inesperados em alguns caos, sendo
-necessário desenvolver regras específicas para dispositivos e versões
-de navegadores.
-
-Outro aspecto negativo da Web é que nem todas as funcionalidades dos
-dispositivos estão especificados com as tecnologias da Web e muitas
-vezes os recursos do dispositivo ficam sub utilizados.
+substancialmente. Existem inconsistências nas implementações
+das especificações Web o que leva a comportamento inesperados em
+alguns caos, sendo necessário desenvolver regras específicas para
+dispositivos e versões de navegadores. Outro aspecto negativo da Web é
+que nem todas as funcionalidades dos dispositivos estão especificados
+com as tecnologias da Web e muitas vezes os recursos do dispositivo
+ficam sub utilizados.
 
 Além dos jogos web, há a possibilidade de criar jogos nativos e híbridos.
 
-\subsection{DESENVOLVIMENTO DE JOGOS NATIVOS}
+\subsection{Desenvolvimento de Jogos Nativos}
 
 Uma aplicação nativa é uma aplicação que foi desenvolvida para ser
 utilizada em uma plataforma ou dispositivo específico \autocite[p.
 7]{aSeriousContender}. Aplicativos nativos tendem a oferecer uma
-experiência mais próxima com a do resto do sistema operacional o qual
-está rodando. Potencialmente softwares nativos são mais rápidos
+experiência mais próxima com a do resto do sistema operacional a qual
+estão rodando. Potencialmente softwares nativos são mais rápidos
 que suas alternativas da Web, visto que interagem com o dispositivo
 através do sistema operacional. Diferentemente dos jogos Web, que
 necessitam que o navegador interaja com o sistema operacional, para
@@ -225,15 +216,17 @@ dispositivo, aplicativos nativos podem aproveitar o hardware da melhor
 forma possível e oferecer ao usuário a melhor experiência possível
 \autocite[p. 7]{aSeriousContender}.
 
-Desenvolver jogos nativos tende a ser mais caro que a alternativa da Web,
-visto que é necessário duplicar funcionalidades em sistemas distintos
-e manter um profissional por ambiente suportado. As versões nativas
-são totalmente incompatíveis entre si, impossibilitando reúso em múltiplas plataformas.
+Um dos pontos negativos da abordagem nativa, é que tende a ser mais
+caro que a alternativa da Web, visto que é necessário duplicar
+funcionalidades em sistemas distintos e possivelmente manter um
+profissional por ambiente suportado. As versões nativas são totalmente
+incompatíveis entre si, impossibilitando reúso em múltiplas
+plataformas.
 
 A alternativa hibrida fica em meios ao desenvolvimento nativo e Web e
 será descrita abaixo.
 
-\subsection{JOGOS HÍBRIDOS}
+\subsection{Jogos Híbridos}
 
 A alternativa híbrida é uma tentativa de beneficiar-se das melhores
 características da abordagem nativa e o melhor do desenvolvimento
@@ -265,16 +258,16 @@ ela permite empacotar as aplicações com um experiência exata a dos
 softwares nativos. Sendo imperceptível para o usuário final a
 diferença ente um aplicativo híbrido e um nativo.
 
-Não obstante, segundo \cite[p. 8]{aSeriousContender} a diferença
-entre o que é possível com a estratégia híbrida e a Web está
-diminuindo devido ao grande esforço da comunidade Web para prover
-novas especificações.
+Todavia, segundo \cite[p. 8]{aSeriousContender}, a diferença entre o
+que é possível com a estratégia híbrida e a Web está diminuindo
+devido ao grande esforço da comunidade Web para prover novas
+especificações.
 
 %}}}
 \section{Web}
 %{{{
 
-\subsection{OPEN Web}
+\subsection{Open Web}
 
 A OWP (\textit{Open Web Platform}) é uma coleção de tecnologias
 livres, amplamente utilizadas e padronizadas. Quando uma tecnologia
@@ -452,9 +445,11 @@ não suporta a tag vídeo.
 
 Além da convencional linguagem de marcação, HTML é muitas vezes
 interpretado como um conceito guarda chuva para designar as tecnologias
-da web. Segundo \citet{diveIntohtml} algumas dessas tecnologias (como geolocalização) estão em especificações separadas mas são tratadas como HTML5 também. Outras
-tecnologias foram removidas do HTML5 estritamente falando, mas são tratados
-como HTML5 (como a API de armazenamento de dados).
+da web. Segundo \citet{diveIntohtml} algumas dessas tecnologias (como
+geolocalização) estão em especificações separadas mas são
+tratadas como HTML5 também. Outras tecnologias foram removidas do
+HTML5 estritamente falando, mas são tratados como HTML5 (como a API de
+armazenamento de dados).
 
 \begin{figure}[H]
     \centering
@@ -480,42 +475,27 @@ manipulação de elementos através de JavaScript.
 A primeira versão do DOM, DOM nível zero, foi especificada no
 HTML 4 e permitia manipulação parcial dos elementos. Foi somente
 com a especificação do JavaScript em 1998 que o DOM nível 1 foi
-especificado, permitindo a manipulação de qualquer elemento. DOM
+criado, permitindo a manipulação de qualquer elemento. DOM
 nível 2 e 3 seguiram com melhorias nas consultas aos elementos e CSS.
 
-\begin{figure}[H]
-\centering
-\begin{verbatim}
-    var elementos = document.querySelector( ".main, #sceen"  );
-    var elementosB = document.querySelectorAll( "a.minhaClasse, p"  );
-\end{verbatim}
-\caption{Exemplo de utilização de seletores do DOM em JavaScript}
-\label{fig:selectorsSample}
-\end{figure}
-
 A API de seletores (\textit{querySelector}) do DOM permite alto
-nível de precisão e performance para buscar elementos. A figura
-\ref{fig:selectorsSample} exemplifica a utilização dos seletores
-do DOM em um documento JavaScript. O método \textit{querySelector}
-seleciona o primeiro elemento em conformidade com o padrão
-especificado. Já o método \textit{querySelectorAll} seleciona todos os
-elementos que estão em acordo com o padrão especificado.
+nível de precisão e performance para buscar elementos. Os métodos
+\textit{querySelector} e \textit{querySelectorAll} buscam aproximar-se
+do funcionamento do jQuery, habilitando filtrar por classes, elementos,
+identificadores ou uma junção destes.
 
 DOM também conta com uma API de eventos que possibilita que, através
 de JavaScript, se saiba quando algum evento interessante aconteceu.
 Cada evento é representado por um objeto baseado na interface
 \textit{Event} e pode ter campos e funções adicionais para prover
-maior informação do evento ocorrido \autocite{devdocs}.
-
-Os eventos podem ser criados pelo usuário ou serem lançados pelo
-navegador, possibilitando uma manipulação consistente dos mais
-variados aspectos de uma aplicação.
-
-Manipulação de entrada de comandos, e muitas varias outras APIs do
-HTML, como o IndexedDB, se dá através de eventos, tornando o assunto
-relevante aos jogos \footnote{O site http://devdocs.io/dom\_events/
-contém uma lista dos eventos lançados automaticamente pelos
-navegadores}.
+maior quantidade de informações \autocite{devdocs}. Os eventos
+podem ser criados pelo usuário ou serem lançados pelo navegador,
+possibilitando uma manipulação consistente dos mais variados
+aspectos de uma aplicação. Manipulação de entrada de comandos, e
+muitas varias outras APIs do HTML, como o IndexedDB, se dá através
+de eventos, tornando o assunto relevante aos jogos \footnote{O site
+http://devdocs.io/dom\_events/ contém uma lista dos eventos lançados
+automaticamente pelos navegadores}.
 %}}}
 
 Fortemente entrelaçado com o HTML e o DOM está o CSS que possibilita
@@ -1685,7 +1665,7 @@ implementadores se prontifiquem a especificação continuará suspensa.
 No lugar do Web SQL a W3C recomenda a utilização do Web Storage e do
 IndexedDB.
 
-\subsection{Web STORAGE}
+\subsection{Web Storage}
 
 Web Storage, também conhecido como Local Storage, provê uma forma de
 armazenar dados no formato chave valor dentro do navegador. Os dados são

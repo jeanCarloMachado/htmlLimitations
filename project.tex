@@ -135,20 +135,20 @@ clicar nas configurações e nos botões de certo e errado da página
 principal. Deixando a página  pronta para receber a funcionalidade 
 propriamente dita.
 
-Com esqueleto da aplicação definido foi introduzido a
-lógica de negócio. A figura \ref{fig:simpleDiagram} apresenta do
-a relação entre as classes do jogo. De toda a regra do jogo, a
-classe Match é a mais importante. Ela simboliza uma partida dentro do
-jogo, é na classe Match que as informações de quantas equações
-existem, quantas foram acertadas e o tempo total da partida bem como
-a pontuação atual do usuário. O propósito da classe Match é iterar a cada
-pergunta e esperar por uma resposta. Quando a resposta é dada a classe
-Match computa se a resposta está correta ou não e o tempo que levou
-para chegar ao resultado. Quando não existem mais perguntas para serem
-processadas é lançado um evento de final de partida onde o resultado
-pode ser processado pelas demais classes do jogo.
-A figura \ref{fig:gameScreen} demostra o mecanismo da classe \textit{Match} integrado
-ao jogo.
+Com esqueleto da aplicação definido foi introduzido a lógica
+de negócio. A figura \ref{fig:simpleDiagram} apresenta do a
+relação entre as classes do jogo. De toda a regra do jogo, a classe
+\textit{Match} é a mais importante. Ela simboliza uma partida dentro
+do jogo, é na classe \textit{Match} que as informações de quantas
+equações existem, quantas foram acertadas e o tempo total da partida
+bem como a pontuação atual do usuário. O propósito da classe
+\textit{Match} é iterar a cada pergunta e esperar por uma resposta.
+Quando a resposta é dada a classe \textit{Match} computa se a resposta
+está correta ou não e o tempo que levou para chegar ao resultado.
+Quando não existem mais perguntas para serem processadas é lançado
+um evento de final de partida onde o resultado pode ser processado
+pelas demais classes do jogo. A figura \ref{fig:gameScreen} demostra o
+mecanismo da classe \textit{Match} integrado ao jogo.
 
 O cálculo da pontuação se dá por uma operação matemática simples.
 Ao final de uma partida é computado o total de questões acertadas
@@ -178,7 +178,7 @@ parseInt(
     \label{fig:gameScreen}
 \end{figure}
 
-A construção da classe Match disponibilizou o comportamento principal do
+A construção da classe \textit{Match} disponibilizou o comportamento principal do
 jogo; entretanto, nesta etapa não havia um gerador de equações. O
 jogo contava apenas com uma coleção de equações preestabelecidas
 que eram selecionadas aleatoriamente a cada turno. Adiar a construção
@@ -332,7 +332,7 @@ arquivo CSS.
 A seguir serão apresentadas as limitações do HTML encontradas durante
 o desenvolvimento do protótipo e pesquisa relacionada.
 
-\section{Otimizações para jogos}
+\section{Otimizações para jogos} \label{optimizations}
 %{{{
 Navegadores tentam otimizar a experiência de navegação definindo
 um conjunto de regras e configurações razoáveis para a maioria dos
@@ -389,7 +389,11 @@ CSS demonstradas abaixo.
 
 \subsection{JavaScript}
 
+A seguir serão descritas algumas otimizações de JavaScript no
+contexto de jogos.
+
 \subsubsection{Modo estrito}
+
 Um recurso interessante do JavaScript é seu modo estrito, este faz
 um conjunto de modificação na semântica do interpretador de modo
 que alguns recursos suportados, mas propensos a problemas, sejam
