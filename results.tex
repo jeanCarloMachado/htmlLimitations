@@ -622,8 +622,6 @@ para utilizar serviços de \textit{push} também não estão disponíveis
 para o HTML5.
 \end{quote}
 
-\section{Navegadores}
-
 A tabela abaixo demonstra é um comparativo das tecnologias pesquisadas,
 relevantes aos jogos e seu suporte. As informações de suporte foram
 extraídas do site \textit{Can I Use} e os navegadores populares em questão
@@ -633,24 +631,22 @@ são: Internet Explorer (11), Edge (13), Firefox (43), Google Chorme
 \begin{table}
 \begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|  }
 \hline
-Tecnologia & Suporte nas últimas versões estáveis dos navegadores populares & Polyfills disponíveis  para versões antigas \\
-\hline
-Canvas & Sim & Sim \\
-SVG & Sim & Sim \\
-Gamepad & Não & Sim \\
-WebGL & Parcial & Sim \\
-WebSockets & Sim & Sim \\
-Video & Sim & Sim \\
-Audio & Sim & Sim \\
-IndexedDB & Parcial & Sim \\
-WebCL & Não & Não \\
-WebVR & Não & Não \\
-WebAssembly & Não & Sim \\
-Tag áudio & Sim & Sim \\
-Áudio API & Não & Sim \\
-Vídeo & Não & Sim \\
-Prefetch & Não & Sim \\
-\hline
+Tecnologia & Suporte nas últimas versões estáveis dos navegadores populares & Polyfills disponíveis  para versões antigas \\ \hline
+Canvas & Sim & Sim \\ \hline
+SVG & Sim & Sim \\ \hline
+Gamepad & Não & Sim \\ \hline
+WebGL & Parcial & Sim \\ \hline
+WebSockets & Sim & Sim \\ \hline
+Video & Sim & Sim \\ \hline
+Audio & Sim & Sim \\ \hline
+IndexedDB & Parcial & Sim \\ \hline
+WebCL & Não & Não \\ \hline
+WebVR & Não & Não \\ \hline
+WebAssembly & Não & Sim \\ \hline
+Tag áudio & Sim & Sim \\ \hline
+Áudio API & Não & Sim \\ \hline
+Vídeo & Não & Sim \\ \hline
+Prefetch & Não & Sim \\ \hline
 \end{tabular}
 \label{table:technologies}
 \caption{Tecnologias dos jogos e seu suporte}
@@ -660,98 +656,67 @@ Com este comparativo fica visível que, mesmo em alguns casos não
 existindo suporte nativo ou ele sendo incompleto e com limitações,
 na vasta maioria dos casos, é possível utilizar tecnologias da Web
 direcionadas para o desenvolvimento de jogos.
-
-\begin{table}
-\begin{tabular}{ |p{2cm}|p{5cm}|p{2cm}|  }
-\hline
-Limitação & Descrição & Existe solução ou contorno? \\ 
-\hline
-\Cref{limitation:multipleTesting} & Para garantir que algo de fato funcione é necessário testar em múltiplos dispositivos & Parcial \\
-\Cref{limitation:hardToBuildGuis} & Dificuldade em construir interfaces nativas para os diversos dispositivos & Sim \\
-\Cref{limitation:differentScreenSizesMayPutSomeUsersInDisvantage} &  Desvantagem  para alguns jogadores devido ao tamanho da tela  & Parcial \\
-\Cref{limitation:cssPrefixes} & Tecnologias equivalentes em fase experimental levam o prefixo do motor de renderização  & Sim \\
-\Cref{limitation:jsSpecificationCycle} & Demora para chegar a um consenso na criação de especificações do JavaScript & Não \\
-\Cref{limitation:jsImplementaionCycle} & Demora para implementar novas especificações do JavaScript & Não \\
-\Cref{limitation:discoverErrorsWhileRunning} & Por ser interpretado, erros no código JavaScript só podem ser descobertos em tempo de execução & Parcial \\
-\Cref{limitation:complexBuild} & Requirimento de diversos passos para testar ou disponibilizar aplicações triviais & Sim  \\
-\hline
-\end{tabular}
-\end{table}
 \newpage
-\begin{table}
-\begin{tabular}{ |p{2cm}|p{5cm}|p{2cm}|  }
+\begin{longtable}{| p{.09\textwidth} | p{.53\textwidth}| p{.11\textwidth} |}
 \hline
-\Cref{limitation:passCompleteObjectsOnSockets} & Impossibilidade de passar objetos completos em WebSockets & Parcial \\
-\Cref{limitation:runScriptsOnlyOnTheEndOfTheProcessment} & Scripts só podem ser rodados com segurança no final da renderização & Parcial \\
-\Cref{limitation:harderToDoMaintainence} & A manutenibilidade de JavaScript tende a ser pior do que a de outras linguagens comuns como C\# & Sim \\
-\Cref{limitation:NANPropagation} & Propagação de valores inválidos NAN & Parcial \\
-\Cref{limitation:typesCheck} & Checagem de alguns tipos retorna resultados inesperados & Parcial \\
-\Cref{limitation:JSanimations} & É pouco eficiente produzir animações em JavaScript & Parcial  \\
-\Cref{limitation:fullscreenManagement} & Impossibilidade de detectar e manipular \textit{fullscreen} de forma padronizada &Não \\
-\Cref{limitation:svgDomPerformance} & Problemas de performance em arquivos SVG muito grandes & Não \\
-\hline
-\end{tabular}
-\end{table}
-\newpage
-\begin{table}
-\begin{tabular}{ |p{2cm}|p{5cm}|p{2cm}|  }
-\hline
-\Cref{limitation:noCanvasIntegration} & A integração do Canvas com as demais tecnologias da Web é pobre & Não \\
-\Cref{limitation:noWebglDesktopFunctions} & Falta de alguns recursos disponíveis para OpenGL em ambientes que os permitiriam & Não \\
-\Cref{limitation:hardToUseWebGL} & Para construir jogos é muito difícil utilizar apenas WebGL & Sim \\
-\Cref{limitation:incompleteSupportWebgl} & Em muitas plataformas o suporte a WebGl é incompleto & Parcial \\
-\Cref{limitation:limitedToRecentThingsWebgl} & WebGl não funciona em placas gráficas antigas  & Não \\
-\Cref{limitation:soundAPIConflicts} & A API de Audio é problemática com sons frequentes no Android & Não \\
-\Cref{limitation:bestAudioCompressionNotSupportedByAllBrowsers} & Não existe um único codec moderno suportado em todos os navegadores & Parcial \\
-\Cref{limitation:limitedMultimidiaControlOnSafari} & O Safari conta com problemas de controle de execução de multimídia & \\
-\Cref{limitation:noEffectsOnVideo} & Não é possível aplicar shaders diretamente em vídeo & Pode-se contornar este problema importando o vídeo para um contexto de Canvas  \\
-\hline
-\end{tabular}
-\end{table}
-\newpage
-\begin{table}
-\begin{tabular}{ |p{2cm}|p{5cm}|p{2cm}|  }
-\hline
-\Cref{limitation:videoFullscreenControl} & Falta de forma padronizada de controlar o modo tela cheia para vídeos & \\
-\Cref{limitation:videoCodecs} & Falta de consenso sobre um codec de vídeo padrão & \\
-\Cref{limitation:safariVideoMissingControlAndCanvas} & A integração de vídeo e canvas do Safari é problemática  e vídeo só pode ser carregado pelo usuário & Não \\
-\Cref{limitation:noSqlSupport} & Não existência de tecnologia oficial de SQL para Web & Parcial \\
-\Cref{limitation:webStorageLimit} & Em muitos navegadores não é possível armazenar mais de 5MB em Web Storage & Não \\
-\Cref{limitation:webStorageQueryLimit} & Não existe forma padronizada de descobrir quando espaço ainda resta em Web Storage & Parcial \\
-\Cref{limitation:webStorageStringOnly} & Web Storage permite que os dados sejam armazenados unicamente como Strings & Não \\
-\Cref{limitation:indexedDbAnonymousBehaviour} & O comportamento do IndexedDB para abas anônimas varia & Não \\
-\Cref{limitation:indexedDbNoLike} & Não é possível realizar buscas em texto com o IndexedDB & Não \\
-\Cref{limitation:noErrorMessagesOffline} & Erros na configuração do manifesto offline não contém mensagens descritivas 0& Não \\
-\Cref{limitation:orientationIsntReady} & A implementação da API de orientação é divergente entre os navegadores & Sim \\
-\Cref{limitation:checkResourcesOnlyOnJavascrit} & Checagem de recursos só por JavaScript força implementação de markup em scripts & Não \\
-\Cref{limitation:noCanvas2DIsnpectorOnipresent} & Não existe inspetor Canvas 2D para navegadores multiplataforma & Parcial \\
-\Cref{limitation:multiTouch} & Scroll juntamente com outros gestos não funciona corretamente na maioria dos navegadores & Sim \\
-\hline
-\end{tabular}
-\end{table}
-\newpage
-\begin{table}
-\begin{tabular}{ |p{2cm}|p{5cm}|p{2cm}|  }
-\hline
-\Cref{limitation:gamepadObject} & Não existe forma padronizada de detectar a entrada e saída de controles nos navegadores & Não \\
-\Cref{limitation:desktopIcon} & Não existe forma padronizada de adicionar ícones de aplicativos Web a área de trabaho & Não \\
-\Cref{limitation:monetizationDifferent} & Jogos exclusivamente Web sentem dificuldade em monetizar jogos da forma convencional & Parcial \\
-\hline
-\end{tabular}
-\label{table:technologies}
+Código & Descrição & Existe solução ou contorno? \\ \hline
+\Cref{limitation:multipleTesting} & Para garantir que algo de fato funcione é necessário testar em múltiplos dispositivos & Parcial \\ \hline
+\Cref{limitation:hardToBuildGuis} & Dificuldade em construir interfaces nativas para os diversos dispositivos & Sim \\ \hline
+\Cref{limitation:differentScreenSizesMayPutSomeUsersInDisvantage} &  Desvantagem  para alguns jogadores devido ao tamanho da tela  & Parcial \\ \hline
+\Cref{limitation:cssPrefixes} & Tecnologias equivalentes em fase experimental levam o prefixo do motor de renderização  & Sim \\ \hline
+\Cref{limitation:jsSpecificationCycle} & Demora para chegar a um consenso na criação de especificações do JavaScript & Não \\ \hline
+\Cref{limitation:jsImplementaionCycle} & Demora para implementar novas especificações do JavaScript & Não \\ \hline
+\Cref{limitation:discoverErrorsWhileRunning} & Por ser interpretado, erros no código JavaScript só podem ser descobertos em tempo de execução & Parcial \\ \hline
+\Cref{limitation:complexBuild} & Requirimento de diversos passos para testar ou disponibilizar aplicações triviais & Sim  \\ \hline
+\Cref{limitation:passCompleteObjectsOnSockets} & Impossibilidade de passar objetos completos em WebSockets & Parcial \\ \hline
+\Cref{limitation:runScriptsOnlyOnTheEndOfTheProcessment} & Scripts só podem ser rodados com segurança no final da renderização & Parcial \\ \hline
+\Cref{limitation:harderToDoMaintainence} & A manutenibilidade de JavaScript tende a ser pior do que a de outras linguagens comuns como C\# & Sim \\ \hline
+\Cref{limitation:NANPropagation} & Propagação de valores inválidos NAN & Parcial \\ \hline
+\Cref{limitation:typesCheck} & Checagem de alguns tipos retorna resultados inesperados & Parcial \\ \hline
+\Cref{limitation:JSanimations} & É pouco eficiente produzir animações em JavaScript & Parcial  \\ \hline
+\Cref{limitation:fullscreenManagement} & Impossibilidade de detectar e manipular \textit{fullscreen} de forma padronizada &Não \\ \hline
+\Cref{limitation:svgDomPerformance} & Problemas de performance em arquivos SVG muito grandes & Não \\ \hline
+\Cref{limitation:noCanvasIntegration} & A integração do Canvas com as demais tecnologias da Web é pobre & Não \\ \hline
+\Cref{limitation:noWebglDesktopFunctions} & Falta de alguns recursos disponíveis para OpenGL em ambientes que os permitiriam & Não \\ \hline
+\Cref{limitation:hardToUseWebGL} & Para construir jogos é muito difícil utilizar apenas WebGL & Sim \\ \hline
+\Cref{limitation:incompleteSupportWebgl} & Em muitas plataformas o suporte a WebGl é incompleto & Parcial \\ \hline
+\Cref{limitation:limitedToRecentThingsWebgl} & WebGl não funciona em placas gráficas antigas  & Não \\ \hline
+\Cref{limitation:soundAPIConflicts} & A API de Audio é problemática com sons frequentes no Android & Não \\ \hline
+\Cref{limitation:bestAudioCompressionNotSupportedByAllBrowsers} & Não existe um único codec moderno suportado em todos os navegadores & Parcial \\ \hline
+\Cref{limitation:limitedMultimidiaControlOnSafari} & O Safari conta com problemas de controle de execução de multimídia & \\ \hline
+\Cref{limitation:noEffectsOnVideo} & Não é possível aplicar shaders diretamente em vídeo & Sim \\ \hline
+\Cref{limitation:videoFullscreenControl} & Falta de forma padronizada de controlar o modo tela cheia para vídeos & \\ \hline
+\Cref{limitation:videoCodecs} & Falta de consenso sobre um codec de vídeo padrão & \\ \hline
+\Cref{limitation:safariVideoMissingControlAndCanvas} & A integração de vídeo e canvas do Safari é problemática  e vídeo só pode ser carregado pelo usuário & Não \\ \hline
+\Cref{limitation:noSqlSupport} & Não existência de tecnologia oficial de SQL para Web & Parcial \\ \hline
+\Cref{limitation:webStorageLimit} & Em muitos navegadores não é possível armazenar mais de 5MB em Web Storage & Não \\ \hline
+\Cref{limitation:webStorageQueryLimit} & Não existe forma padronizada de descobrir quando espaço ainda resta em Web Storage & Parcial \\ \hline
+\Cref{limitation:webStorageStringOnly} & Web Storage permite que os dados sejam armazenados unicamente como Strings & Não \\ \hline
+\Cref{limitation:indexedDbAnonymousBehaviour} & O comportamento do IndexedDB para abas anônimas varia & Não \\ \hline
+\Cref{limitation:indexedDbNoLike} & Não é possível realizar buscas em texto com o IndexedDB & Não \\ \hline
+\Cref{limitation:noErrorMessagesOffline} & Erros na configuração do manifesto offline não contém mensagens descritivas 0& Não \\ \hline
+\Cref{limitation:orientationIsntReady} & A implementação da API de orientação é divergente entre os navegadores & Sim \\ \hline
+\Cref{limitation:checkResourcesOnlyOnJavascrit} & Checagem de recursos só por JavaScript força implementação de markup em scripts & Não \\ \hline
+\Cref{limitation:noCanvas2DIsnpectorOnipresent} & Não existe inspetor Canvas 2D para navegadores multiplataforma & Parcial \\ \hline
+\Cref{limitation:multiTouch} & Scroll juntamente com outros gestos não funciona corretamente na maioria dos navegadores & Sim \\ \hline
+\Cref{limitation:gamepadObject} & Não existe forma padronizada de detectar a entrada e saída de controles nos navegadores & Não \\ \hline
+\Cref{limitation:desktopIcon} & Não existe forma padronizada de adicionar ícones de aplicativos Web a área de trabaho & Não \\ \hline
+\Cref{limitation:monetizationDifferent} & Jogos exclusivamente Web sentem dificuldade em monetizar jogos da forma convencional & Parcial \\ \hline
 \caption{Lista de problemas e limitações}
-\end{table}
+\label{table:technologies}
+\end{longtable}
 
-As limitações resolvidas parcialmente podem identificar que o
-problema pode ser contornado em partes, mas também quando o problema
-é contornado de forma inesperada e não intuitiva. Como a utilização
+Das limitaçõe dispostas no quadro \ref{table:technologies}
+aquelas resolvidas parcialmente identificam que o problema
+pode ser contornado em partes, mas também quando o problema é
+contornado de forma inesperada e não intuitiva. Como a utilização
 de um depurador internamente no código no caso da limitação
 \Cref{limitation:noCanvas2DIsnpectorOnipresent}.
 
 As limitações as quais não tenham solução, em muitos casos, são
 problemas temporais e que podem ser solucionados com o tempo. Como no
 caso da limitação \Cref{limitation:gamepadObject}, que as diferenças
-se dão em grande parte por a especificação não estar prontta. Outras
+se dão em grande parte por a especificação não estar pronta. Outras
 limitações são intrínssecas da característica do HTML e pode
 demorar muito para serem resolvidas.
 
