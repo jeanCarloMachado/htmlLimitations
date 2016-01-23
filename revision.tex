@@ -188,16 +188,17 @@ de uma arquitetura construída para um ambiente em rede, sendo
 relativamente mais fácil criar experiências sociais.
 
 A performance é um ponto negativo da Web, é difícil chegar a
-performance comparável a abordagem nativa. Não obstante, esse
-problema é cada vez menor o hardware dos dispositivos são cada vez
-melhores e as tecnologias tecnologias de software também avançam
-substancialmente. Existem inconsistências nas implementações
-das especificações Web o que leva a comportamento inesperados em
-alguns caos, sendo necessário desenvolver regras específicas para
-dispositivos e versões de navegadores. Outro aspecto negativo da Web é
-que nem todas as funcionalidades dos dispositivos estão especificados
-com as tecnologias da Web e muitas vezes os recursos do dispositivo
-ficam sub utilizados.
+performance comparável a abordagem nativa. Contudo, esse problema é
+cada vez menor, visto que o hardware dos dispositivos são cada vez mais
+potentes e as tecnologias de software também avançam substancialmente
+em performance.
+
+Existem inconsistências nas implementações das especificações
+Web o que leva a comportamento inesperados em alguns caos, sendo
+necessário desenvolver regras específicas para dispositivos e versões
+de navegadores. Outro aspecto negativo da Web é que nem todas as
+funcionalidades dos dispositivos estão especificados com as tecnologias
+da Web e muitas vezes os recursos do dispositivo ficam sub utilizados.
 
 Além dos jogos web, há a possibilidade de criar jogos nativos e híbridos.
 
@@ -335,7 +336,7 @@ A última versão do HTML é o HTML5, iniciado pela WHATWG e
 posteriormente desenvolvido em conjunto com a W3C. Seu rascunho foi
 proposto em 2008 e ratificado em 2014. Após 2011, a última chamada
 de revisão do HTML5, a WHATWG decidiu renomear o HTML5 para HTML
-\autocite{htmlIsTheNewHtml5}. Não obstante, o termo HTML5 permanece em
+\autocite{htmlIsTheNewHtml5}. Todavia, o termo HTML5 permanece em
 utilização pela W3C.
 
 Além da nomenclatura, exitem pequenas diferenças nas especificações
@@ -783,20 +784,19 @@ de estado de elementos, etc. Em outras palavras, a utilização do
 JavaScript era opcional e as páginas da web deveriam continuar
 operantes sem a presença da linguagem.
 
-Não obstante, com a construção de projetos Web cada vez mais complexos, as
-responsabilidades delegadas ao JavaScript aumentaram a ponto que a
-grande maioria dos sistemas web não funcionarem sem ele.
+Conquanto, com a construção de projetos Web cada vez mais
+complexos, as responsabilidades delegadas ao JavaScript aumentaram a
+ponto que a grande maioria dos sistemas web não funcionarem sem ele.
 JavaScript não evoluiu ao passo da demanda e muitas vezes carece de
 definições expressivas, completude teórica, e outras características
 de linguagens de programação mais bem estabelecidas, como C++ ou
-Java \autocite{crossPlatformMobileGame}.
-
-A última do JavaScript, o JavaScript 6, é um esforço nessa direção.
-JavaScript 6 ou EMACScript Harmonia, contempla vários conceitos de
-orientação a objetos como classes, interfaces, herança, tipos, etc.
-Não obstante o suporte ao JavaScript 6 é apenas parcial em todos
-os navegadores. O site http://kangax.github.io/compat-table/es6/
-apresenta um comparativo de suporte das funcionalidades do JavaScript.
+Java \autocite{crossPlatformMobileGame}. A última do JavaScript, o
+JavaScript 6, é um esforço nessa direção. JavaScript 6 ou EMACScript
+Harmonia, contempla vários conceitos de orientação a objetos como
+classes, interfaces, herança, tipos, etc. Infelizmente, por hora, o suporte
+ao JavaScript 6 é apenas parcial em todos os navegadores. O site
+\url{http://kangax.github.io/compat-table/es6/} apresenta um comparativo de
+suporte das funcionalidades do JavaScript, inclusive o 6, nos navegadores.
 
 Segundo \citet{ecmaSupport}, o suporte no início de 2015 era o seguinte:
 
@@ -815,7 +815,7 @@ determinada versão e seus detalhes de implementação. Além da
 espera por especificações, uma vez definidas, é necessário que os
 navegadores especificado.
 
-O projeto babel https://github.com/babel/babel é um compilador de
+O projeto babel \url{https://github.com/babel/babel} é um compilador de
 JavaScript 6 para JavaScript 5. Permitindo que, mesmo sem suporte, os
 desenvolvedores possam usufruir dos benefícios da utilização do
 JavaScript 6 durante o tempo de desenvolvimento, gerando código em
@@ -824,12 +824,12 @@ JavaScript 5 para rodar nos navegadores.
 Alternativamente, existe uma vasta gama de conversores de código
 (\textit{transpilers}) para JavaScript; possibilitando programar
 em outras linguagens posteriormente gerando código JavaScript
-\footnote{Uma lista das tecnologias para converter código HTML pode ser encontrada nos apêndices}.
-Entretanto, essa alternativa tem seus pontos fracos, necessita-se
-de mais tempo de depuração, visto que o JavaScript gerado não é
-conhecido pelo desenvolvedor, e provavelmente o código gerado não
-será tão otimizado, nem utilizará os recursos mais recentes do
-JavaScript.
+\footnote{Uma lista das tecnologias para converter código HTML pode
+ser encontrada nos apêndices}. Entretanto, essa alternativa tem seus
+pontos fracos, necessita-se de mais tempo de depuração, visto que o
+JavaScript gerado não é conhecido pelo desenvolvedor, e provavelmente
+o código gerado não será tão otimizado, nem utilizará os recursos
+mais recentes do JavaScript.
 
 Mesmo com suas fraquezas amplamente conhecidas, JavaScript está
 presente em praticamente todo navegador atual. Sendo uma espécie de
@@ -1043,7 +1043,7 @@ Cada um dos motores que compõem um navegador implementa partes da
 especificação do HTML. E, operando em conjunto, tentam comportar
 todas as tecnologias da Web. Infelizmente a forma que as tecnologias
 são suportadas varia e algumas não estão presentes de qualquer forma
-nos navegadores. Não obstante, o suporte vem crescendo. A figura
+nos navegadores. Conquanto, o suporte vem crescendo. A figura
 \ref{fig:audioCodecs} apresenta o gráfico de suporte por versões de
 navegadores em dezembro de 2015.
 
@@ -1052,7 +1052,7 @@ navegadores em dezembro de 2015.
     \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{htmlSupport.png}
 	\caption{Suporte das especificações do HTML nos navegadores}
     \label{fig:htmlSupport}
-    \source{https://html5test.com/}
+    \source{\url{https://html5test.com/}}
 \end{figure}
 
 %}}}
@@ -1073,7 +1073,7 @@ Softwares para Android são geralmente escritos em Java e executados
 através da máquina virtual Dalvik. Dalvik é similar a máquina
 virtual Java, mas roda um formato de arquivo diferenciado (.dex),
 otimizados para consumir pouca memória, que são agrupados em um único
-pacote (.apk). 
+pacote (.apk).
 
 Aplicativos da Web podem ser integrados no Android através de uma
 arquitetura híbrida. Os arquivos da aplicação são empacotados dentro
@@ -1088,8 +1088,8 @@ que utiliza o motor de renderização LibWebCore, baseado no WebKit
 \autocite{comparisonPlatforms}. Além do padrão outros navegadores como
 o Firefox ou Opera também podem ser instalados.
 
-Além do Android o sistema IOS é de grande relevância mercadológica
-para o desenvolvimento de jogos. Não obstante, não será tratado neste
+Além do Android o sistema IOS é de grande relevância
+para o desenvolvimento de jogos. Entretanto, não será tratado neste
 trabalho pelos motivos supracitados. A próxima seção deste trabalho
 descreve como detectar recursos nas variadas plataformas que a Web se
 apresenta.
@@ -1400,7 +1400,7 @@ O funcionamento de codecs pode variar muito, conforme as estratégias
 de compressão utilizadas, a quantidade de bits por segundo suportada,
 entre outros fatores. Visto que os algoritmos de compressão podem
 adquirir grande complexidade muitos codecs são encobertos por licenças
-que limitam sua utilização. Não obstante, também existem opções
+que limitam sua utilização. Embora, também existem opções
 livres de patentes e licenças.
 
 Abaixo segue uma lista de alguns codecs populares para áudio segundo
