@@ -306,7 +306,7 @@ segurança de que a especiação não mudará substancialmente.
 
 Apesar do processo da W3C ser rigoroso, está longe de perfeito. A
 especificação final do HTML4 contava com quatro erros publicados
-via errata \autocite{HTML5}. Mesmo assim o cenário é animador,
+via errata \autocite{diveIntohtml}. Mesmo assim o cenário é animador,
 \citet{html5mostwanted} cita que as tecnologias da Open Web tem
 evoluído desde os princípios da internet e já provaram sua robusteza
 e estabilidade enquanto outras tecnologias crescem e morrem ao redor
@@ -344,9 +344,8 @@ trabalho optamos pela nomenclatura da WHATWG, utilizamos o termo HTML em
 detrimento a HTML5, sempre que semanticamente viável.
 
 HTML foi especificado baseando-se no padrão SGML (\textit{Standard Generalized
-Markup Language}).
+Markup Language}). Alguns benefícios do SGML são:
 
-Alguns benefícios do SGML são:
 \begin{itemize}
     \item Documentos declaram estrutura, diferentemente de aparência
 , possibilitando otimizações nos ambientes de uso (tamanho de tela,
@@ -410,9 +409,7 @@ interesse em manter manter a retrocompatibilidade. Interpretadores
 HTML atingem isso ignorando os elementos que não conhecem, tratando
 seu vocabulário exclusivamente. Esse mecanismo permite que os
 desenvolvedores incluam marcação de reserva dentro dos elementos
-que podem não ser suportados. O elemento \textit{span} na figura
-\ref{fig:htmlSample} só aparecerá para o usuário caso seu navegador
-não suporta a tag vídeo.
+que podem não ser suportados.
 
 Além da convencional linguagem de marcação, HTML é muitas vezes
 interpretado como um conceito guarda chuva para designar as tecnologias
@@ -1163,7 +1160,7 @@ círculo sendo definido em SVG.
 \end{verbatim}
 \caption{Círculo em SVG.}
 \source{http://www.w3schools.com/svg/}
-\label{img:svgCircle}
+\label{fig:svgCircle}
 \end{figure}
 
 Outra tecnologia popular da Web para renderização que adota uma filosofia totalmente 
@@ -1285,7 +1282,7 @@ Um site interessante para explorar exemplos WebGL avançados é o blog
  \url{http://learningwebgl.com} que conta com tutoriais cobrindo áreas
 como diferentes tipos de iluminação, carregamento de modelos em JSON,
 gerenciando eventos do mouse e teclado; e como renderizar uma cena WebGL
-em uma textura \autocite[p.42]{3daps}\footnote{Os apêndices contam.
+em uma textura \autocite[p.42]{3daps}\footnote{Os apêndices contam
 com uma coleção de bibliotecas que facilitam a utilização de WebGL}.
 
 Apesar da relevância, WebGL não foi utilizado no protótipo pois
