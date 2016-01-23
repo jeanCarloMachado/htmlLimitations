@@ -108,13 +108,14 @@ apêndices}.
 
 \section{JavaScript}
 
-O JavaScript, por ser uma linguagem desenvolvida por consenso, tem um
-ciclo de vida de atualizações demorado; pois necessita que todos os
-consumidores da especificação entrem em acordo \limitation{jsSpecificationCycle}. Com a especificação
-pronta, outra fase demorada é a adoção das tecnologias nos
-navegadores, o site \url{https://kangax.github.io/compat-table/es6/}
-contém uma lista do suporte aos recursos do ECMAScript 6 nos motores
-JavaScript \limitation{jsImplementaionCycle}.
+O JavaScript, por ser uma linguagem desenvolvida por consenso,
+tem um ciclo de vida de atualizações demorado; pois necessita
+que todos os consumidores da especificação entrem em acordo
+\limitation{jsSpecificationCycle}. Com a especificação pronta,
+outra fase demorada é a adoção das tecnologias nos navegadores,
+o site \url{https://kangax.github.io/compat-table/es6/} contém uma
+lista do suporte aos recursos do ECMAScript 6 nos motores JavaScript
+\limitation{jsImplementaionCycle}.
 
 Por ser uma linguagem interpretada, erros tem de descobertos rodando a
 aplicação \limitation{discoverErrorsWhileRunning}. Alternativamente,
@@ -126,8 +127,9 @@ Web Assembly.
 
 Arquivos JavaScript geralmente necessitam ser minificados, reunidos e
 ofuscados. Muitas vezes esses processos precisam ser executadas durante
-o desenvolvimento, e sem a utilização de automatizadores como o Grunt
-Watch o processo torna-se entediante bem como propensa a erros \limitation{complexBuild}.
+o desenvolvimento, e sem a utilização de automatizadores como o
+Grunt Watch o processo torna-se entediante bem como propensa a erros
+\limitation{complexBuild}.
 
 Segundo \citet{htmlResearchJournal}, um problema do JavaScript é que
 não é possível transferir métodos de objetos através de sistemas,
@@ -207,12 +209,12 @@ variável corretamente.
 
 Apesar da performance ter notavelmente melhorado, ainda é geralmente
 menos eficiente produzir animações em JavaScript do que utilizando
-transições e animações do CSS, que por sua vez são mais otimizados
-e acelerados via hardware \autocite{html5mostwanted} \limitation{JSanimations}.
-
-O Web Assembly pode resolver este problema, substituindo o JavaScript
-para os casos onde grande performance é necessária. Mas para isso o
-Web Assembly precisa evoluir na especificação e implementações.
+transições e animações do CSS, que por sua vez são mais
+otimizados e acelerados via hardware \autocite{html5mostwanted}
+\limitation{JSanimations}. O Web Assembly pode resolver este problema,
+substituindo o JavaScript para os casos onde grande performance
+é necessária. Mas para isso o Web Assembly precisa evoluir na
+especificação e implementações.
 
 \subsection{Fullscreen}
 
@@ -220,7 +222,6 @@ Não existe forma padronizada de detectar se uma aplicação está
 em tela cheia ou não através de JavaScript. O IOS suporta a
 variável \textit{navigator.standalone } para identificar se a
 aplicação está em tela cheia \limitation{fullscreenManagement}.
-
 \citet{homescreenwebapps} recomenda a utilização do trecho de código
 para determinar se está em modo tela cheia nos demais navegadores. Não
 obstante, não existe solução oficial, tanto para detectar quanto para
@@ -359,19 +360,21 @@ as indicações de \citet{html5mostwanted} que afirma que a API de som
 é boa se você deseja apenas tocar alguma música, mas se você está
 lançando eventos em um jogo ela ainda é problemática.
 
-Outro problema de áudio em HTML5 são os codecs. Alguns navegadores
-favorecem formatos OGG (vorbis) e outros favorecem o MP3 (\limitation{bestAudioCompressionNotSupportedByAllBrowsers}). No
-protótipo foi utilizado o MP3, que apesar de não bem visto por
+Outro problema de áudio em HTML5 são os codecs. Alguns
+navegadores favorecem formatos OGG (vorbis) e outros favorecem o
+MP3 (\limitation{bestAudioCompressionNotSupportedByAllBrowsers}).
+No protótipo foi utilizado o MP3, que apesar de não bem visto por
 muitos navegadores, é suportado como uma forma de mínimo múltiplo
 comum. Todavia, segundo \citet{opus}, MP3 é um codec antigo e existem
 alternativas mais adequadas para a Web como o codec Opus, que oferece
 uma melhor relação entre taxa de compressão e qualidade.
 
 Além das restrições de codecs de áudio nos produtos da Apple,
-áudio especificamente no Safari do IOS contém alguns problemas específicos.
-Por exemplo, não é possível trocar o volume através de
-JavaScript também não é possível tocar mais de um som ou vídeo
-simultaneamente \autocite{unsolvedMediaHtmlIssues} (\limitation{limitedMultimidiaControlOnSafari}).
+áudio especificamente no Safari do IOS contém alguns problemas
+específicos. Por exemplo, não é possível trocar o volume
+através de JavaScript também não é possível tocar mais de um
+som ou vídeo simultaneamente \autocite{unsolvedMediaHtmlIssues}
+(\limitation{limitedMultimidiaControlOnSafari}).
 
 \subsection{Vídeo}
 
@@ -405,7 +408,8 @@ respectivamente.
 O Safari do IOS também contém problemas exclusivos de vídeo. Segundo
 \citet{unsolvedMediaHtmlIssues} não é possível capturar frames de
 vídeo usando o método \textit{drawImage} do canvas. Também não é
-possível pré carregar arquivos de vídeo sem iteração do usuário (\limitation{safariVideoMissingControlAndCanvas}).
+possível pré carregar arquivos de vídeo sem iteração do usuário
+(\limitation{safariVideoMissingControlAndCanvas}).
 
 Para os raros casos onde o suporte a vídeo não existe,
 como no Opera Mini, o projeto \textit{Vídeo for Everybody}
@@ -421,11 +425,19 @@ implementação, foi descontinuado. Apesar de depreciado o Web SQL ainda
 é usado por muitos desenvolvedores e mantido por alguns navegadores,
 todavia, os desenvolvedores que procedem desta maneira ficam à mercê
 dos caprichos dos navegadores não podendo contar com a força de um
-órgão regulador para manter a tecnologia.
+órgão regulador para manter a tecnologia. SQL seria interessante pois
+muitos desenvolvedores tem experiência com este tipo de tecnologia e
+por SQL permitir filtragem e correlacionamento de dados de uma forma
+flexível e poderosa.
 
-SQL seria interessante pois muitos desenvolvedores tem experiência com
-este tipo de tecnologia e por SQL permitir filtragem e correlacionamento
-de dados de uma forma flexível e poderosa.
+Uma outra característica da Web que pode afetar negativamente
+aplicações que utilizam o persistência local de dados é que o
+usuário pode configurar o navegador para não aceitar armazenamento
+para determinado domínio, possivelmente comprometendo a experiência
+de determinada aplicação. Esta característica é muito diferente do
+que geralmente é oferecido em aplicações desktop, onde a aplicação
+determina o que precisa usar sem necessitar de consenso do usuário, que
+por sua vez, pode escolher usar os não a aplicação.
 
 \subsection{Web Storage}
 
@@ -436,13 +448,30 @@ não é possível saber quanto espaço já foi consumido pelo Web
 Storage (\limitation{webStorageQueryLimit}).
 
 Outra limitação do Web Storage é que todas as informações são
-guardadas como texto (\limitation{webStorageStringOnly}). Isso força a
-converter os valores toda a vez que algo for armazenado ou recuperado
-\autocite{gameAssetManagement}.
+guardadas como texto (\limitation{webStorageStringOnly}). Isso
+força a converter os valores toda a vez que algo for armazenado ou
+recuperado \autocite{gameAssetManagement}. No protótipo isso não foi
+problemático pois não existe grande manipulação sobre os dados. Mas
+no caso de jogos mais complexos esta característica do Web Storage pode
+ser uma limitação substancial.
 
-No protótipo isso não foi problemático pois não existe grande
-manipulação sobre os dados. Mas no caso de jogos mais complexos esta
-característica do Web Storage pode ser uma limitação substancial.
+\subsection{IndexedDB}
+
+Apesar de ser desenvolvido com objetivo de ser uma solução para
+todas as necessidades de armazenamento no Frontend IndexedDB ainda
+sofre algumas limitações. O comportamento em abas anônimas não
+está especificado e os resultados também variam de navegador para
+navegador \limitation{indexedDbAnonymousBehaviour}. Não é possível
+realizar buscas em textos, algo similar ao \textit{LIKE} do SQL
+\limitation{indexedDbNoLike}.
+
+Outro problema encontrado durante a pesquisa é que no Firefox existe
+uma pequena probabilidade de os dados se perderem. Isso se dá pois a
+API não espera confirmação do sistema operacional para considerar
+um dado válido, essa foi uma escolha em detrimento de performance.
+Este comportamento pode ser modificado mas é a forma padrão de
+funcionamento e os desenvolvedores podem não estar considerando esta
+peculiaridade.
 
 \section{Offline}
 
@@ -686,6 +715,8 @@ Limitação & Descrição & Existe solução ou contorno? \\
 \Cref{limitation:webStorageLimit} & Em muitos navegadores não é possível armazenar mais de 5MB em Web Storage & Não \\
 \Cref{limitation:webStorageQueryLimit} & Não existe forma padronizada de descobrir quando espaço ainda resta em Web Storage & Parcial \\
 \Cref{limitation:webStorageStringOnly} & Web Storage permite que os dados sejam armazenados unicamente como Strings & Não \\
+\Cref{limitation:indexedDbAnonymousBehaviour} & O comportamento do IndexedDB para abas anônimas varia & Não \\
+\Cref{limitation:indexedDbNoLike} & Não é possível realizar buscas em texto com o IndexedDB & Não \\
 \Cref{limitation:noErrorMessagesOffline} & Erros na configuração do manifesto offline não contém mensagens descritivas 0& Não \\
 \Cref{limitation:orientationIsntReady} & A implementação da API de orientação é divergente entre os navegadores & Sim \\
 \hline

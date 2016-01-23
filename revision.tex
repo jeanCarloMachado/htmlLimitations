@@ -1707,12 +1707,12 @@ alert(localStorage.getItem('key'));
 \end{figure}
 
 A figura \ref{fig:WebStorage} exemplifica a utilização do Web
-Storage, para utilizar o armazenamento de sessão utiliza-se o objeto
-\textit{sessionStorage}. Já para utilizar o armazenamento local utiliza-se o
-objeto \textit{localStorage}.
+Storage, para realizar o armazenamento em sessão utiliza-se o objeto
+\textit{sessionStorage}. Já para utilizar o armazenamento local
+utiliza-se o objeto \textit{localStorage}.
 
 Web Storage é uma solução simples que comporta muitos casos de uso.
-Não obstante muitas vezes é necessário um controle mais refinado
+Contudo, muitas vezes é necessário um controle mais refinado
 sobre os dados, ou mais performance em uma base de dados massiva. Para
 responder a estes desafios existe a especificação do IndexedDB.
 
@@ -1725,13 +1725,13 @@ da W3C desde janeiro de 2015 e suportada, pelo menos parcialmente, por
 praticamente todos os navegadores populares.
 
 Inicialmente IndexedDB permitia operações síncronas e assíncronas.
-Não obstante, a versão síncrona foi removida devido a falta de
+Todavia, a versão síncrona foi removida devido a falta de
 interesse da comunidade. Operações assíncronas permitem que
-aplicativos JavaScript nunca esperam pelo resultado para continuar a
+aplicativos JavaScript não esperam pelo resultado para continuar a
 execução. Outrossim, cada interação com o banco de dados é uma
 transação que pode retornar um resultado ou um erro. Os eventos da
 transação são internamente eventos DOM cuja propriedade \textit{type}
-do elemento foi setada para \textit{success} ou \textit{error}.
+do elemento foi definida como \textit{success} ou \textit{error}.
 
 Ao invés de tabelas, IndexedDB trabalha com repositórios de objetos.
 Cada entrada, tupla em SQL, de um determinado repositório pode ser de
@@ -1761,20 +1761,6 @@ A figura \ref{fig:IndexedDB} demonstra um exemplo simplificado da
 utilização do IndexedDB, como cada iteração com o banco de dados é
 construído através de uma nova requisição e o tratamento do resultado
 é dado dentro de eventos.
-
-Apesar de ser desenvolvido com objetivo de ser uma solução para todas
-as necessidades de armazenamento no Frontend IndexedDB ainda sofre
-algumas limitações.
-
-Abaixo segue uma lista com algumas das limitações do IndexedDB.
-
-\begin{itemize}
-\item Tem limites de armazenamento e as regras variam de navegador para navegador.
-\item O comportamento em abas anônimas não está especificado e os resultados também variam.
-\item Existe uma pequena probabilidade de os dados se perderem, no caso do Firefox a API não espera confirmação do sistema operacional para considerar um dado válido, essa foi uma escolha em detrimento de performance.
-\item Não existe a possibilidade de fazer buscas em textos como o \textit{LIKE} do SQL.
-\item o usuário pode configurar o navegador para não aceitar armazenamento local para determinado domínio.
-\end{itemize}
 
 %}}}
 
@@ -1983,9 +1969,9 @@ Usando a mesma para trafegar todos os dados necessários para montar
 a página HTML. Dessa forma o HTTP/2 não necessita repetir as
 negociações de protocolo nem aguardar parado quando o limite de
 requisições que os navegadores suportam concorrentemente é atingido.
-Segundo \citet{gameAssetManagement} o limite concorrente de conexões por
-servidor é geralmente 5. Jogos que muitas vezes trafegam muitos objetos
-via rede, podem se beneficiar substancialmente.
+Segundo \citet{gameAssetManagement} o limite concorrente de conexões
+por servidor é geralmente 5. Jogos que muitas vezes trafegam muitos
+objetos via rede, podem se beneficiar substancialmente.
 
 Outro benefício do HTTP/2 em relação a seu predecessor é que
 os cabeçalhos das requisições são comprimidos, diminuindo
