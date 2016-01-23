@@ -71,8 +71,6 @@ do diagrama de classes}.
 \end{figure}
 
 \section{Desenvolvimento}
-%Comecei escrevendo o aplicativo para o Navegador do desktop pois era o
-%que estava mais acessível no momento.
 
 O desenvolvimento se deu com uma postura de melhoria progressiva
 criando primeiramente  a versão mais simples possível para atingir as
@@ -82,26 +80,25 @@ desenvolvimento criando para a plataforma Desktop pois esta contém
 um grande número de ferramentas de desenvolvimento nativas que não
 requerem integração especial.
 
-O primeiro passo foi a criação do documento HTML, foram utilizados elementos div
-para simbolizar telas do jogo. Conter todas as telas em único
-HTML caracteriza o jogo como uma aplicação de uma única página
-(\textit{Single Page Application}). Alternativamente poderia se depender
-de um servidor para mandar as páginas prontas, mas isso distribui
-a complexidade do sistema para tecnologias do lado do servidor,
-distanciando-se da proposta de um jogo construído exclusivamente com as
-tecnologias da Web.
+O primeiro passo foi a criação do documento HTML, foram utilizados
+elementos \textit{div} para simbolizar telas do jogo. Conter todas as
+telas em único HTML caracteriza o jogo como uma aplicação de uma
+única página (\textit{Single Page Application}). Alternativamente
+poderia se depender de um servidor para mandar as páginas prontas,
+mas isso distribui a complexidade do sistema para tecnologias do
+lado do servidor, distanciando-se da proposta de um jogo construído
+exclusivamente com as tecnologias da Web.
 
 Seguindo a construção do documento HTML veio o desenvolvimento de um
 CSS simples que comporta a visualização em múltiplos dispositivos.
 Para tal, foram utilizadas posições e tamanhos relativos. Por exemplo,
 a largura de cada tela da SPA é 98\% do tamanho total disponível no
-dispositivo. Já o tamanho da fonte do quadro principal, representado pelo id
-\textit{billboard}, é duas vezes o tamanho da fonte normal 2em.
-
+dispositivo. Já o tamanho da fonte do quadro principal, representado
+pelo id \textit{billboard}, é duas vezes o tamanho da fonte normal 2em.
 Sem a ajuda de bibliotecas especializadas o processo de criação da
-interface não é trivial. Apesar dela ser simples, fazer os
-elementos se alinharem em diversos tamanhos de telas não é fácil e
-pode se tornar um problema substancial para interfaces realmente complexas.
+interface não é trivial. Apesar dela ser simples, fazer os elementos
+se alinharem em diversos tamanhos de telas não é fácil e pode se
+tornar um problema substancial para interfaces realmente complexas.
 
 Após a concepção do CSS deu-se início ao desenvolvimento da lógica
 das páginas em JavaScript. O primeiro passo consistiu em habilitar o
@@ -114,7 +111,7 @@ Aplicativos SPA introduzem outros desafios, por exemplo,
 o botão de voltar perde sua utilização visto que não se está
 trafegando de uma página a outra de fato. HTML5 provê uma API em
 JavaScript para manipular o histórico que pode resolver este problema;
-não obstante, no protótipo não adicionamos esta funcionalidade pois
+entretanto, no protótipo não adicionamos esta funcionalidade pois
 a quantidade de telas é realmente baixa e os benefícios introduzidos
 seriam pequenos.
 
@@ -124,14 +121,13 @@ recursos é mostrada em seguida. O objetivo desta tela é não deixar
 o usuário sem feedback enquanto os recursos necessários para a
 utilização do jogo não estão disponíveis. Todavia, o carregamento
 é realmente rápido e o usuário, a não ser que dependa de uma rede
-muito lenta, geralmente não vê a tela. No final do carregamento de
-todos os recursos é disparado o evento \textit{window.onload} neste
-momento carrega-se a div da partida e dá-se início a mesma.
-
+muito lenta, geralmente não vê a tela. No final do carregamento
+de todos os recursos é disparado o evento \textit{window.onload}
+neste momento carrega-se a div da partida e dá-se início a mesma.
 Durante esta fase do desenvolvimento também foram adicionados
 \textit{listeners} aos demais elementos interativos do jogo, como
 clicar nas configurações e nos botões de certo e errado da página
-principal. Deixando a página  pronta para receber a funcionalidade 
+principal. Deixando a página pronta para receber a funcionalidade
 propriamente dita.
 
 Com esqueleto da aplicação definido foi introduzido a lógica
@@ -171,10 +167,18 @@ parseInt(
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{board.png}
+    \includegraphics[height=10cm]{board.png}
 	\caption{Interface do jogo com equação sendo apresentada}
     \label{fig:gameScreen}
 \end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=9cm]{board-desktop.png}
+	\caption{Interface do jogo com equação sendo apresentada no desktop 1440x900}
+    \label{fig:gameScreen}
+\end{figure}
+
 
 A construção da classe \textit{Match} disponibilizou o comportamento
 principal do jogo; entretanto, nesta etapa não havia um gerador de
@@ -201,10 +205,9 @@ informações em Local Storage. A figura \ref{fig:placar} demostra
 as informações do resultado de uma partida bem como a posição do
 ranking.
 
-%get a better image with better alignment
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{score.png}
+    \includegraphics[height=10cm]{score.png}
 	\caption{Resultado de uma partida}
     \label{fig:placar}
 \end{figure}
@@ -223,7 +226,7 @@ jogo.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{settings.png}
+    \includegraphics[height=10cm]{settings.png}
 	\caption{Configurações do jogo}
     \label{fig:configurations}
 \end{figure}
@@ -276,7 +279,7 @@ partida.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{countdown.png}
+    \includegraphics[height=10cm]{countdown.png}
 	\caption{Contador em Canvas}
     \label{fig:counter}
 \end{figure}
@@ -304,9 +307,9 @@ problemas de conflitos de nomes não aconteçam.
 
 Ao final do desenvolvimento foi feita a integração de Grunt com
 plugins de minificação do JavaScript e CSS \footnote{Para mais
-informações sobre o Grunt veja os apêndices}. O grunt foi configurado 
+informações sobre o Grunt veja os apêndices}. O grunt foi configurado
 para disponibilizar a aplicação para distribuição dentro do diretório
-\textit{dist/web}. 
+\textit{dist/web}.
 
 Após de a disponibilização Web estar funcionando, foi feita a
 integração para o PhoneGap build. Para tanto foi utilizado um makefile

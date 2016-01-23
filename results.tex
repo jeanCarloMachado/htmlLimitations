@@ -661,6 +661,7 @@ existindo suporte nativo ou ele sendo incompleto e com limitações,
 na vasta maioria dos casos, é possível utilizar tecnologias da Web
 direcionadas para o desenvolvimento de jogos.
 
+\begin{table}
 \begin{tabular}{ |p{2cm}|p{5cm}|p{2cm}|  }
 \hline
 Limitação & Descrição & Existe solução ou contorno? \\ 
@@ -675,7 +676,9 @@ Limitação & Descrição & Existe solução ou contorno? \\
 \Cref{limitation:complexBuild} & Requirimento de diversos passos para testar ou disponibilizar aplicações triviais & Sim  \\
 \hline
 \end{tabular}
+\end{table}
 \newpage
+\begin{table}
 \begin{tabular}{ |p{2cm}|p{5cm}|p{2cm}|  }
 \hline
 \Cref{limitation:passCompleteObjectsOnSockets} & Impossibilidade de passar objetos completos em WebSockets & Parcial \\
@@ -688,7 +691,9 @@ Limitação & Descrição & Existe solução ou contorno? \\
 \Cref{limitation:svgDomPerformance} & Problemas de performance em arquivos SVG muito grandes & Não \\
 \hline
 \end{tabular}
+\end{table}
 \newpage
+\begin{table}
 \begin{tabular}{ |p{2cm}|p{5cm}|p{2cm}|  }
 \hline
 \Cref{limitation:noCanvasIntegration} & A integração do Canvas com as demais tecnologias da Web é pobre & Não \\
@@ -702,7 +707,9 @@ Limitação & Descrição & Existe solução ou contorno? \\
 \Cref{limitation:noEffectsOnVideo} & Não é possível aplicar shaders diretamente em vídeo & Pode-se contornar este problema importando o vídeo para um contexto de Canvas  \\
 \hline
 \end{tabular}
+\end{table}
 \newpage
+\begin{table}
 \begin{tabular}{ |p{2cm}|p{5cm}|p{2cm}|  }
 \hline
 \Cref{limitation:videoFullscreenControl} & Falta de forma padronizada de controlar o modo tela cheia para vídeos & \\
@@ -716,15 +723,16 @@ Limitação & Descrição & Existe solução ou contorno? \\
 \Cref{limitation:indexedDbNoLike} & Não é possível realizar buscas em texto com o IndexedDB & Não \\
 \Cref{limitation:noErrorMessagesOffline} & Erros na configuração do manifesto offline não contém mensagens descritivas 0& Não \\
 \Cref{limitation:orientationIsntReady} & A implementação da API de orientação é divergente entre os navegadores & Sim \\
+\Cref{limitation:checkResourcesOnlyOnJavascrit} & Checagem de recursos só por JavaScript força implementação de markup em scripts & Não \\
+\Cref{limitation:noCanvas2DIsnpectorOnipresent} & Não existe inspetor Canvas 2D para navegadores multiplataforma & Parcial \\
+\Cref{limitation:multiTouch} & Scroll juntamente com outros gestos não funciona corretamente na maioria dos navegadores & Sim \\
 \hline
 \end{tabular}
+\end{table}
 \newpage
 \begin{table}
 \begin{tabular}{ |p{2cm}|p{5cm}|p{2cm}|  }
 \hline
-\Cref{limitation:checkResourcesOnlyOnJavascrit} & Checagem de recursos só por JavaScript força implementação de markup em scripts & Não \\
-\Cref{limitation:noCanvas2DIsnpectorOnipresent} & Não existe inspetor Canvas 2D para navegadores multiplataforma & Parcial \\
-\Cref{limitation:multiTouch} & Scroll juntamente com outros gestos não funciona corretamente na maioria dos navegadores & Sim \\
 \Cref{limitation:gamepadObject} & Não existe forma padronizada de detectar a entrada e saída de controles nos navegadores & Não \\
 \Cref{limitation:desktopIcon} & Não existe forma padronizada de adicionar ícones de aplicativos Web a área de trabaho & Não \\
 \Cref{limitation:monetizationDifferent} & Jogos exclusivamente Web sentem dificuldade em monetizar jogos da forma convencional & Parcial \\
