@@ -79,6 +79,7 @@ check gwt reference
 No final do 2.2.1 existem parágrafos muito pequenos. Tenta juntar para fazer parágrafos maiores.
 Precisa revisar o português. Existem erros ao longo do trabalho.
 Tu fala em "universo do game", mas ainda não citou a palavra "game".
+Fix broken references
 
 #TODO
 Resumo: deixar para revisar após o término do trabalho
@@ -86,7 +87,6 @@ Quando precisar o mesmo autor várias vezes, como no 2.1.1, tu pode utilizar "de
  o 2.3 tu explica o que é Open Web, mas não existe nenhuma definição de Web. Talvez seja interessante explicar tudo isso ainda antes de definir jogos, porque tu utiliza uma definição chamada "Jogos Web".
  talvez a gente tenha que enxugar um pouco o texto.. a escrita acabou ficando muito extensa
 talvez seja interessante enxugar, principalmente na parte da revisão bibliográfica de coisas mais básicas como HTML e JavaScript geralmente a banca não gosta quando tem muita revisão de coisas básicas
-Fix broken references
 
 #OnDelivery
 Remove drafts tag
