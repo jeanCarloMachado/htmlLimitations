@@ -1,9 +1,7 @@
 all: pdf
 
 pdf:
-	pdflatex tcc.tex
 	bibtex tcc ; exit 0
-	pdflatex tcc.tex
 	pdflatex tcc.tex
 	zathura tcc.pdf
 
