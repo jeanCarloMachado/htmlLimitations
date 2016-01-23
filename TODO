@@ -65,47 +65,43 @@ Check sections cases
 # Capítulo 2
 * Melhor mudar o "2.1 Jogos" para "2.1 Jogos Digitais", já que tu não fala de jogos em geral.
 * Ainda existem várias referências que estão fora do padrão, como a da página da contextualização "JANISZEWSWI (2014) afirma que [...]"
+Check page numbering
+Colocar os nomes nas tables (chamar de Quadro e dar um título)
+* Cuida com o uso de "não obstante". Diversos parágrafos teus começam com isso. Procura alternativas.
+* Os títulos devem ser todos em caixa alta. Um dos títulos com problema é o 2.2.1.
 
 
 #TODO
 
+Adjust countdown image
+Colocar prints de como o protótipo fica em outras resoluções
 Write about the new full screen api https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API#Things_your_users_want_to_know
 Talka about Electron
 Search about quircks mode
-Colocar prints de como o protótipo fica em outras resoluções
 Write about the canvas to the prototype
-see Lemes to more on game engineering
 Talk about ios limitation on publishing and deploying apps (the time length)
 Increment appendices
-Adjust countdown image
+**Problema** Vamos ter que revisar o teu problema. Basicamente, ele deve ser uma pergunta que tu tenta responder com o teu trabalho. Por exemplo: "A disposição e grau de organização interna da família carente influencia na conduta e marginalização do menor?"
+* "Quais as limitações são **comuns desenvolvimento** de jogos em HTML5?"
 Falar sobre a falta de coesão entre os tipos de JavaScript, alguns são nodelists outros são arrays, etc
 Se comparado com jQuery as API's de JavaScript são muito mais verbosas
 A API do jQuery é também mais permissiva, se um elmento não eixste não vai ser lançado erro, já no JavaScript sim
 Print
 1 - vai ser importante tu anexar um CD/DVD com o código-fonte do software. geralmente a banca gosta de olhar
 Listar especificametne os objetivos específicos e não genericamente como está agora.
-Colocar os nomes nas tables (chamar de Quadro e dar um título)
  talvez a gente tenha que enxugar um pouco o texto.. a escrita acabou ficando muito extensa
-talvez seja interessante enxugar, principalmente na parte da revisão bibliográfica de coisas mais básicas como HTML e JavaScript
-geralmente a banca não gosta quando tem muita revisão de coisas básicas
-Generate APK with the latest version of the prototype
-Check page numbering
+talvez seja interessante enxugar, principalmente na parte da revisão bibliográfica de coisas mais básicas como HTML e JavaScript geralmente a banca não gosta quando tem muita revisão de coisas básicas
 check gwt reference
 * Precisa revisar o português. Existem erros ao longo do trabalho.
-* Cuida com o uso de "não obstante". Diversos parágrafos teus começam com isso. Procura alternativas.
 * Resumo: deixar para revisar após o término do trabalho
-**Problema** Vamos ter que revisar o teu problema. Basicamente, ele deve ser uma pergunta que tu tenta responder com o teu trabalho. Por exemplo: "A disposição e grau de organização interna da família carente influencia na conduta e marginalização do menor?"
-* "Quais as limitações são **comuns desenvolvimento** de jogos em HTML5?"
 * Tu fala em "universo do game", mas ainda não citou a palavra "game".
 * Quando precisar o mesmo autor várias vezes, como no 2.1.1, tu pode utilizar "de acordo com o(s) autor(es)" ou "ainda de acordo com o(s) autor(es)". Pode também utilizer a citação com (Idem)
-* Os títulos devem ser todos em caixa alta. Um dos títulos com problema é o 2.2.1.
 * Em uma citação de VAHATUPA, 2014 há um caractere estranho no PDF. Verifica isso. (p. 8)
+* Na página 11 tem o mesmo problema de caractere estranho que eu comentei.
 * No final do 2.2.1 existem parágrafos muito pequenos. Tenta juntar para fazer parágrafos maiores.
 * No 2.3 tu explica o que é Open Web, mas não existe nenhuma definição de Web. Talvez seja interessante explicar tudo isso ainda antes de definir jogos, porque tu utiliza uma definição chamada "Jogos Web".
-* Na página 11 tem o mesmo problema de caractere estranho que eu comentei.
-
-
 
 #FUTURE
 
 Iniciar a escrita da apresetação
+Generate APK with the latest version of the prototype
