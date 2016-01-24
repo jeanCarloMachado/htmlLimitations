@@ -253,6 +253,8 @@ especificações.
 %}}}
 \section{Web}
 %{{{
+Berners LEE
+A Web se tornou importante pois juntou hyperconteúdo com a internet.
 
 \subsection{Open Web}
 
@@ -1963,14 +1965,13 @@ híbridos. Dessa forma é possível visualizar a aplicação dentro
 Google Chrome do computador e utilizar as já mencionadas tecnologias do
 DevTools.
 
-O DevTools costumava permitir depuração do elemento canvas.
-Sobre ele \citet{html5mostwanted} mencionou: com o inspetor WebGl é possível
+O DevTools costumava permitir depuração do elemento canvas. Sobre ele
+\citet{html5mostwanted} mencionou: com o inspetor WebGl é possível
 conferir os estados dos buffers, informações de texturas, frames
-individuais e outras informações úteis. Todos os recursos mencionados
-acima estão disponíveis tanto para o contexto 2D quanto o 3D do canvas
-(WebGL). Infelizmente este recurso foi removido e atualmente inspeção 
-de canvas é um terreno escaço no ambiente Web, mais detalhes sobre
-o problema dos depuradores canvas serão tratados nos resultados.
+individuais e outras informações úteis. Infelizmente este recurso
+foi removido e atualmente inspeção de canvas é um terreno escaço
+no ambiente Web, mais detalhes sobre o problema dos depuradores canvas
+serão tratados nos resultados.
 
 Especificamente para WebGl existe o plugin independente WebGL Inspector.
 A ferramenta permite fazer inspeção da execução de métodos
@@ -1985,7 +1986,7 @@ Source Maps é uma tecnologia que permite mapear códigos fontes
 minificados para seus respectivos originais. Este recurso é
 interessante pois permite que os desenvolvedores visualizem o código
 fonte em sua versão original, legível e fácil de depurar, enquanto
-entregam ao usuário final a versão minificada, optimizada para
+entregam ao usuário final a versão minificada, otimizada para
 performance. Para o usuário final não há diferença pois Source Maps
 são carregados apenas se as ferramentas de desenvolvimento estão
 abertas e com a funcionalidade de Source Maps habilitada.
@@ -1999,10 +2000,8 @@ como Google Chrome (DevTools) e Firefox.
 A especificação prevê a existência de um arquivo \textit{.map} o
 qual contém o mapeamento dos arquivos fonte e outros metadados. Este
 arquivo é referenciado pelos arquivos minificados de modo a permitirem
-o navegador a realizar o mapeamento.
-
-É possível informar o navegador a localização do arquivo de metadados
-seguindo a seguinte sintaxe.
+o navegador a realizar o mapeamento. É possível informar o navegador a
+localização do arquivo de metadados seguindo a seguinte sintaxe:
 
 \begin{verbatim}
 //# sourceMappingURL=/path/to/script.JavaScript.map
@@ -2014,14 +2013,14 @@ Ou através de cabeçalhos HTTP como demostrado abaixo.
 X-SourceMap: /path/to/script.JavaScript.map
 \end{verbatim}
 
-Para os arquivos de Source Maps é possível utilizar ferramentas
-especializadas ou integrá-los ao processo de \textit{build} como Grunt ou Gulp
-\footnote{A biblioteca \url{https://github.com/mishoo/UglifyJS2} é uma
-ferramenta de minificação capaz de gerar Source Maps}.
+Para criar arquivos de Source Maps é possível utilizar ferramentas
+especializadas ou integrá-los ao processo de \textit{build} como Grunt
+ou Gulp. A biblioteca \url{https://github.com/mishoo/UglifyJS2} é uma
+ferramenta de minificação capaz de gerar Source Maps. Após ter o jogo
+ter sido depurado e seus erros minimizados, pode-se disponibilizar para
+ser consumido por seus usuários finais.
 
-Após ter o jogo ter sido depurado e seus erros minimizados, pode-se
-disponibilizar para ser consumido por seus usuários finais.
-Abaixo será abordada algumas formas de disponibilizar jogos Web em
+Abaixo serão abordadas algumas formas de disponibilizar jogos Web em
 ambientes multiplataforma.
 %}}}
 %}}}
@@ -2043,7 +2042,7 @@ O PhoneGap é uma tecnologia que permite encapsular um código em
 HTML e disponibilizá-lo nativamente. Não obstante, para empacotar
 os aplicativos localmente é necessária configuração substancial
 e só é possível empacotar para IOS em um computador da Apple.
-Alternativamente o PhoneGap disponibiliza um serviço de empacotamento
+Alternativamente, o PhoneGap disponibiliza um serviço de empacotamento
 na nuvem que soluciona estes problemas o PhoneGap Build.
 
 Através do PhoneGap Build pode-se carregar um arquivo zip, seguindo
@@ -2052,7 +2051,14 @@ ferramentas da web, que o PhoneGap Build se responsabiliza por
 empacotá-los nos formatos requeridos para serem instalados em Android,
 IOS e Windows Phone.
 
-\citet{publishHtml5} descreve os passos que são feitos pelo PhoneGap para 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=15cm]{phonegapBuild.png}
+    \caption{Protótipo no PhoneGap Build}
+    \source{https://build.phonegap.com/apps}
+\end{figure}
+
+\citet{publishHtml5} descreve os passos que são feitos pelo PhoneGap Build para
 disponibilizar a aplicação nativamente.
 
 \begin{itemize}
@@ -2066,4 +2072,11 @@ No endereço \url{https://github.com/phonegap/phonegap-start}
 encontra-se um template no formato requerido pelo PhoneGap Build que
 pode ser utilizado para começar aplicações que serão servidas
 através da solução.
+
+Além do PhoneGap existem outras formas de empacotar aplicações
+para múltiplas plataformas. Por exemplo, através de plataformas de
+desenvolvimento como o Sencha Touch e Ionic, AppGyver ou Xamarin.
+Entretanto, estas plataformas muitas vezes utilizam o PhoneGap
+internamente ou, apesar de criar aplicações para Web, não comportam o
+desenvolvimento com tecnologias da Web.
 %}}}

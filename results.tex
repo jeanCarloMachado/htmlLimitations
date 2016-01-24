@@ -13,19 +13,19 @@ problemas. Uma forma de interpretar limitações é como sendo problemas
 que impedem algo seja feito. Para ajudar na distinção os
 problemas encontrados foram descritos como contornáveis ou não.
 
-A abaixo constam os problemas e limitações do HTML5 aplicáveis,
-mesmo que não exclusivamente, aos jogos encontradas durante a pesquisa
+A abaixo constam os problemas e limitações do HTML5, aplicáveis,
+mesmo que não exclusivamente, aos jogos encontrados durante a pesquisa
 e concepção do protótipo. Quando possível, buscou-se apresentar
 as limitações na mesma ordem das tecnologias estudadas na revisão
 bibliográfica. Não obstante, algumas limitaçãos foram tratadas em
 partes separadas visto que se aplicam a várias das tecnologias da
-Web. Para melhor organizá-las, juntamente ao texto, foram adicionados
+Web. Para melhor organizá-las junto ao texto, foram adicionados
 códigos as limitações que seguem o seguinte padrão: LMT + número da
 limitação.
 
 \section{HTML}
 
-\citet{crossPlatformMobileGame} afirma que (\limitation{multipleTesting}):
+\noindent\citet{crossPlatformMobileGame} afirma que (\limitation{multipleTesting}):
 \begin{quote}
 Enquanto o HTML é desenvolvido muitas das funcionalidades
 disponibilizadas são testadas em um pequeno conjunto de navegadores
@@ -48,7 +48,7 @@ O Crosswalk funciona disponibilizando, juntamente com a aplicação,
 uma versão recente do Chromium que será responsável por rodar a
 aplicação. Desse modo todos os dispositivos que utilizam o pacote
 gerado pelo Crosswalk vão rodar na mesma versão de navegador. Não
-obstante, o Crosswalk só é suportado para Android \footnote{Na
+obstante, o Crosswalk só é suportado para plataforma Android \footnote{Na
 seção \ref{crosswalk} dos Apêndices o Crosswalk é tratado com mais
 detalhes}.
 
@@ -57,7 +57,7 @@ detalhes}.
 É muito custoso desenvolver interfaces que pareçam nativas
 para cada dispositivo sem a utilização de plugins e outras
 ferramentas auxiliares. No protótipo foi utilizada uma estilização
-simples, a qual pode se parecer interessante na Web. Conquanto, nos
+simples a qual pode ser interessante na Web. Conquanto, nos
 dispositivos móveis, o layout criado para o jogo é muito diferente
 da experiência normal destes aparelhos. Sendo que cada sistema
 operacional conta com regras próprias para definir a experiência
@@ -76,17 +76,17 @@ com scroll, botões e transições com uma aparência nativa de forma
 relativamente fácil \autocite{publishHtml5}.
 
 Em alguns casos o tamanho das telas pode ser um fator limitante,
-como, por exemplo, jogos de estratégia. Estes jogos geralmente
+como por exemplo em jogos de estratégia. Estes jogos geralmente
 necessitam mostrar uma vasta quantidade de informações, neste
 contexto, jogadores com telas menores podem sair em desvantagem
 (\limitation{differentScreenSizesMayPutSomeUsersInDisvantage}).
 Em termos gerais, pode-se mitigar este problema utilizando design
 responsivo. Na perspectiva do desenvolvedor, pode-se lidar com
 múltiplos tamanhos de tela trabalhando com tamanhos relativos via
-CSS. Todavia, há casos, como o dos botões de certo e errado
-do protótipo, em que a proporções ficam exageradas. Nesses casos
+CSS. Todavia há casos, como o dos botões de certo e errado
+do protótipo, em que a proporções ficam exageradas. Nestas ocasiões,
 utilizar controles como o \textit{max-width} e \textit{min-width} é uma
-solução conveniente. Os botões de certo e errado tem uma proporção
+solução conveniente. No protótipo, os botões de certo e errado tem uma proporção
 de 40\% da tela. Em dispositivos móveis este valor é sensato, mas
 em desktops com grandes resoluções a largura fica exagerada. Para
 resolver este problema foi configurado via CSS que a largura dos botões
@@ -108,9 +108,9 @@ apêndices}.
 O JavaScript, por ser uma linguagem desenvolvida por consenso,
 tem um ciclo de vida de atualizações demorado; pois necessita
 que todos os consumidores da especificação entrem em acordo
-\limitation{jsSpecificationCycle}. Com a especificação pronta,
-outra fase demorada é a adoção das tecnologias nos navegadores,
-o site \url{https://kangax.github.io/compat-table/es6/} contém uma
+(\limitation{jsSpecificationCycle}). Com a especificação pronta
+outra fase demorada é a adoção das tecnologias nos navegadores.
+O site \url{https://kangax.github.io/compat-table/es6/} contém uma
 lista do suporte aos recursos do ECMAScript 6 nos motores JavaScript
 \limitation{jsImplementaionCycle}.
 
@@ -545,7 +545,7 @@ mas até a tecnologia não apareceu no navegador \autocite{firefoxCanvasDebug}.
 
 Atualmente a área de ferramentas para depuração do canvas 2D está
 parcialmente comprometida por não existir um plugin de terceiro
-onipresente nos navegadores como o WebGl Inspector ](\limitation{noCanvas2DIsnpectorOnipresent}).
+onipresente nos navegadores como o WebGl Inspector (\limitation{noCanvas2DIsnpectorOnipresent}).
 
 O projeto Canvas Interceptor é uma iniciativa para preencher
 esta demanda permitindo capturar alguns eventos do contexto 2D e

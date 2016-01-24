@@ -81,13 +81,13 @@ Precisa revisar o português. Existem erros ao longo do trabalho.
 Tu fala em "universo do game", mas ainda não citou a palavra "game".
 Fix broken references
 Quando precisar o mesmo autor várias vezes, como no 2.1.1, tu pode utilizar "de acordo com o(s) autor(es)" ou "ainda de acordo com o(s) autor(es)". Pode também utilizer a citação com (Idem)
+talvez a gente tenha que enxugar um pouco o texto.. a escrita acabou ficando muito extensa
+talvez seja interessante enxugar, principalmente na parte da revisão bibliográfica de coisas mais básicas como HTML e JavaScript geralmente a banca não gosta quando tem muita revisão de coisas básicas
 
 #TODO
-Review video in front
 Resumo: deixar para revisar após o término do trabalho
  o 2.3 tu explica o que é Open Web, mas não existe nenhuma definição de Web. Talvez seja interessante explicar tudo isso ainda antes de definir jogos, porque tu utiliza uma definição chamada "Jogos Web".
- talvez a gente tenha que enxugar um pouco o texto.. a escrita acabou ficando muito extensa
-talvez seja interessante enxugar, principalmente na parte da revisão bibliográfica de coisas mais básicas como HTML e JavaScript geralmente a banca não gosta quando tem muita revisão de coisas básicas
+Remove jQuery from dist files 
 
 #OnDelivery
 Remove drafts tag
@@ -97,7 +97,6 @@ Burn a CD with the code
 
 Talk about Electron
 Search about quircks mode
-Falar como algumas interações não se adaptam bem em várias palataformas sendo necessário disponibilizar interações diferenciadas. Tomando grande parte do tempo de desenvolvimento.
 Talk about apple deployment process.
 Write about the new full screen api https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API#Things_your_users_want_to_know
 Falar que first shooter ainda não é muito comum, os etilos são ainda parcialmente limitados (refletir)

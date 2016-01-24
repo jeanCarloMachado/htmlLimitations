@@ -7,7 +7,7 @@ diagramas entre outros aspectos serão tratados aqui.
 Para a análise prática das limitações foi escolhido um jogo de
 matemática simples. Consistindo na geração de equações com uma
 resposta candidata. Cabe ao usuário informar se o resultado apontado
-pelo jogo está correto ou não. A cada resposta dada o nível de
+pelo jogo está correto ou não. A cada resposta dada, o nível de
 complexidade da equação cresce. O tempo é um fator determinante
 no resultado do jogo pois quão mais rápido o jogador acertar se a
 afirmação está correta ou não mais pontos ele receberá. Esta
@@ -15,7 +15,7 @@ categoria de jogo foi selecionada por ter profundidade, oferecendo a
 possibilidade de explorar diversos recursos do HTML, e criar melhorias
 incrementais. E também por oferecer uma dificuldade técnica não
 tão desafiadora visto que não disponho de experiência profunda no
-desenvolvimento de jogos em HTML.
+desenvolvimento de jogos em geral.
 
 Jogos como o Math Workout e o Countdown para Android tem uma temática
 similar. Conquanto, o Math Workout não apresenta a resposta, sendo
@@ -26,9 +26,18 @@ números e operadores.
 
 O jogo desenvolvido para o protótipo parece ter uma melhor jogabilidade
 em dispositivos móveis que ambos os jogos acima citados pois não
-requer a presença de um teclado numérico. Os botões de verdadeiro
-ou falso contém todas as possibilidades de interação com o jogo. A
-figura \ref{fig:gameScreen} demonstra a interface contendo os botões descritos.
+requer a presença de um teclado numérico. Os botões de verdadeiro ou
+falso contém todas as possibilidades de interação com a aplicação.
+A figura \ref{fig:gameScreen} demonstra a interface contendo os botões
+descritos.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=10cm]{board.png}
+	\caption{Interface do jogo com equação sendo apresentada}
+    \label{fig:gameScreen}
+\end{figure}
+
 
 Abaixo estão detalhados os requisitos que uma mecânica como a descrita
 acima deve prover.
@@ -43,7 +52,7 @@ As funcionalidades que o sistema deve apresentar estão descritas abaixo.
 
 \begin{itemize}
     \item O sistema deve prover equações matemáticas de dificuldade crescente para o usuário informar se estão corretas ou não;
-    \item O sistema deve pontuar as respostas dadas com maior agilidade com uma pontuação maior, que as respondidas com menor agilidade;
+    \item O sistema deve pontuar as respostas dadas com maior agilidade com uma pontuação maior que as respondidas com menor agilidade;
     \item O sistema deve apresentar a colocação da partida do usuário em comparativo com seu histórico.
 \end{itemize}
 
@@ -83,7 +92,7 @@ requerem integração especial.
 O primeiro passo foi a criação do documento HTML, foram utilizados
 elementos \textit{div} para simbolizar telas do jogo. Conter todas as
 telas em único HTML caracteriza o jogo como uma aplicação de uma
-única página (\textit{Single Page Application}). Alternativamente
+única página (\textit{Single Page Application}). Alternativamente,
 poderia se depender de um servidor para mandar as páginas prontas,
 mas isso distribui a complexidade do sistema para tecnologias do
 lado do servidor, distanciando-se da proposta de um jogo construído
@@ -99,6 +108,15 @@ Sem a ajuda de bibliotecas especializadas o processo de criação da
 interface não é trivial. Apesar dela ser simples, fazer os elementos
 se alinharem em diversos tamanhos de telas não é fácil e pode se
 tornar um problema substancial para interfaces realmente complexas.
+A figura \ref{fig:gameScreen} e \ref{fig:gameScreenDesktop} apresentam
+a tela principal do jogo em um dispositivo móvel e em um desktop, respectivamente.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=9cm]{board-desktop.png}
+	\caption{Interface do jogo com equação sendo apresentada no desktop 1440x900}
+    \label{fig:gameScreenDesktop}
+\end{figure}
 
 Após a concepção do CSS deu-se início ao desenvolvimento da lógica
 das páginas em JavaScript. O primeiro passo consistiu em habilitar o
@@ -135,15 +153,16 @@ de negócio. A figura \ref{fig:simpleDiagram} apresenta do a
 relação entre as classes do jogo. De toda a regra do jogo, a classe
 \textit{Match} é a mais importante. Ela simboliza uma partida dentro
 do jogo, é na classe \textit{Match} que as informações de quantas
-equações existem, quantas foram acertadas e o tempo total da partida
-bem como a pontuação atual do usuário. O propósito da classe
-\textit{Match} é iterar a cada pergunta e esperar por uma resposta.
-Quando a resposta é dada a classe \textit{Match} computa se a resposta
-está correta ou não e o tempo que levou para chegar ao resultado.
-Quando não existem mais perguntas para serem processadas é lançado
-um evento de final de partida onde o resultado pode ser processado
-pelas demais classes do jogo. A figura \ref{fig:gameScreen} demostra o
-mecanismo da classe \textit{Match} integrado ao jogo.
+equações existem, quantas foram acertadas, o tempo total da partida
+bem como a pontuação atual do usuário são armazenadas. A cada
+iteração do laço do jogo uma nova pergunta é dada pela classe
+\textit{Match} e espera-se por uma resposta. Quando a resposta é dada
+a classe \textit{Match} computa se ela está correta ou não e
+o tempo que levou para chegar ao resultado. Quando não existem mais
+perguntas para serem processadas é lançado um evento de final de
+partida onde o resultado pode ser processado pelas demais classes do
+jogo. A figura \ref{fig:gameScreen} demostra o mecanismo da classe
+\textit{Match} integrado ao jogo.
 
 O cálculo da pontuação se dá por uma operação matemática simples.
 Ao final de uma partida é computado o total de questões acertadas
@@ -165,20 +184,6 @@ parseInt(
 \label{fig:punctuationCalculation}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[height=10cm]{board.png}
-	\caption{Interface do jogo com equação sendo apresentada}
-    \label{fig:gameScreen}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[height=9cm]{board-desktop.png}
-	\caption{Interface do jogo com equação sendo apresentada no desktop 1440x900}
-    \label{fig:gameScreen}
-\end{figure}
-
 
 A construção da classe \textit{Match} disponibilizou o comportamento
 principal do jogo; entretanto, nesta etapa não havia um gerador de
@@ -187,7 +192,7 @@ preestabelecidas que eram selecionadas aleatoriamente a cada turno.
 Adiar a construção do gerador de equações se provou uma boa
 escolha pois possibilitou que o desenvolvimento se focasse em outros
 aspectos importantes como a elaboração do laço do jogo, ranking,
-configurações entre outros.
+configurações, entre outros.
 
 O ranking serve para armazenar o resultado de cada partida do jogador
 possibilitando uma percepção de histórico de performance. Os
@@ -218,7 +223,7 @@ o jogo. Cada campo editável na tela de configurações contém
 \textit{listeners} prontos para registrar no objeto \textit{Settings}
 cada mudança que ocorrer em seus estados. Os objetos que utilizam estas
 configurações também o fazem através do objeto Settings, nunca
-acessando configurações diretamente em Web Storage, dessa forma a
+acessando configurações diretamente em Web Storage. Dessa forma a
 validade das configurações é garantida e a migração para uma forma
 de armazenamento diferente é possível com relativa facilidade.
 A figura \ref{fig:configurations} demonstra a tela de configurações do 
@@ -239,7 +244,7 @@ O objeto \textit{Statement}, é responsável por armazenar as
 informações de uma equação, à dizer: a afirmação sendo feita
 e se seu resultado está correto ou não (a reposta da afirmação).
 O objeto \textit{StatementGenerator} é responsável por gerar
-instâncias da classe \textit{Statements}.
+instâncias da classe \textit{Statement}.
 
 A classe \textit{StatementGenerator} conta com um método
 \textit{getStatement} que realiza o processamento para gerar um novo
@@ -251,9 +256,9 @@ internamente no \textit{StatementGenerator} para selecionar qual
 operador será utilizado e o tamanho do multiplicador dos números
 que compõem as equações. Para colocar claramente: as equações
 são geradas através da randomização de valores e operadores (com
-suas respectivas dificuldades processadas), seguido da execução da
+suas respectivas dificuldades processadas). Segue-se com a execução da
 equação para determinar seu resultado e a geração, em 50\% dos
-casos, de um valor errado, de modo que a resposta não seja sempre
+casos, de um valor errado de modo que a resposta não seja sempre
 correta.
 
 O objeto \textit{StatementGenerator} reside como membro de classe de
@@ -287,15 +292,25 @@ partida.
 Para melhorar a experiência em desktops foram adicionados controles de
 teclado além dos já presentes botões na interface, possibilitando que
 o usuário utilize o teclado além do mouse. Quando o usuário utilizar
-a seta para esquerda ou direita os botões Sim ou Não respectivamente,
+a seta para esquerda ou direita os botões Sim ou Não, respectivamente,
 são clicados através de JavaScript. Simular o clique ao invés ao
 invés acionar duas vezes o tratamento das escolhas de resposta foi uma boa
 estratégia pois centralizou o tratamento evitando duplicação de código.
 
-No mobile, com intuito de melhorar a experiência, foi adicionada
-vibração para as respostas erradas. A API de vibração é trivial e sua 
-utilização possibilita uma experiência mais profunda com a aplicação, sendo 
-uma adição de bom custo/beneficio.
+Nos dispositivos móveis, com intuito de melhorar a experiência, foram
+adicionadas vibrações para as respostas erradas. A API de vibração
+é trivial e sua utilização possibilita uma experiência mais
+profunda com a aplicação, sendo uma adição de bom custo/benefício.
+Se o usuário desejar utilizar o mouse no desktop, foram adicionadas
+transformações do CSS quando o ponteiro se encontra acima dos
+botões. Para melhorar o feedback visual, os botões de certo e errado
+tornam-se verdes ou vermelhos dependendo se o usuário acertou ou não
+a questão dada. No quesito feedback auditivo foram adicionados sons
+em a API de áudio para as respostas corretas e incorretas. Com estes
+detalhes pormenorizados, fica visível que grande parte do tempo de
+desenvolvimento de jogos multiplataforma é utilizado em fornecer uma
+experiencia rica em interatividade, que faça uso das peculiaridades de
+cada plataforma.
 
 Durante o desenvolvimento foram utilizadas funções imediatamente
 invocadas para declarar as classes. Isso se demonstrou uma boa forma
@@ -305,19 +320,16 @@ um meta objeto para encapsular os demais, similar ao conceito de
 \textit{namespaces}, neste caso utilizei o nome MyMath garantindo que
 problemas de conflitos de nomes não aconteçam.
 
-Ao final do desenvolvimento foi feita a integração de Grunt com
-plugins de minificação do JavaScript e CSS \footnote{Para mais
+Ao final do desenvolvimento foi feita a integração do Grunt com
+plugins de minificação de JavaScript e CSS \footnote{Para mais
 informações sobre o Grunt veja os apêndices}. O grunt foi configurado
-para disponibilizar a aplicação para distribuição dentro do diretório
-\textit{dist/web}.
-
-Após de a disponibilização Web estar funcionando, foi feita a
-integração para o PhoneGap build. Para tanto foi utilizado um makefile
-que simplesmente copia os arquivos de distribuição da Web, gerados
-pelo grunt, e o arquivo de metadados do Phonegap Build e cria a árvore
-de arquivos padronizada que o phonegp build requer.
-
-%Para melhor a experiencia do usuário foram adicionados sons nos botẽos utilizando a Api de audio em JavaScript.
+para disponibilizar a aplicação para distribuição dentro do
+diretório \textit{dist/web}. Depois de a disponibilização Web estar
+funcionando, foi feita a integração para o PhoneGap Build. Para
+tanto foi utilizado um makefile que simplesmente copia os arquivos de
+distribuição da Web, gerados pelo grunt, e o arquivo de metadados do
+Phonegap Build, e cria a árvore de arquivos padronizada que o Phonegap 
+Build requer.
 
 \subsection{Performance}
 
@@ -332,8 +344,8 @@ de download ficou em 1.1 segundos. Uma diferença substancial dada a
 quantidade pequena de arquivos minificados 8 arquivos JavaScript e um
 arquivo CSS.
 
-A seguir serão apresentadas as limitações do HTML encontradas durante
-o desenvolvimento do protótipo e pesquisa relacionada.
+A seguir serão tratadas algumas otimizações para jogos descobertas
+através do desenvolvimento e pesquisa bibliográfica deste trabalho.
 
 \section{Otimizações para jogos} \label{optimizations}
 %{{{
@@ -398,15 +410,16 @@ contexto de jogos.
 Um recurso interessante do JavaScript é seu modo estrito, este faz
 um conjunto de modificação na semântica do interpretador de modo
 que alguns recursos suportados, mas propensos a problemas, sejam
-desabilitados. Um exemplo é variáveis não prefixadas pela palavra
-chave \textit{var}.
+desabilitados. Um exemplo de sintaxe válida propensa erros a é a
+utilização variáveis não prefixadas pela palavra chave \textit{var},
+que torna as variáveis em variáveis globais.
 
-O modo estrito pode ser entendido como uma variante mais rígida
-do JavaScript. O modo restrito pode ser habilitado utilizando o
-termo \textit{"use strict";} nos cabeçalhos de arquivos ou funções
-permitindo que código não estrito trabalhe em conjunto com código
-estrito, característica conveniente para a utilização em sistemas
-legados.
+O modo estrito pode ser entendido como uma variante mais rígida do
+JavaScript. Este mecanismo pode ser habilitado utilizando o termo
+\textit{"use strict;"} nos cabeçalhos de arquivos ou funções .
+Este controle localizado permite que código não estrito trabalhe
+em conjunto com código estrito, característica conveniente para a
+utilização em sistemas legados.
 
 \subsubsection{Funções imediatamente invocadas}
 
@@ -430,7 +443,7 @@ invocadas IFE (\textit{Immediatly invoked function expression}).
     })();
     window.bar();
 \end{verbatim}
-\caption{Exemplo de utilização de funções imediatamente invocadas}
+\caption{Exemplo de função imediatamente invocada.}
 \label{fig:iife}
 \end{figure}
 
@@ -441,10 +454,10 @@ conflitos de nomes e outros problemas relativos ao contexto global.
 
 Outro fator importante na construção de jogos em JavaScript é a
 otimização do laço do jogo. Para escrever o laço é possível
-utilizar as funções do JavaScript \textit{window.settimeout} ou
-\textit{window.setInterval}. Não obstante, a forma mais recomendada é
-utilizar o \textit{window.requestAnimationFrame}. Esta função reduz
-ou completamente para a execução do laço enquanto o usuário está
+utilizar as funções do JavaScript \textit{settimeout} ou
+\textit{setInterval}. Não obstante, a forma mais recomendada é
+utilizar a função \textit{requestAnimationFrame}. Esta função reduz
+ou completamente desabilita a execução do laço enquanto o usuário está
 em outra aba. Por conseguinte, o consumo de bateria é reduzido, uma
 característica importante para dispositivos móveis.
 
@@ -466,4 +479,7 @@ Nem todos os recursos necessitam ser pré carregados, mas uma impressão
 muito superiora é criada se os recursos estão imediatamente
 disponíveis quando uma nova fase é carregada \autocite[p. 39]{creatingFun}.
 %}}}
+
+A seguir serão apresentadas as limitações do HTML encontradas durante
+o desenvolvimento do protótipo e pesquisa relacionada.
 
