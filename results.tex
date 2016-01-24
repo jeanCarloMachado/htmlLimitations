@@ -339,7 +339,7 @@ placas gráficas com \textit{drivers} bloqueados por não funcionarem
 corretamente no Firefox \autocite[p.42]{3daps}.
 
 Além dos problemas citados, o suporte a especificação ainda é
-incompleto em vários navegadores \limitation{incompleteSupportWebgl}.
+incompleto em vários navegadores (\limitation{incompleteSupportWebgl}).
 CocoonJS é uma aplicativo híbrido que preenche a fraca implementação
 de WebGL nos dispositivos móveis possibilitando se desenvolver em
 WebGL. CocoonJS conta com suporte a dispositivos legados à partir do
@@ -353,9 +353,9 @@ de fundo dentro de um jogo. Não sendo adequada para efeitos sonoros
 ou necessidades flexíveis de áudio.
 
 Durante a concepção do protótipo foi utilizada a API de áudio, devido
-sua maior flexibilidade. Infelizmente, algumas vezes o som não é
+sua maior flexibilidade. Infelizmente algumas vezes o som não é
 executado ou demora até executar de modo de o que é executado ao mesmo
-tempo que o próximo som \limitation{soundAPIConflicts}.
+tempo que o próximo som (\limitation{soundAPIConflicts}).
 
 A experimentação do protótipo, relativo a API de áudio, confirmou
 as indicações de \citet{html5mostwanted} que afirma que a API de som
@@ -372,7 +372,7 @@ alternativas mais adequadas para a Web como o codec Opus, que oferece
 uma melhor relação entre taxa de compressão e qualidade.
 
 Além das restrições de codecs de áudio nos produtos da Apple,
-áudio especificamente no Safari do IOS contém alguns problemas
+áudio, especificamente no Safari do IOS, contém alguns problemas
 específicos. Por exemplo, não é possível trocar o volume
 através de JavaScript também não é possível tocar mais de um
 som ou vídeo simultaneamente \autocite{unsolvedMediaHtmlIssues}
@@ -383,7 +383,7 @@ som ou vídeo simultaneamente \autocite{unsolvedMediaHtmlIssues}
 O suporte a vídeo, apesar de estar melhorando, ainda é rudimentar.
 No Silverlight existem uma coleção de possibilidades como aplicar
 shaders diretamente no vídeo \autocite[p. 8]{researchOnHtml}
-\limitation{noEffectsOnVideo}. Não obstante, efeito similar
+(\limitation{noEffectsOnVideo}). Não obstante, efeito similar
 a shaders em vídeo é atingido através da importação de
 vídeo dentro de um contexto WebGL \footnote{O endereço
 \url{https://developer.Mozilla.org/en-US/docs/Web/API/WebGL_API/Tutoria
@@ -391,12 +391,12 @@ l/Animating_textures_in_WebGL} contém exemplos de como utilizar vídeos
 em um contexto WebGL} ou canvas 2D.
 
 Também não é possível controlar a entrada em tela cheia através de
-script pois é considerado uma violação de segurança. Entretanto,
-os navegadores tem a opção de deixar os usuários escolherem ver
-vídeos em tela cheia através de controles adicionais \autocite[p.
-68]{proHtml5} (\limitation{videoFullscreenControl}).
+scripts (\limitation{videoFullscreenControl}) pois é considerado uma
+violação de segurança. Entretanto, os navegadores tem a opção de
+deixar os usuários escolherem ver vídeos em tela cheia através de
+controles adicionais \autocite[p. 68]{proHtml5}.
 
-Assim como áudio o elemento \textit{video} sofre com problemas de
+Assim como áudio, o elemento \textit{video} sofre com problemas de
 codecs (\limitation{videoCodecs}), segundo \citet{html5Tradeoffs}:
 \begin{quote}
 O maior problema com as API's de áudio e de vídeo do HTML5 é
@@ -427,7 +427,7 @@ implementação, foi descontinuado. Apesar de depreciado o Web SQL ainda
 é usado por muitos desenvolvedores e mantido por alguns navegadores,
 todavia, os desenvolvedores que procedem desta maneira ficam à mercê
 dos caprichos dos navegadores não podendo contar com a força de um
-órgão regulador para manter a tecnologia. SQL seria interessante pois
+órgão regulador para suportar a tecnologia. SQL seria interessante pois
 muitos desenvolvedores tem experiência com este tipo de tecnologia e
 por SQL permitir filtragem e correlacionamento de dados de uma forma
 flexível e poderosa.
@@ -439,18 +439,18 @@ para determinado domínio, possivelmente comprometendo a experiência
 de determinada aplicação. Esta característica é muito diferente do
 que geralmente é oferecido em aplicações desktop, onde a aplicação
 determina o que precisa usar sem necessitar de consenso do usuário, que
-por sua vez, pode escolher usar os não a aplicação.
+por sua vez pode escolher usar os não a aplicação.
 
 \subsection{Web Storage}
 
-Muitos navegadores não permitem armazenar mais de 5M por domínio
+Muitos navegadores não permitem armazenar mais de 5MB por domínio
 em Web Storage, apesar da especificação permitir fazê-lo
 \autocite{gameAssetManagement} (\limitation{webStorageLimit}). Também
 não é possível saber quanto espaço já foi consumido pelo Web
 Storage (\limitation{webStorageQueryLimit}).
 
 Outra limitação do Web Storage é que todas as informações são
-guardadas como texto (\limitation{webStorageStringOnly}). Isso
+guardadas no formato texto (\limitation{webStorageStringOnly}). Isso
 força a converter os valores toda a vez que algo for armazenado ou
 recuperado \autocite{gameAssetManagement}. No protótipo isso não foi
 problemático pois não existe grande manipulação sobre os dados. Mas
@@ -463,9 +463,9 @@ Apesar de ser desenvolvido com objetivo de ser uma solução para
 todas as necessidades de armazenamento no Frontend IndexedDB ainda
 sofre algumas limitações. O comportamento em abas anônimas não
 está especificado e os resultados também variam de navegador para
-navegador \limitation{indexedDbAnonymousBehaviour}. Não é possível
-realizar buscas em textos, algo similar ao \textit{LIKE} do SQL
-\limitation{indexedDbNoLike}.
+navegador (\limitation{indexedDbAnonymousBehaviour}). Também não é
+possível realizar buscas em textos, algo similar ao \textit{LIKE} do
+SQL (\limitation{indexedDbNoLike}).
 
 Outro problema encontrado durante a pesquisa é que no Firefox existe
 uma pequena probabilidade de os dados se perderem. Isso se dá pois a
@@ -479,7 +479,7 @@ peculiaridade.
 
 Nos arquivos de cache via manifestos, quando o download falha, o
 navegador emite um evento mas não há indicação de qual problema
-aconteceu \limitation{noErrorMessagesOffline}. Isso pode tornar a
+aconteceu (\limitation{noErrorMessagesOffline}). Isso pode tornar a
 depuração ainda mais complicada que o usual \autocite{diveIntohtml}.
 Este problema aconteceu durante o desenvolvimento do protótipo e foi
 trabalhoso de depurar até descobrir que um arquivo estava faltando,
@@ -529,28 +529,27 @@ viável.
 \section{Debug}
 
 Com o depurador remoto do Google Chrome foi observado uma falta de
-sincronia nas taxas de atualização de imagem no computador. Os
+sincronia nas taxas de atualização da imagem no computador. Os
 efeitos do CSS não são bem apresentados sendo provavelmente difícil
 depurar animações. Em alguns casos quando a tela foi modificada
 substancialmente (com nas mudanças de tela) a mudança de estado no
 computador levou vários segundos para ser atualizada.
 
-Outro problema do depurar do Chrome é que não existe inspetor nativo
-de canvas. O inspetor de embutido do Google Chrome foi removido pois
-continha comportamentos indesejáveis para os desenvolvedores do
-navegador \autocite{canvasinspector}. Os desenvolvedores mencionaram
-criar uma extensão para a funcionalidade mas até o tempo de
-desenvolvimento deste trabalho não havia nenhuma disponível. A única
-alternativa viável até o momento é utilizar uma versão antiga do
-Chromium.
-
-O Firefox introduziu uma ferramenta de inspeção para o canvas 2D
-em uma Conferência de desenvolvimento de jogos em São Francisco em 2014,
-mas até a tecnologia não apareceu no navegador \autocite{firefoxCanvasDebug}.
-
-Atualmente a área de ferramentas para depuração do canvas 2D está
-parcialmente comprometida por não existir um plugin de terceiro
-onipresente nos navegadores como o WebGl Inspector (\limitation{noCanvas2DIsnpectorOnipresent}).
+Outro problema do depurar do Chrome é que não existe inspetor
+nativo de canvas. O inspetor de embutido do Google Chrome foi
+removido pois continha comportamentos indesejáveis para os
+desenvolvedores do navegador \autocite{canvasinspector}. Os
+desenvolvedores mencionaram criar uma extensão para a funcionalidade
+mas até o tempo de desenvolvimento deste trabalho não havia
+nenhuma disponível. A única alternativa viável até o momento é
+utilizar uma versão antiga do Chromium. O Firefox introduziu uma
+ferramenta de inspeção para o canvas 2D em uma Conferência de
+desenvolvimento de jogos em São Francisco em 2014, mas até então a
+tecnologia não apareceu no navegador \autocite{firefoxCanvasDebug}.
+Atualmente a área de ferramentas para depuração do canvas
+2D está parcialmente comprometida por não existir um plugin
+de terceiro onipresente nos navegadores como o WebGl Inspector
+(\limitation{noCanvas2DIsnpectorOnipresent}).
 
 O projeto Canvas Interceptor é uma iniciativa para preencher
 esta demanda permitindo capturar alguns eventos do contexto 2D e
@@ -581,25 +580,31 @@ a duplicarem a mesma atividade no código.
 
 \section{Disponibilização}
 
-Para serviços híbridos, durante o desenvolvimento notou-se que o
-serviço PhoneGap Build não contém a última versão do PhoneGap e
-não é possível utilizar plugins através deles. Embora no protótipo
-isso não tenha sido um problema, em projetos maiores estes tipos de
-requerimentos podem ser essenciais.
+Durante o desenvolvimento notou-se que o serviço PhoneGap Build não
+contém a última versão do PhoneGap e não é possível utilizar
+plugins através dele. Embora no protótipo isso não tenha sido um
+problema, em projetos maiores estes tipos de requerimentos podem ser
+essenciais.
 
 Outra limitação de disponibilização, neste caso para aplicativos
 Web puros, é que a possibilidade de adicionar aplicativos a área
 de trabalho está disponível apenas para o Safari e Google Chrome
-\limitation{desktopIcon}. Este tipo de possibilidade é importante por
+(\limitation{desktopIcon}). Este tipo de possibilidade é importante por
 gerar uma experiência similar a nativa em dispositivos móveis.
+
+A disponibilização via mercado do IOS também é problemática. Toda
+a aplicação precisa ter seu conteúdo revisado a cada nova versão,
+e essa revisão é demorada e contém uma fila de espera substancial.
+Se for comparado a muitos processos de disponibilização automatizados na
+Web, disponibilizar aplicações para o IOS é rudimentar.
 
 \subsection{Monetização}
 
 Outro aspecto que pode ser limitante para aplicações Web é
 sua forma de monetização. É muitas vezes difícil encontrar
 oportunidades financeiras em jogos para navegador, visto que não
-existem pacotes de jogos para vender \autocite[p. 44]{gameCommunities}
-\limitation{monetizationDifferent}.
+se pode vender pacotes para o usuário baixar \autocite[p. 44]{gameCommunities}
+(\limitation{monetizationDifferent}).
 
 Dado este este problema, desenvolvedores são muitas vezes forçados
 a criar formas alternativas de lucro. A monetização de aplicativos
@@ -627,11 +632,14 @@ para utilizar serviços de \textit{push} também não estão disponíveis
 para o HTML5.
 \end{quote}
 
-A tabela abaixo demonstra é um comparativo das tecnologias pesquisadas,
-relevantes aos jogos e seu suporte. As informações de suporte foram
-extraídas do site \textit{Can I Use} e os navegadores populares em questão
-são: Internet Explorer (11), Edge (13), Firefox (43), Google Chorme
-(47), Safari (9) e Opera(34).
+
+\section{Revisão das Limitações}
+
+O quadro \ref{table:technologies} é um comparativo das
+tecnologias pesquisadas e seu suporte. As
+informações de suporte foram extraídas do site \textit{Can I Use} e
+os navegadores populares em questão são: Internet Explorer (11), Edge
+(13), Firefox (43), Google Chorme (47), Safari (9) e Opera (34).
 
 \begin{table}
 \begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|  }
@@ -661,7 +669,11 @@ Com este comparativo fica visível que, mesmo em alguns casos não
 existindo suporte nativo ou ele sendo incompleto e com limitações,
 na vasta maioria dos casos, é possível utilizar tecnologias da Web
 direcionadas para o desenvolvimento de jogos.
+
 \newpage
+
+O quadro \ref{table:technologies} é um resumo das limitações mais relevantes 
+encontradas e se as mesmas podem ser contornadas ou não.
 \begin{longtable}{| p{.09\textwidth} | p{.53\textwidth}| p{.11\textwidth} |}
 \hline
 Código & Descrição & Existe solução ou contorno? \\ \hline
@@ -670,7 +682,7 @@ Código & Descrição & Existe solução ou contorno? \\ \hline
 \Cref{limitation:differentScreenSizesMayPutSomeUsersInDisvantage} &  Desvantagem  para alguns jogadores devido ao tamanho da tela  & Parcial \\ \hline
 \Cref{limitation:cssPrefixes} & Tecnologias equivalentes em fase experimental levam o prefixo do motor de renderização  & Sim \\ \hline
 \Cref{limitation:jsSpecificationCycle} & Demora para chegar a um consenso na criação de especificações do JavaScript & Não \\ \hline
-\Cref{limitation:jsImplementaionCycle} & Demora para implementar novas especificações do JavaScript & Não \\ \hline
+\Cref{limitation:jsImplementaionCycle} & Demora para implementar novas especificações do JavaScript & Sim \\ \hline
 \Cref{limitation:discoverErrorsWhileRunning} & Por ser interpretado, erros no código JavaScript só podem ser descobertos em tempo de execução & Parcial \\ \hline
 \Cref{limitation:complexBuild} & Requirimento de diversos passos para testar ou disponibilizar aplicações triviais & Sim  \\ \hline
 \Cref{limitation:passCompleteObjectsOnSockets} & Impossibilidade de passar objetos completos em WebSockets & Parcial \\ \hline
@@ -684,35 +696,35 @@ Código & Descrição & Existe solução ou contorno? \\ \hline
 \Cref{limitation:svgRefinendControl} & É praticamente impossível obter posicionamento preciso com SVG & Não \\ \hline
 \Cref{limitation:noCanvasIntegration} & A integração do Canvas com as demais tecnologias da Web é pobre & Não \\ \hline
 \Cref{limitation:noWebglDesktopFunctions} & Falta de alguns recursos disponíveis para OpenGL em ambientes que os permitiriam & Não \\ \hline
-\Cref{limitation:hardToUseWebGL} & Para construir jogos é muito difícil utilizar apenas WebGL & Sim \\ \hline
+\Cref{limitation:hardToUseWebGL} & Para construir jogos é muito difícil utilizar WebGL diretamente & Sim \\ \hline
 \Cref{limitation:incompleteSupportWebgl} & Em muitas plataformas o suporte a WebGl é incompleto & Parcial \\ \hline
 \Cref{limitation:limitedToRecentThingsWebgl} & WebGl não funciona em placas gráficas antigas  & Não \\ \hline
 \Cref{limitation:soundAPIConflicts} & A API de Audio é problemática com sons frequentes no Android & Não \\ \hline
 \Cref{limitation:bestAudioCompressionNotSupportedByAllBrowsers} & Não existe um único codec moderno suportado em todos os navegadores & Parcial \\ \hline
-\Cref{limitation:limitedMultimidiaControlOnSafari} & O Safari conta com problemas de controle de execução de multimídia & \\ \hline
+\Cref{limitation:limitedMultimidiaControlOnSafari} & O Safari conta com problemas de controle de execução de multimídia & Não \\ \hline
 \Cref{limitation:noEffectsOnVideo} & Não é possível aplicar shaders diretamente em vídeo & Sim \\ \hline
-\Cref{limitation:videoFullscreenControl} & Falta de forma padronizada de controlar o modo tela cheia para vídeos & \\ \hline
-\Cref{limitation:videoCodecs} & Falta de consenso sobre um codec de vídeo padrão & \\ \hline
+\Cref{limitation:videoFullscreenControl} & Falta de forma padronizada de controlar o modo tela cheia para vídeos & Não \\ \hline
+\Cref{limitation:videoCodecs} & Falta de consenso sobre um codec de vídeo padrão & \\ Não \hline
 \Cref{limitation:safariVideoMissingControlAndCanvas} & A integração de vídeo e canvas do Safari é problemática  e vídeo só pode ser carregado pelo usuário & Não \\ \hline
 \Cref{limitation:noSqlSupport} & Não existência de tecnologia oficial de SQL para Web & Parcial \\ \hline
 \Cref{limitation:webStorageLimit} & Em muitos navegadores não é possível armazenar mais de 5MB em Web Storage & Não \\ \hline
 \Cref{limitation:webStorageQueryLimit} & Não existe forma padronizada de descobrir quando espaço ainda resta em Web Storage & Parcial \\ \hline
-\Cref{limitation:webStorageStringOnly} & Web Storage permite que os dados sejam armazenados unicamente como Strings & Não \\ \hline
-\Cref{limitation:indexedDbAnonymousBehaviour} & O comportamento do IndexedDB para abas anônimas varia & Não \\ \hline
+\Cref{limitation:webStorageStringOnly} & Web Storage só permite armazenamento de  dados como texto & Não \\ \hline
+\Cref{limitation:indexedDbAnonymousBehaviour} & O comportamento do IndexedDB não está especificado & Não \\ \hline
 \Cref{limitation:indexedDbNoLike} & Não é possível realizar buscas em texto com o IndexedDB & Não \\ \hline
-\Cref{limitation:noErrorMessagesOffline} & Erros na configuração do manifesto offline não contém mensagens descritivas 0& Não \\ \hline
+\Cref{limitation:noErrorMessagesOffline} & Erros nas configurações do manifesto offline não contém mensagens descritivas & Não \\ \hline
 \Cref{limitation:orientationIsntReady} & A implementação da API de orientação é divergente entre os navegadores & Sim \\ \hline
 \Cref{limitation:checkResourcesOnlyOnJavascrit} & Checagem de recursos só por JavaScript força implementação de markup em scripts & Não \\ \hline
-\Cref{limitation:noCanvas2DIsnpectorOnipresent} & Não existe inspetor Canvas 2D para navegadores multiplataforma & Parcial \\ \hline
+\Cref{limitation:noCanvas2DIsnpectorOnipresent} & Não existe inspetor Canvas 2D multiplataforma para navegadores & Parcial \\ \hline
 \Cref{limitation:multiTouch} & Scroll juntamente com outros gestos não funciona corretamente na maioria dos navegadores & Sim \\ \hline
 \Cref{limitation:gamepadObject} & Não existe forma padronizada de detectar a entrada e saída de controles nos navegadores & Não \\ \hline
 \Cref{limitation:desktopIcon} & Não existe forma padronizada de adicionar ícones de aplicativos Web a área de trabaho & Não \\ \hline
-\Cref{limitation:monetizationDifferent} & Jogos exclusivamente Web sentem dificuldade em monetizar jogos da forma convencional & Parcial \\ \hline
+\Cref{limitation:monetizationDifferent} & Jogos exclusivamente Web dificilmente são monetizados da forma convencional & Parcial \\ \hline
 \caption{Lista de problemas e limitações}
 \label{table:technologies}
 \end{longtable}
 
-Das limitaçõe dispostas no quadro \ref{table:technologies}
+Das limitações dispostas no quadro \ref{table:technologies}
 aquelas resolvidas parcialmente identificam que o problema
 pode ser contornado em partes, mas também quando o problema é
 contornado de forma inesperada e não intuitiva. Como a utilização

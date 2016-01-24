@@ -26,16 +26,16 @@ right=2cm
 \usepackage{mathptmx}
 \usepackage{titling}
 \usepackage{fancyhdr}
-\usepackage{url}
+\usepackage[hyphens]{url}
 \usepackage{anyfontsize}
 %indent first paragraphs of sections
 \usepackage{indentfirst}
 \usepackage{csquotes}
 \usepackage{float}
 
+
 \usepackage{xcolor,mdframed}
 \usepackage{longtable}
-
 
 %limitations schema
 \usepackage{cleveref}
@@ -278,8 +278,9 @@ of limitations that are present currently on HTML.
 %{{{ 
 
 \clearpage
+\printbibheading[title=REFERÊNCIAS BIBLIOGRÁFICAS]
 \markboth{}{}
-\printbibliography[heading=bibintoc,title={REFERÊNCIAS BIBLIOGRÁFICAS}]
+\printbibliography[heading=none]
 % \bibliographystyle{abnt}
 % \bibliography{tcc}
 \markboth{}{}
