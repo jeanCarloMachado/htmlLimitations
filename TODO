@@ -83,6 +83,8 @@ Fix broken references
 Quando precisar o mesmo autor várias vezes, como no 2.1.1, tu pode utilizar "de acordo com o(s) autor(es)" ou "ainda de acordo com o(s) autor(es)". Pode também utilizer a citação com (Idem)
 talvez a gente tenha que enxugar um pouco o texto.. a escrita acabou ficando muito extensa
 talvez seja interessante enxugar, principalmente na parte da revisão bibliográfica de coisas mais básicas como HTML e JavaScript geralmente a banca não gosta quando tem muita revisão de coisas básicas
+Talk about apple deployment process.
+Write about the canvas to the prototype
 
 #TODO
 Resumo: deixar para revisar após o término do trabalho
@@ -96,15 +98,19 @@ Burn a CD with the code
 
 #Ideias
 
-Increment tables review -maybe with security limitations imposed by HTML architecture
+improve dart
+improve typescript
+improve construct2
+%intel app framework
+%xamarin
+%ionic
 Talk about Electron
+Increment tables review -maybe with security limitations imposed by HTML architecture
 Search about quircks mode
-Talk about apple deployment process.
 Write about the new full screen api https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API#Things_your_users_want_to_know
 Falar que first shooter ainda não é muito comum, os etilos são ainda parcialmente limitados (refletir)
 Talk about ios limitation on publishing and deploying apps (the time length)
 Increment appendices
-Write about the canvas to the prototype
 Falar sobre a falta de coesão entre os tipos de JavaScript, alguns são nodelists outros são arrays, etc
 Se comparado com jQuery as API's de JavaScript são muito mais verbosas
 A API do jQuery é também mais permissiva, se um elmento não eixste não vai ser lançado erro, já no JavaScript sim

@@ -56,22 +56,26 @@ Crosswalk empacota os fontes juntamente com uma versão do Chromium, a
 versão Open-source do Google Chrome. Isso faz com que o software se
 comporte da mesma forma para todas as versões de dispositivos Android.
 
-\section{Enchant.js}
+\section{PhoneGap}
 
-Enchant.js, dentre suas funcionalidades constam: orientação à,
-orientado à eventos, contém um motor de animação, suporta WebGL
-e Canvas, etc three.js: considerada leve, renderiza, WebGL e Canvas,
-arquitetura procedural limeJs: bom para 2d quintus: especialista em
-jogos de plataforma 2D
+PhoneGap é um framework para desenvolvimento de sistemas híbridos que
+empacota uma aplicação Web dentro de um contêiner nativo e provê um
+conjunto de funcionalidades nativas via JavaScript. PhoneGap permite
+acesso as APIs de câmera, geolocalização, contatos calendário,
+etc \autocite[p. 3]{crossPlatformAppsAnimations}. Todos os sistemas
+populares são suportados pelo PhoneGap: Android, IOS, Windows Phone,
+etc. Diferentemente de outros frameworks, PhoneGap não provê uma
+forma para criar funcionalidades de interface como animações e listas
+\autocite[p. 15]{viabilityBusinessApplications}. O framework 
+geralmente é combinado com outros para obter-se este tipo de funcionalidade.
 
-\section{Tree.js}
-
-Treejs é um framework popular para o desenvolvimento em WebGL.
-Consistem em uma abstração sobre WebGL que permite os autores se
-focarem na criação de conteúdo para Web, ao invés de dispenderem
-tempo manipulando os detalhes da WebGL. Possibilita trabalhar com
-efeitos, luzes, cenas e outras abstrações em detrimento de shaders,
-vértices, e conceitos mais primitivos.
+PhoneGap também conta com um serviço para empacotamento online o
+PhoneGap Build. Este serviço possibilita que se carregue de um arquivo
+compactado contendo os fontes em um padrão especificado que o PhoneGap
+Build se encarrega de gerar os binários para as plataformas requeridas.
+Este recurso é valioso pois a alternativa é configurar o computador
+de desenvolvimento para compilar para as plataformas alvo, um processo
+entediante e complexo.
 
 \section{Appcelerator Titanium}
 
@@ -136,30 +140,28 @@ exportar para diversas plataformas. Para a Web o Unity possibilita
 exportar em WebGl e Web Assembly, sendo uma combinação poderosa e que
 pode garantir grande performance.
 
-%intel app framework
-%xamarin
-%ionic
+\section{Enchant.js}
 
-\section{PhoneGap}
+Enchant.js, dentre suas funcionalidades constam: orientação à objetos,
+orientado à eventos, contém um motor de animação, suporta WebGL
+e Canvas, et.c 
 
-PhoneGap é um framework para desenvolvimento de sistemas híbridos que
-empacota uma aplicação Web dentro de um contêiner nativo e provê um
-conjunto de funcionalidades nativas via JavaScript. PhoneGap permite
-acesso as APIs de câmera, geolocalização, contatos calendário,
-etc \autocite[p. 3]{crossPlatformAppsAnimations}. Todos os sistemas
-populares são suportados pelo PhoneGap: Android, IOS, Windows Phone,
-etc. Diferentemente de outros frameworks, PhoneGap não provê uma
-forma para criar funcionalidades de interface como animações e listas
-\autocite[p. 15]{viabilityBusinessApplications}. O framework 
-geralmente é combinado com outros para obter-se este tipo de funcionalidade.
 
-PhoneGap também conta com um serviço para empacotamento online o
-PhoneGap Build. Este serviço possibilita que se carregue de um arquivo
-compactado contendo os fontes em um padrão especificado que o PhoneGap
-Build se encarrega de gerar os binários para as plataformas requeridas.
-Este recurso é valioso pois a alternativa é configurar o computador
-de desenvolvimento para compilar para as plataformas alvo, um processo
-entediante e complexo.
+three.js: considerada leve, renderiza, WebGL e Canvas,
+arquitetura procedural 
+
+limeJs: bom para 2d 
+
+quintus: especialista em jogos de plataforma 2D
+
+\section{Tree.js}
+
+Treejs é um framework popular para o desenvolvimento em WebGL.
+Consistem em uma abstração sobre WebGL que permite os autores se
+focarem na criação de conteúdo para Web, ao invés de dispenderem
+tempo manipulando os detalhes da WebGL. Possibilita trabalhar com
+efeitos, luzes, cenas e outras abstrações em detrimento de shaders,
+vértices, e conceitos mais primitivos.
 
 \chapter{Ambientes de desenvolvimento de jogos em HTML}
 
@@ -176,12 +178,12 @@ controle de versão e publicação dos aplicativos nela criados,
 possibilita também a importação de modelos 3D de softwares populares
 como: Maya, 3ds Max e Blender;
 
-\section{O Intel® HTML5 Development Environment}
+\section{Intel® HTML5 Development Environment}
 
 Fornece uma solução na nuvem, completa para o desenvolvimento em
 múltiplas plataformas, com serviços de empacotamento, serviços
 para a criação e testes de aplicativos com montagem de interfaces
-\textit{drag and drop} (Intel XDK) e bibliotecas para a construção de
+\textit{drag-and-drop} (Intel XDK) e bibliotecas para a construção de
 jogos utilizando aceleração de hardware, o que garante até duas vezes
 mais performance que aplicativos mobile baseados em Web tradicionais.
 
@@ -192,7 +194,6 @@ na nuvem, possibilitou a Intel criar compiladores para cada uma das
 plataformas disponibilizadas pelo PhoneGap.
 
 \chapter{Tecnologias de Compilação multiplataforma}
-
 
 \section{GWT}
 Segundo \citet[p. 29]{gwt}
@@ -205,19 +206,18 @@ implementações em desktop.
 \end{quote}
 
 Com o GWT se programa em Java e exporta-se com código otimizado para
-as plataformas alvo. Sua licença é Apache 2 e, como o framework é em Java,
-pode ser rodado em todos os sistemas operacionais.
+as plataformas alvo. Sua licença é Apache 2 e, como o framework é em
+Java, pode ser rodado em todos os sistemas operacionais.
 
 \section{Libgdx}
+
 Libgdx \url{https://libgdx.badlogicgames.com/} é um framework
 focado no desenvolvimento de jogos nativos multiplataforma. O
 código é escrito uma vez e a aplicação pode ser portada para
 todas as plataformas sem nenhuma modificação \autocite[p.
-8]{crossPlatformMobileGameDevelopment}.
-
-A linguagem do Libgdx é Java, e é possível compilar para Android,
-IOS, HTML5, entre outros. Visto que a linguagem do Libgdx é Java
-também é possível desenvolver em todos os desktops comuns.
+8]{crossPlatformMobileGameDevelopment}. A linguagem do Libgdx é Java, e
+é possível compilar para Android, IOS, HTML5, entre outros. Também é
+possível desenvolver em todos os desktops comuns.
 
 \chapter{Alternativas ao JavaScript} \label{jsAlternatives}
 
@@ -242,9 +242,9 @@ Segundo \citet{gruntTutorial}
 \begin{quote}
 Durante o desenvolvimento de aplicações Web, existem muitas tarefas
 que tem que ser feitas repetidamente. Estas tarefas incluem minificar o
-JavaScript e CSS, rodar testes unitário, aplicar \textit{linters} nos arquivos
-para checar erros, compilar os pré processadores de CSS (LESS, SASS), e
-muito mais.
+JavaScript e CSS, rodar testes unitários, aplicar \textit{linters} nos
+arquivos para checar erros, compilar os pré processadores de CSS (LESS,
+SASS), e muito mais.
 \end{quote}
 
 \section{Grunt}
@@ -269,8 +269,8 @@ Para tanto os seguintes plugins foram utilizados:
 
 \section{Gulp}
 
-O Gulp utiliza o conceito de streams para aplicar todas as modificações sobre
-um arquivo de uma vez só.
+O Gulp utiliza o conceito de \textit{streams} para aplicar todas as
+modificações sobre um arquivo de uma vez só.
 
 \citet{crossPlatformMobileGame} afirma que:
 \begin{quote}
