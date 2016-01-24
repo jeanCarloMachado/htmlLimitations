@@ -1084,10 +1084,14 @@ biblioteca, este gera uma lista de booleanos sobre grande variedade dos
 recursos HTML5, dentre estes, geolocalização, canvas, áudio, vídeo e
 armazenamento local.
 
-A quantidade de especificações que um aplicativo complexo como um jogo
-utiliza pode ser bem grande, e muitas vezes é difícil dizer qual quais
-navegadores implementam o quê. Uma boa referência do suporte a recursos
-nos navegadores é o site \url{http://caniuse.com/}.
+A quantidade de especificações que um aplicativo complexo
+como um jogo utiliza pode ser bem grande, e muitas vezes é
+difícil dizer qual quais navegadores implementam o quê. Uma
+boa referência do suporte a recursos nos navegadores é o site
+\url{http://caniuse.com/}. E uma lista com vasta quantidade de
+polyfills para as tecnologias da Web pode ser encontrada no site
+\url{https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Pol
+yfills}.
 
 %}}}
 \section{Renderização}
@@ -1235,16 +1239,14 @@ especifica o OpenGL, o grupo sem fins lucrativos Kronos. Os primeiros
 rascunhos do WebGL iniciaram em 2006; não obstante, o grupo de trabalho
 não foi formado até 2009 e a primeira versão do foi lançada em 2011.
 
-Apesar de ter sido desenvolvida com foco em 3D, WebGL pode ser
-igualmente utilizada para criação de gráficos em duas
+Apesar de ter sido desenvolvida com foco em 3D, WebGL pode
+ser igualmente utilizada para criação de gráficos em duas
 dimensões\autocite[p. 6]{3daps}. O elemento do DOM que provê a
 interface do WebGL é o canvas, no contexto 3D. Essa integração com
 o DOM via tag canvas permite que o WebGL seja manipulado assim como os
-demais elementos HTML.
-
-A especificação é composta por uma API de controle em JavaScript
-e o processamento shaders do lado da GPU (Central de processamento
-gráfico).
+demais elementos HTML. A especificação é composta por uma API de
+controle em JavaScript e o processamento shaders do lado da GPU (Central
+de processamento gráfico).
 
 Shaders são scripts que definem níveis de cor ou efeitos especiais
 sobre um modelo 2D ou 3D. Contam com grande performance, possibilitando
@@ -1553,7 +1555,7 @@ quais partes do vídeo serão mostradas através de parâmetros de tempo
 passados como argumentos junto ao nome do arquivo. Ou capturar 
 frames de vídeo dentro do elemento canvas.
 
-Além de ser flexível nas tecnologias de multimídia jogos um
+Além de ser flexível nas tecnologias de multimídia, um
 requerimento comum em jogos é haver uma forma de armazenar dados
 eficientemente e buscá-los com agilidade. Abaixo serão discutidas as
 tecnologias de armazenamento disponíveis para a Web.
@@ -1565,9 +1567,8 @@ armazenamento de dados no lado do cliente. Antes do HTML5 a única
 alternativa era usar cookies, os quais tem um armazenamento de no
 máximo 4k e trafegam em toda a requisição, tornando o processo lento.
 Essa área era ode as aplicações nativas detinham grande vantagem
-sobre as aplicações web. O HTML5 solucionou este problema introduzindo
+sobre as aplicações Web. O HTML5 solucionou este problema introduzindo
 várias formas de armazenamento de dados \autocite{html5Tradeoffs}.
-
 Armazenamento local é um recurso importante para jogos, tanto por
 diminuir a latência da persistência na rede, quanto para possibilitar
 um experiência offline.
@@ -1605,16 +1606,14 @@ IndexedDB.
 
 \subsection{Web Storage}
 
-Web Storage, também conhecido como Local Storage, provê uma forma de
-armazenar dados no formato chave valor dentro do navegador. Os dados são
-persistidos mesmo que o usuário feche a página ou o navegador.
-
-Web Storage é um recurso similar a cookies, contudo algumas diferenças
-substanciais são perceptíveis. Web Storage não requer que os dados
-sejam trafegados como cabeçalhos nas requisições. Também provê
-maiores espaços de armazenamento quando comparado a cookies.
-
-A tecnologia começou como parte da especificação do HTML5 mas agora
+Web Storage, também conhecido como Local Storage, provê uma forma
+de armazenar dados no formato chave valor dentro do navegador. Os
+dados são persistidos mesmo que o usuário feche a página ou o
+navegador. Web Storage é um recurso similar a cookies, contudo algumas
+diferenças substanciais são perceptíveis. Web Storage não requer que
+os dados sejam trafegados como cabeçalhos nas requisições. Também
+provê maiores espaços de armazenamento quando comparado a cookies. A
+tecnologia começou como parte da especificação do HTML5 mas agora
 conta com um documento próprio mantido pela W3C. A especificação é
 suportada pela grande maioria dos navegadores populares.
 
@@ -1625,8 +1624,6 @@ informação. O armazenamento de sessão é para informações que podem
 variar de aba para aba e que não é interessante que sejam persistidos
 para demais acessos além do atual.
 
-A API do Web Storage é simples, consistindo em uma interface para
-buscar dados e outra para armazenar, no formato chave/valor.
 
 \begin{figure}[H]
 \centering
@@ -1649,6 +1646,8 @@ alert(localStorage.getItem('key'));
 \source{https://en.wikipedia.org/wiki/Web\_storage\#usage}
 \end{figure}
 
+A API do Web Storage é simples, consistindo em uma interface
+para buscar dados e outra para armazenar, no formato chave/valor.
 A figura \ref{fig:WebStorage} exemplifica a utilização do Web
 Storage, para realizar o armazenamento em sessão utiliza-se o objeto
 \textit{sessionStorage}. Já para utilizar o armazenamento local
@@ -1721,14 +1720,14 @@ tecnologia da Web que utiliza os mesmos princípios é o Web Workers.
 thread é chamado de pai da thread, e a comunicação entre pai e filhos
 pode acontecer de ambos os lados através de mensagem encapsuladas
 em eventos. Um script que não seja pai de uma thread não pode se
-comunicar com ela, a não ser que a thread seja em modo compartilhado.
+comunicar com ela, a não ser que a thread esteja em modo compartilhado.
 
 O contexto global (objeto \textit{window}) não existe em uma
 thread, no seu lugar o objeto \textit{DedicatedWorkerGlobalScope}
 pode ser utilizado. Workers compartilhados podem utilizar o
 \textit{SharedWorkerGlobalScope}. Estes objetos contém grande parte das
 funcionalidades proporcionadas pelo window com algumas exceções, por
-exemplo threads não podem fazer alterações no DOM.
+exemplo, threads não podem fazer alterações no DOM.
 
 %}}}
 \section{Offline}
@@ -1737,30 +1736,28 @@ Disponibilizar aplicações Web offline é uma característica
 introduzida no HTML5. Uma nova gama de aplicativos Web foram
 possibilitados devido as tecnologias offline. A importância de gestão
 offline é tanta em alguns nichos que os avaliadores do mercado
-de software do IOs consideram quase uma obrigação da gestão da
-aplicação offline \autocite{publishHtml5}.
+de software do IOs consideram quase uma obrigação realizar gestão 
+offline nas aplicações \autocite{publishHtml5}.
 
 Jogos de usuário único podem se beneficiar enormemente de aplicativos
 offline, tornando possível utilizar a aplicação com ou sem a
 presença de rede. Para tanto é necessário poder armazenar dados
 locais, tecnologias como IndexedDB e Web Storage permitem isso. O outro
 requerimento para estar offline é uma forma de armazenar os arquivos
-da Web localmente de forma que sejam utilizados quando não houver uma
+da Web localmente, de forma que sejam utilizados quando não houver uma
 conexão a rede.
 
 HTML5 conta com uma especificação estável de APIs de cache offline
 mantida pela W3C. Esta especificação determina que uma arquivo de
 manifesto contenha quais arquivos serão guardados para utilização
-offline e possivelmente quais serão usados pela rede.
-
-A figura \ref{fig:offline} exemplifica um arquivo de manifesto. Os
-arquivos abaixo da palavra \textit{CACHE MANIFEST} serão armazenados
-em cache e não serão buscados na rede a não ser que o arquivo
-de manifesto seja modificado. Já os arquivos abaixo da palavra
-\textit{NETWORK:} serão utilizados exclusivamente com rede e serão
-buscados todas as vezes. Ainda exite a palavra chave \textit{FALLBACK}
-onde todos os itens abaixo dela serão utilizados para substituir
-arquivos de rede.
+offline e possivelmente quais serão usados pela rede. A figura
+\ref{fig:offline} exemplifica um arquivo de manifesto. Os arquivos
+abaixo da palavra \textit{CACHE MANIFEST} serão armazenados em cache e
+não serão buscados na rede a não ser que o arquivo de manifesto seja
+modificado. Já os arquivos abaixo da palavra \textit{NETWORK:} serão
+utilizados exclusivamente com rede e serão buscados todas as vezes.
+Ainda exite a palavra chave \textit{FALLBACK} onde todos os itens abaixo
+dela serão utilizados para substituir arquivos de rede.
 
 É uma boa prática colocar um comentário com a versão do arquivo de
 manifestos. Desse modo quando um arquivo for modificado incrementa-se a
@@ -1790,26 +1787,23 @@ server.cgi
 %{{{
 Na construção da grande maioria dos jogos é muitas vezes
 imprescindível grande flexibilidade na gestão de entrada comandos.
-Esta necessidade amplia na criação de jogos multiplataforma, em
+Esta necessidade se amplia na criação de jogos multiplataforma, em
 determinadas plataformas a entrada de comandos pode-se dar través de
 teclado, em dispositivos móveis através tela sensível ou sensor de
-movimentos.
-
-O HTML5 trata todos estes casos abstratamente na forma de eventos, os
-quais podem ser escutados através de \textit{listeners}. JavaScript
-pode ser configurado para escutar cada vez que um evento ocorre seja um
-clique do mouse o pressionar de uma tecla ou o mover de um eixo em um
-joystick.
+movimentos. O HTML5 trata todos estes casos abstratamente na forma de
+eventos, os quais podem ser escutados através de \textit{listeners}.
+JavaScript pode ser configurado para escutar cada vez que um evento
+ocorre seja um clique do mouse o pressionar de uma tecla ou o mover de
+um eixo em um joystick.
 
 Quando um evento de interação é disparado, um \textit{listener}
 que esteja ouvindo a este evento pode invocar uma função e realizar
-qualquer controle desejado \autocite{buildingHtml5Game}.
-
-O teclado é um periférico comum no caso de jogos da Web, para existem
-os eventos \textit{keyup} e \textit{keydown} que representam uma tecla
-sendo solta e pressionada respectivamente. A \ref{fig:keyboardEvents}
-demostra a captura do pressionar das setas em JavaScript. Cada
-número corresponde a um botão do teclado especificado através da tabela ASCII.
+qualquer controle desejado \autocite{buildingHtml5Game}. O teclado é
+um periférico comum no caso de jogos da Web, para existem os eventos
+\textit{keyup} e \textit{keydown} que representam uma tecla sendo solta
+e pressionada respectivamente. A \ref{fig:keyboardEvents} demostra a
+captura do pressionar das setas em JavaScript. Cada número corresponde
+a um botão do teclado especificado através da tabela ASCII.
 
 \begin{figure}[H]
 \centering
@@ -1854,7 +1848,7 @@ permitem manipular os estados de um Gamepad eficientemente.
 Exitem eventos para atividades esporádicas como a conexão de
 desconexão de dispositivos. Já acontecimentos mais frequentes, como o
 pressionar de botões, é detectado através da inspeção dos objetos
-aninhados ao principal \textit{Gamepad}. Cada objeto botão contém um 
+aninhados ao objeto principal (\textit{Gamepad}). Cada objeto botão contém um 
 atributo \textit{pressed} que pode ser utilizado para saber se foi pressionado.
 
 \begin{figure}[H]
@@ -1874,17 +1868,15 @@ Muitos dispositivos móveis contam com tecnologias que permitem detectar
 a orientação física e movimento como acelerômetros e giroscópios.
 Visto que são comuns em dispositivos móveis, jogos podem se beneficiar
 deste tipo de ferramenta para criar experiências peculiares para seus
-usuários.
+usuários. A W3C tem uma especificação em rascunho que abstrai as
+diferenças dos dispositivos e prove uma API padronizada para consumir
+informações de orientação. A especificação define dois eventos de
+DOM principais: \textit{deviceorientation} e \textit{devicemotion}.
 
-A W3C tem uma especificação em rascunho que abstrai as diferenças dos
-dispositivos e prove uma API padronizada para consumir informações
-de orientação. A especificação define dois eventos de DOM
-principais: \textit{deviceorientation} e \textit{devicemotion}. 
-
-O evento \textit{deviceorientation} prove a orientação do
+O evento \textit{deviceorientation} provê a orientação do
 dispositivo expressa como uma série de rotações a partir de um
 ponto de coordenadas locais \autocite{orientationSpec}. Para colocar
-claramente, a o evento lançado em uma mudança de orientação provê
+claramente, o evento lançado em uma mudança de orientação provê
 variáveis correspondentes a eixos (alfa, beta, gama) que podem ser
 consultadas para determinar a orientação do dispositivo.
 
@@ -1901,11 +1893,10 @@ cliente e servidor na Web. Quando um navegador requisita algum documento
 de esta requisição é geralmente feita através do protocolo HTTP. O
 foco da nova versão do HTTP é performance; especialmente a latência
 percebida pelos usuários e o uso de rede e servidores \autocite{http2}.
-
-A forma que os documentos trafegam do servidor para o
-cliente afeta diretamente a performance de uma aplicação, nos jogos
-esse fator se amplia devido a grande quantidade de arquivos geralmente
-necessários para montar uma cena de jogo.
+A forma que os documentos trafegam do servidor para o cliente afeta
+diretamente a performance de uma aplicação, nos jogos esse fator se
+amplia devido a grande quantidade de arquivos geralmente necessários
+para montar uma cena de jogo.
 
 Diferentemente do HTTP/1, HTTP/2 abre apenas uma conexão por servidor.
 Usando a mesma para trafegar todos os dados necessários para montar
@@ -1913,8 +1904,9 @@ a página HTML. Dessa forma o HTTP/2 não necessita repetir as
 negociações de protocolo nem aguardar parado quando o limite de
 requisições que os navegadores suportam concorrentemente é atingido.
 Segundo \citet{gameAssetManagement} o limite concorrente de conexões
-por servidor é geralmente 5. Jogos que muitas vezes trafegam muitos
-objetos via rede, podem se beneficiar substancialmente.
+por servidor é geralmente 5. Jogos, que muitas vezes trafegam
+muitos arquivos via rede, podem se beneficiar drasticamente desta
+características.
 
 Outro benefício do HTTP/2 em relação a seu predecessor é que
 os cabeçalhos das requisições são comprimidos, diminuindo
@@ -1940,29 +1932,28 @@ utilizando com o HTTP/2.
 \section{Depuração}
 %{{{
 
-Depuração (\textit{debug}) é o processo de encontrar e reduzir defeitos
-em um aplicativo de software ou mesmo hardware \autocite{depuracao}.
-As ferramentas de desenvolvimento do Google Chrome (\textit{DevTools})
-são uma boa opção para depurar aplicações feitas utilizando as
-tecnologias da Web.
+Depuração (\textit{debug}) é o processo de encontrar e
+reduzir defeitos em um aplicativo de software ou mesmo hardware
+\autocite{depuracao}. As ferramentas de desenvolvimento do Google Chrome
+(\textit{DevTools}) são uma boa opção para depurar aplicações
+feitas utilizando as tecnologias da Web. Dos depuradores para
+navegadores o do Google Chrome é o mais fácil de utilizar e já vem
+integrado nativamente junto com o software \autocite{gamesDebug}.
 
-Dos depuradores para navegadores o do Google Chrome é o mais fácil
-de utilizar e já vem integrado nativamente junto com o software
-\autocite{gamesDebug}.
-
-\citet{chromeDevTools} cita algumas funcionalidades do DevTools:
+\noindent \citet{chromeDevTools} cita algumas funcionalidades do DevTools:
 \begin{quote}
 Provê aos desenvolvedores profundo acesso as camadas internas do
 navegador e aplicações Web. É possível utilizar o DevTools
 para eficientemente detectar problemas de layout, adicionar
-breakpoints em JavaScript, e pegar dicas de otimização de código.
+\textit{breakpoints} em JavaScript, e pegar dicas de otimização de
+código.
 \end{quote}
 
 Estas características são comuns na maioria dos depuradores dos
 navegadores como o do Internet Explorer (Visual Studio For Web) e do
 Firefox (FireBug) \autocite{gamesDebug}.
 
-Com o DevTools também é possível emular dispositivos alvo da
+Todavia, com o DevTools também é possível emular dispositivos alvo da
 aplicação ou conectar-se a um dispositivo Android real, ideal para
 testar ambientes multiplataforma. Para conectar-se a um dispositivo real
 é necessário habilitar a depuração via USB no dispositivo, conectar
@@ -1972,11 +1963,14 @@ híbridos. Dessa forma é possível visualizar a aplicação dentro
 Google Chrome do computador e utilizar as já mencionadas tecnologias do
 DevTools.
 
-O DevTools também permite depuração do elemento canvas. Segundo
-\citet{html5mostwanted} com o inspetor WebGl é possível conferir os
-estados dos buffers, informações de texturas, frames individuais e
-outras informações úteis. Todos os recursos mencionados acima estão
-disponíveis tanto para o contexto 2d quanto o 3d do canvas (WebGL).
+O DevTools costumava permitir depuração do elemento canvas.
+Sobre ele \citet{html5mostwanted} mencionou: com o inspetor WebGl é possível
+conferir os estados dos buffers, informações de texturas, frames
+individuais e outras informações úteis. Todos os recursos mencionados
+acima estão disponíveis tanto para o contexto 2D quanto o 3D do canvas
+(WebGL). Infelizmente este recurso foi removido e atualmente inspeção 
+de canvas é um terreno escaço no ambiente Web, mais detalhes sobre
+o problema dos depuradores canvas serão tratados nos resultados.
 
 Especificamente para WebGl existe o plugin independente WebGL Inspector.
 A ferramenta permite fazer inspeção da execução de métodos
