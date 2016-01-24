@@ -704,7 +704,7 @@ Código & Descrição & Existe solução ou contorno? \\ \hline
 \Cref{limitation:limitedMultimidiaControlOnSafari} & O Safari conta com problemas de controle de execução de multimídia & Não \\ \hline
 \Cref{limitation:noEffectsOnVideo} & Não é possível aplicar shaders diretamente em vídeo & Sim \\ \hline
 \Cref{limitation:videoFullscreenControl} & Falta de forma padronizada de controlar o modo tela cheia para vídeos & Não \\ \hline
-\Cref{limitation:videoCodecs} & Falta de consenso sobre um codec de vídeo padrão & \\ Não \hline
+\Cref{limitation:videoCodecs} & Falta de consenso sobre um codec de vídeo padrão & Não \\ \hline
 \Cref{limitation:safariVideoMissingControlAndCanvas} & A integração de vídeo e canvas do Safari é problemática  e vídeo só pode ser carregado pelo usuário & Não \\ \hline
 \Cref{limitation:noSqlSupport} & Não existência de tecnologia oficial de SQL para Web & Parcial \\ \hline
 \Cref{limitation:webStorageLimit} & Em muitos navegadores não é possível armazenar mais de 5MB em Web Storage & Não \\ \hline
@@ -724,15 +724,15 @@ Código & Descrição & Existe solução ou contorno? \\ \hline
 \label{table:technologies}
 \end{longtable}
 
-Das limitações dispostas no quadro \ref{table:technologies}
+Das limitações dispostas no quadro, \ref{table:technologies}
 aquelas resolvidas parcialmente identificam que o problema
-pode ser contornado em partes, mas também quando o problema é
+pode ser contornado em partes, ou então que o problema é
 contornado de forma inesperada e não intuitiva. Como a utilização
-de um depurador internamente no código no caso da limitação
+de um depurador internamente no código, no caso da limitação
 \Cref{limitation:noCanvas2DIsnpectorOnipresent}.
 
 As limitações as quais não tenham solução, em muitos casos, são
-problemas temporais e que podem ser solucionados com o tempo. Como no
+problemas passageiros, que podem ser solucionados com o tempo. Como no
 caso da limitação \Cref{limitation:gamepadObject}, que as diferenças
 se dão em grande parte por a especificação não estar pronta. Outras
 limitações são intrínssecas da característica do HTML e pode
@@ -742,8 +742,4 @@ Algumas possibilidades que são triviais em ambientes desktop podem
 tornar-se fatores limitante na plataforma Web. Como é o caso do
 controle de Fullscreen via JavaScript. Em plataformas nativas esse
 controle é geralmente garantido, já na Web não se permite esse
-tipo de gestão. %pesquisar mais sobre isso
-
-Apesar de pretender resolver os problemas de múltiplas tecnologias em
-multiplataformas, HTML5 introduz uma gama de incompatiblidade entre suas
-próprias versões e implementações.
+tipo de gestão.
