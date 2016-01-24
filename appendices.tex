@@ -121,7 +121,7 @@ isso se dá, parcialmente, pela popularidade do jQuery em si
 \autocite[p. 14]{viabilityBusinessApplications}. \citet[p.
 2]{crossPlatformAppsAnimations} cita que:
 \begin{quote}
-j0uery prove uma grande game de APIs para muitos propósitos, por
+jQuery provê uma grande gama de APIs para muitos propósitos, por
 exemplo adicionar ou remover elementos, gestão de eventos de clique,
 manipulação de estilo, etc. Também provê APIs para animações, por
 exemplo aparecer/desaparecer, etc.
@@ -157,24 +157,22 @@ Android, IOS, Windows Phone, Tizen, etc.
 
 \section{PlayCanvas}
 
-PlayCanvas é uma plataformas para a construção de jogos 3D
-na nuvem, desenvolvida com foco em performance. Permite a hospedagem,
+PlayCanvas é uma plataforma para a construção de jogos 3D
+na nuvem desenvolvida com foco em performance. Permite a hospedagem,
 controle de versão e publicação dos aplicativos nela criados,
 possibilita também a importação de modelos 3D de softwares populares
 como: Maya, 3ds Max e Blender;
 
-\section{Intel® HTML5 Development Environment}
+\section{Intel HTML5 Development Environment}
 
 Fornece uma solução na nuvem, completa para o desenvolvimento em
 múltiplas plataformas. Com serviços de empacotamento, serviços
-para a criação e testes de aplicativos com montagem de interfaces
+para a criação e testes de aplicativos, com montagem de interfaces
 \textit{drag-and-drop} e bibliotecas para a construção de jogos
 utilizando aceleração de hardware, o que garante até duas vezes mais
 performance que aplicativos mobile baseados em Web tradicionais. Esta
-solução é gratuita, open-source e funciona através de um plugin
-para o Google Chrome. Devido ao fato de os binários ficarem hospedados
-na nuvem, possibilitou a Intel criar compiladores para cada uma das
-plataformas disponibilizadas pelo PhoneGap.
+solução é gratuita, open-source e funciona através de um plugin para
+o Google Chrome.
 
 \chapter{Tecnologias de Compilação multiplataforma}
 
@@ -215,16 +213,14 @@ SASS), e muito mais.
 
 \section{Grunt}
 
-O Grunt é um automatizador destas tarefas quotidianas. Para realizar
-a automação o Grunt conta com um grande ecossistema de plugins que
-podem ser compostos para realizar as tarefas desejadas para determinada
-aplicação.
+O Grunt é um automatizador destas tarefas recorrentes. Para tanto, o
+Grunt conta com um grande ecossistema de plugins que podem ser compostos
+para realizar as mais diversas tarefas desejadas para determinada
+aplicação. No protótipo o Grunt foi utilizado com o intuito primário
+de realizar a minificação e disponibilização da aplicação como um
+conjunto de arquivos prontos para a produção.
 
-No protótipo o Grunt foi utilizado com o intuito primário de realizar
-a minificação e disponibilização da aplicação como um conjunto de
-arquivos prontos para a produção.
-
-Para tanto os seguintes plugins foram utilizados:
+Sendo assim, os seguintes plugins foram utilizados:
 \begin{itemize}
     \item grunt-contrib-uglify: responsável por minificar os arquivos JavaScript;
     \item grunt-contrib-cssmin: responsável por minificar arquivos CSS;
