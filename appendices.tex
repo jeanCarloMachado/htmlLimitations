@@ -10,9 +10,9 @@ A figura \ref{fig:fullDiagram} é o diagrama de classes detalhado do protótipo.
 
 \chapter{Bibliotecas relevantes no desenvolvimento de jogos Web}
 
-A quantidade de ferramentas Web á disposição dos usuário é
+A quantidade de ferramentas Web a disposição dos usuários é
 enorme. Segundo \citet{html5mostwanted} desenvolvedores da Web
-são geralmente de mente aberta e desenvolveram uma variedade de
+são geralmente de mente aberta e criaram uma variedade de
 bibliotecas e frameworks pela internet. Sabendo disso, é uma tarefa
 praticamente impossível ter habilidade em todas as ferramentas
 existentes. Entretanto, é importante que os desenvolvedores ao menos
@@ -41,7 +41,7 @@ de jogos. Ainda segundo \citet{creatingFun} o site MicroJS
 focadas em áreas particulares em detrimento de grandes bibliotecas
 cheias de funcionalidades.
 
-\section{CSS}
+\section{--prefix-free}
 
 A biblioteca \textit{-prefix-free} \url{http://leaverou.github.io/prefixfree/}
 é um polyfill que possibilita os desenvolvedores utilizarem CSS sem
@@ -50,34 +50,21 @@ menos redundante. A biblioteca é razoavelmente leve (2KB), e quando o
 sistema desenvolvido com ela estiver pronto, e o CSS evoluir removendo os
 prefixos utilizados, ela pode ser removida sem ter que mudar o resto do código.
 
-\chapter{Crosswalk} \label{crosswalk}
+\section{Crosswalk} \label{crosswalk}
 
 Crosswalk empacota os fontes juntamente com uma versão do Chromium, a
 versão Open-source do Google Chrome. Isso faz com que o software se
 comporte da mesma forma para todas as versões de dispositivos Android.
 
-\section{Motores de jogos}
-
-Motores de jogos são bibliotecas que agregam várias funcionalidades
-usualmente úteis para o desenvolvimento de jogos \autocite[p.
-5]{browserGamesTechnologyAndFuture}. Elas podem incluir controle de
-usuário, cena, áudio, física, etc. Também servem como uma camada de
-segurança adicional \autocite{browserGamesTechnologyAndFuture}.
-
-Outrossim, motores de jogos não são amplamente difundidos no mercado
-de jogos de navegadores \autocite{browserGamesTechnologyAndFuture}.
-Com o intuito de simplificar o processo para os desenvolvedores,
-auxiliando-os a focarem-se apenas nas soluções que estão
-desenvolvendo, foram criados os frameworks para desenvolvimento de
-jogos. 
-
-Alguns frameworks reconhecidos serão descritos abaixo:
+\section{Enchant.js}
 
 Enchant.js, dentre suas funcionalidades constam: orientação à,
 orientado à eventos, contém um motor de animação, suporta WebGL
 e Canvas, etc three.js: considerada leve, renderiza, WebGL e Canvas,
 arquitetura procedural limeJs: bom para 2d quintus: especialista em
 jogos de plataforma 2D
+
+\section{Tree.js}
 
 Treejs é um framework popular para o desenvolvimento em WebGL.
 Consistem em uma abstração sobre WebGL que permite os autores se
@@ -86,9 +73,7 @@ tempo manipulando os detalhes da WebGL. Possibilita trabalhar com
 efeitos, luzes, cenas e outras abstrações em detrimento de shaders,
 vértices, e conceitos mais primitivos.
 
-\section{Frameworks Multiplataforma}
-
-\subsection{Appcelerator Titanium}
+\section{Appcelerator Titanium}
 
 Appcelerator Titanium é um framework JavaScript que possibilita a
 construção de aplicativos mobile nativos para Android, IOS e outras
@@ -99,7 +84,7 @@ entrada e saída e algumas vezes exemplos de utilização \autocite[p.
 especializada para o desenvolvimento em Titanium, enquadrando-se também
 em um ambiente desenvolvimento de jogos.
 
-\subsection{jQuery Mobile}
+\section{jQuery Mobile}
 
 jQuery Mobile é um dos mais famosos frameworks mobile da Web, isso se
 dá, parcialmente, pela popuplaridade od jQuery em si \autocite[p.
@@ -122,14 +107,40 @@ utilizar aceleração de hardware para criar suas interfaces,
 como fazem alguns concorrentes como o Sencha Touch\autocite[p.
 14]{viabilityBusinessApplications}.
 
-\subsection{Kendo UI Mobile}
+\section{Kendo UI Mobile}
 
 É um framework baseado em jQuery que provê componentes para a
 construção de interfaces semelhantes as nativas através da
 utilização de ferramentas da Web. Existem interfaces especializadas
 para IOS, Android, Windows Phone e Blackberry \autocite{kendoui}.
 
-\subsection{PhoneGap}
+\section{Sencha Touch}
+
+Sencha Touch é um framework para desenvolvimento multiplataforma
+que fornece um conjunto de componentes para criação de
+interfaces gráficas, estruturas MVC e empacotamento. \citet[p.
+14]{viabilityBusinessApplications} cita que o Sencha Touch é um dos
+mais rápidos frameworks disponíveis. Com o Sencha Touch desenvolve-se
+em JavaScript e nas demais tecnologias da Web e cria-se binários para
+Android, IOS, Windows Phone, Tizen, etc.
+
+\section{Unity}
+
+Unity é um motor de jogos multiplataforma utilizado para criar jogos
+para PC's consoles, dispositivos móveis e Web sites \autocite{unity}.
+Mais do que um conjunto de códigos, o Unity disponibiliza também
+um ambientes integrado de desenvolvimento onde é possível alterar
+aspectos de jogos através de interfaces. Com Unity é possível
+desenvolver em um dialeto JavaScript, entre outras linguagens, e
+exportar para diversas plataformas. Para a Web o Unity possibilita
+exportar em WebGl e Web Assembly, sendo uma combinação poderosa e que
+pode garantir grande performance.
+
+%intel app framework
+%xamarin
+%ionic
+
+\section{PhoneGap}
 
 PhoneGap é um framework para desenvolvimento de sistemas híbridos que
 empacota uma aplicação Web dentro de um contêiner nativo e provê um
@@ -150,37 +161,14 @@ Este recurso é valioso pois a alternativa é configurar o computador
 de desenvolvimento para compilar para as plataformas alvo, um processo
 entediante e complexo.
 
-\subsection{Sencha Touch}
-
-Sencha Touch é um framework para desenvolvimento multiplataforma
-que fornece um conjunto de componentes para criação de
-interfaces gráficas, estruturas MVC e empacotamento. \citet[p.
-14]{viabilityBusinessApplications} cita que o Sencha Touch é um dos
-mais rápidos frameworks disponíveis. Com o Sencha Touch desenvolve-se
-em JavaScript e nas demais tecnologias da Web e cria-se binários para
-Android, IOS, Windows Phone, Tizen, etc.
-
-\subsection{Ionic}
-
-\subsection{Unity}
-
-Unity é um motor de jogos multiplataforma utilizado para criar jogos
-para PC's consoles, dispositivos móveis e Web sites \autocite{unity}.
-Mais do que um conjunto de códigos, o Unity disponibiliza também
-um ambientes integrado de desenvolvimento onde é possível alterar
-aspectos de jogos através de interfaces. Com Unity é possível
-desenvolver em um dialeto JavaScript, entre outras linguagens, e
-exportar para diversas plataformas. Para a Web o Unity possibilita
-exportar em WebGl e Web Assembly, sendo uma combinação poderosa e que
-pode garantir grande performance.
-
-%intel app framework
-%xamarin
-
 \chapter{Ambientes de desenvolvimento de jogos em HTML}
 
-Construct 2 é um editor na nuvem focado para usuários sem
+\section{Construct 2}
+
+É um editor na nuvem focado para usuários sem
 conhecimento prévio em programação orientado a comportamento;
+
+\section{PlayCanvas}
 
 PlayCanvas é uma plataformas para a construção de jogos 3D
 na nuvem, desenvolvida com foco em performance. Permite a hospedagem,
@@ -188,13 +176,14 @@ controle de versão e publicação dos aplicativos nela criados,
 possibilita também a importação de modelos 3D de softwares populares
 como: Maya, 3ds Max e Blender;
 
-O Intel® HTML5 Development Environment fornece uma solução na nuvem,
-completa para o desenvolvimento em múltiplas plataformas, com serviços de
-empacotamento, serviços para a criação e testes de aplicativos com
-montagem de interfaces \textit{drag and drop} (Intel XDK) e bibliotecas
-para a construção de jogos utilizando aceleração de hardware, o que
-garante até duas vezes mais performance que aplicativos mobile baseados
-em Web tradicionais.
+\section{O Intel® HTML5 Development Environment}
+
+Fornece uma solução na nuvem, completa para o desenvolvimento em
+múltiplas plataformas, com serviços de empacotamento, serviços
+para a criação e testes de aplicativos com montagem de interfaces
+\textit{drag and drop} (Intel XDK) e bibliotecas para a construção de
+jogos utilizando aceleração de hardware, o que garante até duas vezes
+mais performance que aplicativos mobile baseados em Web tradicionais.
 
 Esta solução é gratuita, open-source e funciona através de um
 plugin para o Google Chrome, ou seja, o desenvolvimento também é
@@ -202,14 +191,10 @@ multiplataforma e devido ao fato de os binários ficarem hospedados
 na nuvem, possibilitou a Intel criar compiladores para cada uma das
 plataformas disponibilizadas pelo PhoneGap.
 
-O site \url{https://codepen.io} e \url{https://jsfiddle.net} permitem a
-construção e visualização de aplicações utilizando as tecnologias
-da Web. Apesar de ser possível, criação de aplicações utilizando
-estas tecnologias não é muito comum, servindo principalmente para
-visualizar trechos de códigos de exemplos na Web.
-
 \chapter{Tecnologias de Compilação multiplataforma}
 
+
+\section{GWT}
 Segundo \citet[p. 29]{gwt}
 \begin{quote}
 O GWT é um framework essencialmente para o lado do cliente quee dá
@@ -223,6 +208,7 @@ Com o GWT se programa em Java e exporta-se com código otimizado para
 as plataformas alvo. Sua licença é Apache 2 e, como o framework é em Java,
 pode ser rodado em todos os sistemas operacionais.
 
+\section{Libgdx}
 Libgdx \url{https://libgdx.badlogicgames.com/} é um framework
 focado no desenvolvimento de jogos nativos multiplataforma. O
 código é escrito uma vez e a aplicação pode ser portada para
