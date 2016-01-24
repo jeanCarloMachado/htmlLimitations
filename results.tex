@@ -1,5 +1,5 @@
 
-Muitos das limitações dos jogos multiplataforma não são
+Muitas das limitações dos jogos multiplataforma não são
 problemas específicos dos jogos, mas aplicam-se a todos tipos
 de software \autocite[p. 3]{currentStateCrossPlatform}. Alguns
 problemas são inerentes da categoria multiplataforma \citet[p.
@@ -8,10 +8,10 @@ mais complexo obter aparência nativa, funcionalidade e performance
 em aplicações multiplataforma. Outros problemas derivam-se dos
 dispositivos ou da tecnologia atual.
 
-Pode não ser trivial distinguir limitações de
-problemas. Uma forma de interpretar limitações é como sendo problemas
-que impedem algo seja feito. Para ajudar na distinção os
-problemas encontrados foram descritos como contornáveis ou não.
+Pode não ser trivial distinguir limitações de problemas. Uma forma
+de interpretar limitações é como sendo problemas que impedem algo
+seja feito. Para ajudar na distinção os problemas encontrados foram
+descritos como contornáveis ou não.
 
 A abaixo constam os problemas e limitações do HTML5, aplicáveis,
 mesmo que não exclusivamente, aos jogos encontrados durante a pesquisa
@@ -694,11 +694,13 @@ Código & Descrição & Existe solução ou contorno? \\ \hline
 \Cref{limitation:fullscreenManagement} & Impossibilidade de detectar e manipular \textit{fullscreen} de forma padronizada &Não \\ \hline
 \Cref{limitation:svgDomPerformance} & Problemas de performance em arquivos SVG muito grandes & Não \\ \hline
 \Cref{limitation:svgRefinendControl} & É praticamente impossível obter posicionamento preciso com SVG & Não \\ \hline
+\Cref{limitation:canvasPerformance} & A performance do canvas varia de plataforma para plataforma & Parcialmente \\ \hline
+\Cref{limitation:noCanvasAnimation} & Não existe suporte nativo a animações em Canvas & Não \\ \hline
 \Cref{limitation:noCanvasIntegration} & A integração do Canvas com as demais tecnologias da Web é pobre & Não \\ \hline
 \Cref{limitation:noWebglDesktopFunctions} & Falta de alguns recursos disponíveis para OpenGL em ambientes que os permitiriam & Não \\ \hline
 \Cref{limitation:hardToUseWebGL} & Para construir jogos é muito difícil utilizar WebGL diretamente & Sim \\ \hline
-\Cref{limitation:incompleteSupportWebgl} & Em muitas plataformas o suporte a WebGl é incompleto & Parcial \\ \hline
 \Cref{limitation:limitedToRecentThingsWebgl} & WebGl não funciona em placas gráficas antigas  & Não \\ \hline
+\Cref{limitation:incompleteSupportWebgl} & Em muitas plataformas o suporte a WebGl é incompleto & Parcial \\ \hline
 \Cref{limitation:soundAPIConflicts} & A API de Audio é problemática com sons frequentes no Android & Não \\ \hline
 \Cref{limitation:bestAudioCompressionNotSupportedByAllBrowsers} & Não existe um único codec moderno suportado em todos os navegadores & Parcial \\ \hline
 \Cref{limitation:limitedMultimidiaControlOnSafari} & O Safari conta com problemas de controle de execução de multimídia & Não \\ \hline
@@ -724,7 +726,7 @@ Código & Descrição & Existe solução ou contorno? \\ \hline
 \label{table:technologies}
 \end{longtable}
 
-Das limitações dispostas no quadro, \ref{table:technologies}
+Das limitações dispostas no quadro \ref{table:technologies},
 aquelas resolvidas parcialmente identificam que o problema
 pode ser contornado em partes, ou então que o problema é
 contornado de forma inesperada e não intuitiva. Como a utilização
