@@ -10,17 +10,16 @@ A figura \ref{fig:fullDiagram} é o diagrama de classes detalhado do protótipo.
 
 \chapter{Bibliotecas relevantes no desenvolvimento de jogos Web}
 
-A quantidade de ferramentas Web a disposição dos usuários é
-enorme. Segundo \citet{html5mostwanted} desenvolvedores da Web
-são geralmente de mente aberta e criaram uma variedade de
-bibliotecas e frameworks pela internet. Sabendo disso, é uma tarefa
-praticamente impossível ter habilidade em todas as ferramentas
-existentes. Entretanto, é importante que os desenvolvedores ao menos
-conheça as ferramentas mais importantes disponíveis para que, no
-momento necessário, saibam qual aprender.
-
-Todavia, \citet{creatingFun} ressalta a importância de sermos moderados
-quanto a escolha de bibliotecas no contexto Web multiplataforma.
+A quantidade de ferramentas Web a disposição dos usuários é enorme.
+Segundo \citet{html5mostwanted} desenvolvedores da Web são geralmente
+de mente aberta e criaram uma variedade de bibliotecas e frameworks
+pela internet. Sabendo disso, é uma tarefa praticamente impossível
+ter habilidade em todas as ferramentas existentes. Entretanto, é
+importante que os desenvolvedores ao menos conheçam as ferramentas
+mais importantes disponíveis para que, no momento necessário, saibam
+qual aprender. Todavia, \citet{creatingFun} ressalta a importância
+de sermos moderados quanto a escolha de bibliotecas no contexto Web
+multiplataforma.
 
 \begin{quote}
 Muitos desenvolvedores da Web utilizam bibliotecas como jQuery e o
@@ -52,9 +51,11 @@ prefixos utilizados, ela pode ser removida sem ter que mudar o resto do código.
 
 \section{Crosswalk} \label{crosswalk}
 
-Crosswalk empacota os fontes juntamente com uma versão do Chromium, a
-versão Open-source do Google Chrome. Isso faz com que o software se
-comporte da mesma forma para todas as versões de dispositivos Android.
+Crosswalk empacota os fontes juntamente com uma versão do Chromium e do
+motor de renderização Blink. Isso faz com que o software se comporte
+da mesma forma para todas as versões de dispositivos Android.
+Novas versões do Crosswalk são disponibilizadas a cada 6 semanas
+encorporando as últimas modificações do Chromium \autocite{crosswalk}.
 
 \section{PhoneGap}
 
@@ -77,6 +78,27 @@ Este recurso é valioso pois a alternativa é configurar o computador
 de desenvolvimento para compilar para as plataformas alvo, um processo
 entediante e complexo.
 
+\section{Unity}
+
+Unity é um motor de jogos multiplataforma utilizado para criar jogos
+para PC's consoles, dispositivos móveis e Websites \autocite{unity}.
+Mais do que um conjunto de códigos, o Unity disponibiliza também
+um ambientes integrado de desenvolvimento onde é possível alterar
+aspectos de jogos através de interfaces. Com Unity é possível
+desenvolver em um dialeto JavaScript, entre outras linguagens, e
+exportar para diversas plataformas. Para a Web o Unity possibilita
+exportar em WebGl e Web Assembly, sendo uma combinação poderosa e que
+pode garantir grande performance.
+
+\section{Tree.js}
+
+Treejs é um framework popular para o desenvolvimento em WebGL.
+Consistem em uma abstração sobre WebGL que permite os autores se
+focarem na criação de conteúdo para Web, ao invés de dispenderem
+tempo manipulando os detalhes da WebGL. Possibilita trabalhar com
+efeitos, luzes, cenas e outras abstrações em detrimento de shaders,
+vértices, e conceitos primitivos.
+
 \section{Appcelerator Titanium}
 
 Appcelerator Titanium é um framework JavaScript que possibilita a
@@ -91,7 +113,7 @@ em um ambiente desenvolvimento de jogos.
 \section{jQuery Mobile}
 
 jQuery Mobile é um dos mais famosos frameworks mobile da Web, isso se
-dá, parcialmente, pela popuplaridade od jQuery em si \autocite[p.
+dá, parcialmente, pela popularidade do jQuery em si \autocite[p.
 14]{viabilityBusinessApplications}.
 
 \autocite[p. 2]{crossPlatformAppsAnimations} cita que:
@@ -128,47 +150,7 @@ mais rápidos frameworks disponíveis. Com o Sencha Touch desenvolve-se
 em JavaScript e nas demais tecnologias da Web e cria-se binários para
 Android, IOS, Windows Phone, Tizen, etc.
 
-\section{Unity}
-
-Unity é um motor de jogos multiplataforma utilizado para criar jogos
-para PC's consoles, dispositivos móveis e Web sites \autocite{unity}.
-Mais do que um conjunto de códigos, o Unity disponibiliza também
-um ambientes integrado de desenvolvimento onde é possível alterar
-aspectos de jogos através de interfaces. Com Unity é possível
-desenvolver em um dialeto JavaScript, entre outras linguagens, e
-exportar para diversas plataformas. Para a Web o Unity possibilita
-exportar em WebGl e Web Assembly, sendo uma combinação poderosa e que
-pode garantir grande performance.
-
-\section{Enchant.js}
-
-Enchant.js, dentre suas funcionalidades constam: orientação à objetos,
-orientado à eventos, contém um motor de animação, suporta WebGL
-e Canvas, et.c 
-
-
-three.js: considerada leve, renderiza, WebGL e Canvas,
-arquitetura procedural 
-
-limeJs: bom para 2d 
-
-quintus: especialista em jogos de plataforma 2D
-
-\section{Tree.js}
-
-Treejs é um framework popular para o desenvolvimento em WebGL.
-Consistem em uma abstração sobre WebGL que permite os autores se
-focarem na criação de conteúdo para Web, ao invés de dispenderem
-tempo manipulando os detalhes da WebGL. Possibilita trabalhar com
-efeitos, luzes, cenas e outras abstrações em detrimento de shaders,
-vértices, e conceitos mais primitivos.
-
 \chapter{Ambientes de desenvolvimento de jogos em HTML}
-
-\section{Construct 2}
-
-É um editor na nuvem focado para usuários sem
-conhecimento prévio em programação orientado a comportamento;
 
 \section{PlayCanvas}
 
@@ -181,15 +163,13 @@ como: Maya, 3ds Max e Blender;
 \section{Intel® HTML5 Development Environment}
 
 Fornece uma solução na nuvem, completa para o desenvolvimento em
-múltiplas plataformas, com serviços de empacotamento, serviços
+múltiplas plataformas. Com serviços de empacotamento, serviços
 para a criação e testes de aplicativos com montagem de interfaces
-\textit{drag-and-drop} (Intel XDK) e bibliotecas para a construção de
-jogos utilizando aceleração de hardware, o que garante até duas vezes
-mais performance que aplicativos mobile baseados em Web tradicionais.
-
-Esta solução é gratuita, open-source e funciona através de um
-plugin para o Google Chrome, ou seja, o desenvolvimento também é
-multiplataforma e devido ao fato de os binários ficarem hospedados
+\textit{drag-and-drop} e bibliotecas para a construção de jogos
+utilizando aceleração de hardware, o que garante até duas vezes mais
+performance que aplicativos mobile baseados em Web tradicionais. Esta
+solução é gratuita, open-source e funciona através de um plugin
+para o Google Chrome. Devido ao fato de os binários ficarem hospedados
 na nuvem, possibilitou a Intel criar compiladores para cada uma das
 plataformas disponibilizadas pelo PhoneGap.
 
@@ -198,7 +178,7 @@ plataformas disponibilizadas pelo PhoneGap.
 \section{GWT}
 Segundo \citet[p. 29]{gwt}
 \begin{quote}
-O GWT é um framework essencialmente para o lado do cliente quee dá
+O GWT é um framework essencialmente para o lado do cliente que dá
 suporte à comunicação com o servidor através de RPCs (\textit{Remote
 Procedure Calls}). Ele não é um framework para aplicações clássicas
 da Web, pois deixa a implementação da aplicação Web parecida com
@@ -218,23 +198,6 @@ todas as plataformas sem nenhuma modificação \autocite[p.
 8]{crossPlatformMobileGameDevelopment}. A linguagem do Libgdx é Java, e
 é possível compilar para Android, IOS, HTML5, entre outros. Também é
 possível desenvolver em todos os desktops comuns.
-
-\chapter{Alternativas ao JavaScript} \label{jsAlternatives}
-
-Abaixo seguem algumas tecnologias que servem de alternativa ao
-JavaScript.
-
-\section{TypeScript}
-
-Conhecido como uma versão estendida do JavaScript que compila para
-JavaScript normal.
-
-\section{Dart}
-
-Google. DartVM é uma máquina virtual que está embebido no Google
-Chrome. Significante melhorias em performance quando comparado
-ao JavaScript. Existe o dart2js que compila código em Dart para
-JavaScript.
 
 \chapter{Sistemas de Building}
 
@@ -259,7 +222,6 @@ a minificação e disponibilização da aplicação como um conjunto de
 arquivos prontos para a produção.
 
 Para tanto os seguintes plugins foram utilizados:
-
 \begin{itemize}
     \item grunt-contrib-uglify: responsável por minificar os arquivos JavaScript;
     \item grunt-contrib-cssmin: responsável por minificar arquivos CSS;
