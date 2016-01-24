@@ -108,14 +108,17 @@ apêndices}.
 O JavaScript, por ser uma linguagem desenvolvida por consenso,
 tem um ciclo de vida de atualizações demorado; pois necessita
 que todos os consumidores da especificação entrem em acordo
-(\limitation{jsSpecificationCycle}). Com a especificação pronta
-outra fase demorada é a adoção das tecnologias nos navegadores.
-O site \url{https://kangax.github.io/compat-table/es6/} contém uma
-lista do suporte aos recursos do ECMAScript 6 nos motores JavaScript
-\limitation{jsImplementaionCycle}.
+(\limitation{jsSpecificationCycle}). Com a especificação
+pronta, outra fase demorada é a adoção das tecnologias
+nos navegadores (\limitation{jsImplementaionCycle}). O site
+\url{https://kangax.github.io/compat-table/es6/} contém uma lista do
+suporte aos recursos do ECMAScript nos motores JavaScript. Através
+desta lista pode-se observar que as novas funcionalidades do ECMAScript
+6 contém pobre suporte na grande maioria dos motores, especialmente
+quando referente a funcionalidade de subclasses.
 
 Por ser uma linguagem interpretada, erros tem de descobertos rodando a
-aplicação \limitation{discoverErrorsWhileRunning}. Alternativamente,
+aplicação (\limitation{discoverErrorsWhileRunning}). Alternativamente,
 se JavaScript fosse compilado, vários problemas poderiam ser capturados
 e informações úteis reveladas antes de se testar \autocite[p.
 12]{viabilityBusinessApplications}. Uma forma de solucionar 
@@ -125,29 +128,28 @@ Web Assembly.
 Arquivos JavaScript geralmente necessitam ser minificados, reunidos e
 ofuscados. Muitas vezes esses processos precisam ser executadas durante
 o desenvolvimento, e sem a utilização de automatizadores como o
-Grunt Watch o processo torna-se entediante bem como propensa a erros
-\limitation{complexBuild}.
+Grunt Watch, o processo torna-se entediante bem como propenso a erros
+(\limitation{complexBuild}).
 
 Segundo \citet{htmlResearchJournal}, um problema do JavaScript é que
-não é possível transferir métodos de objetos através de sistemas,
-via WebSockets, somente dados \limitation{passCompleteObjectsOnSockets}.
+não é possível transferir métodos de objetos através de sistemas
+via WebSockets, somente dados (\limitation{passCompleteObjectsOnSockets}).
 Uma forma de contornar este problema é utilizar funções para
 converter os dados em objetos em cada ponta do processamento mas isto
 adiciona complexidade ao software.
 
-\citet{howBrowsersWork} cita que scripts requerendo informações de
+\citet{howBrowsersWork} cita à respeito de scripts requerendo informações de
 estilo durante o processo de parse. Se o estilo ainda não foi carregado
 o script vai utilizar informações erradas, causando uma série de
-problemas \limitation{runScriptsOnlyOnTheEndOfTheProcessment}. Pode-se
+problemas (\limitation{runScriptsOnlyOnTheEndOfTheProcessment}). Pode-se
 contornar este problema executando scripts exclusivamente ao final da
 renderização do HTML.
 
 Por ser uma linguagem orientada a protótipos, JavaScript dá grande
 poder e flexibilidade para os desenvolvedores. Não obstante, um
 possível problema desta característica é quanto a manutenibilidade de
-código \limitation{harderToDoMaintainence}.
+código (\limitation{harderToDoMaintainence}). \citet{html5Tradeoffs} afirma que:
 
-\citet{html5Tradeoffs} afirma que:
 \begin{quote}
 A flexibilidade de manutenção de código em JavaScript é muito
 dependente do expertise da pessoa que está escrevendo o código.
@@ -156,14 +158,14 @@ comparado com Java ou C\# mas, aplicando bons padrões de design, é bem
 possível escrever bom JavaScript.
 \end{quote}
 
-Além de bons padrões de design, outra forma de minimizar os
-problemas de manutenibilidade de JavaScript é utilizando guias
-de estilo de escrita. \citet{jsStyleGuide} afirma que quando
-não existem padrões de escrita todos acabam escrevendo código
-que apenas os autores conseguem entender \footnote{O endereço
+Além de bons padrões de design, outra forma de minimizar
+os problemas de manutenibilidade de JavaScript é utilizando
+guias de estilo de escrita. \citet{jsStyleGuide} afirma que
+quando não existem padrões de escrita todos acabam escrevendo
+código que apenas os autores conseguem entender. O endereço
 \url{http://noeticforce.com/best-JavaScript-style-guide-for-maintainable
--code} contém um comparativo ente os guias de estilo mais comuns para
-JavaScript}.
+-code} contém um comparativo entre os guias de estilo mais comuns para
+JavaScript.
 
 \subsection{Sistema de tipos}
 
@@ -208,22 +210,23 @@ Apesar da performance ter notavelmente melhorado, ainda é geralmente
 menos eficiente produzir animações em JavaScript do que utilizando
 transições e animações do CSS, que por sua vez são mais
 otimizados e acelerados via hardware \autocite{html5mostwanted}
-\limitation{JSanimations}. O Web Assembly pode resolver este problema,
-substituindo o JavaScript para os casos onde grande performance
-é necessária. Mas para isso o Web Assembly precisa evoluir na
+(\limitation{JSanimations}). O Web Assembly pode resolver este problema,
+substituindo o JavaScript para os casos onde grande performance é
+necessária. Mas para isso o Web Assembly precisa evoluir em sua
 especificação e implementações.
 
 \subsection{Fullscreen}
 
-Não existe forma padronizada de detectar se uma aplicação está
-em tela cheia ou não através de JavaScript. O IOS suporta a
-variável \textit{navigator.standalone } para identificar se a
-aplicação está em tela cheia \limitation{fullscreenManagement}.
-\citet{homescreenwebapps} recomenda a utilização do trecho de código
-para determinar se está em modo tela cheia nos demais navegadores. Não
-obstante, não existe solução oficial, tanto para detectar quanto para
-manipular Fullscreen. O argumento da não possibilidade de manipulação
-é que isso pode ser um problema de segurança para o usuário.
+Não existe forma padronizada de detectar se uma aplicação
+está em tela cheia ou não através de JavaScript
+(\limitation{fullscreenManagement}). O IOS suporta a variável
+\textit{navigator.standalone } para identificar se a aplicação está
+em tela cheia. \citet{homescreenwebapps} recomenda a utilização do
+trecho de código para determinar se está em modo tela cheia para
+os demais navegadores. Não obstante, não existe solução oficial,
+tanto para detectar quanto para manipular Fullscreen. O argumento da
+não possibilidade de manipulação é que isso pode ser um problema de
+segurança para o usuário.
 
 \begin{figure}[H]
 \centering
@@ -242,18 +245,20 @@ Uma das grandes vantagens do SVG é que é definido via linguagem
 de marcação e se integra bem com as demais tecnologias da Web.
 Contudo, isso também implica em problemas de performance para
 arquivos muito grandes pois os elementos são manipulados via DOM
-\limitation{svgDomPerformance}. Segundo \citet{html5mostwanted} a
+(\limitation{svgDomPerformance}). Segundo \citet{html5mostwanted} a
 grande desvantagem do SVG é que quão maior o documento mais lenta a
 renderização.
 
 Controle refinado sobre posicionamento também é um problema do SVG.
-\citet{html5mostwanted} afirma que um aspecto negativo do SVG é que é
-muito difícil atingir a perfeição na posição dos pixels, por ser
-uma linguagem vetorizada.
+\citet{html5mostwanted} afirma que um aspecto negativo do SVG é que
+é muito difícil atingir a perfeição na posição dos pixels,
+por ser uma linguagem vetorizada (\limitation{svgRefinendControl}).
+Essa característica acaba limitando a aplicabilidade do SVG como
+renderizador de jogos para os casos não muito complexos, onde posicionamento
+não seja uma fator crucial.
 
 \section{Canvas}
 
-A literatura aponta várias limitações distintas na API do canvas.
 Segundo \autocite{html5mostwanted}, os aspectos negativos do canvas é
 que a performance varia de plataformas para plataformas e não existe
 implementação nativa para animações.
@@ -266,7 +271,7 @@ implementação nativa em C++ do canvas para Android que roda
 separadamente do JavaScript. Devidas as características acima citadas
 FastCanvas é substancialmente mais rápido do que a tag canvas para
 navegadores Android. Todavia, o FastCanvas não suporta a
-especificação do canvas completamente, e existem umas diferenças no
+especificação do canvas completamente, e existem algumas diferenças no
 comportamento entre o canvas original e o FastCanvas.
 
 \subsection{Integrações}
@@ -292,7 +297,7 @@ aquela determinada área.
 Felizmente a integração entre o canvas e as demais tecnologias da
 Web está começando a acontecer. A interoperabilidade entre o Path2D
 do canvas e a notação SVG é uma iniciativa na direção correta,
-tornando ambas tecnologias cada vez relevantes e dinâmicas.
+tornando ambas tecnologias cada vez mais relevantes e dinâmicas.
 
 Outra característica peculiar, descoberta durante o desenvolvimento
 do protótipo, é que o Canvas pode gerar resultados inesperados se
@@ -318,7 +323,7 @@ Segundo \citet{html5mostwanted} um dos problemas do WebGL é sua alta
 curva de aprendizagem e o fato de não ter suporte para o Internet
 Explorer. Entretanto, o suporte foi adicionado na última versão do
 Internet Explorer (11). Infelizmente a dificuldade de utilização
-ainda persiste \limitation{hardToUseWebGL}, forçando a maioria dos
+ainda persiste (\limitation{hardToUseWebGL}), forçando a maioria dos
 desenvolvedores a utilizarem abstrações criadas por bibliotecas de
 terceiros \footnote{Os apendices contém algumas destas bibliotecas como
 o tree.js}.
@@ -676,6 +681,7 @@ Código & Descrição & Existe solução ou contorno? \\ \hline
 \Cref{limitation:JSanimations} & É pouco eficiente produzir animações em JavaScript & Parcial  \\ \hline
 \Cref{limitation:fullscreenManagement} & Impossibilidade de detectar e manipular \textit{fullscreen} de forma padronizada &Não \\ \hline
 \Cref{limitation:svgDomPerformance} & Problemas de performance em arquivos SVG muito grandes & Não \\ \hline
+\Cref{limitation:svgRefinendControl} & É praticamente impossível obter posicionamento preciso com SVG & Não \\ \hline
 \Cref{limitation:noCanvasIntegration} & A integração do Canvas com as demais tecnologias da Web é pobre & Não \\ \hline
 \Cref{limitation:noWebglDesktopFunctions} & Falta de alguns recursos disponíveis para OpenGL em ambientes que os permitiriam & Não \\ \hline
 \Cref{limitation:hardToUseWebGL} & Para construir jogos é muito difícil utilizar apenas WebGL & Sim \\ \hline
