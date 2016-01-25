@@ -86,13 +86,11 @@ talvez seja interessante enxugar, principalmente na parte da revisão bibliográ
 Talk about apple deployment process.
 Write about the canvas to the prototype
 improve crosswalk
-
-#TODO
-Resumo: deixar para revisar após o término do trabalho
  o 2.3 tu explica o que é Open Web, mas não existe nenhuma definição de Web. Talvez seja interessante explicar tudo isso ainda antes de definir jogos, porque tu utiliza uma definição chamada "Jogos Web".
+Resumo: deixar para revisar após o término do trabalho
 Remove jQuery from dist files 
 
-#OnDelivery
+#TODO
 Remove drafts tag
 Burn a CD with the code
 
