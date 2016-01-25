@@ -8,11 +8,6 @@ mais complexo obter aparência nativa, funcionalidade e performance
 em aplicações multiplataforma. Outros problemas derivam-se dos
 dispositivos ou da tecnologia atual.
 
-Pode não ser trivial distinguir limitações de problemas. Uma forma
-de interpretar limitações é como sendo problemas que impedem algo
-seja feito. Para ajudar na distinção os problemas encontrados foram
-descritos como contornáveis ou não.
-
 A abaixo constam os problemas e limitações do HTML5, aplicáveis,
 mesmo que não exclusivamente, aos jogos encontrados durante a pesquisa
 e concepção do protótipo. Quando possível, buscou-se apresentar
@@ -79,18 +74,22 @@ Em alguns casos o tamanho das telas pode ser um fator limitante,
 como por exemplo em jogos de estratégia. Estes jogos geralmente
 necessitam mostrar uma vasta quantidade de informações, neste
 contexto, jogadores com telas menores podem sair em desvantagem
-(\limitation{differentScreenSizesMayPutSomeUsersInDisvantage}).
-Em termos gerais, pode-se mitigar este problema utilizando design
-responsivo. Na perspectiva do desenvolvedor, pode-se lidar com
-múltiplos tamanhos de tela trabalhando com tamanhos relativos via
-CSS. Todavia há casos, como o dos botões de certo e errado
-do protótipo, em que a proporções ficam exageradas. Nestas ocasiões,
-utilizar controles como o \textit{max-width} e \textit{min-width} é uma
-solução conveniente. No protótipo, os botões de certo e errado tem uma proporção
-de 40\% da tela. Em dispositivos móveis este valor é sensato, mas
-em desktops com grandes resoluções a largura fica exagerada. Para
-resolver este problema foi configurado via CSS que a largura dos botões
-tenham no máximo 300 pixels via regra \textit{max-width}.
+(\limitation{differentScreenSizesMayPutSomeUsersInDisvantage}). Em
+termos gerais, pode-se mitigar este problema utilizando estratégias de
+design focadas nas telas menores (\textit{mobile first}).
+
+
+Na perspectiva do desenvolvedor, pode-se lidar com múltiplos tamanhos
+de tela trabalhando com tamanhos relativos via CSS. Todavia há
+casos, como o dos botões de certo e errado do protótipo, em que a
+proporções ficam exageradas. Nestas ocasiões, utilizar controles como
+o \textit{max-width} e \textit{min-width} é uma solução conveniente.
+No protótipo os botões de certo e errado foram inicialmente
+configurados para preencherem 40\% da tela cada. Em dispositivos móveis
+este valor é sensato, mas em desktops com grandes resoluções a
+largura fica exagerada. Para resolver este problema foi configurado via
+CSS que a largura dos botões tenham 40\% do tamanho enquanto esse valor
+for menor de 300 pixels, via regra \textit{max-width}.
 
 Outro fator problemático do CSS é a presença de prefixos
 (\limitation{cssPrefixes}). Tecnologias experimentais do CSS geralmente
@@ -107,7 +106,7 @@ apêndices}.
 
 O JavaScript, por ser uma linguagem desenvolvida por consenso,
 tem um ciclo de vida de atualizações demorado; pois necessita
-que todos os consumidores da especificação entrem em acordo
+que todos os interessados na especificação entrem em acordo
 (\limitation{jsSpecificationCycle}). Com a especificação
 pronta, outra fase demorada é a adoção das tecnologias
 nos navegadores (\limitation{jsImplementaionCycle}). O site
@@ -127,9 +126,8 @@ Web Assembly.
 
 Arquivos JavaScript geralmente necessitam ser minificados, reunidos e
 ofuscados. Muitas vezes esses processos precisam ser executadas durante
-o desenvolvimento, e sem a utilização de automatizadores como o
-Grunt Watch, o processo torna-se entediante bem como propenso a erros
-(\limitation{complexBuild}).
+o desenvolvimento, e sem a utilização de automatizadores como o Grunt
+Watch, o processo torna-se entediante bem como propenso a erros.
 
 Segundo \citet{htmlResearchJournal}, um problema do JavaScript é que
 não é possível transferir métodos de objetos através de sistemas
@@ -209,7 +207,7 @@ variável corretamente.
 Apesar da performance ter notavelmente melhorado, ainda é geralmente
 menos eficiente produzir animações em JavaScript do que utilizando
 transições e animações do CSS, que por sua vez são mais
-otimizados e acelerados via hardware \autocite{html5mostwanted}
+otimizadas e aceleradas via hardware \autocite{html5mostwanted}
 (\limitation{JSanimations}). O Web Assembly pode resolver este problema,
 substituindo o JavaScript para os casos onde grande performance é
 necessária. Mas para isso o Web Assembly precisa evoluir em sua
@@ -219,14 +217,17 @@ especificação e implementações.
 
 Não existe forma padronizada de detectar se uma aplicação
 está em tela cheia ou não através de JavaScript
-(\limitation{fullscreenManagement}). O IOS suporta a variável
+(\limitation{fullscreenManagement}). No final de 2015 um rascunho de 
+especificação (\textit{Fullscreen API}) foi iniciado, que irá permitir 
+requisitar a utilização de Fullscreen e detectar elementos neste modo.
+Não obstante é uma especificação muito nova e nenhum navegador a suporta
+completamente.
+
+No IOS existe a possibilidade de consultar variável
 \textit{navigator.standalone } para identificar se a aplicação está
 em tela cheia. \citet{homescreenwebapps} recomenda a utilização do
 trecho de código para determinar se está em modo tela cheia para
-os demais navegadores. Não obstante, não existe solução oficial,
-tanto para detectar quanto para manipular Fullscreen. O argumento da
-não possibilidade de manipulação é que isso pode ser um problema de
-segurança para o usuário.
+os demais navegadores.
 
 \begin{figure}[H]
 \centering
@@ -684,7 +685,6 @@ Código & Descrição & Existe solução ou contorno? \\ \hline
 \Cref{limitation:jsSpecificationCycle} & Demora para chegar a um consenso na criação de especificações do JavaScript & Não \\ \hline
 \Cref{limitation:jsImplementaionCycle} & Demora para implementar novas especificações do JavaScript & Sim \\ \hline
 \Cref{limitation:discoverErrorsWhileRunning} & Por ser interpretado, erros no código JavaScript só podem ser descobertos em tempo de execução & Parcial \\ \hline
-\Cref{limitation:complexBuild} & Requirimento de diversos passos para testar ou disponibilizar aplicações triviais & Sim  \\ \hline
 \Cref{limitation:passCompleteObjectsOnSockets} & Impossibilidade de passar objetos completos em WebSockets & Parcial \\ \hline
 \Cref{limitation:runScriptsOnlyOnTheEndOfTheProcessment} & Scripts só podem ser rodados com segurança no final da renderização & Parcial \\ \hline
 \Cref{limitation:harderToDoMaintainence} & A manutenibilidade de JavaScript tende a ser pior do que a de outras linguagens comuns como C\# & Sim \\ \hline
