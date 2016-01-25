@@ -304,7 +304,7 @@ do protótipo, é que o Canvas pode gerar resultados inesperados se
 seus tamanhos de elemento e tela diferirem de formas específicas. Em
 suma, existem dois tamanhos, o tamanho do elemento e da superfície de
 desenho. Quando o tamanho do elemento é maior do que o da superfície
-de desenho do documento escala a superfície de desenho para preencher o
+de desenho, o documento escala a superfície de desenho para preencher o
 elemento, o que pode gerar resultados inesperados.
 
 \section{WebGL}
@@ -316,7 +316,7 @@ muitos recursos especiais disponíveis para os ambientes desktop
 com a função \textit{glBegin} e a utilização de pontos flutuantes
 para calcular coordenadas de vértices \autocite{esVsGl}. Em outras
 palavras, a especificação do WebGL é cortada por baixo. Visto que
-alguns dispositivos não teriam performance utilizando estes recursos,
+alguns dispositivos não tem performance utilizando estes recursos,
 nenhum dispositivo que use WebGL pode os desfrutar.
 
 Segundo \citet{html5mostwanted} um dos problemas do WebGL é sua alta
@@ -354,7 +354,7 @@ ou necessidades flexíveis de áudio.
 
 Durante a concepção do protótipo foi utilizada a API de áudio, devido
 sua maior flexibilidade. Infelizmente algumas vezes o som não é
-executado ou demora até executar de modo de o que é executado ao mesmo
+executado ou demora até executar de modo que é executado ao mesmo
 tempo que o próximo som (\limitation{soundAPIConflicts}).
 
 A experimentação do protótipo, relativo a API de áudio, confirmou
@@ -374,7 +374,7 @@ uma melhor relação entre taxa de compressão e qualidade.
 Além das restrições de codecs de áudio nos produtos da Apple,
 áudio, especificamente no Safari do IOS, contém alguns problemas
 específicos. Por exemplo, não é possível trocar o volume
-através de JavaScript também não é possível tocar mais de um
+através de JavaScript, também não é possível tocar mais de um
 som ou vídeo simultaneamente \autocite{unsolvedMediaHtmlIssues}
 (\limitation{limitedMultimidiaControlOnSafari}).
 
@@ -389,12 +389,6 @@ vídeo dentro de um contexto WebGL \footnote{O endereço
 \url{https://developer.Mozilla.org/en-US/docs/Web/API/WebGL_API/Tutoria
 l/Animating_textures_in_WebGL} contém exemplos de como utilizar vídeos
 em um contexto WebGL} ou canvas 2D.
-
-Também não é possível controlar a entrada em tela cheia através de
-scripts (\limitation{videoFullscreenControl}) pois é considerado uma
-violação de segurança. Entretanto, os navegadores tem a opção de
-deixar os usuários escolherem ver vídeos em tela cheia através de
-controles adicionais \autocite[p. 68]{proHtml5}.
 
 Assim como áudio, o elemento \textit{video} sofre com problemas de
 codecs (\limitation{videoCodecs}), segundo \citet{html5Tradeoffs}:
@@ -460,7 +454,7 @@ ser uma limitação substancial.
 \subsection{IndexedDB}
 
 Apesar de ser desenvolvido com objetivo de ser uma solução para
-todas as necessidades de armazenamento no Frontend IndexedDB ainda
+todas as necessidades de armazenamento no lado do cliente, IndexedDB ainda
 sofre algumas limitações. O comportamento em abas anônimas não
 está especificado e os resultados também variam de navegador para
 navegador (\limitation{indexedDbAnonymousBehaviour}). Também não é
@@ -522,7 +516,7 @@ generalizado de HTML5.
 Para resolver este problema, o ideal seria que cada tecnologia contasse
 com formas de detectar as funcionalidades que comporta. Não obstante,
 este tipo de mecanismo conflita com outros princípios da Web. Pelo
-fato de o HTML uma linguagem fundamentada exclusivamente em marcação
+fato de o HTML ser uma linguagem fundamentada exclusivamente em marcação
 e estrutura, adicionar estruturas de controle não é uma alternativa
 viável.
 
@@ -536,7 +530,7 @@ substancialmente (com nas mudanças de tela) a mudança de estado no
 computador levou vários segundos para ser atualizada.
 
 Outro problema do depurar do Chrome é que não existe inspetor
-nativo de canvas. O inspetor de embutido do Google Chrome foi
+nativo de canvas. O inspetor embutido do Google Chrome foi
 removido pois continha comportamentos indesejáveis para os
 desenvolvedores do navegador \autocite{canvasinspector}. Os
 desenvolvedores mencionaram criar uma extensão para a funcionalidade
@@ -565,8 +559,10 @@ projeto Canvas Interceptor podem ser encontradas no seguinte endereço
 
 \citet[p. 9]{aSeriousContender} cita que: fazer scroll juntamente
 com gestos de ações similares é uma área onde o HTML ainda é
-fraco (\limitation{multiTouch}). Para contornar este problema pode-se utilizar bibliotecas como o
-iScroll, TouchScroll, GloveBox, Sencha, jQuery Mobile, entre outros.
+fraco (\limitation{multiTouch}). O autor diz isso no sentido que os
+movimentos entram em conflito e os navegador não se comportam de forma
+similar. Para contornar este problema pode-se utilizar bibliotecas como
+o iScroll, TouchScroll, GloveBox, Sencha, jQuery Mobile, entre outros.
 
 \subsection{Gamepad}
 
@@ -575,8 +571,8 @@ e Google Chrome. No Firefox é lançado um evento toda a vez que o
 Gamepad é desconectado, já no Google Chrome é necessário verificar
 um vetor de gamepads pela existência do objeto de tempos em tempos
 \autocite{gamepad} (\limitation{gamepadObject}). Este problema é
-reflexo da especificação ainda incompleta e força os desenvolvedores
-a duplicarem a mesma atividade no código.
+reflexo da especificação ainda incompleta. Forçando os desenvolvedores
+a duplicarem a mesma atividade de formas diferentes.
 
 \section{Disponibilização}
 
@@ -592,11 +588,12 @@ de trabalho está disponível apenas para o Safari e Google Chrome
 (\limitation{desktopIcon}). Este tipo de possibilidade é importante por
 gerar uma experiência similar a nativa em dispositivos móveis.
 
-A disponibilização via mercado do IOS também é problemática. Toda
-a aplicação precisa ter seu conteúdo revisado a cada nova versão,
-e essa revisão é demorada e contém uma fila de espera substancial.
-Se for comparado a muitos processos de disponibilização automatizados na
-Web, disponibilizar aplicações para o IOS é rudimentar.
+A disponibilização via mercado do IOS também é problemática.
+Toda a aplicação precisa ter seu conteúdo revisado a cada nova
+versão sendo que a revisão pode ser demorada e geralmente existe uma
+fila de espera substancial. Se for comparado a muitos processos de
+disponibilização automatizados na Web, disponibilizar aplicações
+para o IOS é rudimentar.
 
 \subsection{Monetização}
 
@@ -681,8 +678,8 @@ Código & Descrição & Existe solução ou contorno? \\ \hline
 \Cref{limitation:hardToBuildGuis} & Dificuldade em construir interfaces nativas para os diversos dispositivos & Sim \\ \hline
 \Cref{limitation:differentScreenSizesMayPutSomeUsersInDisvantage} &  Desvantagem  para alguns jogadores devido ao tamanho da tela  & Parcial \\ \hline
 \Cref{limitation:cssPrefixes} & Tecnologias equivalentes em fase experimental levam o prefixo do motor de renderização  & Sim \\ \hline
-\Cref{limitation:jsSpecificationCycle} & Demora para chegar a um consenso na criação de especificações do JavaScript & Não \\ \hline
-\Cref{limitation:jsImplementaionCycle} & Demora para implementar novas especificações do JavaScript & Sim \\ \hline
+\Cref{limitation:jsSpecificationCycle} & Toma-se um tempo substancial para obter um consenso na criação de especificações & Não \\ \hline
+\Cref{limitation:jsImplementaionCycle} & O suporte as novas especificações muitas vezes demora para ser implementado & Sim \\ \hline
 \Cref{limitation:discoverErrorsWhileRunning} & Por ser interpretado, erros no código JavaScript só podem ser descobertos em tempo de execução & Parcial \\ \hline
 \Cref{limitation:passCompleteObjectsOnSockets} & Impossibilidade de passar objetos completos em WebSockets & Parcial \\ \hline
 \Cref{limitation:runScriptsOnlyOnTheEndOfTheProcessment} & Scripts só podem ser rodados com segurança no final da renderização & Parcial \\ \hline
@@ -690,7 +687,7 @@ Código & Descrição & Existe solução ou contorno? \\ \hline
 \Cref{limitation:NANPropagation} & Propagação de valores inválidos NAN & Parcial \\ \hline
 \Cref{limitation:typesCheck} & Checagem de alguns tipos retorna resultados inesperados & Parcial \\ \hline
 \Cref{limitation:JSanimations} & É pouco eficiente produzir animações em JavaScript & Parcial  \\ \hline
-\Cref{limitation:fullscreenManagement} & Impossibilidade de detectar e manipular \textit{fullscreen} de forma padronizada &Não \\ \hline
+\Cref{limitation:fullscreenManagement} & Impossibilidade de detectar e manipular \textit{fullscreen} de forma padronizada &Parcial \\ \hline
 \Cref{limitation:svgDomPerformance} & Problemas de performance em arquivos SVG muito grandes & Não \\ \hline
 \Cref{limitation:svgRefinendControl} & É praticamente impossível obter posicionamento preciso com SVG & Não \\ \hline
 \Cref{limitation:canvasPerformance} & A performance do canvas varia de plataforma para plataforma & Parcialmente \\ \hline
@@ -704,18 +701,17 @@ Código & Descrição & Existe solução ou contorno? \\ \hline
 \Cref{limitation:bestAudioCompressionNotSupportedByAllBrowsers} & Não existe um único codec moderno suportado em todos os navegadores & Parcial \\ \hline
 \Cref{limitation:limitedMultimidiaControlOnSafari} & O Safari conta com problemas de controle de execução de multimídia & Não \\ \hline
 \Cref{limitation:noEffectsOnVideo} & Não é possível aplicar shaders diretamente em vídeo & Sim \\ \hline
-\Cref{limitation:videoFullscreenControl} & Falta de forma padronizada de controlar o modo tela cheia para vídeos & Não \\ \hline
 \Cref{limitation:videoCodecs} & Falta de consenso sobre um codec de vídeo padrão & Não \\ \hline
 \Cref{limitation:safariVideoMissingControlAndCanvas} & A integração de vídeo e canvas do Safari é problemática  e vídeo só pode ser carregado pelo usuário & Não \\ \hline
 \Cref{limitation:noSqlSupport} & Não existência de tecnologia oficial de SQL para Web & Parcial \\ \hline
 \Cref{limitation:webStorageLimit} & Em muitos navegadores não é possível armazenar mais de 5MB em Web Storage & Não \\ \hline
-\Cref{limitation:webStorageQueryLimit} & Não existe forma padronizada de descobrir quando espaço ainda resta em Web Storage & Parcial \\ \hline
+\Cref{limitation:webStorageQueryLimit} & Não existe forma padronizada de descobrir quanto espaço ainda resta em Web Storage & Parcial \\ \hline
 \Cref{limitation:webStorageStringOnly} & Web Storage só permite armazenamento de  dados como texto & Não \\ \hline
-\Cref{limitation:indexedDbAnonymousBehaviour} & O comportamento do IndexedDB não está especificado & Não \\ \hline
+\Cref{limitation:indexedDbAnonymousBehaviour} & O comportamento do IndexedDB em abas anônimas varia  & Não \\ \hline
 \Cref{limitation:indexedDbNoLike} & Não é possível realizar buscas em texto com o IndexedDB & Não \\ \hline
 \Cref{limitation:noErrorMessagesOffline} & Erros nas configurações do manifesto offline não contém mensagens descritivas & Não \\ \hline
 \Cref{limitation:orientationIsntReady} & A implementação da API de orientação é divergente entre os navegadores & Sim \\ \hline
-\Cref{limitation:checkResourcesOnlyOnJavascrit} & Checagem de recursos só por JavaScript força implementação de markup em scripts & Não \\ \hline
+\Cref{limitation:checkResourcesOnlyOnJavascrit} & Checagem de recursos só por JavaScript força a implementação de markup em scripts & Não \\ \hline
 \Cref{limitation:noCanvas2DIsnpectorOnipresent} & Não existe inspetor Canvas 2D multiplataforma para navegadores & Parcial \\ \hline
 \Cref{limitation:multiTouch} & Scroll juntamente com outros gestos não funciona corretamente na maioria dos navegadores & Sim \\ \hline
 \Cref{limitation:gamepadObject} & Não existe forma padronizada de detectar a entrada e saída de controles nos navegadores & Não \\ \hline
@@ -733,14 +729,18 @@ de um depurador internamente no código, no caso da limitação
 \Cref{limitation:noCanvas2DIsnpectorOnipresent}.
 
 As limitações as quais não tenham solução, em muitos casos, são
-problemas passageiros, que podem ser solucionados com o tempo. Como no
+problemas que podem vir a ser solucionados no futuro. Como no
 caso da limitação \Cref{limitation:gamepadObject}, que as diferenças
-se dão em grande parte por a especificação não estar pronta. Outras
-limitações são intrínssecas da característica do HTML e pode
-demorar muito para serem resolvidas.
+se dão em grande parte por a especificação não estar pronta.
 
 Algumas possibilidades que são triviais em ambientes desktop podem
-tornar-se fatores limitante na plataforma Web. Como é o caso do
-controle de Fullscreen via JavaScript. Em plataformas nativas esse
-controle é geralmente garantido, já na Web não se permite esse
-tipo de gestão.
+tornar-se fatores limitantes na plataforma Web. Talvez a forma mais
+expressiva deste problema se dá com tecnologias que de alguma forma
+podem ser consideradas inseguras. Como, até recentemente, era o caso
+do controle de tela cheia através de JavaScript (\Cref{limitation:fullscreenManagement}). Em plataformas nativas esse
+controle é geralmente garantido. Já na Web, um dos argumentos contra
+a sua especificação era que poderia ser um problema de segurança
+permitir o uso de Fullscreen via JavaScript. Felizmente com o avanço de
+especificações como a (\textit{Permissions API}), as tecnologias, ao
+invés de serem privadas de existir, tendem a cada vez mais requisitar o
+consenso do usuário para sua utilização.
