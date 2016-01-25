@@ -91,10 +91,12 @@ Resumo: deixar para revisar após o término do trabalho
 Remove jQuery from dist files 
 
 #TODO
+
 Remove drafts tag
 Burn a CD with the code
 
 #Ideias
+Talk about async of indexed beign too complex to many usecases
 Falar que first shooter ainda não é muito comum, os etilos são ainda parcialmente limitados (refletir)
 Increment tables review -maybe with security limitations imposed by HTML architecture
 Write about the new full screen api https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API#Things_your_users_want_to_know
