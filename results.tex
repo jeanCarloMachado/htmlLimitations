@@ -220,14 +220,14 @@ está em tela cheia ou não através de JavaScript
 (\limitation{fullscreenManagement}). No final de 2015 um rascunho de 
 especificação (\textit{Fullscreen API}) foi iniciado, que irá permitir 
 requisitar a utilização de Fullscreen e detectar elementos neste modo.
-Não obstante é uma especificação muito nova e nenhum navegador a suporta
+Não obstante, é uma especificação muito nova e nenhum navegador a suporta
 completamente.
 
 No IOS existe a possibilidade de consultar variável
 \textit{navigator.standalone } para identificar se a aplicação está
 em tela cheia. \citet{homescreenwebapps} recomenda a utilização do
-trecho de código para determinar se está em modo tela cheia para
-os demais navegadores.
+trecho de código para determinar se está em modo tela cheia para os
+demais navegadores.
 
 \begin{figure}[H]
 \centering
@@ -242,25 +242,24 @@ navigator.standalone = navigator.standalone
 
 \section{SVG}
 
-Uma das grandes vantagens do SVG é que é definido via linguagem
-de marcação e se integra bem com as demais tecnologias da Web.
-Contudo, isso também implica em problemas de performance para
+Uma das grandes vantagens do SVG é que ele é uma linguagem de
+marcação; por conseguinte, se integrando bem com as demais tecnologias
+da Web. Contudo, isso também implica em problemas de performance para
 arquivos muito grandes pois os elementos são manipulados via DOM
 (\limitation{svgDomPerformance}). Segundo \citet{html5mostwanted} a
 grande desvantagem do SVG é que quão maior o documento mais lenta a
 renderização.
 
-Controle refinado sobre posicionamento também é um problema do SVG.
-\citet{html5mostwanted} afirma que um aspecto negativo do SVG é que
-é muito difícil atingir a perfeição na posição dos pixels,
-por ser uma linguagem vetorizada (\limitation{svgRefinendControl}).
-Essa característica acaba limitando a aplicabilidade do SVG como
-renderizador de jogos para os casos não muito complexos, onde posicionamento
-não seja uma fator crucial.
+Controle refinado sobre posicionamento também é um problema com SVG.
+\citet{html5mostwanted} afirma que é muito difícil atingir a
+perfeição na posição dos pixels, por ser uma linguagem vetorizada
+(\limitation{svgRefinendControl}). Essa característica acaba limitando
+a aplicabilidade do SVG como renderizador de jogos para os casos não
+muito complexos, onde posicionamento não seja uma fator crucial.
 
 \section{Canvas}
 
-Segundo \autocite{html5mostwanted}, os aspectos negativos do canvas é
+Segundo \autocite{html5mostwanted}, os aspectos negativos do canvas são
 que a performance varia de plataformas para plataformas e não existe
 implementação nativa para animações.
 
