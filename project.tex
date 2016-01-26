@@ -301,7 +301,7 @@ adicionadas vibrações para as respostas erradas. A API de vibração
 profunda com a aplicação, sendo uma adição de bom custo/benefício.
 Se o usuário desejar utilizar o mouse no desktop, foram adicionadas
 transformações do CSS quando o ponteiro se encontra acima dos
-botões. Para melhorar o feedback visual, os botões de certo e errado
+botões. Outrossim, com o intuito de incrementar o feedback visual, os botões de certo e errado
 tornam-se verdes ou vermelhos dependendo se o usuário acertou ou não
 a questão dada. No quesito feedback auditivo foram adicionados sons
 através da API de áudio do HTML para as respostas corretas e incorretas. Com estes
@@ -335,10 +335,10 @@ A performance, mesmo sem otimizações ficou razoável. O tempo de
 carregamento no Google Chrome desktop em uma rede 4G, comum no Brasil,
 ficou em 1.4 segundos em média. Esta métrica foi extraída através da
 ferramenta de depuração do Google Chrome que fornece a possibilidade
-de simular a velocidades de redes.
+de simular velocidades de redes.
 
 Utilizado os arquivos minificados, gerados pelo Grunt, o tempo médio
-de carregamento ficou em 1.1 segundos. Uma diferença substancial dada a
+de carregamento ficou em 1.1 segundos. Uma diferença substancial (22\%), dada a
 quantidade pequena de arquivos minificados (8 arquivos JavaScript e um
 arquivo CSS).
 
@@ -358,13 +358,13 @@ através da revisão e desenvolvimento do protótipo.
 
 Scroll é um recurso interessante para longas páginas de texto,
 o mesmo não se pode dizer à respeito de jogos.
-Principalmente aqueles dependente de contato com a tela, pois
+Principalmente aqueles dependentes de contato com a tela, pois
 no contato a tela pode mover-se e desconcentrar o usuário. Para
 remover este comportamento deve-se utilizar o \textit{overflow:
 hidden;} no seletor do corpo do documento (\textit{body}).
 
 A barra de endereço é outro recurso de pouca utilidade no contexto
-de jogos, e muitas vezes um empecilho para jogos em dispositivos
+de jogos, e algumas vezes um empecilho para jogos em dispositivos
 móveis, devido ao limitado tamanho da tela. Para desabilitar a barra em
 dispositivos da Apple pode-se utilizar a seguinte configuração:
 
@@ -415,7 +415,7 @@ que torna as variáveis em variáveis globais.
 
 O modo estrito pode ser entendido como uma variante mais rígida do
 JavaScript. Este mecanismo pode ser habilitado utilizando o termo
-\textit{"use strict;"} nos cabeçalhos de arquivos ou funções .
+\textit{"use strict;"} nos cabeçalhos de arquivos ou funções.
 Este controle localizado permite que código não estrito trabalhe
 em conjunto com código estrito, característica conveniente para a
 utilização em sistemas legados.
@@ -464,19 +464,20 @@ característica importante para dispositivos móveis.
 
 Um problema que jogos em HTML sofrem é a demora no carregamento
 da grande quantidade de recursos que geralmente precisam estar em
-memória para o jogo funcionar. Muitos jogos utilizam uma tela de
-carregamento enquanto os recursos são adquiridos. Existem algumas
-formas de minimizar este problema, como utilização de cache, CDN's,
-minificação, entre outros.
+memória para o jogo funcionar. Para minimizar este problema, muitos
+jogos utilizam uma tela de carregamento enquanto os recursos são
+adquiridos. Existem, todavia, algumas formas alternativas de reduzir 
+este problema, como utilização de cache, CDN's, minificação, entre
+outros.
 
-Uma funcionalidade do HTML interessante para otimizar o tempo de rede
-o pré carregamento de recursos (\textit{Link Prefetching}). Esta
-tecnologia possibilita que o navegador, em seu tempo livre, adquira
-recursos que provavelmente serão necessários em um futuro próximo.
-
-Nem todos os recursos necessitam ser pré carregados, mas uma impressão
-muito superiora é criada se os recursos estão imediatamente
-disponíveis quando uma nova fase é carregada \autocite[p. 39]{creatingFun}.
+Uma funcionalidade do HTML interessante para otimizar o tempo de
+rede é o pré carregamento de recursos (\textit{Link Prefetching}).
+Esta tecnologia possibilita que o navegador, em seu tempo livre,
+adquira recursos que provavelmente serão necessários em um futuro
+próximo. Nem todos os recursos necessitam ser pré carregados,
+mas uma impressão muito superiora é criada se os recursos estão
+imediatamente disponíveis quando uma nova fase é carregada
+\autocite[p. 39]{creatingFun}.
 %}}}
 
 A seguir serão apresentadas as limitações do HTML encontradas durante
