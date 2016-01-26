@@ -198,9 +198,9 @@ function is(type, object) {
 A figura \ref{fig:fixJSTypes} demonstra uma solução possível para
 remediar o problema dos testes de tipos em JavaScript. A diferença
 desta função é que ela converte a variável que se está testando
-para sua representação em texto a qual contém o nome do tipo escrito
-por extenso - utilizando-se deste valor pode-se deduzir o tipo da
-variável corretamente.
+para sua representação em texto, a qual contém o nome do tipo escrito
+por extenso. Dessa forma, utilizando-se deste valor pode-se deduzir o
+tipo da variável corretamente.
 
 \subsection{Performance}
 
@@ -208,7 +208,7 @@ Apesar da performance ter notavelmente melhorado, ainda é geralmente
 menos eficiente produzir animações em JavaScript do que utilizando
 transições e animações do CSS, que por sua vez são mais
 otimizadas e aceleradas via hardware \autocite{html5mostwanted}
-(\limitation{JSanimations}). O Web Assembly pode resolver este problema,
+(\limitation{JSanimations}). O Web Assembly poderia resolver este problema,
 substituindo o JavaScript para os casos onde grande performance é
 necessária. Mas para isso o Web Assembly precisa evoluir em sua
 especificação e implementações.
@@ -224,7 +224,7 @@ Não obstante, é uma especificação muito nova e nenhum navegador a suporta
 completamente.
 
 No IOS existe a possibilidade de consultar variável
-\textit{navigator.standalone } para identificar se a aplicação está
+\textit{navigator.standalone} para identificar se a aplicação está
 em tela cheia. \citet{homescreenwebapps} recomenda a utilização do
 seguinte trecho de código para determinar se a aplicação está em
 modo tela cheia para os demais navegadores:
@@ -260,7 +260,7 @@ muito complexos, onde posicionamento não seja uma fator crucial.
 \section{Canvas}
 
 Segundo \autocite{html5mostwanted}, os aspectos negativos do canvas são
-que a performance varia de plataformas para plataformas e não existe
+que a performance varia de plataforma para plataforma e não existe
 implementação nativa para animações.
 
 \subsection{Performance}
