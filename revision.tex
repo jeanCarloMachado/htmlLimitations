@@ -602,13 +602,10 @@ CSS.customMedia.set('--foo', 5);
 </script>
 
 \end{verbatim}
-\caption{Exemplo de media queries customizados}
+\caption{Exemplos de media queries customizadas}
 \label{fig:MediaQueryCustom}
 \source{https://developer.mozilla.org/en-US/docs/Web/CSS/MediaQueries}
 \end{figure}
-
-%falar de tamanhos absolutos vs relativo
-%Unidades vw e vh para tamanho do viewport
 
 \subsection{Transições}
 
@@ -616,14 +613,13 @@ Transições são uma forma de adicionar animações em uma página
 web. Estas animações são compostas por um estado inicial e um final.
 A especificação de transições permite grande controle sobre seus
 estados, habilitando o desenvolvedor a controlar o tempo de execução,
-os estados intermediários, e efeitos aplicados uma transição.
-
+os estados intermediários, e efeitos aplicados a uma transição.
 Para utilizar transições, assim como em uma máquina de estados,
 precisamos identificar estados e ações. Estados são seletores do CSS
 e ações são modificações realizadas entre esses dois seletores CSS
 \autocite{html5mostwanted}.
 
-Transições são interessantes em jogos, especialmente pois muitos
+Transições de CSS são interessantes em jogos, especialmente pois muitos
 navegadores suportam aceleração de GPU (Unidade de processamento
 gráfico) para estas operações. Isso garante grandes benefícios de
 performance sobre implementações diretamente em JavaScript.
@@ -659,7 +655,7 @@ elemento. No período de 2 segundos a largura da \textit{div} vai de 100
 pixels ara 300 pixels.
 
 Atualmente um conjunto finito de propriedades podem ser animadas
-com transições, e essas lista tende a mudar com o tempo, cabe ao
+com transições, e essa lista tende a mudar com o tempo, cabe ao
 desenvolvedor assegurar-se que determinada propriedade está disponível
 \autocite{mdnTransitions}.
 
@@ -713,10 +709,9 @@ Recursos recentes do CSS muitas vezes não estão presentes nos
 navegadores. Conquanto, muitos deles são interessantes no contexto de
 desenvolvimento de jogos, como o suporte a variáveis. O projeto cssnext
 \url{http://cssnext.io/} é uma iniciativa para permitir a utilização
-dos recentes recursos do CSS mesmo sem os mesmos estarem implementados
-nos navegadores. O projeto funciona compilando o código não suportado
-em algo compatível com versões para as versões implementadas pelos
-navegadores.
+dos recentes recursos do CSS mesmo sem os eles estarem implementados nos
+navegadores. O projeto funciona compilando o código não suportado em
+algo compatível com as versões implementadas pelos navegadores.
 
 Além da apresentação, recurso vital para jogos, e aplicativos Web em
 geral, é a iteratividade. Com as tecnologias da Web esta iteratividade
