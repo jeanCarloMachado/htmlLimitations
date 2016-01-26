@@ -89,13 +89,15 @@ improve crosswalk
  o 2.3 tu explica o que é Open Web, mas não existe nenhuma definição de Web. Talvez seja interessante explicar tudo isso ainda antes de definir jogos, porque tu utiliza uma definição chamada "Jogos Web".
 Resumo: deixar para revisar após o término do trabalho
 Remove jQuery from dist files 
+Remove drafts tag
 
 #TODO
 
 Check grammar
 interatividade vs iteratividade
-Remove drafts tag
+Check online refereces
 Burn a CD with the code
+
 
 #Ideias
 Talk about async of indexed beign too complex to many usecases
