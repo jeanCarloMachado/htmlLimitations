@@ -629,16 +629,15 @@ para utilizar serviços de \textit{push} também não estão disponíveis
 para o HTML5.
 \end{quote}
 
-
 \section{Revisão das Limitações}
 
-O quadro \ref{table:technologies} é um comparativo das
-tecnologias pesquisadas e seu suporte. As
-informações de suporte foram extraídas do site \textit{Can I Use} e
-os navegadores populares em questão são: Internet Explorer (11), Edge
-(13), Firefox (43), Google Chorme (47), Safari (9) e Opera (34).
+O quadro 4.1 é um comparativo das tecnologias
+pesquisadas e seu suporte. As informações de suporte foram extraídas
+do site \textit{Can I Use} e os navegadores populares em questão são:
+Internet Explorer (11), Edge (13), Firefox (43), Google Chorme (47),
+Safari (9) e Opera (34).
 
-\begin{table}
+\begin{table}[H]
 \begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|  }
 \hline
 Tecnologia & Suporte nas últimas versões estáveis dos navegadores populares & Polyfills disponíveis  para versões antigas \\ \hline
@@ -658,7 +657,7 @@ Prefetch & Não & Sim \\ \hline
 Web Animations & Não & Sim \\ \hline
 WebWorkers & Sim & Sim\\ \hline
 \end{tabular}
-\label{table:technologies}
+\label{table:apisSupport}
 \caption{Tecnologias dos jogos e seu suporte}
 \end{table}
 
@@ -667,11 +666,9 @@ existindo suporte nativo ou ele sendo incompleto e com limitações,
 na vasta maioria dos casos, é possível utilizar tecnologias da Web
 direcionadas para o desenvolvimento de jogos.
 
-\newpage
-
 O quadro \ref{table:limitations} é um resumo das limitações mais relevantes 
 encontradas e se as mesmas podem ser contornadas ou não.
-\begin{longtable}{| p{.09\textwidth} | p{.53\textwidth}| p{.11\textwidth} |}
+\begin{longtable}[H]{| p{.09\textwidth} | p{.53\textwidth}| p{.11\textwidth} |}
 \hline
 Código & Descrição & Existe solução ou contorno? \\ \hline
 \Cref{limitation:multipleTesting} & Para garantir que algo de fato funcione é necessário testar em múltiplos dispositivos & Parcial \\ \hline

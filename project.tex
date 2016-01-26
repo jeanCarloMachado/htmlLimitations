@@ -7,14 +7,14 @@ diagramas, entre outros aspectos serão tratados aqui.
 Para a análise prática das limitações foi escolhido um jogo de
 matemática simples. Consistindo na geração de equações cada qual 
 com uma resposta candidata. Cabe ao usuário informar se o resultado apontado
-pelo jogo está correto ou não. A cada resposta dada o nível de
+pelo jogo está correto ou não. A cada resposta dada, o nível de
 complexidade da equação cresce. O tempo é um fator determinante
 no resultado do jogo pois quão mais rápido o jogador acertar se a
 afirmação está correta ou não mais pontos ele receberá. Esta
 categoria de jogo foi selecionada por ter profundidade, oferecendo a
 possibilidade de explorar diversos recursos do HTML, e criar melhorias
 incrementais. E também por oferecer uma dificuldade técnica não
-tão desafiadora visto que não disponho de experiência profunda no
+tão desafiadora, visto que não disponho de experiência profunda no
 desenvolvimento de jogos em geral.
 
 Jogos como o Math Workout e o Countdown para Android tem uma temática
@@ -77,33 +77,43 @@ do diagrama de classes}.
 \section{Desenvolvimento}
 
 O desenvolvimento se deu com uma postura de melhoria progressiva
-criando primeiramente  a versão mais simples possível para atingir as
+criando primeiramente a versão mais simples possível para atingir as
 requisitos funcionais. A partir dessa versão, novos recursos foram
-sendo adicionados para melhorar a experiência do usuário. Iniciei o
-desenvolvimento criando para a plataforma Desktop pois esta contém
-um grande número de ferramentas de desenvolvimento nativas que não
-requerem especial configuração.
+sendo incrementados para melhorar a experiência do usuário. Iniciei o
+desenvolvimento na plataforma Desktop pois esta contém o maior número
+de ferramentas de desenvolvimento nativas que não requerem
+configuração especial.
 
-O primeiro passo foi a criação do documento HTML, foram utilizados
-elementos \textit{div} para simbolizar telas do jogo. Conter todas as
-telas em único HTML caracteriza o jogo como uma aplicação de uma
-única página (\textit{Single Page Application}). Alternativamente,
+O primeiro passo foi a criação do documento HTML. Para a
+representação das telas do jogo foram utilizados elementos
+\textit{div} dentro do arquivo \textit{index.html}. Conter todas
+as telas em único HTML caracteriza o jogo como uma aplicação de
+página única (\textit{Single Page Application}). Alternativamente,
 poderia se depender de um servidor para mandar as páginas prontas,
 mas isso distribui a complexidade do sistema para tecnologias do
 lado do servidor, distanciando-se da proposta de um jogo construído
 exclusivamente com as tecnologias da Web.
 
+Aplicativos SPA introduzem novos desafios. Por exemplo, o botão
+de voltar perde sua utilização, visto que não se está trafegando
+de uma página a outra, somente em partes de uma mesma página. HTML5
+provê uma API em JavaScript para manipular o histórico que pode
+resolver este problema. Entretanto, no protótipo não adicionamos
+esta funcionalidade pois a quantidade de telas é realmente baixa e os
+benefícios introduzidos seriam pequenos.
+
 Seguindo a construção do documento HTML veio o desenvolvimento de um
 CSS simples que comporta a visualização em múltiplos dispositivos.
-Para tal, foram utilizadas posições e tamanhos relativos. Por exemplo,
-a largura de cada tela da SPA é 98\% do tamanho total disponível no
-dispositivo. Já o tamanho da fonte do quadro principal, representado
-pelo id \textit{billboard}, é duas vezes o tamanho da fonte normal (2em).
-Sem a ajuda de bibliotecas especializadas o processo de criação da
+Para tal, foram utilizadas posições e tamanhos relativos. Por
+exemplo, a largura de cada tela é 98\% do tamanho total disponível no
+dispositivo. Já o tamanho da fonte do quadro principal, é duas vezes o
+tamanho da fonte normal (2em).
+
+Sem a ajuda de bibliotecas especializadas, o processo de criação da
 interface não é trivial. Apesar da interface ser simples, fazer os elementos
-se alinharem em diversos tamanhos de telas não é fácil e pode se
+se alinharem em múltiplos tamanhos de telas não foi fácil, e pode se
 tornar um problema substancial para interfaces realmente complexas.
-A figura \ref{fig:gameScreen} e \ref{fig:gameScreenDesktop} apresentam
+As figuras \ref{fig:gameScreen} e \ref{fig:gameScreenDesktop} apresentam
 a tela principal do jogo em um dispositivo móvel e em um desktop, respectivamente.
 
 \begin{figure}[H]
@@ -120,14 +130,6 @@ de JavaScript. Os botões que levam a outras telas, quando clicados,
 simplesmente escondem todas as seções e por fim carregam a que estão
 configurados para mostrar.
 
-Aplicativos SPA introduzem outros desafios. Por exemplo, o botão
-de voltar perde sua utilização, visto que não se está trafegando
-de uma página a outra, somente em partes de uma mesma página. HTML5
-provê uma API em JavaScript para manipular o histórico que pode
-resolver este problema; entretanto, no protótipo não adicionamos
-esta funcionalidade pois a quantidade de telas é realmente baixa e os
-benefícios introduzidos seriam pequenos.
-
 Ao iniciar a execução do JavaScript todas as \textit{divs} que
 representam telas são escondidas e a \textit{div} de carregamento de
 recursos é mostrada em seguida. O objetivo desta \textit{div} é não deixar
@@ -137,11 +139,13 @@ utilização do jogo não estão disponíveis. Todavia, o carregamento
 muito lenta, geralmente não vê a tela. No final do carregamento
 de todos os recursos é disparado o evento \textit{window.onload},
 neste momento carrega-se a \textit{div} da partida e dá-se início a mesma.
+
 Durante esta fase do desenvolvimento também foram adicionados
 \textit{listeners} aos demais elementos interativos do jogo, como
 clicar nas configurações e nos botões de certo e errado da página
 principal. Deixando a página pronta para receber a funcionalidade
 propriamente dita.
+
 
 Com esqueleto da aplicação definido foi introduzida a lógica
 de negócio. A figura \ref{fig:simpleDiagram} apresenta a
@@ -150,8 +154,8 @@ relação entre as classes do jogo. De toda a regra do jogo, a classe
 do jogo, é na classe \textit{Match} que as informações de quantas
 equações existem, quantas foram acertadas, o tempo total da partida,
 bem como a pontuação atual do usuário são armazenadas. A cada
-iteração do laço do jogo uma nova pergunta é dada pela classe
-\textit{Match} e espera-se por uma resposta. Quando a resposta é dada
+iteração do laço do jogo uma nova pergunta é gerada pela classe
+\textit{Match} e espera-se por uma resposta. Quando a resposta é dada,
 a classe \textit{Match} computa se ela está correta ou não e
 o tempo que levou para chegar ao resultado. Quando não existem mais
 perguntas para serem processadas é lançado um evento de final de
@@ -197,11 +201,11 @@ interface totalmente orientada a eventos do IndexedDb introduz uma
 camada de complexidade desnecessária para os casos simples. Por
 conseguinte, visto que os requerimentos do protótipo não demandam
 grande performance ou armazenamento massivo de dados, a opção
-modesta, Local Storage, foi preferida. A classe ranking é simplesmente
-uma interface para converter partidas e armazenar e recuperar estas
-informações em Local Storage. A figura \ref{fig:placar} demostra
-as informações do resultado de uma partida bem como a posição do
-ranking.
+modesta, Local Storage, foi preferida. Para colocar claramente, a
+classe ranking é simplesmente uma interface para converter partidas,
+armazenar e recuperar estas informações em Local Storage. A figura
+\ref{fig:placar} demostra as informações do resultado de uma partida,
+na qual as informações de ranking se encontram.
 
 \begin{figure}[H]
     \centering
@@ -230,7 +234,7 @@ jogo.
 \end{figure}
 
 Implementados estes mecanismos essenciais para o jogo, pude me focar no
-ponto central do negócio e possivelmente o mais complexo: a geração
+ponto central do negócio, e possivelmente o mais complexo: a geração
 de equações. A geração das equações é feita randomicamente e
 envolve duas classes: \textit{Statement} e \textit{StatementGenerator}.
 O objeto \textit{Statement}, é responsável por armazenar as
@@ -260,18 +264,18 @@ O objeto \textit{StatementGenerator} reside como membro de classe de
 do objeto \textit{Match}. Ao final das iterações com o usuário o
 evento \textit{endOfMatch} é lançado onde os pontos são computados,
 armazenados e mostrados para o usuário. Neste ponto é possível
-começar outra partida reiniciando o processo.
+começar outra partida, reiniciando o processo.
 
 Estas classes comportam os requisitos funcionais do jogo. Entretanto,
 após um período de uso, foi identificado que muitas vezes o usuário
-começa uma partida e não está prestando atenção na tela o
+começa uma partida e não está prestando atenção na tela, o
 que acarreta na perda de pontos no período inicial da partida. Para
 reduzir este problema foi adicionada a classe \textit{Countdown},
 que é basicamente um temporizador regressivo que demarca o início
 de cada partida, notificando o usuário quanto falta para a partida
 iniciar. O temporizador foi desenvolvido em canvas e apresenta 4
-demarcações desenhadas a cada 90 graus, formando um circulo com uma
-mensagem no centro, neste caso os números do temporizador. A figura
+demarcações desenhadas a cada 90 graus, formando um circulo com
+os números decrescentes no centro. A figura
 \ref{fig:counter} demonstra o contador prestes a iniciar uma nova
 partida.
 
@@ -288,7 +292,7 @@ o usuário utilize o teclado além do mouse. Quando o usuário utilizar
 a seta para esquerda ou direita os botões Sim ou Não, respectivamente,
 são clicados através de JavaScript. Simular o clique ao invés de
 acionar duas vezes o tratamento das escolhas de resposta foi uma boa
-estratégia pois centralizou o tratamento, evitando duplicação de
+estratégia pois centralizou o controle, evitando duplicação de
 código.
 
 Nos dispositivos móveis, com intuito de melhorar a experiência, foram
