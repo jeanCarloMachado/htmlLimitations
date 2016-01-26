@@ -288,7 +288,7 @@ JavaScript para a interação com o canvas ficar completa.
 CSS já conta com definições quanto a animações e a manipulação de
 elementos do canvas através do DOM facilitaria uma gama de situações.
 Por exemplo, seria possível utilizar os eventos do DOM para capturar
-interações do usuário através de elementos utilizados no canvas.
+interações do usuário através de objetos utilizados no canvas.
 Se um retângulo fosse clicado o evento seria lançado a partir dele.
 Controle similar é implementado atualmente acessando as coordenadas
 do canvas onde uma interação aconteceu e fazendo o processamento com
@@ -341,9 +341,8 @@ corretamente no Firefox \autocite[p.42]{3daps}.
 Além dos problemas citados, o suporte a especificação ainda é
 incompleto em vários navegadores (\limitation{incompleteSupportWebgl}).
 CocoonJS é uma aplicativo híbrido que preenche a fraca implementação
-de WebGL nos dispositivos móveis possibilitando se desenvolver em
-WebGL. CocoonJS conta com suporte a dispositivos legados à partir do
-Android 2.3 e IPhone 5.
+de WebGL nos dispositivos móveis. Habilitando assim, se desenvolver em WebGL
+em dispositivos legados à partir do Android 2.3 e IPhone 5.
 
 \subsection{Áudio}
 
@@ -352,15 +351,15 @@ HTML5 é que seu propósito é para executar apenas um som, como o som
 de fundo dentro de um jogo. Não sendo adequada para efeitos sonoros
 ou necessidades flexíveis de áudio.
 
-Durante a concepção do protótipo foi utilizada a API de áudio, devido
-sua maior flexibilidade. Infelizmente algumas vezes o som não é
-executado ou demora até executar de modo que é executado ao mesmo
-tempo que o próximo som (\limitation{soundAPIConflicts}).
-
-A experimentação do protótipo, relativo a API de áudio, confirmou
-as indicações de \citet{html5mostwanted} que afirma que a API de som
-é boa se você deseja apenas tocar alguma música, mas se você está
-lançando eventos em um jogo ela ainda é problemática.
+Tendo em mente esta característica limitante do elemento áudio,
+durante a concepção do protótipo foi utilizada a API de áudio.
+Infelizmente algumas vezes o som não é executado ou demora até
+executar de modo que é executado ao mesmo tempo que o próximo
+som (\limitation{soundAPIConflicts}). A experimentação do
+protótipo, relativo a API de áudio, confirmou as indicações de
+\citet{html5mostwanted} que afirma que a API de som é boa se você
+deseja apenas tocar alguma música, mas se você está lançando eventos
+em um jogo ela ainda é problemática.
 
 Outro problema de áudio em HTML5 são os codecs. Alguns
 navegadores favorecem formatos OGG (vorbis) e outros favorecem o
@@ -381,7 +380,7 @@ som ou vídeo simultaneamente \autocite{unsolvedMediaHtmlIssues}
 \subsection{Vídeo}
 
 O suporte a vídeo, apesar de estar melhorando, ainda é rudimentar.
-No Silverlight existem uma coleção de possibilidades como aplicar
+No Silverlight existe uma coleção de possibilidades como aplicar
 shaders diretamente no vídeo \autocite[p. 8]{researchOnHtml}
 (\limitation{noEffectsOnVideo}). Não obstante, efeito similar
 a shaders em vídeo é atingido através da importação de
@@ -404,7 +403,7 @@ respectivamente.
 O Safari do IOS também contém problemas exclusivos de vídeo. Segundo
 \citet{unsolvedMediaHtmlIssues} não é possível capturar frames de
 vídeo usando o método \textit{drawImage} do canvas. Também não é
-possível pré carregar arquivos de vídeo sem iteração do usuário
+possível pré carregar arquivos de vídeo sem interação do usuário
 (\limitation{safariVideoMissingControlAndCanvas}).
 
 Para os raros casos onde o suporte a vídeo não existe,
