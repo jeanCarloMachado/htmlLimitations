@@ -3,7 +3,6 @@ all: pdf
 pdf:
 	bibtex tcc ; exit 0
 	pdflatex tcc.tex
-	zathura tcc.pdf
 
 clean:
 	rm -rf tcc.bbl
