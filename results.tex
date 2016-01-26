@@ -681,7 +681,7 @@ Código & Descrição & Existe solução ou contorno? \\ \hline
 \Cref{limitation:jsSpecificationCycle} & Toma-se um tempo substancial para obter um consenso na criação de especificações & Não \\ \hline
 \Cref{limitation:jsImplementaionCycle} & O suporte as novas especificações muitas vezes demora para ser implementado & Sim \\ \hline
 \Cref{limitation:discoverErrorsWhileRunning} & Por ser interpretado, erros no código JavaScript só podem ser descobertos em tempo de execução & Parcial \\ \hline
-\Cref{limitation:passCompleteObjectsOnSockets} & Impossibilidade de passar objetos completos em WebSockets & Parcial \\ \hline
+\Cref{limitation:passCompleteObjectsOnSockets} & Impossibilidade de passar objetos completos em WebSockets & Não \\ \hline
 \Cref{limitation:runScriptsOnlyOnTheEndOfTheProcessment} & Scripts só podem ser rodados com segurança no final da renderização & Parcial \\ \hline
 \Cref{limitation:harderToDoMaintainence} & A manutenibilidade de JavaScript tende a ser pior do que a de outras linguagens comuns como C\# & Sim \\ \hline
 \Cref{limitation:NANPropagation} & Propagação de valores inválidos NAN & Parcial \\ \hline
@@ -697,8 +697,8 @@ Código & Descrição & Existe solução ou contorno? \\ \hline
 \Cref{limitation:hardToUseWebGL} & Para construir jogos é muito difícil utilizar WebGL diretamente & Sim \\ \hline
 \Cref{limitation:limitedToRecentThingsWebgl} & WebGl não funciona em placas gráficas antigas  & Não \\ \hline
 \Cref{limitation:incompleteSupportWebgl} & Em muitas plataformas o suporte a WebGl é incompleto & Parcial \\ \hline
-\Cref{limitation:soundAPIConflicts} & A API de Audio é problemática com sons frequentes no Android & Não \\ \hline
-\Cref{limitation:bestAudioCompressionNotSupportedByAllBrowsers} & Não existe um único codec moderno suportado em todos os navegadores & Parcial \\ \hline
+\Cref{limitation:soundAPIConflicts} & A API de Audio é problemática com sons frequentes & Não \\ \hline
+\Cref{limitation:bestAudioCompressionNotSupportedByAllBrowsers} & Não existe um único codec de áudio moderno suportado em todos os navegadores & Parcial \\ \hline
 \Cref{limitation:limitedMultimidiaControlOnSafari} & O Safari conta com problemas de controle de execução de multimídia & Não \\ \hline
 \Cref{limitation:noEffectsOnVideo} & Não é possível aplicar shaders diretamente em vídeo & Sim \\ \hline
 \Cref{limitation:videoCodecs} & Falta de consenso sobre um codec de vídeo padrão & Não \\ \hline
@@ -711,17 +711,17 @@ Código & Descrição & Existe solução ou contorno? \\ \hline
 \Cref{limitation:indexedDbNoLike} & Não é possível realizar buscas em texto com o IndexedDB & Não \\ \hline
 \Cref{limitation:noErrorMessagesOffline} & Erros nas configurações do manifesto offline não contém mensagens descritivas & Não \\ \hline
 \Cref{limitation:orientationIsntReady} & A implementação da API de orientação é divergente entre os navegadores & Sim \\ \hline
-\Cref{limitation:checkResourcesOnlyOnJavascrit} & Checagem de recursos só por JavaScript força a implementação de markup em scripts & Não \\ \hline
+\Cref{limitation:checkResourcesOnlyOnJavascrit} & Checagem de recursos exclusivamente por JavaScript força a implementação de markup em scripts & Não \\ \hline
 \Cref{limitation:noCanvas2DIsnpectorOnipresent} & Não existe inspetor Canvas 2D multiplataforma para navegadores & Parcial \\ \hline
 \Cref{limitation:multiTouch} & Scroll juntamente com outros gestos não funciona corretamente na maioria dos navegadores & Sim \\ \hline
-\Cref{limitation:gamepadObject} & Não existe forma padronizada de detectar a entrada e saída de controles nos navegadores & Não \\ \hline
+\Cref{limitation:gamepadObject} & Não existe forma padronizada de detectar a entrada e saída de \textit{gamepads} nos navegadores & Não \\ \hline
 \Cref{limitation:desktopIcon} & Não existe forma padronizada de adicionar ícones de aplicativos Web a área de trabaho & Não \\ \hline
 \Cref{limitation:monetizationDifferent} & Jogos exclusivamente Web dificilmente são monetizados da forma convencional & Parcial \\ \hline
 \caption{Lista de problemas e limitações}
 \label{table:limitations}
 \end{longtable}
 
-Das limitações dispostas no quadro \ref{table:technologies},
+Das limitações dispostas no quadro \ref{table:limitations},
 aquelas resolvidas parcialmente identificam que o problema
 pode ser contornado em partes, ou então que o problema é
 contornado de forma inesperada e não intuitiva. Como a utilização
