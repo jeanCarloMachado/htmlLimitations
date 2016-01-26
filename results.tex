@@ -414,25 +414,25 @@ recorre à flash para apresentar o conteúdo.
 \section{Armazenamento}
 
 Não existe opção oficial que permita a utilização de tecnologias
-SQL para Frontend (\limitation{noSqlSupport}). O WebSQL foi uma
+SQL para o lado do cliente (\limitation{noSqlSupport}). O WebSQL foi uma
 tentativa nesta direção mas, visto que não continha mais de uma
-implementação, foi descontinuado. Apesar de depreciado o Web SQL ainda
-é usado por muitos desenvolvedores e mantido por alguns navegadores,
-todavia, os desenvolvedores que procedem desta maneira ficam à mercê
-dos caprichos dos navegadores não podendo contar com a força de um
+implementação, foi descontinuado. Apesar de depreciado, o Web SQL ainda
+é usado por muitos desenvolvedores e mantido por alguns navegadores.
+Todavia, os desenvolvedores que procedem desta maneira ficam à mercê
+dos caprichos dos navegadores, não contando com a força de um
 órgão regulador para suportar a tecnologia. SQL seria interessante pois
 muitos desenvolvedores tem experiência com este tipo de tecnologia e
 por SQL permitir filtragem e correlacionamento de dados de uma forma
 flexível e poderosa.
 
 Uma outra característica da Web que pode afetar negativamente
-aplicações que utilizam o persistência local de dados é que o
+aplicações que utilizam  persistência local de dados é que o
 usuário pode configurar o navegador para não aceitar armazenamento
-para determinado domínio, possivelmente comprometendo a experiência
+para determinado domínio. Possivelmente comprometendo a experiência
 de determinada aplicação. Esta característica é muito diferente do
 que geralmente é oferecido em aplicações desktop, onde a aplicação
 determina o que precisa usar sem necessitar de consenso do usuário, que
-por sua vez pode escolher usar os não a aplicação.
+por sua vez pode escolher usar ou não a aplicação.
 
 \subsection{Web Storage}
 
@@ -444,11 +444,11 @@ Storage (\limitation{webStorageQueryLimit}).
 
 Outra limitação do Web Storage é que todas as informações são
 guardadas no formato texto (\limitation{webStorageStringOnly}). Isso
-força a converter os valores toda a vez que algo for armazenado ou
-recuperado \autocite{gameAssetManagement}. No protótipo isso não foi
-problemático pois não existe grande manipulação sobre os dados. Mas
-no caso de jogos mais complexos esta característica do Web Storage pode
-ser uma limitação substancial.
+força os desenvolvedores a converter os valores toda a vez que algo for
+armazenado ou recuperado \autocite{gameAssetManagement}. No protótipo
+isso não foi problemático pois não existe grande manipulação sobre
+os dados. Mas no caso de jogos mais complexos esta característica do
+Web Storage pode ser uma limitação substancial.
 
 \subsection{IndexedDB}
 
@@ -462,11 +462,11 @@ SQL (\limitation{indexedDbNoLike}).
 
 Outro problema encontrado durante a pesquisa é que no Firefox existe
 uma pequena probabilidade de os dados se perderem. Isso se dá pois a
-API não espera confirmação do sistema operacional para considerar
-um dado válido, essa foi uma escolha em detrimento de performance.
-Este comportamento pode ser modificado mas é a forma padrão de
-funcionamento e os desenvolvedores podem não estar considerando esta
-peculiaridade.
+API não espera confirmação do sistema operacional para considerar um
+dado válido, essa foi uma escolha dos desenvolvedores do navegador para
+obter um ganho em performance. Este comportamento pode ser modificado,
+mas é a forma padrão de funcionamento, e os desenvolvedores podem não
+estar considerando esta peculiaridade.
 
 \section{Offline}
 
@@ -508,7 +508,7 @@ especificação e os navegadores evoluírem.
 \begin{quote}
 Grande parte da detecção de funcionalidades é feita através de
 JavaScript, isso força os desenvolvedores a criarem pelo menos parte da
-marcação em JavaScript, isso pode ser um fator limitante para o uso
+marcação em JavaScript, o que pode ser um fator limitante para o uso
 generalizado de HTML5.
 \end{quote}
 
@@ -522,11 +522,12 @@ viável.
 \section{Debug}
 
 Com o depurador remoto do Google Chrome foi observado uma falta de
-sincronia nas taxas de atualização da imagem no computador. Os
-efeitos do CSS não são bem apresentados sendo provavelmente difícil
-depurar animações. Em alguns casos quando a tela foi modificada
-substancialmente (com nas mudanças de tela) a mudança de estado no
-computador levou vários segundos para ser atualizada.
+sincronia nas taxas de atualização da imagem no computador. Os efeitos
+do CSS não são bem apresentados sendo provavelmente difícil depurar
+animações. Durante o desenvolvimento do protótipo, em alguns casos
+quando a tela era modificada substancialmente (com nas trocas de tela),
+a mudança de estado no computador levou vários segundos para ser
+atualizada.
 
 Outro problema do depurar do Chrome é que não existe inspetor
 nativo de canvas. O inspetor embutido do Google Chrome foi
