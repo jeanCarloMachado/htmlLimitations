@@ -1,6 +1,6 @@
 Este capítulo tem por objetivo detalhar os aspectos do desenvolvimento
 do protótipo. Sua mecânica, funcionamento, decisões tecnológicas,
-diagramas, entre outros aspectos serão tratados aqui.
+diagramas, entre outras características serão tratadas aqui.
 
 \section{Mecânica}
 
@@ -86,18 +86,31 @@ desenvolvimento na plataforma Desktop pois esta contém o maior número
 de ferramentas de desenvolvimento nativas que não requerem
 configuração especial.
 
-O primeiro passo foi a criação do documento HTML. Para a
-representação das telas do jogo foram utilizados elementos
-\textit{div} dentro do arquivo \textit{index.html}. Conter todas
-as telas em único HTML caracteriza o jogo como uma aplicação de
-página única (\textit{Single Page Application}). Alternativamente,
-poderia se depender de um servidor para mandar as páginas prontas,
-mas isso distribui a complexidade do sistema para tecnologias do
-lado do servidor, distanciando-se da proposta de um jogo construído
-exclusivamente com as tecnologias da Web.
+Antes focar no desenvolvimento do software, foi configurado um ambiente
+automatizado com o Grunt, com plugins de minificação e empacotamento
+de JavaScript e CSS \footnote{Para mais informações sobre o Grunt
+veja os apêndices}. O Grunt foi configurado para disponibilizar a
+aplicação para distribuição dentro do diretório \textit{dist/web}.
+Uma vez funcionando a distribuição Web, foi feita a integração para
+o PhoneGap Build. Para tanto foi utilizado um \textit{makefile} que
+simplesmente copia os arquivos de distribuição da Web, gerados pelo
+Grunt, e o arquivo de metadados do PhoneGap Build, e cria a árvore de
+arquivos padronizada que o PhoneGap Build requer. Além do ambiente
+automatizado, foi utilizado um servidor Web Apache através do docker
+para testar a aplicação.
+
+O primeiro passo, na concepção do software propriamente dito, foi
+a criação do documento HTML. Para a representação das telas
+do jogo foram utilizados elementos \textit{div} dentro do arquivo
+\textit{index.html}. Conter todas as telas em único HTML caracteriza
+o jogo como uma aplicação de página única (\textit{Single Page
+Application}). Alternativamente, poderia se depender de um servidor para
+mandar as páginas prontas, mas isso distribui a complexidade do sistema
+para tecnologias do lado do servidor, distanciando-se da proposta de um
+jogo construído exclusivamente com as tecnologias da Web.
 
 Aplicativos SPA introduzem novos desafios. Por exemplo, o botão
-de voltar perde sua utilização, visto que não se está trafegando
+de voltar perde sua utilidade, visto que não se está trafegando
 de uma página a outra, somente em partes de uma mesma página. HTML5
 provê uma API em JavaScript para manipular o histórico que pode
 resolver este problema. Entretanto, no protótipo não adicionamos
@@ -151,11 +164,10 @@ de todos os recursos é disparado o evento \textit{window.onload},
 neste momento carrega-se a \textit{div} da partida e dá-se início a mesma.
 
 Durante esta fase do desenvolvimento também foram adicionados
-\textit{listeners} aos demais elementos interativos do jogo, como
+\textit{listeners} aos demais elementos interativos do jogo, como no
 clicar nas configurações e nos botões de certo e errado da página
-principal. Deixando a página pronta para receber a funcionalidade
-propriamente dita.
-
+principal. Deixando as telas prontas para receber as funcionalidades
+propriamente ditas.
 
 Com esqueleto da aplicação definido foi introduzida a lógica
 de negócio. A figura \ref{fig:simpleDiagram} apresenta a
@@ -259,8 +271,8 @@ A classe \textit{StatementGenerator} conta com um método
 simboliza a dificuldade da equação. A cada resposta dada pelo usuário,
 armazenada no objeto \textit{Match}, a dificuldade é incrementada
 e repassada para o gerador. O valor da dificuldade é utilizado
-internamente no \textit{StatementGenerator} para selecionar qual
-operador será utilizado e o tamanho do multiplicador dos números
+internamente no \textit{StatementGenerator} para selecionar quais
+operadores serão utilizados e o tamanho do multiplicador dos números
 que compõem as equações. Para colocar claramente: as equações
 são geradas através da randomização de valores e operadores (com
 suas respectivas dificuldades processadas). Segue-se com a execução da
@@ -296,7 +308,7 @@ partida.
     \label{fig:counter}
 \end{figure}
 
-Para melhorar a experiência em desktops foram adicionados controles de
+Para melhorar a usabilidade em desktops foram adicionados controles de
 teclado além dos já presentes botões na interface, possibilitando que
 o usuário utilize o teclado além do mouse. Quando o usuário utilizar
 a seta para esquerda ou direita os botões Sim ou Não, respectivamente,
@@ -320,24 +332,13 @@ desenvolvimento de jogos multiplataforma é utilizado em fornecer uma
 experiencia rica em interatividade, que faça uso das peculiaridades de
 cada plataforma.
 
-Durante o desenvolvimento foram utilizadas funções imediatamente
-invocadas para declarar as classes. Isso se demonstrou uma boa forma
-de separar os objetos, tornando o conflito de variáveis globais um
-problema inexistente. Outro aspecto positivo foi a utilização de
-um meta objeto para encapsular os demais, similar ao conceito de
-\textit{namespaces}, neste caso utilizei o nome MyMath garantindo que
-problemas de conflitos de nomes não aconteçam.
+Durante todo o processo de desenvolvimento e validação, a aplicação
+foi testada em dispositivos móveis através do DevTools do Google
+Chrome. Utilizando as opções de inspeção de dispositivos remotos, o
+DevTools permitiu conferir se o jogo funcionava corretamente utilizando
+um dispositivo real, na versão alvo do Android, enquanto no conforto de
+um ambiente de desenvolvimento desktop.
 
-Ao final do desenvolvimento foi feita a integração do Grunt com
-plugins de minificação de JavaScript e CSS \footnote{Para mais
-informações sobre o Grunt veja os apêndices}. O grunt foi configurado
-para disponibilizar a aplicação para distribuição dentro do
-diretório \textit{dist/web}. Depois de a disponibilização Web estar
-funcionando, foi feita a integração para o PhoneGap Build. Para
-tanto foi utilizado um makefile que simplesmente copia os arquivos de
-distribuição da Web, gerados pelo grunt, e o arquivo de metadados do
-Phonegap Build, e cria a árvore de arquivos padronizada que o Phonegap 
-Build requer.
 
 \subsection{Performance}
 
