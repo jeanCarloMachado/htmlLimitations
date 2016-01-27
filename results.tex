@@ -745,24 +745,32 @@ aquelas resolvidas parcialmente identificam que o problema pode
 ser contornado em partes, ou então que o problema é contornado
 de forma inesperada e não intuitiva. Como a utilização de
 um depurador internamente no código, no caso da limitação
-\Cref{limitation:noCanvas2DIsnpectorOnipresent}. As limitações as
-quais não tenham solução, em muitos casos, são problemas que
-podem vir a ser solucionados no futuro. Como no caso da limitação
-\Cref{limitation:gamepadObject}, que as diferenças se dão em grande
-parte por a especificação não estar pronta.
+\Cref{limitation:noCanvas2DIsnpectorOnipresent}. 
 
-A distribuição do quado é a seguinte: 47\% atualmente não são
+A distribuição do quadro é a seguinte: 47\% atualmente não são
 resolvidas de forma alguma, 33\% são resolvidas parcialmente e 19\%
 são totalmente contornáveis.
 
-Algumas possibilidades que são triviais em ambientes desktop podem
-tornar-se fatores limitantes na plataforma Web. Talvez a forma mais
-expressiva deste problema se dá com tecnologias que de alguma forma
-podem ser consideradas inseguras. Como, até recentemente, era o caso
-do controle de tela cheia através de JavaScript (\Cref{limitation:fullscreenManagement}). Em plataformas nativas esse
+Apesar da parcela de limitações não contornáveis ser substancial,
+muitas delas são problemas relativos a fase prematura de suas
+especificações e, ao que tudo indica, serão resolvidos com o passar
+do tempo. Como no caso da limitação \Cref{limitation:gamepadObject},
+que as diferenças se dão em grande parte por a especificação não
+estar pronta.
+
+Talvez as limitações mais difíceis de contornar sejam aqueles que
+entram em conflito com as filosofias da Web. Algumas possibilidades
+que são triviais em ambientes desktop podem tornar-se fatores
+limitantes devido a estas filosofias. Possivelmente a forma mais
+expressiva deste problema se dá com tecnologias que de alguma
+forma podem ser consideradas inseguras. Como, até recentemente,
+era o caso do controle de tela cheia através de JavaScript
+(\Cref{limitation:fullscreenManagement}). Em plataformas nativas esse
 controle é geralmente garantido. Já na Web, um dos argumentos contra
 a sua especificação era que poderia ser um problema de segurança
 permitir o uso de Fullscreen via JavaScript. Felizmente com o avanço de
 especificações como a (\textit{Permissions API}), as tecnologias, ao
-invés de serem privadas de existir, tendem a cada vez mais requisitar o
-consenso do usuário para sua utilização.
+invés de serem privadas de existir, tendem a cada vez mais requisitar
+o consenso do usuário para sua utilização. Isso pode ser abstraído
+como uma tendência geral, de os problemas serem convertidos em novas
+especificações e, aos poucos, sendo eliminados da Web.
