@@ -597,23 +597,23 @@ para o IOS é rudimentar.
 
 \subsection{Monetização}
 
-Outro aspecto que pode ser limitante para aplicações Web é
-sua forma de monetização. É muitas vezes difícil encontrar
-oportunidades financeiras em jogos para navegador, visto que não
-se pode vender pacotes para o usuário baixar \autocite[p. 44]{gameCommunities}
-(\limitation{monetizationDifferent}).
+Outro aspecto que pode ser limitante para aplicações Web é sua forma
+de monetização. É mais complexo monetizar jogos para navegadores,
+visto que não se pode vender pacotes para o usuário baixar
+\autocite[p. 44]{gameCommunities}.
 
 Dado este este problema, desenvolvedores são muitas vezes forçados
 a criar formas alternativas de lucro. A monetização de aplicativos
 Web é geralmente feita através de propagandas \autocite[p.
 44]{gameCommunities}. Outra saída é a venda de recursos extra,
-\citet[p. 44]{gameCommunities} afirma que a venda de moeda virtual é
-uma forma comum de monetização em jogos.
-
-De outra forma, jogos Web podem ser integrados pelos desenvolvedores
-a sistemas de pagamento, mas possivelmente aumentado a complexidade
-da aplicação. Ou se optarem pela arquitetura híbrida, podem ser
-integrados a algum mercado como o do Android ou da Apple.
+\citet[p. 44]{gameCommunities} afirma que a venda de moeda virtual
+é uma forma comum de monetização em jogos. Também podem ser
+integrados a sistemas de pagamento, mas possivelmente aumentado a
+complexidade da aplicação. Ou se optarem pela arquitetura híbrida,
+podem ser integrados a algum mercado como o do Android ou da Apple.
+Alternativamente, se estiverem dispostos a relegar parcela do lucro
+ao Facebook, podem ser integrados a plataforma e usufruir de seus
+usuários.
 
 \section{Outras Limitações}
 
@@ -631,11 +631,20 @@ para o HTML5.
 
 \section{Revisão das Limitações}
 
-O quadro 4.1 é um comparativo das tecnologias
-pesquisadas e seu suporte. As informações de suporte foram extraídas
-do site \textit{Can I Use} e os navegadores populares em questão são:
-Internet Explorer (11), Edge (13), Firefox (43), Google Chorme (47),
-Safari (9) e Opera (34).
+Nesta seção será feita uma análise sobre as limitações
+encontradas. Nem todas as limitações registradas previamente aparecem
+nos quadros adiante pois algumas são específicas demais para se
+encaixarem como limitações da Web. Por exemplo, os problemas no
+depurador do Chrome. Apesar de serem limitações concretas para
+usuários do Chrome, e terem afetado o desenvolvimento do protótipo,
+não se tratam de problemas relativos a Web, outrossim ao navegador em
+específico.
+
+O quadro 4.1 é um comparativo das tecnologias pesquisadas e seu
+suporte. As informações de suporte foram extraídas, em grande parte, do site
+\textit{Can I Use} e os navegadores populares em questão são: Internet
+Explorer (11), Edge (13), Firefox (43), Google Chorme (47), Safari (9) e
+Opera (34).
 
 \begin{table}[H]
 \begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|  }
@@ -643,10 +652,12 @@ Safari (9) e Opera (34).
 Tecnologia & Suporte nas últimas versões estáveis dos navegadores populares & Polyfills disponíveis  para versões antigas \\ \hline
 Canvas & Sim & Sim \\ \hline
 SVG & Sim & Sim \\ \hline
-Gamepad & Não & Sim \\ \hline
 WebGL & Parcial & Sim \\ \hline
+Gamepad & Não & Sim \\ \hline
 WebSockets & Sim & Sim \\ \hline
 IndexedDB & Parcial & Sim \\ \hline
+Web Storage & Sim & Sim \\ \hline
+Offline & Sim & Não \\ \hline
 WebCL & Não & Não \\ \hline
 WebVR & Não & Não \\ \hline
 WebAssembly & Não & Sim \\ \hline
@@ -655,19 +666,27 @@ Tag áudio & Sim & Sim \\ \hline
 Vídeo & Não & Sim \\ \hline
 Prefetch & Não & Sim \\ \hline
 Web Animations & Não & Sim \\ \hline
-WebWorkers & Sim & Sim\\ \hline
+Web Workers & Sim & Sim\\ \hline
 \end{tabular}
 \label{table:apisSupport}
 \caption{Tecnologias dos jogos e seu suporte}
 \end{table}
 
-Com este comparativo fica visível que, mesmo em alguns casos não
-existindo suporte nativo ou ele sendo incompleto e com limitações,
-na vasta maioria dos casos, é possível utilizar tecnologias da Web
-direcionadas para o desenvolvimento de jogos.
+%total: 17
+%current yes with polyfill: 14
 
-O quadro \ref{table:limitations} é um resumo das limitações mais relevantes 
-encontradas e se as mesmas podem ser contornadas ou não.
+Das tecnologias citadas acima 82\% tem suporte nos navegadores
+populares, sendo através de implementação nativa ou através de
+polyfills. Com este comparativo fica visível que, mesmo em alguns
+casos não existindo suporte nativo ou ele sendo incompleto e com
+limitações, na vasta maioria dos casos, é possível utilizar
+tecnologias da Web direcionadas para o desenvolvimento de jogos.
+
+O quadro \ref{table:limitations} é um resumo das limitações mais
+relevantes encontradas e se as mesmas podem ser contornadas ou não.
+Cada limitação apresentada a seguir é acompanhada de seu código que
+serve de ligação ao trecho do texto onde a limitação foi detalhada.
+
 \begin{longtable}[H]{| p{.09\textwidth} | p{.53\textwidth}| p{.11\textwidth} |}
 \hline
 Código & Descrição & Existe solução ou contorno? \\ \hline
@@ -713,22 +732,28 @@ Código & Descrição & Existe solução ou contorno? \\ \hline
 \Cref{limitation:multiTouch} & Scroll juntamente com outros gestos não funciona corretamente na maioria dos navegadores & Sim \\ \hline
 \Cref{limitation:gamepadObject} & Não existe forma padronizada de detectar a entrada e saída de \textit{gamepads} nos navegadores & Não \\ \hline
 \Cref{limitation:desktopIcon} & Não existe forma padronizada de adicionar ícones de aplicativos Web a área de trabaho & Não \\ \hline
-\Cref{limitation:monetizationDifferent} & Jogos exclusivamente Web dificilmente são monetizados da forma convencional & Parcial \\ \hline
 \caption{Lista de problemas e limitações}
 \label{table:limitations}
 \end{longtable}
 
+%total:42
+%parcial:14,33%
+%sim: 8,19%
+%não 20,47%
 Das limitações dispostas no quadro \ref{table:limitations},
-aquelas resolvidas parcialmente identificam que o problema
-pode ser contornado em partes, ou então que o problema é
-contornado de forma inesperada e não intuitiva. Como a utilização
-de um depurador internamente no código, no caso da limitação
-\Cref{limitation:noCanvas2DIsnpectorOnipresent}.
+aquelas resolvidas parcialmente identificam que o problema pode
+ser contornado em partes, ou então que o problema é contornado
+de forma inesperada e não intuitiva. Como a utilização de
+um depurador internamente no código, no caso da limitação
+\Cref{limitation:noCanvas2DIsnpectorOnipresent}. As limitações as
+quais não tenham solução, em muitos casos, são problemas que
+podem vir a ser solucionados no futuro. Como no caso da limitação
+\Cref{limitation:gamepadObject}, que as diferenças se dão em grande
+parte por a especificação não estar pronta.
 
-As limitações as quais não tenham solução, em muitos casos, são
-problemas que podem vir a ser solucionados no futuro. Como no
-caso da limitação \Cref{limitation:gamepadObject}, que as diferenças
-se dão em grande parte por a especificação não estar pronta.
+A distribuição do quado é a seguinte: 47\% atualmente não são
+resolvidas de forma alguma, 33\% são resolvidas parcialmente e 19\%
+são totalmente contornáveis.
 
 Algumas possibilidades que são triviais em ambientes desktop podem
 tornar-se fatores limitantes na plataforma Web. Talvez a forma mais
