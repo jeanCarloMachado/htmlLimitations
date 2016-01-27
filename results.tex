@@ -67,7 +67,7 @@ Uma solução para este problema é utilizar frameworks como o jQuery
 Mobile e Kendo UI Mobile \footnote{Mais informações sobre o Kendo UI
 e jQuery Mobile podem ser encontradas nos apêndices}. Estes frameworks
 permitem criar elementos típicos de interfaces mobile como listas
-com scroll, botões e transições com uma aparência nativa de forma
+com scroll, botões e transições, com aparência nativa, de forma
 relativamente fácil \autocite{publishHtml5}.
 
 Em alguns casos o tamanho das telas pode ser um fator limitante,
@@ -99,14 +99,14 @@ motores de renderização é um processo entediante e propenso à
 duplicação e erros. A biblioteca \textit{-prefix-free} é uma
 possível solução para este problema, detectando automaticamente
 quando prefixos são necessários e adicionado-os em tempo de execução
-\footnote{Mais informações sobre a biblioteca pode ser encontradas nos
+\footnote{Mais informações sobre a biblioteca \textit{-prefix-free} podem ser encontradas nos
 apêndices}.
 
 \section{JavaScript}
 
 O JavaScript, por ser uma linguagem desenvolvida por consenso,
 tem um ciclo de vida de atualizações demorado; pois necessita
-que todos os interessados na especificação entrem em acordo
+que todos os envolvidos na especificação entrem em acordo
 (\limitation{jsSpecificationCycle}). Com a especificação
 pronta, outra fase demorada é a adoção das tecnologias
 nos navegadores (\limitation{jsImplementaionCycle}). O site
@@ -137,9 +137,9 @@ converter os dados em objetos em cada ponta do processamento, mas isto
 adiciona complexidade ao software.
 
 \citet{howBrowsersWork} cita à respeito de scripts requerendo informações de
-estilo durante o processo de parse. Se o estilo ainda não foi carregado
+estilo durante o processo de parse: \textquotedbl se o estilo ainda não foi carregado
 o script vai utilizar informações erradas, causando uma série de
-problemas (\limitation{runScriptsOnlyOnTheEndOfTheProcessment}). Pode-se
+problemas\textquotedbl{} (\limitation{runScriptsOnlyOnTheEndOfTheProcessment}). Pode-se
 contornar este problema executando scripts exclusivamente ao final da
 renderização do HTML.
 
@@ -342,7 +342,7 @@ Além dos problemas citados, o suporte a especificação ainda é
 incompleto em vários navegadores (\limitation{incompleteSupportWebgl}).
 CocoonJS é uma aplicativo híbrido que preenche a fraca implementação
 de WebGL nos dispositivos móveis. Habilitando assim, se desenvolver em WebGL
-em dispositivos legados à partir do Android 2.3 e IPhone 5.
+em dispositivos legados a partir do Android 2.3 e IPhone 5.
 
 \subsection{Áudio}
 
@@ -516,7 +516,7 @@ Para resolver este problema, o ideal seria que cada tecnologia contasse
 com formas de detectar as funcionalidades que comporta. Não obstante,
 este tipo de mecanismo conflita com outros princípios da Web. Pelo
 fato de o HTML ser uma linguagem fundamentada exclusivamente em marcação
-e estrutura, adicionar estruturas de controle não é uma alternativa
+e estrutura, adicionar condicionais não é uma alternativa
 viável.
 
 \section{Debug}
@@ -560,7 +560,7 @@ projeto Canvas Interceptor podem ser encontradas no seguinte endereço
 \citet[p. 9]{aSeriousContender} cita que: fazer scroll juntamente
 com gestos de ações similares é uma área onde o HTML ainda é
 fraco (\limitation{multiTouch}). O autor diz isso no sentido que os
-movimentos entram em conflito e os navegador não se comportam de forma
+movimentos entram em conflito e os navegadores não se comportam de forma
 similar. Para contornar este problema pode-se utilizar bibliotecas como
 o iScroll, TouchScroll, GloveBox, Sencha, jQuery Mobile, entre outros.
 
@@ -760,7 +760,7 @@ do tempo. Como no caso da limitação \Cref{limitation:gamepadObject},
 que as diferenças se dão em grande parte por a especificação não
 estar pronta.
 
-Talvez as limitações mais difíceis de contornar sejam aqueles que
+Talvez as limitações mais difíceis de contornar sejam aquelas que
 entram em conflito com as filosofias da Web. Algumas possibilidades
 que são triviais em ambientes desktop podem tornar-se fatores
 limitantes devido a estas filosofias. Possivelmente a forma mais
@@ -771,7 +771,7 @@ era o caso do controle de tela cheia através de JavaScript
 controle é geralmente garantido. Já na Web, um dos argumentos contra
 a sua especificação era que poderia ser um problema de segurança
 permitir o uso de Fullscreen via JavaScript. Felizmente com o avanço de
-especificações como a (\textit{Permissions API}), as tecnologias, ao
+especificações como a \textit{Permissions API}, as tecnologias, ao
 invés de serem privadas de existir, tendem a cada vez mais requisitar
 o consenso do usuário para sua utilização. Isso pode ser abstraído
 como uma tendência geral, de os problemas serem convertidos em novas

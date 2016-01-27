@@ -21,7 +21,7 @@ Jogos como o Math Workout e o Countdown para Android tem uma temática
 similar. Conquanto, o Math Workout não apresenta a resposta, sendo o
 papel do usuário computar a equação e digitar o resultado. Já o jogo
 Countdown apresenta um número final e requer que o usuário determine
-a equação que resultou no valor à partir de um dado conjunto de
+a equação que resultou no valor a partir de um dado conjunto de
 números e operadores. O jogo desenvolvido para o protótipo parece ter
 uma melhor jogabilidade em dispositivos móveis que ambos os jogos acima
 citados pois não requer a presença de um teclado numérico. Os botões
@@ -78,19 +78,20 @@ do diagrama de classes}.
 
 \section{Desenvolvimento}
 
-O desenvolvimento se deu com uma postura de melhoria progressiva
-criando primeiramente a versão mais simples possível para atingir as
-requisitos funcionais. A partir dessa versão, novos recursos foram
-sendo incrementados para melhorar a experiência do usuário. Iniciei o
-desenvolvimento na plataforma Desktop pois esta contém o maior número
-de ferramentas de desenvolvimento nativas que não requerem
-configuração especial.
+O desenvolvimento se deu com uma postura de melhoria progressiva criando
+incrementos funcionais periodicamente. O processo assimilou-se bastante
+ao método ágil SCRUM, com algumas diferenças notáveis, os tamanhos dos sprints
+foram flexíveis e não houve reunião de retrospectiva, devido a não
+haver uma equipe de desenvolvimento. Criou-se primeiramente um produto
+minimamente viável (MVP) e, a partir dele, novos recursos foram
+sendo adicionados a fim de melhorar a experiência do usuário. Os 
+passos que compuseram  os \textit{sprints} do processo serão descritos abaixo.
 
 Antes focar no desenvolvimento do software, foi configurado um ambiente
 automatizado com o Grunt, com plugins de minificação e empacotamento
 de JavaScript e CSS \footnote{Para mais informações sobre o Grunt
 veja os apêndices}. O Grunt foi configurado para disponibilizar a
-aplicação para distribuição dentro do diretório \textit{dist/web}.
+aplicação pronta para distribuição dentro do diretório \textit{dist/web}.
 Uma vez funcionando a distribuição Web, foi feita a integração para
 o PhoneGap Build. Para tanto foi utilizado um \textit{makefile} que
 simplesmente copia os arquivos de distribuição da Web, gerados pelo
@@ -99,15 +100,18 @@ arquivos padronizada que o PhoneGap Build requer. Além do ambiente
 automatizado, foi utilizado um servidor Web Apache através do docker
 para testar a aplicação.
 
-O primeiro passo, na concepção do software propriamente dito, foi
-a criação do documento HTML. Para a representação das telas
-do jogo foram utilizados elementos \textit{div} dentro do arquivo
-\textit{index.html}. Conter todas as telas em único HTML caracteriza
-o jogo como uma aplicação de página única (\textit{Single Page
-Application}). Alternativamente, poderia se depender de um servidor para
-mandar as páginas prontas, mas isso distribui a complexidade do sistema
-para tecnologias do lado do servidor, distanciando-se da proposta de um
-jogo construído exclusivamente com as tecnologias da Web.
+Iniciei o desenvolvimento na plataforma Desktop pois esta contém
+o maior número de ferramentas de desenvolvimento nativas que não
+requerem configuração especial. O primeiro passo, na concepção
+do software propriamente dito, foi a criação do documento HTML.
+Para a representação das telas do jogo foram utilizados elementos
+\textit{div} dentro do arquivo \textit{index.html}. Conter todas
+as telas em único HTML caracteriza o jogo como uma aplicação de
+página única (\textit{Single Page Application}). Alternativamente,
+poderia se depender de um servidor para mandar as páginas prontas,
+mas isso distribui a complexidade do sistema para tecnologias do
+lado do servidor, distanciando-se da proposta de um jogo construído
+exclusivamente com as tecnologias da Web.
 
 Aplicativos SPA introduzem novos desafios. Por exemplo, o botão
 de voltar perde sua utilidade, visto que não se está trafegando
@@ -261,7 +265,7 @@ de equações. A geração das equações é feita randomicamente e
 envolve duas classes: \textit{Statement} e \textit{StatementGenerator}.
 O objeto \textit{Statement}, é responsável por armazenar as
 informações de uma equação, à dizer: a afirmação sendo feita
-e se seu resultado está correto ou não (a reposta da afirmação).
+e se seu resultado está correto ou não.
 O objeto \textit{StatementGenerator} é responsável por gerar
 instâncias da classe \textit{Statement}.
 
@@ -397,8 +401,8 @@ descrita abaixo:
 
 Apesar de não fazer parte de nenhuma especificação, a maioria dos
 navegadores implementa a possibilidade de desativar a seleção de texto
-na tela. Em jogos essa possibilidade é útil, pois não é natural e
-possivelmente frustrante selecionar texto ao tentar interagir com a
+na tela. Em jogos essa possibilidade é útil, pois não é natural, e
+possivelmente frustrante, selecionar texto ao tentar interagir com a
 interface. \citet{html5mostwanted} cita que desabilitar a seleção de
 texto em jogos é uma otimização importante para a experiência do
 usuário. Para fazê-lo, pode-se utilizar as regras CSS demonstradas
