@@ -890,10 +890,10 @@ nativa eliminando grande parte das abstrações que o JavaScript
 traz embutidas.
 
 Visto que os desenvolvedores de motores JavaScript terão que colocar
-o código do Web Assembly na mesma base que o do JavaScript as
+o código do Web Assembly na mesma base que o do JavaScript, as
 expectativas são de que o JavaScript consiga aproveitar partes
 da implementação do Web Assembly incrementando a performance do
-JavaScript, sendo assim uma situação ganha/ganha.
+JavaScript, sendo assim uma situação onde ambos ganham.
 
 A aplicabilidade do Web Assembly em jogos em produção ainda
 é praticamente nula. Até então apenas um polyfill do Web
@@ -958,7 +958,7 @@ fornecer páginas HTML para o navegador processar. A comunicação entre
 o navegador e o servidor Web se dá através da troca de mensagens no
 protocolo HTTP.
 
-Nos navegadores os usuários necessitam saber o endereço de determinado
+Nos navegadores, os usuários necessitam saber o endereço de determinado
 servidor, ou utilizar buscadores para auxiliá-los. Este é um processo
 árduo para as plataformas móveis pois necessitam maior interação
 dos usuários, e não são “naturais” se comparado ao modo de
@@ -967,8 +967,8 @@ o aplicativo na loja e abrindo-o no sistema operacional\footnote{Algumas
 formas de contornar este problema serão descritos nas seção
 \ref{disponibilization}.}.
 
-Uma vez localizado o endereço o navegador manda uma mensagem em HTTP
-requisitando o conteúdo do determinado local. O servidor responde a
+Uma vez localizado o endereço, o navegador manda uma mensagem em HTTP
+requisitando o conteúdo de determinado local. O servidor responde a
 mensagem HTTP com um documento HTML e o cliente, ao receber, começa o
 processo de renderização. O processo de renderização é complexo e a
 grande maioria dos navegadores confia em bibliotecas especializadas para
@@ -984,7 +984,7 @@ Alguns motores de renderização incluem:
 \end{itemize}
 
 A renderização consiste na decodificação de um documento em HTML
-para sua representação memória e posterior pintura no espaço de tela
+para sua representação na memória e posterior pintura no espaço de tela
 do navegador. Interpretar os documentos é processo árduo e alguns
 motores dependem de bibliotecas externas para fazê-lo. 
 
@@ -1005,7 +1005,7 @@ JavaScript mais comuns.
     \item TraceMonkey: Criada pela Mozilla.
 \end{itemize}
 
-Cada uma dos motores citados acima são partes que compõem um
+Cada um dos motores citados acima são partes que compõem um
 navegador e em conjunto buscam cobrir as especificações da Web.
 Infelizmente a forma que as tecnologias são suportadas varia e algumas
 não estão presentes de qualquer forma nos navegadores. Conquanto,
@@ -1097,7 +1097,7 @@ armazenamento local.
 
 A quantidade de especificações que um aplicativo complexo
 como um jogo utiliza pode ser bem grande, e muitas vezes é
-difícil dizer qual quais navegadores implementam o quê. Uma
+difícil dizer quais navegadores implementam o quê. Uma
 boa referência do suporte a recursos nos navegadores é o site
 \url{http://caniuse.com/}. E uma lista com vasta quantidade de
 polyfills para as tecnologias da Web pode ser encontrada no site
@@ -1176,7 +1176,7 @@ tornou um padrão da OWP.
 Em um documento HTML, canvas é um retângulo onde pode-se usar
 JavaScript para desenhar \autocite[p. 113]{diveIntohtml}. Mais
 especificamente, o retângulo do canvas é um espaço vetorial cuja
-origem se da na esquerda superior. Normalmente cada unidade do plano
+origem se dá na esquerda superior. Normalmente cada unidade do plano
 cartesiano corresponde a um pixel no canvas \autocite{mdnCanvas}.
 Manipular o retângulo é uma analogia de como desenhar manualmente,
 move-se o \textquotedbl lápis\textquotedbl{} para o local desejado e traça-se os pontos onde
