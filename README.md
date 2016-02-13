@@ -5,11 +5,9 @@ Limitations.
 
 ##The prototype
 
-The prototype can be found
-[here](https://github.com/jeanCarloMachado/math-game).
+The prototype can be found [here](https://github.com/jeanCarloMachado/math-game).
 
-##PDF and Doc version
+##PDF version
 
-Here you can find the latest version in
-[pdf](https://github.com/jeanCarloMachado/tcc/blob/master/tcc.pdf).
+Here you can find the latest version in [pdf](https://github.com/jeanCarloMachado/tcc/blob/master/tcc.pdf).
 
