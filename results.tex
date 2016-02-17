@@ -1,7 +1,7 @@
 
 Muitas das limitações dos jogos multiplataforma não são
 problemas específicos dos jogos, mas aplicam-se a todos tipos
-de software \autocite[p. 3]{currentStateCrossPlatform}. Alguns
+de software \textsc{\autocite[p. 3]{currentStateCrossPlatform}}. Alguns
 problemas são inerentes da categoria multiplataforma \citet[p.
 7 ]{viabilityBusinessApplications} afirma que é geralmente muito
 mais complexo obter aparência nativa, funcionalidade e performance
@@ -35,7 +35,7 @@ mudou de um projeto local para utilizar o Chromium. Entretanto, grande
 parcela dos usuários Android ainda utilizam o sistema antigo o que
 força os desenvolvedores suportarem ambas as versões. É razoável
 afirmar que para o início de 2016 um terço dos usuários de Android
-ainda utilizem a versão antiga da WebView \autocite{chromeWebView}.
+ainda utilizem a versão antiga da WebView \textsc{\autocite{chromeWebView}}.
 
 O Crosswalk é uma tecnologia que pode resolver parcialmente o problema
 de suporte de funcionalidades em diversas versões de dispositivos.
@@ -68,7 +68,7 @@ Mobile e Kendo UI Mobile \footnote{Mais informações sobre o Kendo UI
 e jQuery Mobile podem ser encontradas nos apêndices}. Estes frameworks
 permitem criar elementos típicos de interfaces mobile como listas
 com scroll, botões e transições, com aparência nativa, de forma
-relativamente fácil \autocite{publishHtml5}.
+relativamente fácil \textsc{\autocite{publishHtml5}}.
 
 Em alguns casos o tamanho das telas pode ser um fator limitante,
 como por exemplo em jogos de estratégia. Estes jogos geralmente
@@ -171,7 +171,7 @@ O sistema de tipos do JavaScript também é problemático. Erros
 numéricos resultam no valor NaN (\textit{not a number}). Sendo que
 todas as operações com NaN como operadores irão retornar outro
 NaN. Isso torna a depuração de erros desnecessariamente complexa
-\autocite{html5mostwanted} (\limitation{NANPropagation}). Uma saída
+\textsc{\autocite{html5mostwanted} (\limitation{NANPropagation}}). Uma saída
 para este problema é checar constantemente os tipos de forma a
 assegurar-se que eles continuam válidos. Entanto, este processo
 pode se tornar burocrático e uma forma adicional de criar erros.
@@ -207,7 +207,7 @@ tipo da variável corretamente.
 Apesar da performance ter notavelmente melhorado, ainda é geralmente
 menos eficiente produzir animações em JavaScript do que utilizando
 transições e animações do CSS, que por sua vez são mais
-otimizadas e aceleradas via hardware \autocite{html5mostwanted}
+otimizadas e aceleradas via hardware \textsc{\autocite{html5mostwanted}}
 (\limitation{JSanimations}). O Web Assembly poderia resolver este problema,
 substituindo o JavaScript para os casos onde grande performance é
 necessária. Mas para isso o Web Assembly precisa evoluir em sua
@@ -259,7 +259,7 @@ muito complexos, onde posicionamento não seja uma fator crucial.
 
 \section{Canvas}
 
-Segundo \autocite{html5mostwanted}, os aspectos negativos do canvas são
+Segundo \textsc{\autocite{html5mostwanted}}, os aspectos negativos do canvas são
 que a performance varia de plataforma para plataforma e não existe
 implementação nativa para animações.
 
@@ -314,7 +314,7 @@ para dispositivos móveis do OpenGL não é possível utilizar
 muitos recursos especiais disponíveis para os ambientes desktop
 (\limitation{noWebglDesktopFunctions}). Como a definição de caminhos
 com a função \textit{glBegin} e a utilização de pontos flutuantes
-para calcular coordenadas de vértices \autocite{esVsGl}. Em outras
+para calcular coordenadas de vértices \textsc{\autocite{esVsGl}}. Em outras
 palavras, a especificação do WebGL é cortada por baixo. Visto que
 alguns dispositivos não tem performance utilizando estes recursos,
 nenhum dispositivo que use WebGL pode os desfrutar.
@@ -333,10 +333,10 @@ maneira simétrica nos navegadores que implementam a especificação.
 Pode haver diferenças substanciais de performance em plataformas
 diferentes e em navegadores diferentes. Para ver um programa em WebGL
 é necessário um navegador recente, uma placa gráfica recente e um
-sistema operacional que suporte a tecnologia \autocite{html5mostwanted}
+sistema operacional que suporte a tecnologia \textsc{\autocite{html5mostwanted}}
 (\limitation{limitedToRecentThingsWebgl}). Existe também uma lista de
 placas gráficas com \textit{drivers} bloqueados por não funcionarem
-corretamente no Firefox \autocite[p.42]{3daps}.
+corretamente no Firefox \textsc{\autocite[p.42]{3daps}}.
 
 Além dos problemas citados, o suporte a especificação ainda é
 incompleto em vários navegadores (\limitation{incompleteSupportWebgl}).
@@ -374,14 +374,14 @@ Além das restrições de codecs de áudio nos produtos da Apple,
 áudio, especificamente no Safari do IOS, contém alguns problemas
 específicos. Por exemplo, não é possível trocar o volume
 através de JavaScript, também não é possível tocar mais de um
-som ou vídeo simultaneamente \autocite{unsolvedMediaHtmlIssues}
+som ou vídeo simultaneamente \textsc{\autocite{unsolvedMediaHtmlIssues}}
 (\limitation{limitedMultimidiaControlOnSafari}).
 
 \section{Vídeo}
 
 O suporte a vídeo, apesar de estar melhorando, ainda é rudimentar.
 No Silverlight existe uma coleção de possibilidades como aplicar
-shaders diretamente no vídeo \autocite[p. 8]{researchOnHtml}
+shaders diretamente no vídeo \textsc{\autocite[p. 8]{researchOnHtml}}
 (\limitation{noEffectsOnVideo}). Não obstante, efeito similar
 a shaders em vídeo é atingido através da importação de
 vídeo dentro de um contexto WebGL \footnote{O endereço
@@ -438,14 +438,14 @@ por sua vez pode escolher usar ou não a aplicação.
 
 Muitos navegadores não permitem armazenar mais de 5MB por domínio
 em Web Storage, apesar da especificação permitir fazê-lo
-\autocite{gameAssetManagement} (\limitation{webStorageLimit}). Também
+\textsc{\autocite{gameAssetManagement} (\limitation{webStorageLimit}}). Também
 não é possível saber quanto espaço já foi consumido pelo Web
 Storage (\limitation{webStorageQueryLimit}).
 
 Outra limitação do Web Storage é que todas as informações são
 guardadas no formato texto (\limitation{webStorageStringOnly}). Isso
 força os desenvolvedores a converter os valores toda a vez que algo for
-armazenado ou recuperado \autocite{gameAssetManagement}. No protótipo
+armazenado ou recuperado \textsc{\autocite{gameAssetManagement}}. No protótipo
 isso não foi problemático pois não existe grande manipulação sobre
 os dados. Mas no caso de jogos mais complexos esta característica do
 Web Storage pode ser uma limitação substancial.
@@ -473,7 +473,7 @@ estar considerando esta peculiaridade.
 Nos arquivos de cache via manifestos, quando o download falha, o
 navegador emite um evento mas não há indicação de qual problema
 aconteceu (\limitation{noErrorMessagesOffline}). Isso pode tornar a
-depuração ainda mais complicada que o usual \autocite{diveIntohtml}.
+depuração ainda mais complicada que o usual \textsc{\autocite{diveIntohtml}}.
 Este problema aconteceu durante o desenvolvimento do protótipo e foi
 trabalhoso de depurar até descobrir que um arquivo estava faltando,
 e qual especificamente. Uma coleção de códigos de erro e suas
@@ -497,7 +497,7 @@ o suporte está longe de completo. Da mesma forma, existem
 diferenças substanciais nas implementações entre os navegadores
 (\limitation{orientationIsntReady}). Por exemplo, o Firefox e Google
 Chrome não manipulam ângulos da mesma forma. Outrossim, alguns
-eixos se comportam de maneiras opostas \autocite{mdnOrientation}. O
+eixos se comportam de maneiras opostas \textsc{\autocite{mdnOrientation}}. O
 polyfill \textit{gyronorm.js} é uma tentativa de normalizar o uso de
 dados de orientação nos navegadores que pode ser utilizada até a
 especificação e os navegadores evoluírem.
@@ -532,14 +532,14 @@ atualizada.
 Outro problema do depurar do Chrome é que não existe inspetor
 nativo de canvas. O inspetor embutido do Google Chrome foi
 removido pois continha comportamentos indesejáveis para os
-desenvolvedores do navegador \autocite{canvasinspector}. Os
+desenvolvedores do navegador \textsc{\autocite{canvasinspector}}. Os
 desenvolvedores mencionaram criar uma extensão para a funcionalidade
 mas até o tempo de desenvolvimento deste trabalho não havia
 nenhuma disponível. A única alternativa viável até o momento é
 utilizar uma versão antiga do Chromium. O Firefox introduziu uma
 ferramenta de inspeção para o canvas 2D em uma Conferência de
 desenvolvimento de jogos em São Francisco em 2014, mas até então a
-tecnologia não apareceu no navegador \autocite{firefoxCanvasDebug}.
+tecnologia não apareceu no navegador \textsc{\autocite{firefoxCanvasDebug}}.
 Atualmente a área de ferramentas para depuração do canvas
 2D está parcialmente comprometida por não existir um plugin
 de terceiro onipresente nos navegadores como o WebGl Inspector
@@ -570,7 +570,7 @@ A forma de gerenciar a conexão de Gamepads é diferente entre o Firefox
 e Google Chrome. No Firefox é lançado um evento toda a vez que o
 Gamepad é desconectado, já no Google Chrome é necessário verificar
 um vetor de gamepads pela existência do objeto de tempos em tempos
-\autocite{gamepad} (\limitation{gamepadObject}). Este problema é
+\textsc{\autocite{gamepad} (\limitation{gamepadObject}}). Este problema é
 reflexo da especificação ainda incompleta. Forçando os desenvolvedores
 a duplicarem a mesma atividade de formas diferentes.
 
@@ -600,7 +600,7 @@ para o IOS é rudimentar.
 Outro aspecto que pode ser limitante para aplicações Web é sua forma
 de monetização. É mais complexo monetizar jogos para navegadores,
 visto que não se pode vender pacotes para o usuário baixar
-\autocite[p. 44]{gameCommunities}.
+\textsc{\autocite[p. 44]{gameCommunities}}.
 
 Dado este este problema, desenvolvedores são muitas vezes forçados
 a criar formas alternativas de lucro. A monetização de aplicativos
