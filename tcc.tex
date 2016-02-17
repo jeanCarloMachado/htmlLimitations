@@ -3,6 +3,7 @@
 12pt,
 a4paper,
 portuges,
+%titlepage,
 % draft
 ]{report}
 
@@ -69,6 +70,9 @@ right=2cm
 \makeatother
 
 \usepackage{titlesec}
+
+\usepackage[titletoc,title]{appendix}
+
 \usepackage[final]{graphicx}
 \graphicspath{ {asset/} }
 %sort by alphabetic label, name, year, volume, title 
@@ -83,6 +87,7 @@ right=2cm
     \renewcommand{\figurename}{Figura}
     \renewcommand{\tablename}{Quadro}
 }
+
 
 \newtheorem{lm}{LIM}
 
@@ -297,9 +302,9 @@ of limitations that are present currently on HTML.
 % \bibliography{tcc}
 \markboth{}{}
 %}}}
-\appendix
-%{{{
+\begin{appendices}
 \input{appendices}
+\end{appendices}
 %}}}
 
 \end{document}
