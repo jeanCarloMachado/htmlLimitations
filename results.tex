@@ -14,9 +14,7 @@ e concepção do protótipo. Quando possível, buscou-se apresentar
 as limitações na mesma ordem das tecnologias estudadas na revisão
 bibliográfica. Não obstante, algumas limitaçãos foram tratadas em
 partes separadas visto que se aplicam a várias das tecnologias da
-Web. Para melhor organizá-las junto ao texto, foram adicionados
-códigos as limitações que seguem o seguinte padrão: LMT + número da
-limitação.
+Web.
 
 \section{HTML}
 
@@ -33,7 +31,7 @@ Este não é um problema exclusivo dos navegadores. Segundo
 \citet{chromeWebView}, da versão 4.4 do Android em diante a WebView
 mudou de um projeto local para utilizar o Chromium. Entretanto, grande
 parcela dos usuários Android ainda utilizam o sistema antigo o que
-força os desenvolvedores suportarem ambas as versões. É razoável
+força os desenvolvedores a suportarem ambas as versões. É razoável
 afirmar que para o início de 2016 um terço dos usuários de Android
 ainda utilizem a versão antiga da WebView \textsc{\autocite{chromeWebView}}.
 
@@ -81,7 +79,7 @@ design focadas nas telas menores (\textit{mobile first}).
 
 Na perspectiva do desenvolvedor, pode-se lidar com múltiplos tamanhos
 de tela trabalhando com tamanhos relativos via CSS. Todavia há
-casos, como o dos botões de certo e errado do protótipo, em que a
+casos, como o dos botões de certo e errado do protótipo, em que as
 proporções ficam exageradas. Nestas ocasiões, utilizar controles como
 o \textit{max-width} e \textit{min-width} é uma solução conveniente.
 No protótipo os botões de certo e errado foram inicialmente
@@ -95,7 +93,7 @@ Outro fator problemático do CSS é a presença de prefixos
 (\limitation{cssPrefixes}). Tecnologias experimentais do CSS geralmente
 levam o nome do distribuidor como prefixo da propriedade. Utilizar as
 mesmas regras em CSS com prefixos diferentes para suportar diversos
-motores de renderização é um processo entediante e propenso à
+motores de renderização é um processo entediante e propenso a
 duplicação e erros. A biblioteca \textit{-prefix-free} é uma
 possível solução para este problema, detectando automaticamente
 quando prefixos são necessários e adicionado-os em tempo de execução
@@ -113,10 +111,10 @@ nos navegadores (\limitation{jsImplementaionCycle}). O site
 \url{https://kangax.github.io/compat-table/es6/} contém uma lista do
 suporte aos recursos do ECMAScript nos motores JavaScript. Através
 desta lista pode-se observar que as novas funcionalidades do ECMAScript
-6 contém pobre suporte na grande maioria dos motores, especialmente
+6 contém suporte pobre na grande maioria dos motores, especialmente
 quando referente a funcionalidade de subclasses.
 
-Por ser uma linguagem interpretada, erros tem de descobertos rodando a
+Por ser uma linguagem interpretada, erros tem ser de descobertos rodando a
 aplicação (\limitation{discoverErrorsWhileRunning}). Alternativamente,
 se JavaScript fosse compilado, vários problemas poderiam ser capturados
 e informações úteis reveladas antes de se testar \autocite[p.
@@ -125,7 +123,7 @@ este problema é utilizando alguma linguagem compilada através de
 Web Assembly.
 
 Arquivos JavaScript geralmente necessitam ser minificados, reunidos e
-ofuscados. Muitas vezes esses processos precisam ser executadas durante
+ofuscados. Muitas vezes esses processos precisam ser executados durante
 o desenvolvimento, e sem a utilização de automatizadores como o Grunt
 Watch, o processo torna-se entediante bem como propenso a erros.
 
@@ -159,7 +157,7 @@ padrões de design, é bem possível escrever bom JavaScript.
 Além de bons padrões de design, outra forma de minimizar
 os problemas de manutenibilidade de JavaScript é utilizando
 guias de estilo de escrita. \citet{jsStyleGuide} afirma que
-quando não existem padrões de escrita todos acabam escrevendo
+quando não existem padrões de escrita, todos acabam escrevendo
 código que apenas os autores conseguem entender. O endereço
 \url{http://noeticforce.com/best-JavaScript-style-guide-for-maintainable
 -code} contém um comparativo entre os guias de estilo mais comuns para
@@ -173,7 +171,7 @@ todas as operações com NaN como operadores irão retornar outro
 NaN. Isso torna a depuração de erros desnecessariamente complexa
 \textsc{\autocite{html5mostwanted} (\limitation{NANPropagation}}). Uma saída
 para este problema é checar constantemente os tipos de forma a
-assegurar-se que eles continuam válidos. Entanto, este processo
+assegurar-se que eles continuam válidos. No entanto, este processo
 pode se tornar burocrático e uma forma adicional de criar erros.
 
 Outra limitação do JavaScript é quanto a checagem de tipos. Ao
@@ -255,7 +253,7 @@ Controle refinado sobre posicionamento também é um problema com SVG.
 perfeição na posição dos pixels, por ser uma linguagem vetorizada
 (\limitation{svgRefinendControl}). Essa característica acaba limitando
 a aplicabilidade do SVG como renderizador de jogos para os casos não
-muito complexos, onde posicionamento não seja uma fator crucial.
+muito complexos, onde posicionamento não seja um fator crucial.
 
 \section{Canvas}
 
@@ -268,7 +266,7 @@ implementação nativa para animações.
 O problema de performance (\limitation{canvasPerformance}) pode
 ser parcialmente remediado com o FastCanvas. FastCanvas é uma
 implementação nativa em C++ do canvas para Android que roda
-separadamente do JavaScript. Devidas as características acima citadas
+separadamente do JavaScript. Devido as características acima citadas
 FastCanvas é substancialmente mais rápido do que a tag canvas para
 navegadores Android. Todavia, o FastCanvas não suporta a
 especificação do canvas completamente, e existem algumas diferenças no
@@ -571,7 +569,7 @@ e Google Chrome. No Firefox é lançado um evento toda a vez que o
 Gamepad é desconectado, já no Google Chrome é necessário verificar
 um vetor de gamepads pela existência do objeto de tempos em tempos
 \textsc{\autocite{gamepad} (\limitation{gamepadObject}}). Este problema é
-reflexo da especificação ainda incompleta. Forçando os desenvolvedores
+reflexo da especificação ainda incompleta, forçando os desenvolvedores
 a duplicarem a mesma atividade de formas diferentes.
 
 \section{Disponibilização}
@@ -602,7 +600,7 @@ de monetização. É mais complexo monetizar jogos para navegadores,
 visto que não se pode vender pacotes para o usuário baixar
 \textsc{\autocite[p. 44]{gameCommunities}}.
 
-Dado este este problema, desenvolvedores são muitas vezes forçados
+Dado este problema, desenvolvedores são muitas vezes forçados
 a criar formas alternativas de lucro. A monetização de aplicativos
 Web é geralmente feita através de propagandas \autocite[p.
 44]{gameCommunities}. Outra saída é a venda de recursos adicionais,
@@ -697,7 +695,7 @@ Código & Descrição & Existe solução ou contorno? \\ \hline
 \Cref{limitation:differentScreenSizesMayPutSomeUsersInDisvantage} &  Desvantagem  para alguns jogadores devido ao tamanho da tela  & Parcial \\ \hline
 \Cref{limitation:cssPrefixes} & Tecnologias equivalentes em fase experimental levam o prefixo do motor de renderização  & Sim \\ \hline
 \Cref{limitation:jsSpecificationCycle} & Toma-se um tempo substancial para obter um consenso na criação de especificações & Não \\ \hline
-\Cref{limitation:jsImplementaionCycle} & O suporte as novas especificações muitas vezes demora para ser implementado & Sim \\ \hline
+\Cref{limitation:jsImplementaionCycle} & O suporte às novas especificações muitas vezes demora para ser implementado & Sim \\ \hline
 \Cref{limitation:discoverErrorsWhileRunning} & Por ser interpretado, erros no código JavaScript só podem ser descobertos em tempo de execução & Parcial \\ \hline
 \Cref{limitation:passCompleteObjectsOnSockets} & Impossibilidade de passar objetos completos em WebSockets & Não \\ \hline
 \Cref{limitation:runScriptsOnlyOnTheEndOfTheProcessment} & Scripts só podem ser rodados com segurança no final da renderização & Parcial \\ \hline

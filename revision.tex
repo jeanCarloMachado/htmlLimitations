@@ -1902,13 +1902,13 @@ descrita em eixos e sua unidade de medida é metros por segundo.
 %{{
 HTTP/2 é a última verão do protocolo de trocas de documentos entre
 cliente e servidor na Web. Quando um navegador requisita algum documento
-de esta requisição é geralmente feita através do protocolo HTTP. O
-foco da nova versão do HTTP é performance; especialmente a latência
-percebida pelos usuários e o uso de rede e servidores \textsc{\autocite{http2}}.
-A forma que os documentos trafegam do servidor para o cliente afeta
-diretamente a performance de uma aplicação, nos jogos esse fator se
-amplia devido a grande quantidade de arquivos geralmente necessários
-para montar uma cena de jogo.
+de um servidor Web esta requisição é geralmente feita através
+do protocolo HTTP. O foco da nova versão do HTTP é performance;
+especialmente a latência percebida pelos usuários e o uso de rede e
+servidores \textsc{\autocite{http2}}. A forma que os documentos trafegam
+do servidor para o cliente afeta diretamente a performance de uma
+aplicação, nos jogos esse fator se amplia devido a grande quantidade
+de arquivos geralmente necessários para montar uma cena de jogo.
 
 Diferentemente do HTTP/1, HTTP/2 abre apenas uma conexão por servidor.
 Usando a mesma para trafegar todos os dados necessários para montar
@@ -1934,11 +1934,11 @@ arquivos se tornou barato. Dessa forma, algumas práticas, antes
 recomendadas no desenvolvimento Web, tem de ser revistas depois do
 HTTP/2.
 
-Dentro do navegador as requisições HTTP/2 não convertidas em
+Dentro do navegador as requisições HTTP/2 são convertidas em
 equivalentes do HTTP/1, mantendo a retrocompatibilidade em aplicações
 legadas. Sendo assim, os fatores que justifiquem a utilização do HTTP/1
 são escassos e a tendência é observarmos cada vez mais aplicações
-utilizando com o HTTP/2.
+utilizando o HTTP/2.
 
 %}}}
 \section{Depuração}
@@ -1972,14 +1972,14 @@ testar ambientes multiplataforma. Para conectar-se a um dispositivo real
 o dispositivo via cabo, e rodar o aplicativo no dispositivo através
 do Google Chrome ou habilitando o modo depuração nos aplicativos
 híbridos. Dessa forma é possível visualizar a aplicação dentro
-Google Chrome do computador e utilizar as já mencionadas tecnologias do
+do Google Chrome do computador e utilizar as já mencionadas tecnologias do
 DevTools.
 
 O DevTools costumava permitir depuração do elemento canvas. Sobre ele
 \citet{html5mostwanted} mencionou: com o inspetor WebGl é possível
 conferir os estados dos buffers, informações de texturas, frames
 individuais e outras informações úteis. Infelizmente este recurso
-foi removido e atualmente inspeção de canvas é um terreno escaço
+foi removido e atualmente inspeção de canvas é um terreno escasso
 no ambiente Web, mais detalhes sobre o problema dos depuradores canvas
 serão tratados nos resultados.
 
@@ -2004,7 +2004,7 @@ abertas e com a funcionalidade de Source Maps habilitada.
 Source Maps foi desenvolvido como um trabalho em conjunto entre a
 Mozilla e Google em 2010, atualmente na terceira revisão o projeto é
 considerado estável e não recebe modificações na especificação
-desde 2013. Sendo suportado por diversas ferramentas de desenvolvimento
+desde 2013, sendo suportado por diversas ferramentas de desenvolvimento
 como Google Chrome (DevTools) e Firefox.
 
 A especificação prevê a existência de um arquivo \textit{.map} o
@@ -2026,9 +2026,9 @@ X-SourceMap: /path/to/script.JavaScript.map
 Para criar arquivos de Source Maps é possível utilizar ferramentas
 especializadas ou integrá-los ao processo de \textit{build} como Grunt
 ou Gulp. A biblioteca \url{https://github.com/mishoo/UglifyJS2} é uma
-ferramenta de minificação capaz de gerar Source Maps. Após ter o jogo
-ter sido depurado e seus erros minimizados, pode-se disponibilizar para
-ser consumido por seus usuários finais.
+ferramenta de minificação capaz de gerar Source Maps. Após o jogo ter
+sido depurado e seus erros minimizados, pode-se disponibilizar para ser
+consumido por seus usuários finais.
 
 Abaixo serão abordadas algumas formas de disponibilizar jogos Web em
 ambientes multiplataforma.

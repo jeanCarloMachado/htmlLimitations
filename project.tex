@@ -14,7 +14,7 @@ afirmação está correta ou não mais pontos ele receberá. Esta
 categoria de jogo foi selecionada por ter profundidade, oferecendo a
 possibilidade de explorar diversos recursos do HTML, e criar melhorias
 incrementais. E também por oferecer uma dificuldade técnica não
-tão desafiadora, visto que não disponho de experiência profunda no
+tão desafiadora, visto que não dispormos de experiência profunda no
 desenvolvimento de jogos em geral.
 
 Jogos como o Math Workout e o Countdown para Android tem uma temática
@@ -49,7 +49,7 @@ acima deve prover.
 \begin{itemize}
     \item O sistema deve prover equações matemáticas de dificuldade crescente para o usuário informar se estão corretas ou não;
     \item O sistema deve pontuar as respostas dadas com maior agilidade com uma pontuação maior que as respondidas com menor agilidade;
-    \item O sistema deve apresentar a colocação da partida do usuário em comparativo com seu histórico.
+    \item O sistema deve armazenar o histórico de pontuação do usuário de modo que ele possa comparar sua performance em relação à partidas anteriores;
 \end{itemize}
 
 \subsection{Requisitos não funcionais}
@@ -86,7 +86,7 @@ minimamente viável (MVP) e, a partir dele, novos recursos foram
 sendo adicionados a fim de melhorar a experiência do usuário. Os 
 passos que compuseram  os \textit{sprints} do processo serão descritos abaixo.
 
-Antes focar no desenvolvimento do software, foi configurado um ambiente
+Antes de focar no desenvolvimento do software, foi configurado um ambiente
 automatizado com o Grunt, com plugins de minificação e empacotamento
 de JavaScript e CSS \footnote{Para mais informações sobre o Grunt
 veja a seção \ref{grunt}}. O Grunt foi configurado para disponibilizar a
@@ -99,7 +99,7 @@ arquivos padronizada que o PhoneGap Build requer. Além do ambiente
 automatizado, foi utilizado um servidor Web Apache através do docker
 para testar a aplicação.
 
-Iniciei o desenvolvimento na plataforma Desktop pois esta contém
+O desenvolvimento foi iniciado na plataforma Desktop pois esta contém
 o maior número de ferramentas de desenvolvimento nativas que não
 requerem configuração especial. O primeiro passo, na concepção
 do software propriamente dito, foi a criação do documento HTML.
@@ -112,7 +112,7 @@ mas isso distribui a complexidade do sistema para tecnologias do
 lado do servidor, distanciando-se da proposta de um jogo construído
 exclusivamente com as tecnologias da Web.
 
-Aplicativos SPA introduzem novos desafios. Por exemplo, o botão
+Aplicativos de página única introduzem novos desafios. Por exemplo, o botão
 de voltar perde sua utilidade, visto que não se está trafegando
 de uma página a outra, somente em partes de uma mesma página. HTML5
 provê uma API em JavaScript para manipular o histórico que pode
@@ -258,12 +258,12 @@ jogo.
     \label{fig:configurations}
 \end{figure}
 
-Implementados estes mecanismos essenciais para o jogo, pude me focar no
-ponto central do negócio, e possivelmente o mais complexo: a geração
+Implementados estes mecanismos essenciais para o jogo, tornou-se possível o foco no
+desenvolvimento do ponto central do negócio, e possivelmente o mais complexo: a geração
 de equações. A geração das equações é feita randomicamente e
 envolve duas classes: \textit{Statement} e \textit{StatementGenerator}.
 O objeto \textit{Statement}, é responsável por armazenar as
-informações de uma equação, à dizer: a afirmação sendo feita
+informações de uma equação, a dizer: a afirmação sendo feita
 e se seu resultado está correto ou não.
 O objeto \textit{StatementGenerator} é responsável por gerar
 instâncias da classe \textit{Statement}.
@@ -421,10 +421,10 @@ contexto de jogos.
 \subsubsection{Modo estrito}
 
 Um recurso interessante do JavaScript é seu modo estrito, este faz
-um conjunto de modificação na semântica do interpretador de modo
+um conjunto de modificações na semântica do interpretador de modo
 que alguns recursos suportados, mas propensos a problemas, sejam
 desabilitados. Um exemplo de sintaxe válida propensa a erros é a
-utilização variáveis não prefixadas pela palavra chave \textit{var},
+utilização de variáveis não prefixadas pela palavra chave \textit{var},
 que torna as variáveis em variáveis globais.
 
 O modo estrito pode ser entendido como uma variante mais rígida do
@@ -489,7 +489,7 @@ rede é o pré carregamento de recursos (\textit{Link Prefetching}).
 Esta tecnologia possibilita que o navegador, em seu tempo livre,
 adquira recursos que provavelmente serão necessários em um futuro
 próximo. Nem todos os recursos necessitam ser pré carregados,
-mas uma impressão muito superiora é criada se os recursos estão
+mas uma impressão muito superior é criada se os recursos estão
 imediatamente disponíveis quando uma nova fase é carregada
 \textsc{\autocite[p. 39]{creatingFun}}.
 %}}}
