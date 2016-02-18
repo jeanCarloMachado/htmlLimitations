@@ -182,6 +182,19 @@ right=2cm
 \usepackage[textfont={footnotesize}]{caption}
 
 %}}}
+
+\makeatletter
+\newcommand{\setappendix}{Apêndice~\thechapter -~}
+\newcommand{\setchapter}{\thechapter~}
+\titleformat{\chapter}{\normalfont\fontsize{14}{17}\bfseries}{
+%\titleformat{\chapter}{\bfseries\LARGE}{%
+\ifnum\pdfstrcmp{\@currenvir}{appendices}=0
+	\setappendix
+\else
+	\setchapter
+\fi}{1em}{}
+\makeatother
+
 \begin{document}
 \pagenumbering{gobble}
 
