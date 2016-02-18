@@ -324,7 +324,16 @@ on HTML.
 %}}}
 
 %Bibliograpy %{{{ 
-\chapter{REFERENCIAS BIBLIOGRÁFICAS}
+\makeatletter
+\renewcommand{\ps@empty}{%
+\renewcommand\@oddhead{\hfil\normalfont\textrm{\thepage}}%
+\renewcommand\@evenhead{}%
+\renewcommand\@oddfoot{}%
+\renewcommand\@evenfoot{}%
+}
+\makeatother
+\chapter*{REFERENCIAS BIBLIOGRÁFICAS}
+\addcontentsline{toc}{chapter}{REFERENCIAS BIBLIOGRÁFICAS}  
 \markboth{}{}
 \printbibliography[heading=none]
 % \bibliographystyle{abnt}
