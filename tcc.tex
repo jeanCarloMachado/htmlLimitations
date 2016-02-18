@@ -32,6 +32,7 @@ right=2cm
 \usepackage{indentfirst}
 \usepackage{csquotes}
 \usepackage{float}
+\usepackage[only-used=false]{acro}
 
 \input glyphtounicode
 \pdfgentounicode=1
@@ -195,6 +196,49 @@ right=2cm
 \fi}{1em}{}
 \makeatother
 
+\acsetup{first-style=short}
+
+\DeclareAcronym{API}{
+short = {\normalfont API},
+long  = - Application Programming Interface,
+class = abbrev
+}
+\DeclareAcronym{DOM}{
+short = {\normalfont DOM},
+long  = - Document Object Model,
+class = abbrev
+}
+\DeclareAcronym{SVG}{
+short = {\normalfont SVG},
+long  = - Scalable Vector Graphics,
+class = abbrev
+}
+
+\DeclareAcronym{SPA}{
+short = {\normalfont SPA},
+long  = - Single-page Application,
+class = abbrev
+}
+
+\DeclareAcronym{CSS}{
+short = {\normalfont CSS},
+long  = - Cascading Style Sheets,
+class = abbrev
+}
+
+\DeclareAcronym{html}{
+short = {\normalfont HTML},
+long  = - Hyper Text Markup Language ,
+class = abbrev
+}
+
+\DeclareAcronym{Web}{
+short = {\normalfont Web},
+long  = - World Wide Web,
+class = abbrev
+}
+
+
 \begin{document}
 \pagenumbering{gobble}
 
@@ -294,6 +338,8 @@ on HTML.
 {\listoffigures}
 \clearpage
 {\listoftables}
+\clearpage
+\printacronyms[include-classes=abbrev,name={\hfill\normalfont\fontsize{14}{17}\bfseries LISTA DE ABREVIATURAS E SIGLAS\hfill}]
 \clearpage
 {\tableofcontents}
 %\listoftables
