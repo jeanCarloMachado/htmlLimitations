@@ -574,11 +574,11 @@ desenvolvimento de jogos multiplataforma com as tecnologias da Web.
 
 \begin{figure}[H]
 \centering
-\begin{verbatim}
+\begin{lstlisting}[language=html,frame=single]
 @media only screen and (min-width: 1024px) {
     background-color: green;
 }
-\end{verbatim}
+\end{lstlisting}
 \caption{Exemplo de Media Query}
 \label{fig:MediaQuery}
 \end{figure}
@@ -596,14 +596,14 @@ definição de media queries tanto em CSS como em JavaScript.
 
 \begin{figure}[H]
 \centering
-\begin{verbatim}
+\begin{lstlisting}[language=html,frame=single]
 @custom-media --narrow-window (max-width: 30em);
 
 <script>
 CSS.customMedia.set('--foo', 5);
 </script>
 
-\end{verbatim}
+\end{lstlisting}
 \caption{Exemplos de media queries customizadas}
 \label{fig:MediaQueryCustom}
 \source{https://developer.mozilla.org/en-US/docs/Web/CSS/MediaQueries}
@@ -633,7 +633,7 @@ continuam a funcionar.
 
 \begin{figure}[H]
 \centering
-\begin{verbatim}
+\begin{lstlisting}[language=html,frame=single]
 div {
     width: 100px;
     height: 100px;
@@ -645,7 +645,7 @@ div:hover {
     width: 300px;
 }
 
-\end{verbatim}
+\end{lstlisting}
 \caption{Exemplo de transição}
 \label{fig:CSSTransition}
 %\soruce{http://www.w3schools.com/CSS/css3\_transitions.asp}
@@ -679,7 +679,7 @@ via GPU incrementando a performance de animações criadas com a tecnologia.
 
 \begin{figure}[H]
 \centering
-\begin{verbatim}
+\begin{lstlisting}[language=html,frame=single]
 <style>
 .test:hover
 {
@@ -688,7 +688,7 @@ via GPU incrementando a performance de animações criadas com a tecnologia.
         transform: scale(1.2);
 }
 </style>
-\end{verbatim}
+\end{lstlisting}
 \caption{Exemplo de transformação}
 \label{fig:CSSTransform}
 \end{figure}
@@ -927,7 +927,7 @@ polyfill para os demais navegadores.
 
 \begin{figure}[H]
     \centering
-    \begin{verbatim}
+    \begin{lstlisting}[language=html,frame=single]
 elem.getAnimations().filter(
   animation =>
     animation.effect instanceof 
@@ -939,7 +939,7 @@ elem.getAnimations().filter(
   animation.currentTime = 0;
   animation.playbackRate = 0.5;
 });
-    \end{verbatim}
+    \end{lstlisting}
 	\caption{Exemplo de utilização de Web Animatios}
 	\source{http://www.w3.org/TR/Web-animations/}
     \label{fig:webAnimations}
@@ -1145,7 +1145,7 @@ definido em SVG.
 
 \begin{figure}[H]
 \centering
-\begin{verbatim}
+\begin{lstlisting}[language=html,frame=single]
 
 <svg width="100" height="100">
   <circle 
@@ -1158,7 +1158,7 @@ definido em SVG.
   />
 </svg>
 
-\end{verbatim}
+\end{lstlisting}
 \caption{Círculo em SVG.}
 \source{http://www.w3schools.com/svg/}
 \label{fig:svgCircle}
@@ -1214,14 +1214,14 @@ partes que se deseja alterar.
 
 \begin{figure}[H]
 \centering
-\begin{verbatim}
+\begin{lstlisting}[language=html,frame=single]
 
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.fillStyle = "#FF0000";
 ctx.fillRect(0,0,150,75);
 
-\end{verbatim}
+\end{lstlisting}
 \caption{Canvas}
 \source{http://www.w3schools.com/html/html5\_canvas.asp}
 \label{img:retangleOnCanvas}
@@ -1447,13 +1447,13 @@ pode ser reproduzido pelo programa dentro do navegador.
 
 \begin{figure}[H]
 \centering
-\begin{verbatim}
+\begin{lstlisting}[language=html,frame=single]
 <audio controls>
 <source src="horse.ogg" type="audio/ogg">
 <source src="horse.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
-\end{verbatim}
+\end{lstlisting}
 \caption{Exemplo de utilização da tag áudio}
 \label{fig:htmlAudio}
 \source{http://www.w3schools.com/HTML/HTML5\_audio.asp}
@@ -1537,8 +1537,11 @@ execução qual formato executar dependendo de suas capacidades.
 
 \begin{figure}[H]
 \centering
-\begin{verbatim}
-<video controls style="width:640px;height:360px;" poster="poster.png">
+\begin{lstlisting}[language=html,frame=single]
+<video 
+    controls 
+    style="width:640px;height:360px;" 
+    poster="poster.png">
   <source src="devstories.webm" 
           type='video/webm;codecs="vp8, vorbis"' />
   <source src="devstories.mp4" 
@@ -1546,7 +1549,7 @@ execução qual formato executar dependendo de suas capacidades.
   <track src="devstories-en.vtt" label="English subtitles" 
          kind="subtitles" srclang="en" default></track>
 </video>
-\end{verbatim}
+\end{lstlisting}
 \caption{Exemplo de utilização de vídeo}
 \source{http://www.html5rocks.com/en/tutorials/video/basics/}
 \label{fig:video}
@@ -1640,20 +1643,16 @@ para demais acessos além do atual.
 
 \begin{figure}[H]
 \centering
-\begin{verbatim}
-// Store value on browser for duration of the session
+\begin{lstlisting}[language=html,frame=single]
 sessionStorage.setItem('key', 'value');
 
-// Retrieve value (gets deleted when browser is closed and re-opened)
 alert(sessionStorage.getItem('key'));
 
-// Store value on the browser beyond the duration of the session
 localStorage.setItem('key', 'value');
 
-// Retrieve value (persists even after closing and re-opening the browser)
 alert(localStorage.getItem('key'));
 
-\end{verbatim}
+\end{lstlisting}
 \caption{Web Storage na prática}
 \label{fig:WebStorage}
 \source{https://en.wikipedia.org/wiki/Web\_storage\#usage}
@@ -1695,19 +1694,25 @@ presente em cada uma das entradas.
 
 \begin{figure}[H]
 \centering
-\begin{verbatim}
+\begin{lstlisting}[language=html,frame=single]
 	var db;
 	var request = window.indexedDB.open("Mydb", 9);
 	request.onsuccess = function(event) {
 		db = event.target.result;
-		var transaction = db.transaction(["customers"], "readwrite");
-		var objectStore = transaction.objectStore("customers");
-		var request = objectStore.add({email: "mymail@domain.com", name: "foo"});
+		var transaction = db.transaction(
+		    ["customers"], 
+		    "readwrite"
+        );
+		var objectStore = 
+            transaction.objectStore("customers");
+		var request = objectStore.add(
+            {email: "mymail@domain.com", name: "foo"}
+        );
 		request.onsuccess = function(event) {
 			console.log('customer added')
 		};
 	}
-\end{verbatim}
+\end{lstlisting}
 \caption{Adicionando um cliente em IndexedDB.}
 \label{fig:IndexedDB}
 \end{figure}
@@ -1779,7 +1784,7 @@ navegadores clientes.
 
 \begin{figure}[H]
 \centering
-\begin{verbatim}
+\begin{lstlisting}[language=html,frame=single]
 CACHE MANIFEST
 index.html
 help.html
@@ -1789,7 +1794,7 @@ images/backgound.png
 
 NETWORK:
 server.cgi
-\end{verbatim}
+\end{lstlisting}
 \caption{Exemplo de arquivo de manifesto offline}
 \source{http://www.w3.org/TR/offline-webapps/}
 \label{fig:offline}
@@ -1821,7 +1826,7 @@ do teclado especificado através da tabela ASCII.
 
 \begin{figure}[H]
 \centering
-\begin{verbatim}
+\begin{lstlisting}[language=html,frame=single]
 window.addEventListener('keydown', function(event) {
   switch (event.keyCode) {
     case 37: // Left
@@ -1841,7 +1846,7 @@ window.addEventListener('keydown', function(event) {
     break;
   }
 }, false);
-\end{verbatim}
+\end{lstlisting}
 \caption{Utilização dos eventos do teclado}
 \label{fig:keyboardEvents}
 \source{\url{http://nokarma.org/2011/02/27/javascript-game-development-keyboard-input/}}

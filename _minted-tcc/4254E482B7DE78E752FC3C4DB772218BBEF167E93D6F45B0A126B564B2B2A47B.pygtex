@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+parseInt(
+(this.rightAnswered * 10 ) / (
+    (this.answersTotal \PYGZhy{} this.rightAnswered)
+    + (this.duration*0.2))
+)
+\end{Verbatim}

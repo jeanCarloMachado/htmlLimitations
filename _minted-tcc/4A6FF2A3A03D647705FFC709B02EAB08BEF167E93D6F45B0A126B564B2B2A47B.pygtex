@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+elem.getAnimations().filter(
+  animation =\PYGZgt{}
+    animation.effect instanceof
+    KeyframeEffectReadOnly \PYG{err}{\PYGZam{}\PYGZam{}}
+    animation.effect.getFrames().some(
+      frame =\PYGZgt{} frame.hasOwnProperty(\PYGZsq{}transform\PYGZsq{})
+    )
+).forEach(animation =\PYGZgt{} \PYGZob{}
+  animation.currentTime = 0;
+  animation.playbackRate = 0.5;
+\PYGZcb{});
+\end{Verbatim}

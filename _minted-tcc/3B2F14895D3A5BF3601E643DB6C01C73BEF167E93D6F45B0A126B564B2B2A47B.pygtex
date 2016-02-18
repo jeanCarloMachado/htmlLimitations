@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+CACHE MANIFEST
+index.html
+help.html
+style/default.css
+images/logo.png
+images/backgound.png
+
+NETWORK:
+server.cgi
+\end{Verbatim}

@@ -196,13 +196,13 @@ para o cálculo acima descrito.
 
 \begin{figure}[H]
 \centering
-\begin{verbatim}
+\begin{lstlisting}[language=html,frame=single]
 parseInt(
 (this.rightAnswered * 10 ) / (
     (this.answersTotal - this.rightAnswered) 
     + (this.duration*0.2))
 )
-\end{verbatim}
+\end{lstlisting}
 \caption{Cálculo da pontuação do jogador}
 \label{fig:punctuationCalculation}
 \end{figure}
@@ -444,7 +444,7 @@ invocadas IFE (\textit{Immediatly invoked function expression}).
 
 \begin{figure}[H]
 \centering
-\begin{verbatim}
+\begin{lstlisting}[language=html,frame=single]
     (function() {
         'use strict';
 
@@ -455,7 +455,7 @@ invocadas IFE (\textit{Immediatly invoked function expression}).
         window.bar = bar;
     })();
     window.bar();
-\end{verbatim}
+\end{lstlisting}
 \caption{Exemplo de função imediatamente invocada.}
 \label{fig:iife}
 \end{figure}

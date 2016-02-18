@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{audio} \PYG{n+na}{controls}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{source} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}horse.ogg\PYGZdq{}} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}audio/ogg\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{source} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}horse.mp3\PYGZdq{}} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}audio/mpeg\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+Your browser does not support the audio element.
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{audio}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}

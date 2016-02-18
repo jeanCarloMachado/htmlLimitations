@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+div \PYGZob{}
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s;
+\PYGZcb{}
+
+div:hover \PYGZob{}
+    width: 300px;
+\PYGZcb{}
+\end{Verbatim}

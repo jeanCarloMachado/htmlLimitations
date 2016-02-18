@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{svg} \PYG{n+na}{width}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}100\PYGZdq{}} \PYG{n+na}{height}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}100\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+  \PYG{p}{\PYGZlt{}}\PYG{n+nt}{circle}
+    \PYG{n+na}{cx}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}50\PYGZdq{}}
+    \PYG{n+na}{cy}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}50\PYGZdq{}}
+    \PYG{n+na}{r}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}40\PYGZdq{}}
+    \PYG{n+na}{stroke}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}green\PYGZdq{}}
+    \PYG{n+na}{stroke\PYGZhy{}width}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}4\PYGZdq{}}
+    \PYG{n+na}{fill}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}yellow\PYGZdq{}}
+  \PYG{p}{/\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{svg}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}

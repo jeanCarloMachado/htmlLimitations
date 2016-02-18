@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+var c = document.getElementById(\PYGZdq{}myCanvas\PYGZdq{});
+var ctx = c.getContext(\PYGZdq{}2d\PYGZdq{});
+ctx.fillStyle = \PYGZdq{}\PYGZsh{}FF0000\PYGZdq{};
+ctx.fillRect(0,0,150,75);
+\end{Verbatim}

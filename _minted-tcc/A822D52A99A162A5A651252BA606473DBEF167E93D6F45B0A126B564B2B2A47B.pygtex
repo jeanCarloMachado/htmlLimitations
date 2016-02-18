@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+navigator.standalone = navigator.standalone
+|| (
+        screen
+        .height\PYGZhy{}document
+        .documentElement
+        .clientHeight \PYG{p}{\PYGZlt{}} \PYG{n+nt}{40}
+    \PYG{err}{)}
+\end{Verbatim}

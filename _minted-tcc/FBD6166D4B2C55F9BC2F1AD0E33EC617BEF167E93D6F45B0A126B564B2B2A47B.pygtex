@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	var db;
+	var request = window.indexedDB.open(\PYGZdq{}Mydb\PYGZdq{}, 9);
+	request.onsuccess = function(event) \PYGZob{}
+		db = event.target.result;
+		var transaction = db.transaction(
+            [\PYGZdq{}customers\PYGZdq{}], \PYGZdq{}readwrite\PYGZdq{}
+        );
+		var objectStore = transaction.objectStore(\PYGZdq{}customers\PYGZdq{});
+		var request = objectStore.add(
+		    \PYGZob{}email: \PYGZdq{}mymail@domain.com\PYGZdq{}, name: \PYGZdq{}foo\PYGZdq{}\PYGZcb{}
+		);
+		request.onsuccess = function(event) \PYGZob{}
+			console.log(\PYGZsq{}customer added\PYGZsq{})
+		\PYGZcb{};
+	\PYGZcb{}
+\end{Verbatim}

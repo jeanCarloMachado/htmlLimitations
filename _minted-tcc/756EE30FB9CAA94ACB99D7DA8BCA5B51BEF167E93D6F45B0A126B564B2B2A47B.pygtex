@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    (function() \PYGZob{}
+        \PYGZsq{}use strict\PYGZsq{};
+
+        function bar() \PYGZob{}
+            return \PYGZsq{}foo\PYGZsq{};
+        \PYGZcb{}
+
+        window.bar = bar;
+    \PYGZcb{})();
+    window.bar();
+\end{Verbatim}

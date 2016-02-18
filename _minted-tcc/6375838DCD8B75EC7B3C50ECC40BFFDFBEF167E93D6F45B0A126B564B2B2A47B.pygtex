@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+window.addEventListener(\PYGZsq{}keydown\PYGZsq{}, function(event) \PYGZob{}
+  switch (event.keyCode) \PYGZob{}
+    case 37: // Left
+      Game.player.moveLeft();
+    break;
+
+    case 38: // Up
+      Game.player.moveUp();
+    break;
+
+    case 39: // Right
+      Game.player.moveRight();
+    break;
+
+    case 40: // Down
+      Game.player.moveDown();
+    break;
+  \PYGZcb{}
+\PYGZcb{}, false);
+\end{Verbatim}

@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{style}\PYG{p}{\PYGZgt{}}
+\PYG{n+nc}{.test}\PYG{n+nd}{:hover}
+\PYG{p}{\PYGZob{}}
+        \PYG{o}{\PYGZhy{}}\PYG{n}{webkit}\PYG{o}{\PYGZhy{}}\PYG{n}{transform}\PYG{o}{:} \PYG{n}{scale}\PYG{p}{(}\PYG{l+m}{1}\PYG{o}{.}\PYG{l+m}{2}\PYG{p}{);}
+        \PYG{o}{\PYGZhy{}}\PYG{n}{ms}\PYG{o}{\PYGZhy{}}\PYG{n}{transform}\PYG{o}{:} \PYG{n}{scale}\PYG{p}{(}\PYG{l+m}{1}\PYG{o}{.}\PYG{l+m}{2}\PYG{p}{);}
+        \PYG{n}{transform}\PYG{o}{:} \PYG{n}{scale}\PYG{p}{(}\PYG{l+m}{1}\PYG{o}{.}\PYG{l+m}{2}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{style}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}

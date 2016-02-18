@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{video} \PYG{n+na}{controls} \PYG{n+na}{style}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}width:640px;height:360px;\PYGZdq{}} \PYG{n+na}{poster}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}poster.png\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+  \PYG{p}{\PYGZlt{}}\PYG{n+nt}{source} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}devstories.webm\PYGZdq{}}
+          \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}video/webm;codecs=\PYGZdq{}vp8, vorbis\PYGZdq{}\PYGZsq{}} \PYG{p}{/\PYGZgt{}}
+  \PYG{p}{\PYGZlt{}}\PYG{n+nt}{source} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}devstories.mp4\PYGZdq{}}
+          \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}video/mp4;codecs=\PYGZdq{}avc1.42E01E, mp4a.40.2\PYGZdq{}\PYGZsq{}} \PYG{p}{/\PYGZgt{}}
+  \PYG{p}{\PYGZlt{}}\PYG{n+nt}{track} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}devstories\PYGZhy{}en.vtt\PYGZdq{}} \PYG{n+na}{label}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}English subtitles\PYGZdq{}}
+         \PYG{n+na}{kind}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}subtitles\PYGZdq{}} \PYG{n+na}{srclang}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}en\PYGZdq{}} \PYG{n+na}{default}\PYG{p}{\PYGZgt{}\PYGZlt{}/}\PYG{n+nt}{track}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{video}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}

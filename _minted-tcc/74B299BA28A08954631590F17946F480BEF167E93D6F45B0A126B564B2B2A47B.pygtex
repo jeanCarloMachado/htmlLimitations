@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+function is(type, object) \PYGZob{}
+    type = type[0].toUpperCase + type.slice(1);
+    return Object.prototype.toString.call(object)
+    === \PYGZsq{}[object ]\PYGZsq{} +  type + \PYGZsq{}]\PYGZsq{};
+\PYGZcb{}
+\end{Verbatim}

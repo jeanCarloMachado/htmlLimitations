@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nd}{@custom}\PYG{o}{\PYGZhy{}}\PYG{n}{media} \PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{n}{narrow}\PYG{o}{\PYGZhy{}}\PYG{n}{window} \PYG{p}{(}\PYG{n+nb}{max}\PYG{o}{\PYGZhy{}}\PYG{n}{width}\PYG{p}{:} \PYG{l+m+mi}{30}\PYG{n}{em}\PYG{p}{);}
+
+\PYG{o}{\PYGZlt{}}\PYG{n}{script}\PYG{o}{\PYGZgt{}}
+\PYG{n}{CSS}\PYG{o}{.}\PYG{n}{customMedia}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}\PYGZhy{}foo\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{);}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{script}\PYG{o}{\PYGZgt{}}
+\end{Verbatim}

@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+sessionStorage.setItem(\PYGZsq{}key\PYGZsq{}, \PYGZsq{}value\PYGZsq{});
+
+alert(sessionStorage.getItem(\PYGZsq{}key\PYGZsq{}));
+
+localStorage.setItem(\PYGZsq{}key\PYGZsq{}, \PYGZsq{}value\PYGZsq{});
+
+alert(localStorage.getItem(\PYGZsq{}key\PYGZsq{}));
+\end{Verbatim}
