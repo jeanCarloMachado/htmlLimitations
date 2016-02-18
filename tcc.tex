@@ -126,12 +126,25 @@ right=2cm
 
 \newlength{\mylen}
 
+\renewcommand{\cfttabpresnum}{\tablename\enspace}
+\renewcommand{\cfttabaftersnum}{:}
+\settowidth{\mylen}{\cfttabpresnum\cfttabaftersnum}
+\addtolength{\cfttabnumwidth}{\mylen}
+
 \renewcommand{\cftfigpresnum}{\figurename\enspace}
 \renewcommand{\cftfigaftersnum}{:}
 \settowidth{\mylen}{\cftfigpresnum\cftfigaftersnum}
 \addtolength{\cftfignumwidth}{\mylen}
+
+\renewcommand{\cftfigpresnum}{\figurename\enspace}
+\renewcommand{\cftfigaftersnum}{:}
+\settowidth{\mylen}{\cftfigpresnum\cftfigaftersnum}
+\addtolength{\cftfignumwidth}{\mylen}
+
+
 \usepackage{chngcntr}
 \counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
 
 \renewcommand\cfttoctitlefont{\normalfont\fontsize{14}{17}}
 \renewcommand\cftloftitlefont{\normalfont\fontsize{14}{17}}
@@ -266,6 +279,7 @@ on HTML.
 %{{{
 %30 is ok
 {\listoffigures}
+\clearpage
 {\listoftables}
 \clearpage
 {\tableofcontents}
